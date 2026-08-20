@@ -1,0 +1,96 @@
+# robots.txt for SchemeDB (https://schemedb.com)
+# Standard August 2026 AI / LLM / Search Crawler Configuration
+
+# -----------------------------------------------------------------------------
+# Default Rule for all Web Crawlers & Indexers
+# -----------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /api/private/
+Disallow: /admin/
+
+# -----------------------------------------------------------------------------
+# AI Search Engines, Answer Engines & Citation Retrieval Crawlers
+# -----------------------------------------------------------------------------
+# OpenAI GPTBot & SearchBot (ChatGPT Search & AI Citations)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude & Claude Search
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI Search Engine
+User-agent: PerplexityBot
+Allow: /
+
+# Google Gemini & Extended AI Crawler
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Apple Intelligence & Web Indexer
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot & Bingbot
+User-agent: Bingbot
+Allow: /
+
+User-agent: Microsoft-Bing-Bot
+Allow: /
+
+# Meta AI & Llama Research Crawler
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon Bedrock & Alexa AI
+User-agent: Amazonbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# Common Crawl (Foundational Open LLM Dataset)
+User-agent: CCBot
+Allow: /
+
+# Diffbot Knowledge Graph Extractor
+User-agent: Diffbot
+Allow: /
+
+# DuckDuckGo AI & Search
+User-agent: DuckDuckBot
+Allow: /
+
+# -----------------------------------------------------------------------------
+# Machine-Readable LLM Knowledge Base & Sitemap
+# -----------------------------------------------------------------------------
+# LLM Context Index: https://schemedb.com/llms.txt
+# Full LLM Knowledge Base: https://schemedb.com/llms-full.txt
+Sitemap: https://schemedb.com/sitemap.xml
