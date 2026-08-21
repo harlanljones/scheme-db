@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 import type { PlayerTrack } from '../engine/types';
-import { sampleTrack } from '../engine/interpolate';
+import { sampleTrack, getFullTrackSvgPath } from '../engine/interpolate';
 
 export interface TrailProps {
   track: PlayerTrack;
@@ -11,7 +11,7 @@ export interface TrailProps {
   showGhost?: boolean;
 }
 
-export const Trail: React.FC<TrailProps> = ({
+export const Trail: React.FC<TrailProps> = memo(({
   track,
   t,
   isFocused = false,
@@ -23,14 +23,8 @@ export const Trail: React.FC<TrailProps> = ({
     return null;
   }
 
-  const fullDuration = track.waypoints[track.waypoints.length - 1].t;
-  const numStepsFull = Math.max(12, Math.min(60, Math.round(fullDuration * 18)));
-  const fullPoints = sampleTrack(track, 0, fullDuration, numStepsFull);
-  const fullSvgPoints = fullPoints.map((p) => ({ x: p.x, y: -p.y }));
-
-  const fullPathD = fullSvgPoints.reduce((acc, p, i) => {
-    return `${acc} ${i === 0 ? 'M' : 'L'} ${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
-  }, '');
+  // Retrieve memoized full-path ghost route (zero computation during active playback)
+  const { pathD: fullPathD, svgPoints: fullSvgPoints } = getFullTrackSvgPath(track);
 
   // Sample points up to time t
   const numSteps = Math.max(8, Math.min(50, Math.round(t * 18)));
@@ -38,9 +32,12 @@ export const Trail: React.FC<TrailProps> = ({
   const svgPoints = points.map((p) => ({ x: p.x, y: -p.y }));
 
   // Build SVG path for elapsed time
-  const pathD = svgPoints.reduce((acc, p, i) => {
-    return `${acc} ${i === 0 ? 'M' : 'L'} ${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
-  }, '');
+  let pathD = '';
+  for (let i = 0; i < svgPoints.length; i++) {
+    const p = svgPoints[i];
+    pathD += `${i === 0 ? 'M' : ' L'} ${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
+  }
+
 
   // Calculate tip tangent for arrowhead / T-bar / end cap
   const last = svgPoints.length > 0 ? svgPoints[svgPoints.length - 1] : undefined;
@@ -202,4 +199,5 @@ export const Trail: React.FC<TrailProps> = ({
       )}
     </g>
   );
-};
+});
+

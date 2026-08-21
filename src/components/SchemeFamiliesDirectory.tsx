@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, memo } from 'react';
 import type { SchemeFamily } from '../engine/types';
 import { ALL_SCHEME_FAMILIES } from '../data/schemes/index';
 import { getCoachById, ALL_COACHES } from '../data/coaches/index';
@@ -10,10 +10,11 @@ interface SchemeFamiliesDirectoryProps {
 
 type DirectoryViewMode = 'matrix' | 'split' | 'cards';
 
-export const SchemeFamiliesDirectory: React.FC<SchemeFamiliesDirectoryProps> = ({
+export const SchemeFamiliesDirectory: React.FC<SchemeFamiliesDirectoryProps> = memo(({
   onSelectFamily,
   onSelectPlay,
 }) => {
+
   const [filterCategory, setFilterCategory] = useState<'all' | 'offense' | 'defense'>('all');
   const [selectedCoachFilter, setSelectedCoachFilter] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -891,5 +892,6 @@ export const SchemeFamiliesDirectory: React.FC<SchemeFamiliesDirectoryProps> = (
       </div>
     </div>
   );
-};
+});
+
 

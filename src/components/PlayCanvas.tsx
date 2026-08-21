@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo, memo } from 'react';
 import type { Play, PlayerTrack } from '../engine/types';
 import { Field } from './Field';
 import { PlayerMarker } from './PlayerMarker';
@@ -56,7 +56,7 @@ function getPlayerMovement(track: PlayerTrack, t: number, duration: number): { h
   };
 }
 
-export const PlayCanvas: React.FC<PlayCanvasProps> = ({ play, t }) => {
+export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
   const [showLegend, setShowLegend] = useState(false);
   const [showOverlaysMenu, setShowOverlaysMenu] = useState(false);
   const [showTrails, setShowTrails] = useState(true);
@@ -70,14 +70,13 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = ({ play, t }) => {
   const activeBeat = activeIdx >= 0 ? play.beats[activeIdx] : undefined;
   const hasActiveFocus = Boolean(activeBeat?.focus && activeBeat.focus.length > 0);
 
-  const allTracks = [...play.offense, ...play.defense];
+  // Stable track lists memoized per play
+  const allTracks = useMemo(() => [...play.offense, ...play.defense], [play.offense, play.defense]);
+  const qbTrack = useMemo(() => play.offense.find((tr) => tr.id === 'QB' || tr.role === 'qb') || play.offense[0], [play.offense]);
+  const carrierTrack = useMemo(() => play.offense.find((tr) => tr.trail === 'carry'), [play.offense]);
 
   // Find QB / Primary ball-handler position
-  const qbTrack = play.offense.find((tr) => tr.id === 'QB' || tr.role === 'qb') || play.offense[0];
   const qbPos = qbTrack ? positionAt(qbTrack, t) : undefined;
-
-  // Find dedicated ball carrier (e.g. RB on run plays, or WR on sweeps)
-  const carrierTrack = play.offense.find((tr) => tr.trail === 'carry');
   let ballPos = qbPos;
 
   if (carrierTrack && qbTrack && carrierTrack.id !== qbTrack.id) {
@@ -94,6 +93,7 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = ({ play, t }) => {
   const conflictTracks = play.defense.filter((tr) =>
     isKeyConflictDefender(play, tr, activeBeat?.focus)
   );
+
 
   // Close overlays dropdown on outside click
   useEffect(() => {
@@ -440,5 +440,6 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = ({ play, t }) => {
       </Field>
     </div>
   );
-};
+});
+
 

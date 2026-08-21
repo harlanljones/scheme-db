@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useMemo, useCallback, memo } from 'react';
 import type { Play, SchemeFamily } from '../engine/types';
 
 export interface PlayPickerProps {
@@ -12,6 +12,7 @@ export interface PlayPickerProps {
   isTheaterMode?: boolean;
   onToggleTheaterMode?: () => void;
 }
+
 
 export interface TreeClusterConfig {
   id: string;
@@ -80,7 +81,7 @@ export function getClusterForFamily(family: SchemeFamily): TreeClusterConfig {
   };
 }
 
-export const PlayPicker: React.FC<PlayPickerProps> = ({
+export const PlayPicker: React.FC<PlayPickerProps> = memo(({
   families = [],
   selectedFamilyId,
   onSelectFamily,
@@ -91,6 +92,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = ({
   isTheaterMode = false,
   onToggleTheaterMode,
 }) => {
+
   const [isSchemeMenuOpen, setIsSchemeMenuOpen] = useState(false);
   const [schemeCategoryFilter, setSchemeCategoryFilter] = useState<'all' | 'offense' | 'defense'>('all');
   const [schemeSearch, setSchemeSearch] = useState('');
@@ -569,4 +571,5 @@ export const PlayPicker: React.FC<PlayPickerProps> = ({
       </div>
     </div>
   );
-};
+});
+

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, memo } from 'react';
 import { FOOTBALL_GLOSSARY, findGlossaryTerm, type GlossaryEntry } from '../data/glossary';
 
 interface GlossaryCueProps {
@@ -6,7 +6,8 @@ interface GlossaryCueProps {
   children: React.ReactNode;
 }
 
-export const GlossaryCue: React.FC<GlossaryCueProps> = ({ term, children }) => {
+export const GlossaryCue: React.FC<GlossaryCueProps> = memo(({ term, children }) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [popoverPos, setPopoverPos] = useState<{ top: number; left: number; placement: 'top' | 'bottom' }>({
     top: 0,
@@ -278,43 +279,43 @@ export const GlossaryCue: React.FC<GlossaryCueProps> = ({ term, children }) => {
       )}
     </span>
   );
-};
+});
+
+
+// Precompile and hoist static sorted glossary patterns and regex once at module level
+const STATIC_SORTED_ENTRIES: { matchText: string; entry: GlossaryEntry }[] = [];
+FOOTBALL_GLOSSARY.forEach((entry) => {
+  STATIC_SORTED_ENTRIES.push({ matchText: entry.term, entry });
+  entry.aliases.forEach((alias) => {
+    STATIC_SORTED_ENTRIES.push({ matchText: alias, entry });
+  });
+});
+STATIC_SORTED_ENTRIES.sort((a, b) => b.matchText.length - a.matchText.length);
+
+const escapeRegex = (s: string) => s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+const GLOSSARY_PATTERN = new RegExp(
+  `\\b(${STATIC_SORTED_ENTRIES.map((e) => escapeRegex(e.matchText)).join('|')})\\b`,
+  'gi'
+);
 
 /**
  * Text renderer that scans a text string and decorates occurrences of domain terms
  * with interactive glossary cue triggers and popovers.
  */
-export const GlossaryText: React.FC<{ text: string }> = ({ text }) => {
+export const GlossaryText: React.FC<{ text: string }> = memo(({ text }) => {
   if (!text) return null;
-
-  // Build sorted list of search patterns (longest first to avoid partial substring collisions)
-  const sortedEntries: { matchText: string; entry: GlossaryEntry }[] = [];
-  FOOTBALL_GLOSSARY.forEach((entry) => {
-    sortedEntries.push({ matchText: entry.term, entry });
-    entry.aliases.forEach((alias) => {
-      sortedEntries.push({ matchText: alias, entry });
-    });
-  });
-
-  // Sort descending by length
-  sortedEntries.sort((a, b) => b.matchText.length - a.matchText.length);
-
-  // Build regex pattern matching all terms as whole words where possible
-  // Escape regex special chars
-  const escapeRegex = (s: string) => s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
-  const pattern = new RegExp(
-    `\\b(${sortedEntries.map((e) => escapeRegex(e.matchText)).join('|')})\\b`,
-    'gi'
-  );
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
-  // Track already matched ranges in this text block to avoid duplicate overlaps
-  while ((match = pattern.exec(text)) !== null) {
+  // Reset regex state
+  GLOSSARY_PATTERN.lastIndex = 0;
+
+  // Track matched ranges in text
+  while ((match = GLOSSARY_PATTERN.exec(text)) !== null) {
     const matchStart = match.index;
-    const matchEnd = pattern.lastIndex;
+    const matchEnd = GLOSSARY_PATTERN.lastIndex;
     const matchedStr = match[0];
 
     // Push text preceding this match
@@ -342,7 +343,8 @@ export const GlossaryText: React.FC<{ text: string }> = ({ text }) => {
   }
 
   return <>{parts}</>;
-};
+});
+
 
 /**
  * Modal dialogue to browse all terms in the football glossary

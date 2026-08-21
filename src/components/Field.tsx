@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 export interface FieldProps {
   losYard?: number; // e.g. 40
@@ -9,46 +9,39 @@ export const FIELD_WIDTH = 53.33; // 53 1/3 yards (160 feet)
 export const LEFT_HASH = 23.58;   // 70 ft 9 in from left sideline
 export const RIGHT_HASH = 29.75;  // 70 ft 9 in from right sideline (6.17 yd apart)
 
-export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
-  // Field coordinate bounds:
-  // x: 0 to 53.33 (yards across field)
-  // y: field y (relative to LOS, positive = downfield, negative = backfield)
-  // SVG coordinates:
-  // svgX = x
-  // svgY = -y (downfield is up / lower svgY)
-  // ViewBox encompasses y_field from -16 to +27 => svgY from -27 to +16
-  const minX = -3.2;
-  const minY = -27.5;
-  const width = FIELD_WIDTH + 6.4; // ~59.73
-  const height = 44.5;             // -27.5 to 17.0
+const FIELD_MIN_X = -3.2;
+const FIELD_MIN_Y = -27.5;
+const FIELD_TOTAL_WIDTH = FIELD_WIDTH + 6.4; // ~59.73
+const FIELD_TOTAL_HEIGHT = 44.5;             // -27.5 to 17.0
 
-  // 5-Yard lines from y = -15 to +25
-  const yardLines: number[] = [];
-  for (let y = -15; y <= 25; y += 5) {
-    yardLines.push(y);
+// Static pre-computed 5-Yard lines from y = -15 to +25
+const STATIC_YARD_LINES: number[] = [];
+for (let y = -15; y <= 25; y += 5) {
+  STATIC_YARD_LINES.push(y);
+}
+
+// Static pre-computed 1-Yard tick marks
+const STATIC_HASH_TICKS: number[] = [];
+for (let y = -15; y <= 25; y += 1) {
+  if (y % 5 !== 0) {
+    STATIC_HASH_TICKS.push(y);
   }
+}
 
-  // 1-Yard tick marks
-  const hashTicks: number[] = [];
-  for (let y = -15; y <= 25; y += 1) {
-    if (y % 5 !== 0) {
-      hashTicks.push(y);
-    }
-  }
+// Static pre-computed 5-yard alternating lawn stripe bands
+const STATIC_MOWER_BANDS: { y: number; height: number; isDark: boolean }[] = [];
+for (let y = -15; y <= 25; y += 5) {
+  STATIC_MOWER_BANDS.push({
+    y,
+    height: 5,
+    isDark: Math.floor((y + 15) / 5) % 2 === 1,
+  });
+}
 
-  // 5-yard alternating lawn stripe bands
-  const mowerBands: { y: number; height: number; isDark: boolean }[] = [];
-  for (let y = -15; y <= 25; y += 5) {
-    mowerBands.push({
-      y,
-      height: 5,
-      isDark: Math.floor((y + 15) / 5) % 2 === 1,
-    });
-  }
-
+export const Field: React.FC<FieldProps> = memo(({ losYard = 40, children }) => {
   return (
     <svg
-      viewBox={`${minX} ${minY} ${width} ${height}`}
+      viewBox={`${FIELD_MIN_X} ${FIELD_MIN_Y} ${FIELD_TOTAL_WIDTH} ${FIELD_TOTAL_HEIGHT}`}
       style={{
         width: '100%',
         height: '100%',
@@ -59,6 +52,7 @@ export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
         overflow: 'hidden',
       }}
     >
+
       <defs>
         {/* Subtle grass/turf texture pattern */}
         <pattern id="turfGrain" width="4" height="4" patternUnits="userSpaceOnUse">
@@ -115,13 +109,13 @@ export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
       </defs>
 
       {/* 1. Outer Field Apron (Deep coaching green) */}
-      <rect x={minX} y={minY} width={width} height={height} fill="#07140e" />
+      <rect x={FIELD_MIN_X} y={FIELD_MIN_Y} width={FIELD_TOTAL_WIDTH} height={FIELD_TOTAL_HEIGHT} fill="#07140e" />
 
       {/* 2. Primary Turf Area */}
-      <rect x="0" y={minY} width={FIELD_WIDTH} height={height} fill="#0d2319" />
+      <rect x="0" y={FIELD_MIN_Y} width={FIELD_WIDTH} height={FIELD_TOTAL_HEIGHT} fill="#0d2319" />
 
       {/* 3. Mower Alternating 5-Yard Turf Bands */}
-      {mowerBands.map((band) => {
+      {STATIC_MOWER_BANDS.map((band) => {
         const svgY = -(band.y + band.height);
         return (
           <rect
@@ -136,18 +130,18 @@ export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
       })}
 
       {/* 4. Tactical Vignette */}
-      <rect x="0" y={minY} width={FIELD_WIDTH} height={height} fill="url(#fieldVignette)" opacity="0.35" />
+      <rect x="0" y={FIELD_MIN_Y} width={FIELD_WIDTH} height={FIELD_TOTAL_HEIGHT} fill="url(#fieldVignette)" opacity="0.35" />
 
       {/* 5. Sideline Coaching Box / Apron Boundaries */}
-      <line x1="-1.5" y1={minY} x2="-1.5" y2={minY + height} stroke="#1b3628" strokeWidth="0.12" strokeDasharray="1.5 1.5" />
-      <line x1={FIELD_WIDTH + 1.5} y1={minY} x2={FIELD_WIDTH + 1.5} y2={minY + height} stroke="#1b3628" strokeWidth="0.12" strokeDasharray="1.5 1.5" />
+      <line x1="-1.5" y1={FIELD_MIN_Y} x2="-1.5" y2={FIELD_MIN_Y + FIELD_TOTAL_HEIGHT} stroke="#1b3628" strokeWidth="0.12" strokeDasharray="1.5 1.5" />
+      <line x1={FIELD_WIDTH + 1.5} y1={FIELD_MIN_Y} x2={FIELD_WIDTH + 1.5} y2={FIELD_MIN_Y + FIELD_TOTAL_HEIGHT} stroke="#1b3628" strokeWidth="0.12" strokeDasharray="1.5 1.5" />
 
       {/* 6. Solid White Sidelines */}
-      <line x1="0" y1={minY} x2="0" y2={minY + height} stroke="#f1f5f9" strokeWidth="0.32" opacity="0.9" />
-      <line x1={FIELD_WIDTH} y1={minY} x2={FIELD_WIDTH} y2={minY + height} stroke="#f1f5f9" strokeWidth="0.32" opacity="0.9" />
+      <line x1="0" y1={FIELD_MIN_Y} x2="0" y2={FIELD_MIN_Y + FIELD_TOTAL_HEIGHT} stroke="#f1f5f9" strokeWidth="0.32" opacity="0.9" />
+      <line x1={FIELD_WIDTH} y1={FIELD_MIN_Y} x2={FIELD_WIDTH} y2={FIELD_MIN_Y + FIELD_TOTAL_HEIGHT} stroke="#f1f5f9" strokeWidth="0.32" opacity="0.9" />
 
       {/* 7. 5-Yard Transverse Chalk Lines & Tactical Yard Numbers */}
-      {yardLines.map((y) => {
+      {STATIC_YARD_LINES.map((y) => {
         const svgY = -y;
         const actualYard = losYard + y;
         const displayNumber = actualYard > 50 ? 100 - actualYard : actualYard;
@@ -227,7 +221,7 @@ export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
       })}
 
       {/* 9. Official NFL 1-Yard Hash Marks (Sidelines & Inbound Hashes) */}
-      {hashTicks.map((y) => {
+      {STATIC_HASH_TICKS.map((y) => {
         const svgY = -y;
         return (
           <g key={`hash-${y}`} stroke="#e2e8f0" strokeWidth="0.16" opacity="0.42">
@@ -242,6 +236,7 @@ export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
           </g>
         );
       })}
+
 
       {/* 8. High-Visibility Line of Scrimmage (LOS) Blue Line (#38bdf8) */}
       <g id="los-group">
@@ -363,4 +358,5 @@ export const Field: React.FC<FieldProps> = ({ losYard = 40, children }) => {
       {children}
     </svg>
   );
-};
+});
+

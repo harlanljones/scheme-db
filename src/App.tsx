@@ -1,14 +1,55 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import React, { useState, useMemo, useEffect, useCallback, lazy, Suspense } from 'react';
 import { ALL_SCHEME_FAMILIES, ALL_PLAYS, getSchemeFamilyById } from './data/schemes/index';
 import { usePlayback } from './engine/playback';
 import { PlayCanvas } from './components/PlayCanvas';
 import { Timeline } from './components/Timeline';
 import { AnalysisPanel } from './components/AnalysisPanel';
 import { PlayPicker } from './components/PlayPicker';
-import { SequenceMap } from './components/SequenceMap';
-import { CoachingTreeGraph } from './components/coaching-tree/CoachingTreeGraph';
-import { SchemeFamiliesDirectory } from './components/SchemeFamiliesDirectory';
 import './App.css';
+
+// Lazy-loaded secondary views for optimized initial bundle & rapid first paint
+const SchemeFamiliesDirectory = lazy(() =>
+  import('./components/SchemeFamiliesDirectory').then((m) => ({ default: m.SchemeFamiliesDirectory }))
+);
+const CoachingTreeGraph = lazy(() =>
+  import('./components/coaching-tree/CoachingTreeGraph').then((m) => ({ default: m.CoachingTreeGraph }))
+);
+const SequenceMap = lazy(() =>
+  import('./components/SequenceMap').then((m) => ({ default: m.SequenceMap }))
+);
+
+const ViewLoadingSkeleton: React.FC<{ label: string }> = ({ label }) => (
+  <div
+    style={{
+      flex: 1,
+      minHeight: '300px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'var(--bg-surface)',
+      border: '1px solid var(--border-subtle)',
+      borderRadius: '8px',
+      gap: '12px',
+      color: 'var(--text-secondary)',
+      fontFamily: 'var(--font-mono)',
+      fontSize: '0.8rem',
+    }}
+  >
+    <div
+      style={{
+        width: '24px',
+        height: '24px',
+        border: '2px solid var(--border-medium)',
+        borderTopColor: 'var(--accent-defense)',
+        borderRadius: '50%',
+        animation: 'spin 0.8s linear infinite',
+      }}
+    />
+    <span>Loading {label}...</span>
+  </div>
+);
+
 
 export type ActiveTab = 'visualizer' | 'directory' | 'trees' | 'sequence-map';
 
@@ -443,33 +484,40 @@ export const App: React.FC = () => {
 
         {activeTab === 'directory' && (
           <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', width: '100%' }}>
-            <SchemeFamiliesDirectory
-              onSelectFamily={(famId, view) => handleSelectFamily(famId, view || 'visualizer')}
-              onSelectPlay={handleSelectPlayFromDirectory}
-            />
+            <Suspense fallback={<ViewLoadingSkeleton label="Scheme Catalog & Master Matrix" />}>
+              <SchemeFamiliesDirectory
+                onSelectFamily={(famId, view) => handleSelectFamily(famId, view || 'visualizer')}
+                onSelectPlay={handleSelectPlayFromDirectory}
+              />
+            </Suspense>
           </div>
         )}
 
         {activeTab === 'trees' && (
           <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', width: '100%' }}>
-            <CoachingTreeGraph
-              onSelectFamily={(famId, view) => handleSelectFamily(famId, view || 'visualizer')}
-            />
+            <Suspense fallback={<ViewLoadingSkeleton label="Coaching Lineage Trees" />}>
+              <CoachingTreeGraph
+                onSelectFamily={(famId, view) => handleSelectFamily(famId, view || 'visualizer')}
+              />
+            </Suspense>
           </div>
         )}
 
         {activeTab === 'sequence-map' && (
           <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflowY: 'auto', overflowX: 'hidden', width: '100%' }}>
-            <SequenceMap
-              plays={currentFamily.plays}
-              selectedPlayId={selectedPlayId}
-              onSelectPlay={(id) => {
-                handleSelectPlay(id);
-                setActiveTab('visualizer');
-              }}
-            />
+            <Suspense fallback={<ViewLoadingSkeleton label="0.0s–1.2s Disguise Sequence Matrix" />}>
+              <SequenceMap
+                plays={currentFamily.plays}
+                selectedPlayId={selectedPlayId}
+                onSelectPlay={(id) => {
+                  handleSelectPlay(id);
+                  setActiveTab('visualizer');
+                }}
+              />
+            </Suspense>
           </div>
         )}
+
       </main>
 
       {/* Workstation Guide & Keyboard Shortcuts Modal */}

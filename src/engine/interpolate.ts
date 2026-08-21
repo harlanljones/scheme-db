@@ -68,6 +68,37 @@ export function positionAt(track: PlayerTrack, t: number): Point {
 }
 
 /**
+ * WeakMap cache for memoizing static full-track SVG ghost path strings.
+ */
+const fullTrackPathCache = new WeakMap<PlayerTrack, { steps: number; pathD: string; svgPoints: Point[] }>();
+
+/**
+ * Gets or computes the memoized SVG path string for a full player track.
+ */
+export function getFullTrackSvgPath(track: PlayerTrack, steps?: number): { pathD: string; svgPoints: Point[] } {
+  const fullDuration = track.waypoints[track.waypoints.length - 1]?.t ?? 0;
+  const targetSteps = steps ?? Math.max(12, Math.min(60, Math.round(fullDuration * 18)));
+
+  const cached = fullTrackPathCache.get(track);
+  if (cached && cached.steps === targetSteps) {
+    return cached;
+  }
+
+  const points = sampleTrack(track, 0, fullDuration, targetSteps);
+  const svgPoints = points.map((p) => ({ x: p.x, y: -p.y }));
+
+  let pathD = '';
+  for (let i = 0; i < svgPoints.length; i++) {
+    const p = svgPoints[i];
+    pathD += `${i === 0 ? 'M' : ' L'} ${p.x.toFixed(2)} ${p.y.toFixed(2)}`;
+  }
+
+  const entry = { steps: targetSteps, pathD, svgPoints };
+  fullTrackPathCache.set(track, entry);
+  return entry;
+}
+
+/**
  * Samples the track path between `from` and `to` at discrete steps for smooth trail rendering.
  */
 export function sampleTrack(track: PlayerTrack, from: number, to: number, steps: number = 20): Point[] {
@@ -75,13 +106,14 @@ export function sampleTrack(track: PlayerTrack, from: number, to: number, steps:
     return [positionAt(track, from)];
   }
 
-  const points: Point[] = [];
+  const points: Point[] = new Array(steps);
   const dt = (to - from) / (steps - 1);
 
   for (let k = 0; k < steps; k++) {
     const t = from + k * dt;
-    points.push(positionAt(track, t));
+    points[k] = positionAt(track, t);
   }
 
   return points;
 }
+

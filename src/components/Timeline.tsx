@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useMemo, useState, useRef } from 'react';
+import React, { useEffect, useCallback, useMemo, useState, useRef, memo } from 'react';
 import type { Beat } from '../engine/types';
 import { formatTimecode, type PlaybackSpeed } from '../engine/playback';
 
@@ -16,7 +16,9 @@ export interface TimelineProps {
   onToggleLoop?: () => void;
 }
 
-export const Timeline: React.FC<TimelineProps> = ({
+const PLAYBACK_SPEEDS: PlaybackSpeed[] = [0.25, 0.5, 1, 1.5];
+
+export const Timeline: React.FC<TimelineProps> = memo(({
   t,
   duration,
   playing,
@@ -29,7 +31,7 @@ export const Timeline: React.FC<TimelineProps> = ({
   onReset,
   onToggleLoop,
 }) => {
-  const speeds: PlaybackSpeed[] = [0.25, 0.5, 1, 1.5];
+
   const [hoveredBeat, setHoveredBeat] = useState<{ beat: Beat; xPct: number } | null>(null);
   const [showShortcutsModal, setShowShortcutsModal] = useState(false);
   const shortcutsRef = useRef<HTMLDivElement>(null);
@@ -314,7 +316,7 @@ export const Timeline: React.FC<TimelineProps> = ({
 
           {/* Speed Selector Pills */}
           <div className="speed-pills-group" role="group" aria-label="Playback speed">
-            {speeds.map((s) => (
+            {PLAYBACK_SPEEDS.map((s) => (
               <button
                 key={s}
                 type="button"
@@ -360,5 +362,6 @@ export const Timeline: React.FC<TimelineProps> = ({
       </div>
     </div>
   );
-};
+});
+
 

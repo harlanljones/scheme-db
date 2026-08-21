@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import type { Side } from '../engine/types';
 
 export interface PlayerMarkerProps {
@@ -64,7 +64,7 @@ export function getPlayerAriaLabel(
   return `${sideName} ${posIdentifier} - ${assignmentDesc}`;
 }
 
-export const PlayerMarker: React.FC<PlayerMarkerProps> = ({
+export const PlayerMarker: React.FC<PlayerMarkerProps> = memo(({
   id,
   label,
   side,
@@ -83,6 +83,7 @@ export const PlayerMarker: React.FC<PlayerMarkerProps> = ({
   onClick,
   onKeyDown,
 }) => {
+
   const [isKeyboardFocused, setIsKeyboardFocused] = useState(false);
 
   const isOffense = side === 'offense';
@@ -354,4 +355,5 @@ export const PlayerMarker: React.FC<PlayerMarkerProps> = ({
       </text>
     </g>
   );
-};
+});
+

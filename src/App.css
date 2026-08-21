@@ -870,6 +870,7 @@
   padding: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  contain: layout style;
 }
 
 .canvas-viewport-wrapper {
@@ -885,6 +886,9 @@
   overflow: hidden;
   position: relative;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  contain: layout paint size;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .side-panel {
@@ -898,8 +902,10 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  contain: layout style;
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s ease;
 }
+
 
 .side-panel.collapsed,
 .film-room-grid.theater-mode .side-panel {

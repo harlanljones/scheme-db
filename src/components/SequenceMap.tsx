@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, memo } from 'react';
 import type { Play } from '../engine/types';
 import { Field } from './Field';
 import { PlayerMarker } from './PlayerMarker';
@@ -13,11 +13,12 @@ export interface SequenceMapProps {
 type SequenceViewMode = 'mesh-analyzer' | 'graph-matrix';
 type ComparisonDisplay = 'ghost-overlay' | 'side-by-side';
 
-export const SequenceMap: React.FC<SequenceMapProps> = ({
+export const SequenceMap: React.FC<SequenceMapProps> = memo(({
   plays,
   selectedPlayId,
   onSelectPlay,
 }) => {
+
   const [viewMode, setViewMode] = useState<SequenceViewMode>('mesh-analyzer');
   const [comparisonDisplay, setComparisonDisplay] = useState<ComparisonDisplay>('ghost-overlay');
   const [meshTime, setMeshTime] = useState<number>(0.8);
@@ -923,4 +924,5 @@ export const SequenceMap: React.FC<SequenceMapProps> = ({
       )}
     </div>
   );
-};
+});
+

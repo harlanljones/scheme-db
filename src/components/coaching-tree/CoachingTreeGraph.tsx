@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
 import type { CoachProfile, CoachingTreeNode, CoachingTree } from '../../engine/types';
 import { COACHING_TREES, ALL_COACHES } from '../../data/coaches/index';
 import { CoachDetailModal } from './CoachDetailModal';
@@ -27,7 +27,8 @@ interface TreeLink {
   color: string;
 }
 
-export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = ({ onSelectFamily }) => {
+export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSelectFamily }) => {
+
   const [selectedBranchId, setSelectedBranchId] = useState<string>(COACHING_TREES[0].id);
   const [categoryFilter, setCategoryFilter] = useState<'all' | 'offense' | 'defense'>('all');
   const [headCoachOnly, setHeadCoachOnly] = useState<boolean>(false);
@@ -1306,4 +1307,5 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = ({ onSelectFa
       )}
     </div>
   );
-};
+});
+
