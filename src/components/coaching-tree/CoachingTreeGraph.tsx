@@ -2,6 +2,7 @@ import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
 import type { CoachProfile, CoachingTreeNode, CoachingTree } from '../../engine/types';
 import { COACHING_TREES, ALL_COACHES } from '../../data/coaches/index';
 import { CoachDetailModal } from './CoachDetailModal';
+import { CoachHeadshot } from './CoachHeadshot';
 
 interface CoachingTreeGraphProps {
   onSelectFamily: (familyId: string, view?: 'visualizer' | 'sequence-map') => void;
@@ -98,7 +99,7 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
   // Build hierarchical layout for tree visualization
   const { nodes, links, bounds } = useMemo(() => {
     const CARD_WIDTH = 290;
-    const CARD_HEIGHT = 200;
+    const CARD_HEIGHT = 224;
     const HORIZONTAL_GAP = 32;
     const VERTICAL_GAP = 85;
 
@@ -382,6 +383,7 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
           </div>
           <p style={{ margin: '3px 0 0', fontSize: '0.8rem', color: '#94a3b8' }}>
             Mapping master architects to active 2026 disciples, scheme lineages, and playable film playbooks
+            <span style={{ color: '#475569' }}> · Photos via Wikimedia Commons</span>
           </p>
         </div>
 
@@ -1167,33 +1169,42 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
                     </div>
                   </div>
 
-                  {/* Coach Name & Role */}
-                  <div>
-                    <h4
-                      style={{
-                        margin: '0 0 2px',
-                        fontSize: isRoot ? '1.05rem' : '0.94rem',
-                        fontWeight: 800,
-                        color: '#f8fafc',
-                        letterSpacing: '-0.015em',
-                      }}
-                    >
-                      {coach.name}
-                    </h4>
-                    <p
-                      style={{
-                        margin: 0,
-                        fontSize: '0.74rem',
-                        color: isOffense ? '#7dd3fc' : '#d8b4fe',
-                        fontWeight: 600,
-                        lineHeight: 1.3,
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                      }}
-                    >
-                      {coach.role2026}
-                    </p>
+                  {/* Headshot, Coach Name & Role */}
+                  <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                    <CoachHeadshot
+                      coachId={coach.id}
+                      name={coach.name}
+                      size={isRoot ? 56 : 48}
+                      isRoot={isRoot}
+                      category={coach.category === 'defense' ? 'defense' : 'offense'}
+                    />
+                    <div style={{ minWidth: 0 }}>
+                      <h4
+                        style={{
+                          margin: '0 0 2px',
+                          fontSize: isRoot ? '1.05rem' : '0.94rem',
+                          fontWeight: 800,
+                          color: '#f8fafc',
+                          letterSpacing: '-0.015em',
+                        }}
+                      >
+                        {coach.name}
+                      </h4>
+                      <p
+                        style={{
+                          margin: 0,
+                          fontSize: '0.74rem',
+                          color: isOffense ? '#7dd3fc' : '#d8b4fe',
+                          fontWeight: 600,
+                          lineHeight: 1.3,
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                        }}
+                      >
+                        {coach.role2026}
+                      </p>
+                    </div>
                   </div>
 
                   {/* Philosophy Snippet */}

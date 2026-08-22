@@ -1,6 +1,8 @@
 import React from 'react';
 import type { CoachProfile } from '../../engine/types';
 import { getSchemeFamilyById } from '../../data/schemes/index';
+import { CoachHeadshot } from './CoachHeadshot';
+import { COACH_HEADSHOTS } from '../../data/coaches/headshots';
 
 interface CoachDetailModalProps {
   coach: CoachProfile;
@@ -93,73 +95,96 @@ export const CoachDetailModal: React.FC<CoachDetailModalProps> = ({
 
         {/* Header Section */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
-            <span
-              style={{
-                fontSize: '0.72rem',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.04em',
-                padding: '3px 10px',
-                borderRadius: '9999px',
-                backgroundColor: isOffense ? '#0369a1' : '#7e22ce',
-                color: '#ffffff',
-              }}
-            >
-              {isOffense ? '⚡ Offensive Lineage' : '🛡 Defensive Lineage'}
-            </span>
-            {coach.isHeadCoach2026 && (
-              <span
+          <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
+            <CoachHeadshot
+              coachId={coach.id}
+              name={coach.name}
+              size={84}
+              isRoot
+              category={isOffense ? 'offense' : 'defense'}
+            />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', minWidth: 0 }}>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+                <span
+                  style={{
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.04em',
+                    padding: '3px 10px',
+                    borderRadius: '9999px',
+                    backgroundColor: isOffense ? '#0369a1' : '#7e22ce',
+                    color: '#ffffff',
+                  }}
+                >
+                  {isOffense ? '⚡ Offensive Lineage' : '🛡 Defensive Lineage'}
+                </span>
+                {coach.isHeadCoach2026 && (
+                  <span
+                    style={{
+                      fontSize: '0.72rem',
+                      fontWeight: 700,
+                      padding: '3px 10px',
+                      borderRadius: '9999px',
+                      backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                      color: '#38bdf8',
+                      border: '1px solid rgba(56, 189, 248, 0.35)',
+                    }}
+                  >
+                    👑 2026 Head Coach
+                  </span>
+                )}
+              </div>
+              <h2
+                id="coach-modal-title"
                 style={{
-                  fontSize: '0.72rem',
-                  fontWeight: 700,
-                  padding: '3px 10px',
-                  borderRadius: '9999px',
-                  backgroundColor: 'rgba(56, 189, 248, 0.15)',
-                  color: '#38bdf8',
-                  border: '1px solid rgba(56, 189, 248, 0.35)',
+                  fontSize: '1.65rem',
+                  fontWeight: 800,
+                  color: '#f8fafc',
+                  margin: 0,
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.15,
                 }}
               >
-                👑 2026 Head Coach
-              </span>
-            )}
+                {coach.name}
+              </h2>
+              <p
+                style={{
+                  fontSize: '0.92rem',
+                  fontWeight: 600,
+                  color: isOffense ? '#7dd3fc' : '#d8b4fe',
+                  margin: 0,
+                }}
+              >
+                {coach.role2026}
+              </p>
+            </div>
+          </div>
+          <span
+            style={{
+              alignSelf: 'flex-start',
+              fontSize: '0.72rem',
+              fontWeight: 600,
+              padding: '3px 10px',
+              borderRadius: '9999px',
+              backgroundColor: '#1e293b',
+              color: '#cbd5e1',
+              border: '1px solid #334155',
+            }}
+          >
+            {coach.team}
+          </span>
+          {COACH_HEADSHOTS[coach.id] && (
             <span
               style={{
-                fontSize: '0.72rem',
-                fontWeight: 600,
-                padding: '3px 10px',
-                borderRadius: '9999px',
-                backgroundColor: '#1e293b',
-                color: '#cbd5e1',
-                border: '1px solid #334155',
+                alignSelf: 'flex-start',
+                fontSize: '0.62rem',
+                color: '#475569',
               }}
             >
-              {coach.team}
+              Photo: Wikimedia Commons
             </span>
-          </div>
-
-          <h2
-            id="coach-modal-title"
-            style={{
-              fontSize: '1.65rem',
-              fontWeight: 800,
-              color: '#f8fafc',
-              margin: '2px 0 0',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            {coach.name}
-          </h2>
-          <p
-            style={{
-              fontSize: '0.92rem',
-              fontWeight: 600,
-              color: isOffense ? '#7dd3fc' : '#d8b4fe',
-              margin: 0,
-            }}
-          >
-            {coach.role2026}
-          </p>
+          )}
         </div>
 
         {/* Philosophy Card */}
