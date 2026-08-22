@@ -142,7 +142,7 @@ export const SchemeFamiliesDirectory: React.FC<SchemeFamiliesDirectoryProps> = m
                 transition: 'all 0.12s ease',
               }}
             >
-              All (20)
+              All ({ALL_SCHEME_FAMILIES.length})
             </button>
             <button
               type="button"
@@ -163,7 +163,7 @@ export const SchemeFamiliesDirectory: React.FC<SchemeFamiliesDirectoryProps> = m
                 transition: 'all 0.12s ease',
               }}
             >
-              ⚡ Offense (10)
+              ⚡ Offense ({ALL_SCHEME_FAMILIES.filter((f) => f.category === 'offense').length})
             </button>
             <button
               type="button"
@@ -184,7 +184,7 @@ export const SchemeFamiliesDirectory: React.FC<SchemeFamiliesDirectoryProps> = m
                 transition: 'all 0.12s ease',
               }}
             >
-              🛡 Defense (10)
+              🛡 Defense ({ALL_SCHEME_FAMILIES.filter((f) => f.category === 'defense').length})
             </button>
           </div>
         </div>
