@@ -98,8 +98,8 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
 
   // Build hierarchical layout for tree visualization
   const { nodes, links, bounds } = useMemo(() => {
-    const CARD_WIDTH = 290;
-    const CARD_HEIGHT = 224;
+    const CARD_WIDTH = 320;
+    const CARD_HEIGHT = 248;
     const HORIZONTAL_GAP = 32;
     const VERTICAL_GAP = 85;
 
@@ -1187,6 +1187,7 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
                           color: '#f8fafc',
                           letterSpacing: '-0.015em',
                         }}
+                        title={coach.name}
                       >
                         {coach.name}
                       </h4>
@@ -1197,10 +1198,12 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
                           color: isOffense ? '#7dd3fc' : '#d8b4fe',
                           fontWeight: 600,
                           lineHeight: 1.3,
-                          whiteSpace: 'nowrap',
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
                           overflow: 'hidden',
-                          textOverflow: 'ellipsis',
                         }}
+                        title={coach.role2026}
                       >
                         {coach.role2026}
                       </p>
@@ -1215,17 +1218,18 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
                       color: '#94a3b8',
                       lineHeight: 1.4,
                       display: '-webkit-box',
-                      WebkitLineClamp: 2,
+                      WebkitLineClamp: 3,
                       WebkitBoxOrient: 'vertical',
                       overflow: 'hidden',
                     }}
+                    title={coach.philosophy}
                   >
                     {coach.philosophy}
                   </p>
 
                   {/* Key Concepts Pills */}
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: 'auto' }}>
-                    {coach.keyConcepts.slice(0, 2).map((concept, i) => (
+                    {coach.keyConcepts.slice(0, 3).map((concept, i) => (
                       <span
                         key={i}
                         style={{
@@ -1241,9 +1245,12 @@ export const CoachingTreeGraph: React.FC<CoachingTreeGraphProps> = memo(({ onSel
                         {concept}
                       </span>
                     ))}
-                    {coach.keyConcepts.length > 2 && (
-                      <span style={{ fontSize: '0.64rem', color: '#64748b', alignSelf: 'center' }}>
-                        +{coach.keyConcepts.length - 2}
+                    {coach.keyConcepts.length > 3 && (
+                      <span
+                        style={{ fontSize: '0.64rem', color: '#64748b', alignSelf: 'center' }}
+                        title={coach.keyConcepts.join(', ')}
+                      >
+                        +{coach.keyConcepts.length - 3}
                       </span>
                     )}
                   </div>
