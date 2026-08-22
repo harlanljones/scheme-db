@@ -29,11 +29,12 @@ Film-study and coaching analysis workstation. Used across desktop browsers for i
 Interactive Coaching Playbook: Clean modern analytical dashboard with high-contrast tactical clarity, authentic coaching notation, legible field telemetry, and purposeful film-room typography—eschewing generic AI dark-mode gradients and clutter.
 
 ## Evidence on Hand
-- Authored and typed play datasets across 20 full scheme families (80 plays; 10 offensive, 10 defensive systems): Shanahan Wide Zone, Kubiak Split-Zone, Reid Spread-RPO, McVay Duo, McDaniel Speed Motion, Stefanski Multi-TE Gap, Steichen QB Mesh RPO, LaFleur Illusion, Sirianni Power RPO, Johnson Counter Deception, Saleh 4-3 Wide-9, Macdonald Sim-Pressure, Flores Psycho Blitz, Fangio Two-High Quarters, Minter Amoeba Creeper, Ryans Wide-9 Attack, Shula Match Quarters, Spagnuolo Exotic Blitz, Quinn Cover 3 Press, and Bowles Creeper Blitz.
-- 6 interactive 2026 coaching lineage trees comprising 20 detailed coach profiles with career achievements and scheme mappings.
+- Authored and typed play datasets across 45 full scheme families (180 plays; 25 offensive, 20 defensive systems) spanning modern NFL, historical NFL, and college football: the 15 modern-NFL offensive systems (Shanahan Wide Zone through Kelly Tempo Spread), 10 modern-NFL defensive systems (Saleh 4-3 Wide-9 through Bowles Creeper Blitz), plus historical/college expansions — Air Coryell, Walsh Classic WCO, Run and Shoot, Flexbone Triple Option, Air Raid, Delaware Wing-T, T-Formation Power Sweep, Pistol Read-Option, Baylor Choice, Meyer Spread-Option on offense; Buddy Ryan 46, LeBeau Fire Zone, Tampa 2, Landry Flex, Phillips Two-Gap 3-4, Jimmy Johnson Speed 4-3, Belichick Okie/Bear Package, Aranda Tite/Peso, Rocky Long 3-3-5 Stack, and Cover 2 Man-Under on defense.
+- Every expansion family carries a `SchemeEra` tag (`past-nfl` | `past-college` | `current-college` | `modern-nfl`) for era-aware catalog slicing.
+- 17 interactive coaching lineage trees comprising 53 detailed coach profiles with career achievements and scheme mappings — from Vince Lombardi, Don Coryell, Tom Landry, Buddy Ryan, and Dick LeBeau to all current 2026 NFL coaches in the library.
 - Contextual Football Glossary system (`glossary.ts`, `GlossaryTooltip.tsx`) auto-detecting core NFL schematic concepts across film room analysis.
 - Mathematical interpolation and sequencing engine (`interpolate.ts`, `playback.ts`, `beats.ts`, `validate.ts`).
-- Architectural roadmap (`ROADMAP.md`), design specification (`DESIGN.md`), and Vitest validation suites (71/71 tests passing).
+- Architectural roadmap (`ROADMAP.md`), design specification (`DESIGN.md`), and Vitest validation suites (72/72 tests passing).
 
 ## Product Principles
 1. **Sequencing is the Scheme**: Timing and visual disguise during the initial mesh/drop steps define modern offensive systems.

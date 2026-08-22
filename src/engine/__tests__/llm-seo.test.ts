@@ -76,13 +76,13 @@ describe('LLM SEO & Discoverability Conventions (August 2026)', () => {
       expect(llms.startsWith('# SchemeDB')).toBe(true);
       expect(llms).toContain('> SchemeDB is a high-fidelity football analytics');
 
-      // Verify all 20 scheme families are listed
+      // Verify every scheme family is listed
       for (const fam of ALL_SCHEME_FAMILIES) {
         expect(llms).toContain(fam.name);
         expect(llms).toContain(fam.id);
       }
 
-      // Verify all 80 plays are indexed
+      // Verify every play is indexed
       for (const play of ALL_PLAYS) {
         expect(llms).toContain(play.name);
         expect(llms).toContain(play.id);
@@ -162,12 +162,12 @@ describe('LLM SEO & Discoverability Conventions (August 2026)', () => {
       expect(xml).toContain('<loc>https://schemedb.com/llms-full.txt</loc>');
       expect(xml).toContain('<loc>https://schemedb.com/robots.txt</loc>');
 
-      // All 20 scheme families
+      // Every scheme family
       for (const fam of ALL_SCHEME_FAMILIES) {
         expect(xml).toContain(`<loc>https://schemedb.com/?scheme=${fam.id}</loc>`);
       }
 
-      // All 80 plays
+      // Every play
       for (const play of ALL_PLAYS) {
         expect(xml).toContain(`play=${play.id}`);
       }

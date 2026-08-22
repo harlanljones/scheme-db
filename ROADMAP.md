@@ -149,7 +149,7 @@ export interface PlaySummary {
 export interface Play {
   id: string;                   // unique across the whole library, kebab-case
   name: string;                 // display name, e.g. "Outside Zone Left"
-  coach: 'shanahan';            // widen this union when a second coach is added
+  coach: /* union of 45 coach keys — see types.ts */ 'shanahan';
   family: string;                // 'wide-zone'
   personnel: string;             // '21', '11'
   formation: string;              // 'Offset I, Wing Right'
@@ -166,6 +166,21 @@ export interface Play {
     playsOff: string[];           // Play ids whose picture this play borrows/mimics
     tell: string;                 // the ONE visual cue that separates this play from what it mimics
   };
+}
+
+export type SchemeEra = 'past-nfl' | 'past-college' | 'current-college' | 'modern-nfl';
+
+export interface SchemeFamily {
+  id: string;
+  name: string;
+  coach: string;                  // display name, e.g. "Kyle Shanahan"
+  coachId?: string;               // COACH_PROFILES key, e.g. 'kyle-shanahan'
+  team: string;
+  category?: 'offense' | 'defense';
+  treeBranch?: CoachingTreeBranch; // one of the 17 lineage branches
+  era?: SchemeEra;                 // required for all historical/college expansion families
+  description: string;
+  plays: Play[];
 }
 ```
 
@@ -273,7 +288,10 @@ it mimics (e.g., `"the backside tackle sets to pass-block instead of reaching do
 
 Shared starting alignments (offset I, gun trips, etc.) live in `src/data/formations.ts` as named
 constants, so each play file builds from a named alignment rather than 11 sets of magic-number
-coordinates repeated across files.
+coordinates repeated across files. The historical/college expansion families instead define a
+**local `ALIGN` const at the top of each play file** (same shape as the `formations.ts` entries)
+and reference it at every track's `t = 0` waypoint — both patterns are acceptable; prefer shared
+`formations.ts` constants when multiple plays genuinely share an alignment.
 
 ---
 
@@ -351,11 +369,51 @@ Five new offensive scheme families authored via 5 parallel agents, each owning e
 - Whole-library validation now sweeps **100/100 plays**; test counts updated
   (`validate.test.ts`, `playpicker-playermarker.test.ts`) and public LLM assets regenerated.
 
+### Phase 8 — Expansion III: Historical NFL & Current College (45 Systems • 180 Plays) ✅ (Completed)
+
+Twenty new scheme families authored via parallel agents, researched against web sources for
+historical accuracy. Each family owns one `src/data/schemes/<dir>/` directory (4 plays + index).
+
+**Offense (10 families / 40 plays):**
+- ⚡ Don Coryell — Air Coryell Vertical Passing — `coryell-vertical` (`past-nfl`)
+- ⚡ Bill Walsh — Classic West Coast Offense — `walsh-classic-wco` (`past-nfl`)
+- ⚡ June Jones — Run and Shoot — `run-and-shoot` (`past-nfl`)
+- ⚡ Paul Johnson — Flexbone Triple Option — `flexbone-triple-option` (`current-college`)
+- ⚡ Mike Leach — Air Raid — `air-raid` (`current-college`)
+- ⚡ Tubby Raymond — Delaware Wing-T — `delaware-wing-t` (`past-college`)
+- ⚡ Vince Lombardi — T-Formation Power Sweep — `t-formation-power-sweep` (`past-nfl`)
+- ⚡ Chris Ault — Pistol Read-Option — `pistol-read-option` (`past-college`)
+- ⚡ Art Briles — Baylor Vertical Choice Spread — `baylor-choice` (`past-college`)
+- ⚡ Urban Meyer — Spread-Option — `meyer-spread-option` (`past-college`)
+
+**Defense (10 families / 40 plays):**
+- 🛡 Buddy Ryan — 46 Defense — `buddy-46-defense` (`past-nfl`)
+- 🛡 Dick LeBeau — Fire Zone Zone Blitz — `lebeau-fire-zone` (`past-nfl`)
+- 🛡 Tony Dungy — Tampa 2 — `tampa-2` (`past-nfl`)
+- 🛡 Tom Landry — Flex Defense — `landry-flex` (`past-nfl`)
+- 🛡 Bum Phillips — Two-Gap 3-4 — `phillips-two-gap-34` (`past-nfl`)
+- 🛡 Jimmy Johnson — Speed 4-3 — `jj-speed-43` (`past-nfl`)
+- 🛡 Bill Belichick — Okie/Bear Package — `belichick-okie-bear` (`modern-nfl`)
+- 🛡 Dave Aranda — Tite Front / Peso — `aranda-tite-peso` (`current-college`)
+- 🛡 Rocky Long — 3-3-5 Stack — `rlong-335-stack` (`current-college`)
+- 🛡 Marvin Lewis — Cover 2 Man-Under — `cover2-man-under` (`past-nfl`)
+
+**Supporting changes:**
+- Data model: coach union extended by 19 keys; `SchemeEra` type + `SchemeFamily.era` added
+  (**data-only** — no UI filtering wired); `CoachingTreeBranch` union grown from 7 to 17.
+- Coaches: 21 new `CoachProfile`s and 9 new coaching trees (17 trees / 53 coaches now);
+  Vince Lombardi grafted into `power-gap-duo`; Walsh classic WCO attached to his existing
+  `shanahan-kubiak` branch via `walsh-classic-wco`.
+- Components: 10 new `TREE_CLUSTERS` entries in `PlayPicker.tsx` covering every new branch
+  (cluster fallback removed — all 45 families resolve to a named cluster).
+- Whole-library validation now sweeps **180/180 plays** with zero errors; test counts updated
+  (72 tests) plus a new era-tag test asserting exactly 20 era-tagged families.
+
 ---
 
 ## 5. Verification Checklist
 
-- `bun run test` — All 71 engine unit tests, coach lineage tests, glossary lookup tests, accessibility/clustering tests, and whole-library validation tests passing.
+- `bun run test` — All 72 engine unit tests, coach lineage tests, glossary lookup tests, accessibility/clustering tests, era-tag tests, and whole-library validation tests passing.
 - `bun run build && bunx tsc --noEmit` — Type-clean build with zero errors.
 - Visual acceptance: The 0.0s–1.2s backfield mesh in base vs constraint plays is visually indistinguishable before the breakout point.
 

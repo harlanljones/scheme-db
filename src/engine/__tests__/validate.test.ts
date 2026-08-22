@@ -245,16 +245,25 @@ describe('validate engine', () => {
     }
   });
 
-  it('validates all 25 scheme families are registered (15 Offense, 10 Defense)', () => {
-    expect(ALL_SCHEME_FAMILIES.length).toBe(25);
+  it('validates all 45 scheme families are registered (25 Offense, 20 Defense)', () => {
+    expect(ALL_SCHEME_FAMILIES.length).toBe(45);
     const offenseFamilies = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'offense');
     const defenseFamilies = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'defense');
-    expect(offenseFamilies.length).toBe(15);
-    expect(defenseFamilies.length).toBe(10);
+    expect(offenseFamilies.length).toBe(25);
+    expect(defenseFamilies.length).toBe(20);
   });
 
-  it('validates the entire visualizer library of 100 plays with 0 errors or warnings', () => {
-    expect(ALL_PLAYS.length).toBe(100);
+  it('tags all 20 expansion scheme families with a valid era', () => {
+    const eras = ['past-nfl', 'past-college', 'current-college', 'modern-nfl'];
+    const withEra = ALL_SCHEME_FAMILIES.filter((f) => f.era !== undefined);
+    expect(withEra.length).toBe(20);
+    for (const family of withEra) {
+      expect(eras).toContain(family.era);
+    }
+  });
+
+  it('validates the entire visualizer library of 180 plays with 0 errors or warnings', () => {
+    expect(ALL_PLAYS.length).toBe(180);
     const libResults = validateLibrary(ALL_PLAYS);
 
     for (const play of ALL_PLAYS) {

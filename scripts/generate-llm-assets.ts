@@ -123,10 +123,13 @@ Sitemap: ${BASE_URL}/sitemap.xml
 export function generateLlmsTxt(): string {
   const offensiveSchemes = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'offense' || !f.category);
   const defensiveSchemes = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'defense');
+  const offensePlayCount = offensiveSchemes.reduce((sum, f) => sum + f.plays.length, 0);
+  const defensePlayCount = defensiveSchemes.reduce((sum, f) => sum + f.plays.length, 0);
+  const coachCount = Object.keys(COACH_PROFILES).length;
 
   let doc = `# SchemeDB — NFL Tactical Scheme & All-22 Playbook Visualizer
 
-> SchemeDB is a high-fidelity football analytics and tactical engineering workstation containing 20 NFL scheme systems (10 Offensive, 10 Defensive), 80 hand-authored plays with Catmull-Rom spline trajectory waypoints, 0.0s–1.2s disguise mesh window telemetry, and 6 coaching lineage trees spanning 20 NFL head coaches and patriarchs.
+> SchemeDB is a high-fidelity football analytics and tactical engineering workstation containing ${ALL_SCHEME_FAMILIES.length} scheme systems (${offensiveSchemes.length} Offensive, ${defensiveSchemes.length} Defensive) spanning modern NFL, historical NFL, and college football, ${ALL_PLAYS.length} hand-authored plays with Catmull-Rom spline trajectory waypoints, 0.0s–1.2s disguise mesh window telemetry, and ${COACHING_TREES.length} coaching lineage trees spanning ${coachCount} coaches and patriarchs.
 
 ## Overview & Architecture
 
@@ -147,12 +150,12 @@ export function generateLlmsTxt(): string {
 - **Direct Play Links**: \`${BASE_URL}/?play={play-id}\` (e.g., \`${BASE_URL}/?play=outside-zone\`)
 - **Direct Scheme Links**: \`${BASE_URL}/?scheme={scheme-id}\` (e.g., \`${BASE_URL}/?scheme=shanahan-wide-zone\`)
 
-## Offensive Scheme Families (10 Systems / 40 Plays)
+## Offensive Scheme Families (${offensiveSchemes.length} Systems / ${offensePlayCount} Plays)
 
 `;
 
   for (const fam of offensiveSchemes) {
-    doc += `### ${fam.name} (\`${fam.id}\`)\n`;
+    doc += `### ${fam.name} (\`${fam.id}\`)${fam.era ? ` — Era: \`${fam.era}\`` : ''}\n`;
     doc += `- **Architect / Head Coach**: ${fam.coach} (${fam.team})\n`;
     doc += `- **Philosophy**: ${fam.description}\n`;
     doc += `- **Plays**:\n`;
@@ -162,7 +165,7 @@ export function generateLlmsTxt(): string {
     doc += `\n`;
   }
 
-  doc += `## Defensive Scheme Families (10 Systems / 40 Plays)\n\n`;
+  doc += `## Defensive Scheme Families (${defensiveSchemes.length} Systems / ${defensePlayCount} Plays)\n\n`;
 
   for (const fam of defensiveSchemes) {
     doc += `### ${fam.name} (\`${fam.id}\`)\n`;
@@ -175,7 +178,7 @@ export function generateLlmsTxt(): string {
     doc += `\n`;
   }
 
-  doc += `## Coaching Lineage Trees (6 Trees / 20 Coaches)\n\n`;
+  doc += `## Coaching Lineage Trees (${COACHING_TREES.length} Trees / ${coachCount} Coaches)\n\n`;
 
   for (const tree of COACHING_TREES) {
     doc += `### ${tree.name} (\`${tree.id}\`)\n`;
@@ -183,7 +186,7 @@ export function generateLlmsTxt(): string {
     doc += `- **Description**: ${tree.description}\n\n`;
   }
 
-  doc += `## Coach Directory (20 Key Architects)\n\n`;
+  doc += `## Coach Directory (${coachCount} Architects & Patriarchs)\n\n`;
 
   for (const coach of Object.values(COACH_PROFILES)) {
     doc += `- **${coach.name}** (\`${coach.id}\`): ${coach.role2026} — ${coach.team}. Philosophy: ${coach.philosophy.slice(0, 150)}... Key Concepts: ${coach.keyConcepts.join(', ')}.\n`;
@@ -205,12 +208,18 @@ For the complete, unabridged play-by-play knowledge base including every waypoin
 // 3. Generate llms-full.txt (Comprehensive Knowledge Base for LLM Ingestion)
 // -----------------------------------------------------------------------------
 export function generateLlmsFullTxt(): string {
+  const offensiveCount = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'offense' || !f.category).length;
+  const defensiveCount = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'defense').length;
+
   let doc = `# SchemeDB — Complete NFL Scheme & All-22 Tactical Knowledge Base
 Version: August 2026
 Base URL: ${BASE_URL}
-Total Schemes: ${ALL_SCHEME_FAMILIES.length} (10 Offense, 10 Defense)
+Total Schemes: ${ALL_SCHEME_FAMILIES.length} (${offensiveCount} Offense, ${defensiveCount} Defense)
 Total Plays: ${ALL_PLAYS.length} hand-authored All-22 tactical plays
 Total Coaches: ${Object.keys(COACH_PROFILES).length}
+Total Coaching Trees: ${COACHING_TREES.length}
+
+Era coverage: modern-nfl, past-nfl, past-college, current-college (tagged on expansion families via SchemeFamily.era).
 
 ================================================================================
 PART 1: SCHEME FAMILIES & PLAY-BY-PLAY TACTICAL BREAKDOWNS
@@ -278,7 +287,7 @@ System Summary: ${tree.description}
   }
 
   doc += `--------------------------------------------------------------------------------
-COACH PROFILES (20 ARCHITECTS)
+COACH PROFILES (${Object.keys(COACH_PROFILES).length} ARCHITECTS & PATRIARCHS)
 --------------------------------------------------------------------------------\n\n`;
 
   for (const coach of Object.values(COACH_PROFILES)) {
@@ -359,7 +368,7 @@ export function generateSitemapXml(): string {
   </url>
 `;
 
-  // All 20 Scheme Families
+  // All Scheme Families
   xml += `  <!-- Scheme Family URLs -->\n`;
   for (const fam of ALL_SCHEME_FAMILIES) {
     xml += `  <url>
@@ -370,7 +379,7 @@ export function generateSitemapXml(): string {
   </url>\n`;
   }
 
-  // All 80 Plays
+  // All Plays
   xml += `  <!-- Individual Play URLs -->\n`;
   for (const play of ALL_PLAYS) {
     xml += `  <url>

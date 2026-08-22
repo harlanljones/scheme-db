@@ -60,7 +60,27 @@ export interface Play {
     | 'roman'
     | 'oconnell'
     | 'coen'
-    | 'kelly';
+    | 'kelly'
+    // Historical NFL & current college expansion
+    | 'coryell'
+    | 'walsh'
+    | 'runnshoot'
+    | 'pjohnson'
+    | 'leach'
+    | 'raymond'
+    | 'lombardi'
+    | 'ault'
+    | 'briles'
+    | 'meyer'
+    | 'bryan'
+    | 'lebeau'
+    | 'dungy'
+    | 'landry'
+    | 'phillips'
+    | 'jjohnson'
+    | 'aranda'
+    | 'rlong'
+    | 'mlewis';
   family: string;               // 'wide-zone', 'split-zone-leak', 'saleh-43-wide9', 'macdonald-hybrid-disguise'
   personnel: string;            // '21', '12', '11', 'Base 4-3', 'Nickel 4-2-5', etc.
   formation: string;            // 'Offset I, Wing Right', '11P Gun 3x1', etc.
@@ -79,6 +99,12 @@ export interface Play {
   };
 }
 
+export type SchemeEra =
+  | 'past-nfl'
+  | 'past-college'
+  | 'current-college'
+  | 'modern-nfl';
+
 export interface SchemeFamily {
   id: string;
   name: string;
@@ -87,6 +113,7 @@ export interface SchemeFamily {
   team: string;
   category?: 'offense' | 'defense';
   treeBranch?: CoachingTreeBranch;
+  era?: SchemeEra;
   description: string;
   plays: Play[];
 }
@@ -98,7 +125,17 @@ export type CoachingTreeBranch =
   | 'macdonald-pressure'
   | 'fangio-two-high'
   | 'carroll-saleh-wide9'
-  | 'belichick-flores';
+  | 'belichick-flores'
+  | 'coryell-vertical'
+  | 'air-raid'
+  | 'option-spread'
+  | 'delaware-wing-t'
+  | 'buddy-46'
+  | 'lebeau-zone-blitz'
+  | 'landry-dallas'
+  | 'phillips-two-gap'
+  | 'two-deep-shell'
+  | 'college-defensive-fronts';
 
 export interface CoachProfile {
   id: string;

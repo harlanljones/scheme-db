@@ -549,13 +549,13 @@ export const App: React.FC = () => {
                 <h3>Key Capabilities</h3>
                 <ul className="guide-feature-list">
                   <li>
-                    <strong>Film Room:</strong> Watch 100 plays across 25 NFL offensive and defensive schemes animated in authentic All-22. Scrub the timeline to inspect key conflict defender reads.
+                    <strong>Film Room:</strong> Watch {ALL_PLAYS.length} plays across {ALL_SCHEME_FAMILIES.length} offensive and defensive schemes — modern NFL, historical NFL, and college — animated in authentic All-22. Scrub the timeline to inspect key conflict defender reads.
                   </li>
                   <li>
                     <strong>Scheme Catalog:</strong> Filter and browse the complete library of {ALL_SCHEME_FAMILIES.length} scheme philosophies, personnel groupings, and counter tactics.
                   </li>
                   <li>
-                    <strong>Coaching Trees:</strong> Interactive lineage graphs tracing modern NFL coaching systems back to legendary architects (Bill Walsh, Mike Shanahan, Pete Carroll, Bill Belichick).
+                    <strong>Coaching Trees:</strong> Interactive lineage graphs tracing modern NFL coaching systems back to legendary architects (Bill Walsh, Don Coryell, Tom Landry, Buddy Ryan, Dick LeBeau, Paul Johnson, and more).
                   </li>
                   <li>
                     <strong>Sequence Matrix:</strong> Compare the 0.0s–1.2s disguise mesh window to see why complementary plays mirror each other.

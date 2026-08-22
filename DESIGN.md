@@ -56,7 +56,7 @@ The interface is built as a high-density, professional film-study workstation fo
 
 4. **Sequencing Matrix & Coaching Tree**:
    - Disguise mesh comparison analyzer highlighting the `0.0s – 1.2s` mirror window.
-   - Interactive zoom/pan hierarchical tree tracing Walsh → Shanahan / Carroll / Belichick → 2026 modern coaching descendants.
+   - Interactive zoom/pan hierarchical trees tracing all 17 lineages — Walsh → Shanahan / Reid, Carroll → Saleh, Belichick → Flores, plus historical roots (Lombardi's power sweep, Coryell's vertical passing tree, Landry's Flex, Buddy Ryan's 46, LeBeau's zone blitz) into their 2026 descendants.
 
 5. **Contextual Football Glossary & Popovers**:
    - Inline tactical term detection with dotted underline accent (`--accent-offense` / `--accent-defense`).

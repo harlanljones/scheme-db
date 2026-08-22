@@ -69,8 +69,8 @@ describe('PlayPicker coaching tree cluster classification', () => {
     }
   });
 
-  it('maps all 25 scheme families into organized coaching tree clusters', () => {
-    expect(ALL_SCHEME_FAMILIES.length).toBe(25);
+  it('maps all 45 scheme families into organized coaching tree clusters', () => {
+    expect(ALL_SCHEME_FAMILIES.length).toBe(45);
 
     const clusterCountMap = new Map<string, number>();
 
@@ -84,12 +84,28 @@ describe('PlayPicker coaching tree cluster classification', () => {
     }
 
     // Verify all major tree clusters have assigned schemes
-    expect(clusterCountMap.get('shanahan-kubiak')).toBe(9); // Shanahan, Kubiak, McVay, McDaniel, Stefanski, LaFleur, Johnson, O'Connell, Coen
+    expect(clusterCountMap.get('shanahan-kubiak')).toBe(10); // Walsh classic WCO, Shanahan, Kubiak, McVay, McDaniel, Stefanski, LaFleur, Johnson, O'Connell, Coen
     expect(clusterCountMap.get('reid-west-coast')).toBe(6); // Reid, Steichen, Sirianni, Spagnuolo, Payton, Kelly
+    expect(clusterCountMap.get('power-gap-duo')).toBe(2); // Lombardi power sweep, Roman
     expect(clusterCountMap.get('carroll-saleh-wide9')).toBe(3); // Saleh, Ryans, Quinn
     expect(clusterCountMap.get('macdonald-pressure')).toBe(2); // Macdonald, Minter
     expect(clusterCountMap.get('fangio-two-high')).toBe(2); // Fangio, Shula
-    expect(clusterCountMap.get('belichick-flores')).toBe(2); // Flores, Bowles
-    expect(clusterCountMap.get('power-gap-duo')).toBe(1); // Roman
+    expect(clusterCountMap.get('belichick-flores')).toBe(3); // Flores, Bowles, Okie/Bear package
+    // Historical & college expansion clusters
+    expect(clusterCountMap.get('coryell-vertical')).toBe(2); // Air Coryell, Run and Shoot
+    expect(clusterCountMap.get('air-raid')).toBe(1); // Leach
+    expect(clusterCountMap.get('option-spread')).toBe(4); // Flexbone, Meyer, Pistol, Baylor
+    expect(clusterCountMap.get('delaware-wing-t')).toBe(1); // Wing-T
+    expect(clusterCountMap.get('buddy-46')).toBe(1); // Buddy Ryan 46
+    expect(clusterCountMap.get('lebeau-zone-blitz')).toBe(1); // Fire Zone
+    expect(clusterCountMap.get('landry-dallas')).toBe(2); // Flex, Speed 4-3
+    expect(clusterCountMap.get('phillips-two-gap')).toBe(1); // Two-Gap 3-4
+    expect(clusterCountMap.get('two-deep-shell')).toBe(2); // Tampa 2, Cover 2 Man-Under
+    expect(clusterCountMap.get('college-defensive-fronts')).toBe(2); // Tite/Peso, 3-3-5 Stack
+
+    // Every family must resolve to a named cluster (no anonymous fallback)
+    for (const family of ALL_SCHEME_FAMILIES) {
+      expect(TREE_CLUSTERS[getClusterForFamily(family).id], `Family "${family.id}" fell back to anonymous cluster`).toBeDefined();
+    }
   });
 });

@@ -31,6 +31,30 @@ import { SPAGNUOLO_BLITZ_FAMILY, SPAGNUOLO_BLITZ_PLAYS } from './spagnuolo/index
 import { QUINN_PRESS_FAMILY, QUINN_PRESS_PLAYS } from './quinn/index';
 import { BOWLES_CREEPER_FAMILY, BOWLES_CREEPER_PLAYS } from './bowles/index';
 
+// ===================== HISTORICAL NFL & COLLEGE EXPANSION — OFFENSE =====================
+import { AIR_CORYELL_VERTICAL_FAMILY, AIR_CORYELL_VERTICAL_PLAYS } from './coryell/index';
+import { WALSH_CLASSIC_WCO_FAMILY, WALSH_CLASSIC_WCO_PLAYS } from './walsh/index';
+import { RUN_AND_SHOOT_FAMILY, RUN_AND_SHOOT_PLAYS } from './runnshoot/index';
+import { FLEXBONE_TRIPLE_OPTION_FAMILY, FLEXBONE_TRIPLE_OPTION_PLAYS } from './pjohnson/index';
+import { AIR_RAID_FAMILY, AIR_RAID_PLAYS } from './leach/index';
+import { DELAWARE_WING_T_FAMILY, DELAWARE_WING_T_PLAYS } from './raymond/index';
+import { T_FORMATION_POWER_SWEEP_FAMILY, T_FORMATION_POWER_SWEEP_PLAYS } from './lombardi/index';
+import { PISTOL_READ_OPTION_FAMILY, PISTOL_READ_OPTION_PLAYS } from './ault/index';
+import { BAYLOR_CHOICE_FAMILY, BAYLOR_CHOICE_PLAYS } from './briles/index';
+import { MEYER_SPREAD_OPTION_FAMILY, MEYER_SPREAD_OPTION_PLAYS } from './meyer/index';
+
+// ===================== HISTORICAL NFL & COLLEGE EXPANSION — DEFENSE =====================
+import { BUDDY_46_DEFENSE_FAMILY, BUDDY_46_DEFENSE_PLAYS } from './bryan/index';
+import { LEBEAU_FIRE_ZONE_FAMILY, LEBEAU_FIRE_ZONE_PLAYS } from './lebeau/index';
+import { TAMPA_TWO_FAMILY, TAMPA_TWO_PLAYS } from './dungy/index';
+import { LANDRY_FLEX_FAMILY, LANDRY_FLEX_PLAYS } from './landry/index';
+import { PHILLIPS_TWO_GAP_34_FAMILY, PHILLIPS_TWO_GAP_34_PLAYS } from './phillips/index';
+import { JJ_SPEED_43_FAMILY, JJ_SPEED_43_PLAYS } from './jjohnson/index';
+import { BELICHICK_OKIE_BEAR_FAMILY, BELICHICK_OKIE_BEAR_PLAYS } from './belichick/index';
+import { ARANDA_TITE_PESO_FAMILY, ARANDA_TITE_PESO_PLAYS } from './aranda/index';
+import { RLONG_335_STACK_FAMILY, RLONG_335_STACK_PLAYS } from './rlong/index';
+import { COVER2_MAN_UNDER_FAMILY, COVER2_MAN_UNDER_PLAYS } from './mlewis/index';
+
 // ===================== AGGREGATED EXPORTS =====================
 
 export const ALL_SCHEME_FAMILIES: SchemeFamily[] = [
@@ -61,6 +85,28 @@ export const ALL_SCHEME_FAMILIES: SchemeFamily[] = [
   SPAGNUOLO_BLITZ_FAMILY,
   QUINN_PRESS_FAMILY,
   BOWLES_CREEPER_FAMILY,
+  // Historical NFL & College Expansion — Offense (10)
+  AIR_CORYELL_VERTICAL_FAMILY,
+  WALSH_CLASSIC_WCO_FAMILY,
+  RUN_AND_SHOOT_FAMILY,
+  FLEXBONE_TRIPLE_OPTION_FAMILY,
+  AIR_RAID_FAMILY,
+  DELAWARE_WING_T_FAMILY,
+  T_FORMATION_POWER_SWEEP_FAMILY,
+  PISTOL_READ_OPTION_FAMILY,
+  BAYLOR_CHOICE_FAMILY,
+  MEYER_SPREAD_OPTION_FAMILY,
+  // Historical NFL & College Expansion — Defense (10)
+  BUDDY_46_DEFENSE_FAMILY,
+  LEBEAU_FIRE_ZONE_FAMILY,
+  TAMPA_TWO_FAMILY,
+  LANDRY_FLEX_FAMILY,
+  PHILLIPS_TWO_GAP_34_FAMILY,
+  JJ_SPEED_43_FAMILY,
+  BELICHICK_OKIE_BEAR_FAMILY,
+  ARANDA_TITE_PESO_FAMILY,
+  RLONG_335_STACK_FAMILY,
+  COVER2_MAN_UNDER_FAMILY,
 ];
 
 export const ALL_PLAYS: Play[] = [
@@ -91,6 +137,28 @@ export const ALL_PLAYS: Play[] = [
   ...SPAGNUOLO_BLITZ_PLAYS,
   ...QUINN_PRESS_PLAYS,
   ...BOWLES_CREEPER_PLAYS,
+  // Historical NFL & College Expansion — Offense (40)
+  ...AIR_CORYELL_VERTICAL_PLAYS,
+  ...WALSH_CLASSIC_WCO_PLAYS,
+  ...RUN_AND_SHOOT_PLAYS,
+  ...FLEXBONE_TRIPLE_OPTION_PLAYS,
+  ...AIR_RAID_PLAYS,
+  ...DELAWARE_WING_T_PLAYS,
+  ...T_FORMATION_POWER_SWEEP_PLAYS,
+  ...PISTOL_READ_OPTION_PLAYS,
+  ...BAYLOR_CHOICE_PLAYS,
+  ...MEYER_SPREAD_OPTION_PLAYS,
+  // Historical NFL & College Expansion — Defense (40)
+  ...BUDDY_46_DEFENSE_PLAYS,
+  ...LEBEAU_FIRE_ZONE_PLAYS,
+  ...TAMPA_TWO_PLAYS,
+  ...LANDRY_FLEX_PLAYS,
+  ...PHILLIPS_TWO_GAP_34_PLAYS,
+  ...JJ_SPEED_43_PLAYS,
+  ...BELICHICK_OKIE_BEAR_PLAYS,
+  ...ARANDA_TITE_PESO_PLAYS,
+  ...RLONG_335_STACK_PLAYS,
+  ...COVER2_MAN_UNDER_PLAYS,
 ];
 
 export function getSchemeFamilyById(id: string): SchemeFamily {

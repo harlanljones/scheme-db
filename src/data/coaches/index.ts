@@ -16,7 +16,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     philosophy:
       'The architect of the West Coast Offense: short, horizontal rhythm passing as a controlled extension of the run game, utilizing spacing, timed drops, and run-after-catch geometry to manipulate defensive leverage.',
     keyConcepts: ['West Coast Pass Rhythm', 'Horizontal Field Stretch', 'Sprint Right Option', 'Scripted Openers'],
-    schemeFamilyIds: ['shanahan-wide-zone'],
+    schemeFamilyIds: ['shanahan-wide-zone', 'walsh-classic-wco'],
     isHeadCoach2026: false,
     notableAchievements: ['3x Super Bowl Champion HC', 'Pro Football Hall of Fame (1993)', 'Architect of Modern Passing Geometry'],
   },
@@ -592,6 +592,312 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     isHeadCoach2026: false,
     notableAchievements: ['Pioneered NFL Tempo Spread (Eagles 2013-2015)', 'Record-Setting Oregon Fast-Break Offense'],
   },
+
+  // ==========================================
+  // HISTORICAL NFL & COLLEGE EXPANSION — OFFENSE
+  // ==========================================
+  'don-coryell': {
+    id: 'don-coryell',
+    name: 'Don Coryell',
+    role2026: 'Pro Football Hall of Fame Patriarch',
+    team: 'San Diego Chargers (1978-1986) / St. Louis Cardinals',
+    treeBranch: 'coryell-vertical',
+    category: 'offense',
+    philosophy:
+      'Father of the modern vertical passing game: one-back sets, full route trees for every receiver, deep shots downfield off a power run game, and quarterback progressions that attacked every level of the field.',
+    keyConcepts: ['Vertical Route Tree', 'One-Back Z-Snap Sets', 'Deep Ball Geometry', 'Seam & Post Strokes'],
+    schemeFamilyIds: ['coryell-vertical'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Pro Football Hall of Fame (2023)', '5x Division Champion', 'Air Coryell Ancestor of Modern Passing Trees'],
+  },
+  'june-jones': {
+    id: 'june-jones',
+    name: 'June Jones',
+    role2026: 'Run and Shoot Pioneer',
+    team: 'Houston Oilers / Atlanta Falcons / Hawaii / SMU',
+    treeBranch: 'coryell-vertical',
+    category: 'offense',
+    philosophy:
+      'Four-wide read-route passing: receivers convert their routes on the fly against coverage leverage, with no huddle tempo and QB reads that attack grass the defense refuses to cover.',
+    keyConcepts: ['Read-Route Adjustments', 'Four-Wide Spacing', 'No-Huddle Tempo', 'Switch & Mesh Conversions'],
+    schemeFamilyIds: ['run-and-shoot'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Revolutionized NFL Passing with Oilers Run and Shoot', 'Hawaii Warrior Record Offenses'],
+  },
+  'hal-mumme': {
+    id: 'hal-mumme',
+    name: 'Hal Mumme',
+    role2026: 'Air Raid Co-Inventor',
+    team: 'Kentucky / Valdosta State / Iowa Wesleyan',
+    treeBranch: 'air-raid',
+    category: 'offense',
+    philosophy:
+      'Co-invented the Air Raid at Iowa Wesleyan and Kentucky: mesh, shallow, and stick spacing concepts thrown from empty looks, practicing only a handful of plays thousands of times.',
+    keyConcepts: ['Mesh Concept', 'Shallow Cross', 'Stick Spacing', 'Empty Formations'],
+    schemeFamilyIds: ['air-raid'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Invented the Air Raid Offense', 'Tim Couch Record Passing Seasons at Kentucky'],
+  },
+  'mike-leach': {
+    id: 'mike-leach',
+    name: 'Mike Leach',
+    role2026: 'Air Raid Patriarch',
+    team: 'Texas Tech / Washington State / Mississippi State',
+    treeBranch: 'air-raid',
+    mentorId: 'hal-mumme',
+    category: 'offense',
+    philosophy:
+      'Distributed the Air Raid to the mainstream: five-receiver spacing, swing-screen constraint rules, and relentless Y-cross and mesh volume that turns any coverage into a numbers problem.',
+    keyConcepts: ['Y-Cross', 'Swing Screen Constraint', 'Five-Open Spacing', 'Scat Distribution'],
+    schemeFamilyIds: ['air-raid'],
+    isHeadCoach2026: false,
+    notableAchievements: ['All-Time Passing Offense Records (Texas Tech/WSU)', 'Guru of the Modern College Passing Game'],
+  },
+  'paul-johnson': {
+    id: 'paul-johnson',
+    name: 'Paul Johnson',
+    role2026: 'Flexbone Triple Option Architect',
+    team: 'Georgia Tech (2008-2018) / Navy',
+    treeBranch: 'option-spread',
+    category: 'offense',
+    philosophy:
+      'Modern flexbone triple option: midline, veer, and rocket pitch series out of two-back slotback sets, mathematically forcing defenders into wrong answers on every snap.',
+    keyConcepts: ['Midline Triple', 'Rocket Toss', 'Veer Pitch Key', 'Slotback Pitch Geometry'],
+    schemeFamilyIds: ['flexbone-triple-option'],
+    isHeadCoach2026: false,
+    notableAchievements: ['2x National Coach of the Year (I-AA)', 'ACC Champion Georgia Tech Offenses'],
+  },
+  'urban-meyer': {
+    id: 'urban-meyer',
+    name: 'Urban Meyer',
+    role2026: 'Spread Option Patriarch',
+    team: 'Florida / Ohio State (2001-2018)',
+    treeBranch: 'option-spread',
+    category: 'offense',
+    philosophy:
+      'Married spread-option zone-read runs with perimeter speed: inverted veer, inside-zone read, and snag-spacing RPOs built around an athletic quarterback as a true ball carrier.',
+    keyConcepts: ['Inside Zone Read', 'Inverted Veer', 'Snag Triangle', 'Perimeter Speed Sweep'],
+    schemeFamilyIds: ['meyer-spread-option'],
+    isHeadCoach2026: false,
+    notableAchievements: ['3x National Champion HC', 'Pioneered College Spread-Option Era'],
+  },
+  'chris-ault': {
+    id: 'chris-ault',
+    name: 'Chris Ault',
+    role2026: 'Pistol Offense Inventor',
+    team: 'Nevada Wolf Pack (multiple tenures)',
+    treeBranch: 'option-spread',
+    category: 'offense',
+    philosophy:
+      'Invented the Pistol at Nevada: quarterback in a short gun at 4 yards with the back directly behind, blending downhill zone-run physics with modern read-option threat.',
+    keyConcepts: ['Pistol Alignment', 'Zone Read from Pistol', 'Downhill Run Physics', 'Play-Action Off Gun Run'],
+    schemeFamilyIds: ['pistol-read-option'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Invented the Pistol Formation', 'Colin Kaepernick Nevada Record Offenses'],
+  },
+  'art-briles': {
+    id: 'art-briles',
+    name: 'Art Briles',
+    role2026: 'Baylor Vertical Spread Architect',
+    team: 'Baylor Bears (2008-2015)',
+    treeBranch: 'option-spread',
+    category: 'offense',
+    philosophy:
+      'Vertical choice spread: outside receivers get single-word shot calls ("choice") off inside-zone run action, forcing safeties to defend the entire deep field on every snap.',
+    keyConcepts: ['Slot Choice Shots', 'Vertical Stretch off Run Action', 'One-Word Shot Calls', 'Explosive Play Hunting'],
+    schemeFamilyIds: ['baylor-choice'],
+    isHeadCoach2026: false,
+    notableAchievements: ['2x Big 12 Champion Baylor', 'Record-Breaking Explosive Play Offenses'],
+  },
+  'tubby-raymond': {
+    id: 'tubby-raymond',
+    name: 'Tubby Raymond',
+    role2026: 'Delaware Wing-T Patriarch',
+    team: 'Delaware Fightin Blue Hens (1966-2001)',
+    treeBranch: 'delaware-wing-t',
+    category: 'offense',
+    philosophy:
+      'Guard-pull buck sweep series with counter-crisscross fakes, wingback motion, and ball-handling deception that made three plays look like nine.',
+    keyConcepts: ['Buck Sweep Series', 'Guard Pull Mechanics', 'Counter Crisscross', 'Wingback Motion Deception'],
+    schemeFamilyIds: ['delaware-wing-t'],
+    isHeadCoach2026: false,
+    notableAchievements: ['300 Career Wins at Delaware', '2x Division I-AA National Champion'],
+  },
+  'vince-lombardi': {
+    id: 'vince-lombardi',
+    name: 'Vince Lombardi',
+    role2026: 'Pro Football Hall of Fame Patriarch',
+    team: 'Green Bay Packers (1959-1967)',
+    treeBranch: 'power-gap-duo',
+    category: 'offense',
+    philosophy:
+      'Won five championships with essentially one play: the power sweep. Downhill gap blocking, pulling guards, and relentless rep perfection turned simplicity into inevitability.',
+    keyConcepts: ['Power Sweep', 'Pulling Guard Gap Scheme', 'Downhill Physicality', 'Rep Perfection'],
+    schemeFamilyIds: ['t-formation-power-sweep'],
+    isHeadCoach2026: false,
+    notableAchievements: ['5x NFL Champion', 'Super Bowl I & II Winner', "Super Bowl Trophy Named in His Honor"],
+  },
+
+  // ==========================================
+  // HISTORICAL NFL & COLLEGE EXPANSION — DEFENSE
+  // ==========================================
+  'buddy-ryan': {
+    id: 'buddy-ryan',
+    name: 'Buddy Ryan',
+    role2026: '46 Defense Inventor',
+    team: 'Chicago Bears DC (1978-1985) / Philadelphia Eagles HC',
+    treeBranch: 'buddy-46',
+    category: 'defense',
+    philosophy:
+      'Eight-man box with zero deep-middle help: walk both safeties up, isolate corners on man islands outside, and overload protection rules with unblockable edge combinations.',
+    keyConcepts: ['46 Eight-Man Box', 'Man-Free Isolation Corners', 'Edge Overload Combos', 'Okie Slant Games'],
+    schemeFamilyIds: ['buddy-46-defense'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Super Bowl XX Champion DC', '85 Bears Historic Scoring Defense'],
+  },
+  'dick-lebeau': {
+    id: 'dick-lebeau',
+    name: 'Dick LeBeau',
+    role2026: 'Fire Zone Blitz Patriarch',
+    team: 'Cincinnati Bengals / Pittsburgh Steelers (DC)',
+    treeBranch: 'lebeau-zone-blitz',
+    category: 'defense',
+    philosophy:
+      'Invented the zone blitz: send five while dropping a lineman into coverage behind a fire zone, breaking slide-protection arithmetic without sacrificing zone integrity.',
+    keyConcepts: ['Fire Zone 3-Deep 3-Under', 'DL Coverage Drops', 'Slide Protection Conflict', 'Safety Rotation Disguise'],
+    schemeFamilyIds: ['lebeau-fire-zone'],
+    isHeadCoach2026: false,
+    notableAchievements: ['2x Super Bowl Champion DC (XL, XLIII)', 'Pro Football Hall of Fame (2010)', 'Inventor of Zone Blitz'],
+  },
+  'dom-capers': {
+    id: 'dom-capers',
+    name: 'Dom Capers',
+    role2026: 'Zone Blitz Systemizer',
+    team: 'Pittsburgh Steelers DC / Carolina Panthers / Houston Texans HC / Green Bay Packers DC',
+    treeBranch: 'lebeau-zone-blitz',
+    mentorId: 'dick-lebeau',
+    category: 'defense',
+    philosophy:
+      'Industrialized LeBeau\u2019s zone blitz into a full pressure menu: Blitzburgh 3-4 packages, fire zones from every alignment, and formation-agnostic pressure distribution.',
+    keyConcepts: ['Blitzburgh 3-4 Pressure Menu', 'Fire Zone Multiplicity', 'Formation-Agnostic Pressure', 'OL Assignment Confusion'],
+    schemeFamilyIds: [],
+    isHeadCoach2026: false,
+    notableAchievements: ['First Carolina Panthers HC', 'Super Bowl XLV Champion DC'],
+  },
+  'tony-dungy': {
+    id: 'tony-dungy',
+    name: 'Tony Dungy',
+    role2026: 'Tampa 2 Architect',
+    team: 'Tampa Bay Buccaneers (1996-2001) / Indianapolis Colts',
+    treeBranch: 'two-deep-shell',
+    category: 'defense',
+    philosophy:
+      'Middle-of-the-field-closed Cover 2 where the Mike linebacker runs the deep hole: trade pressure for takeaways, force tight intermediate windows, and let the front four hunt.',
+    keyConcepts: ['Cover 2 Sink', 'Mike Deep-Hole Drop', 'Corner Underneath Squat Technique', 'Takeaway-First Philosophy'],
+    schemeFamilyIds: ['tampa-2'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Super Bowl XLI Champion HC', 'Rebuilt Buccaneers & Colts Defenses'],
+  },
+  'lovie-smith': {
+    id: 'lovie-smith',
+    name: 'Lovie Smith',
+    role2026: 'Tampa 2 Disciple',
+    team: 'Chicago Bears HC (2004-2012, 2022) / Tampa Bay Buccaneers',
+    treeBranch: 'two-deep-shell',
+    mentorId: 'tony-dungy',
+    category: 'defense',
+    philosophy:
+      'Ran Dungy\u2019s Tampa 2 blueprint to a Super Bowl: four-man rush discipline, Mike-hole depth by linebacker committee, and strip-at-the-ball takeaway drills.',
+    keyConcepts: ['Mike Hole Rotation', 'Four-Man Rush Discipline', 'Strip Sack Takeaway Drills', 'Cloud Boundary Variants'],
+    schemeFamilyIds: [],
+    isHeadCoach2026: false,
+    notableAchievements: ['Super Bowl XLI Appearance HC', 'Bears NFC Championship Defense'],
+  },
+  'marvin-lewis': {
+    id: 'marvin-lewis',
+    name: 'Marvin Lewis',
+    role2026: 'Cover 2 Man-Under Pioneer',
+    team: 'Baltimore Ravens DC (1996-2001) / Cincinnati Bengals HC',
+    treeBranch: 'two-deep-shell',
+    category: 'defense',
+    philosophy:
+      'Two-deep safeties over pure man-underneath: erase crossers and stacked routes entirely in the red zone and dare fades and back-shoulder throws against trail technique.',
+    keyConcepts: ['2-Man Red Zone Shell', 'Trail Press Technique', 'Crossing Route Elimination', 'Double Deep Erase'],
+    schemeFamilyIds: ['cover2-man-under'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Architect of Ravens 2000 Record Defense', 'Super Bowl XXXV Champion DC'],
+  },
+  'tom-landry': {
+    id: 'tom-landry',
+    name: 'Tom Landry',
+    role2026: 'Flex Defense Inventor',
+    team: 'Dallas Cowboys (1960-1988)',
+    treeBranch: 'landry-dallas',
+    category: 'defense',
+    philosophy:
+      'Invented the 4-3 and perfected the Flex: staggered one-yard-off tackle alignments, patient gap occupation instead of pursuit, and pre-snap strength-shift linebackers designed to strangle sweeps.',
+    keyConcepts: ['Flexed Tackle Alignments', 'Gap-Zone Run Fits', 'Three-Defender Point-of-Attack Convergence', 'Strength Shift Linebackers'],
+    schemeFamilyIds: ['landry-flex'],
+    isHeadCoach2026: false,
+    notableAchievements: ['2x Super Bowl Champion HC', '20 Consecutive Winning Seasons', 'Inventor of the 4-3 Defense'],
+  },
+  'jimmy-johnson': {
+    id: 'jimmy-johnson',
+    name: 'Jimmy Johnson',
+    role2026: 'Speed 4-3 Template Builder',
+    team: 'Miami Hurricanes / Dallas Cowboys (1989-1993)',
+    treeBranch: 'landry-dallas',
+    mentorId: undefined,
+    category: 'defense',
+    philosophy:
+      'Undersized, hyper-fast linemen slanting upfield at the snap: pure penetration chaos, one-gap attacking fits, and coverage built to survive the resulting one-on-ones.',
+    keyConcepts: ['Penetration Slant Loops', 'Speed-over-Size Front', 'Man-Free Blitz Dogs', 'Relentless Pursuit Rules'],
+    schemeFamilyIds: ['jj-speed-43'],
+    isHeadCoach2026: false,
+    notableAchievements: ['2x Super Bowl Champion HC (XXVII, XXVIII)', 'National Champion Miami Hurricanes', 'Template for Modern Speed Fronts'],
+  },
+  'bum-phillips': {
+    id: 'bum-phillips',
+    name: 'Bum Phillips',
+    role2026: 'Two-Gap 3-4 Revivalist',
+    team: 'Houston Oilers (1975-1980) / New Orleans Saints',
+    treeBranch: 'phillips-two-gap',
+    category: 'defense',
+    philosophy:
+      'Revived the modern 3-4 to combat Pittsburgh\u2019s power game: zero/one-tech nose two-gapping, stand-up edge linebackers as rush weapons, and second-level speed flowing over the top.',
+    keyConcepts: ['Zero-Tech Two-Gap Nose', 'Stand-Up Edge Duo', 'Over-the-Top LB Flow', 'Power Counter-Matches'],
+    schemeFamilyIds: ['phillips-two-gap-34'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Revived the Modern 3-4 Base Defense', 'Oilers Luv Ya Blue Defenses'],
+  },
+  'dave-aranda': {
+    id: 'dave-aranda',
+    name: 'Dave Aranda',
+    role2026: 'Tite Front / Peso Architect',
+    team: 'Baylor Bears HC / LSU DC (2016-2019)',
+    treeBranch: 'college-defensive-fronts',
+    category: 'defense',
+    philosophy:
+      'Engineered the tite front (4i-0-4i) to eliminate B-gaps against spread run, played from peso nickel/dime personnel with hybrid DB-linebackers, and layered simulated pressures on top.',
+    keyConcepts: ['4i-0-4i Tite Box', 'Peso Hybrid Personnel', 'Apex Linebacker Splits', 'ILB-DL Simulated Exchanges'],
+    schemeFamilyIds: ['aranda-tite-peso'],
+    isHeadCoach2026: true,
+    notableAchievements: ['2019 National Championship DC (LSU)', 'Baylor Big 12 Championship Game Appearances'],
+  },
+  'rocky-long': {
+    id: 'rocky-long',
+    name: 'Rocky Long',
+    role2026: '3-3-5 Stack Evangelist',
+    team: 'San Diego State HC / New Mexico (1998-2019)',
+    treeBranch: 'college-defensive-fronts',
+    category: 'defense',
+    philosophy:
+      'Odd-stack defense where every box defender is a potential blitzer: constant slant-exchange games, safety/corner cross-dogs, and total pre-snap ambiguity about who rushes.',
+    keyConcepts: ['Stacked Linebacker Exchange', 'Committee Pressure Generation', 'Five-DB Every-Down Structure', 'Slant-Game Chaos'],
+    schemeFamilyIds: ['rlong-335-stack'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Mountain West Dominance at San Diego State', 'Popularized the Modern 3-3-5 Stack'],
+  },
 };
 
 export const ALL_COACHES: CoachProfile[] = Object.values(COACH_PROFILES);
@@ -673,6 +979,10 @@ export const COACHING_TREES: CoachingTree[] = [
     description:
       'The downhill gap-scheme lineage: power, duo, counter, and pin-and-pull runs married to genuine quarterback run threat. Built on heavy personnel, play-action off identical run pictures, and forcing light boxes into unblockable run-pass conflicts.',
     rootNodes: [
+      {
+        coach: COACH_PROFILES['vince-lombardi'],
+        children: [],
+      },
       {
         coach: COACH_PROFILES['greg-roman'],
         children: [],
@@ -760,6 +1070,150 @@ export const COACHING_TREES: CoachingTree[] = [
           { coach: COACH_PROFILES['todd-bowles'], children: [] },
         ],
       },
+    ],
+  },
+
+  // ==========================================
+  // HISTORICAL NFL & COLLEGE EXPANSION TREES
+  // ==========================================
+  {
+    id: 'coryell-vertical',
+    name: 'Air Coryell / Run and Shoot Vertical Passing Tree',
+    patriarch: 'Don Coryell → June Jones',
+    category: 'offense',
+    description:
+      'The ancestor of every modern vertical passing attack. Don Coryell\u2019s one-back Air Coryell route tree forced defenses to defend the entire depth of the field for the first time; June Jones\u2019 Run and Shoot made receivers into live read-routes who converted their patterns on the fly against coverage leverage.',
+    rootNodes: [
+      {
+        coach: COACH_PROFILES['don-coryell'],
+        children: [
+          { coach: COACH_PROFILES['june-jones'], children: [] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'air-raid',
+    name: 'Air Raid Spacing Tree',
+    patriarch: 'Hal Mumme → Mike Leach',
+    category: 'offense',
+    description:
+      'The college game\u2019s great equalizer: a handful of mesh, shallow, and stick spacing concepts repped thousands of times from empty and five-open formations, weaponizing distribution over play design and turning any coverage into a numbers problem.',
+    rootNodes: [
+      {
+        coach: COACH_PROFILES['hal-mumme'],
+        children: [
+          { coach: COACH_PROFILES['mike-leach'], children: [] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'option-spread',
+    name: 'College Option & Spread Revolution Tree',
+    patriarch: 'Paul Johnson / Urban Meyer / Chris Ault / Art Briles',
+    category: 'offense',
+    description:
+      'Four parallel college revolutions that reshaped the run-pass interface: the flexbone triple option\u2019s mathematical pitch geometry, Meyer\u2019s spread-option zone read, Ault\u2019s Pistol downhill physics, and Briles\u2019 vertical choice shots off run action.',
+    rootNodes: [
+      { coach: COACH_PROFILES['paul-johnson'], children: [] },
+      { coach: COACH_PROFILES['urban-meyer'], children: [] },
+      { coach: COACH_PROFILES['chris-ault'], children: [] },
+      { coach: COACH_PROFILES['art-briles'], children: [] },
+    ],
+  },
+  {
+    id: 'delaware-wing-t',
+    name: 'Delaware Wing-T Deception Tree',
+    patriarch: 'Tubby Raymond',
+    category: 'offense',
+    description:
+      'Guard-pull buck sweep series with counter crisscross fakes and wingback motion — the gold standard of ball-handling deception, making three base plays look like nine through backfield choreography alone.',
+    rootNodes: [
+      { coach: COACH_PROFILES['tubby-raymond'], children: [] },
+    ],
+  },
+  {
+    id: 'buddy-46',
+    name: 'Buddy Ryan 46 Pressure Tree',
+    patriarch: 'Buddy Ryan',
+    category: 'defense',
+    description:
+      'The most radical base defense ever fielded: an eight-man box with zero deep-middle help, isolated press corners, and unblockable edge overload combinations that broke protection rules by arithmetic. Its DNA survives in every modern Bear front and mug pressure.',
+    rootNodes: [
+      { coach: COACH_PROFILES['buddy-ryan'], children: [] },
+    ],
+  },
+  {
+    id: 'lebeau-zone-blitz',
+    name: 'LeBeau Zone Blitz Fire Zone Tree',
+    patriarch: 'Dick LeBeau → Dom Capers',
+    category: 'defense',
+    description:
+      'The invention that changed defensive math forever: send five while dropping a lineman behind a fire zone, breaking slide-protection assignments without sacrificing zone integrity. The direct ancestor of today\u2019s creeper and sim-pressure worlds.',
+    rootNodes: [
+      {
+        coach: COACH_PROFILES['dick-lebeau'],
+        children: [
+          { coach: COACH_PROFILES['dom-capers'], children: [] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'landry-dallas',
+    name: 'Landry Flex / Doomsday Front Tree',
+    patriarch: 'Tom Landry → Jimmy Johnson',
+    category: 'defense',
+    description:
+      'From the inventor of the 4-3 to its speed evolution: Landry\u2019s staggered Flex alignments strangled sweeps with patient gap-zone convergence; Jimmy Johnson rebuilt Dallas with undersized penetration chaos that prefigured the modern attacking front.',
+    rootNodes: [
+      {
+        coach: COACH_PROFILES['tom-landry'],
+        children: [
+          { coach: COACH_PROFILES['jimmy-johnson'], children: [] },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'phillips-two-gap',
+    name: 'Phillips Two-Gap 3-4 Tree',
+    patriarch: 'Bum Phillips',
+    category: 'defense',
+    description:
+      'The revival of the modern 3-4: zero-tech nose two-gapping to free athletic linebackers, stand-up edge rushers as designated weapons, and second-level flow speed built specifically to counter Pittsburgh-style power football.',
+    rootNodes: [
+      { coach: COACH_PROFILES['bum-phillips'], children: [] },
+    ],
+  },
+  {
+    id: 'two-deep-shell',
+    name: 'Two-Deep Shell / Tampa 2 Tree',
+    patriarch: 'Tony Dungy → Lovie Smith / Marvin Lewis',
+    category: 'defense',
+    description:
+      'Two safeties splitting the deep field as a committed identity: Tampa 2\u2019s zone sink with the Mike running the deep hole, and Marvin Lewis\u2019 red-zone 2-Man with pure man underneath — opposite underneath logic under an identical shell.',
+    rootNodes: [
+      {
+        coach: COACH_PROFILES['tony-dungy'],
+        children: [
+          { coach: COACH_PROFILES['lovie-smith'], children: [] },
+        ],
+      },
+      { coach: COACH_PROFILES['marvin-lewis'], children: [] },
+    ],
+  },
+  {
+    id: 'college-defensive-fronts',
+    name: 'Modern College Hybrid Front Tree',
+    patriarch: 'Dave Aranda / Rocky Long',
+    category: 'defense',
+    description:
+      'The current college counter-punch to spread offense: Aranda\u2019s tite front (4i-0-4i) played from peso hybrid personnel to erase B-gaps against zone read, and Rocky Long\u2019s 3-3-5 stack where every box defender is a potential blitzer behind total pre-snap ambiguity.',
+    rootNodes: [
+      { coach: COACH_PROFILES['dave-aranda'], children: [] },
+      { coach: COACH_PROFILES['rocky-long'], children: [] },
     ],
   },
 ];
