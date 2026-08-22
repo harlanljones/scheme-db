@@ -55,4 +55,44 @@ export const COACH_HEADSHOTS: Record<string, string> = {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Kevin_O%27Connell_2019_%28cropped%29.jpg/330px-Kevin_O%27Connell_2019_%28cropped%29.jpg",
   'chip-kelly':
     'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/2025-0118_Chip_Kelly.jpg/330px-2025-0118_Chip_Kelly.jpg',
+  'don-coryell':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Don_Coryell_1984.jpg/330px-Don_Coryell_1984.jpg',
+  'june-jones':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/June_Jones.jpg/330px-June_Jones.jpg',
+  'mike-leach':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/LeachMike092212-18_%28cropped%29.JPG/330px-LeachMike092212-18_%28cropped%29.JPG',
+  'paul-johnson':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Paul_johnson_gt.jpg/330px-Paul_johnson_gt.jpg',
+  'urban-meyer':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Urban_Meyer_in_2017_%28cropped%29.jpg/330px-Urban_Meyer_in_2017_%28cropped%29.jpg',
+  'chris-ault':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Christ_Ault_Reno_Navy_Week_Sept_16%2C_2009.jpg/330px-Christ_Ault_Reno_Navy_Week_Sept_16%2C_2009.jpg',
+  'art-briles':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Art_Briles_at_2014_press_conference.jpg/330px-Art_Briles_at_2014_press_conference.jpg',
+  'tubby-raymond':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Tubby_Raymond_bust.JPG/330px-Tubby_Raymond_bust.JPG',
+  'vince-lombardi':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Vince_Lombardi_%281913-1970%29_in_1964_Crop.jpg/330px-Vince_Lombardi_%281913-1970%29_in_1964_Crop.jpg',
+  'buddy-ryan':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Buddy_Ryan_in_2011.jpg/330px-Buddy_Ryan_in_2011.jpg',
+  'dick-lebeau':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Dick_LeBeau_%28cropped%29.jpg/330px-Dick_LeBeau_%28cropped%29.jpg',
+  'dom-capers':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Dom_Capers.jpg/330px-Dom_Capers.jpg',
+  'tony-dungy':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Tony_Dungy_%282021%29_B.jpg/330px-Tony_Dungy_%282021%29_B.jpg',
+  'lovie-smith':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Lovie_Smith_%28cropped_2%29.jpg/330px-Lovie_Smith_%28cropped_2%29.jpg',
+  'marvin-lewis':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Marvin_Lewis_by_Gage_Skidmore.jpg/330px-Marvin_Lewis_by_Gage_Skidmore.jpg',
+  'tom-landry':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Tom_Landry_Jan_1997.jpg/330px-Tom_Landry_Jan_1997.jpg',
+  'jimmy-johnson':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Jimmy_Johnson_%28American_football_coach%29_2009.jpg/330px-Jimmy_Johnson_%28American_football_coach%29_2009.jpg',
+  'bum-phillips':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Bum_Philips_with_G.H.W._Bush_cropped.jpg/330px-Bum_Philips_with_G.H.W._Bush_cropped.jpg',
+  'dave-aranda':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Aranda_2021.jpg/330px-Aranda_2021.jpg',
+  'rocky-long':
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/MountainWestMD-2016-0727-RockyLong.png/330px-MountainWestMD-2016-0727-RockyLong.png',
 };
