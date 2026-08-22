@@ -37,6 +37,13 @@ export const TREE_CLUSTERS: Record<string, TreeClusterConfig> = {
     badgeColor: '#38bdf8',
     category: 'offense',
   },
+  'power-gap-duo': {
+    id: 'power-gap-duo',
+    name: 'Power Gap & Duo Lineage',
+    badge: 'Power Read & QB Run',
+    badgeColor: '#fb923c',
+    category: 'offense',
+  },
   'carroll-saleh-wide9': {
     id: 'carroll-saleh-wide9',
     name: 'Carroll / Saleh Lineage',
@@ -278,7 +285,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
             onClick={handlePrevFamily}
             className="scheme-nav-arrow"
             aria-label="Previous Scheme System"
-            title="Previous Scheme [Shift+[]"
+            title="Previous Scheme System (Shift+[)"
           >
             ‹
           </button>
@@ -322,7 +329,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
             onClick={handleNextFamily}
             className="scheme-nav-arrow"
             aria-label="Next Scheme System"
-            title="Next Scheme [Shift+]]"
+            title="Next Scheme System (Shift+])"
           >
             ›
           </button>
@@ -346,7 +353,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
                 <input
                   ref={searchInputRef}
                   type="text"
-                  placeholder="Filter 20 schemes, coaches, or tree branches..."
+                  placeholder={`Filter ${families.length} schemes, coaches, or tree branches...`}
                   value={schemeSearch}
                   onChange={(e) => setSchemeSearch(e.target.value)}
                   aria-label="Search scheme families"
@@ -474,7 +481,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
 
               {filteredFamilies.length === 0 && (
                 <div className="scheme-popover-empty" role="status">
-                  No scheme systems found matching "{schemeSearch}"
+                  No scheme systems match "{schemeSearch}". Try a coach's name, tree branch, or play name.
                 </div>
               )}
             </div>
@@ -489,7 +496,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
                     onOpenCatalog();
                   }}
                 >
-                  View Full 20-System Scheme Catalog →
+                  View Full {families.length}-System Scheme Catalog →
                 </button>
               </div>
             )}
@@ -505,7 +512,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
             onClick={handlePrevPlay}
             className="scheme-nav-arrow"
             aria-label="Previous Play"
-            title="Previous Play [[]"
+            title="Previous Play ([)"
           >
             ‹
           </button>
@@ -514,7 +521,7 @@ export const PlayPicker: React.FC<PlayPickerProps> = memo(({
             onClick={handleNextPlay}
             className="scheme-nav-arrow"
             aria-label="Next Play"
-            title="Next Play []]"
+            title="Next Play (])"
           >
             ›
           </button>

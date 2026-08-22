@@ -133,7 +133,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     team: 'Los Angeles Rams',
     treeBranch: 'shanahan-kubiak',
     mentorId: 'mike-shanahan',
-    disciples: ['matt-lafleur', 'kevin-stefanski'],
+    disciples: ['matt-lafleur', 'kevin-stefanski', 'kevin-oconnell', 'liam-coen'],
     category: 'offense',
     philosophy:
       'Marrying condensed 11 and 13 personnel groupings with Duo and Mid-Zone runs, feeding boundary crossers, Sail concepts, and illusionary play-action reads off condensed bunch sets.',
@@ -221,7 +221,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     team: 'Kansas City Chiefs',
     treeBranch: 'reid-west-coast',
     mentorId: 'bill-walsh',
-    disciples: ['john-harbaugh', 'shane-steichen', 'nick-sirianni'],
+    disciples: ['john-harbaugh', 'shane-steichen', 'nick-sirianni', 'sean-payton', 'chip-kelly'],
     category: 'offense',
     philosophy:
       'Master of spacing, motion, and vertical stretch. Melds traditional West Coast timing with Spread-RPO concepts, Mesh shallow crosses, and tight-end Iso matchups.',
@@ -492,6 +492,106 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     isHeadCoach2026: true,
     notableAchievements: ['Super Bowl LV Champion DC', 'Tampa Bay Buccaneers HC'],
   },
+
+  // ==========================================
+  // SEAN PAYTON — QUICK GAME & SCREEN LINEAGE
+  // ==========================================
+  'sean-payton': {
+    id: 'sean-payton',
+    name: 'Sean Payton',
+    role2026: 'Head Coach, Denver Broncos',
+    team: 'Denver Broncos',
+    treeBranch: 'reid-west-coast',
+    mentorId: 'bill-parcells',
+    disciples: [],
+    category: 'offense',
+    philosophy:
+      'The fastest pre-snap to post-snap pitch clock in football: quick-game rhythm throws (slant/flat, speed out), packaged with tunnel and fast screens, jet sweep run action, and lethal play-action shot plays that punish defenses for creeping up on the quick game.',
+    keyConcepts: ['Quick Game Rhythm (Slant-Flat)', 'Fast/Tunnel Screen Convoy', 'Jet Sweep Run Action', 'PA Deep Shot off Screen'],
+    schemeFamilyIds: ['payton-quick-game-screens'],
+    isHeadCoach2026: true,
+    notableAchievements: ['Super Bowl XLIV Champion HC', 'Highest Quick-Game Usage Rate of His Era'],
+  },
+
+  // ==========================================
+  // GREG ROMAN — POWER READ & QB RUN LINEAGE
+  // ==========================================
+  'greg-roman': {
+    id: 'greg-roman',
+    name: 'Greg Roman',
+    role2026: 'Offensive Coordinator, Los Angeles Chargers',
+    team: 'Los Angeles Chargers',
+    treeBranch: 'power-gap-duo',
+    mentorId: 'john-harbaugh',
+    disciples: [],
+    category: 'offense',
+    philosophy:
+      'Downhill gap-scheme football weaponized through quarterback run threat: power-read pulls, QB power/counter runs from heavy personnel, pin-and-pull leverage, and massive play-action shots built entirely off the run-game picture.',
+    keyConcepts: ['Power Read Pull', 'QB Power / Counter Run', 'Pin & Pull Leverage', 'Heavy Personnel PA Shot'],
+    schemeFamilyIds: ['roman-power-read'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Architect of Lamar Jackson MVP Run Offense (Ravens)', 'NCAA-record Option Offenses at Stanford/Nevada'],
+  },
+
+  // ==========================================
+  // KEVIN O'CONNELL — BOOT & DAGGER LINEAGE
+  // ==========================================
+  'kevin-oconnell': {
+    id: 'kevin-oconnell',
+    name: "Kevin O'Connell",
+    role2026: 'Head Coach, Minnesota Vikings',
+    team: 'Minnesota Vikings',
+    treeBranch: 'shanahan-kubiak',
+    mentorId: 'sean-mcvay',
+    disciples: [],
+    category: 'offense',
+    philosophy:
+      'A play-action passing machine: wide-zone and Duo fakes feeding bootleg flood rollouts, Dagger (seam/curl-flat) intermediate shots, and condensed formations that force light boxes into unblockable run-pass conflicts.',
+    keyConcepts: ['Wide-Zone Boot Flood', 'Dagger Seam/Curl-Flat', 'Play-Action Rate Leadership', 'Condensed Light-Box Attacks'],
+    schemeFamilyIds: ['oconnell-boot-dagger'],
+    isHeadCoach2026: true,
+    notableAchievements: ['Top-3 Play-Action Offense (Vikings)', 'Super Bowl LVI OC (Rams)'],
+  },
+
+  // ==========================================
+  // LIAM COEN — HYBRID WIDE-ZONE RPO LINEAGE
+  // ==========================================
+  'liam-coen': {
+    id: 'liam-coen',
+    name: 'Liam Coen',
+    role2026: 'Head Coach, Jacksonville Jaguars',
+    team: 'Jacksonville Jaguars',
+    treeBranch: 'shanahan-kubiak',
+    mentorId: 'sean-mcvay',
+    disciples: [],
+    category: 'offense',
+    philosophy:
+      'The modern evolution of the Shanahan-McVay tree: wide-zone runs packaged directly with RPOs (glance, bubble, slant-flat), heavy pre-snap motion declaring defensive fits, and space attacks that turn every zone-stretch call into a triple-option math problem for the defense.',
+    keyConcepts: ['Wide-Zone + Glance RPO Package', 'Bubble-Slant Flat Triangle', 'Motion-to-Fit Declaration', 'Perimeter Crack-Toss'],
+    schemeFamilyIds: ['coen-wide-zone-rpo'],
+    isHeadCoach2026: true,
+    notableAchievements: ['Top-5 Total Offense with Buccaneers (2024)', 'Rams & Kentucky Offensive Architect'],
+  },
+
+  // ==========================================
+  // CHIP KELLY — TEMPO SPREAD AIR RAID LINEAGE
+  // ==========================================
+  'chip-kelly': {
+    id: 'chip-kelly',
+    name: 'Chip Kelly',
+    role2026: 'Offensive Coordinator, Las Vegas Raiders',
+    team: 'Las Vegas Raiders',
+    treeBranch: 'reid-west-coast',
+    mentorId: 'jack-elway',
+    disciples: [],
+    category: 'offense',
+    philosophy:
+      'Tempo as a weapon: snap-rate stress, spread-option run game with RB-draw and zone-read elements, Air Raid mesh/spot spacing concepts, and vertical four-verts takes that force defenses to communicate at a pace they cannot sustain.',
+    keyConcepts: ['Snap-Rate Tempo Stress', 'Mesh & Spot Spacing', 'Zone-Read / RB Draw Mix', 'Four-Verts Takeovers'],
+    schemeFamilyIds: ['kelly-tempo-spread'],
+    isHeadCoach2026: false,
+    notableAchievements: ['Pioneered NFL Tempo Spread (Eagles 2013-2015)', 'Record-Setting Oregon Fast-Break Offense'],
+  },
 };
 
 export const ALL_COACHES: CoachProfile[] = Object.values(COACH_PROFILES);
@@ -523,7 +623,10 @@ export const COACHING_TREES: CoachingTree[] = [
               },
               {
                 coach: COACH_PROFILES['sean-mcvay'],
-                children: [],
+                children: [
+                  { coach: COACH_PROFILES['kevin-oconnell'], children: [] },
+                  { coach: COACH_PROFILES['liam-coen'], children: [] },
+                ],
               },
               {
                 coach: COACH_PROFILES['gary-kubiak'],
@@ -554,9 +657,25 @@ export const COACHING_TREES: CoachingTree[] = [
               { coach: COACH_PROFILES['john-harbaugh'], children: [] },
               { coach: COACH_PROFILES['shane-steichen'], children: [] },
               { coach: COACH_PROFILES['nick-sirianni'], children: [] },
+              { coach: COACH_PROFILES['sean-payton'], children: [] },
+              { coach: COACH_PROFILES['chip-kelly'], children: [] },
             ],
           },
         ],
+      },
+    ],
+  },
+  {
+    id: 'power-gap-duo',
+    name: 'Power Gap & Duo / QB Run-Game Tree',
+    patriarch: 'John Harbaugh → Greg Roman',
+    category: 'offense',
+    description:
+      'The downhill gap-scheme lineage: power, duo, counter, and pin-and-pull runs married to genuine quarterback run threat. Built on heavy personnel, play-action off identical run pictures, and forcing light boxes into unblockable run-pass conflicts.',
+    rootNodes: [
+      {
+        coach: COACH_PROFILES['greg-roman'],
+        children: [],
       },
     ],
   },

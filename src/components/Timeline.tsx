@@ -285,8 +285,8 @@ export const Timeline: React.FC<TimelineProps> = memo(({
           <button
             type="button"
             onClick={onReset}
-            aria-label="Reset to Snap T=0.0s (R)"
-            title="Snap Reset T=0.0s [R]"
+            aria-label="Reset playback to snap (R)"
+            title="Reset to Snap [R]"
             className="ctrl-subtle-btn snap"
           >
             ↺ SNAP
@@ -301,7 +301,7 @@ export const Timeline: React.FC<TimelineProps> = memo(({
               type="button"
               onClick={onToggleLoop}
               aria-pressed={loop}
-              title={`Loop Playback: ${loop ? 'ON' : 'OFF'}`}
+              title="Loop playback"
               className={`ctrl-loop-btn ${loop ? 'active' : ''}`}
             >
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -336,10 +336,10 @@ export const Timeline: React.FC<TimelineProps> = memo(({
               type="button"
               onClick={() => setShowShortcutsModal(!showShortcutsModal)}
               aria-label="View Keyboard Shortcuts"
-              title="Keyboard Shortcuts Guide"
+              title="Keyboard Shortcuts"
               className={`ctrl-subtle-btn ${showShortcutsModal ? 'active' : ''}`}
             >
-              ⌨ Keys
+              Keys
             </button>
 
             {showShortcutsModal && (
@@ -347,13 +347,14 @@ export const Timeline: React.FC<TimelineProps> = memo(({
                 <div className="shortcuts-popover-title">Film Room Shortcuts</div>
                 <div className="shortcuts-list">
                   <div className="shortcut-row"><kbd>Space</kbd> / <kbd>K</kbd> <span>Play / Pause</span></div>
-                  <div className="shortcut-row"><kbd>←</kbd> / <kbd>→</kbd> <span>±0.1s Frame Step</span></div>
+                  <div className="shortcut-row"><kbd>←</kbd> / <kbd>→</kbd> <span>Step ±0.1s</span></div>
                   <div className="shortcut-row"><kbd>B</kbd> / <kbd>N</kbd> <span>Prev / Next Key Beat</span></div>
                   <div className="shortcut-row"><kbd>[</kbd> / <kbd>]</kbd> <span>Prev / Next Play in Scheme</span></div>
-                  <div className="shortcut-row"><kbd>Shift</kbd>+<kbd>[</kbd> / <kbd>]</kbd> <span>Prev / Next Scheme System</span></div>
-                  <div className="shortcut-row"><kbd>R</kbd> <span>Snap to T=0.0s</span></div>
+                  <div className="shortcut-row"><kbd>Shift+[</kbd> / <kbd>Shift+]</kbd> <span>Prev / Next Scheme System</span></div>
+                  <div className="shortcut-row"><kbd>R</kbd> <span>Reset to Snap (T=0.0s)</span></div>
                   <div className="shortcut-row"><kbd>T</kbd> / <kbd>F</kbd> <span>Full-Field Theater Mode</span></div>
-                  <div className="shortcut-row"><kbd>1</kbd>–<kbd>4</kbd> <span>Switch Main View Tabs</span></div>
+                  <div className="shortcut-row"><kbd>1</kbd>–<kbd>4</kbd> <span>Switch Workspace Views</span></div>
+                  <div className="shortcut-row"><kbd>?</kbd> <span>Workstation Guide</span></div>
                 </div>
               </div>
             )}

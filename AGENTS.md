@@ -2,7 +2,7 @@
 
 NFL Scheme Visualizer: an interactive workstation that animates NFL offensive and defensive schemes
 on an SVG field with a scrub timeline, and pairs each play with timeline-anchored analysis of
-*why* it works. The platform covers 20 scheme families (10 offensive, 10 defensive), 80 plays, 6 coaching trees, and 20 coach profiles.
+*why* it works. The platform covers 25 scheme families (15 offensive, 10 defensive), 100 plays, 7 coaching trees, and 25 coach profiles.
 
 **Read `ROADMAP.md` before implementing anything.** It has the full tech stack, data model,
 engine function signatures, component breakdown, play library spec, and phased build sequence
@@ -58,8 +58,8 @@ See `ROADMAP.md` §2 (Tech Stack) for the full rationale and what's deliberately
 ## Status
 
 Fully implemented and verified across all phases:
-- **20 Scheme Systems (80 Plays)**: 10 Offensive systems (Shanahan Wide Zone, Kubiak Split Zone, Reid Spread-RPO, McVay Duo, McDaniel Speed Motion, Stefanski Multi-TE Gap, Steichen QB Mesh RPO, LaFleur Illusion, Sirianni Power RPO, Johnson Counter Deception) and 10 Defensive systems (Saleh 4-3 Wide-9, Macdonald Sim-Pressure, Flores Psycho Blitz, Fangio Two-High Shell, Minter Amoeba Creeper, Ryans Wide-9 Attack, Shula Match Quarters, Spagnuolo Exotic Blitz, Quinn Cover 3 Press, Bowles Creeper Blitz).
-- **6 Coaching Lineage Trees (20 Coaches)**: Bill Walsh, Mike Shanahan, Gary Kubiak, Kyle Shanahan, Sean McVay, Klint Kubiak, Kevin Stefanski, Andy Reid, John Harbaugh, Shane Steichen, Nick Sirianni, Mike Macdonald, Jesse Minter, Vic Fangio, Chris Shula, Pete Carroll, Robert Saleh, DeMeco Ryans, Bill Belichick, Brian Flores, Ben Johnson, Steve Spagnuolo, Dan Quinn, Todd Bowles.
+- **25 Scheme Systems (100 Plays)**: 15 Offensive systems (Shanahan Wide Zone, Kubiak Split Zone, Reid Spread-RPO, McVay Duo, McDaniel Speed Motion, Stefanski Multi-TE Gap, Steichen QB Mesh RPO, LaFleur Illusion, Sirianni Power RPO, Johnson Counter Deception, Payton Quick Game & Screens, Roman Power Read & QB Run, O'Connell Boot & Dagger, Coen Wide-Zone RPO, Kelly Tempo Spread) and 10 Defensive systems (Saleh 4-3 Wide-9, Macdonald Sim-Pressure, Flores Psycho Blitz, Fangio Two-High Shell, Minter Amoeba Creeper, Ryans Wide-9 Attack, Shula Match Quarters, Spagnuolo Exotic Blitz, Quinn Cover 3 Press, Bowles Creeper Blitz).
+- **7 Coaching Lineage Trees (25 Coaches)**: Bill Walsh, Mike Shanahan, Gary Kubiak, Kyle Shanahan, Sean McVay, Klint Kubiak, Kevin Stefanski, Andy Reid, John Harbaugh, Shane Steichen, Nick Sirianni, Mike Macdonald, Jesse Minter, Vic Fangio, Chris Shula, Pete Carroll, Robert Saleh, DeMeco Ryans, Bill Belichick, Brian Flores, Ben Johnson, Steve Spagnuolo, Dan Quinn, Todd Bowles, Sean Payton, Greg Roman, Kevin O'Connell, Liam Coen, Chip Kelly.
 - **Interactive Features**: Film Room Visualizer with Catmull-Rom spline path interpolation, 0.0s–1.2s Disguise Mesh Window comparison with Ghost Overlay and Conflict Telemetry, Coaching Tree Graph with Pan/Zoom and Search, Multi-Layout Scheme Catalog (Master Matrix, Split Inspector, Cards), Contextual Football Glossary Hover Tooltips (`GlossaryTooltip`), Coaching Tree Clustering in `PlayPicker`, Read-Key Conflict Defender badging, and full ARIA accessibility (`PlayerMarker`).
-- **100% Vitest & TypeScript Passing**: Full 71-test suite passing across engine, validation, lineage, glossary, and accessibility.
+- **100% Vitest & TypeScript Passing**: Full 71-test suite passing across engine, validation, lineage, glossary, and accessibility — including the whole-library sweep of all 100 plays.
 

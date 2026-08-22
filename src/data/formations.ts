@@ -398,4 +398,174 @@ export const JOHNSON_11P_GUN_TRIPS_VS_NICKEL: FormationAlignments = {
   },
 };
 
+/**
+ * Sean Payton 11 Personnel Gun Spread 2x2 vs Nickel 4-2-5
+ * Balanced 2x2 quick-game framework: wide X/Z outside, H slot right,
+ * attached TE — built for slant-flat rhythm throws and fast screens.
+ */
+export const PAYTON_11P_GUN_SPREAD_VS_NICKEL: FormationAlignments = {
+  offense: {
+    C:  { x: 26.67, y: -0.4 },
+    LG: { x: 25.0, y: -0.4 },
+    LT: { x: 23.3, y: -0.4 },
+    RG: { x: 28.3, y: -0.4 },
+    RT: { x: 30.0, y: -0.4 },
+    QB: { x: 26.67, y: -4.5 },
+    RB: { x: 23.5, y: -4.8 },
+    TE: { x: 32.0, y: -0.6 },
+    X:  { x: 7.0, y: -0.5 },
+    H:  { x: 37.5, y: -1.0 },
+    Z:  { x: 46.0, y: -0.5 },
+  },
+  defense: {
+    WDE:    { x: 21.0, y: 0.9 },
+    NT:     { x: 25.5, y: 0.9 },
+    '3T':   { x: 29.0, y: 0.9 },
+    SDE:    { x: 33.0, y: 0.9 },
+    WILL:   { x: 23.0, y: 4.5 },
+    MIKE:   { x: 28.5, y: 4.5 },
+    NICKEL: { x: 37.5, y: 4.0 },
+    LCB:    { x: 7.0, y: 6.5 },
+    RCB:    { x: 46.0, y: 6.5 },
+    SS:     { x: 34.0, y: 11.5 },
+    FS:     { x: 20.0, y: 12.0 },
+  },
+};
+
+/**
+ * Greg Roman 22 Personnel Heavy Wing Right (Under Center) vs 4-3 Over Front
+ * Downhill gap-scheme foundation: double TE with a fullback kick-out lead,
+ * single detached X, QB under center — pure power-read/QB-run environment.
+ */
+export const ROMAN_22P_HEAVY_WING_VS_43: FormationAlignments = {
+  offense: {
+    C:  { x: 26.67, y: -0.4 },
+    LG: { x: 25.0, y: -0.4 },
+    LT: { x: 23.3, y: -0.4 },
+    RG: { x: 28.3, y: -0.4 },
+    RT: { x: 30.0, y: -0.4 },
+    TE: { x: 31.8, y: -0.6 },
+    U:  { x: 33.8, y: -1.2 }, // Wing TE
+    QB: { x: 26.67, y: -1.8 }, // Under center
+    RB: { x: 26.67, y: -5.5 },
+    F:  { x: 28.4, y: -3.4 }, // Fullback
+    X:  { x: 7.5, y: -0.5 },
+  },
+  defense: {
+    WDE:  { x: 21.8, y: 0.9 },
+    NT:   { x: 25.8, y: 0.9 },
+    '3T': { x: 29.2, y: 0.9 },
+    SDE:  { x: 33.4, y: 0.9 },
+    WILL: { x: 21.5, y: 4.5 },
+    MIKE: { x: 26.0, y: 4.8 },
+    SAM:  { x: 32.5, y: 3.8 },
+    LCB:  { x: 7.5, y: 7.0 },
+    RCB:  { x: 43.5, y: 7.0 },
+    SS:   { x: 34.5, y: 9.0 },
+    FS:   { x: 26.67, y: 14.0 },
+  },
+};
+
+/**
+ * Kevin O'Connell 11 Personnel Condensed Gun Right vs 4-3 Over (Cover 3 Shell)
+ * McVay-tree condensed splits in gun: tight H/Z to the right with an inline TE,
+ * engineered for boot flood rollouts and Dagger seam/curl-flat shots.
+ */
+export const OCONNELL_11P_CONDENSED_GUN_VS_43: FormationAlignments = {
+  offense: {
+    C:  { x: 26.67, y: -0.4 },
+    LG: { x: 25.0, y: -0.4 },
+    LT: { x: 23.3, y: -0.4 },
+    RG: { x: 28.3, y: -0.4 },
+    RT: { x: 30.0, y: -0.4 },
+    QB: { x: 26.67, y: -4.5 },
+    RB: { x: 29.8, y: -4.8 },
+    TE: { x: 31.8, y: -0.6 },
+    X:  { x: 9.5, y: -0.5 },
+    H:  { x: 34.5, y: -1.2 }, // Condensed slot
+    Z:  { x: 37.5, y: -0.8 }, // Condensed flanker
+  },
+  defense: {
+    WDE:  { x: 21.0, y: 0.9 },
+    NT:   { x: 25.5, y: 0.9 },
+    '3T': { x: 29.2, y: 0.9 },
+    SDE:  { x: 33.0, y: 0.9 },
+    WILL: { x: 23.0, y: 4.5 },
+    MIKE: { x: 27.5, y: 4.8 },
+    SAM:  { x: 32.5, y: 3.8 },
+    LCB:  { x: 9.5, y: 6.5 },
+    RCB:  { x: 40.0, y: 6.5 },
+    SS:   { x: 34.0, y: 9.5 },
+    FS:   { x: 25.0, y: 13.5 },
+  },
+};
+
+/**
+ * Liam Coen 11 Personnel Gun Wide-Zone Strong 2x1 Right vs Nickel 4-2-5
+ * Modern wide-zone-RPO packaging alignment: RB aligned to the zone direction,
+ * TE attached right, single X backside, H slot + Z stacked strong.
+ */
+export const COEN_11P_GUN_WIDEZONE_VS_NICKEL: FormationAlignments = {
+  offense: {
+    C:  { x: 26.67, y: -0.4 },
+    LG: { x: 25.0, y: -0.4 },
+    LT: { x: 23.3, y: -0.4 },
+    RG: { x: 28.3, y: -0.4 },
+    RT: { x: 30.0, y: -0.4 },
+    QB: { x: 26.67, y: -4.5 },
+    RB: { x: 30.0, y: -4.8 },
+    TE: { x: 31.8, y: -0.6 },
+    X:  { x: 7.5, y: -0.5 },
+    H:  { x: 36.5, y: -1.0 },
+    Z:  { x: 45.5, y: -1.2 },
+  },
+  defense: {
+    WDE:    { x: 21.0, y: 0.9 },
+    NT:     { x: 25.5, y: 0.9 },
+    '3T':   { x: 29.0, y: 0.9 },
+    SDE:    { x: 33.2, y: 0.9 },
+    WILL:   { x: 23.0, y: 4.5 },
+    MIKE:   { x: 28.0, y: 4.5 },
+    NICKEL: { x: 36.5, y: 4.0 },
+    LCB:    { x: 7.5, y: 6.5 },
+    RCB:    { x: 45.5, y: 6.5 },
+    SS:     { x: 36.0, y: 11.5 },
+    FS:     { x: 20.0, y: 11.5 },
+  },
+};
+
+/**
+ * Chip Kelly 10 Personnel Tempo Gun Spread 2x2 vs Nickel 4-2-5 Two-High
+ * Air Raid spacing at snap-rate tempo: no tight ends, four receivers in a
+ * balanced 2x2 (X/H left, Y/Z right) for Mesh, Spot, and Four-Verts takes.
+ */
+export const KELLY_10P_TEMPO_SPREAD_VS_NICKEL: FormationAlignments = {
+  offense: {
+    C:  { x: 26.67, y: -0.4 },
+    LG: { x: 25.0, y: -0.4 },
+    LT: { x: 23.3, y: -0.4 },
+    RG: { x: 28.3, y: -0.4 },
+    RT: { x: 30.0, y: -0.4 },
+    QB: { x: 26.67, y: -5.0 },
+    RB: { x: 23.5, y: -5.0 },
+    X:  { x: 7.0, y: -0.5 },
+    H:  { x: 16.5, y: -1.0 },
+    Y:  { x: 37.0, y: -1.0 },
+    Z:  { x: 46.5, y: -0.5 },
+  },
+  defense: {
+    WDE:    { x: 21.0, y: 0.9 },
+    NT:     { x: 25.5, y: 0.9 },
+    '3T':   { x: 29.0, y: 0.9 },
+    SDE:    { x: 32.8, y: 0.9 },
+    WILL:   { x: 23.5, y: 4.5 },
+    MIKE:   { x: 28.0, y: 4.5 },
+    NICKEL: { x: 16.5, y: 4.0 },
+    LCB:    { x: 7.0, y: 6.5 },
+    RCB:    { x: 46.5, y: 6.5 },
+    SS:     { x: 34.0, y: 12.0 },
+    FS:     { x: 19.5, y: 12.0 },
+  },
+};
+
 

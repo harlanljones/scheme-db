@@ -69,8 +69,8 @@ describe('PlayPicker coaching tree cluster classification', () => {
     }
   });
 
-  it('maps all 20 scheme families into organized coaching tree clusters', () => {
-    expect(ALL_SCHEME_FAMILIES.length).toBe(20);
+  it('maps all 25 scheme families into organized coaching tree clusters', () => {
+    expect(ALL_SCHEME_FAMILIES.length).toBe(25);
 
     const clusterCountMap = new Map<string, number>();
 
@@ -84,11 +84,12 @@ describe('PlayPicker coaching tree cluster classification', () => {
     }
 
     // Verify all major tree clusters have assigned schemes
-    expect(clusterCountMap.get('shanahan-kubiak')).toBe(7); // Shanahan, Kubiak, McVay, McDaniel, Stefanski, LaFleur, Johnson
-    expect(clusterCountMap.get('reid-west-coast')).toBe(4); // Reid, Steichen, Sirianni, Spagnuolo
+    expect(clusterCountMap.get('shanahan-kubiak')).toBe(9); // Shanahan, Kubiak, McVay, McDaniel, Stefanski, LaFleur, Johnson, O'Connell, Coen
+    expect(clusterCountMap.get('reid-west-coast')).toBe(6); // Reid, Steichen, Sirianni, Spagnuolo, Payton, Kelly
     expect(clusterCountMap.get('carroll-saleh-wide9')).toBe(3); // Saleh, Ryans, Quinn
     expect(clusterCountMap.get('macdonald-pressure')).toBe(2); // Macdonald, Minter
     expect(clusterCountMap.get('fangio-two-high')).toBe(2); // Fangio, Shula
     expect(clusterCountMap.get('belichick-flores')).toBe(2); // Flores, Bowles
+    expect(clusterCountMap.get('power-gap-duo')).toBe(1); // Roman
   });
 });

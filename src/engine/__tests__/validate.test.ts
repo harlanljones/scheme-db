@@ -245,16 +245,16 @@ describe('validate engine', () => {
     }
   });
 
-  it('validates all 20 scheme families are registered (10 Offense, 10 Defense)', () => {
-    expect(ALL_SCHEME_FAMILIES.length).toBe(20);
+  it('validates all 25 scheme families are registered (15 Offense, 10 Defense)', () => {
+    expect(ALL_SCHEME_FAMILIES.length).toBe(25);
     const offenseFamilies = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'offense');
     const defenseFamilies = ALL_SCHEME_FAMILIES.filter((f) => f.category === 'defense');
-    expect(offenseFamilies.length).toBe(10);
+    expect(offenseFamilies.length).toBe(15);
     expect(defenseFamilies.length).toBe(10);
   });
 
-  it('validates the entire visualizer library of 80 plays with 0 errors or warnings', () => {
-    expect(ALL_PLAYS.length).toBe(80);
+  it('validates the entire visualizer library of 100 plays with 0 errors or warnings', () => {
+    expect(ALL_PLAYS.length).toBe(100);
     const libResults = validateLibrary(ALL_PLAYS);
 
     for (const play of ALL_PLAYS) {

@@ -337,6 +337,20 @@ All primary phases have been implemented and verified:
 - **Contextual Football Glossary & Accessibility**: `glossary.ts` tactical lookup dictionary, `GlossaryTooltip.tsx` hover popovers, and full ARIA accessibility across `PlayerMarker.tsx` and cluster grouping in `PlayPicker.tsx`.
 - **Whole-Library Test Suite**: `validateLibrary` passes 80/80 plays with 0 errors across 71 Vitest test cases.
 
+### Phase 7 — Expansion II: 25-System Catalog (15 Offense, 10 Defense • 100 Plays) ✅ (Completed)
+Five new offensive scheme families authored via 5 parallel agents, each owning exactly one
+`src/data/schemes/<coach>/` directory (shared files edited only in the serial phases):
+  - ⚡ Sean Payton — Quick Game & Screen Package (4 plays) — `payton-quick-game-screens`
+  - ⚡ Greg Roman — Power Read & QB Run Attack (4 plays) — `roman-power-read`
+  - ⚡ Kevin O'Connell — Boot & Dagger Play-Action System (4 plays) — `oconnell-boot-dagger`
+  - ⚡ Liam Coen — Hybrid Wide-Zone RPO System (4 plays) — `coen-wide-zone-rpo`
+  - ⚡ Chip Kelly — Tempo Spread & Air Raid System (4 plays) — `kelly-tempo-spread`
+- Supporting changes: coach union extended (`payton|roman|oconnell|coen|kelly`), 5 new
+  `CoachProfile`s + new `power-gap-duo` coaching tree (7 trees / 25 coaches now), 5 new shared
+  formation constants in `formations.ts`, `power-gap-duo` cluster in `PlayPicker`.
+- Whole-library validation now sweeps **100/100 plays**; test counts updated
+  (`validate.test.ts`, `playpicker-playermarker.test.ts`) and public LLM assets regenerated.
+
 ---
 
 ## 5. Verification Checklist

@@ -384,7 +384,7 @@ export const App: React.FC = () => {
                 <div className="welcome-banner-content">
                   <div className="welcome-banner-title">
                     <span className="welcome-badge">GETTING STARTED</span>
-                    <span>Explore 20 NFL offensive & defensive scheme systems with synchronized All-22 breakdowns.</span>
+                    <span>Explore {ALL_SCHEME_FAMILIES.length} NFL offensive & defensive scheme systems with synchronized All-22 breakdowns.</span>
                   </div>
                   <div className="welcome-quick-chips">
                     <span className="chips-label">Popular Systems:</span>
@@ -393,28 +393,28 @@ export const App: React.FC = () => {
                       className="starter-chip"
                       onClick={() => handleSelectFamily('shanahan-wide-zone')}
                     >
-                      ⚡ Shanahan Wide Zone
+                      Kyle Shanahan Wide Zone
                     </button>
                     <button
                       type="button"
                       className="starter-chip"
                       onClick={() => handleSelectFamily('macdonald-hybrid-disguise')}
                     >
-                      🛡 Macdonald Sim Pressure
+                      Macdonald Sim Pressures
                     </button>
                     <button
                       type="button"
                       className="starter-chip"
                       onClick={() => handleSelectFamily('reid-spread-rpo')}
                     >
-                      ⚡ Reid Spread RPO
+                      Reid Spread RPO
                     </button>
                     <button
                       type="button"
                       className="starter-chip"
-                      onClick={() => handleSelectFamily('fangio-two-high')}
+                      onClick={() => handleSelectFamily('fangio-two-high-shell')}
                     >
-                      🛡 Fangio Cover 6 Match
+                      Fangio Two-High Shell
                     </button>
                   </div>
                 </div>
@@ -423,9 +423,8 @@ export const App: React.FC = () => {
                   className="welcome-dismiss-btn"
                   onClick={handleDismissWelcome}
                   aria-label="Dismiss quick start guide"
-                  title="Dismiss guide"
                 >
-                  Got it ✕
+                  Got it
                 </button>
               </div>
             )}
@@ -550,10 +549,10 @@ export const App: React.FC = () => {
                 <h3>Key Capabilities</h3>
                 <ul className="guide-feature-list">
                   <li>
-                    <strong>Film Room:</strong> Watch 80 plays across 20 NFL offensive and defensive schemes animated in authentic All-22. Scrub the timeline to inspect key conflict defender reads.
+                    <strong>Film Room:</strong> Watch 100 plays across 25 NFL offensive and defensive schemes animated in authentic All-22. Scrub the timeline to inspect key conflict defender reads.
                   </li>
                   <li>
-                    <strong>Scheme Catalog:</strong> Filter and browse the complete library of 20 scheme philosophies, personnel groupings, and counter tactics.
+                    <strong>Scheme Catalog:</strong> Filter and browse the complete library of {ALL_SCHEME_FAMILIES.length} scheme philosophies, personnel groupings, and counter tactics.
                   </li>
                   <li>
                     <strong>Coaching Trees:</strong> Interactive lineage graphs tracing modern NFL coaching systems back to legendary architects (Bill Walsh, Mike Shanahan, Pete Carroll, Bill Belichick).
@@ -568,13 +567,13 @@ export const App: React.FC = () => {
                 <h3>Keyboard Shortcuts</h3>
                 <div className="shortcuts-grid">
                   <div className="shortcut-item"><kbd>Space</kbd> <span>Play / Pause</span></div>
-                  <div className="shortcut-item"><kbd>←</kbd> / <kbd>→</kbd> <span>Step ±0.1s Frame</span></div>
+                  <div className="shortcut-item"><kbd>←</kbd> / <kbd>→</kbd> <span>Step ±0.1s</span></div>
                   <div className="shortcut-item"><kbd>B</kbd> / <kbd>N</kbd> <span>Prev / Next Key Beat</span></div>
                   <div className="shortcut-item"><kbd>[</kbd> / <kbd>]</kbd> <span>Prev / Next Play in Scheme</span></div>
-                  <div className="shortcut-item"><kbd>Shift+[</kbd> / <kbd>Shift+]</kbd> <span>Prev / Next Scheme Family</span></div>
+                  <div className="shortcut-item"><kbd>Shift+[</kbd> / <kbd>Shift+]</kbd> <span>Prev / Next Scheme System</span></div>
                   <div className="shortcut-item"><kbd>R</kbd> <span>Reset to Snap (T=0.0s)</span></div>
-                  <div className="shortcut-item"><kbd>T</kbd> / <kbd>F</kbd> <span>Toggle Full-Field Theater Mode</span></div>
-                  <div className="shortcut-item"><kbd>1</kbd>–<kbd>4</kbd> <span>Switch Main Workspace Views</span></div>
+                  <div className="shortcut-item"><kbd>T</kbd> / <kbd>F</kbd> <span>Full-Field Theater Mode</span></div>
+                  <div className="shortcut-item"><kbd>1</kbd>–<kbd>4</kbd> <span>Switch Workspace Views</span></div>
                   <div className="shortcut-item"><kbd>?</kbd> <span>Toggle This Guide</span></div>
                 </div>
               </div>
@@ -586,7 +585,7 @@ export const App: React.FC = () => {
                 className="guide-modal-done-btn"
                 onClick={() => setShowGuideModal(false)}
               >
-                Close & Return to Film Room
+                Close Guide
               </button>
             </div>
           </div>

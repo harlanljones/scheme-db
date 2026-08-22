@@ -113,7 +113,7 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
       {/* Floating Canvas HUD Overlay (Top-Left) */}
       <div className="canvas-hud-top-left">
         <div className="canvas-hud-badge">
-          <span>LOS @ +40 YD</span>
+          <span>LOS · 40-YD LINE</span>
           <span style={{ color: '#64748b' }}>•</span>
           <span style={{ color: '#f8fafc' }}>{play.personnel}</span>
           <span style={{ color: '#64748b' }}>•</span>
@@ -132,7 +132,7 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
             aria-label="Toggle visual overlays menu"
             className={`canvas-hud-btn ${showOverlaysMenu ? 'active' : ''}`}
           >
-            <span>👁 Overlays</span>
+            <span>Overlays</span>
             <span style={{ fontSize: '0.6rem' }}>▾</span>
           </button>
 
@@ -164,7 +164,7 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
                   checked={showGhostRoutes}
                   onChange={(e) => setShowGhostRoutes(e.target.checked)}
                 />
-                Pre-Snap Play Art (Routes)
+                Pre-Snap Routes (Ghost)
               </label>
               <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.72rem', color: '#f8fafc', cursor: 'pointer', padding: '3px 4px' }}>
                 <input
@@ -188,7 +188,7 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
                   checked={showConflictVector}
                   onChange={(e) => setShowConflictVector(e.target.checked)}
                 />
-                Conflict Laser Line
+                Conflict Read Line
               </label>
               <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.72rem', color: '#f8fafc', cursor: 'pointer', padding: '3px 4px' }}>
                 <input
@@ -210,8 +210,8 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
           aria-expanded={showLegend}
           className={`canvas-hud-btn ${showLegend ? 'active' : ''}`}
         >
-          <span>{showLegend ? '✕' : 'ℹ️'}</span>
-          <span>{showLegend ? 'Close Key' : 'Key Guide'}</span>
+          <span>{showLegend ? '✕' : 'ⓘ'}</span>
+          <span>{showLegend ? 'Close Legend' : 'Field Legend'}</span>
         </button>
       </div>
 
@@ -259,7 +259,7 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ width: '14px', height: '14px', borderRadius: '50%', border: '2px dashed var(--accent-conflict)', backgroundColor: 'rgba(239, 68, 68, 0.2)', display: 'inline-block' }} />
-              <div><strong style={{ color: 'var(--accent-conflict)' }}>Read Key</strong>: Pulsing Reticle + Laser</div>
+              <div><strong style={{ color: 'var(--accent-conflict)' }}>Read Key</strong>: Pulsing Reticle + Dashed Read Line</div>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

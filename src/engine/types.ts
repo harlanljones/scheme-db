@@ -55,7 +55,12 @@ export interface Play {
     | 'shula'
     | 'spagnuolo'
     | 'quinn'
-    | 'bowles';
+    | 'bowles'
+    | 'payton'
+    | 'roman'
+    | 'oconnell'
+    | 'coen'
+    | 'kelly';
   family: string;               // 'wide-zone', 'split-zone-leak', 'saleh-43-wide9', 'macdonald-hybrid-disguise'
   personnel: string;            // '21', '12', '11', 'Base 4-3', 'Nickel 4-2-5', etc.
   formation: string;            // 'Offset I, Wing Right', '11P Gun 3x1', etc.

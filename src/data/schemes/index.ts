@@ -17,6 +17,11 @@ import { STEICHEN_RPO_FAMILY, STEICHEN_RPO_PLAYS } from './steichen/index';
 import { LAFLEUR_ILLUSION_FAMILY, LAFLEUR_ILLUSION_PLAYS } from './lafleur/index';
 import { SIRIANNI_POWER_FAMILY, SIRIANNI_POWER_PLAYS } from './sirianni/index';
 import { JOHNSON_DECEPTION_FAMILY, JOHNSON_DECEPTION_PLAYS } from './johnson/index';
+import { PAYTON_QUICK_GAME_FAMILY, PAYTON_QUICK_GAME_PLAYS } from './payton/index';
+import { ROMAN_POWER_READ_FAMILY, ROMAN_POWER_READ_PLAYS } from './roman/index';
+import { OCONNELL_BOOT_DAGGER_FAMILY, OCONNELL_BOOT_DAGGER_PLAYS } from './oconnell/index';
+import { COEN_WIDE_ZONE_RPO_FAMILY, COEN_WIDE_ZONE_RPO_PLAYS } from './coen/index';
+import { KELLY_TEMPO_SPREAD_FAMILY, KELLY_TEMPO_SPREAD_PLAYS } from './kelly/index';
 
 // ===================== NEW DEFENSE SCHEMES =====================
 import { MINTER_AMOEBA_FAMILY, MINTER_AMOEBA_PLAYS } from './minter/index';
@@ -40,6 +45,11 @@ export const ALL_SCHEME_FAMILIES: SchemeFamily[] = [
   LAFLEUR_ILLUSION_FAMILY,
   SIRIANNI_POWER_FAMILY,
   JOHNSON_DECEPTION_FAMILY,
+  PAYTON_QUICK_GAME_FAMILY,
+  ROMAN_POWER_READ_FAMILY,
+  OCONNELL_BOOT_DAGGER_FAMILY,
+  COEN_WIDE_ZONE_RPO_FAMILY,
+  KELLY_TEMPO_SPREAD_FAMILY,
   // 10 Defensive Schemes
   SALEH_WIDE9_FAMILY,
   MACDONALD_HYBRID_FAMILY,
@@ -54,7 +64,7 @@ export const ALL_SCHEME_FAMILIES: SchemeFamily[] = [
 ];
 
 export const ALL_PLAYS: Play[] = [
-  // 10 Offensive Schemes × 4 plays = 40
+  // 15 Offensive Schemes × 4 plays = 60
   ...SHANAHAN_WIDE_ZONE_PLAYS,
   ...KUBIAK_SPLIT_ZONE_PLAYS,
   ...REID_SPREAD_RPO_PLAYS,
@@ -65,6 +75,11 @@ export const ALL_PLAYS: Play[] = [
   ...LAFLEUR_ILLUSION_PLAYS,
   ...SIRIANNI_POWER_PLAYS,
   ...JOHNSON_DECEPTION_PLAYS,
+  ...PAYTON_QUICK_GAME_PLAYS,
+  ...ROMAN_POWER_READ_PLAYS,
+  ...OCONNELL_BOOT_DAGGER_PLAYS,
+  ...COEN_WIDE_ZONE_RPO_PLAYS,
+  ...KELLY_TEMPO_SPREAD_PLAYS,
   // 10 Defensive Schemes × 4 plays = 40
   ...SALEH_WIDE9_PLAYS,
   ...MACDONALD_HYBRID_PLAYS,

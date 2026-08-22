@@ -164,7 +164,7 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = memo(({ play, t, onSe
         }}
       >
         <span style={{ fontSize: '0.64rem', color: '#64748b', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-          <span style={{ color: '#38bdf8' }}>💡</span> Hover underlined terms for tactical glossary cues
+          Underlined terms open glossary definitions
         </span>
         <button
           type="button"
@@ -192,7 +192,7 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = memo(({ play, t, onSe
             e.currentTarget.style.borderColor = '#1e3358';
           }}
         >
-          📖 Glossary
+          Glossary
         </button>
       </div>
     </section>
@@ -209,7 +209,7 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = memo(({ play, t, onSe
           <div className="beat-moment-indicator">
             <span className="live-pulse-dot" aria-hidden="true" />
             <span className="moment-step-text">
-              Moment {activeIdx + 1} of {play.beats.length}
+              Beat {activeIdx + 1} of {play.beats.length}
             </span>
             <span className="moment-timestamp">T={activeBeat.t.toFixed(1)}s</span>
           </div>
@@ -244,7 +244,7 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = memo(({ play, t, onSe
         </p>
 
         {/* Beat Sequence Rail (Quick jump to any key moment) */}
-        <div className="beat-sequence-rail" role="tablist" aria-label="Play timeline moments">
+        <div className="beat-sequence-rail" role="tablist" aria-label="Key beats in this play">
           {play.beats.map((beat, idx) => {
             const isActive = idx === activeIdx;
             return (

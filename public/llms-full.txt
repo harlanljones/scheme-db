@@ -1,9 +1,9 @@
 # SchemeDB — Complete NFL Scheme & All-22 Tactical Knowledge Base
 Version: August 2026
 Base URL: https://schemedb.com
-Total Schemes: 20 (10 Offense, 10 Defense)
-Total Plays: 80 hand-authored All-22 tactical plays
-Total Coaches: 27
+Total Schemes: 25 (10 Offense, 10 Defense)
+Total Plays: 100 hand-authored All-22 tactical plays
+Total Coaches: 32
 
 ================================================================================
 PART 1: SCHEME FAMILIES & PLAY-BY-PLAY TACTICAL BREAKDOWNS
@@ -1126,6 +1126,567 @@ PLAYS IN THIS SCHEME:
       * [T=1.2s] 2. QB Deep Look-Off: The QB stares down the TE wheel route deep, holding the safety and field cornerback in deep zone territory. While they track the wheel, the RB slips out of the backfield into a wide-open flat.
       * [T=2.2s] 3. Screen Delivery in Space: Three releasing offensive linemen create a convoy escort for the RB in the flat. MIKE and WILL are both inside, Nickel followed H's drag, and the passing lane is clear for a dump-off that is really a designed perimeter run.
       * [T=3.5s] 4. Explosive Gain with Escort: Three blockers escort the RB into the secondary. The FS cannot close the angle in time, and the only unblocked defender is the SS who was drawn completely to the TE wheel. Detroit's orbit deception creates a 15+ yard screen.
+
+--------------------------------------------------------------------------------
+SCHEME FAMILY: SEAN PAYTON'S QUICK GAME & SCREEN PACKAGE [ID: payton-quick-game-screens]
+--------------------------------------------------------------------------------
+Architect / Coach: Sean Payton
+Organization / Team: Denver Broncos
+Category: OFFENSE
+Tree Branch: reid-west-coast
+Core Philosophy: A rhythm-first quick game built to beat man-match leverage and punish over-aggressive fronts before pressure can develop. Payton layers slant-flat rhythm throws, convoy fast screens, and interior shovel tunnels beneath jet-sweep play action — every call attacks the defender who triggers first, and every screen looks like protection until the geometry springs.
+
+PLAYS IN THIS SCHEME:
+
+>>> PLAY: Quick Game Slant-Flat Rhythm (ID: payton-slant-flat-rhythm)
+    Personnel: 11
+    Formation: 11P Gun Spread 2x2 vs Nickel
+    Situation: 2nd & 6, +35
+    Defensive Look: Nickel Cover 2 Man Match (Nickel 4-2-5 Over Front)
+    Animation Duration: 2.5s
+    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-slant-flat-rhythm
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Force the apex defender into an instant flat-vs-slant leverage decision and attack the answer he does not pick, on a one-hitch rhythm clock.
+    - Key Defender Put In Conflict: Nickel Corner (apex over H)
+    - Why It Works: Cover 2 Man Match asks the NICKEL to carry both the flat and the slant off one alignment; H’s immediate flat release pulls him sideways while Z’s slant hits the vacated window at 0.9 seconds, before the press corner can re-route.
+    - Failure Mode / Defensive Counter: A NICKEL who sits on the slant rather than triggering to the flat, plus interior pressure that forces the throw off its rhythm beat — a late ball lets the RCB recover on the slant.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: payton-fast-screen-convoy
+    - Plays Off: rpo-glance-post
+    - Visual Tell Cue: The NICKEL opens flat-side at 0.5s while Z stems outside then cuts the slant behind his shoulders — the ball is gone before the RCB re-establishes.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.1s] 1. Clean Catch, One Hitch: The gun snap is clean and the QB takes exactly one hitch step — Payton’s rhythm meter starts now. The whole design assumes the ball leaves before the second hitch ever happens.
+      * [T=0.5s] 2. Press Stems Create the Conflict: Z pushes vertical into the press and H fires flat outside the apex, forcing the NICKEL to choose his leverage instantly. He triggers on the flat because that is the throw that threatens his zone first.
+      * [T=0.9s] 3. The Rhythm Throw: The QB delivers on the one-hitch beat, before the RCB can re-establish outside leverage on the slant. The NICKEL is three yards into his flat trigger and cannot flip his hips back inside.
+      * [T=1.5s] 4. Catch Behind the Apex: Z secures the slant at nine yards in the exact window the vacating NICKEL was supposed to close. With the corner trailing and the safety splitting halves, nothing is left between the catch and the sideline.
+      * [T=2.2s] 5. Finish Upfield: The slant climbs to eighteen yards as the NICKEL chases laterally from the flat — the classic man-match tax. This is why Payton lives on these throws on second-and-medium.
+
+>>> PLAY: Fast Screen Convoy Right (ID: payton-fast-screen-convoy)
+    Personnel: 11
+    Formation: 11P Gun Spread 2x2 vs Nickel
+    Situation: 1st & 10, +25
+    Defensive Look: Nickel Cover 3 Buzz (Nickel 4-2-5 Over Front)
+    Animation Duration: 3.5s
+    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-fast-screen-convoy
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Get the ball to the perimeter instantly, before any rush or coverage reaction can develop, and let a two-man convoy block the only defenders who trigger correctly.
+    - Key Defender Put In Conflict: Mike Linebacker (screen-side chaser)
+    - Why It Works: The ball leaves at 0.6 seconds — faster than any pressure plan — and the guards’ two-count pass-set sell buys clean release paths; the TE and H form the convoy while the MIKE’s correct trigger still forces him into a losing lateral chase through traffic.
+    - Failure Mode / Defensive Counter: A RCB who beats the H arc to the catch point and a NICKEL who slips the TE log quickly — if the first two defenders to arrive make immediate tackles, the screen becomes a wasted down.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: payton-tunnel-shovel-package
+    - Plays Off: mcdaniel-cheat-motion-toss
+    - Visual Tell Cue: The ball is out at ~0.6s with zero route development, and the TE plus slot sprint into blocking arcs instead of routes — pure convoy geometry.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.1s] 1. The Pre-Loaded Throw: This is a called shot, not a read: the QB takes a half hitch and delivers by 0.6 seconds. Every defensive reaction after that is happening to a ball that is already gone.
+      * [T=0.7s] 2. OL Sells Set, Then Releases: The guards sold two counts of drop-back protection, freezing the interior rush — then both slip out. The 3T is still fighting a punch that no longer exists while his target runs the other way.
+      * [T=1.3s] 3. Convoy Forms: TE logs the apex NICKEL at the line and H cracks the RCB in the alley, building a moving wall before Z even reaches full speed. Two blockers for every defender who triggered properly.
+      * [T=2.2s] 4. MIKE Chases Laterally: The MIKE triggers correctly but must run sideways through traffic while the released guards climb to the second level. This lateral chase against a moving convoy is exactly the geometry Payton wants.
+      * [T=3.2s] 5. Turn the Corner: With the SS forced into an over-the-top run-down and the FS taking a hopeless angle from middle field, Z presses the numbers behind the RT escort. Six blockers, eleven yards of green.
+
+>>> PLAY: Tunnel Screen Shovel Package (ID: payton-tunnel-shovel-package)
+    Personnel: 11
+    Formation: 11P Gun Spread 2x2 vs Nickel
+    Situation: 2nd & 4, +40
+    Defensive Look: Nickel Cover 1 Robber (Nickel 4-2-5 Under Front)
+    Animation Duration: 3.5s
+    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-tunnel-shovel-package
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Build an interior blocking tunnel between the guards, shovel the ball to a full-speed crossing receiver at its mouth, and outrun a defense that triggered on run and false-screen looks.
+    - Key Defender Put In Conflict: 3-technique Defensive Tackle (rush lane vs shovel window)
+    - Why It Works: The 3T must pick between maintaining his rush lane and closing the shovel window — RG’s hinge makes the choice impossible — while the RB swing fake and TE false screen remove both linebackers and the NICKEL from the exact geometry where the tunnel bursts.
+    - Failure Mode / Defensive Counter: A 3T who spurns the rush to sit on the window meets Z before the shovel lands, and a WILL who ignores the swing fake scrapes clean into the tunnel — penetration plus disciplined scraping kills the play at birth.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: payton-jet-sweep-pa-post
+    - Plays Off: power-shovel-option
+    - Visual Tell Cue: H crosses behind the line and disappears between the two guards while Z sprints under the formation — nobody runs a route beyond eight yards.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.3s] 1. Protection Sell, Interior Fire: Both tackles take real pass sets while the center snaps down and the LG fires into the B-gap — the front reads pure drop-back. The tunnel opens before anyone sniffs screen.
+      * [T=1.1s] 2. The Tunnel Forms: H crosses behind the line and enters the guard-to-guard window first, becoming the lead blocker. The center has NT walled and RG is hinging 3T outside — the shovel window is fully built.
+      * [T=1.3s] 3. Shovel Timing: Z catches the underhand flip at the tunnel mouth at nearly full crossing speed. The 3T peeks inside exactly one beat too long — his rush lane and the closing window are the same real estate, and he cannot take both.
+      * [T=2.1s] 4. Misdirection Pays Twice: WILL bit on the RB swing fake and NICKEL drifted to the TE’s false flat screen — the two fastest triggers on the defense are both blocked or screened. The MIKE who triggered correctly runs into the LG’s climb.
+      * [T=3.0s] 5. Break Through the Second Level: Z bursts vertically behind the LG escort with only the FS holding a legitimate angle. The robber SS arrives into a wall instead of a tackle window — classic shovel geometry.
+
+>>> PLAY: Jet Sweep PA Deep Post (ID: payton-jet-sweep-pa-post)
+    Personnel: 11
+    Formation: 11P Gun Spread 2x2 vs Nickel
+    Situation: 1st & 10, own 25
+    Defensive Look: Cover 6 (Quarter-Quarter-Half) (Nickel 4-2-5 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-jet-sweep-pa-post
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Use full-field jet sweep action to pull both linebackers and the free safety downhill, then hit a deep post behind the displaced coverage.
+    - Key Defender Put In Conflict: Free Safety
+    - Why It Works: The jet motion commits the RCB and both linebackers before the snap cadence finishes, the mesh-point fake holds the FS downhill through his run fit, and the post breaks over the top precisely when his leverage is worst.
+    - Failure Mode / Defensive Counter: A FS who reads mesh-point-to-launch footwork rather than the run fake stays on top and squeezes the post window shut — one disciplined safety erases the entire concept.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: payton-slant-flat-rhythm
+    - Plays Off: jet-motion-oz, play-action-over
+    - Visual Tell Cue: Z carries a true full-field sweep path across the formation while X stems outside then stacks a deep post — the only deep route on the call.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] 1. Jet Sweep Pulls the Trigger Men: Z crosses at full speed and every force defender keys him: RCB sprints across the formation, WILL flows hard, and the FS starts creeping downhill. The decoy is doing real work before any fake is even made.
+      * [T=1.3s] 2. Mesh Point Sell: The QB opens away and presents a genuine-looking exchange at the mesh point while RB sells the kick-out. At full speed this is indistinguishable from Payton’s actual jet sweep package.
+      * [T=2.0s] 3. Safety Bites, Post Breaks: The FS is four yards downhill and gaining — fully committed to sweep fits — exactly when X breaks the post inside off an outside stem. The LCB is still leaning on outside leverage he no longer owns.
+      * [T=2.8s] 4. Launch Over the Top: The QB resets his feet and launches with the interior pressure arriving a half-beat late. The throw clears the dragged SS and NICKEL, who spent the play chasing the crossing route.
+      * [T=3.6s] 5. Catch Behind the Recovery: X secures the catch at sixteen-plus yards over the recovering FS’s shoulder. The defense traded its two deepest defenders for a fake run to the wrong hash.
+
+--------------------------------------------------------------------------------
+SCHEME FAMILY: GREG ROMAN'S POWER READ & QB RUN ATTACK [ID: roman-power-read]
+--------------------------------------------------------------------------------
+Architect / Coach: Greg Roman
+Organization / Team: Los Angeles Chargers
+Category: OFFENSE
+Tree Branch: power-gap-duo
+Core Philosophy: The most quarterback-centric gap-scheme system in modern football, built on heavy 22 personnel and the unblocked-read-key geometry that made Lamar Jackson an MVP. Greg Roman packages power read pulls, designed QB power keepers, pin-and-pull perimeter leverage, and identical-picture play-action shots so that every defensive run fit is simultaneously a pass-fit decision — and heavy personnel becomes an offensive weapon instead of a tell.
+
+PLAYS IN THIS SCHEME:
+
+>>> PLAY: Power Read Pull (Keep off the Crashing End) (ID: roman-power-read-pull)
+    Personnel: 22
+    Formation: 22P Heavy Wing Right (Under Center)
+    Situation: 2nd & 5, +45, downhill gap-scheme environment
+    Defensive Look: Cover 3 Sky (4-3 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-power-read-pull
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Put the unblocked playside defensive end in an impossible choice between the RB's flow and the QB's keep, then punish the crash with a pulling guard and fullback lead.
+    - Key Defender Put In Conflict: Playside Defensive End (Read Key) — unblocked SDE
+    - Why It Works: The read key must honor the running back or contain the quarterback, never both; when he crashes, the pulling guard and lead fullback have already built a two-man wall at the second level for the keeper.
+    - Failure Mode / Defensive Counter: A disciplined end who squeezes rather than crashes — riding the mesh, staying square, and capping the quarterback until backside pursuit arrives.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: roman-pa-post-shot
+    - Plays Off: steichen-qb-power-read
+    - Visual Tell Cue: The QB rides the mesh with eyes locked on the unblocked end instead of securing the handoff — if that end crashes, the ball never leaves.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.5s] 1. Mesh and the Declared Read Key: The playside defensive end is deliberately left unblocked — he is the entire play. The QB opens hard off under center, extends the ball to the arcing RB, and his eyes never leave that end.
+      * [T=1.2s] 2. The End Bites, Ball Comes Out: The read key crashes downhill on the running back flow, abandoning the edge. The QB rips the ball back and the geometry flips instantly — the crashing end is now chasing from the wrong side.
+      * [T=2.0s] 3. Puller Meets the Kick-Out: While the defense stares at the mesh, the left guard is already pulling flat to kick out the SAM, and the fullback is leading through the crease for the sky safety. Two blockers erase two second-level defenders.
+      * [T=3.2s] 4. Quarterback in Open Grass: With the edge kicked and the alley led into, the keeper hits its stride off tackle against only a trailing free safety. This is Roman football: a numbers advantage created by making one man defend two things.
+
+>>> PLAY: QB Power (Keeper Behind the Pull) (ID: roman-qb-power-run)
+    Personnel: 22
+    Formation: 22P Heavy Wing Right (Under Center)
+    Situation: 3rd & 2, midfield, short-yardage must-have
+    Defensive Look: Cover 3 Sky (4-3 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-qb-power-run
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Run true QB power with no read: use the fullback to wrong-arm the unblocked edge and the pulling guard to log the Mike, handing the quarterback a designed crease in the B/C-gap.
+    - Key Defender Put In Conflict: Unblocked Edge Defender — forced to wrong-arm into the FB kick-out
+    - Why It Works: The unblocked edge must choose between boxing the quarterback and squeezing the run; either choice he makes has already been blocked for, and the counter fake takes the backside linebacker out of his gap.
+    - Failure Mode / Defensive Counter: A long-armed edge who plays the quarterback instead of the blocker — keeping outside leverage, spilling the kick-out, and forcing the keeper wide into the force corner.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: roman-power-read-pull, roman-pin-pull-leverage
+    - Plays Off: sirianni-power-duo-inside
+    - Visual Tell Cue: There is no read and no extended mesh — the QB clamps the ball at the snap and the fullback kicks the first color he sees.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.4s] 1. No Read, No Mesh — Pure Design: Unlike the power read, this ball is clamped from the snap. The running back sells a counter fake the other way while the quarterback opens with his eyes on the fullback’s kick, not on any defender.
+      * [T=1.5s] 2. The Wrong-Arm Trap: The unblocked edge defender is put in conflict: if he boxes, the QB bounces outside; if he crashes — which he does — the fullback kicks him out and erases the edge entirely.
+      * [T=2.2s] 3. Puller Logs the Second Level: The pulling left guard arrives exactly where the MIKE fills, logging him inside-out so the B/C-gap stays open. Power means someone is always blocked at the second level — here it is the puller himself.
+      * [T=3.3s] 4. Quarterback Falls Forward Past the Sticks: With the edge kicked and the MIKE logged, the only defenders left are the climbing-RT-blocked safety and a trailing free safety. The keeper converts in a phone booth — Roman’s signature short-yardage answer.
+
+>>> PLAY: Pin & Pull Leverage Sweep (ID: roman-pin-pull-leverage)
+    Personnel: 22
+    Formation: 22P Heavy Wing Right (Under Center)
+    Situation: 1st & 10, own 35, perimeter leverage attack
+    Defensive Look: Cover 3 Sky (4-3 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-pin-pull-leverage
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Attack the perimeter's leverage math: pin every down defender with interior blockers, then outnumber the edge with tandem pulling guards, a fullback, and an arcing wing.
+    - Key Defender Put In Conflict: Force Player (SAM) — caught between spilling the sweep and boxing the edge
+    - Why It Works: The pins guarantee no interior defender can pursue, so the defense’s edge support must handle three separate blockers arriving in sequence; any hesitation between spill and box leaves the corner turned.
+    - Failure Mode / Defensive Counter: A defensive end who fights across the pin’s face, or a force player who commits instantly to one answer and lets the second puller be blocked by design rather than by reaction.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: roman-power-read-pull
+    - Plays Off: stefanski-pin-pull-sweep
+    - Visual Tell Cue: Both guards pull together around four stationary pins while the QB hands and boots away — no mesh read, no decision, pure numbers sweep.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] 1. The Pins Set the Trap: Four interior blockers — tackle, center, right guard’s replacement, tight end — each drive their man down and inward. Not one defender on the line of scrimmage can pursue; the entire front is erased before a single puller moves.
+      * [T=1.4s] 2. Tandem Pull Around the Wreckage: Both guards pull in tandem through the vacuum: the left guard kicks, the right guard leads. This is leverage math — two pullers against a defense that has zero unblocked linemen to disrupt them.
+      * [T=2.1s] 3. Force Player in Conflict: The SAM must spill or box — and he hesitates between the two, which means he does neither well. The kicking guard catches him mid-decision and spills him out of the play entirely.
+      * [T=3.0s] 4. Convoy Turns the Corner: The fullback and arcing wing form a moving convoy with the safety and force corner already walled. The running back bends off the pin-blocked edge into green grass — Roman trading interior muscle for perimeter leverage.
+
+>>> PLAY: Heavy Personnel PA Deep Post Shot (ID: roman-pa-post-shot)
+    Personnel: 22
+    Formation: 22P Heavy Wing Right (Under Center)
+    Situation: 1st & 10, +40, shot off heavy-run tendency
+    Defensive Look: Cover 1 (4-3 Over Front)
+    Animation Duration: 4.2s
+    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-pa-post-shot
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Weaponize the established Power Read Pull picture — same mesh, same pull, same lead — to bait the single-high safety downhill and take a deep post shot behind him.
+    - Key Defender Put In Conflict: Free Safety — single-high defender who must honor heavy-run action or the deep middle
+    - Why It Works: Every visual cue matches the run the defense has studied for weeks, so the safety’s downhill fit is correct football that loses anyway; the lone tell is X blocking nobody, and it is invisible until the stem.
+    - Failure Mode / Defensive Counter: A quarter-safety coverage or a disciplined post-safety who reads the X release early and sinks instead of fitting — the shot needs that downhill bite to exist.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: None
+    - Plays Off: roman-power-read-pull, play-action-over
+    - Visual Tell Cue: The backfield is a perfect copy of Power Read Pull, but X never blocks — his vertical release off the snap is the one frame that gives it away.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.5s] 1. Frame-for-Frame Deception: The mesh, the pulling guard, the climbing tight end, the fullback lead — every offensive tell is identical to Power Read Pull. In heavy personnel against a single-high safety, the defense has earned the right to be wrong here.
+      * [T=1.2s] 2. The Safety’s Downhill Bite: The free safety sees unblocked end, pulling guard, fullback lead — everything his run fits demand — and triggers downhill into the box. The moment he does, the deepest part of the field has nobody within twelve yards of it.
+      * [T=1.9s] 3. The Post Breaks Behind the Bite: X has been stacking the corner since the snap because there is no stalk block coming — that absence is the only difference in the whole play. The post breaks inside at sixteen yards directly into the space the safety just vacated.
+      * [T=2.8s] 4. Corner Turn and Recovery Race: The quarterback rises off the boot action and lets it go. The safety turns and runs but he is chasing from nine yards downhill; U’s clear-out seam has also dragged the strong-side corner away from any help.
+      * [T=4.0s] 5. Shot Money off Run Identity: The catch lands where Roman designed it: the middle third, vacated by a bite he manufactured across four weeks of heavy-run film. This is why the power game exists — not just for yards, but for moments exactly like this one.
+
+--------------------------------------------------------------------------------
+SCHEME FAMILY: KEVIN O'CONNELL'S BOOT & DAGGER PLAY-ACTION SYSTEM [ID: oconnell-boot-dagger]
+--------------------------------------------------------------------------------
+Architect / Coach: Kevin O'Connell
+Organization / Team: Minnesota Vikings
+Category: OFFENSE
+Tree Branch: shanahan-kubiak
+Core Philosophy: A play-action ecosystem where every call wears the same uniform: a condensed gun formation that produces an identical wide-zone reach wash and mesh point for the first full second of every snap. The stretch base establishes the picture, the boot flood punishes flow-away defenders, the Dagger seam-curl attacks the dropping Mike, and the duo PA crosser exploits downhill triggers — four answers off one visual lie.
+
+PLAYS IN THIS SCHEME:
+
+>>> PLAY: Condensed Wide-Zone Stretch Base (ID: oconnell-wide-zone-stretch-base)
+    Personnel: 11
+    Formation: 11P Condensed Gun Right vs 4-3 Over
+    Situation: 1st & 10, +40, early-down foundation call
+    Defensive Look: Cover 3 Sky (Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-wide-zone-stretch-base
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Establish the pure wide-zone stretch picture that every boot, dagger, and crosser companion in the family borrows from.
+    - Key Defender Put In Conflict: Playside flow linebacker (MIKE)
+    - Why It Works: The full-front reach wash gives the defense no stationary blocking point, so the playside linebacker must run laterally with flow; the guard's climb arrives precisely where he crosses, and the bend read exploits the sealed edge.
+    - Failure Mode / Defensive Counter: A 3-tech who fights laterally instead of getting reached keeps his outside arm free, squeezing the crease before the bend decision and forcing the bounce into the sky safety.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: oconnell-boot-flood-rollout, oconnell-pa-dagger-shot, oconnell-duo-pa-crosser
+    - Plays Off: outside-zone
+    - Visual Tell Cue: The ball actually goes to the back — no boot pivot, no pocket reset; the QB's ride ends in a carried-out fake rather than a throw.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.5s] The Reach Gets Going: All five linemen take lateral reach steps with the tight end driving into the edge setter — the entire front is washed toward the boundary in one coordinated motion that defines every look in this system.
+      * [T=1.4s] Mesh Point Sells the Handoff: The QB extends the mesh ride while the back flattens his path behind it, forcing both edge defenders to commit to a run they cannot yet rule out.
+      * [T=2.4s] The Playside Linebacker Flows: MIKE keys the pullers-less wash and runs the sideline over the top — but the guard climb cuts him off exactly where the crease opens. He is the defender this whole scheme family attacks.
+      * [T=3.3s] Bend Decision at the Second Level: The back presses vertical then bends behind the climbing guards rather than bouncing to the SS fill — the bend read turns an eight-yard stretch into a chunk gain.
+
+>>> PLAY: Wide-Zone Boot Flood (ID: oconnell-boot-flood-rollout)
+    Personnel: 11
+    Formation: 11P Condensed Gun Right vs 4-3 Over
+    Situation: 1st & 10, +40, off the established stretch
+    Defensive Look: Cover 3 Sky (flowed away) (Over Front)
+    Animation Duration: 4.2s
+    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-boot-flood-rollout
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Punish the defensive flow created by the base stretch by pulling the QB against the grain into a three-level boundary flood.
+    - Key Defender Put In Conflict: Backside contain EDGE and flow-away flat defender (WILL)
+    - Why It Works: The EDGE is reached inside on a block he must fight through while WILL takes genuine steps toward the stretch flow; by the time either reads boot, the QB is set at depth with all three levels already stretching the boundary.
+    - Failure Mode / Defensive Counter: A long-armed contain EDGE who keeps outside leverage through the reach and a flat defender who reads guard pulls rather than backfield flow will collapse the rollout before the third level clears.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: oconnell-pa-dagger-shot, boot-throwback-leak
+    - Plays Off: oconnell-wide-zone-stretch-base, mcvay-pa-sail-flood, naked-bootleg
+    - Visual Tell Cue: The QB's ride turns into a reverse pivot against the flow — linemen keep blocking stretch right while the ball-carrier disappears left.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] Same Stretch Picture: For the first full second this is indistinguishable from the base call — every lineman reaches, the mesh point is real, and both edges commit to stopping the stretch.
+      * [T=1.6s] The Pull — Boot Away From Flow: The QB pivots against the grain while the entire defense flows right; WILL has already taken three steps playside and the backside EDGE is fighting an inside reach he cannot win.
+      * [T=2.8s] Three Levels to the Boundary: X pushes the carrying LCB past 14 yards before breaking the comeback, H drags behind the redirected MIKE, and the RB swings to the vacated flat — a full three-level stretch of a defense flowing the wrong way.
+      * [T=3.8s] Flat Defender Arrives Late: The throw comes off the boot rhythm before WILL can close on the flat — the comeback or the back are both live because the run action bought the launch point for free.
+
+>>> PLAY: PA Dagger Seam-Curl Shot (ID: oconnell-pa-dagger-shot)
+    Personnel: 11
+    Formation: 11P Condensed Gun Right vs 4-3 Over
+    Situation: 2nd & 5, +40, off the established stretch
+    Defensive Look: Cover 3 Sky (Over Front)
+    Animation Duration: 3.8s
+    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-pa-dagger-shot
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Use the stretch-action pocket reset to attack the middle of Cover 3 Sky with a Dagger — seam above, curl in the void behind the dropping MLB.
+    - Key Defender Put In Conflict: MIKE (hook-to-curl conflict)
+    - Why It Works: MIKE must turn and run with the seam or the tight end wins over the top instantly; the moment he commits his eyes there, Z's curl sits undefended in the exact grass he just vacated.
+    - Failure Mode / Defensive Counter: A MOFO-spinning safety or a MIKE who plays the curl first with trail technique on the seam forces the QB into his checkdown, turning the shot into a three-yard gain.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: oconnell-duo-pa-crosser
+    - Plays Off: oconnell-wide-zone-stretch-base, pa-dagger-shot, play-action-over
+    - Visual Tell Cue: The QB never leaves the pocket — the ride ends in a hitch-and-reset rather than a handoff, a boot pivot, or a carried-out fake.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] Identical Run Picture: The offensive line reaches and the mesh is real — the tight end even lands his drive step on the edge setter, so no defender can separate this frame from the base stretch.
+      * [T=1.5s] The Seam Releases Behind the Edge: Y slips off a block the SDE fully bought and climbs the seam between the linebackers; MIKE bails into his hook-curl drop with his eyes glued to the climbing tight end.
+      * [T=2.5s] Z Settles Into the Void: With MIKE turned chasing the seam and RCB trailing the stem, Z plants at nine yards directly behind the linebacker's shoulders — the textbook dagger void.
+      * [T=3.3s] Shot Over the Linebacker: From the back of the pocket the QB throws the curl over MIKE's outside shoulder; the free safety is 12 yards deep splitting verticals and has no play on an intermediate ball.
+
+>>> PLAY: Duo PA Boundary Crosser (ID: oconnell-duo-pa-crosser)
+    Personnel: 11
+    Formation: 11P Condensed Gun Right vs 4-3 Over
+    Situation: 3rd & 3, +45, off the established stretch
+    Defensive Look: Cover 3 Sky (Over Front)
+    Animation Duration: 3.8s
+    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-duo-pa-crosser
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Pair a downhill duo run fake with a free backside crosser to punish linebackers and cornerbacks who trigger on run action.
+    - Key Defender Put In Conflict: SAM / backside apex
+    - Why It Works: Every second-level defender steps downhill into a double team that physically occupies them, and the run-triggering cornerback vacates the crosser entirely; X crosses behind all of it with no defender assigned to him.
+    - Failure Mode / Defensive Counter: A quarterback-spiering safety who plays half-field eyes-through-the-QB can rob the crosser, and an apex who refuses the downhill bait keeps his zone integrity intact.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: None
+    - Plays Off: oconnell-wide-zone-stretch-base, play-action-over
+    - Visual Tell Cue: The RB plants downhill instead of pressing the perimeter — OL blockers converge into a vertical double team rather than washing laterally.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] Downhill Trigger: The identical stretch look pulls every second-level defender one more step right — MIKE shoots B-gap and WILL fills hard, both with their eyes on backfield rather than the crossing pattern developing behind them.
+      * [T=1.5s] Double Team Forms, Crosser Releases Free: TE folds inside and the RT/TE combo buries the SDE while X releases untouched behind the downhill linebackers — the LCB has already abandoned him for a run fit that doesn't exist.
+      * [T=2.6s] Crosser Behind the Second Level: X levels across at four yards exactly where the linebackers used to be; SAM recognizes it last because he was fitting the edge of the double team, and his recovery angle is already lost.
+      * [T=3.4s] Window Throw Over Traffic: The QB delivers from a clean launch point created by the center's seal — the ball arrives before FS can break and while H's stalk keeps the sky safety pinned away from the catch point.
+
+--------------------------------------------------------------------------------
+SCHEME FAMILY: LIAM COEN'S HYBRID WIDE-ZONE RPO SYSTEM [ID: coen-wide-zone-rpo]
+--------------------------------------------------------------------------------
+Architect / Coach: Liam Coen
+Organization / Team: Jacksonville Jaguars
+Category: OFFENSE
+Tree Branch: shanahan-kubiak
+Core Philosophy: The modern evolution of the Shanahan-McVay tree: Liam Coen packages genuine wide-zone run mechanics directly with post-snap RPOs, turning every zone-stretch call into a triple-option math problem for the defense. Glance shots off box-number reads, three-level bubble-slant-flat triangles, cross-field crack tosses, and orbit-motion cutbacks all grow from the same identical run picture — the defense can never be right against both halves of any call.
+
+PLAYS IN THIS SCHEME:
+
+>>> PLAY: Wide-Zone + Glance RPO (Box-Number Read) (ID: coen-wide-zone-glance-rpo)
+    Personnel: 11
+    Formation: 11P Gun Wide-Zone Strong Right vs Nickel
+    Situation: 1st & 10, +40, early down run/pass packaged call
+    Defensive Look: Nickel Cover 2 Match (Nickel 4-2-5 Over Front)
+    Animation Duration: 3.5s
+    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-wide-zone-glance-rpo
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Package wide-zone run mechanics with a post-snap glance so the QB can hand off or throw based purely on how the apex nickel defends the box.
+    - Key Defender Put In Conflict: NICKEL (apex run-fit vs RPO conflict)
+    - Why It Works: The run presentation is completely genuine — real reach blocks, real RB track — so the nickel's downhill trigger is the correct run answer that becomes a fatal wrong answer against the throw. His vacated apex grass is precisely where the glance lands.
+    - Failure Mode / Defensive Counter: A nickel who stays patient at the apex and plays both halves of the package forces the QB into a true handoff, letting the front side defend the stretch without ever leaving H uncovered.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: coen-crack-toss-perimeter
+    - Plays Off: rpo-glance-post, mcvay-glance-rpo-orbit
+    - Visual Tell Cue: Identical run-flow picture until the nickel commits — then the ball comes out over his head instead of going into the RB's belly.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.4s] 1. Identical Run Picture: Everything through the mesh looks like pure wide-zone: the OL scoops, TE arcs, and RB presses his normal stretch track. The QB is not reading a defender — he reads the box numbers to decide whether this is a handoff or a throw.
+      * [T=1.0s] 2. The Nickel Flies: With six blockers creating a credible stretch crease, the apex nickel triggers hard downhill into his run fit — exactly the response the run packaging exists to punish.
+      * [T=1.6s] 3. Glance Into the Void: The QB pulls the ball and snaps the glance over the flying nickel to H, who has released flat into the exact grass the trigger abandoned. The SS cannot close from his deep-half alignment in time.
+      * [T=2.6s] 4. Z Stalk Protects YAC: Z's stalk block erases the field corner so the catch turns immediately upfield. One defensive trigger converted a called run into an easy five-yard completion with room to run.
+
+>>> PLAY: Bubble-Slant-Flat Triangle RPO (Zone-Read Action) (ID: coen-bubble-triangle-rpo)
+    Personnel: 11
+    Formation: 11P Gun Wide-Zone Strong Right vs Nickel
+    Situation: 2nd & 5, +45, packaged triangle stretch off zone-read look
+    Defensive Look: Nickel Cover 2 Match (Nickel 4-2-5 Over Front)
+    Animation Duration: 3.5s
+    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-bubble-triangle-rpo
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Turn one zone-read call into a true triple-option math problem by stretching a single apex defender with three simultaneous targets at three depths.
+    - Key Defender Put In Conflict: NICKEL or SS (apex squeezed three ways)
+    - Why It Works: Three receivers attacking one apex at bubble, slant, and flat depths guarantees displacement — whichever defender the nickel keys, one of the three windows opens. The live RB threat prevents linebackers from robbing the quick game.
+    - Failure Mode / Defensive Counter: Pattern-match quarters where the apex walls the slant, the corner takes the bubble man-to-man with an immediate trigger, and the safety erases the flat — collapsing the triangle from both edges.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: coen-motion-zone-cutback
+    - Plays Off: steichen-zone-bubble-rpo
+    - Visual Tell Cue: Three receivers release at three distinct depths off zone-read ride action — bubble arc, inside slant, and chasing TE flat — instead of any single downfield route tree.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.5s] 1. Zone-Read Ride Freezes the Edge: The QB rides the mesh while reading the unblocked SDE, whose crash commits him downhill. That half-second of edge hesitation is what lets all three routes clear their landmarks before anyone rallies.
+      * [T=1.1s] 2. The Triangle Forms: Z's bubble, H's slant, and the TE's flat occupy three different depths and angles around one apex defender. Geometry, not route talent, is what creates this separation.
+      * [T=1.6s] 3. Apex Displacement: The nickel starts keyed on H's slant, so the bubble drags him sideways and the SS is left straddling two layers without a clean trigger. The QB reads the displacement and fires to Z.
+      * [T=2.2s] 4. Catch on the Move vs Soft Force: Z catches the bubble in full stride behind the drifting corner. With the field corner playing soft force, there is no immediate tackler — only grass and the stalk-protected sideline.
+      * [T=3.0s] 5. Constraint Value: Even when the defense handles the throw, the RB's live insert forced WILL and MIKE to defend the box. Coen's packaging makes defending one thing mean conceding the other every snap.
+
+>>> PLAY: Crack-Toss Perimeter Attack (X Cracks the Force) (ID: coen-crack-toss-perimeter)
+    Personnel: 11
+    Formation: 11P Gun Wide-Zone Strong Right vs Nickel
+    Situation: 1st & 10, midfield, punishing soft-corner force rules
+    Defensive Look: Cover 3 Cloud (soft field corner) (Nickel 4-2-5 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-crack-toss-perimeter
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Attack soft-force perimeter rules with speed toss plus a cross-field crack, making the force defender choose between an uncovered crack blocker and the alley he must fill.
+    - Key Defender Put In Conflict: Force defender cracked by X (the nickel)
+    - Why It Works: The crack-toss creates an unblockable geometry problem: if the nickel steps up to fill his alley, X cracks him out of the frame; if he waits on X, the RB has already turned the edge. Counter-flow line splits keep the box from slanting into the toss pocket.
+    - Failure Mode / Defensive Counter: An aggressive force player who spills the toss immediately at the edge — or a corner who plays press and defeats Z's stalk — collapses the perimeter before X's long crack angle can ever arrive.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: coen-wide-zone-glance-rpo
+    - Plays Off: outside-zone, jet-motion-oz
+    - Visual Tell Cue: Backside X sprints cross-field on a visible max-effort crack angle while the line's footwork points the opposite way from the eventual toss.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] 1. Counter-Flow Sell: Every offensive lineman takes a flow-left step while the QB opens away from the toss direction's eventual target — the front seven reads inside zone left and flows accordingly.
+      * [T=1.0s] 2. Speed Toss Out of the Hand: The QB flips the toss over the hinging tackle and the RB catches it in full stride at the edge. The TE's pin and RT hinge mean no defensive end can spill this outside the pocket.
+      * [T=2.2s] 3. The Crack Arrives: X has sprinted across the formation on a max-effort crack angle and detonates the nickel precisely as the RB reaches the edge. The force defender — the one man whose fit was supposed to cap this play — never lays a hand on the ball carrier.
+      * [T=3.2s] 4. Perimeter Math Wins: With force cracked, the alley walled by H, and the sideline stalked by Z, the RB turns upfield against only the free safety. Soft corner force rules made this math inevitable.
+
+>>> PLAY: Motion-Declared Zone Cutback (Orbit Drag) (ID: coen-motion-zone-cutback)
+    Personnel: 11
+    Formation: 11P Gun Wide-Zone Strong Right vs Nickel (H orbiting pre-snap)
+    Situation: 1st & 10, own 35, probing run-fit discipline with motion
+    Defensive Look: Nickel Cover 3 Buzz (Nickel 4-2-5 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-motion-zone-cutback
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Use pre-snap orbit motion to interrogate and declare the overhang's run fit, then punish the resulting flow commitment with a wide-zone cutback into the vacated backside seam.
+    - Key Defender Put In Conflict: Backside WILL (cutback fit)
+    - Why It Works: The motion tells Coen which defender owns the cutback before the ball is snapped; genuine full-width stretch action then pulls that same defender — plus MIKE — completely out of position, and the backside reach blocks have quietly built the return lane the whole time.
+    - Failure Mode / Defensive Counter: A disciplined backside linebacker who shuffles laterally instead of turning his shoulders uphill keeps his cutback leverage and meets the bend at the mesh line.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: coen-bubble-triangle-rpo
+    - Plays Off: jet-motion-oz, mcdaniel-cheat-motion-toss
+    - Visual Tell Cue: H crosses the formation in orbit at the snap and never runs a route — he settles and climbs into a lead block while the RB visibly bends backward against the stretch flow.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.3s] 1. Motion Declares the Fit: H's orbit drag forces the nickel to either travel or bump his overhang fit before the snap — either way, Coen has already been told where that defender's run responsibility sits.
+      * [T=1.0s] 2. Full-Stretch Presentation: Every blocker reaches right and the RB takes a genuine stretch track. The TE arc plus RT reach give the defense maximum width to defend — every box defender is being pulled toward the boundary.
+      * [T=2.2s] 3. The Bend Back: The frontside is capped, so the RB plants and bends against the grain. Because WILL chased the stretch and MIKE scraped wide, the entire middle of the field has emptied behind them.
+      * [T=3.2s] 4. Behind the Backside Reach: The cutback hits exactly where LT turned the WDE out and LG sealed the A-gap. H arrives to climb for the second-level block, and the RB accelerates through the seam with only FS to beat.
+
+--------------------------------------------------------------------------------
+SCHEME FAMILY: CHIP KELLY'S TEMPO SPREAD & AIR RAID SYSTEM [ID: kelly-tempo-spread]
+--------------------------------------------------------------------------------
+Architect / Coach: Chip Kelly
+Organization / Team: Las Vegas Raiders
+Category: OFFENSE
+Tree Branch: reid-west-coast
+Core Philosophy: A snap-rate offense built to make defensive communication the first conflict on every play: Kelly snaps within seconds of the previous whistle, denying substitutions and rotations before the ball is even live. The system layers classic Air Raid spacing — Mesh rubs and Spot stress — over a spread-option run game whose zone-read/draw geometry breaks box math, then punishes two-high shells with four-verts takeoffs off a simple pre-snap MOFO read.
+
+PLAYS IN THIS SCHEME:
+
+>>> PLAY: Mesh Spacing Concept at Tempo (ID: kelly-mesh-spacing-concept)
+    Personnel: 10
+    Formation: 10P Gun Spread 2x2 vs Nickel
+    Situation: 2nd & 6, +35, snapped within seconds of the previous whistle — no huddle, no substitution window for the defense
+    Defensive Look: Nickel Cover 2 Man (Nickel 4-2-5 Over Front)
+    Animation Duration: 3.2s
+    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-mesh-spacing-concept
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Weaponize tempo and classic Air Raid spacing — two shallow crossers rubbing under the quarterback with corners and over routes stacked behind — to stress man coverage's navigation rules and zone coverage's hook depth.
+    - Key Defender Put In Conflict: Mike Linebacker (navigating crossing trash)
+    - Why It Works: The snap comes seconds after the previous whistle so the defense can't substitute or re-communicate, and the five-yard crossers create a legal rub that man defenders must fight through while zone defenders must decide between walling and passing off mid-route.
+    - Failure Mode / Defensive Counter: A disciplined two-man-under zone package that walls each crosser at the line and passes them off cleanly, keeping both linebackers square to the quarterback with vision on the throw.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: kelly-four-verts-takeover
+    - Plays Off: mesh-shallow-cross
+    - Visual Tell Cue: Both inside slots exchange full-field shallow crossers directly under the QB within a second of the previous whistle — zero huddle, zero pre-snap motion.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.3s] 1. Snap Before the Defense Can Breathe: The ball is snapped within seconds of the previous whistle — no huddle, no substitution window — so Nickel is still backpedaling into an apex alignment he didn't choose. Kelly's tempo turns defensive communication into the first conflict of the play.
+      * [T=0.9s] 2. The Mesh Exchange: H and Y flatten at exactly five yards and cross directly under the quarterback, forcing any man defender to either fight over the top or chase through the wash. Against man, one of the crossers is guaranteed to be rubbed.
+      * [T=1.7s] 3. MIKE Navigates the Trash: The Mike linebacker must hold the middle hook while both crossers drag through his face — navigate too aggressively and he clears a throwing lane, sit too long and the catch-and-run has no pursuit. This is the single hardest job in Cover 2 Man against Mesh.
+      * [T=2.5s] 4. Corners Behind the Rub: While the defense stares at the mesh, X breaks a corner and Z settles over the middle behind the trash at 8–12 yards. The spacing stress is layered: if man survives underneath, the corners win behind it; if zone sinks, the crossers eat grass all day.
+
+>>> PLAY: Three-Level Spot Stress (ID: kelly-spot-tempo-stress)
+    Personnel: 10
+    Formation: 10P Gun Spread 2x2 vs Nickel
+    Situation: 3rd & 4, +42, snapped at tempo before the nickel can re-communicate his apex assignment
+    Defensive Look: Nickel Cover 2 Zone (Nickel 4-2-5 Over Front)
+    Animation Duration: 3s
+    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-spot-tempo-stress
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Layer flat, spot/curl, and vertical takeoff off one shoulder so the apex nickel must defend three landmarks with two responsibilities, then beat the rotation clock with a one-hitch rhythm throw.
+    - Key Defender Put In Conflict: Nickel (flat/curl conflict)
+    - Why It Works: The spot sits precisely in the void between the flat and the deep drop-off — close enough that the nickel can't expand without surrendering the catch, far enough that sitting on it leaves the flat wide open — and tempo denies the rotation any chance to arrive.
+    - Failure Mode / Defensive Counter: A pattern-match quarters call where the apex defender carries the spot man-to-man and the flat is owned by a scraping safety or linebacker, erasing the conflict entirely.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: kelly-four-verts-takeover
+    - Plays Off: kelly-mesh-spacing-concept
+    - Visual Tell Cue: H freezes in a catcher-box spot at exactly five yards with the RB flat swinging under and X clearing over the top — every other receiver leaves the picture immediately.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.3s] 1. Apex Stress at Tempo: Kelly snaps this before the nickel can settle into his apex landmark — he's still aligning while the ball is in play. The formation gives nothing away pre-snap, so the nickel must solve the flat/curl conflict live.
+      * [T=0.8s] 2. Three Levels Off One Shoulder: The left side builds vertically in three layers: RB swings flat low, H settles the spot at exactly five yards, X takes off behind it all. The nickel cannot occupy two of those landmarks at once.
+      * [T=1.3s] 3. The Nickel Freezes: With eyes locked on the quarterback, the nickel is stuck between driving on H’s catcher-box spot and expanding to the RB flat. The QB sees the hesitation and delivers on the one-hitch rhythm before rotation can help.
+      * [T=2.2s] 4. Ball Out Before Rotation: Both safeties stay pinned by the vertical threats and never break down on the spot in time. H turns the five-yard grab upfield into green grass because the entire second level is flowing away from the throw.
+
+>>> PLAY: Zone-Read RB Draw Package (ID: kelly-zone-read-rb-draw)
+    Personnel: 10
+    Formation: 10P Gun Spread 2x2 vs Nickel
+    Situation: 1st & 10, +25, tempo snap into a light nickel box before the defense can add a hat
+    Defensive Look: Nickel Cover 3 Sky (Nickel 4-2-5 Over Front)
+    Animation Duration: 4s
+    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-zone-read-rb-draw
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Pair the zone-read's unblocked-end geometry with an RB delayed draw so the defense's box math commits to a play flowing one way while the ball hits a vacated gap going the other.
+    - Key Defender Put In Conflict: Unblocked read-key DE and the WILL fitting the draw
+    - Why It Works: The read forces the end to declare, and his crash — plus the linebackers' and sky safety's flow reads against the zone action — empties both the edge and the backside B-gap simultaneously; by the time the draw reveals itself, every hat is wrong-sided.
+    - Failure Mode / Defensive Counter: A disciplined end who stays home on the near-back and squeezes rather than crashes, letting the defense spill the draw to the WILL before the redirect can clear the hole.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: kelly-spot-tempo-stress
+    - Plays Off: None
+    - Visual Tell Cue: RB presses wide-zone right for two steps, then sinks his hips and snaps back into the backside B-gap — the mid-play hip turn at the mesh point is the only visual cue.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.6s] 1. The Unblocked Read Key: Kelly's offensive line deliberately leaves the backside end untouched — LT hinges away from him. The QB presents the ball on a wide-zone ride and stares straight at that defender, whose next step decides where the ball goes.
+      * [T=1.3s] 2. Box Math Breaks: The WDE crashes down on the give while WILL and the rolling SS trigger downhill with the zone flow. The defense now has seven hats chasing a play that's about to reverse direction — the box is mathematically wrong-sided.
+      * [T=2.0s] 3. The Draw Redirect: RB gathers, plants, and takes the handoff back through the B-gap the crashing WDE just vacated — behind C and LG double-walls. Every defender who flowed right is now taking the longest possible angle to the ball.
+      * [T=3.2s] 4. Second Level, Wrong-Way Fits: The WILL arrives at the hole a full beat after the back hits it, and the free safety — the only clean body — breaks down from 15 yards away. Kelly's tempo means this same geometry stress repeats on the very next snap.
+
+>>> PLAY: Four Verts Takeover vs Two-High (ID: kelly-four-verts-takeover)
+    Personnel: 10
+    Formation: 10P Gun Spread 2x2 vs Nickel
+    Situation: 2nd & 8, +45, snapped at tempo against a two-high shell that hasn't settled its rotation
+    Defensive Look: Quarters Two-High (Nickel 4-2-5 Over Front)
+    Animation Duration: 3.8s
+    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-four-verts-takeover
+
+    [SUMMARY & TACTICAL PURPOSE]
+    - Motive: Attack a two-high shell's structural weakness — the open middle third — with four simultaneous verticals and sideline takes, letting the pre-snap MOFO read dictate a seam shot before the safeties can squeeze.
+    - Key Defender Put In Conflict: Middle-third/match safety
+    - Why It Works: Sideline takes pin both quarters corners outside so no help can rotate in, and the mirrored seams force the middle-third safety to defend two routes with one pair of eyes; tempo removes the rotation adjustment entirely.
+    - Failure Mode / Defensive Counter: Cover 6 or a single-high rotation after motion that puts three deep defenders over four verticals, plus a pass rush that forces the QB off his MOFO read before the seam window opens.
+
+    [SEQUENCING & GAME-PLAN LOGIC]
+    - Sets Up: kelly-mesh-spacing-concept
+    - Plays Off: kelly-zone-read-rb-draw
+    - Visual Tell Cue: All four receivers release vertically off the snap with sideline takes and zero intermediate cuts — the QB’s eyes lock on the MOFO window before anyone breaks.
+
+    [TIMELINE COACHING BEATS]
+      * [T=0.3s] 1. The Pre-Snap MOFO Read: Kelly's QB confirms both safeties are split before the snap — the middle of the field is mathematically open. Four verticals is the only call needed: the picture alone dictates where the ball will go.
+      * [T=1.0s] 2. Sideline Takes Pin the Quarters: X and Z win their press releases and stack the corners up the sidelines. In true quarters both corners must carry their verticals, which means zero help can rotate toward the seams.
+      * [T=1.8s] 3. Attacking the Middle-Third Leverage: The safety’s eyes bounce between two mirrored seams he can’t defend simultaneously. H stems to the inside shade — the one leverage a two-high shell structurally cannot give a single defender.
+      * [T=2.6s] 4. Takeover Complete: The QB delivers off his hitch before the safeties can squeeze, and the catch lands in the MOFO void at 15+ yards. Tempo makes it worse: the next snap comes so fast the shell has no time to adjust its rotation rules.
 
 --------------------------------------------------------------------------------
 SCHEME FAMILY: ROBERT SALEH'S 4-3 WIDE-9 & COVER 3 MATCH [ID: saleh-43-wide9]
@@ -2256,6 +2817,13 @@ Category: OFFENSE
 System Summary: A pillar of modern offensive innovation. Blends classic West Coast rhythm and pass spacing with modern college Spread RPOs, empty/bunch formations, Mesh shallow crosses, jet shovel screens, and 13-personnel tight-end power mismatches.
 
 --------------------------------------------------------------------------------
+COACHING TREE: POWER GAP & DUO / QB RUN-GAME TREE [ID: power-gap-duo]
+--------------------------------------------------------------------------------
+Patriarch: John Harbaugh → Greg Roman
+Category: OFFENSE
+System Summary: The downhill gap-scheme lineage: power, duo, counter, and pin-and-pull runs married to genuine quarterback run threat. Built on heavy personnel, play-action off identical run pictures, and forcing light boxes into unblockable run-pass conflicts.
+
+--------------------------------------------------------------------------------
 COACHING TREE: PETE CARROLL / ROBERT SALEH WIDE-9 & MATCH TREE [ID: carroll-saleh-wide9]
 --------------------------------------------------------------------------------
 Patriarch: Pete Carroll → Robert Saleh
@@ -2377,7 +2945,7 @@ COACH PROFILES (20 ARCHITECTS)
     Category: OFFENSE
     Tree Branch: shanahan-kubiak
     Mentor: mike-shanahan
-    Disciples: matt-lafleur, kevin-stefanski
+    Disciples: matt-lafleur, kevin-stefanski, kevin-oconnell, liam-coen
     Key Schemes: mcvay-duo-playaction
     Philosophy: Marrying condensed 11 and 13 personnel groupings with Duo and Mid-Zone runs, feeding boundary crossers, Sail concepts, and illusionary play-action reads off condensed bunch sets.
     Key Concepts: 13 Personnel Heavy Spread, Mid-Zone & Duo, Sail Concept, Choice Routes
@@ -2437,7 +3005,7 @@ COACH PROFILES (20 ARCHITECTS)
     Category: OFFENSE
     Tree Branch: reid-west-coast
     Mentor: bill-walsh
-    Disciples: john-harbaugh, shane-steichen, nick-sirianni
+    Disciples: john-harbaugh, shane-steichen, nick-sirianni, sean-payton, chip-kelly
     Key Schemes: reid-spread-rpo
     Philosophy: Master of spacing, motion, and vertical stretch. Melds traditional West Coast timing with Spread-RPO concepts, Mesh shallow crosses, and tight-end Iso matchups.
     Key Concepts: Mesh Shallow Cross, Sprintout Hi-Lo, Shovel Pass Screen, 3x1 Iso Backside Choice
@@ -2610,4 +3178,64 @@ COACH PROFILES (20 ARCHITECTS)
     Philosophy: Pressure through deception: disguise base coverages as exotic blitzes, then shift post-snap into drop-8 Tampa 2 lurk patterns or unleash delayed cross blitzes from unexpected angles. Bowles makes offenses prepare for 10 different looks and then shows them an 11th.
     Key Concepts: Dual A-Gap Cross Blitz, Overload Boundary Fire, Drop-8 Tampa 2 Lurk, Peel Zone Sim Pressure
     Notable Achievements: Super Bowl LV Champion DC | Tampa Bay Buccaneers HC
+
+>>> COACH: Sean Payton [ID: sean-payton]
+    Role (2026): Head Coach, Denver Broncos
+    Team / Institution: Denver Broncos
+    Category: OFFENSE
+    Tree Branch: reid-west-coast
+    Mentor: bill-parcells
+    Disciples: None
+    Key Schemes: payton-quick-game-screens
+    Philosophy: The fastest pre-snap to post-snap pitch clock in football: quick-game rhythm throws (slant/flat, speed out), packaged with tunnel and fast screens, jet sweep run action, and lethal play-action shot plays that punish defenses for creeping up on the quick game.
+    Key Concepts: Quick Game Rhythm (Slant-Flat), Fast/Tunnel Screen Convoy, Jet Sweep Run Action, PA Deep Shot off Screen
+    Notable Achievements: Super Bowl XLIV Champion HC | Highest Quick-Game Usage Rate of His Era
+
+>>> COACH: Greg Roman [ID: greg-roman]
+    Role (2026): Offensive Coordinator, Los Angeles Chargers
+    Team / Institution: Los Angeles Chargers
+    Category: OFFENSE
+    Tree Branch: power-gap-duo
+    Mentor: john-harbaugh
+    Disciples: None
+    Key Schemes: roman-power-read
+    Philosophy: Downhill gap-scheme football weaponized through quarterback run threat: power-read pulls, QB power/counter runs from heavy personnel, pin-and-pull leverage, and massive play-action shots built entirely off the run-game picture.
+    Key Concepts: Power Read Pull, QB Power / Counter Run, Pin & Pull Leverage, Heavy Personnel PA Shot
+    Notable Achievements: Architect of Lamar Jackson MVP Run Offense (Ravens) | NCAA-record Option Offenses at Stanford/Nevada
+
+>>> COACH: Kevin O'Connell [ID: kevin-oconnell]
+    Role (2026): Head Coach, Minnesota Vikings
+    Team / Institution: Minnesota Vikings
+    Category: OFFENSE
+    Tree Branch: shanahan-kubiak
+    Mentor: sean-mcvay
+    Disciples: None
+    Key Schemes: oconnell-boot-dagger
+    Philosophy: A play-action passing machine: wide-zone and Duo fakes feeding bootleg flood rollouts, Dagger (seam/curl-flat) intermediate shots, and condensed formations that force light boxes into unblockable run-pass conflicts.
+    Key Concepts: Wide-Zone Boot Flood, Dagger Seam/Curl-Flat, Play-Action Rate Leadership, Condensed Light-Box Attacks
+    Notable Achievements: Top-3 Play-Action Offense (Vikings) | Super Bowl LVI OC (Rams)
+
+>>> COACH: Liam Coen [ID: liam-coen]
+    Role (2026): Head Coach, Jacksonville Jaguars
+    Team / Institution: Jacksonville Jaguars
+    Category: OFFENSE
+    Tree Branch: shanahan-kubiak
+    Mentor: sean-mcvay
+    Disciples: None
+    Key Schemes: coen-wide-zone-rpo
+    Philosophy: The modern evolution of the Shanahan-McVay tree: wide-zone runs packaged directly with RPOs (glance, bubble, slant-flat), heavy pre-snap motion declaring defensive fits, and space attacks that turn every zone-stretch call into a triple-option math problem for the defense.
+    Key Concepts: Wide-Zone + Glance RPO Package, Bubble-Slant Flat Triangle, Motion-to-Fit Declaration, Perimeter Crack-Toss
+    Notable Achievements: Top-5 Total Offense with Buccaneers (2024) | Rams & Kentucky Offensive Architect
+
+>>> COACH: Chip Kelly [ID: chip-kelly]
+    Role (2026): Offensive Coordinator, Las Vegas Raiders
+    Team / Institution: Las Vegas Raiders
+    Category: OFFENSE
+    Tree Branch: reid-west-coast
+    Mentor: jack-elway
+    Disciples: None
+    Key Schemes: kelly-tempo-spread
+    Philosophy: Tempo as a weapon: snap-rate stress, spread-option run game with RB-draw and zone-read elements, Air Raid mesh/spot spacing concepts, and vertical four-verts takes that force defenses to communicate at a pace they cannot sustain.
+    Key Concepts: Snap-Rate Tempo Stress, Mesh & Spot Spacing, Zone-Read / RB Draw Mix, Four-Verts Takeovers
+    Notable Achievements: Pioneered NFL Tempo Spread (Eagles 2013-2015) | Record-Setting Oregon Fast-Break Offense
 
