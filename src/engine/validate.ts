@@ -1,6 +1,17 @@
 import type { Play, PlayerTrack } from './types';
 
 /**
+ * Validates a coverage-variant defense (the output of buildCoverageDefense) by running
+ * the full single-play invariant sweep against a play whose defense has been swapped.
+ * Reuses every structural check so derived defense cannot silently violate the
+ * hand-authored data contract (count, ids, waypoint ordering, bounds, beat focus ids).
+ */
+export function validateCoverageDefense(play: Play, defense: PlayerTrack[]): string[] {
+  const variant: Play = { ...play, defense };
+  return validatePlay(variant);
+}
+
+/**
  * Validates a single Play object against the data model invariants.
  * Returns an array of human-readable problem / warning strings.
  * An empty array indicates a valid play.

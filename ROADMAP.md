@@ -369,6 +369,48 @@ Five new offensive scheme families authored via 5 parallel agents, each owning e
 - Whole-library validation now sweeps **100/100 plays**; test counts updated
   (`validate.test.ts`, `playpicker-playermarker.test.ts`) and public LLM assets regenerated.
 
+### Phase 9 — Coverage-Variant Switcher ✅ (Completed)
+
+The core extension beyond content: every offensive concept can be re-called against
+several defensive cover calls, exposing *why* it attacks one cover and not another.
+
+- **`src/engine/coverage.ts`** — pure, deterministic coverage engine. Exposes
+  `CoverageScheme` + `COVERAGE_SCHEMES` (Cover 0, Cover 1, Cover 2, Tampa 2, Cover 3,
+  Cover 4, Cover 6) and `buildCoverageVariant(play, schemeId)`: derives a fresh 11-player
+  defense from the offence's real alignment and route structure while leaving the offence,
+  beats, summary, duration and sequence untouched. The defence's front keeps its authored
+  rush path; the box re-schemes (blitz / spy / sink, including the Tampa 2 deep-Mike); the
+  secondary re-shells per coverage (man-press / man-free / 2-high / single-high / quarters /
+  split-field) and the corners and slot mirror the receivers they own.
+- **`src/components/CoverageSwitcher.tsx`** — ARIA-accessible coverage-call switcher wired
+  into the Film Room. The authored Cover 3 reality is the default; selecting any other call
+  swaps the derived defense. `supportsCoverageVariant` gates it to real secondary units.
+- **Derived invariant enforcement** — `validateCoverageDefense` reuses `validatePlay`.
+- **Verification** — the whole library sweep builds 1253 coverage variants across 179
+  offensive plays with 0 validation errors; the suite grew to 80 tests.
+
+### Phase 10 — Dual-Play Comparison Scrubber ✅ (Completed)
+
+The generalisation of the Sequence-Matrix disguise idea: scrub any two plays side by side on
+one synchronized timeline to study how a base concept and its constraint counterpart mirror
+each other across the disguise window.
+
+- **`src/components/PlayComparison.tsx`** — two independent play selectors (scheme family +
+  concept each, with a ⇄ swap), two `PlayCanvas` renders locked to a single `usePlayback`
+  clock, and one shared `Timeline`. The default Play B is the selected play's
+  `sequence.playsOff` constraint (the picture it borrows) so the disguise comparison is the
+  default, not a setup chore. New `compare` tab + `[5]` keyboard shortcut; the host App's
+  keyboard handler is guarded so the comparison view owns its own playback keys.
+- **Ghost overlay toggle** — a `Ghost Overlay` switch (on by default) renders the *other*
+  play over each canvas as a translucent slate ghost (full route paths + hollow player
+  tokens) at the same scrub time, so the disguise window reads visually. `PlayCanvas` gained
+  an optional `ghostPlay` prop; the comparison view passes each play the other as its ghost.
+- **`src/engine/beats.ts`** — `mergeBeats` / `mergeComparisonBeats`: merges two plays' key-beat
+  rails into one sorted, de-duplicated timeline so both sides' key moments appear on one
+  scrub cursor.
+- **Verification** — whole-library config unchanged; 3 new unit tests (merge/sort/dedupe)
+  bring the suite to 83 tests.
+
 ### Phase 8 — Expansion III: Historical NFL & Current College (45 Systems • 180 Plays) ✅ (Completed)
 
 Twenty new scheme families authored via parallel agents, researched against web sources for
@@ -422,7 +464,8 @@ historical accuracy. Each family owns one `src/data/schemes/<dir>/` directory (4
 ## 6. Future Expansion Horizons (v2+)
 
 - In-app interactive route & block path authoring canvas.
-- Coverage-variant switcher (e.g. toggling Cover 1 vs Cover 3 vs Cover 6 against the same offensive concept).
 - Real-time NextGenStats telemetry coordinate ingestion.
-- Play comparison timeline scrubbing with dual-cursor locking.
+- Coverage-variant switcher driven by authored breakdown copy (the current v1 derives the
+  defense from alignment/route geometry; a future pass adds per-coverage hand-authored
+  analysis of *why* the concept wins against that specific call).
 

@@ -3,12 +3,13 @@ import type { Play, PlayerTrack } from '../engine/types';
 import { Field } from './Field';
 import { PlayerMarker } from './PlayerMarker';
 import { Trail } from './Trail';
-import { positionAt } from '../engine/interpolate';
+import { positionAt, getFullTrackSvgPath } from '../engine/interpolate';
 import { activeBeatIndex, isFocused } from '../engine/beats';
 
 export interface PlayCanvasProps {
   play: Play;
   t: number;
+  ghostPlay?: Play;
 }
 
 /**
@@ -56,7 +57,49 @@ function getPlayerMovement(track: PlayerTrack, t: number, duration: number): { h
   };
 }
 
-export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
+/**
+ * A translucent, non-interactive overlay token for the comparison ghost: the other play
+ * rendered over this play at the same scrub time, showing where its routes and bodies sit.
+ */
+const GhostToken: React.FC<{ track: PlayerTrack; t: number }> = ({ track, t }) => {
+  const pos = positionAt(track, t);
+  const { pathD } = getFullTrackSvgPath(track);
+  const isOffense = track.side === 'offense';
+  return (
+    <g>
+      {track.trail !== 'none' && pathD && (
+        <path
+          d={pathD}
+          fill="none"
+          stroke="#94a3b8"
+          strokeWidth="0.18"
+          strokeDasharray="0.5 0.35"
+          opacity="0.26"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      )}
+      <g transform={`translate(${pos.x}, ${-pos.y})`} opacity="0.45">
+        {isOffense ? (
+          <circle r="0.7" fill="none" stroke="#cbd5e1" strokeWidth="0.16" />
+        ) : (
+          <rect
+            x="-0.62"
+            y="-0.62"
+            width="1.24"
+            height="1.24"
+            rx="0.26"
+            fill="none"
+            stroke="#94a3b8"
+            strokeWidth="0.16"
+          />
+        )}
+      </g>
+    </g>
+  );
+};
+
+export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t, ghostPlay }) => {
   const [showLegend, setShowLegend] = useState(false);
   const [showOverlaysMenu, setShowOverlaysMenu] = useState(false);
   const [showTrails, setShowTrails] = useState(true);
@@ -281,6 +324,18 @@ export const PlayCanvas: React.FC<PlayCanvasProps> = memo(({ play, t }) => {
       )}
 
       <Field losYard={40}>
+        {/* 0. Comparison Ghost Overlay (the other play, rendered beneath all live layers) */}
+        {ghostPlay && ghostPlay.id !== play.id && (
+          <g id="compare-ghost-layer" aria-hidden="true">
+            {ghostPlay.offense.map((track) => (
+              <GhostToken key={`ghost-o-${track.id}`} track={track} t={t} />
+            ))}
+            {ghostPlay.defense.map((track) => (
+              <GhostToken key={`ghost-d-${track.id}`} track={track} t={t} />
+            ))}
+          </g>
+        )}
+
         {/* 1. Tactical Conflict Read Vector (Dashed laser connection between QB and read defender) */}
         {showConflictVector && qbPos && (
           <g id="conflict-vectors-layer">

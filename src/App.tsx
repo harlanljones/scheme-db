@@ -1,10 +1,18 @@
 import React, { useState, useMemo, useEffect, useCallback, lazy, Suspense } from 'react';
 import { ALL_SCHEME_FAMILIES, ALL_PLAYS, getSchemeFamilyById } from './data/schemes/index';
 import { usePlayback } from './engine/playback';
+import {
+  COVERAGE_SCHEMES,
+  DEFAULT_COVERAGE_SCHEME,
+  supportsCoverageVariant,
+  buildCoverageVariant,
+  type CoverageSchemeId,
+} from './engine/coverage';
 import { PlayCanvas } from './components/PlayCanvas';
 import { Timeline } from './components/Timeline';
 import { AnalysisPanel } from './components/AnalysisPanel';
 import { PlayPicker } from './components/PlayPicker';
+import { CoverageSwitcher } from './components/CoverageSwitcher';
 import './App.css';
 
 // Lazy-loaded secondary views for optimized initial bundle & rapid first paint
@@ -16,6 +24,9 @@ const CoachingTreeGraph = lazy(() =>
 );
 const SequenceMap = lazy(() =>
   import('./components/SequenceMap').then((m) => ({ default: m.SequenceMap }))
+);
+const PlayComparison = lazy(() =>
+  import('./components/PlayComparison').then((m) => ({ default: m.PlayComparison }))
 );
 
 const ViewLoadingSkeleton: React.FC<{ label: string }> = ({ label }) => (
@@ -51,7 +62,7 @@ const ViewLoadingSkeleton: React.FC<{ label: string }> = ({ label }) => (
 );
 
 
-export type ActiveTab = 'visualizer' | 'directory' | 'trees' | 'sequence-map';
+export type ActiveTab = 'visualizer' | 'directory' | 'trees' | 'sequence-map' | 'compare';
 
 function parseInitialUrlState(): { tab: ActiveTab; familyId: string; playId: string } {
   if (typeof window === 'undefined') {
@@ -59,7 +70,7 @@ function parseInitialUrlState(): { tab: ActiveTab; familyId: string; playId: str
   }
   const params = new URLSearchParams(window.location.search);
   const tabParam = params.get('tab');
-  const validTabs: ActiveTab[] = ['visualizer', 'directory', 'trees', 'sequence-map'];
+  const validTabs: ActiveTab[] = ['visualizer', 'directory', 'trees', 'sequence-map', 'compare'];
   const tab: ActiveTab = validTabs.includes(tabParam as ActiveTab) ? (tabParam as ActiveTab) : 'visualizer';
 
   const playParam = params.get('play');
@@ -94,6 +105,7 @@ export const App: React.FC = () => {
   const [selectedPlayId, setSelectedPlayId] = useState<string>(initialUrlState.playId);
   const [activeTab, setActiveTab] = useState<ActiveTab>(initialUrlState.tab);
   const [isTheaterMode, setIsTheaterMode] = useState<boolean>(false);
+  const [coverageScheme, setCoverageScheme] = useState<CoverageSchemeId>(DEFAULT_COVERAGE_SCHEME);
   const [showGuideModal, setShowGuideModal] = useState<boolean>(false);
   const [showWelcomeBanner, setShowWelcomeBanner] = useState<boolean>(() => {
     return localStorage.getItem('nfl-scheme-welcome-dismissed') !== 'true';
@@ -128,12 +140,42 @@ export const App: React.FC = () => {
     );
   }, [currentFamily, selectedPlayId]);
 
+  // The default coverage pill maps back to the author's defensively-rendered play (the
+  // canonical "why it works" mesh). Any other selection re-calls the defense against the
+  // same concept via the coverage engine.
+  const renderPlay = useMemo(() => {
+    if (currentFamily.category !== 'offense' || !supportsCoverageVariant(selectedPlay)) {
+      return selectedPlay;
+    }
+    if (coverageScheme === DEFAULT_COVERAGE_SCHEME) {
+      return selectedPlay;
+    }
+    return buildCoverageVariant(selectedPlay, coverageScheme);
+  }, [currentFamily.category, selectedPlay, coverageScheme]);
+
+  const showCoverageSwitcher = useMemo(() => {
+    return currentFamily.category === 'offense' && supportsCoverageVariant(selectedPlay);
+  }, [currentFamily.category, selectedPlay]);
+
+  // Default comparison partner: prefer the constraint play this call mimics/borrows from,
+  // otherwise the next play in the same scheme.
+  const comparisonPlayB = useMemo(() => {
+    const constraintId = selectedPlay.sequence?.playsOff?.[0];
+    const constraint = constraintId ? ALL_PLAYS.find((p) => p.id === constraintId) : undefined;
+    if (constraint && constraint.id !== selectedPlay.id) {
+      return constraint;
+    }
+    const idx = currentFamily.plays.findIndex((p) => p.id === selectedPlay.id);
+    return currentFamily.plays[(idx + 1) % currentFamily.plays.length] ?? selectedPlay;
+  }, [selectedPlay, currentFamily.plays]);
+
   const playback = usePlayback(selectedPlay.duration);
 
   const handleSelectFamily = useCallback((familyId: string, targetView?: 'visualizer' | 'sequence-map') => {
     setSelectedFamilyId(familyId);
     const targetFamily = getSchemeFamilyById(familyId);
     setSelectedPlayId(targetFamily.plays[0].id);
+    setCoverageScheme(DEFAULT_COVERAGE_SCHEME);
     playback.reset();
     if (targetView) {
       setActiveTab(targetView);
@@ -142,12 +184,14 @@ export const App: React.FC = () => {
 
   const handleSelectPlay = useCallback((id: string) => {
     setSelectedPlayId(id);
+    setCoverageScheme(DEFAULT_COVERAGE_SCHEME);
     playback.reset();
   }, [playback]);
 
   const handleSelectPlayFromDirectory = useCallback((familyId: string, playId: string) => {
     setSelectedFamilyId(familyId);
     setSelectedPlayId(playId);
+    setCoverageScheme(DEFAULT_COVERAGE_SCHEME);
     playback.reset();
     setActiveTab('visualizer');
   }, [playback]);
@@ -167,6 +211,28 @@ export const App: React.FC = () => {
     (e: KeyboardEvent) => {
       // Don't trigger if user is typing in an input
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes((e.target as HTMLElement)?.tagName)) {
+        return;
+      }
+
+      // The comparison view owns its own playback (its Timeline handles play/pause/step keys),
+      // so only keep the view-level keys (Escape, tab digits, guide) from firing here.
+      if (activeTab === 'compare') {
+        if (e.key === 'Escape' && showGuideModal) {
+          e.preventDefault();
+          setShowGuideModal(false);
+        } else if (e.key === '1') {
+          setActiveTab('visualizer');
+        } else if (e.key === '2') {
+          setActiveTab('directory');
+        } else if (e.key === '3') {
+          setActiveTab('trees');
+        } else if (e.key === '4') {
+          setActiveTab('sequence-map');
+        } else if (e.key === '5') {
+          setActiveTab('compare');
+        } else if (e.key === '?') {
+          setShowGuideModal((prev) => !prev);
+        }
         return;
       }
 
@@ -246,11 +312,13 @@ export const App: React.FC = () => {
         setActiveTab('trees');
       } else if (e.key === '4') {
         setActiveTab('sequence-map');
+      } else if (e.key === '5') {
+        setActiveTab('compare');
       } else if (e.key === '?') {
         setShowGuideModal((prev) => !prev);
       }
     },
-    [playback, selectedPlay.duration, selectedPlay.beats, currentFamily, selectedPlayId, selectedFamilyId, showGuideModal, handleSeekBeat, handleSelectPlay, handleSelectFamily]
+    [playback, selectedPlay.duration, selectedPlay.beats, currentFamily, selectedPlayId, selectedFamilyId, activeTab, showGuideModal, handleSeekBeat, handleSelectPlay, handleSelectFamily]
   );
 
   useEffect(() => {
@@ -353,6 +421,23 @@ export const App: React.FC = () => {
               </svg>
               <span className="nav-tab-label">Sequence Matrix</span>
             </button>
+
+            <button
+              id="tab-compare"
+              role="tab"
+              aria-selected={activeTab === 'compare'}
+              aria-controls="main-view-panel"
+              onClick={() => setActiveTab('compare')}
+              className={`nav-tab-btn ${activeTab === 'compare' ? 'active' : ''}`}
+              title="Play Comparison [5]"
+            >
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="7 8 3 12 7 16" />
+                <polyline points="17 8 21 12 17 16" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+              </svg>
+              <span className="nav-tab-label">Play Comparison</span>
+            </button>
           </nav>
 
           <button
@@ -446,8 +531,16 @@ export const App: React.FC = () => {
             <div className={`film-room-grid ${isTheaterMode ? 'theater-mode' : ''}`}>
               {/* Left Column: Canvas + Playback Timeline */}
               <section className="canvas-panel" aria-label="Field Playback and Timeline Deck">
+                {showCoverageSwitcher && (
+                  <CoverageSwitcher
+                    schemes={COVERAGE_SCHEMES}
+                    activeSchemeId={coverageScheme}
+                    onSelect={setCoverageScheme}
+                  />
+                )}
+
                 <div className="canvas-viewport-wrapper">
-                  <PlayCanvas play={selectedPlay} t={playback.t} />
+                  <PlayCanvas play={renderPlay} t={playback.t} />
                 </div>
 
                 <Timeline
@@ -472,7 +565,7 @@ export const App: React.FC = () => {
                 aria-hidden={isTheaterMode}
               >
                 <AnalysisPanel
-                  play={selectedPlay}
+                  play={renderPlay}
                   t={playback.t}
                   onSeekBeat={handleSeekBeat}
                 />
@@ -512,6 +605,18 @@ export const App: React.FC = () => {
                   handleSelectPlay(id);
                   setActiveTab('visualizer');
                 }}
+              />
+            </Suspense>
+          </div>
+        )}
+
+        {activeTab === 'compare' && (
+          <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', width: '100%' }}>
+            <Suspense fallback={<ViewLoadingSkeleton label="Dual-Play Comparison Scrubber" />}>
+              <PlayComparison
+                initialPlayA={selectedPlay}
+                initialPlayB={comparisonPlayB}
+                allFamilies={ALL_SCHEME_FAMILIES}
               />
             </Suspense>
           </div>
@@ -560,6 +665,9 @@ export const App: React.FC = () => {
                   <li>
                     <strong>Sequence Matrix:</strong> Compare the 0.0s–1.2s disguise mesh window to see why complementary plays mirror each other.
                   </li>
+                  <li>
+                    <strong>Play Comparison:</strong> Scrub any two plays side-by-side on one synchronized timeline to study how a base concept and its constraint counterpart mirror each other across the disguise window.
+                  </li>
                 </ul>
               </div>
 
@@ -573,7 +681,7 @@ export const App: React.FC = () => {
                   <div className="shortcut-item"><kbd>Shift+[</kbd> / <kbd>Shift+]</kbd> <span>Prev / Next Scheme System</span></div>
                   <div className="shortcut-item"><kbd>R</kbd> <span>Reset to Snap (T=0.0s)</span></div>
                   <div className="shortcut-item"><kbd>T</kbd> / <kbd>F</kbd> <span>Full-Field Theater Mode</span></div>
-                  <div className="shortcut-item"><kbd>1</kbd>–<kbd>4</kbd> <span>Switch Workspace Views</span></div>
+                  <div className="shortcut-item"><kbd>1</kbd>–<kbd>5</kbd> <span>Switch Workspace Views</span></div>
                   <div className="shortcut-item"><kbd>?</kbd> <span>Toggle This Guide</span></div>
                 </div>
               </div>
