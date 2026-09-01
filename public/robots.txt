@@ -1,4 +1,4 @@
-# robots.txt for SchemeDB (https://schemedb.com)
+# robots.txt for SchemeDB (https://schemedb.harlanljones.com)
 # Standard August 2026 AI / LLM / Search Crawler Configuration
 
 # -----------------------------------------------------------------------------
@@ -91,6 +91,6 @@ Allow: /
 # -----------------------------------------------------------------------------
 # Machine-Readable LLM Knowledge Base & Sitemap
 # -----------------------------------------------------------------------------
-# LLM Context Index: https://schemedb.com/llms.txt
-# Full LLM Knowledge Base: https://schemedb.com/llms-full.txt
-Sitemap: https://schemedb.com/sitemap.xml
+# LLM Context Index: https://schemedb.harlanljones.com/llms.txt
+# Full LLM Knowledge Base: https://schemedb.harlanljones.com/llms-full.txt
+Sitemap: https://schemedb.harlanljones.com/sitemap.xml

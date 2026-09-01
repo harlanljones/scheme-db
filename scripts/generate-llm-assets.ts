@@ -7,7 +7,7 @@ import { COACH_PROFILES, COACHING_TREES } from '../src/data/coaches/index';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://schemedb.com';
+const BASE_URL = 'https://schemedb.harlanljones.com';
 const PUBLIC_DIR = path.resolve(__dirname, '../public');
 
 if (!fs.existsSync(PUBLIC_DIR)) {

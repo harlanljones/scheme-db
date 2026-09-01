@@ -2,1402 +2,1402 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Views -->
   <url>
-    <loc>https://schemedb.com/</loc>
+    <loc>https://schemedb.harlanljones.com/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?tab=visualizer</loc>
+    <loc>https://schemedb.harlanljones.com/?tab=visualizer</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?tab=directory</loc>
+    <loc>https://schemedb.harlanljones.com/?tab=directory</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?tab=trees</loc>
+    <loc>https://schemedb.harlanljones.com/?tab=trees</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?tab=sequence-map</loc>
+    <loc>https://schemedb.harlanljones.com/?tab=sequence-map</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Machine-Readable LLM Discovery Files -->
   <url>
-    <loc>https://schemedb.com/llms.txt</loc>
+    <loc>https://schemedb.harlanljones.com/llms.txt</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/llms-full.txt</loc>
+    <loc>https://schemedb.harlanljones.com/llms-full.txt</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/robots.txt</loc>
+    <loc>https://schemedb.harlanljones.com/robots.txt</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <!-- Scheme Family URLs -->
   <url>
-    <loc>https://schemedb.com/?scheme=shanahan-wide-zone</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=shanahan-wide-zone</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=kubiak-split-zone</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=kubiak-split-zone</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=reid-spread-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=reid-spread-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcvay-duo-playaction</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcdaniel-cheat-motion</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=stefanski-multi-te-gap</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=steichen-qb-mesh-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lafleur-illusion-packers</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=sirianni-power-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=johnson-counter-deception</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=johnson-counter-deception</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=payton-quick-game-screens</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=roman-power-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=roman-power-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=oconnell-boot-dagger</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coen-wide-zone-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=kelly-tempo-spread</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=saleh-43-wide9</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=saleh-43-wide9</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=macdonald-hybrid-disguise</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-flores-psycho</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=fangio-two-high-shell</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=minter-amoeba-creeper</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=ryans-wide9-attack</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=shula-match-quarters</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=shula-match-quarters</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=spagnuolo-exotic-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=quinn-cover3-press</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=quinn-cover3-press</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=bowles-creeper-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coryell-vertical</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coryell-vertical</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=walsh-classic-wco</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=walsh-classic-wco</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=run-and-shoot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=run-and-shoot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=flexbone-triple-option</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=flexbone-triple-option</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=air-raid</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=air-raid</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=delaware-wing-t</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=delaware-wing-t</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=t-formation-power-sweep</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=pistol-read-option</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=pistol-read-option</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=baylor-choice</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=baylor-choice</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=meyer-spread-option</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=meyer-spread-option</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=buddy-46-defense</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=buddy-46-defense</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lebeau-fire-zone</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=tampa-2</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=tampa-2</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=landry-flex</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=landry-flex</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=phillips-two-gap-34</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=jj-speed-43</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=jj-speed-43</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-okie-bear</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-okie-bear</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=aranda-tite-peso</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=aranda-tite-peso</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=rlong-335-stack</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=rlong-335-stack</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=cover2-man-under</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=cover2-man-under</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <!-- Individual Play URLs -->
   <url>
-    <loc>https://schemedb.com/?scheme=wide-zone&amp;play=outside-zone</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=wide-zone&amp;play=outside-zone</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=wide-zone&amp;play=play-action-over</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=wide-zone&amp;play=play-action-over</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=wide-zone&amp;play=naked-bootleg</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=wide-zone&amp;play=naked-bootleg</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=wide-zone&amp;play=jet-motion-oz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=wide-zone&amp;play=jet-motion-oz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=split-zone-leak&amp;play=split-zone-slice</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=split-zone-leak&amp;play=split-zone-slice</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=split-zone-leak&amp;play=pa-dagger-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=split-zone-leak&amp;play=pa-dagger-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=split-zone-leak&amp;play=boot-throwback-leak</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=split-zone-leak&amp;play=boot-throwback-leak</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=split-zone-leak&amp;play=orbit-motion-toss</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=split-zone-leak&amp;play=orbit-motion-toss</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=reid-spread-rpo&amp;play=mesh-shallow-cross</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&amp;play=mesh-shallow-cross</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=reid-spread-rpo&amp;play=rpo-glance-post</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&amp;play=rpo-glance-post</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=reid-spread-rpo&amp;play=power-shovel-option</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&amp;play=power-shovel-option</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=reid-spread-rpo&amp;play=sprintout-smash-wheel</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&amp;play=sprintout-smash-wheel</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-duo-lead-run</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-duo-lead-run</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-pa-sail-flood</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-pa-sail-flood</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-pa-deep-crosser</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-pa-deep-crosser</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-glance-rpo-orbit</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&amp;play=mcvay-glance-rpo-orbit</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-cheat-motion-toss</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-cheat-motion-toss</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-cheat-motion-wheel</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-cheat-motion-wheel</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-inside-zone-wham</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-inside-zone-wham</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-pistol-option-pitch</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&amp;play=mcdaniel-pistol-option-pitch</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-pin-pull-sweep</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-pin-pull-sweep</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-pa-seam-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-pa-seam-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-naked-boot-slide</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-naked-boot-slide</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-counter-gap-lead</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&amp;play=stefanski-counter-gap-lead</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-qb-power-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-qb-power-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-mesh-rail-wheel</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-mesh-rail-wheel</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-zone-bubble-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-zone-bubble-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-verticals-switch</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&amp;play=steichen-verticals-switch</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-wide-zone-cutback</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-wide-zone-cutback</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-cross-country-post</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-cross-country-post</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-pony-screen-wheel</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-pony-screen-wheel</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-pa-dagger-dig</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&amp;play=lafleur-pa-dagger-dig</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=sirianni-power-rpo&amp;play=sirianni-power-duo-inside</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&amp;play=sirianni-power-duo-inside</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=sirianni-power-rpo&amp;play=sirianni-rpo-glance-iso</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&amp;play=sirianni-rpo-glance-iso</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=sirianni-power-rpo&amp;play=sirianni-slot-fade-out</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&amp;play=sirianni-slot-fade-out</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=sirianni-power-rpo&amp;play=sirianni-qb-sneak-push</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&amp;play=sirianni-qb-sneak-push</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=johnson-counter-deception&amp;play=johnson-counter-trey-lead</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&amp;play=johnson-counter-trey-lead</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=johnson-counter-deception&amp;play=johnson-pa-te-throwback</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&amp;play=johnson-pa-te-throwback</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=johnson-counter-deception&amp;play=johnson-hook-ladder-mesh</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&amp;play=johnson-hook-ladder-mesh</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=johnson-counter-deception&amp;play=johnson-orbit-reverse-screen</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&amp;play=johnson-orbit-reverse-screen</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=payton-quick-game-screens&amp;play=payton-slant-flat-rhythm</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&amp;play=payton-slant-flat-rhythm</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=payton-quick-game-screens&amp;play=payton-fast-screen-convoy</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&amp;play=payton-fast-screen-convoy</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=payton-quick-game-screens&amp;play=payton-tunnel-shovel-package</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&amp;play=payton-tunnel-shovel-package</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=payton-quick-game-screens&amp;play=payton-jet-sweep-pa-post</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&amp;play=payton-jet-sweep-pa-post</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=roman-power-read&amp;play=roman-power-read-pull</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=roman-power-read&amp;play=roman-power-read-pull</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=roman-power-read&amp;play=roman-qb-power-run</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=roman-power-read&amp;play=roman-qb-power-run</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=roman-power-read&amp;play=roman-pin-pull-leverage</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=roman-power-read&amp;play=roman-pin-pull-leverage</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=roman-power-read&amp;play=roman-pa-post-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=roman-power-read&amp;play=roman-pa-post-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-wide-zone-stretch-base</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-wide-zone-stretch-base</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-boot-flood-rollout</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-boot-flood-rollout</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-pa-dagger-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-pa-dagger-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-duo-pa-crosser</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&amp;play=oconnell-duo-pa-crosser</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coen-wide-zone-rpo&amp;play=coen-wide-zone-glance-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&amp;play=coen-wide-zone-glance-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coen-wide-zone-rpo&amp;play=coen-bubble-triangle-rpo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&amp;play=coen-bubble-triangle-rpo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coen-wide-zone-rpo&amp;play=coen-crack-toss-perimeter</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&amp;play=coen-crack-toss-perimeter</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coen-wide-zone-rpo&amp;play=coen-motion-zone-cutback</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&amp;play=coen-motion-zone-cutback</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=kelly-tempo-spread&amp;play=kelly-mesh-spacing-concept</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&amp;play=kelly-mesh-spacing-concept</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=kelly-tempo-spread&amp;play=kelly-spot-tempo-stress</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&amp;play=kelly-spot-tempo-stress</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=kelly-tempo-spread&amp;play=kelly-zone-read-rb-draw</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&amp;play=kelly-zone-read-rb-draw</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=kelly-tempo-spread&amp;play=kelly-four-verts-takeover</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&amp;play=kelly-four-verts-takeover</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=saleh-43-wide9&amp;play=saleh-cover3-match</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&amp;play=saleh-cover3-match</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=saleh-43-wide9&amp;play=saleh-cover6-bracket</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&amp;play=saleh-cover6-bracket</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=saleh-43-wide9&amp;play=saleh-cross-dog-fire3</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&amp;play=saleh-cross-dog-fire3</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=saleh-43-wide9&amp;play=saleh-nascar-cover1-robber</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&amp;play=saleh-nascar-cover1-robber</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-double-mug-buzz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-double-mug-buzz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-creeper-overload</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-creeper-overload</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-split-field-trap</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-split-field-trap</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-amoeba-cover0-peel</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&amp;play=macdonald-amoeba-cover0-peel</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-flores-psycho&amp;play=cover0-all-out-house</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&amp;play=cover0-all-out-house</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-flores-psycho&amp;play=drop8-psycho-lurk</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&amp;play=drop8-psycho-lurk</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-flores-psycho&amp;play=cross-dog-fire-hot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&amp;play=cross-dog-fire-hot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-flores-psycho&amp;play=bracket-doubles-star</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&amp;play=bracket-doubles-star</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=fangio-two-high-shell&amp;play=cover6-quarter-quarter-half</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&amp;play=cover6-quarter-quarter-half</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=fangio-two-high-shell&amp;play=penny-match-quarters</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&amp;play=penny-match-quarters</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=fangio-two-high-shell&amp;play=tite-creeper-drop8</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&amp;play=tite-creeper-drop8</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=fangio-two-high-shell&amp;play=cover8-boundary-trap</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&amp;play=cover8-boundary-trap</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=minter-amoeba-creeper&amp;play=minter-amoeba-fire-zone3</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&amp;play=minter-amoeba-fire-zone3</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=minter-amoeba-creeper&amp;play=minter-slot-blitz-creeper</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&amp;play=minter-slot-blitz-creeper</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=minter-amoeba-creeper&amp;play=minter-cover1-robber-lurk</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&amp;play=minter-cover1-robber-lurk</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=minter-amoeba-creeper&amp;play=minter-double-mug-peel</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&amp;play=minter-double-mug-peel</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=ryans-wide9-attack&amp;play=ryans-wide9-under-tackle-wrap</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&amp;play=ryans-wide9-under-tackle-wrap</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=ryans-wide9-attack&amp;play=ryans-cover2-palms-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&amp;play=ryans-cover2-palms-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=ryans-wide9-attack&amp;play=ryans-cover1-hole-mug</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&amp;play=ryans-cover1-hole-mug</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=ryans-wide9-attack&amp;play=ryans-overload-edge-fire</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&amp;play=ryans-overload-edge-fire</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=shula-match-quarters&amp;play=shula-tite-b-gap-pinch</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=shula-match-quarters&amp;play=shula-tite-b-gap-pinch</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=shula-match-quarters&amp;play=shula-penny-bracket-bunch</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=shula-match-quarters&amp;play=shula-penny-bracket-bunch</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=shula-match-quarters&amp;play=shula-cover8-field-quarter</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=shula-match-quarters&amp;play=shula-cover8-field-quarter</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=shula-match-quarters&amp;play=shula-boundary-creeper-drop7</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=shula-match-quarters&amp;play=shula-boundary-creeper-drop7</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-corndog-corner-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-corndog-corner-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-cross-creeper-drop</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-cross-creeper-drop</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-cover0-max-heat</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-cover0-max-heat</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-split-safety-invert2</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&amp;play=spagnuolo-split-safety-invert2</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=quinn-cover3-press&amp;play=quinn-cover3-press-bail</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&amp;play=quinn-cover3-press-bail</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=quinn-cover3-press&amp;play=quinn-under-front-overload</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&amp;play=quinn-under-front-overload</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=quinn-cover3-press&amp;play=quinn-cover1-rat-in-hole</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&amp;play=quinn-cover1-rat-in-hole</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=quinn-cover3-press&amp;play=quinn-safety-sky-fire-zone</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&amp;play=quinn-safety-sky-fire-zone</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=bowles-creeper-blitz&amp;play=bowles-dual-a-gap-cross-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&amp;play=bowles-dual-a-gap-cross-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=bowles-creeper-blitz&amp;play=bowles-overload-boundary-fire</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&amp;play=bowles-overload-boundary-fire</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=bowles-creeper-blitz&amp;play=bowles-drop8-tampa2-lurk</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&amp;play=bowles-drop8-tampa2-lurk</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=bowles-creeper-blitz&amp;play=bowles-peel-zone-sim-pressure</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&amp;play=bowles-peel-zone-sim-pressure</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coryell-vertical&amp;play=coryell-seam-post-double-stroke</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coryell-vertical&amp;play=coryell-seam-post-double-stroke</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coryell-vertical&amp;play=coryell-deep-out-comeback</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coryell-vertical&amp;play=coryell-deep-out-comeback</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coryell-vertical&amp;play=coryell-cross-country-drag</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coryell-vertical&amp;play=coryell-cross-country-drag</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=coryell-vertical&amp;play=coryell-z-snap-move-screen</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=coryell-vertical&amp;play=coryell-z-snap-move-screen</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=walsh-classic-wco&amp;play=walsh-slant-flat-combo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&amp;play=walsh-slant-flat-combo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=walsh-classic-wco&amp;play=walsh-sprint-right-option</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&amp;play=walsh-sprint-right-option</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=walsh-classic-wco&amp;play=walsh-curl-flat-flood</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&amp;play=walsh-curl-flat-flood</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=walsh-classic-wco&amp;play=walsh-play-action-deep-cross</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&amp;play=walsh-play-action-deep-cross</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=run-and-shoot&amp;play=rns-switch-verticals</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=run-and-shoot&amp;play=rns-switch-verticals</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=run-and-shoot&amp;play=rns-mesh-read-route</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=run-and-shoot&amp;play=rns-mesh-read-route</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=run-and-shoot&amp;play=rns-post-wheel-leverage-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=run-and-shoot&amp;play=rns-post-wheel-leverage-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=run-and-shoot&amp;play=rns-go-route-stab</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=run-and-shoot&amp;play=rns-go-route-stab</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=flexbone-triple-option&amp;play=flexbone-midline-triple</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&amp;play=flexbone-midline-triple</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=flexbone-triple-option&amp;play=flexbone-rocket-toss-pitch</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&amp;play=flexbone-rocket-toss-pitch</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=flexbone-triple-option&amp;play=flexbone-inside-veer-triple</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&amp;play=flexbone-inside-veer-triple</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=flexbone-triple-option&amp;play=flexbone-midline-play-action-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&amp;play=flexbone-midline-play-action-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=air-raid&amp;play=airraid-mesh-concept</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=air-raid&amp;play=airraid-mesh-concept</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=air-raid&amp;play=airraid-y-cross</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=air-raid&amp;play=airraid-y-cross</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=air-raid&amp;play=airraid-stick-naked-constraint</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=air-raid&amp;play=airraid-stick-naked-constraint</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=air-raid&amp;play=airraid-shallow-distribution-drive</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=air-raid&amp;play=airraid-shallow-distribution-drive</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=delaware-wing-t&amp;play=wingt-buck-sweep-guard-pull</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=delaware-wing-t&amp;play=wingt-buck-sweep-guard-pull</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=delaware-wing-t&amp;play=wingt-waggle-flood</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=delaware-wing-t&amp;play=wingt-waggle-flood</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=delaware-wing-t&amp;play=wingt-counter-crisscross</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=delaware-wing-t&amp;play=wingt-counter-crisscross</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=delaware-wing-t&amp;play=wingt-wingback-trap-gut</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=delaware-wing-t&amp;play=wingt-wingback-trap-gut</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=t-formation-power-sweep&amp;play=sweep-power-sweep-left</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&amp;play=sweep-power-sweep-left</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=t-formation-power-sweep&amp;play=sweep-power-sweep-right-boot-fake</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&amp;play=sweep-power-sweep-right-boot-fake</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=t-formation-power-sweep&amp;play=sweep-fullback-blast</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&amp;play=sweep-fullback-blast</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=t-formation-power-sweep&amp;play=sweep-sweep-pass-bootleg</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&amp;play=sweep-sweep-pass-bootleg</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=pistol-read-option&amp;play=pistol-inside-zone-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=pistol-read-option&amp;play=pistol-inside-zone-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=pistol-read-option&amp;play=pistol-power-o-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=pistol-read-option&amp;play=pistol-power-o-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=pistol-read-option&amp;play=pistol-pa-deep-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=pistol-read-option&amp;play=pistol-pa-deep-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=pistol-read-option&amp;play=pistol-speed-option</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=pistol-read-option&amp;play=pistol-speed-option</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=baylor-choice&amp;play=baylor-slot-choice-shot</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=baylor-choice&amp;play=baylor-slot-choice-shot</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=baylor-choice&amp;play=baylor-iz-read-choice-double-post</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=baylor-choice&amp;play=baylor-iz-read-choice-double-post</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=baylor-choice&amp;play=baylor-bubble-go-glance</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=baylor-choice&amp;play=baylor-bubble-go-glance</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=baylor-choice&amp;play=baylor-speed-sweep-constraint</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=baylor-choice&amp;play=baylor-speed-sweep-constraint</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=meyer-spread-option&amp;play=meyer-inside-zone-read-give</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=meyer-spread-option&amp;play=meyer-inside-zone-read-give</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=meyer-spread-option&amp;play=meyer-inverted-veer-power-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=meyer-spread-option&amp;play=meyer-inverted-veer-power-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=meyer-spread-option&amp;play=meyer-snag-triangle-spacing</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=meyer-spread-option&amp;play=meyer-snag-triangle-spacing</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=meyer-spread-option&amp;play=meyer-speed-option-reverse</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=meyer-spread-option&amp;play=meyer-speed-option-reverse</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=buddy-46-defense&amp;play=b46-base-i-form</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=buddy-46-defense&amp;play=b46-base-i-form</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=buddy-46-defense&amp;play=b46-mad-dog-double-a</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=buddy-46-defense&amp;play=b46-mad-dog-double-a</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=buddy-46-defense&amp;play=b46-ext-strong-combo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=buddy-46-defense&amp;play=b46-ext-strong-combo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=buddy-46-defense&amp;play=b46-free-blade-weak-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=buddy-46-defense&amp;play=b46-free-blade-weak-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lebeau-fire-zone&amp;play=fz-triple-inside-fire</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&amp;play=fz-triple-inside-fire</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lebeau-fire-zone&amp;play=fz-safety-rotate-fire</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&amp;play=fz-safety-rotate-fire</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lebeau-fire-zone&amp;play=fz-nose-drop-nasco</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&amp;play=fz-nose-drop-nasco</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=lebeau-fire-zone&amp;play=fz-safety-blitz-smoke</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&amp;play=fz-safety-blitz-smoke</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=tampa-2&amp;play=t2-base-vs-2x2</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=tampa-2&amp;play=t2-base-vs-2x2</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=tampa-2&amp;play=t2-slb-edge-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=tampa-2&amp;play=t2-slb-edge-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=tampa-2&amp;play=t2-roll-cover3-trips</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=tampa-2&amp;play=t2-roll-cover3-trips</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=tampa-2&amp;play=t2-cloud-boundary</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=tampa-2&amp;play=t2-cloud-boundary</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=landry-flex&amp;play=flex-weak-tackle-power-sweep</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=landry-flex&amp;play=flex-weak-tackle-power-sweep</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=landry-flex&amp;play=flex-tackle-tackle-two-back</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=landry-flex&amp;play=flex-tackle-tackle-two-back</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=landry-flex&amp;play=flex-lb-strength-shift-motion</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=landry-flex&amp;play=flex-lb-strength-shift-motion</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=landry-flex&amp;play=flex-line-game-rush</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=landry-flex&amp;play=flex-line-game-rush</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=phillips-two-gap-34&amp;play=b34-base-two-gap-fits</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&amp;play=b34-base-two-gap-fits</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=phillips-two-gap-34&amp;play=b34-dual-edge-interior-anchor</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&amp;play=b34-dual-edge-interior-anchor</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=phillips-two-gap-34&amp;play=b34-stack-slant-shift</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&amp;play=b34-stack-slant-shift</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=phillips-two-gap-34&amp;play=b34-wildcat-walk-up-edge</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&amp;play=b34-wildcat-walk-up-edge</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=jj-speed-43&amp;play=jj43-penetration-slant-loop</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=jj-speed-43&amp;play=jj43-penetration-slant-loop</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=jj-speed-43&amp;play=jj43-man-free-will-dog</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=jj-speed-43&amp;play=jj43-man-free-will-dog</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=jj-speed-43&amp;play=jj43-miami-chase-rule-pursuit</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=jj-speed-43&amp;play=jj43-miami-chase-rule-pursuit</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=jj-speed-43&amp;play=jj43-goal-line-haley-edge-rush</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=jj-speed-43&amp;play=jj43-goal-line-haley-edge-rush</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-okie-bear&amp;play=bear-goal-line-heavy</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&amp;play=bear-goal-line-heavy</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-okie-bear&amp;play=bear-double-a-mug</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&amp;play=bear-double-a-mug</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-okie-bear&amp;play=bear-slant-strong</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&amp;play=bear-slant-strong</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=belichick-okie-bear&amp;play=bear-to-46-stem-disguise</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&amp;play=bear-to-46-stem-disguise</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=aranda-tite-peso&amp;play=tite-base-zone-read</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&amp;play=tite-base-zone-read</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=aranda-tite-peso&amp;play=tite-sim-pressure</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&amp;play=tite-sim-pressure</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=aranda-tite-peso&amp;play=tite-quarters-apex</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&amp;play=tite-quarters-apex</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=aranda-tite-peso&amp;play=tite-bear-condensed</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&amp;play=tite-bear-condensed</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=rlong-335-stack&amp;play=stack335-slant-exchange</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=rlong-335-stack&amp;play=stack335-slant-exchange</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=rlong-335-stack&amp;play=stack335-double-edge-storm</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=rlong-335-stack&amp;play=stack335-double-edge-storm</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=rlong-335-stack&amp;play=stack335-cross-dog-fire-zone</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=rlong-335-stack&amp;play=stack335-cross-dog-fire-zone</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=rlong-335-stack&amp;play=stack335-zero-empty</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=rlong-335-stack&amp;play=stack335-zero-empty</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=cover2-man-under&amp;play=twoman-red-zone-compressed-twins</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=cover2-man-under&amp;play=twoman-red-zone-compressed-twins</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=cover2-man-under&amp;play=twoman-fade-beater-demo</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=cover2-man-under&amp;play=twoman-fade-beater-demo</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=cover2-man-under&amp;play=twoman-edge-blitz</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=cover2-man-under&amp;play=twoman-edge-blitz</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://schemedb.com/?scheme=cover2-man-under&amp;play=twoman-goal-line-double-robber</loc>
+    <loc>https://schemedb.harlanljones.com/?scheme=cover2-man-under&amp;play=twoman-goal-line-double-robber</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

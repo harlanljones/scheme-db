@@ -1,6 +1,6 @@
 # SchemeDB — Complete NFL Scheme & All-22 Tactical Knowledge Base
 Version: August 2026
-Base URL: https://schemedb.com
+Base URL: https://schemedb.harlanljones.com
 Total Schemes: 45 (25 Offense, 20 Defense)
 Total Plays: 180 hand-authored All-22 tactical plays
 Total Coaches: 53
@@ -29,7 +29,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, base down
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=shanahan-wide-zone&play=outside-zone
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shanahan-wide-zone&play=outside-zone
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Stretch the defense horizontally from sideline to sideline to create wide running lanes and force linebackers into overpursuit.
@@ -54,7 +54,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 2, +45, shot down
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=shanahan-wide-zone&play=play-action-over
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shanahan-wide-zone&play=play-action-over
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit second-level defenders overplaying the run by throwing deep intermediate passes into the vacated zone behind them.
@@ -79,7 +79,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +30, red zone boundary
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=shanahan-wide-zone&play=naked-bootleg
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shanahan-wide-zone&play=naked-bootleg
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish aggressive backside defensive ends and pursuit defenders who crash down the line against wide zone runs.
@@ -104,7 +104,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 2, +25, short yardage
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=shanahan-wide-zone&play=jet-motion-oz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shanahan-wide-zone&play=jet-motion-oz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force the defense to shift gap fits and rotate secondary coverage laterally before/at snap, creating perimeter numbers advantages.
@@ -140,7 +140,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, base down
     Defensive Look: Cover 3 Sky (Single-High) (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=kubiak-split-zone&play=split-zone-slice
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kubiak-split-zone&play=split-zone-slice
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use split-flow action to punish aggressive horizontal pursuit and create a massive cutback alley behind a sealing H-back.
@@ -166,7 +166,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 2, +40, run-heavy down
     Defensive Look: Cover 3 Sky (Single-High) (4-3 Over front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=kubiak-split-zone&play=pa-dagger-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kubiak-split-zone&play=pa-dagger-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit aggressive linebacker run fits by pairing a hard split-zone play-action fake with a clear-out post and intermediate Dagger (dig) route.
@@ -192,7 +192,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +30, red zone boundary shot
     Defensive Look: Cover 3 Sky (Single-High) (4-3 Over front)
     Animation Duration: 4.8s
-    Direct URL: https://schemedb.com/?scheme=kubiak-split-zone&play=boot-throwback-leak
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kubiak-split-zone&play=boot-throwback-leak
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Devastate over-aggressive defenses with the signature Y-Leak constraint: faking a slice block before leaking the H-back vertically into vacated boundary space.
@@ -218,7 +218,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 1, +35, high-leverage perimeter call
     Defensive Look: Cover 3 Sky (Single-High) (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=kubiak-split-zone&play=orbit-motion-toss
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kubiak-split-zone&play=orbit-motion-toss
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Outflank aggressive defenses by combining pre-snap orbit motion and a rapid perimeter toss with multiple pulling lead blockers.
@@ -255,7 +255,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +35, boundary hash
     Defensive Look: Cover 2 / Quarters MOFO (Nickel 4-2-5 Over Front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=reid-spread-rpo&play=mesh-shallow-cross
+    Direct URL: https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&play=mesh-shallow-cross
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create impossible natural pick/rub traffic for underneath zone and man defenders while stretching the defense horizontally and vertically with perimeter rail and deep clearout routes.
@@ -281,7 +281,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +42, open field
     Defensive Look: Quarters / Cover 4 Match (Nickel 4-2-5 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=reid-spread-rpo&play=rpo-glance-post
+    Direct URL: https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&play=rpo-glance-post
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Put the backside second-level linebacker in an inescapable run-pass conflict, punishing aggressive run fits with immediate intermediate completions.
@@ -307,7 +307,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 3, +18, red zone
     Defensive Look: Cover 2 Man / Match (Nickel 4-2-5 Over Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=reid-spread-rpo&play=power-shovel-option
+    Direct URL: https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&play=power-shovel-option
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create an unstoppable misdirection interior shovel pass that exploits defensive ends widening to defend the quarterback perimeter option and sweep threat.
@@ -333,7 +333,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 7, +28, scoring territory
     Defensive Look: Cover 2 Invert / Palms (Nickel 4-2-5 Over Front)
     Animation Duration: 4.4s
-    Direct URL: https://schemedb.com/?scheme=reid-spread-rpo&play=sprintout-smash-wheel
+    Direct URL: https://schemedb.harlanljones.com/?scheme=reid-spread-rpo&play=sprintout-smash-wheel
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Outflank perimeter pass rush with a moving pocket sprintout while executing a smash-wheel concept that punishes squatting Cover 2 cornerbacks.
@@ -370,7 +370,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, early down base
     Defensive Look: Cover 3 Match (4-2-5 Nickel Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=mcvay-duo-playaction&play=mcvay-duo-lead-run
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&play=mcvay-duo-lead-run
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish light nickel boxes with vertical double-teams ("Duo"), creating massive interior movement and establishing the physical run picture that unlocks play-action shot plays.
@@ -395,7 +395,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 3, +35, play-action shot
     Defensive Look: Cover 3 Sky (4-2-5 Nickel Over front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=mcvay-duo-playaction&play=mcvay-pa-sail-flood
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&play=mcvay-pa-sail-flood
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create a 3-level vertical flood (deep clearout, 12-yard intermediate out, 2-yard flat) off under-center Duo play-action to overload Cover 3 and Cover 4 zone defenders.
@@ -420,7 +420,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +48, explosive shot play
     Defensive Look: Cover 4 Quarters / Match (4-2-5 Nickel Over front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=mcvay-duo-playaction&play=mcvay-pa-deep-crosser
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&play=mcvay-pa-deep-crosser
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack the vulnerable intermediate middle-of-the-field void (18-22 yards) against two-high and single-high defenses by pairing a deep post clearout with a crossing over-route.
@@ -445,7 +445,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +28, red zone edge
     Defensive Look: Cover 1 / Cover 3 Robber (4-2-5 Nickel Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=mcvay-duo-playaction&play=mcvay-glance-rpo-orbit
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcvay-duo-playaction&play=mcvay-glance-rpo-orbit
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish aggressive run-stopping linebackers by reading the apex/Will defender on a post-snap RPO, pairing interior Duo power with a rapid Glance slant route.
@@ -481,7 +481,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, perimeter speed attack
     Defensive Look: Cover 3 Match (4-3 Under front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-cheat-motion-toss
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-cheat-motion-toss
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Weaponize extreme pre-snap speed ("Cheat Motion") to create an unmatchable angle on the perimeter, cracking the edge defender and pulling offensive linemen for an explosive outside toss.
@@ -506,7 +506,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 2, +38, explosive shot play
     Defensive Look: Cover 3 Sky / Quarters Match (4-3 Under front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-cheat-motion-wheel
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-cheat-motion-wheel
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish defenses over-committing to McDaniel’s Cheat Motion perimeter crack toss by bluffing the crack block and releasing the fastest receiver on an uncontested vertical wheel route.
@@ -531,7 +531,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +32, interior counter-punch
     Defensive Look: Cover 2 Quarters / Two-High Shell (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-inside-zone-wham
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-inside-zone-wham
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit defensive lateral overpursuit with an inside zone Wham trap, using pre-snap speed motion as eye candy while trapping the 3-tech DT from the blindside.
@@ -556,7 +556,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 2, +15, red zone perimeter space
     Defensive Look: Cover 1 Man / Cover 3 Match (4-3 Under front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-pistol-option-pitch
+    Direct URL: https://schemedb.harlanljones.com/?scheme=mcdaniel-cheat-motion&play=mcdaniel-pistol-option-pitch
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create a 2-on-1 space dilemma on the perimeter edge in short-yardage / red-zone situations using speed option mechanics from pistol.
@@ -592,7 +592,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, heavy run down
     Defensive Look: Cover 3 Sky (Single-High) (4-3 Over Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=stefanski-multi-te-gap&play=stefanski-pin-pull-sweep
+    Direct URL: https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&play=stefanski-pin-pull-sweep
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create overwhelming perimeter gap leverage against single-high defenses by pinning frontside defensive linemen inside and pulling interior linemen as lead escorts.
@@ -617,7 +617,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 1, +42, aggressive shot down
     Defensive Look: Cover 3 Sky (Single-High) (4-3 Over Front)
     Animation Duration: 4.4s
-    Direct URL: https://schemedb.com/?scheme=stefanski-multi-te-gap&play=stefanski-pa-seam-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&play=stefanski-pa-seam-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish aggressive single-high run defenses by faking the pin-and-pull sweep and launching a vertical seam strike to the primary tight end behind suckered linebackers and safeties.
@@ -642,7 +642,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +32, red zone edge
     Defensive Look: Cover 3 Sky / Flow Match (4-3 Over Front)
     Animation Duration: 4.4s
-    Direct URL: https://schemedb.com/?scheme=stefanski-multi-te-gap&play=stefanski-naked-boot-slide
+    Direct URL: https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&play=stefanski-naked-boot-slide
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit defenses over-pursuing Stefanski's heavy pin-and-pull run flow by rolling the quarterback naked to the opposite boundary with a 3-level flood/slide concept.
@@ -667,7 +667,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 2, +28, short yardage
     Defensive Look: Cover 3 Match (4-3 Over Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=stefanski-multi-te-gap&play=stefanski-counter-gap-lead
+    Direct URL: https://schemedb.harlanljones.com/?scheme=stefanski-multi-te-gap&play=stefanski-counter-gap-lead
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Gasoline the defense with heavy gap-scheme power: down blocks create an unmovable wall, while a pulling guard kicks out the edge and a lead tight end pancakes the linebacker.
@@ -703,7 +703,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +48, open field
     Defensive Look: Nickel Cover 2 / Quarters (Nickel 4-2-5 Over Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=steichen-qb-mesh-rpo&play=steichen-qb-power-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&play=steichen-qb-power-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Put the frontside defensive end in an impossible spatial dilemma: if he widens to stop the perimeter sweep, the dual-threat QB powers downhill behind a pulling guard.
@@ -728,7 +728,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +35, money down
     Defensive Look: Nickel Cover 1 Man / Match (Nickel 4-2-5 Over Front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=steichen-qb-mesh-rpo&play=steichen-mesh-rail-wheel
+    Direct URL: https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&play=steichen-mesh-rail-wheel
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit man-to-man coverage by pairing a tight shallow-cross Mesh rub with an explosive running back Rail/Wheel route along the boundary.
@@ -753,7 +753,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +40, tempo pace
     Defensive Look: Cover 3 Sky / Off-Nickel (Nickel 4-2-5 Over Front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=steichen-qb-mesh-rpo&play=steichen-zone-bubble-rpo
+    Direct URL: https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&play=steichen-zone-bubble-rpo
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Conflict the apex/overhang defender with a simultaneous inside zone run and perimeter bubble screen, taking whatever the defense concedes with ruthless efficiency.
@@ -778,7 +778,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, shot down
     Defensive Look: Two-High Quarters / Cover 4 (Nickel 4-2-5 Over Front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=steichen-qb-mesh-rpo&play=steichen-verticals-switch
+    Direct URL: https://schemedb.harlanljones.com/?scheme=steichen-qb-mesh-rpo&play=steichen-verticals-switch
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Destroy Two-High Quarters coverage by crossing the release paths of the #1 and #2 receivers on deep vertical tracks, triggering coverage miscommunication and blown assignments.
@@ -814,7 +814,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, Own 35, base down
     Defensive Look: Cover 3 Match (4-3 Under Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lafleur-illusion-packers&play=lafleur-wide-zone-cutback
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&play=lafleur-wide-zone-cutback
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create wide horizontal stretch with 12-personnel under-center flow to force linebackers to overpursue and open a devastating backside cutback lane.
@@ -839,7 +839,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 2, +45, play-action shot down
     Defensive Look: Cover 3 Sky (4-3 Under Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=lafleur-illusion-packers&play=lafleur-cross-country-post
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&play=lafleur-cross-country-post
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Present an identical wide-zone run look to pull linebackers downhill and manipulate the single-high Free Safety with an intermediate crosser, opening an explosive deep post across the entire field.
@@ -864,7 +864,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +45, constraint tempo call
     Defensive Look: Cover 2 Invert / Quarters (Nickel 4-2-5 Even Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lafleur-illusion-packers&play=lafleur-pony-screen-wheel
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&play=lafleur-pony-screen-wheel
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit defenses overreacting to quick perimeter screen calls by pairing dual-back Pony personnel with a fake screen left and a devastating rail wheel right.
@@ -889,7 +889,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +38, intermediate dagger shot
     Defensive Look: Cover 4 Quarters (4-3 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lafleur-illusion-packers&play=lafleur-pa-dagger-dig
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lafleur-illusion-packers&play=lafleur-pa-dagger-dig
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack 2-high / Cover 4 Quarters defenses using a two-man vertical stretch (Seam Pin + 15-yard Dig) over an underneath shallow drag crosser.
@@ -925,7 +925,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, Own 40, base run down
     Defensive Look: Cover 2 Man (Nickel 4-2-5 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=sirianni-power-rpo&play=sirianni-power-duo-inside
+    Direct URL: https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&play=sirianni-power-duo-inside
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Impose pure physical will at the line of scrimmage with interior Duo double teams, blowing defensive tackles off the ball and creating a heavy north-south running lane.
@@ -950,7 +950,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +42, RPO conflict call
     Defensive Look: Cover 3 Match (Apex Conflict) (Nickel 4-2-5 Over Front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=sirianni-power-rpo&play=sirianni-rpo-glance-iso
+    Direct URL: https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&play=sirianni-rpo-glance-iso
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Put the backside Will linebacker in an impossible run-pass conflict: if he steps up to stop the interior Duo run, punish him immediately with a rapid Glance route to the isolated X receiver.
@@ -975,7 +975,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +25, red zone fringe shot
     Defensive Look: Cover 1 Man (Nickel 4-2-5 Even Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=sirianni-power-rpo&play=sirianni-slot-fade-out
+    Direct URL: https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&play=sirianni-slot-fade-out
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create an isolated 1-on-1 matchup on the perimeter for an elite route-runner from the slot, using an underneath out route to pin the outside corner and clear the sideline.
@@ -1000,7 +1000,7 @@ PLAYS IN THIS SCHEME:
     Situation: 4th & 1, +1, goal line conversion
     Defensive Look: Goal Line 6-2 Man (Goal Line 6-2 Bear Front)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=sirianni-power-rpo&play=sirianni-qb-sneak-push
+    Direct URL: https://schemedb.harlanljones.com/?scheme=sirianni-power-rpo&play=sirianni-qb-sneak-push
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Execute the mathematically and physically near-unstoppable short-yardage quarterback sneak by combining low offensive line pad leverage with dual backfield pushers.
@@ -1036,7 +1036,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, early down run/pass balance
     Defensive Look: Nickel Cover 2 Match (Nickel 4-2-5 Under Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=johnson-counter-deception&play=johnson-counter-trey-lead
+    Direct URL: https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&play=johnson-counter-trey-lead
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use pre-snap counter step and dual pulling guard deception to freeze linebackers and create an explosive B-gap crease.
@@ -1061,7 +1061,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +38, early down
     Defensive Look: Nickel Cover 2 (Nickel 4-2-5 Under Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=johnson-counter-deception&play=johnson-pa-te-throwback
+    Direct URL: https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&play=johnson-pa-te-throwback
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use counter run look PA to move WILL linebacker inside, then throw back to leaking TE in the vacated flat.
@@ -1086,7 +1086,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +32, third down conversion
     Defensive Look: Nickel Cover 1 Man-Free (Nickel 4-2-5 Under Press)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=johnson-counter-deception&play=johnson-hook-ladder-mesh
+    Direct URL: https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&play=johnson-hook-ladder-mesh
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit man-coverage rules with a 2-man mesh rub that legally frees the RB against press-man Nickel coverage on 3rd down.
@@ -1111,7 +1111,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +28, explosive play call
     Defensive Look: Nickel Cover 3 Buzz (Nickel 4-2-5 Under Front)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=johnson-counter-deception&play=johnson-orbit-reverse-screen
+    Direct URL: https://schemedb.harlanljones.com/?scheme=johnson-counter-deception&play=johnson-orbit-reverse-screen
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use orbit motion and deep QB look-off to pull all defenders deep and inside, then dump to RB with three escort blockers in the flat.
@@ -1147,7 +1147,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +35
     Defensive Look: Nickel Cover 2 Man Match (Nickel 4-2-5 Over Front)
     Animation Duration: 2.5s
-    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-slant-flat-rhythm
+    Direct URL: https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&play=payton-slant-flat-rhythm
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force the apex defender into an instant flat-vs-slant leverage decision and attack the answer he does not pick, on a one-hitch rhythm clock.
@@ -1173,7 +1173,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +25
     Defensive Look: Nickel Cover 3 Buzz (Nickel 4-2-5 Over Front)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-fast-screen-convoy
+    Direct URL: https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&play=payton-fast-screen-convoy
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Get the ball to the perimeter instantly, before any rush or coverage reaction can develop, and let a two-man convoy block the only defenders who trigger correctly.
@@ -1199,7 +1199,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +40
     Defensive Look: Nickel Cover 1 Robber (Nickel 4-2-5 Under Front)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-tunnel-shovel-package
+    Direct URL: https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&play=payton-tunnel-shovel-package
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Build an interior blocking tunnel between the guards, shovel the ball to a full-speed crossing receiver at its mouth, and outrun a defense that triggered on run and false-screen looks.
@@ -1225,7 +1225,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 25
     Defensive Look: Cover 6 (Quarter-Quarter-Half) (Nickel 4-2-5 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=payton-quick-game-screens&play=payton-jet-sweep-pa-post
+    Direct URL: https://schemedb.harlanljones.com/?scheme=payton-quick-game-screens&play=payton-jet-sweep-pa-post
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use full-field jet sweep action to pull both linebackers and the free safety downhill, then hit a deep post behind the displaced coverage.
@@ -1262,7 +1262,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, +45, downhill gap-scheme environment
     Defensive Look: Cover 3 Sky (4-3 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-power-read-pull
+    Direct URL: https://schemedb.harlanljones.com/?scheme=roman-power-read&play=roman-power-read-pull
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Put the unblocked playside defensive end in an impossible choice between the RB's flow and the QB's keep, then punish the crash with a pulling guard and fullback lead.
@@ -1287,7 +1287,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 2, midfield, short-yardage must-have
     Defensive Look: Cover 3 Sky (4-3 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-qb-power-run
+    Direct URL: https://schemedb.harlanljones.com/?scheme=roman-power-read&play=roman-qb-power-run
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Run true QB power with no read: use the fullback to wrong-arm the unblocked edge and the pulling guard to log the Mike, handing the quarterback a designed crease in the B/C-gap.
@@ -1312,7 +1312,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 35, perimeter leverage attack
     Defensive Look: Cover 3 Sky (4-3 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-pin-pull-leverage
+    Direct URL: https://schemedb.harlanljones.com/?scheme=roman-power-read&play=roman-pin-pull-leverage
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack the perimeter's leverage math: pin every down defender with interior blockers, then outnumber the edge with tandem pulling guards, a fullback, and an arcing wing.
@@ -1337,7 +1337,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, shot off heavy-run tendency
     Defensive Look: Cover 1 (4-3 Over Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=roman-power-read&play=roman-pa-post-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=roman-power-read&play=roman-pa-post-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Weaponize the established Power Read Pull picture — same mesh, same pull, same lead — to bait the single-high safety downhill and take a deep post shot behind him.
@@ -1374,7 +1374,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, early-down foundation call
     Defensive Look: Cover 3 Sky (Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-wide-zone-stretch-base
+    Direct URL: https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&play=oconnell-wide-zone-stretch-base
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Establish the pure wide-zone stretch picture that every boot, dagger, and crosser companion in the family borrows from.
@@ -1399,7 +1399,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, off the established stretch
     Defensive Look: Cover 3 Sky (flowed away) (Over Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-boot-flood-rollout
+    Direct URL: https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&play=oconnell-boot-flood-rollout
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish the defensive flow created by the base stretch by pulling the QB against the grain into a three-level boundary flood.
@@ -1424,7 +1424,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, +40, off the established stretch
     Defensive Look: Cover 3 Sky (Over Front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-pa-dagger-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&play=oconnell-pa-dagger-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the stretch-action pocket reset to attack the middle of Cover 3 Sky with a Dagger — seam above, curl in the void behind the dropping MLB.
@@ -1449,7 +1449,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 3, +45, off the established stretch
     Defensive Look: Cover 3 Sky (Over Front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=oconnell-boot-dagger&play=oconnell-duo-pa-crosser
+    Direct URL: https://schemedb.harlanljones.com/?scheme=oconnell-boot-dagger&play=oconnell-duo-pa-crosser
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Pair a downhill duo run fake with a free backside crosser to punish linebackers and cornerbacks who trigger on run action.
@@ -1485,7 +1485,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, early down run/pass packaged call
     Defensive Look: Nickel Cover 2 Match (Nickel 4-2-5 Over Front)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-wide-zone-glance-rpo
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&play=coen-wide-zone-glance-rpo
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Package wide-zone run mechanics with a post-snap glance so the QB can hand off or throw based purely on how the apex nickel defends the box.
@@ -1510,7 +1510,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, +45, packaged triangle stretch off zone-read look
     Defensive Look: Nickel Cover 2 Match (Nickel 4-2-5 Over Front)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-bubble-triangle-rpo
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&play=coen-bubble-triangle-rpo
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Turn one zone-read call into a true triple-option math problem by stretching a single apex defender with three simultaneous targets at three depths.
@@ -1536,7 +1536,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, midfield, punishing soft-corner force rules
     Defensive Look: Cover 3 Cloud (soft field corner) (Nickel 4-2-5 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-crack-toss-perimeter
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&play=coen-crack-toss-perimeter
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack soft-force perimeter rules with speed toss plus a cross-field crack, making the force defender choose between an uncovered crack blocker and the alley he must fill.
@@ -1561,7 +1561,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 35, probing run-fit discipline with motion
     Defensive Look: Nickel Cover 3 Buzz (Nickel 4-2-5 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=coen-wide-zone-rpo&play=coen-motion-zone-cutback
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coen-wide-zone-rpo&play=coen-motion-zone-cutback
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use pre-snap orbit motion to interrogate and declare the overhang's run fit, then punish the resulting flow commitment with a wide-zone cutback into the vacated backside seam.
@@ -1597,7 +1597,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +35, snapped within seconds of the previous whistle — no huddle, no substitution window for the defense
     Defensive Look: Nickel Cover 2 Man (Nickel 4-2-5 Over Front)
     Animation Duration: 3.2s
-    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-mesh-spacing-concept
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&play=kelly-mesh-spacing-concept
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Weaponize tempo and classic Air Raid spacing — two shallow crossers rubbing under the quarterback with corners and over routes stacked behind — to stress man coverage's navigation rules and zone coverage's hook depth.
@@ -1622,7 +1622,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +42, snapped at tempo before the nickel can re-communicate his apex assignment
     Defensive Look: Nickel Cover 2 Zone (Nickel 4-2-5 Over Front)
     Animation Duration: 3s
-    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-spot-tempo-stress
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&play=kelly-spot-tempo-stress
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Layer flat, spot/curl, and vertical takeoff off one shoulder so the apex nickel must defend three landmarks with two responsibilities, then beat the rotation clock with a one-hitch rhythm throw.
@@ -1647,7 +1647,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +25, tempo snap into a light nickel box before the defense can add a hat
     Defensive Look: Nickel Cover 3 Sky (Nickel 4-2-5 Over Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-zone-read-rb-draw
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&play=kelly-zone-read-rb-draw
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Pair the zone-read's unblocked-end geometry with an RB delayed draw so the defense's box math commits to a play flowing one way while the ball hits a vacated gap going the other.
@@ -1672,7 +1672,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +45, snapped at tempo against a two-high shell that hasn't settled its rotation
     Defensive Look: Quarters Two-High (Nickel 4-2-5 Over Front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=kelly-tempo-spread&play=kelly-four-verts-takeover
+    Direct URL: https://schemedb.harlanljones.com/?scheme=kelly-tempo-spread&play=kelly-four-verts-takeover
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack a two-high shell's structural weakness — the open middle third — with four simultaneous verticals and sideline takes, letting the pre-snap MOFO read dictate a seam shot before the safeties can squeeze.
@@ -1708,7 +1708,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, early down passing look
     Defensive Look: Cover 3 Match (Rip/Liz) (4-3 Over Wide-9 Penetrating Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=saleh-43-wide9&play=saleh-cover3-match
+    Direct URL: https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&play=saleh-cover3-match
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Generate organic 4-man pass rush via Wide-9 speed angles while suffocating passing concepts with pattern-matching Cover 3 Rip/Liz rules.
@@ -1733,7 +1733,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +38, passing down vs 3x1 Trips
     Defensive Look: Cover 6 (Quarter-Quarter-Half / Bracket) (4-3 Over Wide-9 Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=saleh-43-wide9&play=saleh-cover6-bracket
+    Direct URL: https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&play=saleh-cover6-bracket
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Counter 3x1 Trips formations and flood concepts that typically stress single-high Cover 3 by deploying split-field Quarters to the field and Cover 2 to the boundary.
@@ -1758,7 +1758,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +42, known passing down
     Defensive Look: Cover 3 Fire Zone (3-Deep, 3-Under) (4-3 Over Cross-Dog Blitz)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=saleh-43-wide9&play=saleh-cross-dog-fire3
+    Direct URL: https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&play=saleh-cross-dog-fire3
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture guaranteed interior penetration against standard 5-man/6-man slide pass protections using a synchronized A-gap cross-dog blitz.
@@ -1783,7 +1783,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 11, +34, must-have passing down
     Defensive Look: Cover 1 Robber (Man-Free Lurk) (NASCAR 4-Speed Rusher Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=saleh-43-wide9&play=saleh-nascar-cover1-robber
+    Direct URL: https://schemedb.harlanljones.com/?scheme=saleh-43-wide9&play=saleh-nascar-cover1-robber
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Deploy maximum pass rush speed (4 defensive ends) on 3rd-and-long while setting a Cover 1 Robber trap to jump intermediate crossing and dig routes.
@@ -1819,7 +1819,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 7, +35, high-leverage passing down
     Defensive Look: Cover 3 Buzz (Disguised from Cover 0) (Double-A Mug 6-Up Presentation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=macdonald-hybrid-disguise&play=macdonald-double-mug-buzz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&play=macdonald-double-mug-buzz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture pre-snap protection chaos and force inaccurate hot throws by showing a 6-man Cover 0 blitz, then dropping 7 defenders into a suffocating Cover 3 Buzz shell.
@@ -1844,7 +1844,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +40, known passing down
     Defensive Look: Cover 3 Cloud (3-Deep, 4-Under Creeper) (4-Man Simulated Creeper Pressure)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=macdonald-hybrid-disguise&play=macdonald-creeper-overload
+    Direct URL: https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&play=macdonald-creeper-overload
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture an unblocked free rusher (Nickel DB) while keeping 7 coverage defenders on the field by dropping interior DT into the quick hot-throw window.
@@ -1869,7 +1869,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 10, +48, passing situation
     Defensive Look: Cover 6 (Disguised Single-High to Split Trap) (4-Man Base Front Disguise)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=macdonald-hybrid-disguise&play=macdonald-split-field-trap
+    Direct URL: https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&play=macdonald-split-field-trap
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Bait opposing quarterbacks into throwing standard Cover 3 beaters (out routes and sail concepts) by feigning a single-high middle-of-field-closed shell before spinning into a deadly Cover 6 corner trap.
@@ -1894,7 +1894,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +28, red zone money down
     Defensive Look: Cover 0 Peel (All-Out 6-Man Blitz) (Amoeba 7-Man Standing Overload)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=macdonald-hybrid-disguise&play=macdonald-amoeba-cover0-peel
+    Direct URL: https://schemedb.harlanljones.com/?scheme=macdonald-hybrid-disguise&play=macdonald-amoeba-cover0-peel
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Deploy maximum chaos and bring a 6-man overload house blitz on money downs, using the Peel technique on the edge to eliminate the QB’s hot checkdown.
@@ -1930,7 +1930,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 7, +35, high-leverage money down
     Defensive Look: Cover 0 All-Out Zero (Zero Safety Help) (Psycho 7-Man All-Out House Blitz)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-flores-psycho&play=cover0-all-out-house
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&play=cover0-all-out-house
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Overwhelm 5-man and 6-man pass protections with an unblockable 7-man zero-safety house blitz, forcing an immediate sub-2.0s throw or violent sack.
@@ -1955,7 +1955,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 9, +45, known passing situation
     Defensive Look: Drop-8 Robber / Lurk (3-Under, 2-Deep, Floating Lurker) (Psycho Bluff 3-Man Sim Pressure)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-flores-psycho&play=drop8-psycho-lurk
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&play=drop8-psycho-lurk
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit the quarterback’s conditioned fear of the Cover 0 house blitz by bluffing 7 rushers and bailing 4 into the exact hot throwing windows.
@@ -1980,7 +1980,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +30, red zone fringe money down
     Defensive Look: Hot Fire Zone (3-Under, 2-Deep with 6-Man Blitz) (Psycho A-Gap Cross-Dog Stunt)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-flores-psycho&play=cross-dog-fire-hot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&play=cross-dog-fire-hot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Defeat slide protections and 6-man half-slide schemes by manufacturing instant interior penetration via an A-gap cross-dog twist while protecting the deep field with Hot coverage.
@@ -2005,7 +2005,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 8, -45, 3rd down vs elite #1 WR
     Defensive Look: Chameleon Bracket (High-Low Double on Star X Receiver) (Psycho 5-Man Overload Pressure)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-flores-psycho&play=bracket-doubles-star
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-flores-psycho&play=bracket-doubles-star
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Eliminate the opponent’s primary star wide receiver using a Belichick-style bracket double-team disguised out of Flores’ signature 7-man psycho mug front.
@@ -2041,7 +2041,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, base down passing look
     Defensive Look: Cover 6 (Quarter-Quarter-Half Split Field) (Penny 5-1-5 Tite 4-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=fangio-two-high-shell&play=cover6-quarter-quarter-half
+    Direct URL: https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&play=cover6-quarter-quarter-half
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Present an ambiguous 2-high shell pre-snap, then split the field into Quarters to the passing strength and Cover 2 to the boundary to suffocate vertical seams and intermediate outs.
@@ -2066,7 +2066,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, +35, medium passing down
     Defensive Look: Cover 4 Match (Palms / 2-Read) (Penny 5-1-5 4-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=fangio-two-high-shell&play=penny-match-quarters
+    Direct URL: https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&play=penny-match-quarters
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Deploy symmetrical 4-deep match (Palms / 2-Read) from the identical 2-high pre-snap shell to jump quick out routes and rob crossing patterns.
@@ -2091,7 +2091,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 8, +42, obvious passing down
     Defensive Look: Drop-8 Sim Zone (3-Man Rush / 8-Man Drop) (Penny Sim Drop-8 Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=fangio-two-high-shell&play=tite-creeper-drop8
+    Direct URL: https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&play=tite-creeper-drop8
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Simulate a heavy 5-man Penny rush pre-snap, then drop both outside linebackers into underneath passing lanes to eliminate quick-game hot reads in Drop-8 coverage.
@@ -2116,7 +2116,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +30, boundary passing down
     Defensive Look: Cover 8 (Half-Quarter-Quarter / Inverted Boundary Trap) (Penny 5-1-5 4-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=fangio-two-high-shell&play=cover8-boundary-trap
+    Direct URL: https://schemedb.harlanljones.com/?scheme=fangio-two-high-shell&play=cover8-boundary-trap
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Bait the quarterback into throwing a boundary intermediate out-route against what appears to be soft Quarters cushion, only for the boundary corner to trap the route while the safety caps deep.
@@ -2152,7 +2152,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 8, +42, late 3rd quarter passing situation
     Defensive Look: Fire Zone 3 (3-Deep 3-Under Overload) (Amoeba Sugar 6-Up Presentation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=minter-amoeba-creeper&play=minter-amoeba-fire-zone3
+    Direct URL: https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&play=minter-amoeba-fire-zone3
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use pre-snap Amoeba chaos to dictate offensive pass protections, then bring a timed 5-man A-gap fire pressure while dropping the mugged MIKE directly into the hot slant lane.
@@ -2177,7 +2177,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 10, +30, red zone boundary passing situation
     Defensive Look: Cover 3 Match Creeper (4-Man Rush, 7 in Coverage) (Over Front Sim-Pressure Presentation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=minter-amoeba-creeper&play=minter-slot-blitz-creeper
+    Direct URL: https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&play=minter-slot-blitz-creeper
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture free edge pressure with only a 4-man rush by dropping a defensive end into coverage while sending a lightning-fast slot defensive back.
@@ -2202,7 +2202,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, midfield (+48), critical conversion down
     Defensive Look: Cover 1 Lurk (Man-Free with Underneath Hole Robber) (Amoeba Sugar Double-Mug Presentation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=minter-amoeba-creeper&play=minter-cover1-robber-lurk
+    Direct URL: https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&play=minter-cover1-robber-lurk
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Show all-out blitz pre-snap to force quick man-beating throws (Mesh/Slants), then drop a linebacker into the low hole to bait and intercept the quarterback.
@@ -2227,7 +2227,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 3, +22, red zone strike zone high-pressure down
     Defensive Look: Cover 0 Peel (Aggressive Man Pressure with RB Peel Rule) (Double-A Mug 6-Up Presentation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=minter-amoeba-creeper&play=minter-double-mug-peel
+    Direct URL: https://schemedb.harlanljones.com/?scheme=minter-amoeba-creeper&play=minter-double-mug-peel
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create instant interior pressure with a Double-A gap blitz while utilizing a "peel" technique to automatically erase the offense’s built-in hot check to the running back.
@@ -2263,7 +2263,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, +35, standard pass down with play-action threat
     Defensive Look: Cover 3 Sky Match (Single-High with Wide-9 Rush) (4-3 Under Wide-9 Stunt Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=ryans-wide9-attack&play=ryans-wide9-under-tackle-wrap
+    Direct URL: https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&play=ryans-wide9-under-tackle-wrap
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit the Wide-9 alignment by forcing offensive tackles into elongated kick-slides, then executing a Tackle-End (T-E) wrap stunt to create an unblocked interior rush lane for the defensive end.
@@ -2288,7 +2288,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, -40, midfield passing down against 2x2 spread
     Defensive Look: Cover 2 Palms (2-Read / Cloud Trap on #2 Out) (Base 4-Down Wide-9 Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=ryans-wide9-attack&play=ryans-cover2-palms-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&play=ryans-cover2-palms-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Obliterate standard Smash and quick-out concepts by using split-field 2-Read (Palms) matching, enabling the cornerback to trap underneath out routes while the safety caps deep corner routes.
@@ -2313,7 +2313,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +18, red zone critical conversion down
     Defensive Look: Cover 1 Hole (Man-to-Man with Low-Hole MIKE Rat) (A-Gap Mug Front with Wide-9 Edges)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=ryans-wide9-attack&play=ryans-cover1-hole-mug
+    Direct URL: https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&play=ryans-cover1-hole-mug
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Threaten A-gap pressure to force quick slant/in routes, then drop the mugged linebacker into the low hole to bracket underneath passes while the 4-man Wide-9 front collapses the pocket.
@@ -2338,7 +2338,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 9, +45, long-yardage blitz down
     Defensive Look: Fire Zone 3 (3-Deep 3-Under Edge Overload) (Field Overload Fire Presentation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=ryans-wide9-attack&play=ryans-overload-edge-fire
+    Direct URL: https://schemedb.harlanljones.com/?scheme=ryans-wide9-attack&play=ryans-overload-edge-fire
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Overload the field side of the pass protection with a 5-man fire zone blitz, creating an unblocked perimeter rusher while dropping the boundary defensive end into coverage.
@@ -2374,7 +2374,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +45, base down run/pass balance
     Defensive Look: Cover 4 Match (Quarters Mod / Sky Safety Support) (3-4 Tite Pinch Front (404 Alignment))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=shula-match-quarters&play=shula-tite-b-gap-pinch
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shula-match-quarters&play=shula-tite-b-gap-pinch
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Suffocate inside zone and Duo run concepts with a 3-man Tite front (404 alignment) by pinching the B-gaps, spilling the ball carrier into the waiting arms of unblocked edge defenders and downhill safeties.
@@ -2399,7 +2399,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +35, McVay/Shanahan condensed bunch passing down
     Defensive Look: Box / Triangle Bracket Match vs 3x1 Bunch (Penny 5-1-5 Front (5 on line, 1 ILB, 5 DBs))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=shula-match-quarters&play=shula-penny-bracket-bunch
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shula-match-quarters&play=shula-penny-bracket-bunch
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Eliminate natural pick and rub routes from condensed bunch sets by employing a 3-over-2 Triangle Bracket match coverage while retaining a disciplined 4-man Penny rush.
@@ -2424,7 +2424,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +28, open field passing down
     Defensive Look: Cover 8 (Field Quarters Match / Boundary Half Trap) (Penny 5-1-5 Front (Quarter-Quarter-Half Shell))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=shula-match-quarters&play=shula-cover8-field-quarter
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shula-match-quarters&play=shula-cover8-field-quarter
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit tendencies against two-high shells by splitting the field coverage: playing Quarters match to the multi-receiver field side and a hard Cover 2 trap to the boundary to intercept quick out-routes.
@@ -2449,7 +2449,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 7, +35, passing down conversion
     Defensive Look: Drop 7 — Cover 3 Match with Simulated Edge Creeper (Penny 5-1-5 Front (3-1-7 Drop))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=shula-match-quarters&play=shula-boundary-creeper-drop7
+    Direct URL: https://schemedb.harlanljones.com/?scheme=shula-match-quarters&play=shula-boundary-creeper-drop7
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Drop 7 defenders into multi-layered zone coverage by disguising a pass rusher as a creeper, then rushing only 3 linemen while flooding all throwing windows.
@@ -2485,7 +2485,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +38, high-leverage pressure down
     Defensive Look: Cover 2 Invert Roll (Disguised 2-High) (Over Front Slant-Strong)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-corndog-corner-blitz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-corndog-corner-blitz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture an unblockable blindside corner blitz by manipulating offensive protection with an interior DE stunt while rotating the free safety into the vacated flat.
@@ -2510,7 +2510,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +42, passing situation
     Defensive Look: Cover 3 Match (Simulated 4-Man Creeper) (Odd Mug Sim Overload)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-cross-creeper-drop
+    Direct URL: https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-cross-creeper-drop
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Generate unblocked pressure with a 4-man simulated rush by replacing a dropping defensive end with a blitzing linebacker into the offense’s slide protection.
@@ -2535,7 +2535,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 11, +45, must-have conversion down
     Defensive Look: Cover 0 Pure Man (Zero Deep Safeties) (7-Man Diamond Pressure Front)
     Animation Duration: 3.5s
-    Direct URL: https://schemedb.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-cover0-max-heat
+    Direct URL: https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-cover0-max-heat
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Overwhelm 5- and 6-man pass protections on critical 3rd & long downs by sending 7 rushers while playing tight press-man coverage without safety help.
@@ -2560,7 +2560,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, +30, red zone / four-down territory
     Defensive Look: Cover 2 Invert (Corners Deep Half, Safeties Underneath) (Even 4-Man Under Front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-split-safety-invert2
+    Direct URL: https://schemedb.harlanljones.com/?scheme=spagnuolo-exotic-blitz&play=spagnuolo-split-safety-invert2
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Deceive the quarterback by disguising a two-deep shell as single-high, inverting cornerbacks into deep halves while safeties trigger downhill to trap intermediate seams and out routes.
@@ -2596,7 +2596,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, Own 25, base down
     Defensive Look: Cover 3 Sky (Press-Bail Corners, Strong Safety Force) (4-3 Under Strong Shift)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=quinn-cover3-press&play=quinn-cover3-press-bail
+    Direct URL: https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&play=quinn-cover3-press-bail
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Suffocate explosive perimeter passing using physical press-bail cornerback technique and single-high Cover 3 Sky integrity while creating speed pressure with the Wide-9 LEO rusher.
@@ -2621,7 +2621,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +48, aggressive front down
     Defensive Look: Cover 3 Match (Under Front Overload) (4-3 Under Overload Tilt)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=quinn-cover3-press&play=quinn-under-front-overload
+    Direct URL: https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&play=quinn-under-front-overload
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create immediate organic pass-rush disruption using 4-3 Under front alignment angles to generate simultaneous weakside edge speed and strongside interior 3T penetration.
@@ -2646,7 +2646,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +36, medium conversion down
     Defensive Look: Cover 1 Rat (Man-Free with Underneath Lurker) (Even 4-Man Pass Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=quinn-cover3-press&play=quinn-cover1-rat-in-hole
+    Direct URL: https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&play=quinn-cover1-rat-in-hole
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Neutralize man-beating Mesh and shallow cross combinations by freeing an underneath defender (The Rat) to lurk in the short intermediate hole while corners play trail technique.
@@ -2671,7 +2671,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 8, +40, passing down blitz
     Defensive Look: Fire Zone 3 (3-Deep, 2-Under Hot Drop) (5-Man Fire Zone Overload)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=quinn-cover3-press&play=quinn-safety-sky-fire-zone
+    Direct URL: https://schemedb.harlanljones.com/?scheme=quinn-cover3-press&play=quinn-safety-sky-fire-zone
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create a devastating overload edge blitz using Strong Safety from depth on a Sky path while dropping the defensive end to take away the primary hot throw.
@@ -2707,7 +2707,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 7, +40, high-leverage money down
     Defensive Look: Cover 1 Man-Free (Cross-Dog Heat) (Double-A Gap Cross-Dog Stunt)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=bowles-creeper-blitz&play=bowles-dual-a-gap-cross-blitz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&play=bowles-dual-a-gap-cross-blitz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create immediate interior pressure against slide protections by sending a two-man A-gap cross-dog stunt where the first linebacker picks the center and the second loops untouched to the quarterback.
@@ -2732,7 +2732,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 10, +35, boundary hash passing down
     Defensive Look: Cover 3 Fire Zone (Disguised Single-High) (Boundary Overload Stunt)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=bowles-creeper-blitz&play=bowles-overload-boundary-fire
+    Direct URL: https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&play=bowles-overload-boundary-fire
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit half-slide offensive protections toward passing strength by launching an unblockable boundary corner overload while rotating safety coverage into the vacated perimeter void.
@@ -2757,7 +2757,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 14, +45, long yardage passing down
     Defensive Look: Drop-8 Tampa 2 (Disguised All-Out Blitz) (7-Up Bluff Drop-8)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=bowles-creeper-blitz&play=bowles-drop8-tampa2-lurk
+    Direct URL: https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&play=bowles-drop8-tampa2-lurk
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create catastrophic quarterback turnovers on long passing downs by bluffing an all-out 7-man blitz and dropping 8 defenders into a suffocating Tampa 2 shell with the middle linebacker running the pole.
@@ -2782,7 +2782,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, +40, passing down creeper
     Defensive Look: Cover 3 Match (Peel Sim Pressure) (Odd 5-Up Simulated Pressure)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=bowles-creeper-blitz&play=bowles-peel-zone-sim-pressure
+    Direct URL: https://schemedb.harlanljones.com/?scheme=bowles-creeper-blitz&play=bowles-peel-zone-sim-pressure
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture an unblocked 4-man simulated pressure from the slot while utilizing peel rules on the edge defender to eliminate the offense’s primary hot checkdown to the running back.
@@ -2818,7 +2818,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, midfield, base down
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=coryell-vertical&play=coryell-seam-post-double-stroke
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coryell-vertical&play=coryell-seam-post-double-stroke
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack the deep middle with two synchronized seam-post strokes that force the single-high safety to pick a side.
@@ -2843,7 +2843,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +35, vs press coverage
     Defensive Look: Cover 1 Robber (4-3 Under front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=coryell-vertical&play=coryell-deep-out-comeback
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coryell-vertical&play=coryell-deep-out-comeback
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force a press corner to defend two throws at one landmark: the 18-yard deep out first, then the 16-yard comeback.
@@ -2868,7 +2868,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, own 40, base down
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=coryell-vertical&play=coryell-cross-country-drag
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coryell-vertical&play=coryell-cross-country-drag
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Flood the middle of the field with two staggered deep crossers so zone drops cannot cover both layers.
@@ -2893,7 +2893,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +42, expecting pressure
     Defensive Look: Cover 2 Zone (4-3 Over front)
     Animation Duration: 3.6s
-    Direct URL: https://schemedb.com/?scheme=coryell-vertical&play=coryell-z-snap-move-screen
+    Direct URL: https://schemedb.harlanljones.com/?scheme=coryell-vertical&play=coryell-z-snap-move-screen
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish Cover 2 flat defenders who sit on the short routes created by the vertical passing game.
@@ -2929,7 +2929,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, own 35, vs off coverage
     Defensive Look: Cover 2 Zone (4-3 Over front)
     Animation Duration: 3.6s
-    Direct URL: https://schemedb.com/?scheme=walsh-classic-wco&play=walsh-slant-flat-combo
+    Direct URL: https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&play=walsh-slant-flat-combo
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Turn an off-coverage corner's cushion into free yardage with a timed slant-flat stretch.
@@ -2954,7 +2954,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 3, own 30, must convert
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=walsh-classic-wco&play=walsh-sprint-right-option
+    Direct URL: https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&play=walsh-sprint-right-option
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the sprint to displace the entire defense horizontally so the primary corner route or the naked flat checkdown comes open.
@@ -2979,7 +2979,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, own 42, base down
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=walsh-classic-wco&play=walsh-curl-flat-flood
+    Direct URL: https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&play=walsh-curl-flat-flood
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Vertically stretch one flat defender with three routes at three depths until he must give up a leg of the flood.
@@ -3004,7 +3004,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 30, after a big slant-flat gain
     Defensive Look: Cover 2 Zone (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=walsh-classic-wco&play=walsh-play-action-deep-cross
+    Direct URL: https://schemedb.harlanljones.com/?scheme=walsh-classic-wco&play=walsh-play-action-deep-cross
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit the slant-flat success by freezing the second-level defenders with run action and shooting the vacated middle.
@@ -3040,7 +3040,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, +38, expecting man coverage
     Defensive Look: Cover 1 Robber (Nickel 4-2-5)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=run-and-shoot&play=rns-switch-verticals
+    Direct URL: https://schemedb.harlanljones.com/?scheme=run-and-shoot&play=rns-switch-verticals
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force man-coverage defenders into crossed releases that convert into a two-man rub, freeing a vertical behind single-high coverage.
@@ -3065,7 +3065,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +45, must-have down
     Defensive Look: Cover 2 Man Under (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=run-and-shoot&play=rns-mesh-read-route
+    Direct URL: https://schemedb.harlanljones.com/?scheme=run-and-shoot&play=rns-mesh-read-route
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create a natural rub with two shallow crossers and let each receiver convert off the defender's leverage rather than a fixed break point.
@@ -3090,7 +3090,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +35, soft corners showing
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=run-and-shoot&play=rns-post-wheel-leverage-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=run-and-shoot&play=rns-post-wheel-leverage-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish soft bail coverage by selling a post stem and converting into a wheel that attacks the vacated outside third behind the corner's back.
@@ -3115,7 +3115,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +42, quarters shell aligned
     Defensive Look: Cover 4 Quarters Bail (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=run-and-shoot&play=rns-go-route-stab
+    Direct URL: https://schemedb.harlanljones.com/?scheme=run-and-shoot&play=rns-go-route-stab
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the outside go as bait for a bailing corner and convert the inside stab into a climb that attacks the vacated seam between the coverage levels.
@@ -3151,7 +3151,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, own 40, base down
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=flexbone-triple-option&play=flexbone-midline-triple
+    Direct URL: https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&play=flexbone-midline-triple
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack the interior read defender with a three-phase conflict — take the dive and lose the keeper, squeeze the keeper and surrender the pitch.
@@ -3176,7 +3176,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 25, perimeter speed advantage
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=flexbone-triple-option&play=flexbone-rocket-toss-pitch
+    Direct URL: https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&play=flexbone-rocket-toss-pitch
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack the perimeter with a full-speed motion back so the pitch arrives at maximum velocity before the defense can reset its force geometry.
@@ -3201,7 +3201,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 3, +45, must-have down
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=flexbone-triple-option&play=flexbone-inside-veer-triple
+    Direct URL: https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&play=flexbone-inside-veer-triple
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Make the playside end choose between the dive and the keep, then punish any third defender who joins with the pitch phase.
@@ -3226,7 +3226,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +42, off triple-tendency
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4.4s
-    Direct URL: https://schemedb.com/?scheme=flexbone-triple-option&play=flexbone-midline-play-action-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=flexbone-triple-option&play=flexbone-midline-play-action-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Weaponize the triple-option run identity to vacate the deep middle, then attack it with a post shot off an identical midline fake.
@@ -3262,7 +3262,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, own 38, base down
     Defensive Look: Cover 1 Robber (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=air-raid&play=airraid-mesh-concept
+    Direct URL: https://schemedb.harlanljones.com/?scheme=air-raid&play=airraid-mesh-concept
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create guaranteed separation against man coverage through two crossing shallow routes that naturally screen each other's defenders.
@@ -3287,7 +3287,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, own 25, base down
     Defensive Look: Cover 3 Sky (4-2-5 Nickel front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=air-raid&play=airraid-y-cross
+    Direct URL: https://schemedb.harlanljones.com/?scheme=air-raid&play=airraid-y-cross
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the stick as bait to occupy the nickel and Will, then attack the vacated middle with the tight end's twelve-yard crosser.
@@ -3312,7 +3312,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, own 42, must convert
     Defensive Look: Cover 2 Quarters (4-2-5 Nickel front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=air-raid&play=airraid-stick-naked-constraint
+    Direct URL: https://schemedb.harlanljones.com/?scheme=air-raid&play=airraid-stick-naked-constraint
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Double-cover the stick deliberately so the naked swing constraint runs free behind over-committed flat defenders.
@@ -3337,7 +3337,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 9, own 20, backed up
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=air-raid&play=airraid-shallow-distribution-drive
+    Direct URL: https://schemedb.harlanljones.com/?scheme=air-raid&play=airraid-shallow-distribution-drive
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Distribute the ball to whichever shallow receiver wins his individual leverage race, reading defenders rather than landmarks.
@@ -3373,7 +3373,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 35, base down
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=delaware-wing-t&play=wingt-buck-sweep-guard-pull
+    Direct URL: https://schemedb.harlanljones.com/?scheme=delaware-wing-t&play=wingt-buck-sweep-guard-pull
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Get two blockers on the perimeter before the ball carrier arrives, collapsing contain inward so the sweep can turn upfield.
@@ -3398,7 +3398,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, own 40, off sweep tendency
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.4s
-    Direct URL: https://schemedb.com/?scheme=delaware-wing-t&play=wingt-waggle-flood
+    Direct URL: https://schemedb.harlanljones.com/?scheme=delaware-wing-t&play=wingt-waggle-flood
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the most convincing run action in football to move an entire defense one direction, then attack the vacated half with a three-level flood.
@@ -3423,7 +3423,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, own 30, after perimeter success
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.4s
-    Direct URL: https://schemedb.com/?scheme=delaware-wing-t&play=wingt-counter-crisscross
+    Direct URL: https://schemedb.harlanljones.com/?scheme=delaware-wing-t&play=wingt-counter-crisscross
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Exploit Buck Sweep's tendency with an opposite-direction counter whose backfield action crossfaces every flow defender.
@@ -3448,7 +3448,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 2, own 42, vs slanting fronts
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=delaware-wing-t&play=wingt-wingback-trap-gut
+    Direct URL: https://schemedb.harlanljones.com/?scheme=delaware-wing-t&play=wingt-wingback-trap-gut
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish aggressive interior slants by trapping the penetrating lineman under complete Buck Sweep disguise.
@@ -3484,7 +3484,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, own 45, base down
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=t-formation-power-sweep&play=sweep-power-sweep-left
+    Direct URL: https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&play=sweep-power-sweep-left
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Run outside the tackles behind two pulling guards so the defense's edge structure collapses inward and the perimeter belongs to the offense.
@@ -3509,7 +3509,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 32, after a sweep left gain
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=t-formation-power-sweep&play=sweep-power-sweep-right-boot-fake
+    Direct URL: https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&play=sweep-power-sweep-right-boot-fake
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the sweep's identical picture to drag all eleven defenders right, then attack the abandoned backside with a counter-bootleg.
@@ -3534,7 +3534,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 1, own 40, short yardage after sweep success
     Defensive Look: Cover 1 Robber (4-3 Over front)
     Animation Duration: 3.6s
-    Direct URL: https://schemedb.com/?scheme=t-formation-power-sweep&play=sweep-fullback-blast
+    Direct URL: https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&play=sweep-fullback-blast
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish defenses that over-play the sweep by handing to the fullback between the tackles off identical footwork.
@@ -3559,7 +3559,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, own 38, after two sweep gains
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=t-formation-power-sweep&play=sweep-sweep-pass-bootleg
+    Direct URL: https://schemedb.harlanljones.com/?scheme=t-formation-power-sweep&play=sweep-sweep-pass-bootleg
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Convert sweep credibility into a moving-pocket flood throw against defenders frozen by run fits.
@@ -3595,7 +3595,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 30, base down
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=pistol-read-option&play=pistol-inside-zone-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=pistol-read-option&play=pistol-inside-zone-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Put the backside end in an instant give-or-keep conflict using downhill pistol run physics.
@@ -3620,7 +3620,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, own 38, gap-run tendency
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=pistol-read-option&play=pistol-power-o-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=pistol-read-option&play=pistol-power-o-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Combine gap-scheme power blocking with a read of the backside end so the defense must defend both the pull and the keep.
@@ -3645,7 +3645,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +40, off run tendency
     Defensive Look: Cover 1 Robber (Nickel 4-2-5)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=pistol-read-option&play=pistol-pa-deep-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=pistol-read-option&play=pistol-pa-deep-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Weaponize the pistol run identity to vacate the deep middle, then attack it with a post shot off a half-roll.
@@ -3670,7 +3670,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, +45, perimeter numbers call
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=pistol-read-option&play=pistol-speed-option
+    Direct URL: https://schemedb.harlanljones.com/?scheme=pistol-read-option&play=pistol-speed-option
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force the perimeter force player into an instantaneous declare so the pitch punishes any aggressive trigger.
@@ -3706,7 +3706,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 35, vs two-high shell
     Defensive Look: Cover 2 Zone (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=baylor-choice&play=baylor-slot-choice-shot
+    Direct URL: https://schemedb.harlanljones.com/?scheme=baylor-choice&play=baylor-slot-choice-shot
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use simple inside-zone action to freeze the second level while the slot runs a leverage-based vertical shot for a touchdown.
@@ -3731,7 +3731,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, own 30, vs single-high shell
     Defensive Look: Cover 3 Zone (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=baylor-choice&play=baylor-iz-read-choice-double-post
+    Direct URL: https://schemedb.harlanljones.com/?scheme=baylor-choice&play=baylor-iz-read-choice-double-post
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Pair a true zone-read pull with a double-post shot so the run action buys the second level while the safety is forced to defend both deep middles alone.
@@ -3756,7 +3756,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 3, own 42, vs man-coverage nickel look
     Defensive Look: Cover 1 Man (4-3 Over front)
     Animation Duration: 3.8s
-    Direct URL: https://schemedb.com/?scheme=baylor-choice&play=baylor-bubble-go-glance
+    Direct URL: https://schemedb.harlanljones.com/?scheme=baylor-choice&play=baylor-bubble-go-glance
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Sell the bubble-screen picture to trigger the force defenders uphill, then convert the slot to a glance vertical that attacks the vacated seam.
@@ -3781,7 +3781,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, own 38, vs quarters look with aggressive force
     Defensive Look: Cover 2 Zone (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=baylor-choice&play=baylor-speed-sweep-constraint
+    Direct URL: https://schemedb.harlanljones.com/?scheme=baylor-choice&play=baylor-speed-sweep-constraint
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force both perimeter defenders to defend the sideline honestly so they cannot cheat toward the choice shots this family lives on.
@@ -3817,7 +3817,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 32, base down
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=meyer-spread-option&play=meyer-inside-zone-read-give
+    Direct URL: https://schemedb.harlanljones.com/?scheme=meyer-spread-option&play=meyer-inside-zone-read-give
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Make the backside end choose between the quarterback and the A-gap, then punish the crash with an instant downhill give.
@@ -3842,7 +3842,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 3, own 40, jet-sweep tendency set
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=meyer-spread-option&play=meyer-inverted-veer-power-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=meyer-spread-option&play=meyer-inverted-veer-power-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use a jet sweep presentation to displace the playside end, then attack the vacated interior with a quarterback pull.
@@ -3867,7 +3867,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +42, off run tendency
     Defensive Look: Cover 3 Sky (4-3 Over front)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=meyer-spread-option&play=meyer-snag-triangle-spacing
+    Direct URL: https://schemedb.harlanljones.com/?scheme=meyer-spread-option&play=meyer-snag-triangle-spacing
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack Cover 3 with three-layer spacing that puts every single defender in an impossible high-low conflict.
@@ -3892,7 +3892,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, +45, perimeter speed call
     Defensive Look: Cover 3 Buzz (4-3 Over front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=meyer-spread-option&play=meyer-speed-option-reverse
+    Direct URL: https://schemedb.harlanljones.com/?scheme=meyer-spread-option&play=meyer-speed-option-reverse
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Attack the perimeter with a speed option while a reverse-constraint motion freezes the backside from pursuing.
@@ -3928,7 +3928,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +35, base down
     Defensive Look: Press-Man Zero (No Deep Safety) (46 Front (Head-Up Ends, Bunched LBs, Walked Safeties))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=buddy-46-defense&play=b46-base-i-form
+    Direct URL: https://schemedb.harlanljones.com/?scheme=buddy-46-defense&play=b46-base-i-form
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Commit nine defenders to the box with walked safeties and bunched linebackers so any base run is met at or behind the line of scrimmage with a blocker-free defender.
@@ -3953,7 +3953,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +38, passing down
     Defensive Look: Man-Free (Single-High Safety, Press Corners) (46 Double A-Gap Overload)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=buddy-46-defense&play=b46-mad-dog-double-a
+    Direct URL: https://schemedb.harlanljones.com/?scheme=buddy-46-defense&play=b46-mad-dog-double-a
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Overload both A-gaps with walked defenders so the offense’s pass-protection slide cannot account for every interior threat, forcing an instant-pressure throw or sack.
@@ -3978,7 +3978,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 9, +42, dropback pass
     Defensive Look: Man-Free with Free Hook (Single-High) (46 Strong-Side Combo Overload)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=buddy-46-defense&play=b46-ext-strong-combo
+    Direct URL: https://schemedb.harlanljones.com/?scheme=buddy-46-defense&play=b46-ext-strong-combo
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Send three staggered strong-side rushers (end-B gap, tackle-C loop, linebacker-edge) so one protection slide always leaves the second-wave looper unblocked.
@@ -4003,7 +4003,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +30, must-have stop
     Defensive Look: Man-Free Rolled (Corner Replaces Blitzing Safety) (46 Free Blade Weak Overload)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=buddy-46-defense&play=b46-free-blade-weak-blitz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=buddy-46-defense&play=b46-free-blade-weak-blitz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Trade the free safety for a free weak-side runner while the boundary corner replaces him deep, keeping single-high shell integrity behind a five-man pressure.
@@ -4039,7 +4039,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 7, midfield, obvious pass
     Defensive Look: Cover 3 Fire Zone (3-Deep / 3-Under) (Odd 50 Triple Fire Zone)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lebeau-fire-zone&play=fz-triple-inside-fire
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&play=fz-triple-inside-fire
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Generate true 5-man pressure with a double-A linebacker blast while a defensive end secretly trades his rush lane for the rat zone that swallows hot answers.
@@ -4064,7 +4064,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +38, passing down
     Defensive Look: Cover 3 Rotation Fire Zone (3-Deep / 3-Under) (Odd Front Cover 2 Show)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lebeau-fire-zone&play=fz-safety-rotate-fire
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&play=fz-safety-rotate-fire
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Show a static Cover 2 shell to bait quick-game answers, then rotate to single-high Cover 3 fire zone coverage behind five-man pressure.
@@ -4089,7 +4089,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, red zone top, run-heavy tendencies
     Defensive Look: Cover 3 Fire Zone behind Nasco Exchange (Odd Front Nasco Slant Package)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lebeau-fire-zone&play=fz-nose-drop-nasco
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&play=fz-nose-drop-nasco
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Bait a run-first protection with a light odd front, exchange the nose for an A-gap blitzing linebacker plus two inside-slanting OLBs, and cover the deep middle with the dropped nose himself.
@@ -4114,7 +4114,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +45, money down
     Defensive Look: Cover 1 Smoke with Corner Curl-Bait Trap (Even Front Safety Smoke)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=lebeau-fire-zone&play=fz-safety-blitz-smoke
+    Direct URL: https://schemedb.harlanljones.com/?scheme=lebeau-fire-zone&play=fz-safety-blitz-smoke
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Force an instant throw with a disguised safety blitz while the corner manufactures and then steals the curl window the QB is trained to trust.
@@ -4150,7 +4150,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7 from the 25, standard down
     Defensive Look: Cover 2 Tub (Mike Deep Hole) (Under Front (1-Tech Nose, 3-Tech Under Tackle))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=tampa-2&play=t2-base-vs-2x2
+    Direct URL: https://schemedb.harlanljones.com/?scheme=tampa-2&play=t2-base-vs-2x2
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Flood the deep zones with five defenders while rushing only four, baiting offenses into the seams and erasing them with the Mike linebacker’s unique deep-middle conversion.
@@ -4175,7 +4175,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +35, passing down
     Defensive Look: Cover 2 Tub w/ Edge Pressure (Under Front, SLB Edge Blitz (Sam/Will Exchange))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=tampa-2&play=t2-slb-edge-blitz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=tampa-2&play=t2-slb-edge-blitz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Add a fifth rusher off the edge without weakening the Tampa 2 structure by having the Will exchange directly into the Sam’s vacated hook-curl window.
@@ -4200,7 +4200,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +30, tendency-down vs trips
     Defensive Look: Cover 2 Roll to Cover 3 Sky (Under Front, Weak-Side Rotation)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=tampa-2&play=t2-roll-cover3-trips
+    Direct URL: https://schemedb.harlanljones.com/?scheme=tampa-2&play=t2-roll-cover3-trips
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Answer a trips overload by rotating out of the baited two-high shell into three-deep coverage, trading one deep half for a middle-third eraser without weakening the flood side.
@@ -4225,7 +4225,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +42, short-medium passing down
     Defensive Look: Cover 2 Cloud Boundary (Corner Deep Half) (Under Front, Four-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=tampa-2&play=t2-cloud-boundary
+    Direct URL: https://schemedb.harlanljones.com/?scheme=tampa-2&play=t2-cloud-boundary
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Bait the boundary rhythm throw by disguising which defender owns the deep half, then exchange roles at the snap so the hot answer lands in coverage.
@@ -4261,7 +4261,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5, +30, base run down
     Defensive Look: Cover 3 Sky behind flex front (4-3 Weak-Tackle Flex)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=landry-flex&play=flex-weak-tackle-power-sweep
+    Direct URL: https://schemedb.harlanljones.com/?scheme=landry-flex&play=flex-weak-tackle-power-sweep
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Use the one-yard flex alignment to occupy blockers passively while three defenders converge independently on the sweep point of attack without needing a blocked lane.
@@ -4286,7 +4286,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & Goal, +8, power run down
     Defensive Look: Cover 3 Sky behind double flex (4-3 Tackle-Tackle Flex)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=landry-flex&play=flex-tackle-tackle-two-back
+    Direct URL: https://schemedb.harlanljones.com/?scheme=landry-flex&play=flex-tackle-tackle-two-back
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Occupy both interior gaps passively with flexed tackles who split double teams without needing to win, funneling two-back power into a patient three-defender kill zone.
@@ -4311,7 +4311,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +25, formation-strength down
     Defensive Look: Cover 3 Sky behind strength shift (4-3 Double Flex with Shifting Backers)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=landry-flex&play=flex-lb-strength-shift-motion
+    Direct URL: https://schemedb.harlanljones.com/?scheme=landry-flex&play=flex-lb-strength-shift-motion
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Answer offensive formation-strength motion with a synchronized linebacker shift so the defense is never caught flowing cross-eyed into a perimeter run.
@@ -4336,7 +4336,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8, +35, passing down
     Defensive Look: Cover 3 Sky behind the line game (4-3 Double Flex with Tackle-Tackle Game)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=landry-flex&play=flex-line-game-rush
+    Direct URL: https://schemedb.harlanljones.com/?scheme=landry-flex&play=flex-line-game-rush
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Manufacture a free-edge rusher without blitzing by running a staggered slant-and-wrap line game out of the flexed tackle alignments.
@@ -4372,7 +4372,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 5 from the 30, base run-down
     Defensive Look: Single-High, Soft Corners vs Run (Two-Gap 3-4 (Zero Nose, Double 5-Techs))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=phillips-two-gap-34&play=b34-base-two-gap-fits
+    Direct URL: https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&play=b34-base-two-gap-fits
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Trade penetration for total gap ownership — let linemen engage and control two gaps each so linebackers can run free over the top to every ball carrier.
@@ -4397,7 +4397,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +35, passing down
     Defensive Look: Man-Free, Press Corners, Walked WILL on Slot (Two-Gap 3-4, Dual Edge Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=phillips-two-gap-34&play=b34-dual-edge-interior-anchor
+    Direct URL: https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&play=b34-dual-edge-interior-anchor
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Weaponize the two-gap front in reverse — let the immovable interior eat every blocker while both stand-up edges attack the rim from clean angles.
@@ -4422,7 +4422,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 1 from the 38, short-yardage run-down
     Defensive Look: Single-High, Soft Corners vs Run (Two-Gap 3-4, Interior Slant Shift)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=phillips-two-gap-34&play=b34-stack-slant-shift
+    Direct URL: https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&play=b34-stack-slant-shift
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Disguise instant penetration inside a patient two-gap stance, then send all three linemen across blockers’ faces at once so every combo chases while linebackers replace behind.
@@ -4447,7 +4447,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 8 from the 42, passing down
     Defensive Look: Man-Free, Press Corners, Walked WILL on Slot (Two-Gap 3-4, Wildcat Edge Stem)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=phillips-two-gap-34&play=b34-wildcat-walk-up-edge
+    Direct URL: https://schemedb.harlanljones.com/?scheme=phillips-two-gap-34&play=b34-wildcat-walk-up-edge
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Break the tackle’s pass-protection key by walking between alignments and stances across his face, then attack whichever gap his eyes abandoned last.
@@ -4483,7 +4483,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +42, passing down
     Defensive Look: Cover 3 Buzz behind the slant-loop game (Even 4-3 with Strong-Side Slant Loop)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=jj-speed-43&play=jj43-penetration-slant-loop
+    Direct URL: https://schemedb.harlanljones.com/?scheme=jj-speed-43&play=jj43-penetration-slant-loop
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Win with pure penetration and staggered timing: tackles slant to occupy blockers while a delayed end loops through the gap their charge creates.
@@ -4508,7 +4508,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, +25, must-have down
     Defensive Look: Cover 1 with A-gap Will Dog (Even 4-3 Nickel Dog Look)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=jj-speed-43&play=jj43-man-free-will-dog
+    Direct URL: https://schemedb.harlanljones.com/?scheme=jj-speed-43&play=jj43-man-free-will-dog
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Create guaranteed interior pressure with a single A-gap dog while man-free coverage eliminates every hot answer behind it.
@@ -4533,7 +4533,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, own 35, first-quarter perimeter test
     Defensive Look: Cover 3 Sky with run-fit chase rules (Even 4-3 Flowing Front)
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=jj-speed-43&play=jj43-miami-chase-rule-pursuit
+    Direct URL: https://schemedb.harlanljones.com/?scheme=jj-speed-43&play=jj43-miami-chase-rule-pursuit
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Turn perimeter runs into short gains by having all eleven defenders execute assigned pursuit angles rather than chasing the football.
@@ -4558,7 +4558,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & Goal from the 3, goal-to-go
     Defensive Look: Man-Free behind the over-shifted front (Over Shift 4-3 with Hand-Down Wide End)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=jj-speed-43&play=jj43-goal-line-haley-edge-rush
+    Direct URL: https://schemedb.harlanljones.com/?scheme=jj-speed-43&play=jj43-goal-line-haley-edge-rush
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Commit the goal-line protection strong with an over shift and slant package, then let one isolated edge rusher decide a short-field possession.
@@ -4594,7 +4594,7 @@ PLAYS IN THIS SCHEME:
     Situation: 4th & Goal from the 1, fourth quarter
     Defensive Look: Press Match, Safeties Near Box (Bear Front (0-Nose, Double 4is, 5-Tech Ends))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-okie-bear&play=bear-goal-line-heavy
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&play=bear-goal-line-heavy
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Match heavy goal-line personnel with an extra interior body so every gap is two-gapped and no puller or kicker can find a clean block.
@@ -4619,7 +4619,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 1 from midfield, must-punt distance
     Defensive Look: Man-Free, Single-High Post Safety (Bear Front Double-A Mug (0-Nose, Double 4is))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-okie-bear&play=bear-double-a-mug
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&play=bear-double-a-mug
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Guarantee zero yards on third-and-short by sending both mugged backers through the only gaps the offense must block, converting a run-stuffing front into instant pass overload.
@@ -4644,7 +4644,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 3, red zone, short-yardage run-down
     Defensive Look: Press Match, Safeties Near Box (Bear Front Strong Slant (Interior Trio))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=belichick-okie-bear&play=bear-slant-strong
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&play=bear-slant-strong
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Trade gap-control patience for instant backfield penetration against gap runs, using synchronized one-gap movement so every blocker chases while the carrier runs into occupied gaps.
@@ -4669,7 +4669,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 2, red zone, run-check down
     Defensive Look: Stem to Press Match, Eight-Man Box (Bear Front Stemming into Full 46)
     Animation Duration: 4.5s
-    Direct URL: https://schemedb.com/?scheme=belichick-okie-bear&play=bear-to-46-stem-disguise
+    Direct URL: https://schemedb.harlanljones.com/?scheme=belichick-okie-bear&play=bear-to-46-stem-disguise
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Show a light okie shell to invite an inside-run check, then complete a cadence-length stem into a full 46 eight-man box before the ball carrier can redirect.
@@ -4705,7 +4705,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 6, +30, spread run down
     Defensive Look: Split-Field Quarters (Cover 4) (Tite Front (4i-0-4i Box))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=aranda-tite-peso&play=tite-base-zone-read
+    Direct URL: https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&play=tite-base-zone-read
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Eliminate every interior gap with the 4i-0-4i box so a spread-run play must bounce to the perimeter, where the walked-down peso waits as the unblockable extra defender.
@@ -4730,7 +4730,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 4, +38, obvious pass down
     Defensive Look: Sim Pressure — Man-Free With Hole Dropper (Tite Front (4i-0-4i Box, Mug Mike))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=aranda-tite-peso&play=tite-sim-pressure
+    Direct URL: https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&play=tite-sim-pressure
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Flash a five-man pressure from the tite box, rush only three, and occupy the quarterback’s scramble lane with a defensive end who replaces the blitzing Mike before dropping into the hook.
@@ -4755,7 +4755,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 5, midfield, spread passing down
     Defensive Look: Split-Field Quarters With Apex Match (Tite Front (4i-0-4i Box, Apex Overload))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=aranda-tite-peso&play=tite-quarters-apex
+    Direct URL: https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&play=tite-quarters-apex
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Give every slot receiver both an underneath apex defender and a matching quarter safety so a two-by-two mesh concept can never isolate anyone or occupy both deep halves.
@@ -4780,7 +4780,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 4, red zone top, condensed-run down
     Defensive Look: Man Under With Single-High Post (Bear Adjustment (Condensed Tite Box))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=aranda-tite-peso&play=tite-bear-condensed
+    Direct URL: https://schemedb.harlanljones.com/?scheme=aranda-tite-peso&play=tite-bear-condensed
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Answer condensed splits by tipping the tite box into a bear look, doubling every interior gap and walking hybrid defenders onto the twins so gap-scheme runs die at the line and quick game gets pressed.
@@ -4816,7 +4816,7 @@ PLAYS IN THIS SCHEME:
     Situation: 1st & 10, +30, base run down
     Defensive Look: Cover 3 Behind the Exchange (3-3-5 Stack (Slant-Exchange Call))
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=rlong-335-stack&play=stack335-slant-exchange
+    Direct URL: https://schemedb.harlanljones.com/?scheme=rlong-335-stack&play=stack335-slant-exchange
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Hide every gap responsibility behind identical stacks, then move all six box defenders one gap at the snap so blockers chase a pre-snap picture that no longer exists while every gap stays owned.
@@ -4841,7 +4841,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, own 40, must-pass down
     Defensive Look: Man-Free Behind the Dog (3-3-5 Stack (Double-Edge Storm))
     Animation Duration: 4.2s
-    Direct URL: https://schemedb.com/?scheme=rlong-335-stack&play=stack335-double-edge-storm
+    Direct URL: https://schemedb.harlanljones.com/?scheme=rlong-335-stack&play=stack335-double-edge-storm
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Storm both C-gaps with the stacked backers while the ends slant inward, so the protection must choose an edge while the anchoring nose erases any interior answer.
@@ -4866,7 +4866,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & 7, +45, spread passing down
     Defensive Look: Fire Zone (3 Under / 3 Deep) (3-3-5 Stack (Safety-Corner Cross-Dog))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=rlong-335-stack&play=stack335-cross-dog-fire-zone
+    Direct URL: https://schemedb.harlanljones.com/?scheme=rlong-335-stack&play=stack335-cross-dog-fire-zone
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Disguise a five-man fire zone behind a stacked single-high shell so spread protections commit to the wrong crosser while the safety-corner exchange manufactures interior heat.
@@ -4891,7 +4891,7 @@ PLAYS IN THIS SCHEME:
     Situation: 4th & 3, opponent +38, do-or-die down
     Defensive Look: Zero Man (No Deep Help) (3-3-5 Stack (All-Out Zero Committee))
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=rlong-335-stack&play=stack335-zero-empty
+    Direct URL: https://schemedb.harlanljones.com/?scheme=rlong-335-stack&play=stack335-zero-empty
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Punish empty-protection math with a six-man committee so five blockers always face one extra rusher while every receiver is stranded alone in zero man coverage.
@@ -4927,7 +4927,7 @@ PLAYS IN THIS SCHEME:
     Situation: 2nd & Goal from the 8, red zone
     Defensive Look: Cover 2 Man-Under (Safeties Splitting Halves at 12) (Under Front, Four-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=cover2-man-under&play=twoman-red-zone-compressed-twins
+    Direct URL: https://schemedb.harlanljones.com/?scheme=cover2-man-under&play=twoman-red-zone-compressed-twins
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Squeeze the red zone with straight man coverage under deep-half insurance so every route must beat a trail technique with no room to separate.
@@ -4952,7 +4952,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & Goal from the 6, red zone
     Defensive Look: Cover 2 Man-Under (Press-Trail Corners) (Under Front, Four-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=cover2-man-under&play=twoman-fade-beater-demo
+    Direct URL: https://schemedb.harlanljones.com/?scheme=cover2-man-under&play=twoman-fade-beater-demo
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Demonstrate why the classic red-zone fade fails against press-trail — the isolation throw offenses covet is exactly what this structure invites and erases.
@@ -4977,7 +4977,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & 6, +38, obvious passing down
     Defensive Look: Cover 1-Man Rob (Lone Free Safety Deep) (Under Front, Walked-Safety Edge Blitz)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=cover2-man-under&play=twoman-edge-blitz
+    Direct URL: https://schemedb.harlanljones.com/?scheme=cover2-man-under&play=twoman-edge-blitz
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Convert the 2-man structure into maximum pressure by walking a safety off the edge while the lone free safety swallows the entire deep zone by himself.
@@ -5002,7 +5002,7 @@ PLAYS IN THIS SCHEME:
     Situation: 3rd & Goal from the 4, red zone
     Defensive Look: Cover 2 Man Rob (Safeties at 8, Corners Over Top) (Under Front, Four-Man Rush)
     Animation Duration: 4s
-    Direct URL: https://schemedb.com/?scheme=cover2-man-under&play=twoman-goal-line-double-robber
+    Direct URL: https://schemedb.harlanljones.com/?scheme=cover2-man-under&play=twoman-goal-line-double-robber
 
     [SUMMARY & TACTICAL PURPOSE]
     - Motive: Protect the goal line without pressing by aligning corners over the top and converting both safeties into eye-keyed robbers who attack every throwing window in front.

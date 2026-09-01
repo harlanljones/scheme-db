@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { mergeComparisonBeats, mergeBeats } from '../beats';
+import { mergeComparisonBeats } from '../beats';
 import { SHANAHAN_WIDE_ZONE_PLAYS } from '../../data/schemes/shanahan/index';
 
 describe('PlayComparison helpers', () => {

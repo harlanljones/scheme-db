@@ -55,7 +55,7 @@ describe('LLM SEO & Discoverability Conventions (August 2026)', () => {
       }
 
       // Sitemap and LLM pointers
-      expect(robots).toContain('Sitemap: https://schemedb.com/sitemap.xml');
+      expect(robots).toContain('Sitemap: https://schemedb.harlanljones.com/sitemap.xml');
       expect(robots).toContain('llms.txt');
     });
 
@@ -151,20 +151,20 @@ describe('LLM SEO & Discoverability Conventions (August 2026)', () => {
       expect(xml).toContain('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
 
       // Core pages
-      expect(xml).toContain('<loc>https://schemedb.com/</loc>');
-      expect(xml).toContain('<loc>https://schemedb.com/?tab=visualizer</loc>');
-      expect(xml).toContain('<loc>https://schemedb.com/?tab=directory</loc>');
-      expect(xml).toContain('<loc>https://schemedb.com/?tab=trees</loc>');
-      expect(xml).toContain('<loc>https://schemedb.com/?tab=sequence-map</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/?tab=visualizer</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/?tab=directory</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/?tab=trees</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/?tab=sequence-map</loc>');
 
       // LLM discovery files
-      expect(xml).toContain('<loc>https://schemedb.com/llms.txt</loc>');
-      expect(xml).toContain('<loc>https://schemedb.com/llms-full.txt</loc>');
-      expect(xml).toContain('<loc>https://schemedb.com/robots.txt</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/llms.txt</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/llms-full.txt</loc>');
+      expect(xml).toContain('<loc>https://schemedb.harlanljones.com/robots.txt</loc>');
 
       // Every scheme family
       for (const fam of ALL_SCHEME_FAMILIES) {
-        expect(xml).toContain(`<loc>https://schemedb.com/?scheme=${fam.id}</loc>`);
+        expect(xml).toContain(`<loc>https://schemedb.harlanljones.com/?scheme=${fam.id}</loc>`);
       }
 
       // Every play
@@ -211,7 +211,7 @@ describe('LLM SEO & Discoverability Conventions (August 2026)', () => {
       expect(html).toContain('<script type="application/ld+json">');
       expect(html).toContain('"@type": "WebApplication"');
       expect(html).toContain('"@type": "Dataset"');
-      expect(html).toContain('https://schemedb.com/llms.txt');
+      expect(html).toContain('https://schemedb.harlanljones.com/llms.txt');
 
       // Non-JS semantic fallback
       expect(html).toContain('<noscript>');
