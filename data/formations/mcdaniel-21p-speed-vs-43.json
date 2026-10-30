@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/formation.schema.json",
+  "id": "mcdaniel-21p-speed-vs-43",
+  "name": "Mike McDaniel 21 Personnel Speed Pistol/Gun vs 4-3 Under Front",
+  "description": "Features cheat-motion alignment for explosive perimeter leverage.",
+  "offense": {
+    "C": { "x": 26.67, "y": -0.4 },
+    "LG": { "x": 25, "y": -0.4 },
+    "LT": { "x": 23.3, "y": -0.4 },
+    "RG": { "x": 28.3, "y": -0.4 },
+    "RT": { "x": 30, "y": -0.4 },
+    "QB": { "x": 26.67, "y": -4.5 },
+    "RB": { "x": 26.67, "y": -6.8 },
+    "FB": { "x": 28.8, "y": -2.2 },
+    "TE": { "x": 31.8, "y": -0.6 },
+    "X": { "x": 8, "y": -0.5 },
+    "Z": { "x": 42, "y": -1.5 }
+  },
+  "defense": {
+    "WDE": { "x": 20.5, "y": 0.9 },
+    "NT": { "x": 25.2, "y": 0.9 },
+    "3T": { "x": 29, "y": 0.9 },
+    "SDE": { "x": 33.2, "y": 0.9 },
+    "WILL": { "x": 22.5, "y": 4.5 },
+    "MIKE": { "x": 27, "y": 4.8 },
+    "SAM": { "x": 32.5, "y": 3.8 },
+    "LCB": { "x": 8, "y": 6.5 },
+    "RCB": { "x": 42, "y": 6.5 },
+    "SS": { "x": 35, "y": 8.5 },
+    "FS": { "x": 26.67, "y": 14 }
+  }
+}

@@ -31,8 +31,8 @@ function listJson(dir: string): string[] {
 
 export function loadDataset(dataDir: string = DATA_DIR): LoadResult {
   const problems: string[] = [];
-  const dataset: Dataset = { schemes: [], concepts: [], tracks: [], coaches: [], lineages: [], glossary: [] };
-  const files: RecordFiles = { schemes: [], concepts: [], tracks: [], coaches: [], lineages: [], glossary: [] };
+  const dataset = Object.fromEntries(RECORD_KIND_NAMES.map((kind) => [kind, []])) as unknown as Dataset;
+  const files = Object.fromEntries(RECORD_KIND_NAMES.map((kind) => [kind, []])) as unknown as RecordFiles;
 
   for (const kind of RECORD_KIND_NAMES) {
     const schema = RECORD_KINDS[kind];

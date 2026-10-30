@@ -6,6 +6,7 @@
   "name": "Mesh Rail / Wheel",
   "personnel": "11",
   "formation": "11P Gun Spread Right",
+  "formationId": "steichen-11p-gun-spread-vs-nickel",
   "situation": "3rd & 5, +35, money down",
   "coverage": "Nickel Cover 1 Man / Match",
   "frontName": "Nickel 4-2-5 Over Front",

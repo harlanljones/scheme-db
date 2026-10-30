@@ -6,6 +6,7 @@
   "name": "Three-Level Spot Stress",
   "personnel": "10",
   "formation": "10P Gun Spread 2x2 vs Nickel",
+  "formationId": "kelly-10p-tempo-spread-vs-nickel",
   "situation": "3rd & 4, +42, snapped at tempo before the nickel can re-communicate his apex assignment",
   "coverage": "Nickel Cover 2 Zone",
   "frontName": "Nickel 4-2-5 Over Front",

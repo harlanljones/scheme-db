@@ -4,11 +4,13 @@ import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
 import { ALL_SCHEME_FAMILIES } from '../../data/schemes/index';
 import { COACH_PROFILES, COACHING_TREES } from '../../data/coaches/index';
+import * as LEGACY_FORMATIONS from '../../data/formations';
 import { FOOTBALL_GLOSSARY } from '../../data/glossary';
 import type { CoachingTreeNode } from '../../engine/types';
 import { formatFile } from '../format';
 import { DATA_DIR, loadDataset, RECORD_KIND_NAMES } from '../load';
-import { Coach, Concept, Lineage, Scheme, Term, Tracks, type Dataset, type LineageNode } from '../schema';
+import { alignmentOverrides } from '../formations';
+import { Coach, Concept, Formation, Lineage, Scheme, Term, Tracks, type Dataset, type LineageNode } from '../schema';
 import { validateDataset } from '../validate-dataset';
 
 const { dataset, files, problems } = loadDataset();
@@ -54,7 +56,7 @@ describe('data/ library', () => {
   });
 
   it('keeps data/schema/*.schema.json in sync with the Zod schemas', () => {
-    const schemas = { scheme: Scheme, concept: Concept, tracks: Tracks, coach: Coach, lineage: Lineage, term: Term };
+    const schemas = { scheme: Scheme, concept: Concept, tracks: Tracks, formation: Formation, coach: Coach, lineage: Lineage, term: Term };
     for (const [name, schema] of Object.entries(schemas)) {
       const onDisk = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'schema', `${name}.schema.json`), 'utf-8'));
       expect(onDisk, `${name}.schema.json is stale; run bun run data:schema`).toEqual(plain(z.toJSONSchema(schema)));
@@ -125,6 +127,35 @@ describe('parity with the legacy TypeScript library (temporary, removed with src
     for (const concept of dataset.concepts) {
       expect(concept.provenance).toEqual({ confidence: 'illustrative', sources: [] });
     }
+  });
+
+  it('reproduces every formation preset', () => {
+    const legacy = Object.entries(LEGACY_FORMATIONS);
+    expect(dataset.formations).toHaveLength(legacy.length);
+    for (const [constName, preset] of legacy) {
+      const id = constName.toLowerCase().replace(/_/g, '-');
+      const formation = dataset.formations.find((f) => f.id === id);
+      expect(formation, id).toBeDefined();
+      expect(plain({ offense: formation!.offense, defense: formation!.defense }), id).toEqual(plain(preset));
+    }
+  });
+
+  it('links the 68 plays built on a preset to it, and starts all but five exactly on it', () => {
+    const tracksOf = new Map(dataset.tracks.map((t) => [t.conceptId, t]));
+    const formationOf = new Map(dataset.formations.map((f) => [f.id, f]));
+    const linked = dataset.concepts.filter((c) => c.formationId);
+    expect(linked).toHaveLength(68);
+    const moved = linked
+      .filter((c) => alignmentOverrides(formationOf.get(c.formationId!)!, tracksOf.get(c.id)!).length > 0)
+      .map((c) => c.id)
+      .sort();
+    expect(moved).toEqual([
+      'coen-motion-zone-cutback',
+      'macdonald-amoeba-cover0-peel',
+      'macdonald-split-field-trap',
+      'mcvay-glance-rpo-orbit',
+      'saleh-nascar-cover1-robber',
+    ]);
   });
 
   it('reproduces every coach profile', () => {
@@ -211,6 +242,35 @@ describe('validateDataset', () => {
       const offense = [{ ...base.offense[0], origin }, ...base.offense.slice(1)];
       expect(Tracks.safeParse({ ...base, offense }).success, origin).toBe(ok);
     }
+  });
+
+  it('flags a concept that points at an unknown formation', () => {
+    const ds = clone();
+    const concept = ds.concepts.find((c) => c.formationId)!;
+    concept.formationId = 'no-such-formation';
+    expect(errorsOf(ds).join('\n')).toContain('unknown formation "no-such-formation"');
+  });
+
+  it('flags a concept whose tracks lack a player the formation places', () => {
+    const ds = clone();
+    const concept = ds.concepts.find((c) => c.formationId)!;
+    const tracks = ds.tracks.find((t) => t.conceptId === concept.id)!;
+    const formation = ds.formations.find((f) => f.id === concept.formationId)!;
+    formation.offense['QB2'] = { x: 20, y: -5 };
+    delete formation.offense['C'];
+    expect(errorsOf(ds).join('\n')).toContain('has no offense track for formation');
+    expect(tracks.offense.some((p) => p.id === 'QB2')).toBe(false);
+  });
+
+  it('requires 11 players on each side of a formation', () => {
+    const ds = clone();
+    delete ds.formations[0].defense['FS'];
+    expect(errorsOf(ds).join('\n')).toContain('has 10 defense players, expected 11');
+  });
+
+  it('rejects a formation with an alignment off the field', () => {
+    const base = structuredClone(dataset.formations[0]);
+    expect(Formation.safeParse({ ...base, offense: { ...base.offense, C: { x: 60, y: 0 } } }).success).toBe(false);
   });
 
   it('flags a lineage that references an unknown coach', () => {

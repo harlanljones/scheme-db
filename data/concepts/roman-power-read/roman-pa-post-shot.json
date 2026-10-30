@@ -6,6 +6,7 @@
   "name": "Heavy Personnel PA Deep Post Shot",
   "personnel": "22",
   "formation": "22P Heavy Wing Right (Under Center)",
+  "formationId": "roman-22p-heavy-wing-vs-43",
   "situation": "1st & 10, +40, shot off heavy-run tendency",
   "coverage": "Cover 1",
   "frontName": "4-3 Over Front",

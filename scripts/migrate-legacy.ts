@@ -6,13 +6,15 @@
  */
 import * as fs from 'node:fs';
 import * as path from 'node:path';
+import * as LEGACY_FORMATIONS from '../src/data/formations';
 import { ALL_SCHEME_FAMILIES } from '../src/data/schemes/index';
 import { COACH_PROFILES, COACHING_TREES } from '../src/data/coaches/index';
 import { FOOTBALL_GLOSSARY } from '../src/data/glossary';
 import type { CoachingTreeNode } from '../src/engine/types';
 import { formatFile } from '../src/schema/format';
 import { DATA_DIR } from '../src/schema/load';
-import { Coach, Concept, Lineage, RECORD_KINDS, Scheme, Term, Tracks, type LineageNode, type RecordKind } from '../src/schema/schema';
+import { alignmentOverrides } from '../src/schema/formations';
+import { Coach, Concept, Formation, Lineage, RECORD_KINDS, Scheme, Term, Tracks, type LineageNode, type RecordKind } from '../src/schema/schema';
 
 const written: Record<string, number> = {};
 const notes: string[] = [];
@@ -31,6 +33,7 @@ const SCHEMA_FILE: Record<RecordKind, string> = {
   schemes: 'scheme',
   concepts: 'concept',
   tracks: 'tracks',
+  formations: 'formation',
   coaches: 'coach',
   lineages: 'lineage',
   glossary: 'term',
@@ -39,6 +42,40 @@ const SCHEMA_FILE: Record<RecordKind, string> = {
 for (const kind of Object.keys(RECORD_KINDS) as RecordKind[]) {
   fs.rmSync(path.join(DATA_DIR, kind), { recursive: true, force: true });
 }
+
+/** `src/data/formations.ts` exports `SHANAHAN_21P_OFFSET_I_VS_OVER_C3`; the data id is `shanahan-21p-offset-i-vs-over-c3`. */
+const formationIdOf = (constName: string): string => constName.toLowerCase().replace(/_/g, '-');
+
+// Names and descriptions live in the doc comment above each preset.
+const formationRecords = new Map<string, Formation>();
+const formationDocs = new Map<string, { name: string; description?: string }>();
+const formationsSource = fs.readFileSync(path.resolve(import.meta.dirname, '../src/data/formations.ts'), 'utf-8');
+for (const match of formationsSource.matchAll(/\/\*\*\n((?: \*[^\n]*\n)+) \*\/\nexport const (\w+)/g)) {
+  const [first, ...rest] = match[1].split('\n').filter(Boolean).map((line) => line.replace(/^ \* ?/, '').trim());
+  formationDocs.set(match[2], { name: first, description: rest.length > 0 ? rest.join(' ') : undefined });
+}
+
+for (const [constName, preset] of Object.entries(LEGACY_FORMATIONS)) {
+  const docs = formationDocs.get(constName);
+  if (!docs) throw new Error(`No doc comment for formation ${constName}`);
+  const record = Formation.parse({ id: formationIdOf(constName), ...docs, offense: preset.offense, defense: preset.defense });
+  formationRecords.set(record.id, record);
+  write('formations', [record.id], record);
+}
+
+// Plays name their preset only through an import, so find it in the source.
+const presetOfPlay = new Map<string, string>();
+const scanSchemes = (dir: string): void => {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) { scanSchemes(full); continue; }
+    const source = fs.readFileSync(full, 'utf-8');
+    const constName = /import \{ (\w+) \} from '\.\.\/\.\.\/formations'/.exec(source)?.[1];
+    const playId = /\bid: '([^']+)',\s*\n\s*name:/.exec(source)?.[1];
+    if (constName && playId) presetOfPlay.set(playId, formationIdOf(constName));
+  }
+};
+scanSchemes(path.resolve(import.meta.dirname, '../src/data/schemes'));
 
 for (const family of ALL_SCHEME_FAMILIES) {
   if (!family.era) notes.push(`${family.id}: no era in legacy data, defaulted to "modern-nfl"`);
@@ -66,6 +103,7 @@ for (const family of ALL_SCHEME_FAMILIES) {
       name: play.name,
       personnel: play.personnel,
       formation: play.formation,
+      formationId: presetOfPlay.get(play.id),
       situation: play.situation,
       coverage: play.coverage,
       frontName: play.frontName,
@@ -75,12 +113,19 @@ for (const family of ALL_SCHEME_FAMILIES) {
       provenance: { confidence: 'illustrative', sources: [] },
     }));
 
-    write('tracks', [family.id, play.id], Tracks.parse({
+    const tracks = Tracks.parse({
       conceptId: play.id,
       duration: play.duration,
       offense: play.offense,
       defense: play.defense,
-    }));
+    });
+    write('tracks', [family.id, play.id], tracks);
+
+    const preset = formationRecords.get(presetOfPlay.get(play.id) ?? '');
+    const overrides = preset ? alignmentOverrides(preset, tracks) : [];
+    if (preset && overrides.length > 0) {
+      notes.push(`${play.id}: starts ${overrides.map((o) => o.id).join(', ')} off the "${preset.id}" preset`);
+    }
   });
 }
 

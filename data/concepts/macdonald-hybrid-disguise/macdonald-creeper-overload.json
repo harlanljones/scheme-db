@@ -6,6 +6,7 @@
   "name": "4-Man Creeper Fire Zone (Sim Blitz)",
   "personnel": "Nickel 3-3-5 Sim Front",
   "formation": "Amoeba Sim Look vs 11P Gun 2x2",
+  "formationId": "macdonald-mug-amoeba-vs-11p",
   "situation": "3rd & 5, +40, known passing down",
   "coverage": "Cover 3 Cloud (3-Deep, 4-Under Creeper)",
   "frontName": "4-Man Simulated Creeper Pressure",

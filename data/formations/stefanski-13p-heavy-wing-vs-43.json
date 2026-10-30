@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/formation.schema.json",
+  "id": "stefanski-13p-heavy-wing-vs-43",
+  "name": "Kevin Stefanski 13 Personnel Heavy Wing Right vs 4-3 Over Front (Cover 3 Sky)",
+  "description": "Heavy condensed front with 3 tight ends (Inline Y, Wing F, Backside Inline U).",
+  "offense": {
+    "C": { "x": 26.67, "y": -0.4 },
+    "LG": { "x": 25, "y": -0.4 },
+    "LT": { "x": 23.3, "y": -0.4 },
+    "RG": { "x": 28.3, "y": -0.4 },
+    "RT": { "x": 30, "y": -0.4 },
+    "Y": { "x": 31.8, "y": -0.5 },
+    "F": { "x": 33.6, "y": -0.8 },
+    "U": { "x": 21.6, "y": -0.5 },
+    "QB": { "x": 26.67, "y": -1.8 },
+    "RB": { "x": 26.67, "y": -4.8 },
+    "X": { "x": 9, "y": -0.5 }
+  },
+  "defense": {
+    "WDE": { "x": 20.2, "y": 0.9 },
+    "NT": { "x": 25.8, "y": 0.9 },
+    "3T": { "x": 29.2, "y": 0.9 },
+    "SDE": { "x": 34.8, "y": 0.9 },
+    "WILL": { "x": 21.5, "y": 4.5 },
+    "MIKE": { "x": 26.5, "y": 4.8 },
+    "SAM": { "x": 33, "y": 4 },
+    "LCB": { "x": 9, "y": 6.5 },
+    "RCB": { "x": 42, "y": 7.5 },
+    "SS": { "x": 35, "y": 8.5 },
+    "FS": { "x": 26.67, "y": 13.5 }
+  }
+}

@@ -6,6 +6,7 @@
   "name": "Zone-Read RB Draw Package",
   "personnel": "10",
   "formation": "10P Gun Spread 2x2 vs Nickel",
+  "formationId": "kelly-10p-tempo-spread-vs-nickel",
   "situation": "1st & 10, +25, tempo snap into a light nickel box before the defense can add a hat",
   "coverage": "Nickel Cover 3 Sky",
   "frontName": "Nickel 4-2-5 Over Front",

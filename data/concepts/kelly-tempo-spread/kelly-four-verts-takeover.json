@@ -6,6 +6,7 @@
   "name": "Four Verts Takeover vs Two-High",
   "personnel": "10",
   "formation": "10P Gun Spread 2x2 vs Nickel",
+  "formationId": "kelly-10p-tempo-spread-vs-nickel",
   "situation": "2nd & 8, +45, snapped at tempo against a two-high shell that hasn't settled its rotation",
   "coverage": "Quarters Two-High",
   "frontName": "Nickel 4-2-5 Over Front",

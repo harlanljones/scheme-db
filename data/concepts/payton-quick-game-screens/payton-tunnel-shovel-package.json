@@ -6,6 +6,7 @@
   "name": "Tunnel Screen Shovel Package",
   "personnel": "11",
   "formation": "11P Gun Spread 2x2 vs Nickel",
+  "formationId": "payton-11p-gun-spread-vs-nickel",
   "situation": "2nd & 4, +40",
   "coverage": "Nickel Cover 1 Robber",
   "frontName": "Nickel 4-2-5 Under Front",

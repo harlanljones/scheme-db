@@ -38,6 +38,7 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
   for (const [kind, ids] of [
     ['scheme', ds.schemes.map((s) => s.id)],
     ['concept', ds.concepts.map((c) => c.id)],
+    ['formation', ds.formations.map((f) => f.id)],
     ['coach', ds.coaches.map((c) => c.id)],
     ['lineage', ds.lineages.map((l) => l.id)],
     ['term', ds.glossary.map((t) => t.id)],
@@ -55,6 +56,14 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
   for (const scheme of ds.schemes) {
     if (!coachIds.has(scheme.coachId)) problems.push(`Scheme "${scheme.id}" references unknown coach "${scheme.coachId}"`);
     if (!ds.concepts.some((c) => c.schemeId === scheme.id)) problems.push(`Scheme "${scheme.id}" has no concepts`);
+  }
+
+  const formationsById = new Map(ds.formations.map((f) => [f.id, f]));
+  for (const formation of ds.formations) {
+    for (const side of ['offense', 'defense'] as const) {
+      const count = Object.keys(formation[side]).length;
+      if (count !== 11) problems.push(`Formation "${formation.id}" has ${count} ${side} players, expected 11`);
+    }
   }
 
   const ordersByScheme = new Map<string, number[]>();
@@ -79,6 +88,18 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     if (!tracks) {
       problems.push(`Concept "${concept.id}" has no tracks record`);
       continue;
+    }
+    if (concept.formationId) {
+      const formation = formationsById.get(concept.formationId);
+      if (!formation) {
+        problems.push(`Concept "${concept.id}" references unknown formation "${concept.formationId}"`);
+      } else {
+        for (const side of ['offense', 'defense'] as const) {
+          const trackIds = new Set(tracks[side].map((player) => player.id));
+          const missing = Object.keys(formation[side]).filter((label) => !trackIds.has(label));
+          if (missing.length > 0) problems.push(`Concept "${concept.id}" has no ${side} track for formation "${formation.id}" players ${missing.join(', ')}`);
+        }
+      }
     }
     for (const problem of validatePlay(asPlay(concept, tracks))) problems.push(`Concept "${concept.id}": ${problem}`);
   }
@@ -120,6 +141,7 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     };
     ds.schemes.forEach((r, i) => expected('schemes', i, `schemes/${r.id}.json`));
     ds.concepts.forEach((r, i) => expected('concepts', i, `concepts/${r.schemeId}/${r.id}.json`));
+    ds.formations.forEach((r, i) => expected('formations', i, `formations/${r.id}.json`));
     ds.tracks.forEach((r, i) => {
       const scheme = ds.concepts.find((c) => c.id === r.conceptId)?.schemeId;
       if (scheme) expected('tracks', i, `tracks/${scheme}/${r.conceptId}.json`);

@@ -6,6 +6,7 @@
   "name": "Mesh Shallow Cross",
   "personnel": "11",
   "formation": "11P Gun Trips Right",
+  "formationId": "reid-11p-gun-trips-vs-mofo",
   "situation": "2nd & 6, +35, boundary hash",
   "coverage": "Cover 2 / Quarters MOFO",
   "frontName": "Nickel 4-2-5 Over Front",

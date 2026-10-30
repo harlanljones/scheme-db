@@ -6,6 +6,7 @@
   "name": "Fast Screen Convoy Right",
   "personnel": "11",
   "formation": "11P Gun Spread 2x2 vs Nickel",
+  "formationId": "payton-11p-gun-spread-vs-nickel",
   "situation": "1st & 10, +25",
   "coverage": "Nickel Cover 3 Buzz",
   "frontName": "Nickel 4-2-5 Over Front",

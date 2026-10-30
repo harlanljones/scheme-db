@@ -6,6 +6,7 @@
   "name": "Jet Sweep PA Deep Post",
   "personnel": "11",
   "formation": "11P Gun Spread 2x2 vs Nickel",
+  "formationId": "payton-11p-gun-spread-vs-nickel",
   "situation": "1st & 10, own 25",
   "coverage": "Cover 6 (Quarter-Quarter-Half)",
   "frontName": "Nickel 4-2-5 Over Front",

@@ -103,6 +103,8 @@ export const Concept = z.strictObject({
   name: text,
   personnel: text,
   formation: text,
+  /** The pre-snap alignment preset this concept starts from. Its tracks may move individual players off it. */
+  formationId: slug.optional(),
   situation: text,
   coverage: text,
   frontName: text,
@@ -126,6 +128,22 @@ export const Tracks = z.strictObject({
   generatedFrom: GeneratedFrom.optional(),
   offense: z.array(PlayerTrack),
   defense: z.array(PlayerTrack),
+});
+
+/** Where a player lines up before the snap, in the same LOS-relative yards as waypoints. */
+export const Alignment = z.strictObject({
+  x: z.number().min(0).max(53.33),
+  y: z.number(),
+});
+
+/** Pre-snap alignment preset: the 11 offensive and 11 defensive players, keyed by their track id. */
+export const Formation = z.strictObject({
+  $schema: schemaRef,
+  id: slug,
+  name: text,
+  description: text.optional(),
+  offense: z.record(text, Alignment),
+  defense: z.record(text, Alignment),
 });
 
 export const Scheme = z.strictObject({
@@ -196,6 +214,8 @@ export const Term = z.strictObject({
 
 export type Concept = z.infer<typeof Concept>;
 export type Tracks = z.infer<typeof Tracks>;
+export type Formation = z.infer<typeof Formation>;
+export type Alignment = z.infer<typeof Alignment>;
 export type Scheme = z.infer<typeof Scheme>;
 export type Coach = z.infer<typeof Coach>;
 export type Lineage = z.infer<typeof Lineage>;
@@ -207,6 +227,7 @@ export const RECORD_KINDS = {
   schemes: Scheme,
   concepts: Concept,
   tracks: Tracks,
+  formations: Formation,
   coaches: Coach,
   lineages: Lineage,
   glossary: Term,
@@ -218,6 +239,7 @@ export interface Dataset {
   schemes: Scheme[];
   concepts: Concept[];
   tracks: Tracks[];
+  formations: Formation[];
   coaches: Coach[];
   lineages: Lineage[];
   glossary: Term[];
