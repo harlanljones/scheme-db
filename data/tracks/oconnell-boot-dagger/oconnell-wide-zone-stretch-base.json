@@ -1,0 +1,328 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "oconnell-wide-zone-stretch-base",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach the backside shade, hand-fight and climb to the second level",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 28, "y": -0.1, "note": "Reach step right" },
+        { "t": 1, "x": 29, "y": 0.4, "note": "Drive off NT" },
+        { "t": 2.2, "x": 30.5, "y": 1.2, "note": "Climb to MIKE" },
+        { "t": 4, "x": 32, "y": 2.5, "note": "Seal second level" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Cover down the reach track, overtake NT and climb to WILL",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 26.3, "y": -0.1, "note": "Lateral reach step" },
+        { "t": 1, "x": 27.5, "y": 0.3, "note": "Overtake NT" },
+        { "t": 2.2, "x": 29, "y": 1.2, "note": "Climb to WILL" },
+        { "t": 4, "x": 30.5, "y": 2.8, "note": "Wall off backside pursuit" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Backside reach on WDE, keep contain defender pinned inside",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 24.6, "y": -0.1, "note": "Bucket-reach WDE" },
+        { "t": 1, "x": 25.8, "y": 0.3, "note": "Head across WDE" },
+        { "t": 2.2, "x": 27.2, "y": 1.2, "note": "Pin WDE inside" },
+        { "t": 4, "x": 28.8, "y": 2.8, "note": "Maintain cutoff" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach the 3-tech, climb to playside linebacker",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 29.6, "y": -0.1, "note": "Lateral reach step" },
+        { "t": 1, "x": 30.8, "y": 0.3, "note": "Drive off 3T" },
+        { "t": 2.2, "x": 32.2, "y": 1.2, "note": "Climb to MIKE" },
+        { "t": 4, "x": 33.8, "y": 2.8, "note": "Cut off MIKE from flow" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach SDE with TE help, then climb to the safety fill",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 31.3, "y": -0.1, "note": "Reach step on SDE" },
+        { "t": 1, "x": 32.5, "y": 0.4, "note": "Post SDE shoulder" },
+        { "t": 2.2, "x": 33.8, "y": 1.4, "note": "Climb past combo" },
+        { "t": 4, "x": 35.2, "y": 3, "note": "Cut off SS fill" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Playside kick-out on SDE, seal the edge for the stretch path",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Snap" },
+        { "t": 0.5, "x": 33.2, "y": 0, "note": "Drive step to SDE" },
+        { "t": 1, "x": 34.2, "y": 0.9, "note": "Fit on SDE edge" },
+        { "t": 2.2, "x": 34.8, "y": 2, "note": "Kick SDE out" },
+        { "t": 4, "x": 35.4, "y": 3.2, "note": "Edge sealed" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Open right at the mesh, ride the stretch fake, reverse-pivot carry-out",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap from gun" },
+        { "t": 0.5, "x": 28.2, "y": -4.2, "note": "Open right to mesh" },
+        { "t": 1.2, "x": 29.8, "y": -4, "note": "Extend mesh ride" },
+        { "t": 2.4, "x": 28.2, "y": -4.6, "note": "Reverse pivot carry-out" },
+        { "t": 4, "x": 27.6, "y": -4.4, "note": "Hold fake, eyes downfield" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Press the mesh, take the stretch path right, read bend-bang-bounce",
+      "waypoints": [
+        { "t": 0, "x": 29.8, "y": -4.8, "note": "Snap alignment" },
+        { "t": 0.5, "x": 28.8, "y": -3.8, "note": "Mesh point" },
+        { "t": 1.2, "x": 31.5, "y": -3.2, "note": "Take ball, flatten path" },
+        { "t": 2.2, "x": 34.5, "y": -2, "note": "Press sideline stretch" },
+        { "t": 3.2, "x": 36, "y": -0.5, "note": "Approach LOS, read edge" },
+        { "t": 4, "x": 37, "y": 3, "note": "Bend upfield behind blocks" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Backside X stalk-blocks LCB, never lets corner trigger downhill",
+      "waypoints": [
+        { "t": 0, "x": 9.5, "y": -0.5, "note": "Release off LOS" },
+        { "t": 1, "x": 10.2, "y": 2.5, "note": "Drive at LCB" },
+        { "t": 2.2, "x": 10.8, "y": 5, "note": "Engage stalk block" },
+        { "t": 4, "x": 11, "y": 7, "note": "Sustain block" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Condensed slot works to perimeter, blocks the sky safety fill",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": -1.2, "note": "Release" },
+        { "t": 0.9, "x": 35.2, "y": 1.8, "note": "Work outside shoulder of SAM" },
+        { "t": 2, "x": 35.6, "y": 4.5, "note": "Find SS fill" },
+        { "t": 4, "x": 35.8, "y": 6.5, "note": "Block force defender" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Condensed flanker reach-blocks RCB to spring the perimeter",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": -0.8, "note": "Release" },
+        { "t": 0.9, "x": 38.3, "y": 2, "note": "Attack RCB leverage" },
+        { "t": 2, "x": 39.2, "y": 4.8, "note": "Engage RCB" },
+        { "t": 4, "x": 40, "y": 6.8, "note": "Finish block" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Backside C-gap contain, reached and pinned inside by LT",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Contain alignment" },
+        { "t": 0.9, "x": 22.2, "y": 1.3, "note": "Reached by LT" },
+        { "t": 2.2, "x": 23.4, "y": 1.6, "note": "Pinned inside" },
+        { "t": 4, "x": 24.2, "y": 2, "note": "Unable to pursue" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Shade nose, absorb center/guard reach combination",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Shade alignment" },
+        { "t": 0.9, "x": 26.8, "y": 1.2, "note": "Double-teamed down line" },
+        { "t": 2.2, "x": 28, "y": 1.6, "note": "Washed by reach" },
+        { "t": 4, "x": 29, "y": 2.2, "note": "Blocked out of flow" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "3-tech in B-gap, reached laterally by RG",
+      "waypoints": [
+        { "t": 0, "x": 29.2, "y": 0.9, "note": "3-tech alignment" },
+        { "t": 0.9, "x": 30.3, "y": 1.2, "note": "RG reaches across face" },
+        { "t": 2.2, "x": 31.4, "y": 1.6, "note": "Washed down the line" },
+        { "t": 4, "x": 32.4, "y": 2.2, "note": "Sealed from crease" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "D-gap edge setter, kicked out by TE and boxed by RT",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Edge alignment" },
+        { "t": 0.9, "x": 33.9, "y": 1.4, "note": "TE drive step into him" },
+        { "t": 2.2, "x": 34.6, "y": 2, "note": "Boxed outside by RT" },
+        { "t": 4, "x": 35.2, "y": 2.8, "note": "Edge sealed wide" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Backside LB, chase the stretch over the top after initial delay",
+      "waypoints": [
+        { "t": 0, "x": 23, "y": 4.5, "note": "Pre-snap read" },
+        { "t": 1, "x": 24.8, "y": 4.2, "note": "Slow trigger backside" },
+        { "t": 2.2, "x": 27.2, "y": 3.8, "note": "Reads wash, starts chase" },
+        { "t": 3.2, "x": 30.2, "y": 3.4, "note": "Chasing over the top" },
+        { "t": 4, "x": 33, "y": 3.6, "note": "Trailing the play" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Playside flow linebacker — key defender, flows over the top and gets cut off",
+      "waypoints": [
+        { "t": 0, "x": 27.5, "y": 4.8, "note": "Keyed on backfield" },
+        { "t": 0.7, "x": 29.5, "y": 4.4, "note": "Immediate flow right" },
+        { "t": 1.5, "x": 31.5, "y": 3.6, "note": "Running the sideline" },
+        { "t": 2.6, "x": 33.2, "y": 2.8, "note": "Over-the-top pursuit" },
+        { "t": 4, "x": 34.8, "y": 3.2, "note": "Cut off by RG climb" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong-side LB sets the edge vs the kick-out, forced wide by TE",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": 3.8, "note": "Apex alignment" },
+        { "t": 1, "x": 33.8, "y": 3.4, "note": "Trigger to edge" },
+        { "t": 2.2, "x": 34.9, "y": 2.8, "note": "Setting edge vs TE" },
+        { "t": 4, "x": 35.8, "y": 3, "note": "Forced up the field" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Boundary CB triggers on run, absorbed by X stalk",
+      "waypoints": [
+        { "t": 0, "x": 9.5, "y": 6.5, "note": "Off coverage" },
+        { "t": 1.2, "x": 10.2, "y": 5.4, "note": "Trigger on run read" },
+        { "t": 2.4, "x": 10.8, "y": 4.6, "note": "Met by X stalk" },
+        { "t": 4, "x": 11, "y": 4.2, "note": "Blocked out of pursuit" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field CB run-force trigger, engaged by Z reach",
+      "waypoints": [
+        { "t": 0, "x": 40, "y": 6.5, "note": "Off coverage" },
+        { "t": 1.2, "x": 39.4, "y": 5.2, "note": "Trigger downhill" },
+        { "t": 2.4, "x": 39, "y": 4.2, "note": "Engaged by Z" },
+        { "t": 4, "x": 39.2, "y": 3.6, "note": "Blocked on perimeter" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Sky safety is the force player, fills outside against the stretch",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 9.5, "note": "Sky alignment" },
+        { "t": 1, "x": 35, "y": 7, "note": "Reading run, rolling down" },
+        { "t": 2.2, "x": 36, "y": 4.8, "note": "Filling as force player" },
+        { "t": 4, "x": 36.4, "y": 3.4, "note": "Meeting RB at the edge" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle third, late alley fill once run confirms",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": 13.5, "note": "Middle-third alignment" },
+        { "t": 1.5, "x": 26.5, "y": 11.5, "note": "Reading flow" },
+        { "t": 3, "x": 29, "y": 9.5, "note": "Breaking down on run" },
+        { "t": 4, "x": 31.5, "y": 8, "note": "Late alley fill" }
+      ]
+    }
+  ]
+}

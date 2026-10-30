@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "carroll-saleh-wide9",
+  "name": "Pete Carroll / Robert Saleh Wide-9 & Match Tree",
+  "patriarch": "Pete Carroll → Robert Saleh",
+  "side": "defense",
+  "description": "A defensive system defined by pure physical dominance and gap-integrity. Employs wide-9 defensive end splits and penetrating 3-techniques to create organic 4-man pressure, backed by disciplined Cover 3 Rip/Liz Match, split-field Cover 6 bracket coverages, and A-gap cross-dog fire zones.",
+  "rootNodes": [
+    {
+      "coachId": "pete-carroll",
+      "children": [
+        {
+          "coachId": "robert-saleh",
+          "children": [
+            {
+              "coachId": "demeco-ryans",
+              "children": []
+            }
+          ]
+        },
+        {
+          "coachId": "dan-quinn",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

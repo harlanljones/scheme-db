@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "fz-safety-rotate-fire",
+  "schemeId": "lebeau-fire-zone",
+  "order": 2,
+  "name": "Safety Rotate Fire Zone",
+  "personnel": "3-4 Fire Zone Nickel",
+  "formation": "11P Gun Slot Right vs Two-High Disguise Shell",
+  "situation": "2nd & 8, +38, passing down",
+  "coverage": "Cover 3 Rotation Fire Zone (3-Deep / 3-Under)",
+  "frontName": "Odd Front Cover 2 Show",
+  "summary": {
+    "motive": "Show a static Cover 2 shell to bait quick-game answers, then rotate to single-high Cover 3 fire zone coverage behind five-man pressure.",
+    "keyDefender": "Strong safety executing the downhill rotation",
+    "whyItWorks": "Quick-game timing assumes two-deep help; when the shell rotates and an extra dog comes, the QB is squeezed between a disappearing window and a free blitzer.",
+    "failureMode": "The offense tags a hot throw to the boundary flat before the rotation finishes, hitting the void left by the rolling safety."
+  },
+  "beats": [
+    {
+      "t": 0.3,
+      "title": "1. The Cover 2 Illusion",
+      "text": "Both safeties split the field at nine-plus yards and both corners press, painting a textbook two-deep shell that invites the quick slant-flat game.",
+      "focus": ["SS", "FS", "LCB", "RCB"]
+    },
+    {
+      "t": 1,
+      "title": "2. The Rotation Trigger",
+      "text": "At the snap the strong safety sprints downhill while the free safety backpedals to the post and both corners flip their hips into a three-deep bail.",
+      "focus": ["SS", "FS", "LCB", "RCB"]
+    },
+    {
+      "t": 2,
+      "title": "3. The Five-Man Surge",
+      "text": "With four linemen charging plus the WILL dogging the weak A-gap, the running back is caught scanning the wrong side and the interior gives way.",
+      "focus": ["WILL", "NT", "QB", "RB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Hit in the Rotation Window",
+      "text": "The QB hesitates between his crosser and comeback, and the unblocked WILL arrives exactly in the gap created by the safety rotation.",
+      "focus": ["WILL", "QB", "H"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["fz-safety-blitz-smoke"],
+    "playsOff": ["fz-triple-inside-fire"],
+    "tell": "Both safeties start at equal nine-yard depths like true Cover 2 halves; the tell is the strong safety leaning forward in his pedal at the snap instead of backpedaling."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

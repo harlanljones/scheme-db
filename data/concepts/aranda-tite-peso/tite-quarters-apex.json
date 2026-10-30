@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "tite-quarters-apex",
+  "schemeId": "aranda-tite-peso",
+  "order": 3,
+  "name": "Quarters Apex Adjustment vs 2x2",
+  "personnel": "Peso Dime (4 DL + 2 LB + Rover + 4 DB)",
+  "formation": "10P Gun 2x2 Spread (Mesh Concept)",
+  "situation": "3rd & 5, midfield, spread passing down",
+  "coverage": "Split-Field Quarters With Apex Match",
+  "frontName": "Tite Front (4i-0-4i Box, Apex Overload)",
+  "summary": {
+    "motive": "Give every slot receiver both an underneath apex defender and a matching quarter safety so a two-by-two mesh concept can never isolate anyone or occupy both deep halves.",
+    "keyDefender": "SS — the strong quarter whose carry rule converts the seam into a double team the moment Y goes vertical",
+    "whyItWorks": "Quarters pattern-match rules answer every #2 route automatically: vertical gets carried, underneath gets sunk behind, and the apexes play man through the middle while the rover robs the mesh point.",
+    "failureMode": "Attacking the light box before routes develop — only three linemen and two apex defenders stand between the quarterback and an inside run or quick pressure."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. Apex Overload on Both Twos",
+      "text": "Against two-by-two, both apex backers align directly over the slots rather than in B-gaps, giving each #2 receiver an underneath defender plus a matching quarter safety. The tite box stays intact behind them.",
+      "focus": ["WILL", "MIKE", "FS", "SS"]
+    },
+    {
+      "t": 1,
+      "title": "2. Seam Meets the Carry Rule",
+      "text": "The strong slot releases vertical and the strong quarter immediately carries — quarters means the safety takes all vertical #2s. MIKE walls the seam from underneath, building an instant double team.",
+      "focus": ["Y", "SS", "MIKE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Underneath #2 Sinks the Weak Quarter",
+      "text": "The weak slot drags under, flipping the weak quarter’s read: #2 under means sink, not chase. He drops to the deep quarter while the apex turns and runs with the crosser man-to-man.",
+      "focus": ["H", "FS", "WILL"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Crosser Runs Into the Rob",
+      "text": "The quarterback forces the drag a beat late and the ball arrives into a three-defender convergence: trailing apex, robbing peso, sinking quarter behind. Every window the mesh tried to create already had a name on it.",
+      "focus": ["QB", "PESO", "WILL", "H"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["tite-base-zone-read"],
+    "playsOff": ["tite-sim-pressure"],
+    "tell": "Both linebackers aligned directly OVER the slots at apex depth instead of stacked in the B-gap boxes — the pure quarters-overload picture reserved for two-by-two."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

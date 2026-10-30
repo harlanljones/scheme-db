@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "payton-fast-screen-convoy",
+  "schemeId": "payton-quick-game-screens",
+  "order": 2,
+  "name": "Fast Screen Convoy Right",
+  "personnel": "11",
+  "formation": "11P Gun Spread 2x2 vs Nickel",
+  "situation": "1st & 10, +25",
+  "coverage": "Nickel Cover 3 Buzz",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Get the ball to the perimeter instantly, before any rush or coverage reaction can develop, and let a two-man convoy block the only defenders who trigger correctly.",
+    "keyDefender": "Mike Linebacker (screen-side chaser)",
+    "whyItWorks": "The ball leaves at 0.6 seconds — faster than any pressure plan — and the guards’ two-count pass-set sell buys clean release paths; the TE and H form the convoy while the MIKE’s correct trigger still forces him into a losing lateral chase through traffic.",
+    "failureMode": "A RCB who beats the H arc to the catch point and a NICKEL who slips the TE log quickly — if the first two defenders to arrive make immediate tackles, the screen becomes a wasted down."
+  },
+  "beats": [
+    {
+      "t": 0.15,
+      "title": "1. The Pre-Loaded Throw",
+      "text": "This is a called shot, not a read: the QB takes a half hitch and delivers by 0.6 seconds. Every defensive reaction after that is happening to a ball that is already gone.",
+      "focus": ["QB", "Z", "MIKE"]
+    },
+    {
+      "t": 0.65,
+      "title": "2. OL Sells Set, Then Releases",
+      "text": "The guards sold two counts of drop-back protection, freezing the interior rush — then both slip out. The 3T is still fighting a punch that no longer exists while his target runs the other way.",
+      "focus": ["LG", "RG", "3T", "SDE"]
+    },
+    {
+      "t": 1.3,
+      "title": "3. Convoy Forms",
+      "text": "TE logs the apex NICKEL at the line and H cracks the RCB in the alley, building a moving wall before Z even reaches full speed. Two blockers for every defender who triggered properly.",
+      "focus": ["TE", "H", "NICKEL", "RCB"]
+    },
+    {
+      "t": 2.2,
+      "title": "4. MIKE Chases Laterally",
+      "text": "The MIKE triggers correctly but must run sideways through traffic while the released guards climb to the second level. This lateral chase against a moving convoy is exactly the geometry Payton wants.",
+      "focus": ["MIKE", "Z", "RG", "SS"]
+    },
+    {
+      "t": 3.2,
+      "title": "5. Turn the Corner",
+      "text": "With the SS forced into an over-the-top run-down and the FS taking a hopeless angle from middle field, Z presses the numbers behind the RT escort. Six blockers, eleven yards of green.",
+      "focus": ["Z", "SS", "FS", "RT"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["payton-tunnel-shovel-package"],
+    "playsOff": ["mcdaniel-cheat-motion-toss"],
+    "tell": "The ball is out at ~0.6s with zero route development, and the TE plus slot sprint into blocking arcs instead of routes — pure convoy geometry."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stack335-zero-empty",
+  "schemeId": "rlong-335-stack",
+  "order": 4,
+  "name": "All-Out Zero Pressure vs Empty",
+  "personnel": "Base 3-3-5 Stack (3 DL + 3 LB + 5 DB)",
+  "formation": "Empty Gun 5-Wide vs Stack",
+  "situation": "4th & 3, opponent +38, do-or-die down",
+  "coverage": "Zero Man (No Deep Help)",
+  "frontName": "3-3-5 Stack (All-Out Zero Committee)",
+  "summary": {
+    "motive": "Punish empty-protection math with a six-man committee so five blockers always face one extra rusher while every receiver is stranded alone in zero man coverage.",
+    "keyDefender": "MIKE mugged over the A-gap — the free runner up the middle whose arrival coincides exactly with the forced throw",
+    "whyItWorks": "An empty backfield removes every extra protector and checkdown outlet; six rushers versus five blockers guarantee a free hat, and straight man coverage leaves no soft zone for hot throws to escape into.",
+    "failureMode": "Quick stick-and-slant throws released on rhythm beat the rush before it lands — if the line slides correctly both ways, the defense has gambled everyone with nobody behind."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. Six Hats Walk Up Against Empty",
+      "text": "The offense empties the backfield, and the answer is immediate: Mike mugged over the A-gap at a yard, both edge backers walked to three, safeties creeping. Six potential rushers stand inside eight yards of an unprotectable quarterback.",
+      "focus": ["MIKE", "JACK", "SPUR"]
+    },
+    {
+      "t": 1,
+      "title": "2. Zero Call: All Six Go",
+      "text": "No dropper, no exchange, no disguise — every box defender fires his gap at once. The ends slant inside, the edges storm outside, the nose charges between the guards and the mugged Mike shoots behind them.",
+      "focus": ["LE", "NOSE", "RE", "JACK", "MIKE", "SPUR"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Five Blockers Cannot Match Six",
+      "text": "The math was settled at the snap: with no back to help, five linemen must handle six rushers moving in four different directions. The interior pinches around the nose while both edges bend toward the quarterback.",
+      "focus": ["C", "RG", "RT", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Hit As He Throws",
+      "text": "The hot slant comes out on time — and still dies, because zero man means the weak safety is sitting on it with inside leverage while the free-hitting Mike arrives through the A-gap. Pressure and coverage arrive together.",
+      "focus": ["QB", "MIKE", "WS", "H"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["stack335-double-edge-storm"],
+    "tell": "Both safeties AND a linebacker aligned at LOS-level depth against empty — pure zero has nobody deeper than seven yards except the corners."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

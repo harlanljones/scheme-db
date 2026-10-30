@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "minter-double-mug-peel",
+  "schemeId": "minter-amoeba-creeper",
+  "order": 4,
+  "name": "Double-A Mug Cover 0 Peel Blitz",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Double-A Gap Mug Front vs 11P Gun 2x2",
+  "situation": "3rd & 3, +22, red zone strike zone high-pressure down",
+  "coverage": "Cover 0 Peel (Aggressive Man Pressure with RB Peel Rule)",
+  "frontName": "Double-A Mug 6-Up Presentation",
+  "summary": {
+    "motive": "Create instant interior pressure with a Double-A gap blitz while utilizing a \"peel\" technique to automatically erase the offense’s built-in hot check to the running back.",
+    "keyDefender": "WILL (A-gap mug blitzer with peel responsibility) & MIKE (interior blitzer)",
+    "whyItWorks": "Offenses rely on the running back swing to punish all-out blitzes, but the peel technique turns the blitzer into an immediate flat defender while the remaining 5 rushers overwhelm 5 blockers.",
+    "failureMode": "A double-move route on the perimeter (sluggo / out-and-up) that wins before the 5-man rush can reach the quarterback."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Double-A Mug Presentation",
+      "text": "Jesse Minter lines up both inside linebackers (WILL & MIKE) in the A-gaps, forcing a 5-0 slide call from the offense and prompting the QB to check to a hot RB swing.",
+      "focus": ["WILL", "MIKE", "NT", "3T", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "Peel Rule Execution: WILL Matches RB Swing",
+      "text": "As the running back flares out on his hot route, WILL instantly peels off his A-gap rush to mirror the RB to the flat, while MIKE unleashes a devastating interior rush through the A-gap.",
+      "focus": ["WILL", "RB", "MIKE", "C"]
+    },
+    {
+      "t": 1.8,
+      "title": "Hot Read Taken Away & Press Man Chokes Routes",
+      "text": "The QB looks to dump the ball to his hot running back, but WILL is already in the flat smothering the route. All perimeter receivers are locked down in tight press-man.",
+      "focus": ["QB", "RB", "WILL", "LCB", "X"]
+    },
+    {
+      "t": 3.2,
+      "title": "MIKE Blows Through Center for the Sack",
+      "text": "With nowhere to go with the ball, the quarterback is engulfed by MIKE powering through the Center and WDE closing off the edge.",
+      "focus": ["MIKE", "WDE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["minter-amoeba-fire-zone3", "minter-cover1-robber-lurk"],
+    "tell": "Both A-gap linebackers mug pre-snap, with WILL peeling to cover the flaring RB while MIKE rushes the A-gap and corners play press man"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "stefanski-multi-te-gap",
+  "name": "Kevin Stefanski's Multi-TE Gap & Under-Center Play-Action Family",
+  "coachId": "kevin-stefanski",
+  "team": "Atlanta Falcons",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "shanahan-kubiak",
+  "description": "Master of condensed multi-tight end structures, violent pin-and-pull gap schemes, GT counter lead concepts, and deep play-action seam/bootleg shots. Kevin Stefanski builds an overpowering offensive machine founded on angle blocking, devastating complementary under-center fakes, and high-efficiency vertical passing off run action."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "option-spread",
+  "name": "College Option & Spread Revolution Tree",
+  "patriarch": "Paul Johnson / Urban Meyer / Chris Ault / Art Briles",
+  "side": "offense",
+  "description": "Four parallel college revolutions that reshaped the run-pass interface: the flexbone triple option’s mathematical pitch geometry, Meyer’s spread-option zone read, Ault’s Pistol downhill physics, and Briles’ vertical choice shots off run action.",
+  "rootNodes": [
+    {
+      "coachId": "paul-johnson",
+      "children": []
+    },
+    {
+      "coachId": "urban-meyer",
+      "children": []
+    },
+    {
+      "coachId": "chris-ault",
+      "children": []
+    },
+    {
+      "coachId": "art-briles",
+      "children": []
+    }
+  ]
+}

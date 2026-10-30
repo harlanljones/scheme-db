@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sweep-sweep-pass-bootleg",
+  "schemeId": "t-formation-power-sweep",
+  "order": 4,
+  "name": "Sweep-Pass Bootleg",
+  "personnel": "21",
+  "formation": "T Formation, End Right, Flanker Right",
+  "situation": "2nd & 7, own 38, after two sweep gains",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Convert sweep credibility into a moving-pocket flood throw against defenders frozen by run fits.",
+    "keyDefender": "Sam Linebacker (strong-hook defender)",
+    "whyItWorks": "Every run-fit defender commits left for two seconds; when the quarterback reverses, the flood presents three levels against a defense running the wrong way.",
+    "failureMode": "The backside contain refuses the sweep bait and squeezes the rollout lane, forcing the throw early or forcing a scramble."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Perfect Sweep Picture",
+      "text": "Both guards pull, the fullback dives, and the halfback crosses for the handoff — an identical copy of the play that has already gained yards twice.",
+      "focus": ["LG", "RG", "HB", "FB"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Full Carry-Out Left",
+      "text": "The quarterback completes the fake at depth and carries it two full steps toward the weak sideline while Will, the Mike, and the corner all chase left.",
+      "focus": ["QB", "WILL", "LCB", "MIKE"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. The Flood Forms Behind Him",
+      "text": "As the quarterback reverses into his rollout right, three receivers are already stacked at fifteen, ten, and minus-two depths — a full high-to-low flood.",
+      "focus": ["LE", "Z", "HB", "RE"]
+    },
+    {
+      "t": 3.7,
+      "title": "4. The High-Low Answer",
+      "text": "The sky safety is pinned above the TE's deep route, so the quarterback throws to the ten-yard out where the Sam arrives a half-second late.",
+      "focus": ["QB", "Z", "SAM"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sweep-power-sweep-left", "sweep-power-sweep-right-boot-fake"],
+    "playsOff": ["sweep-power-sweep-left"],
+    "tell": "The tight end releases vertically instead of blocking — no true Lombardi sweep shows an end running a pass route."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "lafleur-wide-zone-cutback",
+  "schemeId": "lafleur-illusion-packers",
+  "order": 1,
+  "name": "Wide Zone Cutback (Illusion Flow)",
+  "personnel": "12",
+  "formation": "Singleback Wing Left, Condensed Right",
+  "situation": "1st & 10, Own 35, base down",
+  "coverage": "Cover 3 Match",
+  "frontName": "4-3 Under Front",
+  "summary": {
+    "motive": "Create wide horizontal stretch with 12-personnel under-center flow to force linebackers to overpursue and open a devastating backside cutback lane.",
+    "keyDefender": "Mike Linebacker (Playside Flow Linebacker)",
+    "whyItWorks": "The threat of the perimeter reach forces second-level defenders to sprint horizontally; the backside boot fake freezes edge pursuit, creating a massive cutback seam.",
+    "failureMode": "Backside 3-technique DT shooting the B-gap immediately or playside 5-technique squeezing the reach block before the jump-cut can materialize."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Synchronized Zone Reach Flow",
+      "text": "The offensive line and playside TE fire in unison on 45-degree lateral angles. The back crosses over with rapid horizontal momentum aiming for the outside hip of the left tackle.",
+      "focus": ["LT", "LG", "C", "RB"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Illusory Stretch & Overpursuit",
+      "text": "The defense reacts to the heavy 12-personnel stretch. The Mike and Will linebackers scrape hard to the boundary to avoid getting hooked, while the backside DE and SS bite on the QB’s bootleg fake.",
+      "focus": ["MIKE", "WILL", "SDE", "SS", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Vertical Jump-Cut",
+      "text": "With the frontside defenders hooked and the second-level linebackers overrunning their gaps, the RB plants violently off his left foot and bends back into the wide-open A/B-gap cutback lane.",
+      "focus": ["RB", "RG", "RT", "C"]
+    },
+    {
+      "t": 3.8,
+      "title": "4. Second-Level Explosive Crease",
+      "text": "LG and RT finish their second-level climb blocks, sealing off the linebackers and paving an explosive 10+ yard north-south gain right through the heart of the defense.",
+      "focus": ["RB", "LG", "RT", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["lafleur-cross-country-post", "lafleur-pa-dagger-dig", "lafleur-pony-screen-wheel"],
+    "playsOff": [],
+    "tell": "Full offensive line lateral bucket steps with under-center RB taking the handoff and pressing the tackle landmark rather than QB keeping."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "rns-post-wheel-leverage-read",
+  "schemeId": "run-and-shoot",
+  "order": 3,
+  "name": "Post-Wheel Leverage Read",
+  "personnel": "10",
+  "formation": "Gun One-Back, 4-Wide Spread",
+  "situation": "1st & 10, +35, soft corners showing",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Punish soft bail coverage by selling a post stem and converting into a wheel that attacks the vacated outside third behind the corner's back.",
+    "keyDefender": "Left Corner (soft bail with eyes on QB)",
+    "whyItWorks": "The post stem freezes both the corner and the middle-third safety toward the middle, so the wheel breaks into space no defender is watching.",
+    "failureMode": "The corner plays with true outside leverage instead of bailing soft, squeezing the wheel against the sideline before it can build speed."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Pre-Snap Leverage Read",
+      "text": "X aligns and sees a soft-bail corner with eyes for the quarterback rather than a press shadow. The wheel is live before the snap; the post is only the sales pitch.",
+      "focus": ["X", "LCB", "QB"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Post Stem Sells the Middle",
+      "text": "X pushes an aggressive inside stem that reads like a post, pulling the free safety's attention and confirming the corner's belief that help is not needed outside.",
+      "focus": ["X", "FS", "H"]
+    },
+    {
+      "t": 2.3,
+      "title": "3. The Conversion to Wheel",
+      "text": "Reading the corner still flat-footed and staring at the QB, X plants off the stem and wheels outside into the void behind the bail.",
+      "focus": ["X", "LCB", "FS"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. The Sideline Shot",
+      "text": "The five-step timing arrives exactly as X rounds the wheel. The throw goes over the corner's late turn with the middle-third safety leaning the wrong way.",
+      "focus": ["QB", "X", "LCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["rns-switch-verticals", "rns-go-route-stab"],
+    "tell": "The receiver plants off an inside stem and accelerates away from the numbers — a called post never leaves its diagonal track."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "cross-dog-fire-hot",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block LB_A1 first crosser, blind to LB_A2 loop",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Pass set" },
+        { "t": 0.7, "x": 25.8, "y": -0.5, "note": "Engage LB_A1 penetrator" },
+        { "t": 1.8, "x": 25.5, "y": -1, "note": "Locked on LB_A1, LB_A2 loops free!" },
+        { "t": 4, "x": 25, "y": -1.5, "note": "Beaten by stunt" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block weak A-gap / help Center",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Inside set" },
+        { "t": 0.7, "x": 24.6, "y": -0.6, "note": "Double LB_A1" },
+        { "t": 1.8, "x": 24.4, "y": -1.2, "note": "Pushed back" },
+        { "t": 4, "x": 24, "y": -1.5, "note": "Pocket broken" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Kick slide to EDGE_L contain rush",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Kick slide" },
+        { "t": 0.7, "x": 22, "y": -0.9, "note": "Engage EDGE_L" },
+        { "t": 1.8, "x": 21.5, "y": -2.2, "note": "Maintain boundary seal" },
+        { "t": 4, "x": 21, "y": -3, "note": "Edge secure" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block LB_B1 strong B-gap rush",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Vertical set" },
+        { "t": 0.7, "x": 28, "y": -0.6, "note": "Engage LB_B1" },
+        { "t": 1.8, "x": 27.8, "y": -1.2, "note": "Anchored on B-gap" },
+        { "t": 4, "x": 27.5, "y": -1.8, "note": "Pocket collapsing" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block EDGE_R contain rush",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Kick slide" },
+        { "t": 0.7, "x": 32, "y": -0.8, "note": "Engage EDGE_R" },
+        { "t": 1.8, "x": 32.2, "y": -2.2, "note": "Sustain block" },
+        { "t": 4, "x": 32.5, "y": -3, "note": "Pocket squeezed" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "3-step drop, look hot to flat -> LB_A2 arrives unblocked on cross-dog stunt!",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap" },
+        { "t": 0.7, "x": 26.67, "y": -5, "note": "Drop 3 steps" },
+        { "t": 1.6, "x": 26.67, "y": -5, "note": "LB_A2 unblocked in face! Hurried throw to flat!" },
+        { "t": 2.2, "x": 26, "y": -6, "note": "Hit on release / incomplete throw" },
+        { "t": 4, "x": 25.5, "y": -7, "note": "Incomplete / 4th down" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Scan B-gap: engage LB_B2, leaving A-gap looping crosser free",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -4.5, "note": "Step to line" },
+        { "t": 0.7, "x": 27, "y": -2, "note": "Step up to pick LB_B2" },
+        { "t": 1.8, "x": 28.5, "y": -1.5, "note": "Occupied by LB_B2" },
+        { "t": 4, "x": 28, "y": -2, "note": "Overloaded" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary Quick Out route (Hot flat answer)",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Out release" },
+        { "t": 0.7, "x": 8.5, "y": 3, "note": "Stem 4yd" },
+        { "t": 1.8, "x": 5.5, "y": 5.5, "note": "Break to boundary flat, LURKER under-cuts!" },
+        { "t": 4, "x": 4, "y": 6, "note": "Contested throw" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Slot Quick Slant",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": -0.8, "note": "Slant release" },
+        { "t": 0.7, "x": 35, "y": 2.5, "note": "Inside break" },
+        { "t": 1.8, "x": 31, "y": 5, "note": "Clogged by FS hot robber drop" },
+        { "t": 4, "x": 28, "y": 6.5, "note": "No window" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Slot 10yd Dig over middle",
+      "waypoints": [
+        { "t": 0, "x": 41.5, "y": -0.8, "note": "Vertical stem" },
+        { "t": 0.7, "x": 41.5, "y": 4, "note": "Push depth" },
+        { "t": 1.8, "x": 38, "y": 8.5, "note": "Dig break inside" },
+        { "t": 4, "x": 34, "y": 9, "note": "Capped" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Field Go / Fade route",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": -0.5, "note": "Go route" },
+        { "t": 0.7, "x": 47, "y": 4.5, "note": "Vertical push" },
+        { "t": 1.8, "x": 47, "y": 12, "note": "Deep third carried by RCB" },
+        { "t": 4, "x": 47, "y": 19, "note": "Blanketed" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "EDGE_L",
+      "label": "EDG_L",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weak edge contain rush: pin LT and eliminate QB rollout",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 0.8, "note": "Mugged wide 9" },
+        { "t": 0.7, "x": 19.5, "y": -0.5, "note": "Contain rush" },
+        { "t": 1.8, "x": 20.5, "y": -3, "note": "Squeeze boundary edge" },
+        { "t": 4, "x": 23.5, "y": -5.5, "note": "Collapse pocket" }
+      ]
+    },
+    {
+      "id": "LB_A1",
+      "label": "A1",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Cross-Dog Penetrator: crash left A-gap violently to occupy Center and pick LG",
+      "waypoints": [
+        { "t": 0, "x": 24.5, "y": 0.8, "note": "Mugged A-gap" },
+        { "t": 0.7, "x": 25.5, "y": 0.2, "note": "Attack Center left shoulder" },
+        { "t": 1.8, "x": 25.2, "y": -1.8, "note": "Pin Center and LG" },
+        { "t": 4, "x": 25, "y": -4, "note": "Interior surge" }
+      ]
+    },
+    {
+      "id": "LB_A2",
+      "label": "A2",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Cross-Dog Looper: delay 0.2s, cross behind LB_A1, explode UNBLOCKED through right A-gap!",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 0.8, "note": "Mugged A-gap" },
+        { "t": 0.7, "x": 27.2, "y": 0.8, "note": "Loop tightly behind LB_A1" },
+        { "t": 1.6, "x": 26.67, "y": -3.8, "note": "SHOOT UNBLOCKED INTO QB LAP!" },
+        { "t": 2.2, "x": 26.2, "y": -5.8, "note": "Crushing hit on QB as ball is thrown!" },
+        { "t": 4, "x": 25.8, "y": -6.5, "note": "Finish play" }
+      ]
+    },
+    {
+      "id": "LB_B1",
+      "label": "B1",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Strong B-gap rush: drive RG to keep right A-gap clear for LB_A2",
+      "waypoints": [
+        { "t": 0, "x": 27.5, "y": 0.8, "note": "Mugged B-gap" },
+        { "t": 0.7, "x": 28.2, "y": 0, "note": "Attack RG outside shoulder" },
+        { "t": 1.8, "x": 28, "y": -1.8, "note": "Pin RG wide" },
+        { "t": 4, "x": 27.5, "y": -4.5, "note": "Pressure" }
+      ]
+    },
+    {
+      "id": "LB_B2",
+      "label": "B2",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Strong C-gap rush: occupy RB in protection",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.8, "note": "Mugged B-gap" },
+        { "t": 0.7, "x": 29.8, "y": 0, "note": "Drive through C-gap" },
+        { "t": 1.8, "x": 29.2, "y": -1.8, "note": "Consume RB block" },
+        { "t": 4, "x": 28.5, "y": -4.5, "note": "Collapse" }
+      ]
+    },
+    {
+      "id": "EDGE_R",
+      "label": "EDG_R",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Strong edge contain rush: speed bend past RT",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.8, "note": "Mugged edge" },
+        { "t": 0.7, "x": 33.5, "y": -0.5, "note": "Speed rush" },
+        { "t": 1.8, "x": 32, "y": -3, "note": "Squeeze pocket" },
+        { "t": 4, "x": 29, "y": -5.5, "note": "Pincer QB" }
+      ]
+    },
+    {
+      "id": "LURKER",
+      "label": "LURK",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Hot Fire Zone 3-Under: drop to boundary flat to undercut quick hot throw to X",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 3.5, "note": "Mugged robber" },
+        { "t": 0.7, "x": 18, "y": 3.5, "note": "Buzz to boundary flat" },
+        { "t": 1.8, "x": 8.5, "y": 5.5, "note": "UNDER-CUT X OUT ROUTE / PBU!" },
+        { "t": 4, "x": 5, "y": 6, "note": "Incomplete pass" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Hot Fire Zone 2-Deep: boundary deep half safety bail",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 1.5, "note": "Show press" },
+        { "t": 0.7, "x": 7.5, "y": 5.5, "note": "Speed turn to deep half" },
+        { "t": 1.8, "x": 9, "y": 12, "note": "Deep half cushion intact" },
+        { "t": 4, "x": 12, "y": 18, "note": "Deep boundary capped" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Hot Fire Zone 2-Deep: field deep half safety bail over Z",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 1.5, "note": "Show press" },
+        { "t": 0.7, "x": 47, "y": 5.5, "note": "Bail to field deep half" },
+        { "t": 1.8, "x": 47, "y": 12.5, "note": "Cap top of Z go route" },
+        { "t": 4, "x": 47, "y": 19, "note": "Deep field locked" }
+      ]
+    },
+    {
+      "id": "SLOT_CB",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Hot Fire Zone 3-Under: buzz to strong flat underneath Y/H",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": 1.8, "note": "Show press slot" },
+        { "t": 0.7, "x": 38, "y": 4, "note": "Buzz into strong flat" },
+        { "t": 1.8, "x": 37, "y": 6.5, "note": "Smother strong flat window" },
+        { "t": 4, "x": 35, "y": 7, "note": "Zone secure" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Hot Fire Zone 3-Under: middle hook / robber to rob H slant",
+      "waypoints": [
+        { "t": 0, "x": 41.5, "y": 2.2, "note": "Walk down over slot" },
+        { "t": 0.7, "x": 35, "y": 4, "note": "Drop into middle hook robber" },
+        { "t": 1.8, "x": 30, "y": 6, "note": "Clog H slant throwing lane" },
+        { "t": 4, "x": 27, "y": 7, "note": "Middle locked" }
+      ]
+    }
+  ]
+}

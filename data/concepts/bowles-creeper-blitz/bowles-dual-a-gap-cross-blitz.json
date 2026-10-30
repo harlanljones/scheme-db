@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bowles-dual-a-gap-cross-blitz",
+  "schemeId": "bowles-creeper-blitz",
+  "order": 1,
+  "name": "Dual A-Gap Cross-Dog Blitz",
+  "personnel": "Base 3-4 / Nickel 2-4-5",
+  "formation": "Double-A Mug 6-Up vs 11P Gun 2x2",
+  "situation": "3rd & 7, +40, high-leverage money down",
+  "coverage": "Cover 1 Man-Free (Cross-Dog Heat)",
+  "frontName": "Double-A Gap Cross-Dog Stunt",
+  "summary": {
+    "motive": "Create immediate interior pressure against slide protections by sending a two-man A-gap cross-dog stunt where the first linebacker picks the center and the second loops untouched to the quarterback.",
+    "keyDefender": "WILL (Looping A-Gap Blitzer) & MIKE (Penetrating Center Picker)",
+    "whyItWorks": "Offensive linemen cannot pass off interior stunt crosses in tight A-gap spacing, and running backs struggle to adjust to looping rush tracks.",
+    "failureMode": "A quick slip screen or tunnel screen that catches the interior rushers vacating the second level."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Double-A Mug 6-Up Presentation",
+      "text": "Todd Bowles mugs both inside linebackers (MIKE and WILL) directly into the A-gaps, forcing the offensive line into a man-to-man 5-0 protection check.",
+      "focus": ["MIKE", "WILL", "DE_L", "DE_R", "C", "QB"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Cross-Dog Exchange",
+      "text": "At the snap, MIKE slams into the left shoulder of the Center to occupy him, while WILL executes a delayed cross-loop behind him into the opposite A-gap.",
+      "focus": ["MIKE", "WILL", "C", "RB"]
+    },
+    {
+      "t": 1.6,
+      "title": "The Running Back Whiffs, Gap Opens",
+      "text": "The running back expects a direct blitz and is caught off-guard by the looping angle of WILL, leaving the A-gap wide open as WILL accelerates into the backfield.",
+      "focus": ["WILL", "RB", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Interior Sack in Under 2.2 Seconds",
+      "text": "WILL buries the quarterback before he can hit his hot slant against tight press-man coverage, delivering a vintage Todd Bowles drive-ending sack.",
+      "focus": ["WILL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bowles-peel-zone-sim-pressure"],
+    "playsOff": ["bowles-drop8-tampa2-lurk"],
+    "tell": "Both inside linebackers mug A-gaps at snap, with MIKE charging first and WILL crossing behind his back into opposite gap"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

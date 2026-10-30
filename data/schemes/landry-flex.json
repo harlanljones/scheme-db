@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "landry-flex",
+  "name": "Tom Landry's Flex Defense",
+  "coachId": "tom-landry",
+  "team": "Dallas Cowboys (1960-88)",
+  "side": "defense",
+  "era": "past-nfl",
+  "lineage": "landry-dallas",
+  "description": "The original positional-defense blueprint that ran in Dallas for three decades. Both tackles align one yard off the ball in a staggered flex, trading penetration for patient gap-zone occupation: linemen hold their lanes, linebackers shift strength with motion, and a guaranteed three-defender convergence swallows every point of attack before it develops."
+}

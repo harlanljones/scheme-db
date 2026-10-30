@@ -1,0 +1,15 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "mike-leach",
+  "name": "Mike Leach",
+  "role2026": "Air Raid Patriarch",
+  "team": "Texas Tech / Washington State / Mississippi State",
+  "lineage": "air-raid",
+  "mentorId": "hal-mumme",
+  "side": "offense",
+  "philosophy": "Distributed the Air Raid to the mainstream: five-receiver spacing, swing-screen constraint rules, and relentless Y-cross and mesh volume that turns any coverage into a numbers problem.",
+  "keyConcepts": ["Y-Cross", "Swing Screen Constraint", "Five-Open Spacing", "Scat Distribution"],
+  "schemeIds": ["air-raid"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["All-Time Passing Offense Records (Texas Tech/WSU)", "Guru of the Modern College Passing Game"]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "macdonald-split-field-trap",
+  "schemeId": "macdonald-hybrid-disguise",
+  "order": 3,
+  "name": "Single-High to Cover 6 Trap",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Single-High Disguise vs 11P Gun 2x2 Out/Sail",
+  "situation": "2nd & 10, +48, passing situation",
+  "coverage": "Cover 6 (Disguised Single-High to Split Trap)",
+  "frontName": "4-Man Base Front Disguise",
+  "summary": {
+    "motive": "Bait opposing quarterbacks into throwing standard Cover 3 beaters (out routes and sail concepts) by feigning a single-high middle-of-field-closed shell before spinning into a deadly Cover 6 corner trap.",
+    "keyDefender": "LCB (Trap Corner) & SS (Disguised deep half safety)",
+    "whyItWorks": "The QB confirms single-high coverage pre-snap and immediately targets the out route against what he expects to be a retreating deep-third corner; the corner squats and jumps the route untouched.",
+    "failureMode": "Quick seam throws into the safety rotation void if the QB recognizes the post-snap spin immediately."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Pre-Snap Single-High Illusion",
+      "text": "Macdonald aligns in what looks like standard single-high Cover 3 Sky (FS deep in middle, SS rolled down into box). The QB identifies single-high and dials up an out route.",
+      "focus": ["FS", "SS", "LCB", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "Post-Snap Safety Inversion (The Spin)",
+      "text": "At the snap, the safeties spin! SS explodes backward to cover the boundary deep half, while FS rotates to the field quarter. LCB recognizes the trap trigger.",
+      "focus": ["SS", "FS", "LCB"]
+    },
+    {
+      "t": 2.2,
+      "title": "The Trap Snaps Shut: Corner Interception",
+      "text": "As X clears out downfield, LCB lets him go to SS and squats aggressively on H’s out route. The QB throws directly into the trap for a catastrophic pick-six.",
+      "focus": ["LCB", "H", "QB"]
+    },
+    {
+      "t": 3.5,
+      "title": "Defensive Touchdown Return",
+      "text": "LCB undercuts the football with full forward momentum, sprinting down the sideline for a game-changing defensive score.",
+      "focus": ["LCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["macdonald-amoeba-cover0-peel"],
+    "playsOff": ["macdonald-double-mug-buzz"],
+    "tell": "Free safety spins from middle-of-field-closed to deep half post-snap, triggering corner trap"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

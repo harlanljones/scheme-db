@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "b34-stack-slant-shift",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Down block an end who slants away across his face",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Fire down" },
+        { "t": 0.9, "x": 21.9, "y": -0.8, "note": "Strike where ELE stood" },
+        { "t": 2.2, "x": 22.6, "y": -1.1, "note": "Chasing the slant inside" },
+        { "t": 4, "x": 23, "y": -1.4, "note": "Blocked nobody all snap" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Combo ELE to NG — both cross his face inward",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Fire inside" },
+        { "t": 0.8, "x": 24.6, "y": -0.8, "note": "Engage air as both slant" },
+        { "t": 2, "x": 25.8, "y": -1.1, "note": "Turn to the crossing NG" },
+        { "t": 4, "x": 26.4, "y": -1.5, "note": "Chasing two moving targets" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block a nose who slants across his face at the snap",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap" },
+        { "t": 0.9, "x": 26.4, "y": -0.9, "note": "Punch at nothing — NG already gone" },
+        { "t": 2, "x": 25.6, "y": -1.3, "note": "Turn and chase the slant" },
+        { "t": 4, "x": 25, "y": -1.7, "note": "A step behind the whole way" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Take the nose slanting through strong A",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Set for head-up NG" },
+        { "t": 0.9, "x": 28.2, "y": -0.8, "note": "Meet the arriving NG" },
+        { "t": 2.2, "x": 27.6, "y": -1.2, "note": "Fight the crossing body" },
+        { "t": 4, "x": 27.2, "y": -1.6, "note": "Pushing against momentum" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Clamp out on end who rips inside across his face",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Clamp step out" },
+        { "t": 0.9, "x": 32.6, "y": -0.9, "note": "ERE already ripping inside" },
+        { "t": 2.2, "x": 31.8, "y": -1.3, "note": "Chase the slant down" },
+        { "t": 4, "x": 31.2, "y": -1.7, "note": "Never catches the crossing man" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Clamp down on vacated air, release late",
+      "waypoints": [
+        { "t": 0, "x": 35.3, "y": -0.6, "note": "Clamp stance" },
+        { "t": 0.8, "x": 34.2, "y": -0.8, "note": "Fire at the old alignment" },
+        { "t": 2, "x": 33.4, "y": -1.2, "note": "Whiff on the rip-through" },
+        { "t": 4, "x": 32.8, "y": -1.6, "note": "Jogging behind the play" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Stalk the soft corner on perimeter run support",
+      "waypoints": [
+        { "t": 0, "x": 6, "y": 0.5, "note": "Split alignment" },
+        { "t": 1.2, "x": 7.4, "y": 1, "note": "Work to LCB" },
+        { "t": 2.6, "x": 8.6, "y": 1.8, "note": "Stuck on soft hands" },
+        { "t": 4, "x": 9.6, "y": 2.2, "note": "Perimeter play dead" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Stalk the corner on strength side",
+      "waypoints": [
+        { "t": 0, "x": 46.5, "y": 0.5, "note": "Split alignment" },
+        { "t": 1.2, "x": 45, "y": 1.2, "note": "Work to RCB" },
+        { "t": 2.6, "x": 43.8, "y": 2, "note": "Stall stalk attempt" },
+        { "t": 4, "x": 42.8, "y": 2.4, "note": "Never reaches force" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Open-handoff on strong-side power",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.4, "note": "Reverse pivot" },
+        { "t": 0.9, "x": 27.6, "y": -1.9, "note": "Give to TB" },
+        { "t": 2, "x": 28.4, "y": -1.6, "note": "Boot fake away" },
+        { "t": 4, "x": 28.8, "y": -1.3, "note": "Watches bodies fly sideways" }
+      ]
+    },
+    {
+      "id": "FB",
+      "label": "FB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Lead through strong C/D onto first wrong-colored jersey",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": -4.2, "note": "Lead alignment" },
+        { "t": 0.9, "x": 31.8, "y": -2.4, "note": "Aim at the kick point" },
+        { "t": 2, "x": 30.6, "y": -1, "note": "Lead meets replacing RILB instead" },
+        { "t": 4, "x": 30, "y": 0, "note": "Whiffed into the pile" }
+      ]
+    },
+    {
+      "id": "TB",
+      "label": "TB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Take handoff through strong B/C behind FB lead",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": -6.2, "note": "Alignment depth" },
+        { "t": 0.9, "x": 26.4, "y": -4.8, "note": "Receive handoff" },
+        { "t": 2, "x": 30, "y": -1, "note": "Hit line into a moving wall" },
+        { "t": 3, "x": 30.4, "y": 0.2, "note": "Met head-on by converging slants" },
+        { "t": 4, "x": 30.6, "y": 0.7, "note": "Stopped for no gain" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "NG",
+      "label": "NG",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Slant across center face into strong A behind the pull geometry",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 1, "note": "Zero-tech slant key" },
+        { "t": 0.5, "x": 27.2, "y": -0.3, "note": "Explosive first step inward" },
+        { "t": 1.3, "x": 28.4, "y": -1.2, "note": "Crossing the guard’s face" },
+        { "t": 2.4, "x": 28.8, "y": -2, "note": "Penetrating strong A" },
+        { "t": 4, "x": 29.4, "y": -1.4, "note": "Living in the run lane" }
+      ]
+    },
+    {
+      "id": "ELE",
+      "label": "ELE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Rip across the tackle’s face into weak B",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 1, "note": "5-tech slant key" },
+        { "t": 0.5, "x": 20.4, "y": -0.3, "note": "Rip step off the snap" },
+        { "t": 1.3, "x": 22, "y": -1.2, "note": "Crossing LT’s face inward" },
+        { "t": 2.4, "x": 22.6, "y": -1.6, "note": "Own weak B entry" },
+        { "t": 4, "x": 23.2, "y": -1, "note": "Spilling everything inward" }
+      ]
+    },
+    {
+      "id": "ERE",
+      "label": "ERE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Rip across the tackle’s face into strong B behind the nose",
+      "waypoints": [
+        { "t": 0, "x": 33.8, "y": 1, "note": "C-gap slant key" },
+        { "t": 0.5, "x": 33, "y": -0.2, "note": "Rip inside shoulder of RT" },
+        { "t": 1.3, "x": 31.4, "y": -1, "note": "Crossing RT’s face" },
+        { "t": 2.4, "x": 30.6, "y": -1.8, "note": "Strong B penetration" },
+        { "t": 4, "x": 30, "y": -0.8, "note": "Spilled into edge force" }
+      ]
+    },
+    {
+      "id": "LOLB",
+      "label": "LOLB",
+      "side": "defense",
+      "role": "lb",
+      "trail": "carry",
+      "assignment": "Stand-up contain weak: box any backside bounce",
+      "waypoints": [
+        { "t": 0, "x": 17.8, "y": 1.8, "note": "Stand-up contain stance" },
+        { "t": 0.8, "x": 18.4, "y": 1, "note": "Trigger with the slant" },
+        { "t": 2, "x": 20.5, "y": 1.2, "note": "Box the bounce lane" },
+        { "t": 4, "x": 21.8, "y": 1.4, "note": "Backside contained" }
+      ]
+    },
+    {
+      "id": "ROLB",
+      "label": "ROLB",
+      "side": "defense",
+      "role": "lb",
+      "trail": "carry",
+      "assignment": "Squeeze strong edge inside-out onto the kick block",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": 1.8, "note": "Stand-up force stance" },
+        { "t": 0.8, "x": 36.2, "y": 0.6, "note": "Trigger down with the slant" },
+        { "t": 2, "x": 33.8, "y": 0.4, "note": "Take the FB kick inside-out" },
+        { "t": 4, "x": 32.6, "y": 1, "note": "Force contained tight" }
+      ]
+    },
+    {
+      "id": "LILB",
+      "label": "LILB",
+      "side": "defense",
+      "role": "lb",
+      "trail": "carry",
+      "assignment": "Replace the vacated weak outside, then redirect to the pile",
+      "waypoints": [
+        { "t": 0, "x": 24, "y": 4.2, "note": "Replace key alignment" },
+        { "t": 0.9, "x": 23.2, "y": 2.6, "note": "Fill behind slanting ELE" },
+        { "t": 2, "x": 21.8, "y": 1.4, "note": "Occupy the vacated weak C" },
+        { "t": 3, "x": 24.5, "y": 0.6, "note": "Redirect on the ball’s stop" },
+        { "t": 4, "x": 26, "y": 0.6, "note": "Fourth hat in the pile" }
+      ]
+    },
+    {
+      "id": "RILB",
+      "label": "RILB",
+      "side": "defense",
+      "role": "lb",
+      "trail": "carry",
+      "assignment": "Replace the vacated strong C behind the slanting ERE",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": 4.2, "note": "Replace key alignment" },
+        { "t": 0.9, "x": 30.8, "y": 2.6, "note": "Trigger on flow strong" },
+        { "t": 2, "x": 33.2, "y": 1.2, "note": "Fill behind vacated ERE spot" },
+        { "t": 3, "x": 31, "y": 0.4, "note": "Flow to the convergence point" },
+        { "t": 4, "x": 30.8, "y": 0.8, "note": "Shared stop on the carrier" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "carry",
+      "assignment": "Near-box safety strong: force fit behind the squeezing edge",
+      "waypoints": [
+        { "t": 0, "x": 38, "y": 6, "note": "Near-box alignment" },
+        { "t": 1, "x": 36, "y": 3, "note": "Trigger on kick geometry" },
+        { "t": 2.4, "x": 34, "y": 1.6, "note": "Box the edge inside-out" },
+        { "t": 4, "x": 32, "y": 1.5, "note": "Stacking the stop" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle: read run, close the boot window",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 12, "note": "Deep post alignment" },
+        { "t": 1.2, "x": 26.67, "y": 13, "note": "Pedal reading flow" },
+        { "t": 2.6, "x": 26, "y": 12, "note": "Close the boot fake window" },
+        { "t": 4, "x": 25.5, "y": 11.5, "note": "Middle erased all snap" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Soft cushion vs X stalk",
+      "waypoints": [
+        { "t": 0, "x": 6, "y": 3, "note": "Soft cushion" },
+        { "t": 1, "x": 6.5, "y": 4, "note": "Shuffle reading run" },
+        { "t": 2.4, "x": 8, "y": 2.6, "note": "Fight through stalk hands" },
+        { "t": 4, "x": 9.2, "y": 2.4, "note": "Perimeter held" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Soft cushion vs Z stalk behind the force fit",
+      "waypoints": [
+        { "t": 0, "x": 44.5, "y": 2.5, "note": "Soft cushion" },
+        { "t": 1, "x": 44, "y": 3.5, "note": "Shuffle reading run" },
+        { "t": 2.4, "x": 42.6, "y": 2.6, "note": "Fight through stalk hands" },
+        { "t": 4, "x": 41.6, "y": 2.5, "note": "Cleanup secured" }
+      ]
+    }
+  ]
+}

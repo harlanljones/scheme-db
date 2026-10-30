@@ -1,0 +1,333 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "kelly-spot-tempo-stress",
+  "duration": 3,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Quick-set and wall NT for a one-hitch pocket",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 26.3, "y": 0.2, "note": "Vertical set" },
+        { "t": 1.4, "x": 26.1, "y": 0.8, "note": "Anchor vs NT push" },
+        { "t": 3, "x": 26, "y": 1.2, "note": "Hold through throw" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set left B-gap on quick timing",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Set step" },
+        { "t": 0.5, "x": 24.8, "y": 0.2, "note": "Kick slide" },
+        { "t": 1.4, "x": 24.6, "y": 0.8, "note": "Brace vs 3T slant" },
+        { "t": 3, "x": 24.5, "y": 1.2, "note": "Finish block" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Quick protection left edge vs WDE",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Set step" },
+        { "t": 0.5, "x": 23.1, "y": 0.3, "note": "Kick slide to edge" },
+        { "t": 1.4, "x": 23, "y": 1, "note": "Mirror WDE charge" },
+        { "t": 3, "x": 23.1, "y": 1.5, "note": "Ride rush wide" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set right B-gap on quick timing",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Set step" },
+        { "t": 0.5, "x": 28.5, "y": 0.2, "note": "Kick slide" },
+        { "t": 1.4, "x": 28.7, "y": 0.8, "note": "Catch 3T" },
+        { "t": 3, "x": 28.8, "y": 1.2, "note": "Finish block" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Quick protection right edge vs SDE",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Set step" },
+        { "t": 0.5, "x": 30.3, "y": 0.3, "note": "Kick slide to edge" },
+        { "t": 1.4, "x": 30.5, "y": 1, "note": "Anchor vs SDE" },
+        { "t": 3, "x": 30.6, "y": 1.5, "note": "Hold point" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "One-hitch rhythm read — spot first, flat second, deliver before rotation completes",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -5, "note": "Snap from gun" },
+        { "t": 0.4, "x": 26.4, "y": -5.6, "note": "Catch and hitch" },
+        { "t": 0.9, "x": 26.2, "y": -5.9, "note": "Eyes on H spot window" },
+        { "t": 1.4, "x": 26.1, "y": -6, "note": "Deliver to H on rhythm" },
+        { "t": 2.2, "x": 25.8, "y": -5.5, "note": "Follow through" },
+        { "t": 3, "x": 25.6, "y": -5.2, "note": "Exit clean" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Stretch flat left — the low level of the spot trio",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -5, "note": "Open left at snap" },
+        { "t": 0.5, "x": 22.5, "y": -3.5, "note": "Swing path" },
+        { "t": 1.1, "x": 20, "y": -1.8, "note": "Flatten toward sideline" },
+        { "t": 1.9, "x": 17.8, "y": 0.2, "note": "Widen flat lane" },
+        { "t": 3, "x": 15.5, "y": 2, "note": "Check down depth" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Vertical takeoff behind the spot — the top of the trio",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Release vertical" },
+        { "t": 0.6, "x": 7.2, "y": 5.5, "note": "Push LCB upfield" },
+        { "t": 1.3, "x": 7.8, "y": 10.5, "note": "Stack over H route" },
+        { "t": 2.2, "x": 8.2, "y": 14, "note": "Clear deep third" },
+        { "t": 3, "x": 8.5, "y": 15.5, "note": "Win outside release" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Spot/curl settling at exactly 5 yards in the catcher box behind NICKEL",
+      "waypoints": [
+        { "t": 0, "x": 16.5, "y": -1, "note": "Stem upfield" },
+        { "t": 0.4, "x": 16.2, "y": 2.5, "note": "Push to spot depth" },
+        { "t": 0.9, "x": 16.8, "y": 5, "note": "Settle into catcher box" },
+        { "t": 1.5, "x": 17, "y": 5.3, "note": "Square to QB at catch point" },
+        { "t": 2.3, "x": 17.3, "y": 5.8, "note": "Turn upfield after grab" },
+        { "t": 3, "x": 17.6, "y": 6.5, "note": "Chains move — tempo snap next" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Right slot stick/settle at 5 yards as secondary read",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": -1, "note": "Inside stem" },
+        { "t": 0.6, "x": 36.8, "y": 3.5, "note": "Work to stick depth" },
+        { "t": 1.3, "x": 35.2, "y": 5.5, "note": "Settle inside leverage" },
+        { "t": 2.2, "x": 34.6, "y": 5.6, "note": "Hold stick window" },
+        { "t": 3, "x": 34.4, "y": 5.8, "note": "Available if progression flips" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Slant off RCB cushion as the backside stress",
+      "waypoints": [
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Outside release" },
+        { "t": 0.5, "x": 45.5, "y": 3, "note": "Sell vertical" },
+        { "t": 1.1, "x": 43, "y": 5.5, "note": "Slant inside off cushion" },
+        { "t": 1.9, "x": 40, "y": 7.5, "note": "Cross RCB face" },
+        { "t": 3, "x": 37, "y": 9, "note": "Upfield after catch angle" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Contain rush left edge, late to affect quick throw",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Get-off" },
+        { "t": 0.8, "x": 21.6, "y": 1.8, "note": "Upfield charge" },
+        { "t": 1.8, "x": 21, "y": 3.2, "note": "LT rides him past pocket" },
+        { "t": 3, "x": 20.2, "y": 4.8, "note": "Rushed out of play" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Interior push on C",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Charge snap" },
+        { "t": 0.8, "x": 25.9, "y": 1.5, "note": "Bull on C" },
+        { "t": 1.8, "x": 25.7, "y": 2.2, "note": "Anchored" },
+        { "t": 3, "x": 25.6, "y": 2.6, "note": "Held at line" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Right B-gap pressure vs RG",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "Get-off" },
+        { "t": 0.8, "x": 28.8, "y": 1.5, "note": "Slant inside" },
+        { "t": 1.8, "x": 28.4, "y": 2.2, "note": "RG catches him" },
+        { "t": 3, "x": 28.5, "y": 2.6, "note": "Neutralized" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Contain rush right edge vs RT",
+      "waypoints": [
+        { "t": 0, "x": 32.8, "y": 0.9, "note": "Get-off" },
+        { "t": 0.8, "x": 31.8, "y": 1.8, "note": "Upfield charge" },
+        { "t": 1.8, "x": 32.4, "y": 3.2, "note": "Arc widened by RT" },
+        { "t": 3, "x": 33.2, "y": 4.6, "note": "Past the throw" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak hook drop, feel RB swing behind him",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": 4.5, "note": "Hook drop" },
+        { "t": 0.6, "x": 23.2, "y": 7, "note": "Depth to hook" },
+        { "t": 1.3, "x": 22.2, "y": 7.8, "note": "Feel RB flat under him" },
+        { "t": 2.2, "x": 21, "y": 8, "note": "Sitting on spot-adjacent lane" },
+        { "t": 3, "x": 20.2, "y": 8.2, "note": "Late rally on catch" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong-side hook drop between the hashes",
+      "waypoints": [
+        { "t": 0, "x": 28, "y": 4.5, "note": "Hook drop" },
+        { "t": 0.6, "x": 27.8, "y": 7.5, "note": "Depth, eyes QB" },
+        { "t": 1.5, "x": 28.2, "y": 8.5, "note": "Feel Y stick underneath" },
+        { "t": 2.4, "x": 27.6, "y": 9, "note": "Zone integrity holds" },
+        { "t": 3, "x": 27.4, "y": 9, "note": "Break on throw" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Apex defender — owns flat AND curl wall; the flat/curl conflict is his alone",
+      "waypoints": [
+        { "t": 0, "x": 16.5, "y": 4, "note": "Apex alignment over H" },
+        { "t": 0.4, "x": 16.9, "y": 5.2, "note": "Open to QB, split H and RB" },
+        { "t": 0.9, "x": 17.3, "y": 5.6, "note": "H settles — eyes glued to QB" },
+        { "t": 1.4, "x": 17, "y": 5.2, "note": "Caught mid-decision at throw" },
+        { "t": 2.2, "x": 16, "y": 4.2, "note": "Loses flat, rallies to ball" },
+        { "t": 3, "x": 15.2, "y": 3.6, "note": "Making the tackle after the catch" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep third left — carry X vertical past the spot",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 6.5, "note": "Soft cushion bail" },
+        { "t": 0.6, "x": 7.4, "y": 9, "note": "Sink with X takeoff" },
+        { "t": 1.5, "x": 7.8, "y": 12, "note": "Trail X up the seam" },
+        { "t": 2.4, "x": 8.1, "y": 14, "note": "Stacked by X" },
+        { "t": 3, "x": 8.3, "y": 15, "note": "Deep third held" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep third right — sink on Z slant under",
+      "waypoints": [
+        { "t": 0, "x": 46.5, "y": 6.5, "note": "Soft cushion bail" },
+        { "t": 0.6, "x": 45.8, "y": 9, "note": "Z sells vertical" },
+        { "t": 1.4, "x": 44.5, "y": 11.5, "note": "Z breaks under him" },
+        { "t": 2.4, "x": 42, "y": 13, "note": "Open hips, chase slant" },
+        { "t": 3, "x": 39.8, "y": 13.5, "note": "Recovering inside-out" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep half right over Y stick and Z slant",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 12, "note": "Deep half alignment" },
+        { "t": 0.7, "x": 33.8, "y": 12.5, "note": "Pedal reading #2s" },
+        { "t": 1.5, "x": 33, "y": 12.8, "note": "Split Y stick and Z slant" },
+        { "t": 2.4, "x": 32.4, "y": 12.5, "note": "Hold post safety depth" },
+        { "t": 3, "x": 32, "y": 12.2, "note": "Break late on any catch" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep half left bracketing X takeoff",
+      "waypoints": [
+        { "t": 0, "x": 19.5, "y": 12, "note": "Deep half alignment" },
+        { "t": 0.7, "x": 19.8, "y": 12.5, "note": "Pedal reading X vertical" },
+        { "t": 1.5, "x": 18.8, "y": 13, "note": "Bracket X over the top" },
+        { "t": 2.4, "x": 18.2, "y": 12.8, "note": "Eyes never find H spot" },
+        { "t": 3, "x": 17.8, "y": 11.8, "note": "Too deep to matter" }
+      ]
+    }
+  ]
+}

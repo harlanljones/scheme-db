@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "jj43-penetration-slant-loop",
+  "schemeId": "jj-speed-43",
+  "order": 1,
+  "name": "Penetration Slant Loop",
+  "personnel": "Base 4-3 Speed",
+  "formation": "11P Gun Spread 2x2 vs Even Speed Front",
+  "situation": "3rd & 6, +42, passing down",
+  "coverage": "Cover 3 Buzz behind the slant-loop game",
+  "frontName": "Even 4-3 with Strong-Side Slant Loop",
+  "summary": {
+    "motive": "Win with pure penetration and staggered timing: tackles slant to occupy blockers while a delayed end loops through the gap their charge creates.",
+    "keyDefender": "The weak end executing the delayed loop",
+    "whyItWorks": "Slide protection must commit to the first visible threats, so the half-beat stagger guarantees one rusher arrives unblocked exactly where the protection has already left.",
+    "failureMode": "The running back keeps eyes inside and picks up the looper, leaving the quarterback a clean three-step throw to the flat valve."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The First Wave Slants",
+      "text": "Both defensive tackles fire instantly into the strong A and B gaps with a deliberate half-beat stagger, gluing the sliding offensive line to blocks it was already preparing to make.",
+      "focus": ["WDT", "SDT", "C", "RG"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Delayed Loop Begins",
+      "text": "The weak end sells two steps of edge rush to pin the tackle and back, then pulls off the arc and starts his loop — Jimmy Johnson’s signature stagger that separates this stunt from every standard slant.",
+      "focus": ["LDE", "LT", "RB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. Protection Arithmetic Fails",
+      "text": "The slide protection accounts for the two visible slants and the containment rusher; the delayed looper is the sixth man in a five-man math problem, arriving through the vacated weak A-gap.",
+      "focus": ["LDE", "LG", "QB"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Loop Convergence Sack",
+      "text": "The stepping-up quarterback walks directly into the looping end while the B-gap tackle pushes the guard backward, finishing the penetration-first philosophy in a single picture.",
+      "focus": ["LDE", "SDT", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["jj43-man-free-will-dog"],
+    "playsOff": [],
+    "tell": "The looping end takes two visible upfield steps and visibly gathers himself before redirecting inside — pure slant teams never pull off the arc."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

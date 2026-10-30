@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "spagnuolo-cover0-max-heat",
+  "schemeId": "spagnuolo-exotic-blitz",
+  "order": 3,
+  "name": "Cover 0 Max All-Out Blitz",
+  "personnel": "Nickel 4-2-5",
+  "formation": "7-Up Zero Mug vs 11P Gun Trips Left",
+  "situation": "3rd & 11, +45, must-have conversion down",
+  "coverage": "Cover 0 Pure Man (Zero Deep Safeties)",
+  "frontName": "7-Man Diamond Pressure Front",
+  "summary": {
+    "motive": "Overwhelm 5- and 6-man pass protections on critical 3rd & long downs by sending 7 rushers while playing tight press-man coverage without safety help.",
+    "keyDefender": "SS (Unblocked 7th Edge Rusher) & FS (Press-Man DB on Slot H)",
+    "whyItWorks": "Offensive math guarantees at least 1 free rusher against 6-man protections, arriving at the QB before any route beyond 3 yards can develop.",
+    "failureMode": "A missed tackle on a quick boundary hitch/fade or an elusive QB breaking the first tackle into a completely vacant secondary."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "7-Up Diamond Alignment (No Deep Safety)",
+      "text": "Spagnuolo crowds the line with 7 potential rushers and zero deep safeties, forcing a pure 1-on-1 man match across the field and demanding an immediate hot throw from the QB.",
+      "focus": ["WILL", "MIKE", "SS", "FS", "QB"]
+    },
+    {
+      "t": 0.6,
+      "title": "All 7 Rushers Ignite Simultaneously",
+      "text": "Every defender at the line rushes! With the offensive line and RB only able to account for 6 blockers, Strong Safety (SS) bursts completely unblocked off the edge.",
+      "focus": ["SS", "WILL", "RT", "RB"]
+    },
+    {
+      "t": 1.5,
+      "title": "Man-Press Suffocates All Hot Routes",
+      "text": "The QB looks to release the ball instantly on a quick slant, but FS and RCB have aggressive inside press-man positioning, giving the receivers zero immediate separation.",
+      "focus": ["FS", "H", "RCB", "X", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Violent QB Collapse & Incompletion",
+      "text": "SS and WILL crush into the quarterback in under 1.6 seconds, forcing a fluttering, off-balance throw that hits the dirt harmlessly.",
+      "focus": ["SS", "WILL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["spagnuolo-split-safety-invert2"],
+    "playsOff": ["spagnuolo-corndog-corner-blitz", "spagnuolo-cross-creeper-drop"],
+    "tell": "All 7 front defenders rush at snap with DBs pressing at 1 yard depth and no safety retreating deep"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

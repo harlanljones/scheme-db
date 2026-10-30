@@ -1,0 +1,329 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "jj43-goal-line-haley-edge-rush",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Slide strong into the slanting WDT and anchor the interior surge",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap and slide call" },
+        { "t": 0.6, "x": 26.4, "y": -0.9, "note": "Meeting slanting WDT" },
+        { "t": 1.8, "x": 26, "y": -1.4, "note": "Anchored on first wave" },
+        { "t": 3, "x": 26.2, "y": -1.9, "note": "Holding interior block" },
+        { "t": 4, "x": 26.4, "y": -2.2, "note": "Strong side fully pinned" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Slide strong and brace the WDT slant after Center takes over",
+      "waypoints": [
+        { "t": 0, "x": 25.1, "y": -0.5, "note": "Slide step strong" },
+        { "t": 0.7, "x": 24.6, "y": -0.9, "note": "Sliding to help interior" },
+        { "t": 1.8, "x": 24.2, "y": -1.4, "note": "Striking second-wave surge" },
+        { "t": 3, "x": 24.4, "y": -1.9, "note": "Braced against penetration" },
+        { "t": 4, "x": 24.6, "y": -2.1, "note": "Never looks to the edge" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Hinge the vacated weak lane as the line slides away",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -0.5, "note": "Hinge protection" },
+        { "t": 0.7, "x": 23, "y": -0.9, "note": "Setting weak hinge" },
+        { "t": 2, "x": 22.6, "y": -1.3, "note": "Guarding vacated lane" },
+        { "t": 4, "x": 22.8, "y": -1.8, "note": "Eyes locked inside" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Take the SDT head-on, absorb the TE double-team help",
+      "waypoints": [
+        { "t": 0, "x": 28.2, "y": -0.5, "note": "First strong slide target" },
+        { "t": 0.7, "x": 28.6, "y": -0.9, "note": "Meeting charging SDT" },
+        { "t": 1.8, "x": 29, "y": -1.4, "note": "Anchored as Y doubles in" },
+        { "t": 3, "x": 29.2, "y": -1.9, "note": "Driven back but holding" },
+        { "t": 4, "x": 29.2, "y": -2.2, "note": "Interior consumed by slant" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Solo block the hand-down wide end in the goal-line one-on-one",
+      "waypoints": [
+        { "t": 0, "x": 29.8, "y": -0.5, "note": "Kick slide to wide end" },
+        { "t": 0.9, "x": 31, "y": -0.7, "note": "Setting to Haley arc" },
+        { "t": 2, "x": 32, "y": -1.1, "note": "Chasing the upfield burst" },
+        { "t": 3.2, "x": 32.6, "y": -1.5, "note": "Beaten around the top" },
+        { "t": 4, "x": 32.8, "y": -1.9, "note": "Turned loose at the stripe" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "Fake the goal-line run, five-step for the corner fade shot",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.4, "note": "Under-center fake" },
+        { "t": 0.8, "x": 26.3, "y": -3, "note": "Reverse pivot out of fake" },
+        { "t": 1.8, "x": 26.1, "y": -5.2, "note": "Five-step shot setup" },
+        { "t": 2.8, "x": 26, "y": -6.2, "note": "Hitching for X fade" },
+        { "t": 3.5, "x": 27.2, "y": -6, "note": "Climbing away from surge" },
+        { "t": 4, "x": 28.6, "y": -5.4, "note": "Swallowed by Haley edge" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Sell lead fake then pick up the Mike A-gap threat in protection",
+      "waypoints": [
+        { "t": 0, "x": 24.5, "y": -4.6, "note": "Lead fake alignment" },
+        { "t": 0.7, "x": 25.6, "y": -3.4, "note": "Stepping into the fake" },
+        { "t": 1.6, "x": 26, "y": -2.6, "note": "Pass-pro pickup on Mike" },
+        { "t": 2.6, "x": 26.4, "y": -3.4, "note": "Locked on inside rusher" },
+        { "t": 4, "x": 26.2, "y": -4, "note": "Pinned inside, edge lost" }
+      ]
+    },
+    {
+      "id": "U",
+      "label": "U",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Wall the slanting LDE to keep weak-side chaos contained",
+      "waypoints": [
+        { "t": 0, "x": 20.8, "y": -0.6, "note": "Down block set" },
+        { "t": 0.8, "x": 21.6, "y": 0, "note": "Meeting LDE charge" },
+        { "t": 2.2, "x": 22.2, "y": 0.8, "note": "Driving him upfield" },
+        { "t": 4, "x": 22.4, "y": 1.4, "note": "Weak wall held" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Snap down to the slanting SDT, stranding RT alone on the edge",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": -0.6, "note": "Snap-down call vs shift" },
+        { "t": 0.8, "x": 30.8, "y": -0.8, "note": "Snapping down inside" },
+        { "t": 2, "x": 30, "y": -1.2, "note": "Doubling SDT with RG" },
+        { "t": 4, "x": 29.8, "y": -1.6, "note": "Never releases to Haley" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Release flat past the rusher and work to the wing window",
+      "waypoints": [
+        { "t": 0, "x": 35.6, "y": -1.3, "note": "Flat release" },
+        { "t": 0.9, "x": 37, "y": 1.5, "note": "Clearing Haley tail" },
+        { "t": 2.2, "x": 38.5, "y": 3.5, "note": "Pressing SAM leverage" },
+        { "t": 4, "x": 39.5, "y": 4.5, "note": "Walled by settled SAM" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Beat press and stack the fade toward the pylon",
+      "waypoints": [
+        { "t": 0, "x": 8, "y": -0.8, "note": "Vertical release vs press" },
+        { "t": 1, "x": 7.4, "y": 4, "note": "Threatening cushion" },
+        { "t": 2.4, "x": 6.6, "y": 9, "note": "Stacking LCB" },
+        { "t": 4, "x": 6, "y": 13.5, "note": "Fade covered down boundary" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LDE",
+      "label": "LDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Slant inside C-gap instantly to draw the tight-end wall",
+      "waypoints": [
+        { "t": 0, "x": 19.6, "y": 0.9, "note": "Over-shift alignment" },
+        { "t": 0.5, "x": 20.8, "y": 0.2, "note": "Instant inside slant" },
+        { "t": 1.6, "x": 22.2, "y": -0.6, "note": "Through C-gap drawing U" },
+        { "t": 3, "x": 23.2, "y": -1.6, "note": "Pushing pocket weak" },
+        { "t": 4, "x": 23.6, "y": -2.4, "note": "Weak chaos contained" }
+      ]
+    },
+    {
+      "id": "WDT",
+      "label": "WDT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "First wave: fire into strong A-gap and glue the sliding Center",
+      "waypoints": [
+        { "t": 0, "x": 24.9, "y": 0.9, "note": "Shaded weak A" },
+        { "t": 0.5, "x": 26.1, "y": 0.2, "note": "First-wave strong-A slant" },
+        { "t": 1.6, "x": 26.8, "y": -0.9, "note": "Glued by sliding Center" },
+        { "t": 3, "x": 27, "y": -1.9, "note": "Occupying first blocker" },
+        { "t": 4, "x": 27.2, "y": -2.4, "note": "Interior pinned by design" }
+      ]
+    },
+    {
+      "id": "SDT",
+      "label": "SDT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Second wave: slant strong B a half-beat late to eat the double team",
+      "waypoints": [
+        { "t": 0, "x": 27.9, "y": 0.9, "note": "Over-shift strong A" },
+        { "t": 0.7, "x": 28.7, "y": 0.2, "note": "Half-beat stagger then fire" },
+        { "t": 1.8, "x": 29.6, "y": -1, "note": "Drawing RG and Y double" },
+        { "t": 3, "x": 30, "y": -2, "note": "Driving pair backward" },
+        { "t": 4, "x": 30.2, "y": -2.6, "note": "Two blockers erased" }
+      ]
+    },
+    {
+      "id": "RDE",
+      "label": "RDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Hand-down edge crush: win fast around solo RT then flatten to QB",
+      "waypoints": [
+        { "t": 0, "x": 34.4, "y": 0.9, "note": "Hand-down wide nine" },
+        { "t": 0.6, "x": 35.2, "y": 0.4, "note": "First upfield stab" },
+        { "t": 1.5, "x": 35.5, "y": -0.8, "note": "Turning corner on solo RT" },
+        { "t": 2.4, "x": 34.4, "y": -2.6, "note": "Flattening off the apex" },
+        { "t": 3.2, "x": 32.2, "y": -4.2, "note": "Closing on climbing QB" },
+        { "t": 4, "x": 29.8, "y": -5.2, "note": "Strip-sack at the stripe" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Bluff the kick-out then settle and wall the wing flat route",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 4.3, "note": "Show blitz alignment" },
+        { "t": 0.8, "x": 33.8, "y": 4, "note": "Taking kick-out bait" },
+        { "t": 2.2, "x": 35.6, "y": 4.4, "note": "Settling to wall flat" },
+        { "t": 4, "x": 37.4, "y": 4.8, "note": "Flat valve eliminated" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Show the A-gap dog then become the running back full-time problem",
+      "waypoints": [
+        { "t": 0, "x": 26.5, "y": 4.5, "note": "Middle stack show" },
+        { "t": 1, "x": 26.2, "y": 5.2, "note": "Flashing A-gap dog" },
+        { "t": 2.4, "x": 26.6, "y": 5.6, "note": "Taken by RB in protection" },
+        { "t": 4, "x": 26.8, "y": 5.2, "note": "Occupying the back inside" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Spy the escape lanes and close weak once the QB climbs",
+      "waypoints": [
+        { "t": 0, "x": 21.8, "y": 4.4, "note": "Weak stack" },
+        { "t": 1, "x": 22.6, "y": 5.4, "note": "Spying escape lanes" },
+        { "t": 2.4, "x": 24.6, "y": 6, "note": "Closing weak lane" },
+        { "t": 4, "x": 26.6, "y": 6.2, "note": "Late help as edge lands" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press X and ride the fade up the boundary without safety help",
+      "waypoints": [
+        { "t": 0, "x": 8, "y": 7, "note": "Island press" },
+        { "t": 1, "x": 7.6, "y": 10, "note": "Riding fade up boundary" },
+        { "t": 2.4, "x": 6.8, "y": 13, "note": "Stacked trail position" },
+        { "t": 4, "x": 6.2, "y": 15, "note": "Carried deep, no help needed" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Squeeze the wing release and cover his flat window man-to-man",
+      "waypoints": [
+        { "t": 0, "x": 37.8, "y": 6.5, "note": "Reduced cushion" },
+        { "t": 1, "x": 37.4, "y": 5.4, "note": "Squeezing Z release" },
+        { "t": 2.4, "x": 38.6, "y": 4.9, "note": "Trailing flat route" },
+        { "t": 4, "x": 39.4, "y": 5, "note": "Flat covered inside-out" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Roll down strong, rob the tight end leak over the middle",
+      "waypoints": [
+        { "t": 0, "x": 31.5, "y": 6.5, "note": "Rolldown strong" },
+        { "t": 1, "x": 31.9, "y": 6, "note": "Reading Y snap-down" },
+        { "t": 2.4, "x": 31, "y": 6.4, "note": "Sitting on leak route" },
+        { "t": 4, "x": 30.4, "y": 6.8, "note": "Strong wall held" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Post away from the edge rush, divide field for any scramble throw",
+      "waypoints": [
+        { "t": 0, "x": 22, "y": 11, "note": "Weak-side post" },
+        { "t": 1.2, "x": 23, "y": 12.5, "note": "Dividing field from edge" },
+        { "t": 2.6, "x": 25, "y": 13, "note": "Eyes locked on QB" },
+        { "t": 4, "x": 26, "y": 12.5, "note": "Late help never needed" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "schemeId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9007199254740991
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "personnel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "formation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "situation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverage": {
+      "type": "string",
+      "minLength": 1
+    },
+    "frontName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "motive": {
+          "type": "string",
+          "minLength": 1
+        },
+        "keyDefender": {
+          "type": "string",
+          "minLength": 1
+        },
+        "whyItWorks": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failureMode": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "motive",
+        "keyDefender",
+        "whyItWorks",
+        "failureMode"
+      ],
+      "additionalProperties": false
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "t": {
+            "type": "number",
+            "minimum": 0
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "focus": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "t",
+          "title",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "object",
+      "properties": {
+        "setsUp": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "playsOff": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "tell": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "setsUp",
+        "playsOff",
+        "tell"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "illustrative",
+            "reconstructed",
+            "verified"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "film",
+                  "book",
+                  "clinic",
+                  "article",
+                  "video",
+                  "self-authored"
+                ]
+              },
+              "citation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "accessed": {
+                "type": "string",
+                "format": "date",
+                "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              }
+            },
+            "required": [
+              "type",
+              "citation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "confidence",
+        "sources"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "id",
+    "schemeId",
+    "order",
+    "name",
+    "personnel",
+    "formation",
+    "situation",
+    "coverage",
+    "frontName",
+    "summary",
+    "beats",
+    "relations",
+    "provenance"
+  ],
+  "additionalProperties": false
+}

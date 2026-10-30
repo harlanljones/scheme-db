@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcdaniel-inside-zone-wham",
+  "schemeId": "mcdaniel-cheat-motion",
+  "order": 3,
+  "name": "Inside Zone Wham with Cheat Decoy",
+  "personnel": "21",
+  "formation": "21P Pistol Sniffer, Cheat Motion Left",
+  "situation": "1st & 10, +32, interior counter-punch",
+  "coverage": "Cover 2 Quarters / Two-High Shell",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Exploit defensive lateral overpursuit with an inside zone Wham trap, using pre-snap speed motion as eye candy while trapping the 3-tech DT from the blindside.",
+    "keyDefender": "3-Technique Defensive Tackle & Mike Linebacker",
+    "whyItWorks": "The 3-tech is left unblocked by design, tempting him to shoot upfield where he is blindsided by the H-back’s trap block; Meanwhile, the pre-snap motion vacates the second level.",
+    "failureMode": "3-technique DT reading the trap release and squeezing inside before the FB can deliver the Wham block, or sniffer FB whiffing on the trap collision."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Pre-Snap Cheat Motion Decoy",
+      "text": "Z fires across the formation in full-speed cheat motion. The Will linebacker, Mike linebacker, and Free Safety all rotate aggressively left to stop the anticipated perimeter speed sweep.",
+      "focus": ["Z", "WILL", "MIKE", "FS"]
+    },
+    {
+      "t": 1,
+      "title": "2. The Unblocked 3-Tech Trap",
+      "text": "Right Guard completely bypasses the 3-technique defensive tackle, releasing directly to the second level. The 3T penetrates upfield thinking he has free penetration into the backfield.",
+      "focus": ["RG", "3T", "MIKE"]
+    },
+    {
+      "t": 1.6,
+      "title": "3. The Blindside Wham Collision",
+      "text": "Sniffer fullback FB comes across against the grain and delivers a crushing Wham block on the 3T’s blindside hip, pinning him and creating a 5-yard interior highway.",
+      "focus": ["FB", "3T", "RG", "MIKE"]
+    },
+    {
+      "t": 2.8,
+      "title": "4. North-South A-Gap Explosion",
+      "text": "With linebackers washed out by the motion decoy and the RG erasing the Mike, the running back hits the B-gap crease at full speed for an explosive 18-yard carry.",
+      "focus": ["RB", "RG", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcdaniel-pistol-option-pitch"],
+    "playsOff": ["mcdaniel-cheat-motion-toss"],
+    "tell": "FB/H-back cuts back against the grain on a wham trap block on the 3T DT instead of leading to the perimeter."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

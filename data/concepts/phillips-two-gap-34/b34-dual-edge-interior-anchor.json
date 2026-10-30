@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b34-dual-edge-interior-anchor",
+  "schemeId": "phillips-two-gap-34",
+  "order": 2,
+  "name": "Dual Edge Rush w/ Interior Anchor",
+  "personnel": "Base Two-Gap 3-4",
+  "formation": "Two-Gap Front vs Gun 11 Personnel 2x2",
+  "situation": "3rd & 6, +35, passing down",
+  "coverage": "Man-Free, Press Corners, Walked WILL on Slot",
+  "frontName": "Two-Gap 3-4, Dual Edge Rush",
+  "summary": {
+    "motive": "Weaponize the two-gap front in reverse — let the immovable interior eat every blocker while both stand-up edges attack the rim from clean angles.",
+    "keyDefender": "ROLB bending inside under the tight-end hinge — the blocker braces outward for a speed rush that never comes straight",
+    "whyItWorks": "A stationary interior forces the pocket to step up directly into the converging pursuit paths of both edges.",
+    "failureMode": "Quick perimeter throws released before either edge turns the corner or dips under his blocker."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Dual Edge Threat",
+      "text": "Both stand-up linebackers walk wide in pure rush postures flanking an interior sitting flat-footed — protection must split its attention in two directions.",
+      "focus": ["LOLB", "ROLB", "NG", "ELE", "ERE"]
+    },
+    {
+      "t": 1,
+      "title": "2. The Interior Anchor Eats Blocks",
+      "text": "The zero nose takes a full double team without shedding while each end glues his tackle head-up — five blockers occupied by three immovable men.",
+      "focus": ["NG", "ELE", "ERE"]
+    },
+    {
+      "t": 2,
+      "title": "3. The Pincer Closes",
+      "text": "With tackles pinned inward, both edges bend off their rims simultaneously — the pocket shrinks into a circle with nowhere to climb.",
+      "focus": ["LOLB", "ROLB", "Y", "RT"]
+    },
+    {
+      "t": 3,
+      "title": "4. Stepped Up Into the Wall",
+      "text": "The QB climbs away from the rims directly into the anchored interior wall, where the converging duo swallows him for the sack.",
+      "focus": ["ROLB", "LOLB", "QB", "NG"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b34-wildcat-walk-up-edge"],
+    "playsOff": ["b34-base-two-gap-fits"],
+    "tell": "Both stand-up backers walk to 2 yards in sprinter stances while the interior sits patient and squared — base fits keep backers stacked behind the line at 4 yards."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

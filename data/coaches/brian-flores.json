@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "brian-flores",
+  "name": "Brian Flores",
+  "role2026": "Defensive Coordinator, Minnesota Vikings",
+  "team": "Minnesota Vikings",
+  "lineage": "belichick-flores",
+  "mentorId": "bill-belichick",
+  "disciples": [],
+  "side": "defense",
+  "philosophy": "Extreme binary defense: either 6-7 defenders threatening the line of scrimmage in Cover 0 all-out house blitzes, or dropping 8 into layered zone disguises that force turnovers.",
+  "keyConcepts": ["Cover 0 House Blitz", "Drop-8 Psycho Front", "Hot Coverage 2-Under 3-Deep", "Simulated Edge Rush"],
+  "schemeIds": ["belichick-flores-psycho"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Created NFL's #1 Blitz-Rate Defense with Vikings"]
+}

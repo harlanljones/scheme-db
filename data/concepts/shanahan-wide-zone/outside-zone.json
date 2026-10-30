@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "outside-zone",
+  "schemeId": "shanahan-wide-zone",
+  "order": 1,
+  "name": "Outside Zone Left",
+  "personnel": "21",
+  "formation": "Offset I, Wing Right",
+  "situation": "1st & 10, +40, base down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Stretch the defense horizontally from sideline to sideline to create wide running lanes and force linebackers into overpursuit.",
+    "keyDefender": "Mike Linebacker (Playside Flow LB)",
+    "whyItWorks": "Synchronized lateral steps by all five linemen create multiple double-teams and reach blocks; the running back tracks wide until a natural cutback crease opens.",
+    "failureMode": "Playside defensive end penetrating the C-gap or backside defensive tackle beating the reach block before the handoff mesh develops."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Lateral Reach Step",
+      "text": "The entire offensive line fires synchronously on 45-degree lateral reach tracks toward the left sideline. The running back crosses over, aiming for the outside hip of the playside tackle.",
+      "focus": ["LT", "LG", "C", "RB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Mike Linebacker Flow",
+      "text": "The defense is forced to move horizontally. Mike linebacker triggers hard playside to protect the C-gap, creating horizontal stretch and opening cutback lanes between the linemen.",
+      "focus": ["MIKE", "FB", "RB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Three-Way Read (Bounce / Bang / Bend)",
+      "text": "The running back presses the tight tackle landmark. Seeing the edge sealed and the Mike flowing wide, the back plants his outside foot and bends sharply into the alley.",
+      "focus": ["RB", "FB", "WILL"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Second-Level Cutback Burst",
+      "text": "With backside pursuit sealed off and the Mike overrun, the back bursts through the second level into open field for an explosive gain.",
+      "focus": ["RB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["play-action-over", "naked-bootleg", "jet-motion-oz"],
+    "playsOff": [],
+    "tell": "Base run action with full offensive line reach-and-seal flow and RB pressing the playside tackle landmark."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

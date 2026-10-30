@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "oconnell-boot-flood-rollout",
+  "schemeId": "oconnell-boot-dagger",
+  "order": 2,
+  "name": "Wide-Zone Boot Flood",
+  "personnel": "11",
+  "formation": "11P Condensed Gun Right vs 4-3 Over",
+  "situation": "1st & 10, +40, off the established stretch",
+  "coverage": "Cover 3 Sky (flowed away)",
+  "frontName": "Over Front",
+  "summary": {
+    "motive": "Punish the defensive flow created by the base stretch by pulling the QB against the grain into a three-level boundary flood.",
+    "keyDefender": "Backside contain EDGE and flow-away flat defender (WILL)",
+    "whyItWorks": "The EDGE is reached inside on a block he must fight through while WILL takes genuine steps toward the stretch flow; by the time either reads boot, the QB is set at depth with all three levels already stretching the boundary.",
+    "failureMode": "A long-armed contain EDGE who keeps outside leverage through the reach and a flat defender who reads guard pulls rather than backfield flow will collapse the rollout before the third level clears."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "Same Stretch Picture",
+      "text": "For the first full second this is indistinguishable from the base call — every lineman reaches, the mesh point is real, and both edges commit to stopping the stretch.",
+      "focus": ["QB", "RB", "LT", "C"]
+    },
+    {
+      "t": 1.6,
+      "title": "The Pull — Boot Away From Flow",
+      "text": "The QB pivots against the grain while the entire defense flows right; WILL has already taken three steps playside and the backside EDGE is fighting an inside reach he cannot win.",
+      "focus": ["QB", "WILL", "WDE"]
+    },
+    {
+      "t": 2.8,
+      "title": "Three Levels to the Boundary",
+      "text": "X pushes the carrying LCB past 14 yards before breaking the comeback, H drags behind the redirected MIKE, and the RB swings to the vacated flat — a full three-level stretch of a defense flowing the wrong way.",
+      "focus": ["X", "H", "RB", "LCB"]
+    },
+    {
+      "t": 3.8,
+      "title": "Flat Defender Arrives Late",
+      "text": "The throw comes off the boot rhythm before WILL can close on the flat — the comeback or the back are both live because the run action bought the launch point for free.",
+      "focus": ["RB", "WILL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["oconnell-pa-dagger-shot", "boot-throwback-leak"],
+    "playsOff": ["oconnell-wide-zone-stretch-base", "mcvay-pa-sail-flood", "naked-bootleg"],
+    "tell": "The QB's ride turns into a reverse pivot against the flow — linemen keep blocking stretch right while the ball-carrier disappears left."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

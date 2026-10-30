@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "quinn-safety-sky-fire-zone",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Slide right to 3T, scan Mike LB blitz",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Calls slide right" },
+        { "t": 0.8, "x": 27.5, "y": -0.6, "note": "Engage slanting NT" },
+        { "t": 2, "x": 27.8, "y": -1.2, "note": "Anchor in A-gap" },
+        { "t": 4, "x": 28, "y": -1.8, "note": "Holding" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 1-tech NT",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Set left" },
+        { "t": 0.8, "x": 25.2, "y": -0.7, "note": "Engage NT" },
+        { "t": 2.2, "x": 25, "y": -1.4, "note": "Firm interior" },
+        { "t": 4, "x": 24.8, "y": -2, "note": "Straining" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set vs LEO weak edge rush",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Kick slide" },
+        { "t": 1, "x": 21, "y": -1.2, "note": "Engage LEO speed rush" },
+        { "t": 2.2, "x": 20.5, "y": -2.6, "note": "Pushed back" },
+        { "t": 4, "x": 20, "y": -4, "note": "Edge holding" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 3-tech DT",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Slide right" },
+        { "t": 0.8, "x": 29.2, "y": -0.8, "note": "Engage 3T" },
+        { "t": 2.2, "x": 29.5, "y": -1.5, "note": "Double 3T" },
+        { "t": 4, "x": 29.5, "y": -2, "note": "Holding" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block SAM blitz off strong edge; missed SS screaming from depth!",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Kick slide" },
+        { "t": 0.8, "x": 31.8, "y": -1, "note": "Engage SAM blitz" },
+        { "t": 2, "x": 32, "y": -2, "note": "Locked on SAM; SS flies unblocked around edge!" },
+        { "t": 4, "x": 32.5, "y": -3, "note": "Turned around" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "3-step drop, look to hit H quick hitch -> intercepted/blitzed by SS!",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Shotgun snap" },
+        { "t": 0.8, "x": 26.67, "y": -6, "note": "3-step plant" },
+        { "t": 1.8, "x": 26.67, "y": -6, "note": "Hit violently by SS screaming off edge just as ball thrown!" },
+        { "t": 2.8, "x": 26, "y": -7.5, "note": "Sacked / forced fumble" },
+        { "t": 4, "x": 25.5, "y": -8, "note": "Down" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Scan weak blitz to strong edge",
+      "waypoints": [
+        { "t": 0, "x": 24, "y": -4.5, "note": "Check weak A-gap" },
+        { "t": 1, "x": 27, "y": -3, "note": "Step up to help right side" },
+        { "t": 2, "x": 29.5, "y": -2, "note": "Too late to reach SS off perimeter" },
+        { "t": 4, "x": 30, "y": -2.5, "note": "Helpless" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary 12yd Comeback route",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Vertical stem" },
+        { "t": 1.2, "x": 7, "y": 6.5, "note": "Push cushion" },
+        { "t": 2.4, "x": 6.5, "y": 12, "note": "Comeback plant" },
+        { "t": 4, "x": 6, "y": 9.5, "note": "Covered by LCB deep 1/3" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Trips inside slot 5yd quick hitch (hot vs blitz)",
+      "waypoints": [
+        { "t": 0, "x": 36, "y": -0.8, "note": "Quick 3-step stem" },
+        { "t": 0.8, "x": 36, "y": 4.5, "note": "Turn and sit in flat void" },
+        { "t": 2, "x": 36, "y": 4.5, "note": "Drop-out SDE sits in throwing lane!" },
+        { "t": 4, "x": 36, "y": 4.5, "note": "Window closed" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Trips middle slot 12yd Seam",
+      "waypoints": [
+        { "t": 0, "x": 41.5, "y": -0.8, "note": "Vertical seam push" },
+        { "t": 1.2, "x": 41, "y": 7, "note": "Stretch middle of field" },
+        { "t": 2.4, "x": 40.5, "y": 14, "note": "Seam route" },
+        { "t": 4, "x": 40, "y": 21, "note": "Capped by FS deep middle" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Trips outside WR Go route",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": -0.5, "note": "Outside release" },
+        { "t": 1.2, "x": 47, "y": 7, "note": "Fly down sideline" },
+        { "t": 2.4, "x": 47, "y": 16, "note": "Go route" },
+        { "t": 4, "x": 47, "y": 23, "note": "Capped by RCB deep 1/3" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LEO",
+      "label": "LEO",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weak edge rush: contain QB scramble",
+      "waypoints": [
+        { "t": 0, "x": 19.5, "y": 0.9, "note": "Wide 9 stance" },
+        { "t": 1, "x": 18.5, "y": -1, "note": "Edge rush on LT" },
+        { "t": 2.2, "x": 20, "y": -3.5, "note": "Contain weak pocket" },
+        { "t": 4, "x": 23, "y": -6, "note": "Close in" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "1-tech slant into strong A-gap",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "1-tech stance" },
+        { "t": 0.8, "x": 27, "y": 0, "note": "Slant across Center" },
+        { "t": 2, "x": 27, "y": -1.2, "note": "Occupies C and RG" },
+        { "t": 4, "x": 26.8, "y": -2.2, "note": "Interior plugged" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "3-tech bull rush strong B-gap",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "3-tech stance" },
+        { "t": 0.8, "x": 29.2, "y": -0.4, "note": "Drive RG back" },
+        { "t": 2, "x": 29, "y": -1.8, "note": "Dent strong pocket" },
+        { "t": 4, "x": 28.5, "y": -3, "note": "Interior surge" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "SDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Fire Zone Drop: peel off line to replace blitzing SS in strong curl/flat",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Shows 5-tech rush pre-snap" },
+        { "t": 0.8, "x": 35, "y": 3.5, "note": "Drops off line into strong curl/flat" },
+        { "t": 2, "x": 36, "y": 4.5, "note": "Directly in front of H quick hitch!" },
+        { "t": 4, "x": 36, "y": 5.5, "note": "Hot window erased" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Fire Zone 3 under: 3-receiver hook dropper left",
+      "waypoints": [
+        { "t": 0, "x": 22, "y": 4.5, "note": "Weak B-gap stack" },
+        { "t": 1, "x": 23, "y": 6.5, "note": "Drop to weak hook" },
+        { "t": 2.2, "x": 24, "y": 8.5, "note": "Wall off inside crossers" },
+        { "t": 4, "x": 25, "y": 9.5, "note": "Underneath hook secure" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Fire Zone 3 under: 3-receiver hook dropper right",
+      "waypoints": [
+        { "t": 0, "x": 26.5, "y": 4.8, "note": "Middle stack" },
+        { "t": 1, "x": 28, "y": 6.5, "note": "Drop to strong hook" },
+        { "t": 2.2, "x": 29.5, "y": 8.5, "note": "Wall off Y seam lane" },
+        { "t": 4, "x": 30, "y": 9.5, "note": "Strong hook secure" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Fire blitz: pin RT inside to create runway for SS",
+      "waypoints": [
+        { "t": 0, "x": 33.5, "y": 3.8, "note": "Overhang stance" },
+        { "t": 0.8, "x": 31.8, "y": -0.5, "note": "Crash hard on RT outside shoulder" },
+        { "t": 2, "x": 31.5, "y": -2, "note": "Pushes RT inside" },
+        { "t": 4, "x": 31, "y": -3.5, "note": "Edge highway opened" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "block",
+      "assignment": "Sky Fire Blitz: sprint off strong edge unblocked from depth",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": 7.5, "note": "Creeps down to 7 yards" },
+        { "t": 0.6, "x": 36, "y": 2, "note": "Launches full speed off strong edge" },
+        { "t": 1.5, "x": 30.5, "y": -4.5, "note": "Bends corner untouched past RT" },
+        { "t": 2.4, "x": 26.67, "y": -6.5, "note": "Crushing hit & strip sack on QB!" },
+        { "t": 4, "x": 26, "y": -7.5, "note": "Fumble forced" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep 1/3 boundary (Fire Zone)",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 1.5, "note": "Press disguise" },
+        { "t": 1, "x": 7, "y": 7, "note": "Bail to deep 1/3" },
+        { "t": 2.4, "x": 7, "y": 14.5, "note": "Cap X comeback" },
+        { "t": 4, "x": 6.5, "y": 20, "note": "Deep boundary secure" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep 1/3 field (Fire Zone)",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 1.5, "note": "Press-bail on Z" },
+        { "t": 1, "x": 47, "y": 7, "note": "Turn and run to deep 1/3" },
+        { "t": 2.4, "x": 47, "y": 16, "note": "Cap Z Go route" },
+        { "t": 4, "x": 47, "y": 23, "note": "Deep field third secure" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle 1/3 post safety (Fire Zone)",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 13.5, "note": "Deep middle post" },
+        { "t": 1, "x": 26.67, "y": 16.5, "note": "Pedal and read QB drop" },
+        { "t": 2.4, "x": 33, "y": 19.5, "note": "Cap Y vertical seam" },
+        { "t": 4, "x": 34, "y": 22.5, "note": "Deep middle locked" }
+      ]
+    }
+  ]
+}

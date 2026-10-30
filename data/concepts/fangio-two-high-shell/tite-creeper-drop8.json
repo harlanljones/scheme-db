@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "tite-creeper-drop8",
+  "schemeId": "fangio-two-high-shell",
+  "order": 3,
+  "name": "Tite Creeper Drop-8 Coverage Trap",
+  "personnel": "Penny 5-1-5 Sim Front",
+  "formation": "Penny 5-1-5 Sim Rush vs 11P Gun 2x2 Spacing",
+  "situation": "3rd & 8, +42, obvious passing down",
+  "coverage": "Drop-8 Sim Zone (3-Man Rush / 8-Man Drop)",
+  "frontName": "Penny Sim Drop-8 Front",
+  "summary": {
+    "motive": "Simulate a heavy 5-man Penny rush pre-snap, then drop both outside linebackers into underneath passing lanes to eliminate quick-game hot reads in Drop-8 coverage.",
+    "keyDefender": "LOLB & ROLB executing bluff-and-drop into hook-curl passing lanes",
+    "whyItWorks": "Offenses rely on quick slants and seams to beat 5-man pressures; dropping 8 turns those hot routes into contested traps with zero open receivers.",
+    "failureMode": "Three-man rush failing to generate pressure over 4+ seconds, allowing a mobile QB to scramble or break contain."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "5-Man Pressure Look at the Line",
+      "text": "Five rushers crowd the line of scrimmage in a Penny front, prompting the offense to set up quick hot answers against expected 5-man man-blitz pressure.",
+      "focus": ["LOLB", "ROLB", "MIKE", "NOSE"]
+    },
+    {
+      "t": 1.1,
+      "title": "Edge Linebackers Bail into Passing Lanes",
+      "text": "At the snap, both LOLB and ROLB bluff penetration then abruptly bail into the intermediate hook-curl lanes, creating an 8-man coverage shell.",
+      "focus": ["LOLB", "ROLB", "X", "Y"]
+    },
+    {
+      "t": 2.2,
+      "title": "Hot Reads Completely Blanketed",
+      "text": "The QB looks for his hot slant to X and crosser to Y, only to find LOLB and MIKE sitting directly in both throwing windows with no open targets.",
+      "focus": ["QB", "LOLB", "MIKE", "X"]
+    },
+    {
+      "t": 3.5,
+      "title": "Drop-8 Coverage Sack",
+      "text": "With eight defenders blanketing four receivers and nowhere to throw, the 3-man interior rush collapses the pocket for a drive-ending coverage sack.",
+      "focus": ["NOSE", "4iL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["cover6-quarter-quarter-half", "penny-match-quarters"],
+    "tell": "Both edge rushers bluff penetration then bail into intermediate hook-curl lanes as defense drops 8."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

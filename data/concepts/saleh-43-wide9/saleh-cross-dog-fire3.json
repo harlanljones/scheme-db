@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "saleh-cross-dog-fire3",
+  "schemeId": "saleh-43-wide9",
+  "order": 3,
+  "name": "4-3 Cross-Dog Fire Zone 3",
+  "personnel": "Base 4-3",
+  "formation": "4-3 Over Wide-9 vs 11P Gun 3x1",
+  "situation": "3rd & 6, +42, known passing down",
+  "coverage": "Cover 3 Fire Zone (3-Deep, 3-Under)",
+  "frontName": "4-3 Over Cross-Dog Blitz",
+  "summary": {
+    "motive": "Manufacture guaranteed interior penetration against standard 5-man/6-man slide pass protections using a synchronized A-gap cross-dog blitz.",
+    "keyDefender": "WILL (Delayed A-gap blitzer) & MIKE (Point-of-attack pick blitzer)",
+    "whyItWorks": "The interior DT slants widen the offensive guards while MIKE consumes the Center, leaving the looping WILL with a direct line to the quarterback under 2.2 seconds.",
+    "failureMode": "Screen passes designed to exploit the aggressive interior rush, or max-protect 7-man schemes with dual RB/TE chips."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Base Look Masking 5-Man Pressure",
+      "text": "Saleh disguises the blitz out of standard 4-3 Over spacing. The offense expects a 4-man rush with zone drops behind it.",
+      "focus": ["MIKE", "WILL", "NT", "3T"]
+    },
+    {
+      "t": 0.8,
+      "title": "Cross-Dog Stunt Ignites",
+      "text": "At the snap, NT and 3T slant into B-gaps. MIKE charges the Center directly, drawing the slide block and clearing a wide gap behind him.",
+      "focus": ["MIKE", "C", "NT"]
+    },
+    {
+      "t": 2,
+      "title": "Will Loops Unblocked into A-Gap",
+      "text": "WILL wraps tightly around MIKE’s back, exploding through the vacated A-gap completely untouched as the RB is caught on the wrong side of the formation.",
+      "focus": ["WILL", "QB", "RB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Underneath Hot Windows Suffocated",
+      "text": "While WILL hits the QB, SAM and SS drop into the exact slant/hitch windows where a hot throw would go, resulting in an immediate drive-killing sack.",
+      "focus": ["WILL", "SAM", "SS", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["saleh-nascar-cover1-robber"],
+    "playsOff": ["saleh-cover3-match"],
+    "tell": "Mike & Will sprint downhill at snap to cross interior gaps instead of reading backfield run flow"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

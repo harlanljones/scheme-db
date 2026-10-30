@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "lafleur-pony-screen-wheel",
+  "schemeId": "lafleur-illusion-packers",
+  "order": 3,
+  "name": "Pony Package Screen-Wheel Constraint",
+  "personnel": "21P Pony (2 RB)",
+  "formation": "Gun Pony Split Backs (RB1 Left, RB2 Right)",
+  "situation": "2nd & 6, +45, constraint tempo call",
+  "coverage": "Cover 2 Invert / Quarters",
+  "frontName": "Nickel 4-2-5 Even Front",
+  "summary": {
+    "motive": "Exploit defenses overreacting to quick perimeter screen calls by pairing dual-back Pony personnel with a fake screen left and a devastating rail wheel right.",
+    "keyDefender": "Apex Nickel / Strong Safety (Boundary Flat & Deep Half Defenders)",
+    "whyItWorks": "The aggressive pump-fake and two-man offensive lineman convoy pulls all second-level defenders to the left, leaving the entire right sideline completely abandoned for the second running back.",
+    "failureMode": "Edge rusher RDE beating the RT quickly off the edge before the QB can pivot and reset to throw the wheel."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Pony Split-Back Mesh & Flash Screen",
+      "text": "From the dual-back Pony set, RB1 blazes out on a high-speed swing screen left with LT and LG releasing in convoy. QB executes an emphatic pump fake left.",
+      "focus": ["QB", "RB1", "LT", "LG", "WILL", "MIKE"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. Defensive Overpursuit & Boundary Vacuum",
+      "text": "The defense bites hard on the screen threat: Will, Mike, LCB, and Free Safety all sprint toward the left sideline to tackle RB1 behind the line.",
+      "focus": ["WILL", "MIKE", "FS", "LCB", "LDE"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. The Inside-Out Wheel Release",
+      "text": "RB2 feigns an interior lead block, then snaps violently outside the right tackle into a full-speed rail wheel down the vacated right sideline. Z’s dig route pulls the RCB inside.",
+      "focus": ["RB2", "Z", "RCB", "NICKEL"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Precision Drop Down the Sideline",
+      "text": "QB resets, squares his shoulders, and drops a 28-yard rainbow right into RB2’s breadbasket for an explosive runaway touchdown down the right sideline.",
+      "focus": ["QB", "RB2", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["lafleur-cross-country-post"],
+    "playsOff": ["lafleur-wide-zone-cutback"],
+    "tell": "Shotgun Pony split-back alignment with QB pump-faking to the swing before resetting his feet to the opposite boundary."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

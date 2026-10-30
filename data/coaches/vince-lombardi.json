@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "vince-lombardi",
+  "name": "Vince Lombardi",
+  "role2026": "Pro Football Hall of Fame Patriarch",
+  "team": "Green Bay Packers (1959-1967)",
+  "lineage": "power-gap-duo",
+  "side": "offense",
+  "philosophy": "Won five championships with essentially one play: the power sweep. Downhill gap blocking, pulling guards, and relentless rep perfection turned simplicity into inevitability.",
+  "keyConcepts": ["Power Sweep", "Pulling Guard Gap Scheme", "Downhill Physicality", "Rep Perfection"],
+  "schemeIds": ["t-formation-power-sweep"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["5x NFL Champion", "Super Bowl I & II Winner", "Super Bowl Trophy Named in His Honor"]
+}

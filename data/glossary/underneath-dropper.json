@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "underneath-dropper",
+  "term": "Underneath Dropper",
+  "aliases": [
+    "Underneath dropper",
+    "hook dropper",
+    "curl-flat dropper",
+    "hole dropper",
+    "underneath dropper",
+    "Underneath Dropper"
+  ],
+  "category": "Coverage & Shell",
+  "shortDef": "A defensive second-level defender (LB, nickel, or safety) responsible for dropping into intermediate underneath zones (hook/curl, hole, or seam-flat).",
+  "tacticalNote": "Tasked with vision on the quarterback to undercut crossing routes (digs, slants, crossers) and rally down on checkdowns."
+}

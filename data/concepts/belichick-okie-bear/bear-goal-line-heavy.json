@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bear-goal-line-heavy",
+  "schemeId": "belichick-okie-bear",
+  "order": 1,
+  "name": "Goal-Line Bear vs Heavy Personnel",
+  "personnel": "Okie/Bear Package (5 DL, 2 LB, 4 DB)",
+  "formation": "Bear Front vs Goal-Line Heavy I-Form",
+  "situation": "4th & Goal from the 1, fourth quarter",
+  "coverage": "Press Match, Safeties Near Box",
+  "frontName": "Bear Front (0-Nose, Double 4is, 5-Tech Ends)",
+  "summary": {
+    "motive": "Match heavy goal-line personnel with an extra interior body so every gap is two-gapped and no puller or kicker can find a clean block.",
+    "keyDefender": "NOSE on the zero — he alone erases both A-gaps and frees the linebackers to play downhill",
+    "whyItWorks": "Five-down interior fronts eliminate angle blocking; the FB lead arrives to find the linebacker already occupying his aiming point.",
+    "failureMode": "Getting reached: if a combo moves a 4i off the line, the mugged backers are blocked and the goal-line math flips."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Goal-Line Bear Picture",
+      "text": "A zero-tech nose flanked by double 4i tackles and both ends stacked at 5-technique gives New England five interior-body defenders against five interior blockers — no reach blocks are available anywhere.",
+      "focus": ["NOSE", "4iL", "4iR", "LE", "RE"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. Mugged Backers Behind the Wall",
+      "text": "Both inside linebackers stand directly over the A-gaps at 3.4 yards with the safeties bracketing them at 4.5. Every gap inside the tackles is doubled before the ball is snapped.",
+      "focus": ["MIKE", "WILL", "SS", "FS"]
+    },
+    {
+      "t": 2,
+      "title": "3. Power Meets the Wall",
+      "text": "The fullback leads into strong A but WILL has already shot the gap behind the fighting 4i; the tight-end kick is spilled by the squeezing end straight into the forcing safety.",
+      "focus": ["WILL", "FB", "RE", "Y"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Stuffed Short of the Goal",
+      "text": "The back hits the line to find the nose controlling both A-gaps, four defenders stacking in the hole, and no cutback lane — the Bear package wins its specialty snap.",
+      "focus": ["RB", "NOSE", "MIKE", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bear-double-a-mug"],
+    "playsOff": ["bear-to-46-stem-disguise"],
+    "tell": "Five defenders within one yard of the ball with safeties at just 4.5 yards — the okie nickel look spreads its safeties wider and deeper."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

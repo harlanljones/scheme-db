@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "matt-lafleur",
+  "name": "Matt LaFleur",
+  "role2026": "Head Coach, Green Bay Packers",
+  "team": "Green Bay Packers",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "kyle-shanahan",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "Integrates Shanahan outside-zone mechanics with spread RPOs and deep vertical shot plays from under center and pistol formations.",
+  "keyConcepts": ["Under-Center Play-Action", "Cross-Country Deep Posts", "RPO Glances", "Pony Personnel (2 RB)"],
+  "schemeIds": ["lafleur-illusion-packers"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["3x NFC North Division Champion"]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "rlong-335-stack",
+  "name": "Rocky Long's 3-3-5 Stack",
+  "coachId": "rocky-long",
+  "team": "San Diego State (2011-19) / New Mexico",
+  "side": "defense",
+  "era": "current-college",
+  "lineage": "college-defensive-fronts",
+  "description": "Three down linemen with all three linebackers stacked directly behind them at identical depth, so no offense can read gap responsibility pre-snap. Five defensive backs play every down against any formation. The call is pressure-by-committee: slant-exchange games move all six box defenders one gap at a time, edge storms fire from both C-gaps, safeties and corners cross-dog through vacated lanes, and empty sets meet an all-out zero with straight man coverage behind."
+}

@@ -1,0 +1,323 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "roman-pin-pull-leverage",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pin the nose tackle down, seal him from chasing the pullers",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.6, "x": 26, "y": 0.4, "note": "Pin NT inside" },
+        { "t": 1.5, "x": 25.8, "y": 1, "note": "Seal NT down" },
+        { "t": 4, "x": 25.6, "y": 1.8, "note": "Hold the pin" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pull around the pins and kick out SAM at the edge",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Pull step" },
+        { "t": 0.6, "x": 26.5, "y": -1.2, "note": "Pulling right behind QB" },
+        { "t": 1.3, "x": 29, "y": 0, "note": "Rounding past the pins" },
+        { "t": 1.9, "x": 31.2, "y": 1.8, "note": "Kick-out block on SAM" },
+        { "t": 4, "x": 32.8, "y": 3.2, "note": "Drive SAM off the spot" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pin the backside end down — he never leaves the line of scrimmage",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Pin step on WDE" },
+        { "t": 0.6, "x": 22.5, "y": 0.4, "note": "Drive into WDE" },
+        { "t": 1.5, "x": 22.3, "y": 1, "note": "Seal WDE from pursuit" },
+        { "t": 4, "x": 22.2, "y": 1.8, "note": "Maintain pin" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Second puller — leads through the alley for MIKE and safety help",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Pull step" },
+        { "t": 0.7, "x": 28.5, "y": -0.8, "note": "Pulling right as lead puller" },
+        { "t": 1.4, "x": 30.5, "y": 0.5, "note": "Trailing LG around the edge" },
+        { "t": 2.3, "x": 32.5, "y": 2.5, "note": "Lead block on scraping MIKE" },
+        { "t": 4, "x": 34.5, "y": 4.5, "note": "Block second-level filler" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pin the 3-tech down to open the pull lane",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Pin step on 3T" },
+        { "t": 0.6, "x": 29.3, "y": 0.3, "note": "Drive into 3T" },
+        { "t": 1.5, "x": 29.4, "y": 1, "note": "Anchor the pin" },
+        { "t": 4, "x": 29.5, "y": 1.8, "note": "Hold the pin" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Pin the playside end inside so the sweep turns the corner clean",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Pin step on SDE" },
+        { "t": 0.6, "x": 31.7, "y": 0.3, "note": "Drive SDE down inside" },
+        { "t": 1.5, "x": 31.4, "y": 1, "note": "Anchor the pin" },
+        { "t": 4, "x": 31.3, "y": 1.8, "note": "Hold the pin" }
+      ]
+    },
+    {
+      "id": "U",
+      "label": "U",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Wing arcs outside the pullers to block the filling safety",
+      "waypoints": [
+        { "t": 0, "x": 33.8, "y": -1.2, "note": "Arc release" },
+        { "t": 0.9, "x": 34.8, "y": 1.2, "note": "Wide arc ahead of RB" },
+        { "t": 2, "x": 36.2, "y": 4, "note": "Engage sky safety SS" },
+        { "t": 4, "x": 37, "y": 5, "note": "Wall SS outside-in" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Open right, hand to RB on the sweep, then reverse-pivot boot fake backside",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Under-center snap" },
+        { "t": 0.4, "x": 27.8, "y": -2.4, "note": "Open right to sweep" },
+        { "t": 1.1, "x": 29.8, "y": -2.6, "note": "Handoff to sweeping RB" },
+        { "t": 2, "x": 26, "y": -2.2, "note": "Reverse-pivot boot fake left" },
+        { "t": 4, "x": 24.5, "y": -2.8, "note": "Sell boot away from the play" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Sweep right — take the handoff, press the edge, bend behind the double pull",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -5.5, "note": "Sweep flow step" },
+        { "t": 0.6, "x": 28.5, "y": -4.6, "note": "Perimeter flow right" },
+        { "t": 1.1, "x": 30.8, "y": -2.8, "note": "Receive handoff" },
+        { "t": 2, "x": 33.5, "y": -0.8, "note": "Press edge behind kick-out" },
+        { "t": 2.9, "x": 36.8, "y": 1.8, "note": "Bend upfield off U pin" },
+        { "t": 4, "x": 40, "y": 5, "note": "Turn the corner into open field" }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Lead through the alley ahead of the ball carrier",
+      "waypoints": [
+        { "t": 0, "x": 28.4, "y": -3.4, "note": "Lead step" },
+        { "t": 0.8, "x": 30, "y": -2.5, "note": "Lead around the edge" },
+        { "t": 1.8, "x": 32.5, "y": 0.5, "note": "Through the alley" },
+        { "t": 3, "x": 34, "y": 3.8, "note": "Block next-level filler" },
+        { "t": 4, "x": 35, "y": 5.5, "note": "Finish lead block" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Backside X chases across to cut off the backside linebacker",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Cross-field chase release" },
+        { "t": 1, "x": 10, "y": 0.8, "note": "Sprint along LOS" },
+        { "t": 2, "x": 14, "y": 2.2, "note": "Angle at WILL" },
+        { "t": 4, "x": 18.5, "y": 4, "note": "Cut off backside pursuit" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Backside end pinned down by tackle, removed from the play",
+      "waypoints": [
+        { "t": 0, "x": 21.8, "y": 0.9, "note": "Edge rush stance" },
+        { "t": 0.8, "x": 22.2, "y": 1, "note": "Caught by LT pin" },
+        { "t": 2, "x": 22.3, "y": 1.6, "note": "Sealed from pursuit" },
+        { "t": 4, "x": 22.4, "y": 2.2, "note": "Blocked out entirely" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Nose pinned by center, cannot chase the pullers",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 0.9, "note": "Attack A-gap" },
+        { "t": 0.8, "x": 26, "y": 1, "note": "Pinned by C" },
+        { "t": 2, "x": 25.8, "y": 1.6, "note": "Anchored in place" },
+        { "t": 4, "x": 25.7, "y": 2.2, "note": "Unable to pursue" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "B-gap defender pinned by right tackle, pull lane opens beside him",
+      "waypoints": [
+        { "t": 0, "x": 29.2, "y": 0.9, "note": "Attack B-gap" },
+        { "t": 0.8, "x": 29.3, "y": 1, "note": "Pinned by RT" },
+        { "t": 2, "x": 29.5, "y": 1.6, "note": "Watched both guards pull past him" },
+        { "t": 4, "x": 29.6, "y": 2.2, "note": "Blocked out" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Playside end pinned inside by tight end, swept around",
+      "waypoints": [
+        { "t": 0, "x": 33.4, "y": 0.9, "note": "Edge alignment" },
+        { "t": 0.8, "x": 32.2, "y": 1, "note": "Driven down by TE pin" },
+        { "t": 2, "x": 31.8, "y": 1.6, "note": "Sealed inside" },
+        { "t": 4, "x": 31.5, "y": 2.2, "note": "Sweep goes over his grave" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Backside LB chased across the formation by X, cut out of pursuit",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 4.5, "note": "Box alignment" },
+        { "t": 1, "x": 22.5, "y": 4.8, "note": "Late read toward sweep" },
+        { "t": 2.2, "x": 24, "y": 4.5, "note": "Caught by X chase block" },
+        { "t": 4, "x": 20, "y": 4.3, "note": "Blocked out of pursuit lane" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Scrapes to the sweep and is led into by the trailing pulling guard",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 4.8, "note": "Fill read" },
+        { "t": 1.2, "x": 27.5, "y": 4.5, "note": "Scrapes right on flow" },
+        { "t": 2.3, "x": 30, "y": 3.8, "note": "Met by RG lead pull" },
+        { "t": 4, "x": 33, "y": 3.5, "note": "Logged behind the play" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "KEY DEFENDER — force player caught between spilling downhill and boxing the sweep; kicked either way",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": 3.8, "note": "Force/box alignment" },
+        { "t": 0.9, "x": 32, "y": 3.5, "note": "Crashes to spill the sweep" },
+        { "t": 1.9, "x": 31, "y": 2, "note": "Kicked by LG while caught between" },
+        { "t": 4, "x": 32, "y": 3, "note": "Spilled outside the play" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Backside corner triggers inside, chased away from the sweep",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 7, "note": "Off-coverage" },
+        { "t": 1.5, "x": 9, "y": 5.8, "note": "Triggers on run read" },
+        { "t": 3, "x": 13, "y": 5, "note": "Chases wrong direction" },
+        { "t": 4, "x": 16, "y": 5, "note": "Stranded backside" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Force corner squeezed down and walled by the fullback convoy",
+      "waypoints": [
+        { "t": 0, "x": 43.5, "y": 7, "note": "Force/contain alignment" },
+        { "t": 1.2, "x": 40, "y": 5.5, "note": "Squeezes down on sweep" },
+        { "t": 2.5, "x": 37.5, "y": 4, "note": "Met by F convoy block" },
+        { "t": 4, "x": 36, "y": 4.5, "note": "Walled inside-out" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Sky safety fills the alley into the arcing wing",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 9, "note": "Sky alignment" },
+        { "t": 1.2, "x": 34, "y": 5.5, "note": "Trigger downhill on sweep" },
+        { "t": 2.2, "x": 36.3, "y": 4.2, "note": "Engaged by arcing U" },
+        { "t": 4, "x": 36.8, "y": 5, "note": "Walled outside-in" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle third, late break on the perimeter run",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 14, "note": "Deep middle third" },
+        { "t": 1.5, "x": 28, "y": 12.5, "note": "Reads perimeter flow" },
+        { "t": 2.8, "x": 31, "y": 10, "note": "Breaks down late" },
+        { "t": 4, "x": 33.5, "y": 8, "note": "Chase angle too shallow" }
+      ]
+    }
+  ]
+}

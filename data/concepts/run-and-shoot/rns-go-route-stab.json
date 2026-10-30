@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "rns-go-route-stab",
+  "schemeId": "run-and-shoot",
+  "order": 4,
+  "name": "Go-Route Stab Adjustment",
+  "personnel": "10",
+  "formation": "Gun One-Back, 4-Wide Spread",
+  "situation": "2nd & 6, +42, quarters shell aligned",
+  "coverage": "Cover 4 Quarters Bail",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use the outside go as bait for a bailing corner and convert the inside stab into a climb that attacks the vacated seam between the coverage levels.",
+    "keyDefender": "Right Corner (bail technique with back to the slot)",
+    "whyItWorks": "The go route empties the entire right third, and the stab-to-climb conversion puts the slot in the one window no quarters defender owns once the corner turns and runs.",
+    "failureMode": "The corner plays with inside-eye discipline on No. 2 instead of bailing pure, squeezing the converted climb before it reaches the window."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Go-and-Stab Stems",
+      "text": "Z releases pure vertical while Y builds toward a six-yard stab plant. The quarters corners bail reading their No. 1 receivers, exactly as the pre-snap look promised.",
+      "focus": ["Z", "Y", "RCB"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Bail Read Trigger",
+      "text": "Y plants his stab and reads the corner: still bailing deep over the top of Z with his back turning. That bail is the trigger — the stab is now dead.",
+      "focus": ["Y", "RCB", "SS"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Conversion Upfield",
+      "text": "Y converts off the plant and climbs into the void behind the bailing corner, working the seam the go route is emptying while the right-quarter safety sinks toward Z.",
+      "focus": ["Y", "RCB", "SS", "Z"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. The Between-Levels Delivery",
+      "text": "The quarterback delivers between the sunk safety and the turned corner. The dig and drag below have stripped every underneath defender from the window.",
+      "focus": ["QB", "Y", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["rns-mesh-read-route", "rns-post-wheel-leverage-read"],
+    "tell": "The slot plants at six yards before accelerating — a called seam or vertical never breaks stride below eight."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "kubiak-split-zone",
+  "name": "Klint Kubiak's Motion & Split-Zone / Leak Family",
+  "coachId": "klint-kubiak",
+  "team": "Las Vegas Raiders",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "shanahan-kubiak",
+  "description": "A masterclass in modern Shanahan-Kubiak sequencing. By marrying heavy 12-personnel condensed formations, pre-snap glide/orbit motion, and under-center split-zone run mechanics, Kubiak presents an identical visual picture before unleashing devastating intermediate Dagger shots, explosive backside Y-Leaks, and rapid perimeter tosses."
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "two-deep-shell",
+  "name": "Two-Deep Shell / Tampa 2 Tree",
+  "patriarch": "Tony Dungy → Lovie Smith / Marvin Lewis",
+  "side": "defense",
+  "description": "Two safeties splitting the deep field as a committed identity: Tampa 2’s zone sink with the Mike running the deep hole, and Marvin Lewis’ red-zone 2-Man with pure man underneath — opposite underneath logic under an identical shell.",
+  "rootNodes": [
+    {
+      "coachId": "tony-dungy",
+      "children": [
+        {
+          "coachId": "lovie-smith",
+          "children": []
+        }
+      ]
+    },
+    {
+      "coachId": "marvin-lewis",
+      "children": []
+    }
+  ]
+}

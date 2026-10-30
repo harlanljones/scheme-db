@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcdaniel-cheat-motion-wheel",
+  "schemeId": "mcdaniel-cheat-motion",
+  "order": 2,
+  "name": "Cheat Motion Wheel Shot (Speed Release)",
+  "personnel": "21",
+  "formation": "21P Gun Offset, Cheat Motion Right",
+  "situation": "2nd & 2, +38, explosive shot play",
+  "coverage": "Cover 3 Sky / Quarters Match",
+  "frontName": "4-3 Under front",
+  "summary": {
+    "motive": "Punish defenses over-committing to McDaniel’s Cheat Motion perimeter crack toss by bluffing the crack block and releasing the fastest receiver on an uncontested vertical wheel route.",
+    "keyDefender": "Field Cornerback (RCB) & Strong Safety",
+    "whyItWorks": "The threat of the perimeter toss forces the cornerback and safety to trigger downhill against the run; once they lose outside leverage, no defender in football can recover against Tyreek Hill-level speed on a wheel route.",
+    "failureMode": "Cornerback playing deep quarters match and refusing to bite on the toss fake, or safety immediately rolling over top to double the wheel route."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Identical Cheat Motion Sprint",
+      "text": "Z enters full-speed sprint motion, mirroring the crack toss look. The field corner (RCB) and strong safety (SS) aggressively drive downhill toward the line of scrimmage to defend the run.",
+      "focus": ["Z", "RCB", "SS", "RB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Fake Crack & Sideline Wheel Break",
+      "text": "Z flashes an inside stem to bluff the crack block on the SAM, then plants and violently breaks up the boundary at 22 mph on a wheel route. The entire secondary is caught flat-footed.",
+      "focus": ["Z", "SAM", "RCB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Blown Coverage & Separation",
+      "text": "TE’s intermediate crossing dig holds the single-high free safety in the center of the field, while Z blows past the recovering corner to create 8 yards of pure separation.",
+      "focus": ["Z", "RCB", "TE", "FS"]
+    },
+    {
+      "t": 3.8,
+      "title": "4. The 38-Yard Deep Touchdown Bomb",
+      "text": "The QB launches a high-arcing rainbow pass down the right numbers. Z catches the ball in stride at the 5-yard line and cruises into the end zone for an explosive touchdown.",
+      "focus": ["QB", "Z", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcdaniel-pistol-option-pitch"],
+    "playsOff": ["mcdaniel-cheat-motion-toss"],
+    "tell": "Motion receiver bluffs crack block for 0.4s then explosive vertical burst along the boundary on the wheel route."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "rpo",
+  "term": "RPO",
+  "aliases": ["Run-Pass Option", "Run-pass option", "post-snap RPO", "pre-snap RPO", "rpo"],
+  "category": "Scheme & Concept",
+  "shortDef": "A play design combining a live run-blocking concept with quick passing routes, giving the quarterback real-time decision power based on a key conflict defender.",
+  "tacticalNote": "Because linemen block for a run, the throw must come within 1.2–1.6 seconds to avoid an illegal ineligible receiver downfield penalty."
+}

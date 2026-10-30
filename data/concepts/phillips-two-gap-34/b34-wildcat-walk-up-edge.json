@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b34-wildcat-walk-up-edge",
+  "schemeId": "phillips-two-gap-34",
+  "order": 4,
+  "name": "Wildcat Walk-Up Edge",
+  "personnel": "Base Two-Gap 3-4",
+  "formation": "Two-Gap Front vs Gun 11 Personnel 2x2",
+  "situation": "2nd & 8 from the 42, passing down",
+  "coverage": "Man-Free, Press Corners, Walked WILL on Slot",
+  "frontName": "Two-Gap 3-4, Wildcat Edge Stem",
+  "summary": {
+    "motive": "Break the tackle’s pass-protection key by walking between alignments and stances across his face, then attack whichever gap his eyes abandoned last.",
+    "keyDefender": "ROLB stemming across the tackle’s face — every alignment change forces a reset the rusher never has to make himself",
+    "whyItWorks": "Pass protection keys off the widest alignment, so a defender who keeps changing it guarantees the blocker eventually guesses wrong once.",
+    "failureMode": "Chip help from the back or tight end erasing the free inside lane the stem created."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Wildcat Walk Begins",
+      "text": "The strong edge stands wide at 2.5 yards in a two-point stare, already moving — every alignment change he makes costs the tackle one mental reset.",
+      "focus": ["ROLB", "RT", "QB"]
+    },
+    {
+      "t": 1,
+      "title": "2. Stem Draws the Tackle Wide",
+      "text": "A full-speed stem tight over the tackle drags the set outward, then the bounce back wide forces a second reset before the snap count even finishes.",
+      "focus": ["ROLB", "RT"]
+    },
+    {
+      "t": 1.9,
+      "title": "3. Inside Dart Through the Guess",
+      "text": "On the next reset the walker darts inside instead — attacking the B-gap the tackle’s eyes abandoned while the interior anchors keep the pocket sealed.",
+      "focus": ["ROLB", "RT", "NG", "ERE"]
+    },
+    {
+      "t": 3.1,
+      "title": "4. Flush and Finish",
+      "text": "The free inside burst flushes the QB directly into the looping contain rusher — the walk created the sack without ever beating a block.",
+      "focus": ["ROLB", "LOLB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b34-base-two-gap-fits"],
+    "playsOff": ["b34-dual-edge-interior-anchor"],
+    "tell": "The strong edge keeps switching between a two-point walk and a three-point sprinter stance across the tackle’s face — base fits park him stacked at 4 yards and leave him there."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

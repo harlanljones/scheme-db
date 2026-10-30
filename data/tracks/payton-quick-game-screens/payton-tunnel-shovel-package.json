@@ -1,0 +1,338 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "payton-tunnel-shovel-package",
+  "duration": 3.5,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Snap, then snap down on the near A-gap defender to open the tunnel",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.4, "x": 25.87, "y": -0.10000000000000003, "note": "Snap down on NT" },
+        { "t": 1.1, "x": 25.770000000000003, "y": 0.5, "note": "Seal NT inside the tunnel mouth" },
+        { "t": 2.2, "x": 25.67, "y": 1.2000000000000002, "note": "Drive him off the spot" },
+        { "t": 3.5, "x": 25.57, "y": 1.8000000000000003, "note": "Hold the tunnel wall" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Fire into the tunnel and become the lead blocker through the guard-to-guard window",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Fire into the tunnel" },
+        { "t": 0.5, "x": 25.6, "y": 0.19999999999999996, "note": "Step into the B-gap lane" },
+        { "t": 1.2, "x": 26.6, "y": 1.2000000000000002, "note": "Lead block between the guards" },
+        { "t": 2.3, "x": 27.2, "y": 3.6, "note": "Climb to WILL at second level" },
+        { "t": 3.5, "x": 27.6, "y": 7.1, "note": "Sustain the escort" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass-set WDE for one count to sell protection, then release upfield behind the play",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "One-count pass set vs WDE" },
+        { "t": 0.5, "x": 23.5, "y": -1, "note": "Punch WDE to freeze him" },
+        { "t": 1.3, "x": 24.3, "y": 0.19999999999999996, "note": "Release as Z clears" },
+        { "t": 2.4, "x": 25.3, "y": 2.2, "note": "Trail block behind the tunnel" },
+        { "t": 3.5, "x": 25.900000000000002, "y": 4.199999999999999, "note": "Cut off backside pursuit" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Hinge the far edge of the tunnel on 3T — this is the block the whole window depends on",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Set the tunnel hinge" },
+        { "t": 0.5, "x": 28.6, "y": -0.8, "note": "Punch 3T inside-out" },
+        { "t": 1.3, "x": 28.8, "y": 0, "note": "Force his rush lane wide of the window" },
+        { "t": 2.4, "x": 29, "y": 0.9999999999999999, "note": "Keep 3T on the outside shoulder" },
+        { "t": 3.5, "x": 29.2, "y": 2, "note": "Finish the hinge" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass-set SDE through the shovel timing so QB can flip the ball clean",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Vertical set vs SDE" },
+        { "t": 0.6, "x": 29.8, "y": -1.3, "note": "Anchor against power" },
+        { "t": 1.6, "x": 29.6, "y": -2, "note": "Ride SDE past the pocket" },
+        { "t": 3.5, "x": 29.2, "y": -2.6, "note": "Hold the edge through the throw" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Chip SDE, then release flat-right as a false screen look to occupy NICKEL",
+      "waypoints": [
+        { "t": 0, "x": 32, "y": -0.6, "note": "Chip SDE first" },
+        { "t": 0.5, "x": 32.8, "y": 0, "note": "Chip and peel" },
+        { "t": 1.2, "x": 35, "y": 0.7999999999999999, "note": "False flat release right" },
+        { "t": 2.2, "x": 37.5, "y": 2.4, "note": "Drag NICKEL away from tunnel" },
+        { "t": 3.5, "x": 39.5, "y": 4.4, "note": "Occupy apex at the numbers" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Drop one hitch, hold the ball, shovel it underhand to Z crossing behind the line",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Catch snap from gun" },
+        { "t": 0.45, "x": 26.87, "y": -5.2, "note": "Short drop, eyes downfield" },
+        { "t": 1.15, "x": 26.270000000000003, "y": -4.8, "note": "Shovel flip to Z in the tunnel" },
+        { "t": 1.9, "x": 25.470000000000002, "y": -4.2, "note": "Clear out behind the play" },
+        { "t": 3.5, "x": 24.87, "y": -3.7, "note": "Watch the convoy work" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Sell a swing route left, then cut off WILL who scrapes toward the tunnel",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -4.8, "note": "Swing-release fake left" },
+        { "t": 0.6, "x": 21.5, "y": -5.2, "note": "Sell the swing route" },
+        { "t": 1.5, "x": 20.9, "y": -4, "note": "Break down to cut off WILL" },
+        { "t": 2.5, "x": 21.3, "y": -3, "note": "Wall the scrape" },
+        { "t": 3.5, "x": 21.7, "y": -2.4, "note": "Finish the cut-off" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Take LCB vertical on a clearout stem, kill any backside pursuit angle",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Vertical clearout release" },
+        { "t": 0.7, "x": 7.2, "y": 3.5, "note": "Stem at LCB’s outside shoulder" },
+        { "t": 1.6, "x": 7.5, "y": 9, "note": "Stack him deep" },
+        { "t": 2.6, "x": 7.8, "y": 13, "note": "Occupy the deep third" },
+        { "t": 3.5, "x": 8, "y": 15.5, "note": "Clear the backside entirely" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Tunnel through between the OGs ahead of Z — first blocker in the window",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": -1, "note": "Crossing release under the LOS" },
+        { "t": 0.55, "x": 33.5, "y": -2.4, "note": "Working behind the guards" },
+        { "t": 1.05, "x": 29, "y": -3, "note": "Enter tunnel between OGs" },
+        { "t": 1.75, "x": 27, "y": -1.5, "note": "Block NICKEL trigger inside" },
+        { "t": 2.7, "x": 26.5, "y": 1, "note": "Turn him out of the lane" },
+        { "t": 3.5, "x": 26, "y": 3.5, "note": "Sustain inside wall" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "carry",
+      "assignment": "Come underneath across the formation, take the shovel, burst through the tunnel",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -0.5, "note": "Underneath sprint across" },
+        { "t": 0.5, "x": 40, "y": -1.2, "note": "Crossing behind the OL" },
+        { "t": 1.1, "x": 34, "y": -1.5, "note": "Catch the shovel at the tunnel mouth" },
+        { "t": 1.9, "x": 32, "y": 2, "note": "Burst through the guard-to-guard window" },
+        { "t": 2.7, "x": 31.5, "y": 6.5, "note": "Press vertical behind LG climb" },
+        { "t": 3.5, "x": 32, "y": 11.5, "note": "Second-level finish" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Upfield charge, frozen by LT’s punch, released past the play",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Edge charge" },
+        { "t": 0.5, "x": 21.4, "y": 1.3, "note": "Met by LT punch" },
+        { "t": 1.4, "x": 22, "y": 2.5, "note": "LT releases, he chases arc" },
+        { "t": 2.5, "x": 22.4, "y": 3.6999999999999997, "note": "Ball is already shoveled" },
+        { "t": 3.5, "x": 22.6, "y": 4.3, "note": "Trailing across formation" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Charge A-gap, get snapped down by the center at the tunnel mouth",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "A-gap charge" },
+        { "t": 0.5, "x": 25.1, "y": 1.4, "note": "Center snaps down on him" },
+        { "t": 1.4, "x": 24.9, "y": 2.2, "note": "Walled off the window" },
+        { "t": 2.6, "x": 24.7, "y": 2.8, "note": "Sealed inside the pile" },
+        { "t": 3.5, "x": 24.6, "y": 3.1999999999999997, "note": "Blocked out entirely" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "The conflict: choose the rush lane or close the shovel window — RG forces the wrong answer",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "B-gap charge" },
+        { "t": 0.5, "x": 29.4, "y": 1.3, "note": "RG hinges him outside" },
+        { "t": 1.2, "x": 29.8, "y": 1.9, "note": "Peeks inside at shovel window" },
+        { "t": 1.9, "x": 30, "y": 2.5, "note": "Caught between both jobs" },
+        { "t": 3.5, "x": 30.2, "y": 3.5, "note": "Half-lane rush, no window closure" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Contain rush vs RT, held through the entire shovel timing",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Contain rush" },
+        { "t": 0.6, "x": 32.8, "y": 1.6, "note": "TE chip slows launch" },
+        { "t": 1.6, "x": 33.4, "y": 2.9, "note": "Fighting RT anchor" },
+        { "t": 2.6, "x": 33.8, "y": 4.1000000000000005, "note": "Shovel already delivered" },
+        { "t": 3.5, "x": 34, "y": 4.9, "note": "Late to the chase" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Scrape over the top toward the tunnel, cut off by RB’s swing fake",
+      "waypoints": [
+        { "t": 0, "x": 23, "y": 4.5, "note": "Key run/pass read" },
+        { "t": 0.7, "x": 21.5, "y": 5.5, "note": "Bites on RB swing look" },
+        { "t": 1.6, "x": 22.5, "y": 6.5, "note": "Redirects to the tunnel late" },
+        { "t": 2.6, "x": 24.5, "y": 7.5, "note": "RB cuts off the scrape" },
+        { "t": 3.5, "x": 26, "y": 8.5, "note": "Trailing through trash" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Trigger downhill on the interior look, meet the LG climb head-on",
+      "waypoints": [
+        { "t": 0, "x": 28.5, "y": 4.5, "note": "Downhill trigger" },
+        { "t": 0.7, "x": 28, "y": 4, "note": "Reads interior action" },
+        { "t": 1.5, "x": 27.5, "y": 3.3, "note": "Charging the tunnel window" },
+        { "t": 2.4, "x": 27.9, "y": 4.7, "note": "Met by climbing LG" },
+        { "t": 3.5, "x": 28.9, "y": 6.1, "note": "Blocked out of pursuit" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Trigger on the TE false screen, then run into H waiting inside the tunnel",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": 4, "note": "Apex alignment" },
+        { "t": 0.6, "x": 36.5, "y": 3.2, "note": "Eyes TE false screen" },
+        { "t": 1.3, "x": 35, "y": 2.6, "note": "Drifts to the false look" },
+        { "t": 2.1, "x": 34, "y": 3, "note": "H blocks him inside the tunnel" },
+        { "t": 3.5, "x": 34.5, "y": 5.5, "note": "Spinning, late to the finish" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Carry X vertical on the clearout, removed from any screen help",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 6.5, "note": "Man coverage on X" },
+        { "t": 0.8, "x": 7.2, "y": 8.5, "note": "Retreating with the stem" },
+        { "t": 1.8, "x": 7.5, "y": 13, "note": "Deep with X" },
+        { "t": 3.5, "x": 8, "y": 17.5, "note": "Never sees the shovel" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Lose Z on the crossing route, then chase across formation behind the play",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 6.5, "note": "Man coverage on Z" },
+        { "t": 0.5, "x": 45, "y": 6, "note": "Z crosses underneath fast" },
+        { "t": 1.2, "x": 43, "y": 6.3, "note": "Screened by crossing traffic" },
+        { "t": 2.3, "x": 40, "y": 8, "note": "Chasing across the formation" },
+        { "t": 3.5, "x": 37, "y": 11, "note": "Hopeless pursuit angle" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Robber to the strong side, trigger on the shovel but arrive into the LG wall",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 11.5, "note": "Robber alignment" },
+        { "t": 0.7, "x": 33, "y": 10, "note": "Reading interior action" },
+        { "t": 1.5, "x": 32, "y": 8.5, "note": "Triggering to the shovel" },
+        { "t": 2.5, "x": 31.5, "y": 7, "note": "Meets the LG escort at second level" },
+        { "t": 3.5, "x": 32, "y": 8.5, "note": "Walled from the tackle" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Single high, split the field and rally only once the tunnel breaks out",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 12, "note": "Single-high alignment" },
+        { "t": 0.9, "x": 21, "y": 12.5, "note": "Holds middle, reading shovel risk" },
+        { "t": 2, "x": 23, "y": 12.5, "note": "Tunnel confirmed, breaking late" },
+        { "t": 3.5, "x": 26, "y": 11, "note": "Last-chance angle to the breakout" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sprintout-smash-wheel",
+  "schemeId": "reid-spread-rpo",
+  "order": 4,
+  "name": "Sprintout Smash-Wheel",
+  "personnel": "11",
+  "formation": "11P Gun Trips Right",
+  "situation": "3rd & 7, +28, scoring territory",
+  "coverage": "Cover 2 Invert / Palms",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Outflank perimeter pass rush with a moving pocket sprintout while executing a smash-wheel concept that punishes squatting Cover 2 cornerbacks.",
+    "keyDefender": "Right Cornerback (RCB) & Strong Safety (SS)",
+    "whyItWorks": "Sprintout rollout cuts the throwing distance to the sideline in half. When the outside cornerback bites downhill on the inside slot hitch, Z blows past him on the wheel route into the massive void along the sideline before the deep safety can rotate over.",
+    "failureMode": "Strong safety reading the wheel immediately and taking a sharp downhill angle, or edge rusher blowing past the tackle to sack the QB before he reaches the launch perimeter."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "11P Trips Right Alignment & Perimeter Overload",
+      "text": "Reid shows the same 11 Personnel Trips Right formation. The defense sits in a two-high Cover 2 / Palms shell, aiming to aggressively defend the sticks.",
+      "focus": ["Z", "H", "Y", "RCB", "SS"]
+    },
+    {
+      "t": 0.8,
+      "title": "Half-Roll Sprintout Action & Launch Point Shift",
+      "text": "The QB sprints out to the right with the RB securing the perimeter edge. By moving the pocket outside the tackle box, Reid changes the launch angle and shortens the sideline throw.",
+      "focus": ["QB", "RB", "RT", "SDE"]
+    },
+    {
+      "t": 1.6,
+      "title": "Corner Squats on Underneath Hitch",
+      "text": "H snaps off a crisp 5-yard hitch route. The field cornerback (RCB) aggressively bites downhill to tackle the hitch at the sticks, falling directly into the Smash-Wheel trap.",
+      "focus": ["H", "RCB", "Z"]
+    },
+    {
+      "t": 2.5,
+      "title": "Z Accelerates Down Sideline on Wheel Route",
+      "text": "Having faked an inside slant stem, Z plants his foot and bursts vertically down the sideline on the wheel. With Y holding the deep safety inside, Z flies into open space.",
+      "focus": ["Z", "RCB", "Y", "SS"]
+    },
+    {
+      "t": 3.4,
+      "title": "Deep Hole-Shot Delivery Over the Squatted Corner",
+      "text": "The QB uncorks a pinpoint hole shot over the squatted corner and away from the recovering safety, dropping the ball into Z’s hands for a 28-yard touchdown strike.",
+      "focus": ["QB", "Z", "RCB", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["mesh-shallow-cross"],
+    "tell": "QB takes half-roll sprintout launch point to perimeter while outside receiver runs high-speed smash-wheel."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

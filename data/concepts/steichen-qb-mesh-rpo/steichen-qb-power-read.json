@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "steichen-qb-power-read",
+  "schemeId": "steichen-qb-mesh-rpo",
+  "order": 1,
+  "name": "Gun QB Power Read",
+  "personnel": "11",
+  "formation": "11P Gun Spread Right",
+  "situation": "1st & 10, +48, open field",
+  "coverage": "Nickel Cover 2 / Quarters",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Put the frontside defensive end in an impossible spatial dilemma: if he widens to stop the perimeter sweep, the dual-threat QB powers downhill behind a pulling guard.",
+    "keyDefender": "Strongside Defensive End (SDE) & Mike Linebacker (MIKE)",
+    "whyItWorks": "The threat of the speed sweep forces the edge defender and nickel DB to play with wide leverage, eliminating the defense's force support and creating a massive downhill power gap.",
+    "failureMode": "A defensive tackle who defeats the down block inside or a disciplined DE who shuffles and plays both the keep and the pitch."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Spread 11-Personnel Power Read Look",
+      "text": "Steichen spaces the defense across the width of the field in 11-personnel Gun Spread, isolating the frontside defensive end as the unblocked read defender.",
+      "focus": ["QB", "RB", "RG", "SDE"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Jet Sweep Mesh & DE Conflict",
+      "text": "RB crosses on a full-speed horizontal sweep track. Frontside SDE widens laterally to prevent the perimeter sweep, immediately opening the interior gap cavity.",
+      "focus": ["SDE", "RB", "QB"]
+    },
+    {
+      "t": 1.6,
+      "title": "The QB Keep & Pulling Guard Escort",
+      "text": "QB reads the widening DE, firmly pulls the ball from the mesh, and explodes downhill into the B-gap behind pulling guard RG.",
+      "focus": ["QB", "RG", "MIKE"]
+    },
+    {
+      "t": 2.6,
+      "title": "RG Decimates Mike LB in the Hole",
+      "text": "RG violently pancakes the Mike linebacker at the line of scrimmage, allowing the QB to burst untouched into the secondary for a 15-yard gain.",
+      "focus": ["RG", "MIKE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["steichen-zone-bubble-rpo", "steichen-verticals-switch"],
+    "playsOff": ["steichen-mesh-rail-wheel"],
+    "tell": "Backside RG pulls playside while RB crosses on horizontal sweep path; QB reads frontside DE."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

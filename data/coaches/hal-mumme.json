@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "hal-mumme",
+  "name": "Hal Mumme",
+  "role2026": "Air Raid Co-Inventor",
+  "team": "Kentucky / Valdosta State / Iowa Wesleyan",
+  "lineage": "air-raid",
+  "side": "offense",
+  "philosophy": "Co-invented the Air Raid at Iowa Wesleyan and Kentucky: mesh, shallow, and stick spacing concepts thrown from empty looks, practicing only a handful of plays thousands of times.",
+  "keyConcepts": ["Mesh Concept", "Shallow Cross", "Stick Spacing", "Empty Formations"],
+  "schemeIds": ["air-raid"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Invented the Air Raid Offense", "Tim Couch Record Passing Seasons at Kentucky"]
+}

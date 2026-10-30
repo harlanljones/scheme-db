@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coen-bubble-triangle-rpo",
+  "schemeId": "coen-wide-zone-rpo",
+  "order": 2,
+  "name": "Bubble-Slant-Flat Triangle RPO (Zone-Read Action)",
+  "personnel": "11",
+  "formation": "11P Gun Wide-Zone Strong Right vs Nickel",
+  "situation": "2nd & 5, +45, packaged triangle stretch off zone-read look",
+  "coverage": "Nickel Cover 2 Match",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Turn one zone-read call into a true triple-option math problem by stretching a single apex defender with three simultaneous targets at three depths.",
+    "keyDefender": "NICKEL or SS (apex squeezed three ways)",
+    "whyItWorks": "Three receivers attacking one apex at bubble, slant, and flat depths guarantees displacement — whichever defender the nickel keys, one of the three windows opens. The live RB threat prevents linebackers from robbing the quick game.",
+    "failureMode": "Pattern-match quarters where the apex walls the slant, the corner takes the bubble man-to-man with an immediate trigger, and the safety erases the flat — collapsing the triangle from both edges."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Zone-Read Ride Freezes the Edge",
+      "text": "The QB rides the mesh while reading the unblocked SDE, whose crash commits him downhill. That half-second of edge hesitation is what lets all three routes clear their landmarks before anyone rallies.",
+      "focus": ["QB", "RB", "SDE"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Triangle Forms",
+      "text": "Z's bubble, H's slant, and the TE's flat occupy three different depths and angles around one apex defender. Geometry, not route talent, is what creates this separation.",
+      "focus": ["Z", "H", "TE", "NICKEL"]
+    },
+    {
+      "t": 1.6,
+      "title": "3. Apex Displacement",
+      "text": "The nickel starts keyed on H's slant, so the bubble drags him sideways and the SS is left straddling two layers without a clean trigger. The QB reads the displacement and fires to Z.",
+      "focus": ["NICKEL", "SS", "QB", "Z"]
+    },
+    {
+      "t": 2.2,
+      "title": "4. Catch on the Move vs Soft Force",
+      "text": "Z catches the bubble in full stride behind the drifting corner. With the field corner playing soft force, there is no immediate tackler — only grass and the stalk-protected sideline.",
+      "focus": ["Z", "RCB", "NICKEL"]
+    },
+    {
+      "t": 3,
+      "title": "5. Constraint Value",
+      "text": "Even when the defense handles the throw, the RB's live insert forced WILL and MIKE to defend the box. Coen's packaging makes defending one thing mean conceding the other every snap.",
+      "focus": ["RB", "WILL", "MIKE", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coen-motion-zone-cutback"],
+    "playsOff": ["steichen-zone-bubble-rpo"],
+    "tell": "Three receivers release at three distinct depths off zone-read ride action — bubble arc, inside slant, and chasing TE flat — instead of any single downfield route tree."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "baylor-slot-choice-shot",
+  "schemeId": "baylor-choice",
+  "order": 1,
+  "name": "Slot Choice Shot",
+  "personnel": "11",
+  "formation": "11P Gun, Slot Left",
+  "situation": "1st & 10, own 35, vs two-high shell",
+  "coverage": "Cover 2 Zone",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use simple inside-zone action to freeze the second level while the slot runs a leverage-based vertical shot for a touchdown.",
+    "keyDefender": "Nickel (run-fit defender on the slot)",
+    "whyItWorks": "One word triggers the whole play: the run action buys the linebackers, the choice stem punishes whichever way the nickel leans, and both corners are cleared out.",
+    "failureMode": "The nickel plays pure man from the snap instead of fitting run, staying attached to the slot's hip throughout the climb."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Run Picture Sells",
+      "text": "Five linemen fire inside-zone steps and the quarterback rides the give. Both linebackers trigger downhill and the nickel steps toward the box.",
+      "focus": ["QB", "RB", "MIKE", "NICKEL"]
+    },
+    {
+      "t": 1.7,
+      "title": "2. The Nickel Loses His Feet",
+      "text": "The slot takes his CHOICE release straight upfield off outside leverage. The nickel, mid-run-fit, must stop his feet and turn — losing two critical yards.",
+      "focus": ["H", "NICKEL"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. The Safety Picks a Seam",
+      "text": "With both corners pinned and the TE stretching the middle, the free safety must choose between the boundary seam and the field-side window. He picks wrong.",
+      "focus": ["FS", "X", "Y"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Single-Word Shot Pays",
+      "text": "The whole call was one word — the slot's choice route ran itself off leverage. The quarterback delivers over the top of the still-triggering defense.",
+      "focus": ["QB", "H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["baylor-iz-read-choice-double-post", "baylor-bubble-go-glance"],
+    "playsOff": [],
+    "tell": "The slot releases instantly vertical with no stem variation — a true option route adjusts mid-route; this one never breaks."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

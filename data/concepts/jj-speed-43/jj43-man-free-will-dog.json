@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "jj43-man-free-will-dog",
+  "schemeId": "jj-speed-43",
+  "order": 2,
+  "name": "Man-Free Will Dog",
+  "personnel": "Nickel 4-2-5 Man-Free",
+  "formation": "11P Gun Slot Right vs Press Man-Free",
+  "situation": "3rd & 5, +25, must-have down",
+  "coverage": "Cover 1 with A-gap Will Dog",
+  "frontName": "Even 4-3 Nickel Dog Look",
+  "summary": {
+    "motive": "Create guaranteed interior pressure with a single A-gap dog while man-free coverage eliminates every hot answer behind it.",
+    "keyDefender": "The Will linebacker triggering the A-gap dog",
+    "whyItWorks": "A mug-aligned blitzer covers five yards faster than a sliding lineman recovers, and pressed corners take away exactly the quick throws offenses use to beat dogs.",
+    "failureMode": "The guard slide-releases to the dog instantly and the back protects the edge, giving the QB a free throwing lane to the slant."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The Instant Trigger",
+      "text": "Will fires at the snap from his mug alignment, splitting Center and guard before either can react — Jimmy Johnson’s speed defense turns a five-step protection call into a race the line has already lost.",
+      "focus": ["WILL", "C", "LG"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. Mike Peels, Picture Flips",
+      "text": "Mike showed the second dog all week’s film, then peels to the back at the snap, so every eligible receiver is matched and there is no soft spot in the man-free picture.",
+      "focus": ["MIKE", "RB", "FS"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Hot Route Under Siege",
+      "text": "The slot slant is the designed beater, but the pressed nickel reroutes it inside and the quarterback feels the dog arriving before his eyes finish the progression.",
+      "focus": ["H", "NICKEL", "QB"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Dog Finishes the Escape",
+      "text": "The quarterback tries to climb away from the A-gap and Will runs him down from behind, completing the sack that pure coverage could never guarantee.",
+      "focus": ["WILL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["jj43-miami-chase-rule-pursuit"],
+    "playsOff": ["jj43-penetration-slant-loop"],
+    "tell": "Will lines up in a true two-point mug stance with inside foot back, cocked to fire — the loop game shows a four-point rush posture instead."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

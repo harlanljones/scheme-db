@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "saleh-nascar-cover1-robber",
+  "schemeId": "saleh-43-wide9",
+  "order": 4,
+  "name": "NASCAR Package Cover 1 Robber",
+  "personnel": "NASCAR 4-DE Speed Package",
+  "formation": "Wide-9 NASCAR vs 11P Gun 3x1 Empty",
+  "situation": "3rd & 11, +34, must-have passing down",
+  "coverage": "Cover 1 Robber (Man-Free Lurk)",
+  "frontName": "NASCAR 4-Speed Rusher Front",
+  "summary": {
+    "motive": "Deploy maximum pass rush speed (4 defensive ends) on 3rd-and-long while setting a Cover 1 Robber trap to jump intermediate crossing and dig routes.",
+    "keyDefender": "SS (Robber / Lurk defender) & WDE (Speed edge rusher)",
+    "whyItWorks": "Offenses target the intermediate middle against man coverage expecting a void behind linebackers; the SS Robber eliminates this window while the 4-speed rush forces an early throw.",
+    "failureMode": "Backside slot fades or boundary double moves that take advantage of outside leverage in man coverage."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "NASCAR Front & 2-High Disguise",
+      "text": "Saleh unleashes the NASCAR package (4 speed rushers across the line) while showing a 2-high safety shell to disguise the Cover 1 Robber trap.",
+      "focus": ["WDE", "NT", "3T", "SDE", "SS"]
+    },
+    {
+      "t": 1,
+      "title": "4-Speed Rush Blows Past Tackles",
+      "text": "WDE and SDE use pure edge speed from extreme Wide-9 alignments to immediately turn the corner on the offensive tackles under 1.5 seconds.",
+      "focus": ["WDE", "SDE", "LT", "RT"]
+    },
+    {
+      "t": 2.2,
+      "title": "SS Robber Jumps Intermediate Dig",
+      "text": "While the receivers believe they have man-to-man leverage on in-breaking routes, SS drives downhill into the robber hole directly into the primary throwing window.",
+      "focus": ["SS", "H", "QB"]
+    },
+    {
+      "t": 3.5,
+      "title": "Strip Sack & Turnover Created",
+      "text": "With the QB’s primary read robbed and nowhere to scramble, the relentless speed rush arrives for the strip-sack turnover.",
+      "focus": ["WDE", "QB", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["saleh-cover3-match", "saleh-cover6-bracket"],
+    "tell": "Pass-rush front widens into NASCAR splits and SS drops to low robber hole rather than deep 1/3"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

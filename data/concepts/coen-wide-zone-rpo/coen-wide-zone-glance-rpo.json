@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coen-wide-zone-glance-rpo",
+  "schemeId": "coen-wide-zone-rpo",
+  "order": 1,
+  "name": "Wide-Zone + Glance RPO (Box-Number Read)",
+  "personnel": "11",
+  "formation": "11P Gun Wide-Zone Strong Right vs Nickel",
+  "situation": "1st & 10, +40, early down run/pass packaged call",
+  "coverage": "Nickel Cover 2 Match",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Package wide-zone run mechanics with a post-snap glance so the QB can hand off or throw based purely on how the apex nickel defends the box.",
+    "keyDefender": "NICKEL (apex run-fit vs RPO conflict)",
+    "whyItWorks": "The run presentation is completely genuine — real reach blocks, real RB track — so the nickel's downhill trigger is the correct run answer that becomes a fatal wrong answer against the throw. His vacated apex grass is precisely where the glance lands.",
+    "failureMode": "A nickel who stays patient at the apex and plays both halves of the package forces the QB into a true handoff, letting the front side defend the stretch without ever leaving H uncovered."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. Identical Run Picture",
+      "text": "Everything through the mesh looks like pure wide-zone: the OL scoops, TE arcs, and RB presses his normal stretch track. The QB is not reading a defender — he reads the box numbers to decide whether this is a handoff or a throw.",
+      "focus": ["QB", "RB", "RT", "TE"]
+    },
+    {
+      "t": 1,
+      "title": "2. The Nickel Flies",
+      "text": "With six blockers creating a credible stretch crease, the apex nickel triggers hard downhill into his run fit — exactly the response the run packaging exists to punish.",
+      "focus": ["NICKEL", "RB", "MIKE"]
+    },
+    {
+      "t": 1.6,
+      "title": "3. Glance Into the Void",
+      "text": "The QB pulls the ball and snaps the glance over the flying nickel to H, who has released flat into the exact grass the trigger abandoned. The SS cannot close from his deep-half alignment in time.",
+      "focus": ["QB", "H", "NICKEL", "SS"]
+    },
+    {
+      "t": 2.6,
+      "title": "4. Z Stalk Protects YAC",
+      "text": "Z's stalk block erases the field corner so the catch turns immediately upfield. One defensive trigger converted a called run into an easy five-yard completion with room to run.",
+      "focus": ["H", "Z", "RCB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coen-crack-toss-perimeter"],
+    "playsOff": ["rpo-glance-post", "mcvay-glance-rpo-orbit"],
+    "tell": "Identical run-flow picture until the nickel commits — then the ball comes out over his head instead of going into the RB's belly."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

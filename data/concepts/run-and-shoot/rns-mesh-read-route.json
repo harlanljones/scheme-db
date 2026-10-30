@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "rns-mesh-read-route",
+  "schemeId": "run-and-shoot",
+  "order": 2,
+  "name": "Mesh Read-Route",
+  "personnel": "10 Empty",
+  "formation": "Gun Empty, Slots Crossed",
+  "situation": "3rd & 5, +45, must-have down",
+  "coverage": "Cover 2 Man Under",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Create a natural rub with two shallow crossers and let each receiver convert off the defender's leverage rather than a fixed break point.",
+    "keyDefender": "Mike Linebacker (middle-hole wall)",
+    "whyItWorks": "Crossers force man defenders to exchange or collide through traffic, and the read-route rules guarantee one receiver is always working away from his coverage.",
+    "failureMode": "Defenders pass off the crossers cleanly pre-snap, or a blitz disrupts the timing before the mesh point develops."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Vertical Stems Sell Out",
+      "text": "Both crossers release on pure vertical stems while X and Y push the corners deep, convincing the safeties that this is a four-vertical shot.",
+      "focus": ["M", "Z", "X", "Y"]
+    },
+    {
+      "t": 1.7,
+      "title": "2. The Mesh Point",
+      "text": "The crossers converge at midfield within a yard of each other. Man defenders must either exchange or collide, and the linebackers cannot communicate fast enough.",
+      "focus": ["M", "Z", "MIKE", "SAM"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. Reading the Leverage",
+      "text": "The chase-over forces M to settle into the soft hole between the linebacker levels, while Z feels trail leverage and speeds up, climbing away from SAM.",
+      "focus": ["M", "Z", "WILL", "SAM"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Window Throw",
+      "text": "The quarterback hits Z climbing up the far seam in front of a free safety whose eyes never left the corner route.",
+      "focus": ["QB", "Z", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["rns-go-route-stab"],
+    "playsOff": ["rns-switch-verticals"],
+    "tell": "The crossers never stop until they feel a defender's leverage — a called mesh with set breaks settles at the same spot every snap regardless of coverage."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

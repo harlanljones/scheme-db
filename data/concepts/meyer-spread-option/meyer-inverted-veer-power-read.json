@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "meyer-inverted-veer-power-read",
+  "schemeId": "meyer-spread-option",
+  "order": 2,
+  "name": "Inverted Veer Power Read",
+  "personnel": "11",
+  "formation": "Gun Spread Right Slot, TE Right",
+  "situation": "2nd & 3, own 40, jet-sweep tendency set",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use a jet sweep presentation to displace the playside end, then attack the vacated interior with a quarterback pull.",
+    "keyDefender": "Playside Defensive End (unblocked read key)",
+    "whyItWorks": "Full-speed motion makes the sweep credible enough to move the end laterally, and the inverted geometry means his displacement opens the box instead of the edge.",
+    "failureMode": "The end squeezes down on the flip instead of chasing width, sitting exactly where the pull wants to go."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. Jet Sweep Sets the Trap",
+      "text": "The slot crosses at dead sprint and the quarterback flips him the sweep look. The playside end cannot resist widening to chase the perimeter threat.",
+      "focus": ["H", "QB", "RE"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The End Chases the Motion",
+      "text": "With the end committed outside-in on the sweep, the entire B-gap and A-gap collapse inward with nobody home to defend them.",
+      "focus": ["RE", "H", "QB"]
+    },
+    {
+      "t": 2.1,
+      "title": "3. Pull Into the Vacated Box",
+      "text": "The quarterback pulls the ball off the jet flip and keeps it inside, where the offset back is already kicking the Mike out of his path.",
+      "focus": ["QB", "F", "MIKE"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Inside Finish Behind the Lead Block",
+      "text": "The keeper climbs through the scooped A-gap while both safeties trigger late, finishing upfield through the middle of the defense.",
+      "focus": ["QB", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["meyer-snag-triangle-spacing"],
+    "playsOff": ["meyer-inside-zone-read-give"],
+    "tell": "The ballcarrier crosses the formation before the mesh ever happens — classic zone reads have no motion at the snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

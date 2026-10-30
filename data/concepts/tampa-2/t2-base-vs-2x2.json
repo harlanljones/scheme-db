@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "t2-base-vs-2x2",
+  "schemeId": "tampa-2",
+  "order": 1,
+  "name": "Base Tampa 2 vs 2x2",
+  "personnel": "Base 4-3",
+  "formation": "Tampa 2 Shell vs Gun 11 Personnel 2x2",
+  "situation": "2nd & 7 from the 25, standard down",
+  "coverage": "Cover 2 Tub (Mike Deep Hole)",
+  "frontName": "Under Front (1-Tech Nose, 3-Tech Under Tackle)",
+  "summary": {
+    "motive": "Flood the deep zones with five defenders while rushing only four, baiting offenses into the seams and erasing them with the Mike linebacker’s unique deep-middle conversion.",
+    "keyDefender": "MIKE turning his hook-curl drop into the deep-middle hole — the only defender who can erase both seams",
+    "whyItWorks": "Underneath-first corners contest every quick throw instantly, forcing the QB to hold for seams — exactly where the sprinting Mike arrives.",
+    "failureMode": "A fast deep-middle flood of post-seam combinations occupying the Mike before he can turn and run."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The MOFC Two-High Picture",
+      "text": "Only four men rush while both corners squat at 10-plus yards and the safeties split the halves. The middle of the field belongs to one man: the Mike linebacker.",
+      "focus": ["LCB", "RCB", "SS", "FS", "MIKE"]
+    },
+    {
+      "t": 1,
+      "title": "2. Seams Attacked on Both Halves",
+      "text": "Both slots stem vertically into the classic Cover 2 seams — the void between the squatting corner and the safety half — while the QB climbs his five-step drop.",
+      "focus": ["H", "Y", "Z", "X"]
+    },
+    {
+      "t": 2,
+      "title": "3. Mike Turns and Runs the Hole",
+      "text": "Reading the lock-on, the Mike converts his hook-curl drop into a dead sprint toward the back-center hole, erasing the seam the coverage is built to bait.",
+      "focus": ["MIKE", "QB", "FS"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Back-Center Interception",
+      "text": "The seam throw sails directly into the sprinting Mike’s dive at the landmark — the signature Tampa 2 moment that turned picks into points.",
+      "focus": ["MIKE", "H", "UT"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["t2-roll-cover3-trips"],
+    "playsOff": ["t2-cloud-boundary"],
+    "tell": "Both corners squat at 10 yards staring at the QB instead of trailing receivers vertically — cloud keeps its boundary corner pressed at 1 yard."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

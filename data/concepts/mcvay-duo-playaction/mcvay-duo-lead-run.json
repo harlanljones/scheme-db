@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcvay-duo-lead-run",
+  "schemeId": "mcvay-duo-playaction",
+  "order": 1,
+  "name": "11P Duo Lead Inside Power Run",
+  "personnel": "11",
+  "formation": "11P Condensed Bunch Right",
+  "situation": "1st & 10, +45, early down base",
+  "coverage": "Cover 3 Match",
+  "frontName": "4-2-5 Nickel Over front",
+  "summary": {
+    "motive": "Punish light nickel boxes with vertical double-teams (\"Duo\"), creating massive interior movement and establishing the physical run picture that unlocks play-action shot plays.",
+    "keyDefender": "Mike Linebacker (Playside Interior LB)",
+    "whyItWorks": "Dual simultaneous double-teams generate relentless vertical push; the running back presses frontside until the Mike commits, then cuts back behind the Center’s interior seal.",
+    "failureMode": "A dominant 3-tech DT splitting the RG/RT double-team or safety flying down unblocked into the cutback alley before the RB can press the line."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Dual Interior Double-Teams",
+      "text": "The Center and Left Guard combo the 1-tech NT, while Right Guard and Right Tackle combo the 3-tech DT. McVay creates two 600-pound vertical displacements without using a pulling guard (\"Power without a puller\").",
+      "focus": ["C", "LG", "NT", "RG", "RT", "3T"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Mesh & Mike Conflict Read",
+      "text": "The running back tracks downhill directly into the frontside A/B gap, pressing the line of scrimmage to freeze the Mike Linebacker. The QB fakes a weakside bootleg to hold the backside defensive end.",
+      "focus": ["QB", "RB", "MIKE", "WDE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Second-Level Cutback Burst",
+      "text": "As the Mike overcommits to plug the frontside B-gap, the running back plants his outside foot and bends sharply back into the wide crevasse behind the Center’s displacement on the NT.",
+      "focus": ["RB", "C", "MIKE", "WILL"]
+    },
+    {
+      "t": 3.8,
+      "title": "4. Explosive Open-Field YAC",
+      "text": "Slot receiver H pins the Nickel defender with a vicious crack block while the RB bursts through the secondary past the diving Will linebacker for an explosive 15-yard gain.",
+      "focus": ["RB", "H", "NICKEL", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcvay-pa-sail-flood", "mcvay-pa-deep-crosser", "mcvay-glance-rpo-orbit"],
+    "playsOff": [],
+    "tell": "Offensive line vertical-punch double teams climbing to Mike linebacker; no pulling guard, RB presses interior A-gap mesh."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

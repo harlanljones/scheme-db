@@ -1,0 +1,310 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "johnson-hook-ladder-mesh",
+  "duration": 3.5,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Short set, allow NT upfield, QB quick release",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 27, "y": 0.2, "note": "Short set" },
+        { "t": 3.5, "x": 27, "y": 1.5, "note": "Anchor" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Short set backside, mirror 3T",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Set" },
+        { "t": 0.5, "x": 24.8, "y": 0.3, "note": "Block" },
+        { "t": 3.5, "x": 24.5, "y": 1.2, "note": "Anchor" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Set hinge, wall WDE outside",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Set" },
+        { "t": 0.5, "x": 22.5, "y": 0.3, "note": "Wall WDE" },
+        { "t": 3.5, "x": 22, "y": 1.5, "note": "Anchor" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Short set, 3T quick pass rush protection",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Set" },
+        { "t": 0.5, "x": 29, "y": 0.3, "note": "Mirror 3T" },
+        { "t": 3.5, "x": 29.5, "y": 1.2, "note": "Hold" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Set protection, kick SDE outside",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Set" },
+        { "t": 0.5, "x": 31, "y": 0.3, "note": "Kick SDE" },
+        { "t": 3.5, "x": 31.5, "y": 1.2, "note": "Protect" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Hook at 5 yards, create mesh rub for RB to run ladder off TE hook",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": -0.6, "note": "Release outside" },
+        { "t": 0.5, "x": 20, "y": 1.5, "note": "Drive 5 yards" },
+        { "t": 1.2, "x": 18.5, "y": 5, "note": "Hook and plant — hold defender" },
+        { "t": 2.2, "x": 17.5, "y": 5.5, "note": "Hold position vs coverage" },
+        { "t": 3.5, "x": 16.5, "y": 6, "note": "Create rub wall" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Quick gun drop, read hook/ladder mesh: 1st look TE hook, 2nd look RB lateral on ladder",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap from gun" },
+        { "t": 0.5, "x": 26.67, "y": -4.8, "note": "2-step drop" },
+        { "t": 1, "x": 26.67, "y": -5, "note": "Read TE hook — double covered" },
+        { "t": 1.6, "x": 26.67, "y": -5, "note": "Flip to RB ladder running free" },
+        { "t": 2, "x": 24, "y": -5, "note": "Throw lateral to RB" },
+        { "t": 3.5, "x": 22, "y": -5, "note": "Follow lateral direction" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Ladder route: set up inside the TE hook, slip past the rub, receive lateral in space",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -4.5, "note": "Gun alignment" },
+        { "t": 0.5, "x": 29.5, "y": -4, "note": "Release inside toward TE" },
+        { "t": 1, "x": 25, "y": -2, "note": "Create mesh rub angle" },
+        { "t": 1.6, "x": 21, "y": 1.5, "note": "Ladder free — slip the rub" },
+        { "t": 2.2, "x": 18, "y": 4, "note": "Catch lateral in space" },
+        { "t": 3.5, "x": 14, "y": 8, "note": "Run for first down" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Vertical clear route, pin LCB deep and open middle thirds",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -0.5, "note": "Press stem" },
+        { "t": 1, "x": 46, "y": 6, "note": "Streak vertical" },
+        { "t": 3.5, "x": 46, "y": 16, "note": "Deep clear" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Shallow drag to hold MIKE and draw Nickel coverage inside",
+      "waypoints": [
+        { "t": 0, "x": 12, "y": -1, "note": "Inside release" },
+        { "t": 0.8, "x": 16, "y": 3.5, "note": "Drag shallow inside" },
+        { "t": 2, "x": 22, "y": 4.5, "note": "Draw MIKE and Nickel" },
+        { "t": 3.5, "x": 28, "y": 5.5, "note": "Continue drag" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary out-cut at 8 yards, hold RCB on outside",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Press stem" },
+        { "t": 0.8, "x": 7.5, "y": 4.5, "note": "Drive hard upfield" },
+        { "t": 1.5, "x": 5.5, "y": 8, "note": "Break out" },
+        { "t": 3.5, "x": 3.5, "y": 8.5, "note": "Hold RCB outside" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Rush backside B-gap, absorbed by LT hinge",
+      "waypoints": [
+        { "t": 0, "x": 22, "y": 0.9, "note": "Rush" },
+        { "t": 0.6, "x": 22.5, "y": 0.8, "note": "Absorbed" },
+        { "t": 3.5, "x": 22.8, "y": 1.8, "note": "Blocked" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "1-tech upfield rush, QB releases quickly",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 0.9, "note": "Rush" },
+        { "t": 0.6, "x": 26, "y": 0.6, "note": "Push upfield" },
+        { "t": 3.5, "x": 27, "y": 1.5, "note": "Chasing QB" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "3-tech rush, blocked by RG",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": 0.9, "note": "Rush" },
+        { "t": 0.6, "x": 29.5, "y": 0.8, "note": "Absorbed" },
+        { "t": 3.5, "x": 30, "y": 1.5, "note": "Held" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Right edge, absorbed by RT",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": 0.9, "note": "Rush" },
+        { "t": 0.6, "x": 33, "y": 0.8, "note": "Absorbed by RT" },
+        { "t": 3.5, "x": 33.5, "y": 1.5, "note": "Held" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man on RB, runs with RB into mesh — loses him on rub",
+      "waypoints": [
+        { "t": 0, "x": 24.5, "y": 4.5, "note": "Man on RB" },
+        { "t": 0.8, "x": 27.5, "y": 3.5, "note": "Follow RB inside" },
+        { "t": 1.5, "x": 23, "y": 2, "note": "Blocked by TE hook rub" },
+        { "t": 2.2, "x": 21, "y": 3.5, "note": "Can't get through rub" },
+        { "t": 3.5, "x": 18, "y": 6, "note": "RB is free" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Middle LB, dragged by H drag, vacates hook zone",
+      "waypoints": [
+        { "t": 0, "x": 28.5, "y": 4.5, "note": "Zone" },
+        { "t": 0.8, "x": 26.5, "y": 4.5, "note": "React hook zone" },
+        { "t": 1.8, "x": 24.5, "y": 5, "note": "Drawn inside by H drag" },
+        { "t": 3.5, "x": 22, "y": 6, "note": "Out of position" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man on H slot, follows drag route across field",
+      "waypoints": [
+        { "t": 0, "x": 18, "y": 3.8, "note": "Man on H" },
+        { "t": 0.8, "x": 17, "y": 4, "note": "Follow H drag" },
+        { "t": 2, "x": 22, "y": 5, "note": "Track H across field" },
+        { "t": 3.5, "x": 28, "y": 6, "note": "Drawn far inside" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man on X, locked in trail coverage",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 6.5, "note": "Press bail" },
+        { "t": 1, "x": 46, "y": 7, "note": "Trail X deep" },
+        { "t": 3.5, "x": 46, "y": 16, "note": "Deep pursuit" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man on Z, holds outside on out-cut",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 6.5, "note": "Press" },
+        { "t": 1, "x": 7, "y": 5, "note": "Mirror Z" },
+        { "t": 3.5, "x": 4.5, "y": 8.5, "note": "Cover outside Z out" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Boundary SS, man-free, protect deep third",
+      "waypoints": [
+        { "t": 0, "x": 14, "y": 11.5, "note": "Free safety" },
+        { "t": 1.5, "x": 14.5, "y": 11, "note": "Sink deep" },
+        { "t": 3.5, "x": 14, "y": 15, "note": "Protect deep" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field FS, man-free deep middle, cannot react to RB in flat",
+      "waypoints": [
+        { "t": 0, "x": 35, "y": 11.5, "note": "Free safety deep" },
+        { "t": 1.5, "x": 34.5, "y": 11, "note": "Sink deep" },
+        { "t": 2.5, "x": 30, "y": 9, "note": "React to lateral too late" },
+        { "t": 3.5, "x": 24, "y": 7.5, "note": "Pursuing RB in space" }
+      ]
+    }
+  ]
+}

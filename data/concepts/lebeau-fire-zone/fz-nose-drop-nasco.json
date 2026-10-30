@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "fz-nose-drop-nasco",
+  "schemeId": "lebeau-fire-zone",
+  "order": 3,
+  "name": "Nose Drop Nasco",
+  "personnel": "3-4 Fire Zone Base",
+  "formation": "21P Offset-I Right vs Odd Front Run Look",
+  "situation": "2nd & 6, red zone top, run-heavy tendencies",
+  "coverage": "Cover 3 Fire Zone behind Nasco Exchange",
+  "frontName": "Odd Front Nasco Slant Package",
+  "summary": {
+    "motive": "Bait a run-first protection with a light odd front, exchange the nose for an A-gap blitzing linebacker plus two inside-slanting OLBs, and cover the deep middle with the dropped nose himself.",
+    "keyDefender": "Nose tackle executing the nasco middle-hook drop",
+    "whyItWorks": "Every intermediate crosser funnels directly into the vacated nose spot now occupied by a coverage defender, while four rushers attack a protection built for three.",
+    "failureMode": "The guards recognize the nose bailing instantly, slide clean to the inside slants, and the QB attacks the boundary flat before MIKE arrives."
+  },
+  "beats": [
+    {
+      "t": 0.3,
+      "title": "1. The Light-Box Bait",
+      "text": "The offense snaps against a zero-tech nose flanked by two wide stand-up backers, reading it as a light run-fit box perfect for inside zone.",
+      "focus": ["NT", "LOLB", "ROLB", "C"]
+    },
+    {
+      "t": 1,
+      "title": "2. The Nasco Retreat",
+      "text": "The nose slides smoothly backward off the line instead of engaging, vacating the A-gap while carving a retreat path between the incoming rush lanes.",
+      "focus": ["NT", "C", "LG"]
+    },
+    {
+      "t": 1.7,
+      "title": "3. The Interior Slant Storm",
+      "text": "Both outside linebackers slant violently inside through the B-gaps and MIKE dogs the abandoned A-gap, sending four chargers into a five-man protection.",
+      "focus": ["LOLB", "ROLB", "MIKE", "RG"]
+    },
+    {
+      "t": 3,
+      "title": "4. Crosser Into the Vacuum",
+      "text": "The QB trusts his deep crosser behind the linebackers, only to find the dropped nose sitting exactly where every crossing route must die.",
+      "focus": ["Z", "NT", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["fz-triple-inside-fire"],
+    "playsOff": [],
+    "tell": "The zero-tech nose takes a lateral first step away from the Center rather than a contact punch, revealing the drop before the mesh is sold."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "aranda-tite-peso",
+  "name": "Dave Aranda's Tite Front & Peso Package",
+  "coachId": "dave-aranda",
+  "team": "LSU DC (2016-19) / Baylor HC",
+  "side": "defense",
+  "era": "current-college",
+  "lineage": "college-defensive-fronts",
+  "description": "A 4i-0-4i box that eliminates both B-gaps before the snap, forcing spread runs to bounce into walked-down hybrid defenders. Peso nickel/dime personnel blur the line between back-end and box — apex linebackers split the #2-receiver-to-tackle lines, split-field quarters pattern-matches every slot, and three-man simulated pressures occupy the quarterback’s escape lanes with defenders who were never rushing at all."
+}

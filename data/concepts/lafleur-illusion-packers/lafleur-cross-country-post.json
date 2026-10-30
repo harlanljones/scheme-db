@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "lafleur-cross-country-post",
+  "schemeId": "lafleur-illusion-packers",
+  "order": 2,
+  "name": "PA Cross-Country Deep Post",
+  "personnel": "12",
+  "formation": "Singleback Wing Left, Condensed Right",
+  "situation": "2nd & 2, +45, play-action shot down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Under Front",
+  "summary": {
+    "motive": "Present an identical wide-zone run look to pull linebackers downhill and manipulate the single-high Free Safety with an intermediate crosser, opening an explosive deep post across the entire field.",
+    "keyDefender": "Free Safety (Deep Middle Cover 3 Safety)",
+    "whyItWorks": "The intermediate Over route by TE1 holds the single-high safety on the right hash, allowing the backside Z receiver on a Cross-Country Post to attack the vacant deep middle/left void with maximum leverage.",
+    "failureMode": "Free Safety remaining disciplined in the deep middle third or an unblocked edge rusher affecting the QB before the deep 7-step play-action platform is established."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Identical Wide-Zone Mesh Illusion",
+      "text": "From the exact same 12-personnel condensed alignment, the offensive line and RB execute a full-velocity wide zone stretch fake left. All three linebackers and the safety step aggressively downhill into run fits.",
+      "focus": ["QB", "RB", "MIKE", "WILL", "SAM"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. The Play-Action Disconnect & Over Route Release",
+      "text": "QB executes a deep 7-step play-action drop. TE1 slips off his run fake and stems across the formation on a 12-yard intermediate Over route, drawing the eyes of both the strong safety and the deep middle free safety.",
+      "focus": ["QB", "TE1", "SS", "FS"]
+    },
+    {
+      "t": 3,
+      "title": "3. The Cross-Country Post Break",
+      "text": "Z receiver stems from the condensed right split, crosses the face of the right corner, and climbs across the entire formation at 22+ yards depth, slicing directly into the gaping void vacated by the lured Free Safety.",
+      "focus": ["Z", "FS", "RCB"]
+    },
+    {
+      "t": 4.2,
+      "title": "4. The 45-Yard Deep Touchdown Strike",
+      "text": "With clean 7-man protection in the pocket and X pinning the boundary corner deep, the QB launches a majestic 45-yard rainbow to Z streaking wide open across the opposite deep seam.",
+      "focus": ["QB", "Z", "X", "LT", "RT"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["lafleur-pa-dagger-dig"],
+    "playsOff": ["lafleur-wide-zone-cutback"],
+    "tell": "Tight end (TE1) releasing into the secondary after a 0.8-second delay rather than staying attached to the perimeter reach block."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

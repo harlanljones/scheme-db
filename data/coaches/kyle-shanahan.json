@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "kyle-shanahan",
+  "name": "Kyle Shanahan",
+  "role2026": "Head Coach, San Francisco 49ers",
+  "team": "San Francisco 49ers",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "mike-shanahan",
+  "disciples": ["klint-kubiak", "mike-lafleur", "mike-mcdaniel", "matt-lafleur", "bobby-slowik"],
+  "side": "offense",
+  "philosophy": "Mastery of offensive sequencing: running outside zone to stretch defensive flow horizontally, then attacking with play-action overs and naked bootlegs that look identical for the first 1.2 seconds.",
+  "keyConcepts": ["Outside Zone", "Play-Action Over", "Naked Bootleg", "Pre-Snap Jet Motion", "21 Personnel Iso"],
+  "schemeIds": ["shanahan-wide-zone"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2x Super Bowl HC Appearance", "Architect of Modern Wide Zone Sequencing"]
+}

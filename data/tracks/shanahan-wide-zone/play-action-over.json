@@ -1,0 +1,342 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "play-action-over",
+  "duration": 4.5,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Sell wide zone reach left, transition to firm pass protection",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap & lateral reach step left" },
+        { "t": 0.6, "x": 25.5, "y": -0.2, "note": "Overtaking 1-tech playside" },
+        { "t": 1.2, "x": 24.2, "y": 0.4, "note": "Hooking NT playside shoulder" },
+        { "t": 2.2, "x": 24.5, "y": 0, "note": "Setting anchor in A-gap" },
+        { "t": 4.5, "x": 24.5, "y": 0.2, "note": "Firm pocket wall" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Sell bucket step left, anchor playside B-gap pass protection",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Lateral bucket step" },
+        { "t": 0.6, "x": 23.8, "y": -0.1, "note": "Playside push with LT" },
+        { "t": 1.2, "x": 22.8, "y": 0.8, "note": "Aggressive run-action posture" },
+        { "t": 2.2, "x": 23, "y": 0.2, "note": "Anchoring on interior rush" },
+        { "t": 4.5, "x": 23, "y": 0.3, "note": "Protecting QB front" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Sell aggressive reach on WDE, lock out edge rush",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "45-degree reach step" },
+        { "t": 0.6, "x": 21.6, "y": 0, "note": "Attacking WDE outside shoulder" },
+        { "t": 1.2, "x": 20.2, "y": 0.7, "note": "Hooking edge" },
+        { "t": 2.2, "x": 20.5, "y": 0.2, "note": "Anchoring edge protection" },
+        { "t": 4.5, "x": 20.5, "y": 0.3, "note": "Sealing edge rusher wide" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Sell zone scoop, anchor on 3-tech DT",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Reach step left" },
+        { "t": 0.6, "x": 27.2, "y": -0.2, "note": "Scooping 3-tech DT" },
+        { "t": 1.2, "x": 26, "y": 0.3, "note": "Securing backside reach posture" },
+        { "t": 2.2, "x": 26.5, "y": -0.2, "note": "Setting firm pocket anchor" },
+        { "t": 4.5, "x": 26.5, "y": 0, "note": "Stonewalling rush" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Sell zone step, hinge to protect backside pocket",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Zone step playside" },
+        { "t": 0.6, "x": 28.8, "y": -0.1, "note": "Sealing B-gap" },
+        { "t": 1.2, "x": 27.8, "y": 0.5, "note": "Working up in zone posture" },
+        { "t": 2.2, "x": 28.5, "y": -0.3, "note": "Hinging back to protect C-gap" },
+        { "t": 4.5, "x": 28.5, "y": -0.2, "note": "Locking down backside" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Chip Strongside DE, release into backside flat as checkdown",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Backside hinge step" },
+        { "t": 0.6, "x": 31, "y": -0.2, "note": "Chip block on SDE" },
+        { "t": 1.2, "x": 30.5, "y": 0.4, "note": "Releasing from chip" },
+        { "t": 2.2, "x": 34, "y": 1.5, "note": "Leaking into flat" },
+        { "t": 3.5, "x": 40, "y": 3, "note": "Wide open checkdown" },
+        { "t": 4.5, "x": 44, "y": 4.5, "note": "Flat control option" }
+      ]
+    },
+    {
+      "id": "FB",
+      "label": "F",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Lead into playside alley, pick up late scraping linebacker or blitz",
+      "waypoints": [
+        { "t": 0, "x": 28.2, "y": -3.5, "note": "Lead step pressing playside edge" },
+        { "t": 0.6, "x": 25, "y": -2.2, "note": "Tracking off LT hip" },
+        { "t": 1.2, "x": 21.5, "y": -0.5, "note": "Inserting into playside alley" },
+        { "t": 2.2, "x": 19.5, "y": 0.5, "note": "Square up pass protection on LB" },
+        { "t": 4.5, "x": 19.5, "y": 0.8, "note": "Solid pocket seal" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "route",
+      "assignment": "Reverse pivot, ride fake mesh, set at 7 yards and deliver deep Over",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Under center snap" },
+        { "t": 0.6, "x": 25.2, "y": -2.8, "note": "Reverse pivot extending ball" },
+        { "t": 1.2, "x": 23.8, "y": -3.2, "note": "Riding full mesh with RB" },
+        { "t": 1.8, "x": 24.5, "y": -5.5, "note": "Pulling ball and dropping back" },
+        { "t": 2.8, "x": 24.8, "y": -7, "note": "Hitch step, reading safety & LB void" },
+        { "t": 3.5, "x": 24.8, "y": -7, "note": "Releasing deep strike to Over route" },
+        { "t": 4.5, "x": 24.8, "y": -7, "note": "Ball in air" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "T",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Full zone run fake, sell ball security into the line",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -5.8, "note": "Lateral crossover step" },
+        { "t": 0.6, "x": 24.8, "y": -4.2, "note": "Pressing outside leg of LT" },
+        { "t": 1.2, "x": 23, "y": -3, "note": "Clamping elbows over fake ball" },
+        { "t": 2, "x": 19.5, "y": -1, "note": "Diving into playside B-gap" },
+        { "t": 3.2, "x": 18, "y": 1.5, "note": "Tackled by fooled linebackers" },
+        { "t": 4.5, "x": 17.5, "y": 2, "note": "Selling complete fake" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Deep Post clearout to occupy FS and playside CB",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Playside split wide" },
+        { "t": 0.8, "x": 7, "y": 3, "note": "Explosive vertical push" },
+        { "t": 2, "x": 9, "y": 10, "note": "Pressing CB deep third" },
+        { "t": 3.2, "x": 15, "y": 18, "note": "Post angle dragging FS middle" },
+        { "t": 4.5, "x": 20, "y": 24, "note": "Clearing intermediate honey hole" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Deep Over route crossing behind linebackers at 16-18 yards",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -1.5, "note": "Flanker alignment right" },
+        { "t": 0.8, "x": 45, "y": 3, "note": "Vertical stem" },
+        { "t": 1.6, "x": 42, "y": 8.5, "note": "Breaking inward behind linebackers" },
+        { "t": 2.6, "x": 30, "y": 14.5, "note": "Crossing into intermediate void" },
+        { "t": 3.5, "x": 18, "y": 18, "note": "Catching strike in stride" },
+        { "t": 4.5, "x": 10, "y": 22, "note": "Turning upfield for touchdown" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Set edge vs run fake, late rush vs pass",
+      "waypoints": [
+        { "t": 0, "x": 21.8, "y": 0.9, "note": "Playside 5-tech alignment" },
+        { "t": 0.6, "x": 20.8, "y": 0.8, "note": "Setting edge vs LT reach" },
+        { "t": 1.5, "x": 19.2, "y": 0.9, "note": "Biting hard on run action" },
+        { "t": 2.5, "x": 19.5, "y": -1.5, "note": "Transitioning to pass rush" },
+        { "t": 4.5, "x": 21, "y": -4, "note": "Chasing QB in pocket" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "N",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "1-tech shade, fight through reach of Center",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 0.9, "note": "1-tech shade in A-gap" },
+        { "t": 0.6, "x": 24.8, "y": 0.6, "note": "Flowing playside A-gap" },
+        { "t": 1.5, "x": 23.8, "y": 0.5, "note": "Engaging run block" },
+        { "t": 3, "x": 24, "y": -0.5, "note": "Bull rush in A-gap" },
+        { "t": 4.5, "x": 24.2, "y": -1.5, "note": "Pocket pressure" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "3-tech DT, penetrate B-gap vs RG reach",
+      "waypoints": [
+        { "t": 0, "x": 29.2, "y": 0.9, "note": "3-tech alignment" },
+        { "t": 0.8, "x": 27.8, "y": 0.7, "note": "Shooting B-gap vs run" },
+        { "t": 2, "x": 26.5, "y": 0.6, "note": "Held by RG pass set" },
+        { "t": 4.5, "x": 26, "y": -1, "note": "Stalled in pocket" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "none",
+      "assignment": "Strongside DE, rush off backside edge",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Backside 7-tech on TE" },
+        { "t": 1, "x": 32, "y": 0.8, "note": "Chipped by TE" },
+        { "t": 2.5, "x": 31, "y": -1.5, "note": "Rushing backside edge" },
+        { "t": 4.5, "x": 28.5, "y": -4.5, "note": "Closing in on QB" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "W",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Scrape to playside C/D gap on run fake",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 4.5, "note": "Will LB alignment" },
+        { "t": 0.8, "x": 19.5, "y": 3.5, "note": "Scraping fast to playside alley" },
+        { "t": 1.8, "x": 18.2, "y": 1.8, "note": "Biting downhill on RB dive" },
+        { "t": 3, "x": 19, "y": 4.5, "note": "Panicked drop back into zone" },
+        { "t": 4.5, "x": 18, "y": 8, "note": "Too late to contest throw" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "M",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Key defender: flow hard to run fit, vacate intermediate middle",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 4.8, "note": "Base Mike alignment" },
+        { "t": 0.6, "x": 24.5, "y": 4.5, "note": "Triggering on lateral run flow" },
+        { "t": 1.2, "x": 22.2, "y": 3.8, "note": "Aggressive downhill bite on RB mesh" },
+        { "t": 2, "x": 20.5, "y": 1.8, "note": "Sucked into the line of scrimmage" },
+        { "t": 3.2, "x": 22, "y": 6, "note": "Spinning around as Over route flies overhead" },
+        { "t": 4.5, "x": 21, "y": 9, "note": "Beaten by 10 yards" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "S",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Backside hook/curl defender, bite on run flow",
+      "waypoints": [
+        { "t": 0, "x": 31.5, "y": 3.8, "note": "Sam LB over wing" },
+        { "t": 1, "x": 29.5, "y": 3.8, "note": "Shuffling with run flow" },
+        { "t": 2, "x": 28, "y": 2, "note": "Biting on zone action" },
+        { "t": 3.5, "x": 32, "y": 6.5, "note": "Chasing TE into flat" },
+        { "t": 4.5, "x": 36, "y": 6, "note": "Covering checkdown" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep third bail carried deep by X post route",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 7, "note": "Playside CB" },
+        { "t": 1, "x": 7, "y": 6, "note": "Reading pass release" },
+        { "t": 2.2, "x": 7.5, "y": 12, "note": "Bailing deep with X post" },
+        { "t": 3.5, "x": 10, "y": 19, "note": "Carried deep by post" },
+        { "t": 4.5, "x": 12, "y": 23, "note": "Pinned deep" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep third bail, passed Z to safety",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 7, "note": "Backside CB" },
+        { "t": 1.5, "x": 46, "y": 9, "note": "Deep third bail" },
+        { "t": 3, "x": 44, "y": 13, "note": "Zone turn watching flat" },
+        { "t": 4.5, "x": 42, "y": 12, "note": "Left in no-man land" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Cover 3 Sky, bite downhill on run fit before recovering",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 8.5, "note": "Strong safety pre-snap" },
+        { "t": 1.2, "x": 32, "y": 6.5, "note": "Triggering downhill on run fit" },
+        { "t": 2.2, "x": 30, "y": 4.5, "note": "Biting on run mesh" },
+        { "t": 3.5, "x": 26, "y": 10, "note": "Trailing Z deep Over from behind" },
+        { "t": 4.5, "x": 18, "y": 14, "note": "Chasing in pursuit" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle safety, held by X Post route",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 14, "note": "Single-high free safety" },
+        { "t": 1.2, "x": 24, "y": 13, "note": "Shading playside run flow" },
+        { "t": 2.4, "x": 20, "y": 16, "note": "Threatened by X deep post" },
+        { "t": 3.5, "x": 21, "y": 20, "note": "Backpedaling with post route" },
+        { "t": 4.5, "x": 17, "y": 21, "note": "Unable to close on Over route" }
+      ]
+    }
+  ]
+}

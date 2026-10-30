@@ -1,0 +1,318 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "penny-match-quarters",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set vs 0-tech NOSE",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Pass set" },
+        { "t": 1, "x": 26.67, "y": -0.7, "note": "Engage NOSE" },
+        { "t": 2.4, "x": 26.6, "y": -1.2, "note": "Anchor" },
+        { "t": 4, "x": 26.5, "y": -1.5, "note": "Holding pocket" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 4i-tech DT",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Vertical set" },
+        { "t": 1, "x": 24.8, "y": -0.8, "note": "Contact 4iL" },
+        { "t": 2.4, "x": 24.6, "y": -1.3, "note": "Hold B-gap" },
+        { "t": 4, "x": 24.5, "y": -1.6, "note": "Sustained" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Kick slide to LOLB edge",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Kick slide" },
+        { "t": 1, "x": 22.2, "y": -1, "note": "Engage LOLB" },
+        { "t": 2.4, "x": 21.6, "y": -2, "note": "Anchor on edge" },
+        { "t": 4, "x": 21.2, "y": -2.8, "note": "Edge sealed" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 4i-tech DT",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Vertical set" },
+        { "t": 1, "x": 28.5, "y": -0.8, "note": "Contact 4iR" },
+        { "t": 2.4, "x": 28.7, "y": -1.4, "note": "Straining" },
+        { "t": 4, "x": 28.8, "y": -1.8, "note": "Pocket holding" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Kick slide to ROLB edge rush",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Deep kick slide" },
+        { "t": 1, "x": 31.5, "y": -1, "note": "Engage ROLB" },
+        { "t": 2.4, "x": 32, "y": -2, "note": "Ride speed rush wide" },
+        { "t": 4, "x": 32.2, "y": -3, "note": "Pocket secure" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "3-step drop, read #2 H out route -> jump-read -> attempt intermediate dig to Y",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap" },
+        { "t": 1.2, "x": 26.67, "y": -6.5, "note": "Plant, eye boundary out to H" },
+        { "t": 2.2, "x": 26.67, "y": -6.5, "note": "H out jumped by STAR; hitch to Y dig" },
+        { "t": 3.2, "x": 26.4, "y": -6.5, "note": "Throw contested dig to Y" },
+        { "t": 4, "x": 26, "y": -6.5, "note": "Incomplete pass" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Check-release to strong-side flat",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": -4.5, "note": "Scan protection" },
+        { "t": 1, "x": 30.5, "y": -3.5, "note": "Check blitz" },
+        { "t": 2.2, "x": 35, "y": -1.5, "note": "Flare out to flat" },
+        { "t": 4, "x": 41, "y": 1, "note": "Underneath option" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Post-dig route over middle at 12 yards",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Vertical stem" },
+        { "t": 1.2, "x": 7.5, "y": 5.5, "note": "Push vertical to 10 yards" },
+        { "t": 2.2, "x": 10, "y": 11.5, "note": "Break inside on post/dig" },
+        { "t": 4, "x": 17, "y": 13.5, "note": "Robbed top-down by BS" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "5-yard speed out route to flat",
+      "waypoints": [
+        { "t": 0, "x": 16, "y": -0.8, "note": "Stem vertical" },
+        { "t": 1, "x": 16, "y": 4, "note": "Threaten seam" },
+        { "t": 1.8, "x": 12, "y": 5, "note": "Break hard outside" },
+        { "t": 4, "x": 6.5, "y": 5.5, "note": "Smothered by STAR in Palms" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "10-yard intermediate dig over middle",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": -0.8, "note": "Vertical stem" },
+        { "t": 1.2, "x": 37, "y": 5.5, "note": "Drive on FS cushion" },
+        { "t": 2.3, "x": 34, "y": 10.5, "note": "Dig cut across hash" },
+        { "t": 4, "x": 26.67, "y": 11, "note": "Bracketed by MIKE and FS" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Clearout vertical route down sideline",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -0.5, "note": "Vertical release" },
+        { "t": 1.2, "x": 46, "y": 5.5, "note": "Outside push" },
+        { "t": 2.4, "x": 46.5, "y": 13, "note": "Deep sprint" },
+        { "t": 4, "x": 47, "y": 22, "note": "Capped by RCB" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LOLB",
+      "label": "LOLB",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Edge rush vs LT",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 0.9, "note": "Edge rush stance" },
+        { "t": 1, "x": 21, "y": -0.5, "note": "Engage LT" },
+        { "t": 2.4, "x": 21.5, "y": -1.8, "note": "Contain rush" },
+        { "t": 4, "x": 22, "y": -3.2, "note": "Edge held" }
+      ]
+    },
+    {
+      "id": "4iL",
+      "label": "4iL",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Attack B-gap vs LG",
+      "waypoints": [
+        { "t": 0, "x": 24.2, "y": 0.9, "note": "4i attack" },
+        { "t": 1, "x": 24.5, "y": -0.5, "note": "Drive LG back" },
+        { "t": 2.4, "x": 24.8, "y": -1.2, "note": "Hold B-gap" },
+        { "t": 4, "x": 25, "y": -2.2, "note": "Interior pressure" }
+      ]
+    },
+    {
+      "id": "NOSE",
+      "label": "NOSE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "0-tech bull rush C",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 0.9, "note": "Bull rush" },
+        { "t": 1, "x": 26.67, "y": -0.4, "note": "Strike C" },
+        { "t": 2.4, "x": 26.67, "y": -1, "note": "Compress A-gap" },
+        { "t": 4, "x": 26.5, "y": -2, "note": "Pocket pushed" }
+      ]
+    },
+    {
+      "id": "4iR",
+      "label": "4iR",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Attack strong B-gap vs RG",
+      "waypoints": [
+        { "t": 0, "x": 29.1, "y": 0.9, "note": "4i rush" },
+        { "t": 1, "x": 28.8, "y": -0.5, "note": "Strike RG" },
+        { "t": 2.4, "x": 28.5, "y": -1.4, "note": "Collapse pocket" },
+        { "t": 4, "x": 28, "y": -2.5, "note": "Pressure interior" }
+      ]
+    },
+    {
+      "id": "ROLB",
+      "label": "ROLB",
+      "side": "defense",
+      "role": "lb",
+      "trail": "block",
+      "assignment": "Speed rush off strong edge vs RT",
+      "waypoints": [
+        { "t": 0, "x": 33.3, "y": 0.9, "note": "Speed rush" },
+        { "t": 1, "x": 33.8, "y": -0.8, "note": "Attack outside shoulder" },
+        { "t": 2.4, "x": 33.2, "y": -2.4, "note": "Bend pocket" },
+        { "t": 4, "x": 30, "y": -4.5, "note": "Closing on QB" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Hook-curl match: wall off intermediate crossers underneath Y",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 4.5, "note": "Low hole key" },
+        { "t": 1.2, "x": 27.5, "y": 6.5, "note": "Drop to low hole" },
+        { "t": 2.4, "x": 28, "y": 8.5, "note": "Wall off inside throwing lane to Y" },
+        { "t": 4, "x": 27.5, "y": 10, "note": "Contest dig catch point" }
+      ]
+    },
+    {
+      "id": "STAR",
+      "label": "STAR",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Palms / 2-Read: #2 H breaks out -> trigger downhill aggressively to flat",
+      "waypoints": [
+        { "t": 0, "x": 16, "y": 4.5, "note": "Apex 2-Read alignment" },
+        { "t": 1.2, "x": 15, "y": 4.8, "note": "Read #2 out-break" },
+        { "t": 2, "x": 10.5, "y": 5.2, "note": "Trigger downhill to jump out route" },
+        { "t": 4, "x": 7, "y": 5.5, "note": "Smother catch point on H" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Palms / 2-Read: #2 H out -> apex top-down over #1 X vertical/post",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 6.5, "note": "Quarters match cushion" },
+        { "t": 1.2, "x": 8, "y": 9, "note": "Read #2 out -> match #1 vertical" },
+        { "t": 2.4, "x": 9.5, "y": 12.5, "note": "Trail X post from outside leverage" },
+        { "t": 4, "x": 13, "y": 14.5, "note": "Outside bracket on X" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Quarters match: carry #1 Z vertical in deep quarter",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 6.5, "note": "Quarters off-man cushion" },
+        { "t": 1.2, "x": 46, "y": 9.5, "note": "Read Z release" },
+        { "t": 2.4, "x": 46.5, "y": 14.5, "note": "Turn and carry Z deep" },
+        { "t": 4, "x": 47, "y": 22, "note": "Deep quarter secure" }
+      ]
+    },
+    {
+      "id": "BS",
+      "label": "BS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Palms / 2-Read: #2 H out -> rob #1 X post top-down at 10-12 yards",
+      "waypoints": [
+        { "t": 0, "x": 18, "y": 12, "note": "2-high static disguise" },
+        { "t": 1.2, "x": 17, "y": 12.5, "note": "Key #2 out -> drive top-down on #1" },
+        { "t": 2.3, "x": 14, "y": 12, "note": "Drive downhill into X post window" },
+        { "t": 4, "x": 15.5, "y": 13.5, "note": "Interception position on X" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Quarters / 2-Read: drive top-down on Y dig route from deep quarter",
+      "waypoints": [
+        { "t": 0, "x": 35, "y": 12, "note": "2-high static disguise" },
+        { "t": 1.2, "x": 35, "y": 12.5, "note": "Read Y stem" },
+        { "t": 2.4, "x": 31, "y": 12, "note": "Drive top-down on Y dig" },
+        { "t": 4, "x": 27.5, "y": 11.5, "note": "Vice clamp with MIKE on Y" }
+      ]
+    }
+  ]
+}

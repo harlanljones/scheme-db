@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcdaniel-cheat-motion-toss",
+  "schemeId": "mcdaniel-cheat-motion",
+  "order": 1,
+  "name": "Cheat Motion Crack Toss Perimeter Stretch",
+  "personnel": "21",
+  "formation": "21P Gun Offset, Cheat Motion Right",
+  "situation": "1st & 10, +45, perimeter speed attack",
+  "coverage": "Cover 3 Match",
+  "frontName": "4-3 Under front",
+  "summary": {
+    "motive": "Weaponize extreme pre-snap speed (\"Cheat Motion\") to create an unmatchable angle on the perimeter, cracking the edge defender and pulling offensive linemen for an explosive outside toss.",
+    "keyDefender": "SAM Linebacker / Strongside Edge Defender",
+    "whyItWorks": "The receiver hits the line of scrimmage at full sprint speed before the snap, allowing a 190-pound receiver to violently pin a 245-pound linebacker who cannot see the crack coming.",
+    "failureMode": "Field cornerback blowing up the crack block by shooting inside immediately or running back hesitating on the toss track rather than sprinting directly to the perimeter."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Pre-Snap Cheat Motion Sprint",
+      "text": "Z (Tyreek Hill role) explodes in full-sprint cheat motion towards the tackle box before the snap. At the snap, he is already traveling at 18 mph with unstoppable downhill momentum.",
+      "focus": ["Z", "SAM", "QB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Devastating Crack-and-Pull",
+      "text": "Z delivers a crushing blindside crack block on the SAM linebacker, while the Right Tackle and Fullback pull violently around the perimeter to form a two-man escort wall.",
+      "focus": ["Z", "SAM", "RT", "FB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Turning the Corner at Full Speed",
+      "text": "The running back receives the rapid toss while already at top speed, outflanking the defense and cutting off RT’s kick-out block on the field corner into open sideline grass.",
+      "focus": ["RB", "RT", "RCB", "SS"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. 20+ MPH Boundary Explosion",
+      "text": "FB erases the strong safety in the alley while the running back accelerates past 21 mph down the sideline, leaving the free safety taking an impossible pursuit angle.",
+      "focus": ["RB", "FB", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcdaniel-cheat-motion-wheel", "mcdaniel-inside-zone-wham"],
+    "playsOff": [],
+    "tell": "Receiver in cheat motion snaps inside to deliver crack block on edge/LB while RB takes immediate wide toss track."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

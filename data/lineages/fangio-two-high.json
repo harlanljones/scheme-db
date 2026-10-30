@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "fangio-two-high",
+  "name": "Vic Fangio Two-High Shell & Quarters Tree",
+  "patriarch": "Vic Fangio",
+  "side": "defense",
+  "description": "The defensive system that forced modern offenses to adapt. Shows a static two-high safety shell before the snap to disguise Cover 6, Cover 8, and Quarters match calls, paired with light 3-man Penny fronts to stifle explosive downfield crossers and force long, mistake-prone drives.",
+  "rootNodes": [
+    {
+      "coachId": "vic-fangio",
+      "children": [
+        {
+          "coachId": "chris-shula",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

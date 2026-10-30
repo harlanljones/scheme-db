@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcdaniel-pistol-option-pitch",
+  "schemeId": "mcdaniel-cheat-motion",
+  "order": 4,
+  "name": "Pistol Speed Option Pitch & Space Read",
+  "personnel": "21",
+  "formation": "21P Pistol Split-Flow",
+  "situation": "3rd & 2, +15, red zone perimeter space",
+  "coverage": "Cover 1 Man / Cover 3 Match",
+  "frontName": "4-3 Under front",
+  "summary": {
+    "motive": "Create a 2-on-1 space dilemma on the perimeter edge in short-yardage / red-zone situations using speed option mechanics from pistol.",
+    "keyDefender": "Strongside Defensive End (Option Read Key)",
+    "whyItWorks": "Leaving the defensive end unblocked allows offensive linemen to climb immediately to the second level; the QB forces the edge defender to commit before pitching to elite speed in space.",
+    "failureMode": "Defensive end slow-playing the option to disrupt the pitch track while scraping linebackers rally to tackle the QB before he can release the pitch."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Pistol Speed Option Launch",
+      "text": "The QB takes the pistol snap and sprints aggressively toward the right edge, attacking the outside shoulder of unblocked defensive end SDE while RB maintains a 4-yard pitch track.",
+      "focus": ["QB", "RB", "SDE"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Edge Read & Pitch Decision",
+      "text": "SDE turns his shoulders and commits downhill to tackle the sprinting QB. The QB flips a clean option pitch into space to the sprinting RB.",
+      "focus": ["QB", "RB", "SDE", "FB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Violent Lead Block in the Alley",
+      "text": "Fullback FB inserts into the perimeter alley and delivers a thunderous lead block on the filling strong safety, completely clearing the edge lane.",
+      "focus": ["FB", "SS", "RB"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Red Zone Pylon Touchdown Burst",
+      "text": "The running back turns the corner at 21 mph, beating the diving free safety to the front pylon for an electrifying 15-yard red zone touchdown.",
+      "focus": ["RB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcdaniel-cheat-motion-toss"],
+    "playsOff": ["mcdaniel-inside-zone-wham", "mcdaniel-cheat-motion-wheel"],
+    "tell": "QB attacks outside shoulder of unblocked DE on a fast lateral option track with RB in parallel pitch relationship."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

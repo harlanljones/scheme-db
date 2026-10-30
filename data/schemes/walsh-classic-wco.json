@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "walsh-classic-wco",
+  "name": "Bill Walsh's Classic West Coast Offense",
+  "coachId": "bill-walsh",
+  "team": "San Francisco 49ers (1979-88)",
+  "side": "offense",
+  "era": "past-nfl",
+  "lineage": "shanahan-kubiak",
+  "description": "The timing-and-leverage passing system that replaced the vertical bomb with surgical rhythm throws designed to run like the sweep. Every call answers a leverage question in under two seconds, and every answer sets up the next question through sequencing."
+}

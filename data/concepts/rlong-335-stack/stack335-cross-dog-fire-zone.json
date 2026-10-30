@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stack335-cross-dog-fire-zone",
+  "schemeId": "rlong-335-stack",
+  "order": 3,
+  "name": "Safety-Corner Cross-Dog Fire Zone",
+  "personnel": "Base 3-3-5 Stack (3 DL + 3 LB + 5 DB)",
+  "formation": "11P Gun Spread 2x2 vs Stack",
+  "situation": "2nd & 7, +45, spread passing down",
+  "coverage": "Fire Zone (3 Under / 3 Deep)",
+  "frontName": "3-3-5 Stack (Safety-Corner Cross-Dog)",
+  "summary": {
+    "motive": "Disguise a five-man fire zone behind a stacked single-high shell so spread protections commit to the wrong crosser while the safety-corner exchange manufactures interior heat.",
+    "keyDefender": "RCB darting inside — the blitzer whose delayed inside path arrives after the protection has fully committed to the widened safety",
+    "whyItWorks": "The cross scrambles counting rules, the back can only block one dog, and the fire-zone rotation has occupied every hot window before the quarterback finishes his hitch.",
+    "failureMode": "Hot throws released on rhythm before the cross develops — if the ball is out early, only three linemen rushed and the vacated zones are still empty."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Stacked Disguise",
+      "text": "Single-high shell, three backers stacked directly behind three linemen, corners playing soft — it reads like plain Cover 3. Nothing in the picture announces that two defensive backs are about to rush.",
+      "focus": ["SAM", "MIKE", "WILL", "SS"]
+    },
+    {
+      "t": 1,
+      "title": "2. Safety and Corner Begin the Cross",
+      "text": "The walked safety widens his rush lane toward the edge while the corner darts inside off it. Their paths swap mid-rush — whoever the protection assigns to each will be blocking the wrong man.",
+      "focus": ["SS", "RCB", "RT"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Fire Zone Floods Behind",
+      "text": "Three deep thirds rotate behind three under-zone droppers, and every quick window fills before the quarterback finishes his hitch. The drag hits Mike’s wall, the checkdown dies in Sam’s flat.",
+      "focus": ["FS", "LCB", "SPUR", "MIKE", "SAM", "WILL"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Hot Window Belongs to the Hook",
+      "text": "The running back slides to the darting corner, leaving the widened safety unblocked — so the hot throw comes out early, directly into Will’s flooding hook zone. Tipped at the catch point.",
+      "focus": ["QB", "Z", "WILL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["stack335-zero-empty"],
+    "playsOff": ["stack335-slant-exchange"],
+    "tell": "Pre-snap it reads single-high Cover 3 with stacked backers — the tell is only the safety creeping to nine yards without any linebacker moving with him."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

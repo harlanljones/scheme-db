@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bowles-drop8-tampa2-lurk",
+  "schemeId": "bowles-creeper-blitz",
+  "order": 3,
+  "name": "Drop-8 Tampa 2 Middle Lurk Trap",
+  "personnel": "Nickel 2-4-5",
+  "formation": "7-Man Mug Psycho Front vs 11P Gun 2x2",
+  "situation": "3rd & 14, +45, long yardage passing down",
+  "coverage": "Drop-8 Tampa 2 (Disguised All-Out Blitz)",
+  "frontName": "7-Up Bluff Drop-8",
+  "summary": {
+    "motive": "Create catastrophic quarterback turnovers on long passing downs by bluffing an all-out 7-man blitz and dropping 8 defenders into a suffocating Tampa 2 shell with the middle linebacker running the pole.",
+    "keyDefender": "MIKE (Deep Middle Pole Runner) & WILL (Intermediate Hook Dropper)",
+    "whyItWorks": "Offenses keep extra blockers in pass protection to pick up the 7-man bluff, leaving 4 or 5 receivers completely outnumbered by 8 defenders in layered coverage.",
+    "failureMode": "A patient quarterback who checks down to a shallow underneath crosser and lets a playmaker run after the catch against retreating defenders."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "7-Man Psycho Mug Presentation",
+      "text": "Todd Bowles crowds 7 defenders on the line of scrimmage, showing an unavoidable all-out Cover 0 house blitz to force the offense into a max-protect check and quick hot reads.",
+      "focus": ["MIKE", "WILL", "DE_L", "DE_R", "LOLB", "ROLB", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "The Great Drop-8 Retreat",
+      "text": "At the snap, only 3 rushers engage! Four front defenders instantly bail backwards into coverage, while MIKE sprints full-speed down the deep middle pole (Tampa 2).",
+      "focus": ["MIKE", "WILL", "DE_L", "DE_R"]
+    },
+    {
+      "t": 2,
+      "title": "Hot Read Baited into Turnover",
+      "text": "The QB throws his designated hot seam to Y expecting an empty middle, only to find the sprinting MIKE linebacker undercutting the ball for an interception.",
+      "focus": ["MIKE", "Y", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Escorted Return Downfield",
+      "text": "With 8 defensive backs and linebackers already deployed across the field, MIKE is escorted by a wall of blockers on a huge turnover return.",
+      "focus": ["MIKE", "FS", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bowles-dual-a-gap-cross-blitz", "bowles-overload-boundary-fire"],
+    "playsOff": [],
+    "tell": "7-man front shows all-out heat, then 4 line-of-scrimmage defenders turn their backs and sprint into coverage zones at the snap"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

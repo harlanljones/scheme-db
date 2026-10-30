@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "apex-defender",
+  "term": "Apex Defender",
+  "aliases": ["Apex", "Apex defender", "apex defender", "overhang defender", "overhang"],
+  "category": "Read & Assignment",
+  "shortDef": "A hybrid second-level defender (nickel DB or outside linebacker) aligned in the intermediate alley midway between the offensive tackle/tight end and the slot receiver.",
+  "tacticalNote": "Tasked with a dual conflict: fitting the perimeter C/D-gap run alley vs. expanding into the curl-flat passing zone on RPOs."
+}

@@ -1,0 +1,318 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "b46-base-i-form",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Down block head-up weak end",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Drive block LE" },
+        { "t": 1, "x": 20, "y": -0.8, "note": "Engage head-up LE" },
+        { "t": 2.4, "x": 19.8, "y": -1.2, "note": "LE holds ground, two-gapping feel" },
+        { "t": 4, "x": 19.5, "y": -1.5, "note": "No push vs 46 bulk" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach toward strong A-gap",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Zone step right" },
+        { "t": 1, "x": 25.6, "y": -0.7, "note": "Climb to NOSE shoulder" },
+        { "t": 2.4, "x": 26.2, "y": -1, "note": "NOSE splits LG/C block" },
+        { "t": 4, "x": 26, "y": -1.4, "note": "Blocked at line of scrimmage" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block 0-tech NOSE",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap" },
+        { "t": 1, "x": 26.67, "y": -0.9, "note": "Help on NOSE" },
+        { "t": 2.4, "x": 26.9, "y": -1.2, "note": "Double-team stalled" },
+        { "t": 4, "x": 27, "y": -1.5, "note": "NOSE anchors both A-gaps" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block shaded DT then climb to MIKE",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Fire into shaded DT" },
+        { "t": 1, "x": 29.2, "y": -0.8, "note": "Engage DT shade" },
+        { "t": 2.4, "x": 29.6, "y": -1.4, "note": "Try to climb to MIKE" },
+        { "t": 4, "x": 29.8, "y": -2, "note": "MIKE scrapes over trash" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block head-up strong end",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Fire out on RE" },
+        { "t": 1, "x": 33.4, "y": -0.8, "note": "Engage head-up RE" },
+        { "t": 2.4, "x": 33.8, "y": -1.1, "note": "RE squeezes down, spills FB" },
+        { "t": 4, "x": 34, "y": -1.4, "note": "End refuses to be reached" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Block head-up end over TE",
+      "waypoints": [
+        { "t": 0, "x": 35.4, "y": -0.6, "note": "Fire on RE" },
+        { "t": 1, "x": 35.4, "y": -0.9, "note": "Engage" },
+        { "t": 2.4, "x": 35.2, "y": -1.3, "note": "RE already squeezed inside" },
+        { "t": 4, "x": 35, "y": -1.6, "note": "Blocking air as end crashed B" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Under-center handoff to RB on strong iso",
+      "waypoints": [
+        { "t": 0, "x": 26.2, "y": -1.5, "note": "Open-handoff" },
+        { "t": 0.8, "x": 28.5, "y": -1.8, "note": "Give to RB" },
+        { "t": 2, "x": 29.5, "y": -1.5, "note": "Boot fake away" },
+        { "t": 4, "x": 30, "y": -1.2, "note": "Watches pile form at LOS" }
+      ]
+    },
+    {
+      "id": "FB",
+      "label": "FB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Kick out first linebacker in the hole",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": -5, "note": "Lead through strong A" },
+        { "t": 1, "x": 28.6, "y": -2.5, "note": "Aim at MIKE" },
+        { "t": 2.2, "x": 30.2, "y": 0.5, "note": "MIKE already flowed to gap" },
+        { "t": 4, "x": 31, "y": 1.5, "note": "Kicks air, SS fills behind" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Take handoff, hit strong A-gap behind FB",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -7, "note": "Alignment depth" },
+        { "t": 0.8, "x": 25, "y": -4, "note": "Take handoff" },
+        { "t": 2, "x": 28.5, "y": -1, "note": "Hit line at strength" },
+        { "t": 3.2, "x": 29.8, "y": 1.5, "note": "Meets MIKE + SS at 1 yard" },
+        { "t": 4, "x": 30.2, "y": 2.2, "note": "Tangled in eight-man pile" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Stalk LCB on perimeter",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 0.5, "note": "Split wide" },
+        { "t": 1, "x": 6.5, "y": 1.5, "note": "Work to LCB" },
+        { "t": 2.4, "x": 7.5, "y": 2.5, "note": "Press corner fights off stalk" },
+        { "t": 4, "x": 8, "y": 3, "note": "Contained on island" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Stalk RCB on perimeter",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 0.5, "note": "Split wide" },
+        { "t": 1, "x": 46, "y": 1.5, "note": "Work to RCB" },
+        { "t": 2.4, "x": 45.5, "y": 2.5, "note": "Press corner sheds stalk" },
+        { "t": 4, "x": 45, "y": 3, "note": "Contained on island" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "LE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Head-up weak tackle: control near shoulder, spill any puller",
+      "waypoints": [
+        { "t": 0, "x": 19.2, "y": 1, "note": "Head-up LT" },
+        { "t": 1, "x": 20.2, "y": 0.2, "note": "Strike LT breast plate" },
+        { "t": 2.4, "x": 21, "y": -0.2, "note": "Squeeze down one gap" },
+        { "t": 4, "x": 22, "y": 0.5, "note": "Spill lane collapsed" }
+      ]
+    },
+    {
+      "id": "NOSE",
+      "label": "NOSE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "0-tech: occupy center AND guard, split the double team",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 1, "note": "0-tech anchor" },
+        { "t": 1, "x": 26.5, "y": -0.3, "note": "Absorb LG/C double" },
+        { "t": 2.4, "x": 27.2, "y": -0.6, "note": "Split double toward ball" },
+        { "t": 4, "x": 28, "y": 0.5, "note": "Living in strong A-gap" }
+      ]
+    },
+    {
+      "id": "DT",
+      "label": "DT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Shade strong guard: control strong A/B junction",
+      "waypoints": [
+        { "t": 0, "x": 28.6, "y": 1, "note": "Shade RG" },
+        { "t": 1, "x": 29, "y": -0.2, "note": "Strike RG inside shoulder" },
+        { "t": 2.4, "x": 29.6, "y": 0.3, "note": "Funnel RB to MIKE" },
+        { "t": 4, "x": 30.2, "y": 0.8, "note": "Gap clogged" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "RE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Head-up over TE: squeeze inside, spill kick-out",
+      "waypoints": [
+        { "t": 0, "x": 35.4, "y": 1, "note": "Head-up TE" },
+        { "t": 1, "x": 34.6, "y": -0.2, "note": "Slip TE block inside" },
+        { "t": 2.2, "x": 33, "y": -0.6, "note": "Crash into B-gap lane" },
+        { "t": 4, "x": 31.5, "y": 0.5, "note": "Spills FB kick, closes door" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Bunched at 2.5 yards: scrape to strong C-gap behind squeezed end",
+      "waypoints": [
+        { "t": 0, "x": 31.5, "y": 2.5, "note": "Box alignment" },
+        { "t": 1.2, "x": 32.5, "y": 2, "note": "Read run, shuffle downhill" },
+        { "t": 2.4, "x": 32, "y": 3, "note": "Scrape over RE spill" },
+        { "t": 4, "x": 31, "y": 3.5, "note": "Second hat in C-gap" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Middle of the bunch: take on FB kick, fill strong A",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 2.5, "note": "Center box" },
+        { "t": 1, "x": 27.5, "y": 1.5, "note": "Key FB path" },
+        { "t": 2.2, "x": 29, "y": 0.8, "note": "Rip off RG climb" },
+        { "t": 4, "x": 29.8, "y": 1.8, "note": "First contact on RB" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak side of bunch: spill leverage, chase through backdoor",
+      "waypoints": [
+        { "t": 0, "x": 22, "y": 2.5, "note": "Weak box" },
+        { "t": 1.2, "x": 24.5, "y": 1.8, "note": "Slide with flow" },
+        { "t": 2.4, "x": 26.5, "y": 1.5, "note": "Back-door pursuit lane" },
+        { "t": 4, "x": 28.2, "y": 1.2, "note": "Wraps pile from behind" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "carry",
+      "assignment": "Walked to 5 yards in the box: force player on every run",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": 5, "note": "5-yard box alignment" },
+        { "t": 1, "x": 30.5, "y": 3, "note": "Trigger downhill on run" },
+        { "t": 2.2, "x": 30.8, "y": 2, "note": "Fill over MIKE" },
+        { "t": 4, "x": 30.5, "y": 1.5, "note": "Ninth defender in pile" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "carry",
+      "assignment": "Walked to 8 yards in the box: cutback player",
+      "waypoints": [
+        { "t": 0, "x": 27.5, "y": 8, "note": "8-yard box alignment" },
+        { "t": 1.2, "x": 28, "y": 6.5, "note": "Read run, stay square" },
+        { "t": 2.4, "x": 28.8, "y": 4, "note": "Close cutback lane" },
+        { "t": 4, "x": 29.2, "y": 3, "note": "Tenth hat at the ball" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Island press on X: zero help behind",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 1, "note": "Press alignment" },
+        { "t": 1, "x": 5.8, "y": 1.5, "note": "Jam X at release" },
+        { "t": 2.4, "x": 6.5, "y": 2.5, "note": "Fight stalk block" },
+        { "t": 4, "x": 7, "y": 3, "note": "Owns the island" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Island press on Z: zero help behind",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 1, "note": "Press alignment" },
+        { "t": 1, "x": 46.5, "y": 1.5, "note": "Jam Z at release" },
+        { "t": 2.4, "x": 45.8, "y": 2.5, "note": "Shed stalk attempt" },
+        { "t": 4, "x": 45.2, "y": 3, "note": "Owns the island" }
+      ]
+    }
+  ]
+}

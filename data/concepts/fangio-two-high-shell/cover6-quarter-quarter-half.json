@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "cover6-quarter-quarter-half",
+  "schemeId": "fangio-two-high-shell",
+  "order": 1,
+  "name": "Cover 6 (Quarter-Quarter-Half Split Safety)",
+  "personnel": "Penny 5-1-5 Nickel",
+  "formation": "Penny 5-1-5 vs 11P Gun 2x2 Seams",
+  "situation": "1st & 10, +45, base down passing look",
+  "coverage": "Cover 6 (Quarter-Quarter-Half Split Field)",
+  "frontName": "Penny 5-1-5 Tite 4-Man Rush",
+  "summary": {
+    "motive": "Present an ambiguous 2-high shell pre-snap, then split the field into Quarters to the passing strength and Cover 2 to the boundary to suffocate vertical seams and intermediate outs.",
+    "keyDefender": "Field Safety (FS) matching #2 seam and Boundary CB (LCB) playing cloud squat on the flat",
+    "whyItWorks": "Offenses expect traditional Cover 2 or single-high Cover 3; split-field Cover 6 eliminates the field seam without leaving the boundary corner isolated 1-on-1.",
+    "failureMode": "Boundary smash route if the safety fails to get over top of the corner squat in time, or interior run if offense checks to draw against the 1-linebacker box."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Static Two-High Pre-Snap Disguise",
+      "text": "Fangio aligns in an unmistakable two-high shell with safeties deep at 12 yards and a light Penny 5-1-5 front, disguising whether the coverage is Quarters, Cover 6, or Cover 8.",
+      "focus": ["BS", "FS", "STAR", "MIKE"]
+    },
+    {
+      "t": 1.2,
+      "title": "Field Quarters Clamps the Seam",
+      "text": "At the snap, Field Safety FS instantly reads Y vertical and clamps his inside hip in Quarters match, while RCB locks down Z on the outside.",
+      "focus": ["FS", "Y", "RCB"]
+    },
+    {
+      "t": 2.3,
+      "title": "Boundary Cloud Collision & Flat Trap",
+      "text": "LCB reroutes X into the boundary and squats on H in the flat, while Boundary Safety BS ranges to the deep half to erase the sideline hole shot.",
+      "focus": ["LCB", "BS", "H"]
+    },
+    {
+      "t": 3.5,
+      "title": "Quarterback Hesitation & Pocket Collapse",
+      "text": "With the field seam clamped and boundary flat suffocated, the QB double-clutches as ROLB bends the edge for a drive-ending sack.",
+      "focus": ["QB", "ROLB", "4iR"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["penny-match-quarters", "tite-creeper-drop8", "cover8-boundary-trap"],
+    "playsOff": [],
+    "tell": "Base split-safety structure: Field safety matches slot seam in Quarters while Boundary safety rolls to deep half."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

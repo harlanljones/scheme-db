@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "jj-speed-43",
+  "name": "Jimmy Johnson's Speed 4-3",
+  "coachId": "jimmy-johnson",
+  "team": "Dallas Cowboys (1989-93) / Miami Hurricanes",
+  "side": "defense",
+  "era": "past-nfl",
+  "lineage": "landry-dallas",
+  "description": "Undersized hyper-fast linemen who fire upfield at the snap instead of reading blocks, trading two-gap size for one-gap penetration chaos that wrecks blocking rules before they form. Behind the slanting front sits man-free or single-high coverage with pressed corners on islands, so every pressured throw has nowhere soft to land. The scheme finishes plays with the Miami chase rule: relentless, assigned pursuit angles that swallow ballcarriers from sideline to sideline."
+}

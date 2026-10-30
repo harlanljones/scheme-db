@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "fz-safety-blitz-smoke",
+  "schemeId": "lebeau-fire-zone",
+  "order": 4,
+  "name": "Safety Blitz Smoke",
+  "personnel": "Nickel 4-2-5 Smoke Package",
+  "formation": "11P Gun Spread 2x2 vs Single-High Smoke",
+  "situation": "3rd & 5, +45, money down",
+  "coverage": "Cover 1 Smoke with Corner Curl-Bait Trap",
+  "frontName": "Even Front Safety Smoke",
+  "summary": {
+    "motive": "Force an instant throw with a disguised safety blitz while the corner manufactures and then steals the curl window the QB is trained to trust.",
+    "keyDefender": "Boundary corner executing the curl-bait jump",
+    "whyItWorks": "The smoke pressure eliminates time for a full progression, and the pre-snap soft corner picture steers the hot read straight into a defender breaking downhill on the route.",
+    "failureMode": "The QB recognizes the single-high rotation, throws the slot option early, or hits the running back flare into the void vacated by the blitzing safety."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The Smoke Trigger",
+      "text": "The strong safety explodes downhill from a disguised two-high look while the four-man line slants away from his lane, attacking the offense before the slide protection can set.",
+      "focus": ["SS", "WDE", "NT", "DT", "RDE"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Curl Bait",
+      "text": "The boundary corner retreats with exaggerated cushion, convincing the QB that the ten-yard curl to X sits in a wide-open zone window.",
+      "focus": ["LCB", "X", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Jump",
+      "text": "The moment the receiver plants on his curl, the corner flips from fake-bail into a full-speed downhill break, closing the very window he manufactured.",
+      "focus": ["LCB", "X"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Trap Sprung",
+      "text": "With the safety blitz forcing an instant throw, the ball sails directly into the jumping corner, who intercepts with nothing but green grass ahead.",
+      "focus": ["LCB", "SS", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["fz-safety-rotate-fire"],
+    "tell": "Both safeties align deep like shell coverage, but the strong safety has his inside foot back and eyes locked on the guard-center tandem instead of the receivers."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

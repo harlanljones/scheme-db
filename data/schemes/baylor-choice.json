@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "baylor-choice",
+  "name": "Art Briles' Baylor Vertical Choice Spread",
+  "coachId": "art-briles",
+  "team": "Baylor Bears (2008-15)",
+  "side": "offense",
+  "era": "past-college",
+  "lineage": "option-spread",
+  "description": "The Baylor vertical choice spread weaponized run action into touchdown shots. Every call starts with an inside-zone read, jet sweep, or screen picture that forces the second level to defend the box, then punishes whichever safety leans with single-word choice routes and doubled posts over the top. Defenses had to guard the entire deep field on every snap or concede six."
+}

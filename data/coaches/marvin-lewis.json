@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "marvin-lewis",
+  "name": "Marvin Lewis",
+  "role2026": "Cover 2 Man-Under Pioneer",
+  "team": "Baltimore Ravens DC (1996-2001) / Cincinnati Bengals HC",
+  "lineage": "two-deep-shell",
+  "side": "defense",
+  "philosophy": "Two-deep safeties over pure man-underneath: erase crossers and stacked routes entirely in the red zone and dare fades and back-shoulder throws against trail technique.",
+  "keyConcepts": ["2-Man Red Zone Shell", "Trail Press Technique", "Crossing Route Elimination", "Double Deep Erase"],
+  "schemeIds": ["cover2-man-under"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Architect of Ravens 2000 Record Defense", "Super Bowl XXXV Champion DC"]
+}

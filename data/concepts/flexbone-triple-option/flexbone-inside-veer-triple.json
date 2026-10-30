@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flexbone-inside-veer-triple",
+  "schemeId": "flexbone-triple-option",
+  "order": 3,
+  "name": "Inside Veer Triple",
+  "personnel": "Flexbone Base",
+  "formation": "Flexbone Right, Twin Slots",
+  "situation": "3rd & 3, +45, must-have down",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Make the playside end choose between the dive and the keep, then punish any third defender who joins with the pitch phase.",
+    "keyDefender": "Playside Defensive End (unblocked read key)",
+    "whyItWorks": "The veer mesh makes the end's crash feel mandatory, and once he commits the geometry guarantees either a free keep lane or an untouched pitch around displaced force.",
+    "failureMode": "The end squeezes and spilles simultaneously while the force corner stays flat-footed, collapsing all three phases into one gap."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. Ride and Read the End",
+      "text": "The quarterback seats the ball on B's hip riding the veer mesh while staring at the playside end — the one defender left unblocked on the entire play.",
+      "focus": ["QB", "B", "RE"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The End Crashes Down",
+      "text": "The end shoots inside across B's face to make the dive tackle. By taking the dive he hands the quarterback a free pull and an empty C-gap.",
+      "focus": ["RE", "B", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Pitch Relationship",
+      "text": "The keep bends off the down-blocked 3-tech while A mirrors from the perimeter. Their spacing forces every second-level defender to declare before the ball moves.",
+      "focus": ["QB", "A", "RCB"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Pitch and Perimeter Finish",
+      "text": "When the force corner triggers upfield, the pitch goes out. A takes it around the kick-out with the safety and free safety both committed inside.",
+      "focus": ["A", "RCB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["flexbone-midline-play-action-shot"],
+    "playsOff": ["flexbone-midline-triple"],
+    "tell": "The dive aims at the B-gap behind the down-blocked tackle and the read is the wide end — midline reads interior and dives at the guard-center seam."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

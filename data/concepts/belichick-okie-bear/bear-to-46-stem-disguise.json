@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bear-to-46-stem-disguise",
+  "schemeId": "belichick-okie-bear",
+  "order": 4,
+  "name": "Bear-to-46 Stem Disguise",
+  "personnel": "Okie/Bear Package (5 DL, 2 LB, 4 DB)",
+  "formation": "Okie Shell vs Gun 12 Personnel Compressed",
+  "situation": "3rd & 2, red zone, run-check down",
+  "coverage": "Stem to Press Match, Eight-Man Box",
+  "frontName": "Bear Front Stemming into Full 46",
+  "summary": {
+    "motive": "Show a light okie shell to invite an inside-run check, then complete a cadence-length stem into a full 46 eight-man box before the ball carrier can redirect.",
+    "keyDefender": "SS walking from 8.5 yards into a strong-B mug — his arrival converts a two-deep picture into nine bodies at the line",
+    "whyItWorks": "The offense commits its protection slide and aiming points against the pre-snap shell; by the time the box is revealed, the dive is already declared.",
+    "failureMode": "A quick or silent count snapping the ball before the stem finishes, stranding walked safeties outside the box."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Disguised Okie Shell",
+      "text": "Both safeties split at 8-9 yards with linebackers floating at 4 — the picture reads standard okie nickel spacing, not an eight-man box.",
+      "focus": ["FS", "SS", "MIKE", "WILL"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. Stemming Through the Cadence",
+      "text": "Both safeties sprint downhill while the backers tighten behind them; eight defenders converge inside the tackles as the ball is snapped.",
+      "focus": ["SS", "FS", "MIKE", "WILL"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Eight-Man Box Revealed",
+      "text": "The final picture is full 46 geometry — five linemen, tightened backers, and both walked safeties mugging the interior gaps with no numbers advantage anywhere.",
+      "focus": ["NOSE", "SS", "WILL", "MIKE", "FS"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Dive Into a Wall",
+      "text": "The checked dive hits strong A/B to find the walked safety and WILL stacked there — the stem converted a light shell into its specialty snap.",
+      "focus": ["RB", "SS", "WILL", "NOSE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bear-double-a-mug"],
+    "playsOff": ["bear-goal-line-heavy"],
+    "tell": "Both safeties are moving downhill during the cadence with backers tightening behind them — the settled goal-line Bear never moves until the snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

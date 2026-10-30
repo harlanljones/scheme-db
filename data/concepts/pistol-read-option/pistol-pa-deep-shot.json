@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "pistol-pa-deep-shot",
+  "schemeId": "pistol-read-option",
+  "order": 3,
+  "name": "Pistol PA Deep Shot",
+  "personnel": "11",
+  "formation": "Pistol Right Slot, TE Right",
+  "situation": "1st & 10, +40, off run tendency",
+  "coverage": "Cover 1 Robber",
+  "frontName": "Nickel 4-2-5",
+  "summary": {
+    "motive": "Weaponize the pistol run identity to vacate the deep middle, then attack it with a post shot off a half-roll.",
+    "keyDefender": "Free Safety (middle-third defender)",
+    "whyItWorks": "The downhill mesh forces both second-level defenders and the robber to trigger before the quarterback ever looks downfield, isolating the middle third against two routes.",
+    "failureMode": "The safety plays run-pass split discipline instead of triggering, keeping his shoulders square to the post developing behind the crosser."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Identical Zone-Read Sell",
+      "text": "Every cue from the pistol inside zone read is present: the same mesh, the same line footwork, the back carrying the ball downhill into the second level.",
+      "focus": ["QB", "F", "RG"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Safety Trigger",
+      "text": "The robber fires down on the run action while the Mike triggers onto the diving back. Both vacate the middle of the field before the ball moves.",
+      "focus": ["SS", "MIKE", "F"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. Roll-Out Flood Builds",
+      "text": "The quarterback half-rolls off the fake as the flood develops: the crosser drags the free safety's eyes while the tight end releases late into the hole.",
+      "focus": ["QB", "H", "FS"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Post Behind the Frozen Third",
+      "text": "Z breaks off his go route into the post lane behind a middle-third defender who never recovered from the run fit. The shot lands over the trailing corner.",
+      "focus": ["Z", "FS", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["pistol-inside-zone-read"],
+    "tell": "The slot releases across the formation instead of arcing to kick a linebacker, and the line finishes with pass-set feet — live runs never do either."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

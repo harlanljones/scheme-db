@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "conceptId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "duration": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "offense": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "offense",
+              "defense"
+            ]
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ol",
+              "qb",
+              "rb",
+              "te",
+              "wr",
+              "dl",
+              "lb",
+              "db"
+            ]
+          },
+          "trail": {
+            "type": "string",
+            "enum": [
+              "route",
+              "block",
+              "carry",
+              "drop",
+              "none"
+            ]
+          },
+          "assignment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "waypoints": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "t",
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "side",
+          "role",
+          "trail",
+          "waypoints"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "defense": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "offense",
+              "defense"
+            ]
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ol",
+              "qb",
+              "rb",
+              "te",
+              "wr",
+              "dl",
+              "lb",
+              "db"
+            ]
+          },
+          "trail": {
+            "type": "string",
+            "enum": [
+              "route",
+              "block",
+              "carry",
+              "drop",
+              "none"
+            ]
+          },
+          "assignment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "waypoints": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "t",
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "side",
+          "role",
+          "trail",
+          "waypoints"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "conceptId",
+    "duration",
+    "offense",
+    "defense"
+  ],
+  "additionalProperties": false
+}

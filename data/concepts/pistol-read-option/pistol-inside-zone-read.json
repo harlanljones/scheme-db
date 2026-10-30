@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "pistol-inside-zone-read",
+  "schemeId": "pistol-read-option",
+  "order": 1,
+  "name": "Pistol Inside Zone Read",
+  "personnel": "11",
+  "formation": "Pistol Right Slot, TE Right",
+  "situation": "1st & 10, own 30, base down",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Put the backside end in an instant give-or-keep conflict using downhill pistol run physics.",
+    "keyDefender": "Backside Defensive End (unblocked read key)",
+    "whyItWorks": "The pistol keeps the back moving forward at the mesh, so any aggressive crash by the read key surrenders the A-gap before the defense can reroute pursuit.",
+    "failureMode": "The end squeezes and spilles simultaneously while staying square, clogging both branches until help arrives."
+  },
+  "beats": [
+    {
+      "t": 0.55,
+      "title": "1. The Pistol Mesh and Read",
+      "text": "The pistol alignment puts the back downhill at the snap. The quarterback seats the mesh while staring at one man — the unblocked backside end.",
+      "focus": ["QB", "F", "LE"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Crash Gives It Away",
+      "text": "The end shoots inside hunting the quarterback. By attacking the keep he hands the give branch an empty A-gap, and the ball comes out instantly.",
+      "focus": ["LE", "QB", "F"]
+    },
+    {
+      "t": 2,
+      "title": "3. Downhill Through the A-Gap",
+      "text": "The back presses downhill behind the scoop-and-climb guard while the quarterback carries the boot fake the other way, freezing the pursuit.",
+      "focus": ["F", "RG", "MIKE"]
+    },
+    {
+      "t": 3,
+      "title": "4. Second-Level Finish",
+      "text": "With the Mike scooped and the safety taking a bad alley angle, the back finishes vertically into the open middle field.",
+      "focus": ["F", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["pistol-pa-deep-shot"],
+    "playsOff": [],
+    "tell": "The running back is directly behind the quarterback at six yards and hits the line downhill — gun reads develop a half-yard deeper."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "johnson-orbit-reverse-screen",
+  "schemeId": "johnson-counter-deception",
+  "order": 4,
+  "name": "Orbit Reverse Screen with Late Wheel Release (Detroit Gadget)",
+  "personnel": "11",
+  "formation": "11P Gun Trips Left vs Nickel Under",
+  "situation": "2nd & 4, +28, explosive play call",
+  "coverage": "Nickel Cover 3 Buzz",
+  "frontName": "Nickel 4-2-5 Under Front",
+  "summary": {
+    "motive": "Use orbit motion and deep QB look-off to pull all defenders deep and inside, then dump to RB with three escort blockers in the flat.",
+    "keyDefender": "Strong Safety (Deep TE Wheel Responsibility)",
+    "whyItWorks": "Orbit motion pre-snap pulls the SS attention to the TE; the QB's deep look-off holds him there; and when the RB screen releases, three linemen have already set up a wall with no defensive back able to arrive in time.",
+    "failureMode": "A spy or rat linebacker assigned specifically to watch the RB screen, or a defensive end who stays home on pass rush to collision the RB release."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Orbit Motion Pre-Snap",
+      "text": "The TE takes orbit motion across the formation, simultaneously holding the SS's eyes and pulling the nickel defender out of position. Ben Johnson uses jet/orbit action before the snap to distort every single defensive assignment.",
+      "focus": ["TE", "SS", "NICKEL"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. QB Deep Look-Off",
+      "text": "The QB stares down the TE wheel route deep, holding the safety and field cornerback in deep zone territory. While they track the wheel, the RB slips out of the backfield into a wide-open flat.",
+      "focus": ["QB", "TE", "SS", "FS"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Screen Delivery in Space",
+      "text": "Three releasing offensive linemen create a convoy escort for the RB in the flat. MIKE and WILL are both inside, Nickel followed H's drag, and the passing lane is clear for a dump-off that is really a designed perimeter run.",
+      "focus": ["RB", "C", "LG", "RG", "MIKE", "WILL"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Explosive Gain with Escort",
+      "text": "Three blockers escort the RB into the secondary. The FS cannot close the angle in time, and the only unblocked defender is the SS who was drawn completely to the TE wheel. Detroit's orbit deception creates a 15+ yard screen.",
+      "focus": ["RB", "FS", "NICKEL"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["johnson-counter-trey-lead", "johnson-pa-te-throwback"],
+    "tell": "Orbit motion pre-snap with TE crossing behind QB; three linemen releasing early is the screen key."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

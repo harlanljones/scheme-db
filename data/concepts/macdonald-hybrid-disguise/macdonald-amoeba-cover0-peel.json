@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "macdonald-amoeba-cover0-peel",
+  "schemeId": "macdonald-hybrid-disguise",
+  "order": 4,
+  "name": "Amoeba Overload House Blitz (Cover 0 Peel)",
+  "personnel": "5-1-5 Amoeba Front",
+  "formation": "Chaotic Amoeba Front vs 11P Gun 2x2",
+  "situation": "3rd & 4, +28, red zone money down",
+  "coverage": "Cover 0 Peel (All-Out 6-Man Blitz)",
+  "frontName": "Amoeba 7-Man Standing Overload",
+  "summary": {
+    "motive": "Deploy maximum chaos and bring a 6-man overload house blitz on money downs, using the Peel technique on the edge to eliminate the QB’s hot checkdown.",
+    "keyDefender": "WDE (Peel defender on RB) & MIKE (Unblocked interior blitzer)",
+    "whyItWorks": "Offenses rely on the RB flare/flat route to punish all-out blitzes; having the edge rusher peel and convert into man coverage on the RB leaves the QB holding the ball with no protection.",
+    "failureMode": "Quick back-shoulder fade to an outside WR if the cornerback loses the initial press jam."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "7-Man Standing Amoeba Presentation",
+      "text": "Macdonald walks 7 defenders up to the line in a chaotic Amoeba front, with defenders shifting and pointing to make pass-protection ID impossible.",
+      "focus": ["WILL", "MIKE", "NICKEL", "WDE", "SDE", "NT", "3T"]
+    },
+    {
+      "t": 0.7,
+      "title": "6-Man Overload & Cover 0 Peel",
+      "text": "At the snap, 6 rushers ignite! As the RB releases on a hot flare route to beat the blitz, WDE executes a textbook peel technique, sprinting into the flat to take the hot read away.",
+      "focus": ["WDE", "RB", "MIKE", "NICKEL"]
+    },
+    {
+      "t": 1.6,
+      "title": "Unblocked A-Gap Destruction",
+      "text": "With the protection overwhelmed and the hot RB flare completely covered by the peeling WDE, MIKE arrives untouched in the A-gap for an immediate 1.8s sack.",
+      "focus": ["MIKE", "QB", "WDE"]
+    },
+    {
+      "t": 2.8,
+      "title": "Drive-Ending Turnover on Downs",
+      "text": "All perimeter receivers are locked in aggressive press-man coverage with nowhere for the QB to escape.",
+      "focus": ["LCB", "RCB", "FS", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["macdonald-double-mug-buzz", "macdonald-creeper-overload"],
+    "tell": "All mugged rushers explode forward with no underneath droppers, edge peeling on RB"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

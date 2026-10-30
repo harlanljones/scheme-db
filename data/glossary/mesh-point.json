@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "mesh-point",
+  "term": "Mesh Point",
+  "aliases": ["Mesh point", "Mesh Point", "mesh point", "QB-RB mesh", "mesh exchange", "read mesh", "mesh"],
+  "category": "Read & Assignment",
+  "shortDef": "The synchronized handoff exchange pocket where the quarterback rides the ball into the running back's belly while reading a designated key defender.",
+  "tacticalNote": "Freezes second-level linebackers and edge crashers for 0.4s–0.8s, creating space for keep, pull, or quick-trigger RPO throws."
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "mike-mcdaniel",
+  "name": "Mike McDaniel",
+  "role2026": "Offensive Coordinator, Los Angeles Chargers",
+  "team": "Los Angeles Chargers",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "kyle-shanahan",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "Pioneered sprint-speed cheat motion (glide/wham motion) to give receivers a running start into intermediate voids, maximizing space creation and explosive YAC.",
+  "keyConcepts": ["Cheat/Glide Motion", "Inside-Out Slant/Wheel", "Pistol Toss Crack", "Speed Option"],
+  "schemeIds": ["mcdaniel-cheat-motion"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Architect of 2023-2024 Historic Dolphins Passing Attack"]
+}

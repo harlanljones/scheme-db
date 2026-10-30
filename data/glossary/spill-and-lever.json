@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "spill-and-lever",
+  "term": "Spill & Lever",
+  "aliases": ["Spill and Lever", "spill fit", "lever fit", "force and spill", "spill and lever"],
+  "category": "Read & Assignment",
+  "shortDef": "Defensive run-fit doctrine where interior defenders attack the inside shoulder of pullers to \"spill\" the ball carrier wide, where the force defender \"levers\" them back inside.",
+  "tacticalNote": "Prevents vertical downhill seams on power and counter runs by bouncing ball carriers into secondary pursuit angles."
+}

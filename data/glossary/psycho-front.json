@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "psycho-front",
+  "term": "Psycho Front",
+  "aliases": ["Psycho front", "Psycho Blitz", "Psycho blitz", "psycho front", "amoeba psycho", "sugar front", "Psycho Front"],
+  "category": "Defensive Front",
+  "shortDef": "An exotic pass-rush alignment featuring zero defensive linemen with hands in the dirt, standing multiple blitzers roaming and mugging every gap along the line of scrimmage.",
+  "tacticalNote": "Causes total center-identification overload for offensive pass protection, preventing the offense from setting clear slide and dual-read calls."
+}

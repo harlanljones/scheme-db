@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "cross-dog-fire-hot",
+  "schemeId": "belichick-flores-psycho",
+  "order": 3,
+  "name": "Psycho 6-Man Cross-Dog Fire Hot",
+  "personnel": "Psycho 7-Man Front / 6-Man Pressure",
+  "formation": "7-Man Psycho Mug vs 11P Gun 3x1",
+  "situation": "3rd & 5, +30, red zone fringe money down",
+  "coverage": "Hot Fire Zone (3-Under, 2-Deep with 6-Man Blitz)",
+  "frontName": "Psycho A-Gap Cross-Dog Stunt",
+  "summary": {
+    "motive": "Defeat slide protections and 6-man half-slide schemes by manufacturing instant interior penetration via an A-gap cross-dog twist while protecting the deep field with Hot coverage.",
+    "keyDefender": "LB_A2 (Looping A-gap crosser) & LB_A1 (Penetrating pick rusher)",
+    "whyItWorks": "Offensive linemen cannot pass off crossing rushers when both start aligned directly in their face pre-snap.",
+    "failureMode": "Quick seam route between the two deep safeties if the quarterback releases before the loop arrives."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Mugged A-Gap Cross-Dog Twist",
+      "text": "Flores shows the identical 7-man psycho mug front before unleashing a 6-man overload fire blitz with a synchronized interior A-gap Cross-Dog stunt.",
+      "focus": ["LB_A1", "LB_A2", "LB_B1", "LB_B2", "EDGE_L", "EDGE_R"]
+    },
+    {
+      "t": 0.7,
+      "title": "Center Picking Wrong Rusher",
+      "text": "LB_A1 crashes hard into the left A-gap, occupying the Center and left guard, while LB_A2 loops tightly behind his back toward the opposite A-gap.",
+      "focus": ["LB_A1", "LB_A2", "C", "LG"]
+    },
+    {
+      "t": 1.6,
+      "title": "Clean Interior A-Gap Pressure",
+      "text": "With the running back forced to pick up the strong C-gap rush, LB_A2 explodes completely unblocked through the vacated A-gap directly into the quarterback’s lap.",
+      "focus": ["LB_A2", "QB", "RB", "C"]
+    },
+    {
+      "t": 2.2,
+      "title": "Hurried Throw into Contested Flat",
+      "text": "Hit as he releases, the QB floats an off-balance throw toward the boundary flat, where LURKER has dropped into the hot passing lane to swat it away.",
+      "focus": ["QB", "LURKER", "X", "LB_A2"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["cover0-all-out-house", "drop8-psycho-lurk"],
+    "tell": "Inside linebackers cross through opposite A-gaps on a delayed twist stunt behind edge contain."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

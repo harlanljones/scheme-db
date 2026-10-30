@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b46-base-i-form",
+  "schemeId": "buddy-46-defense",
+  "order": 1,
+  "name": "Base 46 vs Pro I-Form",
+  "personnel": "Base 46 Front",
+  "formation": "46 Front vs Pro I-Form Strong Right",
+  "situation": "1st & 10, +35, base down",
+  "coverage": "Press-Man Zero (No Deep Safety)",
+  "frontName": "46 Front (Head-Up Ends, Bunched LBs, Walked Safeties)",
+  "summary": {
+    "motive": "Commit nine defenders to the box with walked safeties and bunched linebackers so any base run is met at or behind the line of scrimmage with a blocker-free defender.",
+    "keyDefender": "SS at 5 yards — the extra force player who turns every one-gap run into a two-hat fit",
+    "whyItWorks": "Offensive blocking rules cannot account for both walked safeties; the FB kick meets a squeezing end instead of a linebacker, and the ball carrier runs into a pre-built pile.",
+    "failureMode": "Any completion beats zero coverage: with no deep safety, a double move or quick slant against isolated press corners is a touchdown threat."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Eight-Man Box Picture",
+      "text": "Both safeties are walked into the box at 5 and 8 yards with all three linebackers bunched at 2.5 yards. There is no deep-middle defender anywhere — the offense sees nine hats within 6 yards of the ball.",
+      "focus": ["SS", "FS", "SAM", "MIKE", "WILL"]
+    },
+    {
+      "t": 1,
+      "title": "2. Head-Up Ends Refuse to Be Reached",
+      "text": "The 46 ends align head-up rather than shaded, so neither tackle nor the tight end can reach an outside shoulder. Both ends strike and squeeze, spilling any kick-out back into the bunched linebackers.",
+      "focus": ["LE", "RE", "RT", "Y"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. NOSE Splits, Linebackers Scrape",
+      "text": "The 0-tech nose absorbs the center-guard double team and splits it toward the ball, while MIKE rips over the guard climb and SAM scrapes behind the squeezing end. Every gap has two defenders.",
+      "focus": ["NOSE", "MIKE", "SAM", "LG"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Ten Hats at the Football",
+      "text": "The running back is met at the line by MIKE with SS and FS stacking in behind. The run never touches the second level — the defining picture of Buddy Ryan’s 46.",
+      "focus": ["RB", "MIKE", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b46-mad-dog-double-a", "b46-free-blade-weak-blitz"],
+    "playsOff": ["b46-ext-strong-combo"],
+    "tell": "Both safeties aligned INSIDE the tackles at 5 and 8 yards — the pure 46 picture has no safety deeper than the linebackers’ original depth."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

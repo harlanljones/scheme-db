@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "airraid-stick-naked-constraint",
+  "schemeId": "air-raid",
+  "order": 3,
+  "name": "Stick-Naked Constraint",
+  "personnel": "10",
+  "formation": "10P Gun 3x1 Left",
+  "situation": "3rd & 4, own 42, must convert",
+  "coverage": "Cover 2 Quarters",
+  "frontName": "4-2-5 Nickel front",
+  "summary": {
+    "motive": "Double-cover the stick deliberately so the naked swing constraint runs free behind over-committed flat defenders.",
+    "keyDefender": "Sam Linebacker (weak-flat defender)",
+    "whyItWorks": "Quarters rules force the flat player to sink with the stick; the running back's swing path occupies precisely the grass both defenders abandoned.",
+    "failureMode": "The flat defender keeps outside-in leverage on the running back instead of sinking with the stick, taking away the constraint at its origin."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Trips Distribution",
+      "text": "Trips floods the weak side with three simultaneous threats: a seam clearout, a five-yard stick, and a bubble fake. The flat defender must pick one immediately.",
+      "focus": ["X", "H", "Y", "SAM"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Stick Bites Both Defenders",
+      "text": "Both the nickel and the flat linebacker sink on the stick route, doubling a five-yard throw that was never meant to be caught.",
+      "focus": ["H", "NICKEL", "SAM"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Naked Swing Appears",
+      "text": "With every defender staring at the trips distribution, the running back swings out of the backfield completely uncovered behind their shoulders.",
+      "focus": ["RB", "MIKE", "FS"]
+    },
+    {
+      "t": 3,
+      "title": "4. The Constraint Pays",
+      "text": "The quarterback flips to the naked swing, the top of trips escorts the first tackler, and the conversion is made in space against zero defenders.",
+      "focus": ["QB", "RB", "Y"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["airraid-y-cross"],
+    "playsOff": ["airraid-shallow-distribution-drive"],
+    "tell": "The running back never blocks — he releases across the backfield on his first step, which no true stick play does."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

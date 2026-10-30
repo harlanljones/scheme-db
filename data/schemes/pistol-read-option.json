@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "pistol-read-option",
+  "name": "Chris Ault's Pistol Read-Option",
+  "coachId": "chris-ault",
+  "team": "Nevada Wolf Pack",
+  "side": "offense",
+  "era": "past-college",
+  "lineage": "option-spread",
+  "description": "The Pistol marries gun spacing with under-center run physics: the quarterback lines up four yards deep with the back directly behind him, so every zone and gap run hits downhill at full pad level while still carrying a quarterback keep threat. Chris Ault invented the formation at Nevada, where Colin Kaepernick turned it into a 2,000-yard rushing attack."
+}

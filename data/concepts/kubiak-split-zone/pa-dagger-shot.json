@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "pa-dagger-shot",
+  "schemeId": "kubiak-split-zone",
+  "order": 2,
+  "name": "Play-Action Dagger Shot",
+  "personnel": "12",
+  "formation": "12P Condensed Wing Right",
+  "situation": "2nd & 2, +40, run-heavy down",
+  "coverage": "Cover 3 Sky (Single-High)",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Exploit aggressive linebacker run fits by pairing a hard split-zone play-action fake with a clear-out post and intermediate Dagger (dig) route.",
+    "keyDefender": "Mike Linebacker & Single-High Free Safety (FS)",
+    "whyItWorks": "The split-zone mesh pulls linebackers 5-8 yards downhill toward the line of scrimmage, while the tight end clear-out post occupies the single-high safety deep. The Dagger route breaks into the wide open intermediate void between the two levels.",
+    "failureMode": "A disciplined Mike LB dropping under the dig route, or immediate edge pressure beating the play-action protection."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Identical Condensed Split-Zone Look",
+      "text": "Offense shows the exact same 12-personnel condensed formation and under-center posture that established the base Split-Zone run.",
+      "focus": ["QB", "RB", "H", "X"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Deceptive Split-Zone Mesh",
+      "text": "Offensive line sells lateral stretch right while H-Back slices across. Mike and Will linebackers sprint downhill into the line to plug the run.",
+      "focus": ["MIKE", "WILL", "H", "QB", "RB"]
+    },
+    {
+      "t": 1.3,
+      "title": "The Linebacker Trap & Play-Action Pull",
+      "text": "QB violently pulls the ball at t=1.3s and steps into a deep 5-step pocket. The linebackers are trapped 10 yards out of position near the line of scrimmage.",
+      "focus": ["QB", "MIKE", "WILL"]
+    },
+    {
+      "t": 2.7,
+      "title": "The Clear-Out Post Drags the Deep Safety",
+      "text": "Inline TE stems vertical on a deep post, turning the single-high Free Safety away from the middle of the field and opening a massive intermediate passing window.",
+      "focus": ["TE", "FS"]
+    },
+    {
+      "t": 3.6,
+      "title": "The Dagger Strike into the Void",
+      "text": "Backside X snaps off a crisp 15-yard Dagger right behind the stranded linebackers and underneath the cleared-out safety for an explosive 25-yard gain.",
+      "focus": ["X", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["boot-throwback-leak"],
+    "playsOff": ["split-zone-slice"],
+    "tell": "Backside X stems vertical into intermediate Dagger instead of stalk blocking; QB pulls ball at t=1.3s."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

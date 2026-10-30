@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "chip-kelly",
+  "name": "Chip Kelly",
+  "role2026": "Offensive Coordinator, Las Vegas Raiders",
+  "team": "Las Vegas Raiders",
+  "lineage": "reid-west-coast",
+  "mentorId": "jack-elway",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "Tempo as a weapon: snap-rate stress, spread-option run game with RB-draw and zone-read elements, Air Raid mesh/spot spacing concepts, and vertical four-verts takes that force defenses to communicate at a pace they cannot sustain.",
+  "keyConcepts": ["Snap-Rate Tempo Stress", "Mesh & Spot Spacing", "Zone-Read / RB Draw Mix", "Four-Verts Takeovers"],
+  "schemeIds": ["kelly-tempo-spread"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Pioneered NFL Tempo Spread (Eagles 2013-2015)", "Record-Setting Oregon Fast-Break Offense"]
+}

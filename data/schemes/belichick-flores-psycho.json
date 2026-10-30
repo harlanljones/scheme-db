@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "belichick-flores-psycho",
+  "name": "Brian Flores' Psycho Front & Cover 0 Pressure",
+  "coachId": "brian-flores",
+  "team": "Minnesota Vikings / New England Patriots",
+  "side": "defense",
+  "era": "modern-nfl",
+  "lineage": "belichick-flores",
+  "description": "An extreme binary pressure system rooted in Bill Belichick chameleon football and weaponized by Brian Flores into the NFL’s most terrifying pre-snap presentation. By crowding the line of scrimmage with 6 to 7 mugged rushers in the Psycho Front, the defense creates identical pre-snap chaos before either sending an unblockable 7-man Cover 0 house blitz, bluffing and dropping 8 into muddy coverage traps, executing interior A-gap cross-dog twists, or bracketing the offense’s #1 star wide receiver."
+}

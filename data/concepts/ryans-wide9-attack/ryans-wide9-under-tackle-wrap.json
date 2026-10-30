@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "ryans-wide9-under-tackle-wrap",
+  "schemeId": "ryans-wide9-attack",
+  "order": 1,
+  "name": "Wide-9 Under Front Tackle-Wrap Stunt (T-E)",
+  "personnel": "Nickel 4-2-5",
+  "formation": "4-3 Under Wide-9 Front vs 11P Gun 2x2",
+  "situation": "2nd & 7, +35, standard pass down with play-action threat",
+  "coverage": "Cover 3 Sky Match (Single-High with Wide-9 Rush)",
+  "frontName": "4-3 Under Wide-9 Stunt Front",
+  "summary": {
+    "motive": "Exploit the Wide-9 alignment by forcing offensive tackles into elongated kick-slides, then executing a Tackle-End (T-E) wrap stunt to create an unblocked interior rush lane for the defensive end.",
+    "keyDefender": "SDE (looping edge rusher) & 3T (interior spike tackle)",
+    "whyItWorks": "The threat of speed rush from the Wide-9 makes offensive tackles over-set outside, creating wide-open interior corridors when paired with an aggressive A-gap spike by the 3-technique.",
+    "failureMode": "Quick rhythm 3-step slants or screens thrown before the stunt can develop and loop into the backfield."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Wide-9 Pre-Snap Alignment",
+      "text": "DeMeco Ryans aligns his defensive ends in extreme Wide-9 alignments outside the tackles, forcing the offensive tackles to widen their sets and opening massive interior B-gap corridors.",
+      "focus": ["WDE", "SDE", "3T", "LT", "RT"]
+    },
+    {
+      "t": 0.8,
+      "title": "T-E Stunt: 3T Spikes Inside, SDE Sells Edge",
+      "text": "At the snap, 3T crashes violently into the A-gap, taking the LG and Center with him. SDE takes two hard upfield steps in Wide-9, baiting the RT to overset to the sideline.",
+      "focus": ["3T", "SDE", "LG", "RT"]
+    },
+    {
+      "t": 1.8,
+      "title": "Tackle-Wrap Loop Opens Highway to QB",
+      "text": "With the RT overset and the LG pinned inside by the 3T spike, SDE plants his outside foot and wraps tightly into the vacated B-gap untouched.",
+      "focus": ["SDE", "3T", "QB", "RB"]
+    },
+    {
+      "t": 3.2,
+      "title": "SDE Arrives for the Decisive Sack",
+      "text": "The QB hits the top of his drop only to find SDE roaring through the interior pocket at full speed for a dominant 4-man pressure sack.",
+      "focus": ["SDE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["ryans-cover2-palms-read", "ryans-overload-edge-fire"],
+    "playsOff": [],
+    "tell": "Wide-9 DE takes an exaggerated outside step before looping sharply inside behind the interior 3-technique spike"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

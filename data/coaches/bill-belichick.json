@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "bill-belichick",
+  "name": "Bill Belichick",
+  "role2026": "6x Super Bowl Champion HC / Defensive Patriarch",
+  "team": "New England Patriots (Patriarch)",
+  "lineage": "belichick-flores",
+  "mentorId": "bill-parcells",
+  "disciples": ["brian-flores"],
+  "side": "defense",
+  "philosophy": "Chameleon defensive football: gameplan-specific odd/even fronts, taking away the opposing offense’s #1 weapon, and Cover 0 psycho overload blitzes.",
+  "keyConcepts": ["Chameleon Gameplanning", "Cover 0 House Blitz", "Hybrid 3-4 / 4-3 Multiplicity", "Bracket / Double #1 Option"],
+  "schemeIds": ["belichick-flores-psycho"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["6x Super Bowl Champion HC", "8x Super Bowl Champion Total", "Greatest Defensive Tactician in NFL History"]
+}

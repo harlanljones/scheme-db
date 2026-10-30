@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flex-line-game-rush",
+  "schemeId": "landry-flex",
+  "order": 4,
+  "name": "Flex Line Game Pass Rush",
+  "personnel": "Base 4-3 Flex (Both DTs Flexed)",
+  "formation": "Pro Set Gun Spread vs Flexed Line Game",
+  "situation": "2nd & 8, +35, passing down",
+  "coverage": "Cover 3 Sky behind the line game",
+  "frontName": "4-3 Double Flex with Tackle-Tackle Game",
+  "summary": {
+    "motive": "Manufacture a free-edge rusher without blitzing by running a staggered slant-and-wrap line game out of the flexed tackle alignments.",
+    "keyDefender": "The strong tackle executing the slant-and-wrap",
+    "whyItWorks": "The flex alignment gives the tackles a runway to slant with momentum, and slide protection has no answer for a rusher who changes gaps after the pass is set — someone always blocks air.",
+    "failureMode": "The tackle refuses the passed-off slant and keeps outside leverage, forcing the wrap wide and letting the QB escape up the middle."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The Flexed First Punch",
+      "text": "Both flexed tackles fire on the snap with staggered aims: the weak tackle explodes into the A-gap to glue the Center and guard, buying the space the second-level game needs to develop.",
+      "focus": ["WDT", "C", "LG"]
+    },
+    {
+      "t": 1.3,
+      "title": "2. Slant, Pass, Wrap",
+      "text": "The strong tackle slants the B-gap, draws the tackle’s block down, then wraps flat behind the rush while the end replaces him inside — the classic Landry line game that turns four rushers into five threats.",
+      "focus": ["SDT", "RDE", "RT", "RG"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. The Passed-Off Trap",
+      "text": "The tackle chases the slant he was taught to take, but the wrapping defender is already turning the corner behind him, and the guard is late finding his new inside rusher.",
+      "focus": ["RT", "SDT", "RG", "QB"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Two-Man Convergence Sack",
+      "text": "The QB climbs away from the free wrapper directly into the replaced interior rusher, and the flexed line game finishes with a two-defender sack born entirely from alignment.",
+      "focus": ["SDT", "RDE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["flex-lb-strength-shift-motion"],
+    "tell": "The strong tackle widens his stance and leans inward during the cadence rather than firing straight ahead, betraying the slant half of the game."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

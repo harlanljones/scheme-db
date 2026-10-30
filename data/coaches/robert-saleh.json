@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "robert-saleh",
+  "name": "Robert Saleh",
+  "role2026": "Defensive Strategist / Head Coach",
+  "team": "San Francisco 49ers / NY Jets",
+  "lineage": "carroll-saleh-wide9",
+  "mentorId": "pete-carroll",
+  "disciples": ["demeco-ryans"],
+  "side": "defense",
+  "philosophy": "Penetrating 4-man rush with Wide-9 defensive end alignments and disruptive 3-techniques, backed by pattern-matching Cover 3 Rip/Liz and split-field Cover 6 bracket coverages.",
+  "keyConcepts": ["Wide-9 Defensive Front", "Cover 3 Match (Rip/Liz)", "Cross-Dog Fire Zone", "Cover 6 Bracket"],
+  "schemeIds": ["saleh-43-wide9"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2x #1 Defense Coordinator/HC", "Super Bowl LIV Appearance"]
+}

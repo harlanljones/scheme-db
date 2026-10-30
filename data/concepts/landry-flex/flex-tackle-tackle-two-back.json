@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flex-tackle-tackle-two-back",
+  "schemeId": "landry-flex",
+  "order": 2,
+  "name": "Tackle-Tackle Flex vs Two-Back",
+  "personnel": "Base 4-3 Flex (Both DTs Flexed)",
+  "formation": "22P I-Form Power Right vs Double Flex",
+  "situation": "1st & Goal, +8, power run down",
+  "coverage": "Cover 3 Sky behind double flex",
+  "frontName": "4-3 Tackle-Tackle Flex",
+  "summary": {
+    "motive": "Occupy both interior gaps passively with flexed tackles who split double teams without needing to win, funneling two-back power into a patient three-defender kill zone.",
+    "keyDefender": "The flexed strong tackle executing the patient shed",
+    "whyItWorks": "Power schemes need their interior double teams to climb to the linebackers; starting a yard off the ball makes that climb impossible while the flexed defenders stay fresh and square.",
+    "failureMode": "The offensive line changes the point of attack to quick trap or counter, catching the flexed tackles still releasing from their passive blocks."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The Double-Flex Picture",
+      "text": "Both tackles align a full yard off the ball, so every interior blocker must travel an extra yard forward just to make contact, surrendering the battle before it starts.",
+      "focus": ["WDT", "SDT", "C", "RG"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Double Team That Cannot Climb",
+      "text": "The center-guard combo reaches the flexed weak tackle already at depth, but he fights the split with low pads and neither blocker can climb to the second level.",
+      "focus": ["WDT", "C", "LG"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Patient Shed at the Point of Attack",
+      "text": "The flexed strong tackle takes the down block standing tall, reads the ball declaration, and sheds precisely as the back hits the line of scrimmage.",
+      "focus": ["SDT", "RG", "T"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Three-Defender Convergence at POA",
+      "text": "The shedding tackle, boxing Mike linebacker, and alley-filling strong safety meet simultaneously, stuffing the power before it reaches the second level.",
+      "focus": ["SDT", "MIKE", "SS", "T"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["flex-lb-strength-shift-motion"],
+    "playsOff": ["flex-weak-tackle-power-sweep"],
+    "tell": "Both defensive tackles hover a full yard off the ball with hands free pre-snap, unlike any standard shaded or nose alignment in the same front."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

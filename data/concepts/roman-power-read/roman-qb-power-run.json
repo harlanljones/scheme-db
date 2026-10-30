@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "roman-qb-power-run",
+  "schemeId": "roman-power-read",
+  "order": 2,
+  "name": "QB Power (Keeper Behind the Pull)",
+  "personnel": "22",
+  "formation": "22P Heavy Wing Right (Under Center)",
+  "situation": "3rd & 2, midfield, short-yardage must-have",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Run true QB power with no read: use the fullback to wrong-arm the unblocked edge and the pulling guard to log the Mike, handing the quarterback a designed crease in the B/C-gap.",
+    "keyDefender": "Unblocked Edge Defender — forced to wrong-arm into the FB kick-out",
+    "whyItWorks": "The unblocked edge must choose between boxing the quarterback and squeezing the run; either choice he makes has already been blocked for, and the counter fake takes the backside linebacker out of his gap.",
+    "failureMode": "A long-armed edge who plays the quarterback instead of the blocker — keeping outside leverage, spilling the kick-out, and forcing the keeper wide into the force corner."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. No Read, No Mesh — Pure Design",
+      "text": "Unlike the power read, this ball is clamped from the snap. The running back sells a counter fake the other way while the quarterback opens with his eyes on the fullback’s kick, not on any defender.",
+      "focus": ["QB", "RB", "F"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Wrong-Arm Trap",
+      "text": "The unblocked edge defender is put in conflict: if he boxes, the QB bounces outside; if he crashes — which he does — the fullback kicks him out and erases the edge entirely.",
+      "focus": ["SDE", "F", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Puller Logs the Second Level",
+      "text": "The pulling left guard arrives exactly where the MIKE fills, logging him inside-out so the B/C-gap stays open. Power means someone is always blocked at the second level — here it is the puller himself.",
+      "focus": ["LG", "MIKE", "QB"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Quarterback Falls Forward Past the Sticks",
+      "text": "With the edge kicked and the MIKE logged, the only defenders left are the climbing-RT-blocked safety and a trailing free safety. The keeper converts in a phone booth — Roman’s signature short-yardage answer.",
+      "focus": ["QB", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["roman-power-read-pull", "roman-pin-pull-leverage"],
+    "playsOff": ["sirianni-power-duo-inside"],
+    "tell": "There is no read and no extended mesh — the QB clamps the ball at the snap and the fullback kicks the first color he sees."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

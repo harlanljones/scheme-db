@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "tony-dungy",
+  "name": "Tony Dungy",
+  "role2026": "Tampa 2 Architect",
+  "team": "Tampa Bay Buccaneers (1996-2001) / Indianapolis Colts",
+  "lineage": "two-deep-shell",
+  "side": "defense",
+  "philosophy": "Middle-of-the-field-closed Cover 2 where the Mike linebacker runs the deep hole: trade pressure for takeaways, force tight intermediate windows, and let the front four hunt.",
+  "keyConcepts": ["Cover 2 Sink", "Mike Deep-Hole Drop", "Corner Underneath Squat Technique", "Takeaway-First Philosophy"],
+  "schemeIds": ["tampa-2"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Super Bowl XLI Champion HC", "Rebuilt Buccaneers & Colts Defenses"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "cover-0",
+  "term": "Cover 0",
+  "aliases": ["Cover 0 Blitz", "all-out blitz", "zero coverage", "house blitz", "cover 0"],
+  "category": "Coverage & Shell",
+  "shortDef": "A maximum all-out pressure scheme featuring pure man coverage with zero deep safety help and six or seven rushers attacking the pocket.",
+  "tacticalNote": "Forces an immediate hot throw from the quarterback, daring them to deliver accurately before the unblocked pressure arrives."
+}

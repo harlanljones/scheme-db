@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "rns-switch-verticals",
+  "schemeId": "run-and-shoot",
+  "order": 1,
+  "name": "Switch Verticals vs Man",
+  "personnel": "10",
+  "formation": "Gun One-Back, 4-Wide Spread",
+  "situation": "2nd & 7, +38, expecting man coverage",
+  "coverage": "Cover 1 Robber",
+  "frontName": "Nickel 4-2-5",
+  "summary": {
+    "motive": "Force man-coverage defenders into crossed releases that convert into a two-man rub, freeing a vertical behind single-high coverage.",
+    "keyDefender": "Free Safety (last line in man free)",
+    "whyItWorks": "Crossed releases make defenders trail through each other's lanes, and the far-side go routes strip the safety of any help he might offer to the rub side.",
+    "failureMode": "Corners jam both releases apart before they can cross, or the robber collision-calls the switch and jumps the outside climber."
+  },
+  "beats": [
+    {
+      "t": 0.55,
+      "title": "1. The Switch Release",
+      "text": "X slams an inside release while H bursts outside behind him, exchanging lanes before either stem develops. Both defenders are forced to open in opposite directions.",
+      "focus": ["X", "H", "LCB", "N"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. Converting to Verticals",
+      "text": "Both receivers convert upfield simultaneously. The corner is dragged inside by the slam while the nickel trails through the crossing traffic — a natural rub neither can fight.",
+      "focus": ["X", "H", "LCB", "N"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. The Single-High Conflict",
+      "text": "The right-side go routes pin the free safety and hold the robber. The two left climbers attack the middle hole from opposite shoulders with no help coming.",
+      "focus": ["FS", "SS", "Y", "Z"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Throw to the Winner",
+      "text": "The quarterback delivers to whichever climber wins leverage. The outside release is live because the nickel is trailing — H stacks him and runs free behind the defense.",
+      "focus": ["QB", "H", "X"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["rns-mesh-read-route", "rns-post-wheel-leverage-read"],
+    "playsOff": [],
+    "tell": "The releases cross below four yards before either stem develops — a true double-vertical keeps both receivers on parallel outside tracks."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

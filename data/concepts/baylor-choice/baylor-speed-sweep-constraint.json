@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "baylor-speed-sweep-constraint",
+  "schemeId": "baylor-choice",
+  "order": 4,
+  "name": "Speed Sweep Constraint",
+  "personnel": "11",
+  "formation": "11P Gun, Slot Left (jet across)",
+  "situation": "2nd & 5, own 38, vs quarters look with aggressive force",
+  "coverage": "Cover 2 Zone",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Force both perimeter defenders to defend the sideline honestly so they cannot cheat toward the choice shots this family lives on.",
+    "keyDefender": "Nickel (the force player)",
+    "whyItWorks": "Jet speed forces the nickel to commit as force pre-exchange, the tight end kicks him out at the perfect landmark, and the stalk removes the corner — leaving only a safety making a hopeless alley tackle.",
+    "failureMode": "The nickel plays off the kickout with leverage instead of taking it head-on, spilling the carrier inside where the scraping linebacker waits."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Jet Stretches the Edge",
+      "text": "The slot jets across at full speed while the line reaches right and the back fakes weak. The nickel must declare himself as force before the exchange even lands.",
+      "focus": ["H", "NICKEL", "SAM"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Kickout Erases the Force",
+      "text": "The tight end kicks the nickel head-on exactly where he must be. With force eliminated, the safety inherits an alley fill he cannot make in time.",
+      "focus": ["Y", "NICKEL", "FS"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Corner Is Stalked",
+      "text": "The flanker stalks the sweep-side corner as the carrier presses the numbers. Both primary force defenders are now accounted for without throwing a pass.",
+      "focus": ["Z", "RCB", "H"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Perimeter Pays",
+      "text": "The carrier bends up off the kickout with the whole defense flowing laterally behind him. This is the constraint that makes every choice shot credible.",
+      "focus": ["H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["baylor-iz-read-choice-double-post"],
+    "playsOff": [],
+    "tell": "The ball changes hands to a full-speed receiver crossing the formation — no other call in this family puts the ball on the perimeter before the second level moves."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

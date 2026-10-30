@@ -1,0 +1,321 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "b46-mad-dog-double-a",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on weak end with no inside help — A-gap mug is his problem too",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Vertical set" },
+        { "t": 0.8, "x": 20.4, "y": -0.8, "note": "Glance at mugged WILL" },
+        { "t": 2, "x": 20, "y": -1.2, "note": "Torn between LE and WILL" },
+        { "t": 4, "x": 19.8, "y": -1.6, "note": "LE wins the half-man angle" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pick up mugged WILL in weak A-gap",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Set on mug threat" },
+        { "t": 0.6, "x": 24.6, "y": -0.7, "note": "Punch down at WILL" },
+        { "t": 1.6, "x": 25, "y": -1, "note": "WILL crosses his face inside" },
+        { "t": 4, "x": 25.6, "y": -1.5, "note": "WILL through weak A untouched" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Handle 0-tech NOSE while both A-gaps are threatened by backers",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap" },
+        { "t": 0.7, "x": 26.67, "y": -0.9, "note": "Engage NOSE bull rush" },
+        { "t": 2.2, "x": 26.9, "y": -1.5, "note": "Driven backward by NOSE" },
+        { "t": 4, "x": 27, "y": -2.4, "note": "Pocket collapsed from middle" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pick up mugged SS in strong A-gap",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Set on mug threat" },
+        { "t": 0.6, "x": 28.7, "y": -0.7, "note": "Punch down at SS" },
+        { "t": 1.6, "x": 28.4, "y": -1, "note": "SS crosses his face inside" },
+        { "t": 4, "x": 28, "y": -1.5, "note": "SS through strong A untouched" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block slanting RE who crashes inside off the TE",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Kick slide out" },
+        { "t": 0.8, "x": 33.2, "y": -0.8, "note": "RE aligned head-up, expect outside" },
+        { "t": 1.8, "x": 32.2, "y": -1, "note": "RE slants inside, RT chases" },
+        { "t": 4, "x": 31, "y": -1.4, "note": "Chasing RE into B-gap trail" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Chip slanting RE then release late",
+      "waypoints": [
+        { "t": 0, "x": 35.4, "y": -0.6, "note": "Yoked on RE" },
+        { "t": 0.8, "x": 35.2, "y": -0.9, "note": "Chip as RE slants away" },
+        { "t": 2, "x": 34, "y": 3, "note": "Late release to short hook" },
+        { "t": 4, "x": 32, "y": 5, "note": "Too late to help hot answer" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "3-step drop with a hot plan vs expected mug pressure",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.8, "x": 26.67, "y": -6.2, "note": "3-step hitch, eyes on A-gaps" },
+        { "t": 1.6, "x": 26.2, "y": -7, "note": "Both A-gaps exploding, panic hitch" },
+        { "t": 2.6, "x": 25.6, "y": -7.2, "note": "Steps up into NOSE bull" },
+        { "t": 3.6, "x": 25.8, "y": -7.6, "note": "Swallowed for sack" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Scan and block first blitzer — MIKE walks up man-to-man if he releases",
+      "waypoints": [
+        { "t": 0, "x": 22.5, "y": -5.5, "note": "Scan alignment" },
+        { "t": 0.8, "x": 24.5, "y": -4.5, "note": "Sees WILL and SS fire" },
+        { "t": 1.8, "x": 25.5, "y": -3.2, "note": "Takes WILL but SS already past" },
+        { "t": 4, "x": 26, "y": -2.8, "note": "One hat cannot block two gaps" }
+      ]
+    },
+    {
+      "id": "FB",
+      "label": "FB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Hinge protection on backside edge",
+      "waypoints": [
+        { "t": 0, "x": 30.5, "y": -5, "note": "Offset strong" },
+        { "t": 1, "x": 30.8, "y": -3.5, "note": "Hinge to RT gap" },
+        { "t": 2.4, "x": 31.5, "y": -2.2, "note": "Helps on slanting RE trash" },
+        { "t": 4, "x": 31, "y": -1.8, "note": "Buried in interior rubble" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Quick slant vs island press — the designed hot throw",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 0.5, "note": "Slant release" },
+        { "t": 0.9, "x": 8, "y": 3, "note": "Fight press jam of LCB" },
+        { "t": 2.2, "x": 13, "y": 6, "note": "Slant rounded by press trail" },
+        { "t": 4, "x": 18, "y": 8, "note": "Open late, QB buried" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Stem vertical then work comeback vs RCB island",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 0.5, "note": "Vertical stem" },
+        { "t": 1, "x": 47, "y": 4.5, "note": "Push RCB deep" },
+        { "t": 2.4, "x": 46, "y": 9.5, "note": "Comeback break at 10 yards" },
+        { "t": 4, "x": 45, "y": 11, "note": "Isolated with no help coming" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "carry",
+      "assignment": "Mug over weak A-gap at 1.2 yards, knife through weak A unblocked",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": 1.2, "note": "Weak A-gap mug stance" },
+        { "t": 0.5, "x": 24.6, "y": 0.2, "note": "Shoot weak A at snap" },
+        { "t": 1.4, "x": 24.9, "y": -1.4, "note": "Cross LG face inside" },
+        { "t": 2.6, "x": 25.4, "y": -4, "note": "Through A-gap, RB picks him late" },
+        { "t": 4, "x": 25.8, "y": -6.4, "note": "Second body in sack pile" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "carry",
+      "assignment": "Mug over strong A-gap at 1.2 yards, knife through strong A unblocked",
+      "waypoints": [
+        { "t": 0, "x": 27.9, "y": 1.2, "note": "Strong A-gap mug stance" },
+        { "t": 0.5, "x": 28.7, "y": 0.2, "note": "Shoot strong A at snap" },
+        { "t": 1.4, "x": 29, "y": -1.4, "note": "Cross RG face inside" },
+        { "t": 2.4, "x": 28.4, "y": -3.6, "note": "Free runner into pocket" },
+        { "t": 3.4, "x": 26.8, "y": -6.6, "note": "First to arrive on QB" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "RE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Aligned head-up TE, slant hard inside to B/C junction",
+      "waypoints": [
+        { "t": 0, "x": 35.4, "y": 1, "note": "Head-up TE slant key" },
+        { "t": 0.6, "x": 34.4, "y": -0.2, "note": "Rip through TE inside shoulder" },
+        { "t": 1.6, "x": 32.6, "y": -0.8, "note": "Penetrating B-gap behind RT slide" },
+        { "t": 2.8, "x": 30.8, "y": -2.2, "note": "Chased into backfield lane" },
+        { "t": 4, "x": 29, "y": -5, "note": "Closes escape door on step-up" }
+      ]
+    },
+    {
+      "id": "NOSE",
+      "label": "NOSE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "0-tech power rush straight through center into lap",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 1, "note": "0-tech bull" },
+        { "t": 1, "x": 26.8, "y": -0.6, "note": "Drive C backward" },
+        { "t": 2.2, "x": 26.9, "y": -1.8, "note": "Shed C at 3 yards" },
+        { "t": 3.4, "x": 26.2, "y": -6.8, "note": "Finish sack with SS" }
+      ]
+    },
+    {
+      "id": "DT",
+      "label": "DT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Angle into strong B-gap behind the mugging SS",
+      "waypoints": [
+        { "t": 0, "x": 28.6, "y": 1, "note": "Shade alignment" },
+        { "t": 0.8, "x": 29.4, "y": -0.4, "note": "Angling behind SS path" },
+        { "t": 2, "x": 30.2, "y": -1.6, "note": "Wall off FB hinge help" },
+        { "t": 4, "x": 30.6, "y": -3.2, "note": "Contain any scramble right" }
+      ]
+    },
+    {
+      "id": "LE",
+      "label": "LE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weak contain rush: keep LT honest so he cannot peel inside",
+      "waypoints": [
+        { "t": 0, "x": 19.2, "y": 1, "note": "Contain rush alignment" },
+        { "t": 1, "x": 19.6, "y": 0.4, "note": "Upfield charge pins LT" },
+        { "t": 2.4, "x": 19, "y": -1, "note": "Ride LT wide, hold edge" },
+        { "t": 4, "x": 19.4, "y": -2.6, "note": "Escape lane shut" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man coverage on Y tight end",
+      "waypoints": [
+        { "t": 0, "x": 33.8, "y": 2, "note": "Over-TE alignment" },
+        { "t": 1, "x": 34.4, "y": 1.5, "note": "Feel chip, stay glued" },
+        { "t": 2.4, "x": 33.2, "y": 4.2, "note": "Trail Y release to hook" },
+        { "t": 4, "x": 31.8, "y": 5.6, "note": "Inside leverage locked" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Walk up and man-match RB — no drop needed against 6 rushers",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 2.2, "note": "Walk-up alignment" },
+        { "t": 0.8, "x": 25.5, "y": 1, "note": "Match RB scan release" },
+        { "t": 2.2, "x": 25, "y": -2.6, "note": "Ride RB away from pocket" },
+        { "t": 4, "x": 25.4, "y": -4.4, "note": "RB removed from equation" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Single-high post: last line behind zero blitz count",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 12, "note": "Deep post alignment" },
+        { "t": 1.2, "x": 26.67, "y": 14.5, "note": "Pedal reading 3-drop" },
+        { "t": 2.6, "x": 25.5, "y": 16, "note": "Cap X slant from middle" },
+        { "t": 4, "x": 24, "y": 17, "note": "Middle-of-field erased" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Island press on X slant — delay the hot answer",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 1, "note": "Press alignment" },
+        { "t": 0.8, "x": 6.2, "y": 1.6, "note": "Two-hand jam on X" },
+        { "t": 2, "x": 10.5, "y": 4, "note": "Ride slant upfield, widen window" },
+        { "t": 4, "x": 15, "y": 6.5, "note": "X never separates in time" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Island press on Z with zero deep help",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 1, "note": "Press alignment" },
+        { "t": 1, "x": 46.8, "y": 3, "note": "Mirror Z stem" },
+        { "t": 2.4, "x": 45.8, "y": 8, "note": "Trail comeback break" },
+        { "t": 4, "x": 44.8, "y": 10, "note": "Island won" }
+      ]
+    }
+  ]
+}

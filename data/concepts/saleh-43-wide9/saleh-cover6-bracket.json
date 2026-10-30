@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "saleh-cover6-bracket",
+  "schemeId": "saleh-43-wide9",
+  "order": 2,
+  "name": "Cover 6 Split-Field Bracket",
+  "personnel": "Nickel 4-2-5",
+  "formation": "4-3 Over Wide-9 vs 11P Gun 3x1 Flood",
+  "situation": "2nd & 8, +38, passing down vs 3x1 Trips",
+  "coverage": "Cover 6 (Quarter-Quarter-Half / Bracket)",
+  "frontName": "4-3 Over Wide-9 Rush",
+  "summary": {
+    "motive": "Counter 3x1 Trips formations and flood concepts that typically stress single-high Cover 3 by deploying split-field Quarters to the field and Cover 2 to the boundary.",
+    "keyDefender": "RCB (Field Corner) & SS (Field Safety) in Quarters bracket technique",
+    "whyItWorks": "Trips flood concepts rely on putting the Cover 3 corner in a 2-on-1 bind; Cover 6 splits the field so three field defenders handle the three-level route combination.",
+    "failureMode": "Boundary boundary-smash or power run game targeting the 2-high light box."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Split-Field Two-High Pre-Snap Shell",
+      "text": "Unlike Cover 3 Match, Saleh aligns in a 2-high safety structure. To the field (Trips side), the defense plays Quarters; to the boundary, it plays Cover 2 / Half.",
+      "focus": ["FS", "SS", "LCB", "RCB"]
+    },
+    {
+      "t": 1.2,
+      "title": "Quarters Bracket Activates on Trips",
+      "text": "As Z runs the deep post clearout, field safety SS and field corner RCB recognize H breaking on the deep out route, creating an inescapable inside-outside bracket.",
+      "focus": ["SS", "RCB", "H"]
+    },
+    {
+      "t": 2.4,
+      "title": "Flood Concept Suffocated",
+      "text": "SAM eliminates the flat throw to TE, RCB and SS lock the intermediate out route, and LCB squats on the boundary checkdown. The 3-level flood is completely dead.",
+      "focus": ["SAM", "RCB", "SS", "QB"]
+    },
+    {
+      "t": 3.8,
+      "title": "Pass Rush Closes In",
+      "text": "With the QB unable to trigger on his primary progression, the 4-man Wide-9 front collapses the pocket for the sack.",
+      "focus": ["WDE", "3T", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["saleh-cross-dog-fire3"],
+    "playsOff": ["saleh-cover3-match"],
+    "tell": "Field safety stays deep in Quarters alignment instead of buzzing down into the box at snap"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

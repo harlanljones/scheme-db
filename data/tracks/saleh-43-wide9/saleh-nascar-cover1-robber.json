@@ -1,0 +1,321 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "saleh-nascar-cover1-robber",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Help on interior speed rush",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Pass set" },
+        { "t": 1, "x": 26.5, "y": -0.8, "note": "Assist RG vs 3T" },
+        { "t": 2.2, "x": 26.3, "y": -1.4, "note": "Double team" },
+        { "t": 4, "x": 26, "y": -2, "note": "Pocket crushed" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block interior speed rusher",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Vertical set" },
+        { "t": 1, "x": 24.5, "y": -1, "note": "Engage NT speed rush" },
+        { "t": 2.2, "x": 24.2, "y": -1.8, "note": "Pushed back" },
+        { "t": 4, "x": 24, "y": -2.4, "note": "Beaten by swim move" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Kick slide to Wide-9 speed rusher (WDE)",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Deep kick slide" },
+        { "t": 1, "x": 21.5, "y": -1.4, "note": "Attempt punch" },
+        { "t": 2.2, "x": 20.2, "y": -3, "note": "Beaten on outside edge" },
+        { "t": 4, "x": 19.8, "y": -4.5, "note": "Turnstile" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 3-tech DT",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Vertical set" },
+        { "t": 1, "x": 28.5, "y": -0.9, "note": "Contact 3T" },
+        { "t": 2.2, "x": 28.3, "y": -1.6, "note": "Straining" },
+        { "t": 4, "x": 28, "y": -2.2, "note": "Driven back" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Kick slide to SDE",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Deep slide" },
+        { "t": 1, "x": 32.5, "y": -1.4, "note": "Engage SDE" },
+        { "t": 2.2, "x": 33.2, "y": -2.8, "note": "Driven into pocket" },
+        { "t": 4, "x": 33.5, "y": -4, "note": "Corner lost" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Seam route down hash",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Release" },
+        { "t": 1, "x": 32, "y": 3.5, "note": "Vertical push" },
+        { "t": 2.2, "x": 32, "y": 10, "note": "Locked in man coverage by SAM" },
+        { "t": 4, "x": 32, "y": 17, "note": "Capped" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "5-step drop, target in-breaking dig on 3rd down",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap" },
+        { "t": 1.2, "x": 26.67, "y": -6.5, "note": "5-step drop" },
+        { "t": 2.3, "x": 26.67, "y": -6.5, "note": "Plant to throw dig - SS Robber jumps it!" },
+        { "t": 3.2, "x": 25.8, "y": -7.2, "note": "Clutched and sacked by WDE" },
+        { "t": 4, "x": 25.2, "y": -8, "note": "Down" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Angle / Texas route out of backfield",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": -4.5, "note": "Release" },
+        { "t": 1, "x": 30.5, "y": -2, "note": "Stem outside" },
+        { "t": 2.2, "x": 26.5, "y": 2.5, "note": "Cut inside on angle route" },
+        { "t": 4, "x": 24, "y": 6, "note": "Blanketed by MIKE" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary 12yd Comeback route",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Vertical push" },
+        { "t": 1.2, "x": 7, "y": 6, "note": "Push depth" },
+        { "t": 2.4, "x": 7, "y": 13, "note": "Break back to 10yd" },
+        { "t": 4, "x": 6.5, "y": 10, "note": "Blanketed by LCB press" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "12yd Dig route (Primary 3rd-down target)",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": -0.8, "note": "Vertical stem" },
+        { "t": 1.2, "x": 37, "y": 6.5, "note": "Push to 12yds" },
+        { "t": 2.2, "x": 36.5, "y": 12, "note": "Sharp dig cut into middle" },
+        { "t": 3.2, "x": 28.5, "y": 12, "note": "Stepping into Robber trap!" },
+        { "t": 4, "x": 22, "y": 12, "note": "Intercepted / broken up" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Clearout Go route",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": -0.8, "note": "Vertical release" },
+        { "t": 1.2, "x": 45.5, "y": 7, "note": "Push vertical" },
+        { "t": 2.5, "x": 45.5, "y": 15, "note": "Go route" },
+        { "t": 4, "x": 45.5, "y": 22, "note": "Trailed by RCB" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "WDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "NASCAR speed edge rush (pure bend past LT)",
+      "waypoints": [
+        { "t": 0, "x": 19.5, "y": 0.9, "note": "Wide NASCAR alignment" },
+        { "t": 0.9, "x": 18.2, "y": -0.8, "note": "Speed dip under LT punch" },
+        { "t": 2.2, "x": 19.5, "y": -4.5, "note": "Flatten to QB hip" },
+        { "t": 3.5, "x": 24.8, "y": -7, "note": "Strip sack!" },
+        { "t": 4, "x": 25.2, "y": -8, "note": "Finish play" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "NASCAR interior speed rush (DE slid inside)",
+      "waypoints": [
+        { "t": 0, "x": 24.5, "y": 0.9, "note": "Interior speed alignment" },
+        { "t": 0.9, "x": 24.2, "y": -0.4, "note": "Club and swim move on LG" },
+        { "t": 2.2, "x": 25, "y": -3.5, "note": "Penetrate A-gap" },
+        { "t": 4, "x": 25.5, "y": -6.5, "note": "Pressure up the gut" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "NASCAR interior speed rush (DE slid inside)",
+      "waypoints": [
+        { "t": 0, "x": 28.5, "y": 0.9, "note": "Interior speed alignment" },
+        { "t": 0.9, "x": 28.2, "y": -0.4, "note": "Rip move past RG" },
+        { "t": 2.2, "x": 27.5, "y": -3.2, "note": "Collapse pocket" },
+        { "t": 4, "x": 26.5, "y": -6, "note": "Closing in" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "SDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "NASCAR speed edge rush",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 0.9, "note": "Wide speed alignment" },
+        { "t": 0.9, "x": 35.2, "y": -0.8, "note": "Ghost move outside RT" },
+        { "t": 2.2, "x": 33.5, "y": -4.2, "note": "Bend corner" },
+        { "t": 4, "x": 28.5, "y": -7, "note": "Dual edge pressure" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Rat in the hole / Low hole spy on QB scramble",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 4.5, "note": "Read QB drop" },
+        { "t": 1.2, "x": 22, "y": 4.5, "note": "Drop to shallow spy hole" },
+        { "t": 2.4, "x": 23.5, "y": 4, "note": "Mirror QB scramble path" },
+        { "t": 4, "x": 24.5, "y": 3.5, "note": "Trap QB escape" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man coverage on RB (lock Texas / angle route)",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 4.8, "note": "Key RB eyes" },
+        { "t": 1, "x": 27.5, "y": 3, "note": "Match RB release" },
+        { "t": 2.2, "x": 26, "y": 3.5, "note": "Undercut RB angle route" },
+        { "t": 4, "x": 24.5, "y": 5.5, "note": "Lock down RB" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man coverage on TE (inside trail technique)",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 3.8, "note": "Press alignment on TE" },
+        { "t": 1, "x": 32.5, "y": 3, "note": "Physical jam" },
+        { "t": 2.2, "x": 32.5, "y": 9.5, "note": "Trail TE up seam" },
+        { "t": 4, "x": 32.5, "y": 16.5, "note": "Smother seam" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press-man on X (outside leverage with FS inside help)",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 6.5, "note": "Press-man alignment" },
+        { "t": 1.2, "x": 6.5, "y": 6.5, "note": "Trail in hip pocket" },
+        { "t": 2.4, "x": 6.5, "y": 12.5, "note": "Drive on comeback break" },
+        { "t": 4, "x": 6.5, "y": 10.5, "note": "PBU on comeback" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press-man on Z (carry go route to sideline)",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": 6.5, "note": "Press-man alignment" },
+        { "t": 1.2, "x": 45, "y": 7.5, "note": "Match stride for stride" },
+        { "t": 2.5, "x": 45, "y": 15, "note": "Pin receiver to boundary" },
+        { "t": 4, "x": 45, "y": 22, "note": "Locked down" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Robber / Lurk: drop to 10yd hole to jump in-breaking dig routes",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 8.5, "note": "Show 2-high shell pre-snap" },
+        { "t": 1, "x": 33, "y": 9.5, "note": "Robber drop into intermediate hole" },
+        { "t": 2.2, "x": 30, "y": 11.5, "note": "Read QB eyes and break on H dig!" },
+        { "t": 3.2, "x": 27.5, "y": 12, "note": "Jump the throwing lane / Interception point" },
+        { "t": 4, "x": 24, "y": 12, "note": "Pick-six return" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle post safety (cap vertical routes)",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 13.5, "note": "Deep post alignment" },
+        { "t": 1.2, "x": 26.67, "y": 16, "note": "Middle of field coverage" },
+        { "t": 2.5, "x": 26.67, "y": 19, "note": "Cushion on deep ball" },
+        { "t": 4, "x": 26.67, "y": 22, "note": "Deep third secured" }
+      ]
+    }
+  ]
+}

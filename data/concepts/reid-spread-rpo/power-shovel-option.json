@@ -1,0 +1,59 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "power-shovel-option",
+  "schemeId": "reid-spread-rpo",
+  "order": 3,
+  "name": "Power Shovel Option",
+  "personnel": "11",
+  "formation": "11P Gun Trips Right",
+  "situation": "3rd & 3, +18, red zone",
+  "coverage": "Cover 2 Man / Match",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Create an unstoppable misdirection interior shovel pass that exploits defensive ends widening to defend the quarterback perimeter option and sweep threat.",
+    "keyDefender": "Strongside Defensive End (SDE) & Mike Linebacker",
+    "whyItWorks": "Guard pulling right and QB sprinting toward the sideline forces the edge defenders and linebackers to scrape wide; H slips underneath against the grain directly into the vacated interior tunnel for an easy forward completion and huge lane.",
+    "failureMode": "Defensive tackle penetrating into the backfield to disrupt the shovel toss path, or a disciplined interior linebacker refusing to bite on the perimeter action."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Gun Trips Right Alignment & Shovel Motion Cue",
+      "text": "Andy Reid lines up in his signature 11P Trips look in the high red zone. H (Travis Kelce) aligns tight in the slot, prepared to slice back inside.",
+      "focus": ["H", "QB", "LG", "SDE"]
+    },
+    {
+      "t": 0.7,
+      "title": "Frontside Guard Power Pull & Perimeter Option Threat",
+      "text": "LG pulls fast on a Power track to the right. The QB sprints toward the sideline with the RB on an option pitch track, pulling SDE and Nickel DB wide.",
+      "focus": ["LG", "QB", "RB", "SDE", "NICKEL"]
+    },
+    {
+      "t": 1.4,
+      "title": "Shovel Flip into the Interior Tunnel",
+      "text": "As the defensive end widens to contain the QB, a massive tunnel opens in the A/B-gap. Kelce slips underneath and the QB flips a soft forward shovel pass into his hands in full stride.",
+      "focus": ["QB", "H", "LG", "MIKE"]
+    },
+    {
+      "t": 2.2,
+      "title": "H Accelerates Behind Pulling Lead Block",
+      "text": "Kelce secures the forward pass and accelerates vertically directly behind the pulling LG, who delivers a crushing kickout block on the Mike linebacker.",
+      "focus": ["H", "LG", "MIKE"]
+    },
+    {
+      "t": 3.5,
+      "title": "Chunk Gain into the Red Zone Secondary",
+      "text": "With the frontside sealed and second-level linebackers washed wide by the option flow, Kelce powers untouched into the secondary for a first down and goal.",
+      "focus": ["H", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["mesh-shallow-cross", "rpo-glance-post"],
+    "tell": "Offensive guard pulls frontside while QB executes forward shovel option to TE inserting through A-gap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

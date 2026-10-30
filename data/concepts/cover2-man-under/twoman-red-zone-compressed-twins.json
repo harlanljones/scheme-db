@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "twoman-red-zone-compressed-twins",
+  "schemeId": "cover2-man-under",
+  "order": 1,
+  "name": "Red-Zone 2-Man vs Compressed Twins",
+  "personnel": "Nickel 2-Man Package (4 DL, 3 LB, 4 DB)",
+  "formation": "2-Man Shell vs Gun 21 Personnel Compressed Right",
+  "situation": "2nd & Goal from the 8, red zone",
+  "coverage": "Cover 2 Man-Under (Safeties Splitting Halves at 12)",
+  "frontName": "Under Front, Four-Man Rush",
+  "summary": {
+    "motive": "Squeeze the red zone with straight man coverage under deep-half insurance so every route must beat a trail technique with no room to separate.",
+    "keyDefender": "LCB playing press-trail on the compressed X — his leverage alone decides whether the beater exists",
+    "whyItWorks": "Compressed alignments surrender release space, and trail technique converts every breaking route into a contested race with a safety waiting behind it.",
+    "failureMode": "A true stack release beating the press cleanly in one move — then only the single deep half stands between the receiver and six."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Red-Zone 2-Man Picture",
+      "text": "Five defenders are pinned to five eligibles at the line while both safeties split the halves at a full 12 yards — every route must individually beat its trail.",
+      "focus": ["LCB", "RCB", "SAM", "FS", "SS"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. Compression Meets Press",
+      "text": "The tightened splits surrender all release space — both receivers are jacked at the line before their stems can build any momentum.",
+      "focus": ["X", "Z", "LCB", "RCB"]
+    },
+    {
+      "t": 1.9,
+      "title": "3. Trail Technique Rounds Everything",
+      "text": "With outside leverage the corners ride each breaking route upfield, turning slants into footraces the receivers run alongside defenders.",
+      "focus": ["LCB", "X", "RCB", "Z"]
+    },
+    {
+      "t": 3.1,
+      "title": "4. Window Closed Over the Top",
+      "text": "The forced slant is swatted at the catch point while both halves stand ready to cap anything that sneaks through — zero points from the trip.",
+      "focus": ["LCB", "QB", "FS", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["twoman-fade-beater-demo"],
+    "playsOff": ["twoman-edge-blitz"],
+    "tell": "Both corners are pinned to their receivers at 1.5 yards while safeties sit at a full 12 — Cover 2 zone keeps its corners squatting at 10 with eyes on the QB."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

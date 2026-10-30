@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "steve-spagnuolo",
+  "name": "Steve Spagnuolo",
+  "role2026": "Defensive Coordinator, Kansas City Chiefs",
+  "team": "Kansas City Chiefs",
+  "lineage": "belichick-flores",
+  "mentorId": "bill-belichick",
+  "disciples": ["dan-quinn"],
+  "side": "defense",
+  "philosophy": "Exotic blitz packages designed to create mental confusion rather than just physical pressure. Spagnuolo deploys corner blitzes, cross creepers, split-safety inversions, and Cover 0 max-heat looks that render pre-snap identification impossible for quarterbacks.",
+  "keyConcepts": ["Corndog Corner Blitz", "Cross Creeper Drop", "Cover 0 Max Heat", "Split Safety Invert-2"],
+  "schemeIds": ["spagnuolo-exotic-blitz"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["3x Super Bowl Champion DC (LIV, LVII, LVIII)", "NFL's Premier Exotic Blitz Architect"]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "demeco-ryans",
+  "name": "DeMeco Ryans",
+  "role2026": "Head Coach, Houston Texans",
+  "team": "Houston Texans",
+  "lineage": "carroll-saleh-wide9",
+  "mentorId": "robert-saleh",
+  "disciples": [],
+  "side": "defense",
+  "philosophy": "Relentless downhill linebacker flow, penetrating defensive line pass-rush games, aggressive press quarters, and Cover 1 robber calls on key downs.",
+  "keyConcepts": ["Wide-9 Front Rush", "Cover 1 Hole / Robber", "Split-Safety Palms (2-Read)", "Linebacker A-Gap Mug"],
+  "schemeIds": ["ryans-wide9-attack"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2023 AP Coach of the Year Runner-Up", "AFC South Champion"]
+}

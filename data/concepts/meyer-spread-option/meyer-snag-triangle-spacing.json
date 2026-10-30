@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "meyer-snag-triangle-spacing",
+  "schemeId": "meyer-spread-option",
+  "order": 3,
+  "name": "Snag Triangle Spacing",
+  "personnel": "11",
+  "formation": "Gun Spread Right Slot, TE Right",
+  "situation": "3rd & 4, +42, off run tendency",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Attack Cover 3 with three-layer spacing that puts every single defender in an impossible high-low conflict.",
+    "keyDefender": "Sam Linebacker (strong curl-flat defender)",
+    "whyItWorks": "The run-action freeze delays every underneath drop exactly long enough for the triangle layers to establish separation in their three separate windows.",
+    "failureMode": "Linebackers play slow-to-the-ball discipline through the run fake, keeping their drops intact and crowding both underneath windows."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. Run Action Freezes the Box",
+      "text": "The identical zone-read mesh sends every linebacker and the robber triggering downhill while the quarterback resets his feet to throw.",
+      "focus": ["QB", "F", "MIKE"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Triangle Builds",
+      "text": "Three receivers stack vertically on the right at three depths: the back in the flat, the tight end settling at five, and the wideout breaking the corner at twelve.",
+      "focus": ["F", "Y", "Z", "SAM"]
+    },
+    {
+      "t": 2.3,
+      "title": "3. Snag Wins vs the Hook",
+      "text": "The Mike's eyes were frozen by run action, so the snag settles directly behind his drop while he chases depth he can never recover.",
+      "focus": ["Y", "MIKE", "QB"]
+    },
+    {
+      "t": 3.1,
+      "title": "4. High-Low Finish",
+      "text": "If the flat defender drives on the catch, the corner route is open behind him; if he sinks, the snag is easy money. The triangle guarantees one is free.",
+      "focus": ["Z", "SAM", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["meyer-inside-zone-read-give", "meyer-speed-option-reverse"],
+    "tell": "The running back releases to the flat instead of carrying a dive fake — live read-option plays never send the back away from the mesh."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

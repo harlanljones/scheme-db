@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "shula-cover8-field-quarter",
+  "schemeId": "shula-match-quarters",
+  "order": 3,
+  "name": "Split-Field Cover 8 (Quarter-Quarter-Half)",
+  "personnel": "Penny 5-1-5",
+  "formation": "Penny 5-1-5 Front vs 11P Gun 2x2 Boundary Out",
+  "situation": "2nd & 8, +28, open field passing down",
+  "coverage": "Cover 8 (Field Quarters Match / Boundary Half Trap)",
+  "frontName": "Penny 5-1-5 Front (Quarter-Quarter-Half Shell)",
+  "summary": {
+    "motive": "Exploit tendencies against two-high shells by splitting the field coverage: playing Quarters match to the multi-receiver field side and a hard Cover 2 trap to the boundary to intercept quick out-routes.",
+    "keyDefender": "LCB (Boundary trap corner) & BS (Boundary deep half safety)",
+    "whyItWorks": "Quarterbacks read the pre-snap two-high look and target the boundary receiver on quick outs, unaware that the boundary corner is squatting in Cover 2 while the safety provides deep-half over-the-top support.",
+    "failureMode": "A double-move (out-and-up) by the boundary receiver if the safety is late getting to deep-half depth."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Two-High Shell Disguise Pre-Snap",
+      "text": "Chris Shula presents a balanced two-high safety shell. The offense expects standard Quarters (Cover 4) coverage across the entire field.",
+      "focus": ["LCB", "BS", "FS", "RCB", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "Split-Field Rotation: Cover 8 Structure",
+      "text": "At the snap, Shula runs Cover 8 (Quarter-Quarter-Half): Field side (RCB & FS) plays Match Quarters, while Boundary side rotates to Cover 2 with LCB squatting and BS rolling to deep half.",
+      "focus": ["LCB", "BS", "RCB", "FS"]
+    },
+    {
+      "t": 1.8,
+      "title": "Boundary Corner Trap Triggered",
+      "text": "The QB throws the quick boundary out to X, expecting the soft off-coverage of Quarters, only to find LCB squatting directly in the flat and stepping in front of the throw.",
+      "focus": ["LCB", "X", "QB", "BS", "H"]
+    },
+    {
+      "t": 2.6,
+      "title": "Interception & Pick-Six Down the Sideline",
+      "text": "LCB secures the interception in full stride, taking it all the way down the boundary sideline for a defensive touchdown.",
+      "focus": ["LCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["shula-boundary-creeper-drop7"],
+    "playsOff": ["shula-penny-bracket-bunch"],
+    "tell": "Two-high pre-snap shell where boundary corner squats in hard flat while boundary safety rolls over top into deep half"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

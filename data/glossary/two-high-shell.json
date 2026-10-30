@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "two-high-shell",
+  "term": "Two-High Shell",
+  "aliases": [
+    "Two-High",
+    "two-high shell",
+    "Two-High Shell",
+    "2-high shell",
+    "two-high",
+    "split-field shell",
+    "middle-of-field open"
+  ],
+  "category": "Coverage & Shell",
+  "shortDef": "A pre-snap defensive alignment featuring both safeties stationed 12–15 yards deep, keeping the middle of the field open (MOFO).",
+  "tacticalNote": "Disguises whether the post-snap defense will play Quarters (Cover 4), Cover 2, Cover 6, or rotate down into single-high Cover 3 / Cover 1 at the snap."
+}

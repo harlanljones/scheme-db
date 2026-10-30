@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "john-harbaugh",
+  "name": "John Harbaugh",
+  "role2026": "Head Coach, New York Giants",
+  "team": "New York Giants",
+  "lineage": "reid-west-coast",
+  "mentorId": "andy-reid",
+  "disciples": ["mike-macdonald", "jesse-minter"],
+  "side": "offense",
+  "philosophy": "Physical, situational football that harmonizes power gap runs, heavy play-action passing, and suffocating defensive pressure packages.",
+  "keyConcepts": ["Heavy Personnel Play-Action", "Situational 4th-Down Aggression", "Gap-Power Run Game"],
+  "schemeIds": ["reid-spread-rpo"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Super Bowl XLVII Champion", "2026 Giants HC Hiring"]
+}

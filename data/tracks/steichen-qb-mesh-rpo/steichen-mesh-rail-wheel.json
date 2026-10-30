@@ -1,0 +1,341 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "steichen-mesh-rail-wheel",
+  "duration": 4.5,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Slide protect left A-gap vs Nose Tackle",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap & post pass pro stance" },
+        { "t": 0.8, "x": 26.5, "y": -0.6, "note": "Anchor vs NT bull rush" },
+        { "t": 2, "x": 26.3, "y": -0.8, "note": "Firm interior pocket wall" },
+        { "t": 3.2, "x": 26.2, "y": -0.9, "note": "Sustaining pass pro" },
+        { "t": 4.5, "x": 26.2, "y": -0.9, "note": "Pass completed" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass protect left B-gap, help LT against inside counter",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Pass set 45 degrees" },
+        { "t": 0.8, "x": 24.8, "y": -0.6, "note": "Punch inside chest" },
+        { "t": 2, "x": 24.6, "y": -0.8, "note": "Anchor pocket" },
+        { "t": 3.2, "x": 24.5, "y": -1, "note": "Locking down left side" },
+        { "t": 4.5, "x": 24.5, "y": -1, "note": "Pocket secure" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Vertical kick-slide vs Weakside DE speed rush",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Kick-slide 45 degrees" },
+        { "t": 0.8, "x": 22.6, "y": -0.8, "note": "Engage WDE" },
+        { "t": 2, "x": 22.2, "y": -1.2, "note": "Ride WDE past pocket apex" },
+        { "t": 3.2, "x": 21.8, "y": -1.5, "note": "Seal edge rusher wide" },
+        { "t": 4.5, "x": 21.8, "y": -1.5, "note": "Edge clean" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Man pass pro vs 3-tech DT, anchor against bull rush",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Pass set right" },
+        { "t": 0.8, "x": 28.5, "y": -0.6, "note": "Strike 3T chest" },
+        { "t": 2, "x": 28.6, "y": -0.8, "note": "Anchor pocket interior" },
+        { "t": 3.2, "x": 28.6, "y": -1, "note": "Maintaining leverage" },
+        { "t": 4.5, "x": 28.6, "y": -1, "note": "Wall intact" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass protect vs Strongside DE speed-to-power rush",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Kick-slide right" },
+        { "t": 0.8, "x": 30.5, "y": -0.8, "note": "Engage SDE outside shoulder" },
+        { "t": 2, "x": 30.8, "y": -1.2, "note": "Anchor vs bull rush" },
+        { "t": 3.2, "x": 31, "y": -1.4, "note": "Push SDE wide" },
+        { "t": 4.5, "x": 31, "y": -1.4, "note": "Protection held" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "TE",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Mesh crosser: run shallow cross left at 4.5 yards depth, setting rub for H and picking Will LB",
+      "waypoints": [
+        { "t": 0, "x": 32, "y": -0.6, "note": "Stem inside at snap" },
+        { "t": 0.8, "x": 30, "y": 3, "note": "Cross face of Mike LB" },
+        { "t": 1.8, "x": 26, "y": 4.5, "note": "Mesh rub with H crosser" },
+        { "t": 2.8, "x": 20, "y": 4.5, "note": "Clear across left hash" },
+        { "t": 4.5, "x": 12, "y": 5.5, "note": "Open in flat underneath" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Mesh crosser: run shallow cross right at 4 yards depth underneath TE, creating natural traffic rub",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": -0.8, "note": "Snap & sprint shallow angle left" },
+        { "t": 0.8, "x": 32, "y": 3, "note": "Stem towards TE" },
+        { "t": 1.8, "x": 27, "y": 4, "note": "Rub underneath TE at center" },
+        { "t": 2.8, "x": 33, "y": 4.5, "note": "Sprint into right flat" },
+        { "t": 4.5, "x": 41, "y": 5.5, "note": "Open option right" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Free release out of backfield on boundary Rail / Wheel route, blowing past picked Will LB",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -4.5, "note": "Flash flat release left" },
+        { "t": 0.8, "x": 17, "y": -2, "note": "Speed release towards boundary numbers" },
+        { "t": 1.8, "x": 10.5, "y": 3, "note": "Turn vertical on Rail / Wheel route" },
+        { "t": 2.8, "x": 8.5, "y": 12, "note": "Stack trailing Will LB along sideline" },
+        { "t": 3.6, "x": 7.5, "y": 20, "note": "Secure 25-yard touchdown pass in stride" },
+        { "t": 4.5, "x": 7, "y": 28, "note": "Sprint to end zone" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Post clear-out route to occupy boundary CB (LCB) and open sideline for RB Wheel",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Outside vertical release" },
+        { "t": 1, "x": 7.5, "y": 5, "note": "Drive LCB deep" },
+        { "t": 2, "x": 8, "y": 11, "note": "Break on inside post angle" },
+        { "t": 3.2, "x": 13, "y": 18, "note": "Drag safety and CB to deep middle" },
+        { "t": 4.5, "x": 18, "y": 24, "note": "Clear out boundary sideline" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "12-yard intermediate hunt/curl over middle to hold deep Free Safety",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -0.5, "note": "Vertical stem" },
+        { "t": 1.2, "x": 46, "y": 6, "note": "Stem RCB" },
+        { "t": 2.2, "x": 42, "y": 11, "note": "Break inside on 12-yd hunt/dig" },
+        { "t": 3.4, "x": 35, "y": 12, "note": "Settle in intermediate hook" },
+        { "t": 4.5, "x": 33, "y": 12, "note": "Option route active" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "3-step gun drop, hold Free Safety with eyes, hit RB on the boundary Rail / Wheel route",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Catch shotgun snap" },
+        { "t": 0.8, "x": 26.67, "y": -5.5, "note": "3-step drop; look off FS in middle" },
+        { "t": 1.8, "x": 26.67, "y": -6, "note": "Plant back foot; hitch to left boundary" },
+        { "t": 2.8, "x": 26.67, "y": -6, "note": "Launch bucket throw down boundary to RB" },
+        { "t": 4.5, "x": 26.67, "y": -6, "note": "Follow through" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "1-technique: bull rush A-gap, anchored by C",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Stance" },
+        { "t": 0.8, "x": 25.8, "y": 0.3, "note": "Bull rush C" },
+        { "t": 2, "x": 25.8, "y": -0.2, "note": "Pocket anchor holds" },
+        { "t": 3.2, "x": 25.8, "y": -0.4, "note": "Stalemated" },
+        { "t": 4.5, "x": 25.8, "y": -0.4, "note": "No pressure" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "3-technique: pass rush B-gap, met by RG",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "Stance" },
+        { "t": 0.8, "x": 29, "y": 0.3, "note": "Club-rip move" },
+        { "t": 2, "x": 28.8, "y": -0.2, "note": "Absorbed by RG" },
+        { "t": 3.2, "x": 28.8, "y": -0.4, "note": "Rush stalled" },
+        { "t": 4.5, "x": 28.8, "y": -0.4, "note": "Controlled" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "SDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Strongside DE: speed rush around right edge, ridden wide by RT",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Stance" },
+        { "t": 0.8, "x": 33.2, "y": 0.3, "note": "Speed rush" },
+        { "t": 2, "x": 33, "y": -0.6, "note": "Engaged by RT" },
+        { "t": 3.2, "x": 32.5, "y": -1.2, "note": "Pushed past pocket" },
+        { "t": 4.5, "x": 32, "y": -1.5, "note": "Wide of QB" }
+      ]
+    },
+    {
+      "id": "WDE",
+      "label": "WDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Weakside DE: speed rush left edge, pushed wide by LT",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Stance" },
+        { "t": 0.8, "x": 21, "y": 0.2, "note": "Speed edge rush" },
+        { "t": 2, "x": 21, "y": -0.6, "note": "Driven wide by LT" },
+        { "t": 3.2, "x": 20.8, "y": -1.2, "note": "Past QB drop depth" },
+        { "t": 4.5, "x": 20.5, "y": -1.5, "note": "No sack" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Will linebacker: man coverage on RB; gets caught in the Mesh crossing traffic and trails 5 yards behind RB",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": 4.5, "note": "Man coverage read stance" },
+        { "t": 0.8, "x": 21, "y": 3, "note": "Triggers on RB flat release" },
+        { "t": 1.8, "x": 18, "y": 4.2, "note": "Picks/collides with TE mesh crosser" },
+        { "t": 2.8, "x": 12, "y": 8.5, "note": "Stumbles around rub; chasing RB in trail" },
+        { "t": 3.6, "x": 9.5, "y": 17, "note": "Trailing 4 yards behind RB touchdown catch" },
+        { "t": 4.5, "x": 8, "y": 25, "note": "Cannot contest throw" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Mike linebacker: man coverage on TE; chases TE across formation",
+      "waypoints": [
+        { "t": 0, "x": 28, "y": 4.5, "note": "Linebacker stance" },
+        { "t": 0.8, "x": 28.5, "y": 3.8, "note": "Keys TE release" },
+        { "t": 1.8, "x": 25.5, "y": 3.8, "note": "Trailing TE through mesh traffic" },
+        { "t": 3, "x": 18, "y": 4.5, "note": "Chasing TE to flat" },
+        { "t": 4.5, "x": 13, "y": 5.5, "note": "Occupied underneath" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NICKEL",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Nickel DB: man coverage on slot H; trails H through shallow cross rub",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": 4, "note": "Slot man alignment" },
+        { "t": 0.8, "x": 35, "y": 3.5, "note": "Follows H across formation" },
+        { "t": 1.8, "x": 29, "y": 4, "note": "Navigates mesh rub behind MIKE" },
+        { "t": 3, "x": 34, "y": 4.5, "note": "Trailing H into right flat" },
+        { "t": 4.5, "x": 40, "y": 5.5, "note": "Chasing in man coverage" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Left CB: press man coverage on X; carried inside by X post route",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 6.5, "note": "Press man alignment" },
+        { "t": 1, "x": 7.5, "y": 6, "note": "Press X release" },
+        { "t": 2, "x": 8.5, "y": 11.5, "note": "Turn and run with X" },
+        { "t": 3.2, "x": 13.5, "y": 18, "note": "Carried deep inside on post route" },
+        { "t": 4.5, "x": 18, "y": 24, "note": "Vacates boundary sideline for RB" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Right CB: man coverage on Z; tracks intermediate hunt route",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 6.5, "note": "Off man alignment" },
+        { "t": 1.2, "x": 46, "y": 8, "note": "Backpedal" },
+        { "t": 2.2, "x": 43, "y": 12, "note": "Drive on Z inside cut" },
+        { "t": 3.4, "x": 36.5, "y": 12.5, "note": "Contest Z intermediate" },
+        { "t": 4.5, "x": 34, "y": 12.5, "note": "Opposite side of play" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Strong Safety: robber / hole player; occupies intermediate hook zone",
+      "waypoints": [
+        { "t": 0, "x": 36, "y": 11.5, "note": "Robber alignment 11.5 yards" },
+        { "t": 1, "x": 33, "y": 9, "note": "Drop to low hole" },
+        { "t": 2, "x": 30, "y": 8, "note": "Eyes on mesh crossers" },
+        { "t": 3.2, "x": 26, "y": 8.5, "note": "Watching shallow cross" },
+        { "t": 4.5, "x": 20, "y": 10, "note": "Unable to affect boundary wheel" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Free Safety: single-high deep post; held in middle by QB eyes and X post",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 11.5, "note": "Single-high post 11.5 yards" },
+        { "t": 1.2, "x": 22, "y": 13, "note": "Holds deep middle" },
+        { "t": 2.2, "x": 20, "y": 15, "note": "Keying X post clear-out" },
+        { "t": 3.2, "x": 16, "y": 17, "note": "Breaks toward sideline late" },
+        { "t": 4.5, "x": 10, "y": 22, "note": "Too late to break up touchdown" }
+      ]
+    }
+  ]
+}

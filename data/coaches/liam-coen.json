@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "liam-coen",
+  "name": "Liam Coen",
+  "role2026": "Head Coach, Jacksonville Jaguars",
+  "team": "Jacksonville Jaguars",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "sean-mcvay",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "The modern evolution of the Shanahan-McVay tree: wide-zone runs packaged directly with RPOs (glance, bubble, slant-flat), heavy pre-snap motion declaring defensive fits, and space attacks that turn every zone-stretch call into a triple-option math problem for the defense.",
+  "keyConcepts": ["Wide-Zone + Glance RPO Package", "Bubble-Slant Flat Triangle", "Motion-to-Fit Declaration", "Perimeter Crack-Toss"],
+  "schemeIds": ["coen-wide-zone-rpo"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Top-5 Total Offense with Buccaneers (2024)", "Rams & Kentucky Offensive Architect"]
+}

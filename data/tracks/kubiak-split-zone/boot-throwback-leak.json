@@ -1,0 +1,349 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "boot-throwback-leak",
+  "duration": 4.8,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Aggressive zone reach right, sell run flow to pull defensive front",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap & reach step right" },
+        { "t": 0.6, "x": 27.8, "y": -0.2, "note": "Drive 3T with RG" },
+        { "t": 1.2, "x": 28.5, "y": 0.4, "note": "Sell zone block" },
+        { "t": 2.5, "x": 28.8, "y": 0.8, "note": "Washing front right" },
+        { "t": 4.8, "x": 29, "y": 1.2, "note": "Finishing zone flow" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Zone drive block right on 3-tech, sell split-zone run",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Zone step right" },
+        { "t": 0.6, "x": 29.5, "y": -0.1, "note": "Drive 3T outside" },
+        { "t": 1.2, "x": 30.5, "y": 0.5, "note": "Maintain run push" },
+        { "t": 2.5, "x": 31.2, "y": 0.8, "note": "Washing defender" },
+        { "t": 4.8, "x": 31.8, "y": 1.2, "note": "Sustaining block" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Zone reach on SDE to seal strongside edge",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Lateral kick step right" },
+        { "t": 0.6, "x": 31.5, "y": -0.1, "note": "Engage SDE" },
+        { "t": 1.2, "x": 32.8, "y": 0.6, "note": "Drive SDE wide" },
+        { "t": 2.5, "x": 33.8, "y": 1, "note": "Pin edge" },
+        { "t": 4.8, "x": 34.2, "y": 1.5, "note": "Edge sealed" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Bucket step right, cutoff NT, flow with zone",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Zone step right" },
+        { "t": 0.6, "x": 25.8, "y": -0.2, "note": "Cutoff NT" },
+        { "t": 1.2, "x": 26.2, "y": 0.4, "note": "Drive NT right" },
+        { "t": 2.5, "x": 26.5, "y": 0.8, "note": "Sustain run push" },
+        { "t": 4.8, "x": 26.8, "y": 1, "note": "Interior sealed" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Scoop step right, climb to second level to wash linebackers",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Scoop step right" },
+        { "t": 0.6, "x": 23.8, "y": 0, "note": "Sell zone bypass on WDE" },
+        { "t": 1.2, "x": 23.2, "y": 1, "note": "Climb toward Will LB" },
+        { "t": 2.5, "x": 22.8, "y": 2, "note": "Push Will LB across field" },
+        { "t": 4.8, "x": 22.5, "y": 2.5, "note": "Linebackers washed" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "TE",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Sell strongside block for 1.0s, then run shallow drag across the formation to occupy frontside defenders",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.5, "note": "Stance inline" },
+        { "t": 0.8, "x": 33, "y": 0, "note": "Chip SDE" },
+        { "t": 1.6, "x": 31, "y": 2, "note": "Release shallow drag crossing under line" },
+        { "t": 2.8, "x": 25, "y": 3.5, "note": "Cross center of formation" },
+        { "t": 4, "x": 19, "y": 4.5, "note": "Drag into left flat area" },
+        { "t": 4.8, "x": 15, "y": 5, "note": "Shallow outlet option" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Signature Y-Leak: slice across line, bluff kickout on WDE at t=1.2s, then slip unnoticed up the backside sideline",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": -2.2, "note": "Slice motion across back of line" },
+        { "t": 0.6, "x": 26.5, "y": -1.6, "note": "Crossing behind center" },
+        { "t": 1.2, "x": 22.8, "y": -0.8, "note": "Target WDE as if making kickout block" },
+        { "t": 1.6, "x": 21, "y": 0.2, "note": "Bluff contact at LOS; slip past crashing WDE" },
+        { "t": 2.4, "x": 18, "y": 4.5, "note": "Leak undetected into wide-open backside boundary" },
+        { "t": 3.4, "x": 15.5, "y": 12, "note": "Sprint vertical down boundary seam" },
+        { "t": 4.2, "x": 14.5, "y": 20, "note": "Catch throwback pass in wide open space" },
+        { "t": 4.8, "x": 14, "y": 25, "note": "Walk-in touchdown reception" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Under-center reverse pivot, full split-zone fake, bootleg left, deliver throwback pass to leaking H-Back",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Under-center snap" },
+        { "t": 0.6, "x": 27.5, "y": -2.8, "note": "Reverse pivot right, ride mesh" },
+        { "t": 1.2, "x": 28.2, "y": -3.4, "note": "Pull ball out of mesh at +1.2s" },
+        { "t": 2, "x": 24.5, "y": -4.5, "note": "Bootleg rollout toward left perimeter" },
+        { "t": 3, "x": 20.5, "y": -5, "note": "Square shoulders in open space" },
+        { "t": 3.8, "x": 18.5, "y": -4.5, "note": "Release deep throwback strike to leaking H" },
+        { "t": 4.8, "x": 17.5, "y": -4, "note": "Watching explosive touchdown" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "none",
+      "assignment": "Cross-over step right, sell violent split-zone run into frontside B-gap to freeze backside discipline",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.8, "note": "Cross-over step right" },
+        { "t": 0.6, "x": 27.6, "y": -3.8, "note": "Press line of scrimmage" },
+        { "t": 1.2, "x": 28.2, "y": -3.4, "note": "Full mesh clamp with QB" },
+        { "t": 2, "x": 28.5, "y": -1.5, "note": "Violent run fake into line" },
+        { "t": 3.2, "x": 28.8, "y": 0.5, "note": "Drawing linebackers downhill" },
+        { "t": 4.8, "x": 29, "y": 1.5, "note": "Completing fake" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Condensed split: vertical post-corner route to pull boundary corner LCB deep and away from flat",
+      "waypoints": [
+        { "t": 0, "x": 13.5, "y": -0.5, "note": "Snap & vertical push" },
+        { "t": 1, "x": 13.5, "y": 5, "note": "Push inside leverage" },
+        { "t": 2.2, "x": 14.5, "y": 12, "note": "Stem deep post angle to occupy LCB" },
+        { "t": 3.4, "x": 18, "y": 18, "note": "Break across deep safety face" },
+        { "t": 4.8, "x": 22, "y": 24, "note": "Clearing boundary corridor" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Condensed split: deep comeback on right sideline to freeze RCB",
+      "waypoints": [
+        { "t": 0, "x": 39.5, "y": -0.8, "note": "Snap & push vertical outside" },
+        { "t": 1.2, "x": 40.5, "y": 5, "note": "Push vertical stem" },
+        { "t": 2.4, "x": 42, "y": 12, "note": "Driving RCB backpedal" },
+        { "t": 3.6, "x": 43, "y": 16, "note": "Snap comeback at 16 yards" },
+        { "t": 4.8, "x": 42.5, "y": 13, "note": "Backside comeback hold" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "WDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Crashes hard on run flow; bluffed by H-Back and completely loses track of the leak",
+      "waypoints": [
+        { "t": 0, "x": 21.8, "y": 0.9, "note": "Key run flow right" },
+        { "t": 0.6, "x": 22.8, "y": 0.5, "note": "Crash inside on run mesh" },
+        { "t": 1.2, "x": 22, "y": 0, "note": "Anticipates slice collision with H" },
+        { "t": 1.8, "x": 21.8, "y": -0.8, "note": "Bites inside on QB boot fake" },
+        { "t": 3, "x": 21, "y": -2.5, "note": "Pursuing QB rollout from trail" },
+        { "t": 4.8, "x": 19.5, "y": -3.5, "note": "Completely out of position" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "1-technique: washed right by offensive line zone combination",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 0.9, "note": "Attack A-gap" },
+        { "t": 0.6, "x": 26.2, "y": 0.4, "note": "Engaged by LG" },
+        { "t": 1.5, "x": 26.8, "y": 0.5, "note": "Pushed right with zone" },
+        { "t": 3, "x": 27.2, "y": 0.6, "note": "Washed out of the play" },
+        { "t": 4.8, "x": 27.5, "y": 0.8, "note": "Far away from action" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "3-technique: double-teamed by RG/C and driven wide right",
+      "waypoints": [
+        { "t": 0, "x": 29.2, "y": 0.9, "note": "Attack B-gap" },
+        { "t": 0.6, "x": 29.8, "y": 0.4, "note": "Engaged by RG/C" },
+        { "t": 1.5, "x": 30.8, "y": 0.6, "note": "Driven right toward sideline" },
+        { "t": 3, "x": 31.5, "y": 0.8, "note": "Washed away from play" },
+        { "t": 4.8, "x": 31.8, "y": 1, "note": "Out of play" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "SDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Strongside DE: pinned on strongside perimeter by RT",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Set strong edge" },
+        { "t": 0.6, "x": 33.2, "y": 0.5, "note": "Engaged by RT" },
+        { "t": 1.5, "x": 34, "y": 0.8, "note": "Widened on perimeter" },
+        { "t": 3, "x": 34.2, "y": 1, "note": "Locked on right edge" },
+        { "t": 4.8, "x": 34.5, "y": 1.2, "note": "Out of play" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Will LB: flows hard right on run mesh; caught in traffic and unable to recover to left boundary",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 4.5, "note": "Key run flow to right" },
+        { "t": 0.8, "x": 24, "y": 3.5, "note": "Flowing hard with offensive line" },
+        { "t": 1.8, "x": 25, "y": 2.2, "note": "Washed by climbing LT" },
+        { "t": 3, "x": 23.5, "y": 3, "note": "Turns to see QB rollout too late" },
+        { "t": 4.8, "x": 18.5, "y": 8, "note": "Desperately chasing leaking H" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Mike LB: attacks strongside B-gap on run fake; completely out of the throwback window",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 4.8, "note": "Key guard flow right" },
+        { "t": 0.8, "x": 28.5, "y": 2.8, "note": "Attacks frontside A/B gap" },
+        { "t": 1.8, "x": 29.5, "y": 1.5, "note": "Biting hard on run mesh" },
+        { "t": 3, "x": 27, "y": 3.5, "note": "Diagnosing boot action late" },
+        { "t": 4.8, "x": 22, "y": 9, "note": "Chasing play from backside" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Sam LB: carried right by TE route and strongside run flow",
+      "waypoints": [
+        { "t": 0, "x": 31, "y": 4, "note": "Key TE" },
+        { "t": 0.8, "x": 32.5, "y": 3, "note": "Step up on run action" },
+        { "t": 1.8, "x": 33.5, "y": 4, "note": "Flowing right with play flow" },
+        { "t": 3, "x": 31, "y": 5.5, "note": "Following TE crossing route" },
+        { "t": 4.8, "x": 25, "y": 8.5, "note": "Out of position" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Boundary corner in Cover 3; carried deep by X post route, completely vacating the boundary seam for H-Leak",
+      "waypoints": [
+        { "t": 0, "x": 13.5, "y": 6.5, "note": "Cover 3 deep 1/3 backpedal" },
+        { "t": 1.2, "x": 13.5, "y": 9, "note": "Bailing deep with X vertical push" },
+        { "t": 2.2, "x": 14.5, "y": 14, "note": "Following X inside on deep post angle" },
+        { "t": 3.4, "x": 18, "y": 19.5, "note": "Carried into middle of field with X route" },
+        { "t": 4.2, "x": 16.5, "y": 21, "note": "Realizes H has leaked behind him along sideline" },
+        { "t": 4.8, "x": 15, "y": 23.5, "note": "Hopelessly beaten on touchdown" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field corner: locked on Z receiver deep comeback",
+      "waypoints": [
+        { "t": 0, "x": 39.5, "y": 6.5, "note": "Cover 3 deep 1/3" },
+        { "t": 1.2, "x": 40, "y": 9, "note": "Pedaling over Z" },
+        { "t": 2.5, "x": 41.5, "y": 14, "note": "Playing top-down on Z" },
+        { "t": 3.6, "x": 42.5, "y": 16.5, "note": "Closing on Z comeback" },
+        { "t": 4.8, "x": 42, "y": 14, "note": "Locked on right sideline" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Invert strong safety: bites downhill on strongside run, trapped 25 yards away from throwback",
+      "waypoints": [
+        { "t": 0, "x": 33.5, "y": 8, "note": "Creep into strong box" },
+        { "t": 0.8, "x": 33.5, "y": 5, "note": "Bites hard downhill on run action" },
+        { "t": 1.8, "x": 34, "y": 3.5, "note": "Filling frontside alley" },
+        { "t": 3, "x": 30, "y": 6, "note": "Diagnosing bootleg opposite" },
+        { "t": 4.8, "x": 22, "y": 12, "note": "Chasing from the far hash" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Single-high safety: dragged toward middle by X deep post; left stranded as H leaks up boundary",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 13.5, "note": "Single-high centerfield" },
+        { "t": 1, "x": 27.5, "y": 13.5, "note": "Keying run-pass mesh" },
+        { "t": 2.2, "x": 24.5, "y": 15, "note": "Shifting to bracket X crossing post" },
+        { "t": 3.4, "x": 21, "y": 18.5, "note": "Occupied in deep middle" },
+        { "t": 4.2, "x": 17.5, "y": 19.5, "note": "Frantically turns to sideline on throwback" },
+        { "t": 4.8, "x": 15.5, "y": 22, "note": "Unable to reach leaking H-Back" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "steichen-mesh-rail-wheel",
+  "schemeId": "steichen-qb-mesh-rpo",
+  "order": 2,
+  "name": "Mesh Rail / Wheel",
+  "personnel": "11",
+  "formation": "11P Gun Spread Right",
+  "situation": "3rd & 5, +35, money down",
+  "coverage": "Nickel Cover 1 Man / Match",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Exploit man-to-man coverage by pairing a tight shallow-cross Mesh rub with an explosive running back Rail/Wheel route along the boundary.",
+    "keyDefender": "Will Linebacker (WILL) & Free Safety (FS)",
+    "whyItWorks": "In man coverage, the linebacker assigned to the running back must fight through the crossing receiver traffic. The Mesh concept acts as a natural legal pick, allowing the faster running back to achieve unobstructed separation down the boundary.",
+    "failureMode": "Zone coverage (like Cover 2 or Cover 4) where the boundary cornerback or safety is waiting in the deep half to intercept the wheel throw."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Spread 11-Personnel Mesh Alignment",
+      "text": "Steichen aligns in 11 Gun Spread, isolating boundary matchups while preparing dual shallow crossing routes across the middle.",
+      "focus": ["QB", "RB", "TE", "H", "X"]
+    },
+    {
+      "t": 0.8,
+      "title": "The Free-Release Rail & Mesh Rub",
+      "text": "RB accelerates freely into the boundary flat, while TE and H execute precise crossing paths at 4 yards to create a wall of traffic in the middle of the field.",
+      "focus": ["RB", "TE", "H", "WILL", "MIKE"]
+    },
+    {
+      "t": 1.8,
+      "title": "The Will LB Pick & Boundary Separation",
+      "text": "Will linebacker is tasked with covering RB in man-to-man, but collides violently with the TE crosser, getting picked and trailing 4 yards behind the wheel.",
+      "focus": ["WILL", "TE", "RB"]
+    },
+    {
+      "t": 2.8,
+      "title": "The Teardrop Wheel Touchdown Strike",
+      "text": "QB holds the single-high safety with his eyes, steps into a pristine pocket, and drops a 25-yard teardrop into the bucket down the boundary to RB for a touchdown.",
+      "focus": ["QB", "RB", "WILL", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["steichen-qb-power-read"],
+    "playsOff": ["steichen-zone-bubble-rpo"],
+    "tell": "RB free-releases on boundary rail/wheel route while slot receivers set tight crossing rub."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

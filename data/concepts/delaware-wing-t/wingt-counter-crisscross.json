@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "wingt-counter-crisscross",
+  "schemeId": "delaware-wing-t",
+  "order": 3,
+  "name": "Counter Crisscross",
+  "personnel": "Wing-T Base",
+  "formation": "Wing-T Strong Right, SE Left",
+  "situation": "2nd & 6, own 30, after perimeter success",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Exploit Buck Sweep's tendency with an opposite-direction counter whose backfield action crossfaces every flow defender.",
+    "keyDefender": "Will Linebacker (flow reader)",
+    "whyItWorks": "The crisscross puts a ballcarrier fake moving both directions simultaneously, and the trey pullers arrive on the real play's edge before anyone redirects.",
+    "failureMode": "Disciplined spill-and-scrape linebackers stay home on the crossface, letting them meet the counter in the hole with the pullers still trailing."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Crisscross Backfield",
+      "text": "The quarterback opens right and fakes the sweep to B while the wing loops behind him the other way — two backs crossing paths directly in front of every linebacker's key.",
+      "focus": ["QB", "B", "H"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Trey Pullers",
+      "text": "The guard pulls to kick the end while the tackle wraps behind him as the leader — identical footwork to Buck Sweep pointed the other direction.",
+      "focus": ["RG", "RT", "LE"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. Crossfacing Chaos",
+      "text": "The Will, Sam, and strong end are all chasing decoys to the right while the hidden handoff hits the counter hole behind them.",
+      "focus": ["WILL", "SAM", "RE"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Counter Hits Left",
+      "text": "The wing bursts through the kick-out seam behind the wrapping tackle. Only the Mike read it correctly — and the puller buries him anyway.",
+      "focus": ["H", "MIKE", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["wingt-buck-sweep-guard-pull"],
+    "playsOff": ["wingt-waggle-flood"],
+    "tell": "The quarterback reverses his shoulder mid-play to hand off backward — live sweeps and boots never change the ballcarrier after the initial mesh."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

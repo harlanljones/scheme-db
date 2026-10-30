@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "oconnell-wide-zone-stretch-base",
+  "schemeId": "oconnell-boot-dagger",
+  "order": 1,
+  "name": "Condensed Wide-Zone Stretch Base",
+  "personnel": "11",
+  "formation": "11P Condensed Gun Right vs 4-3 Over",
+  "situation": "1st & 10, +40, early-down foundation call",
+  "coverage": "Cover 3 Sky",
+  "frontName": "Over Front",
+  "summary": {
+    "motive": "Establish the pure wide-zone stretch picture that every boot, dagger, and crosser companion in the family borrows from.",
+    "keyDefender": "Playside flow linebacker (MIKE)",
+    "whyItWorks": "The full-front reach wash gives the defense no stationary blocking point, so the playside linebacker must run laterally with flow; the guard's climb arrives precisely where he crosses, and the bend read exploits the sealed edge.",
+    "failureMode": "A 3-tech who fights laterally instead of getting reached keeps his outside arm free, squeezing the crease before the bend decision and forcing the bounce into the sky safety."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "The Reach Gets Going",
+      "text": "All five linemen take lateral reach steps with the tight end driving into the edge setter — the entire front is washed toward the boundary in one coordinated motion that defines every look in this system.",
+      "focus": ["LT", "LG", "C", "RG", "RT"]
+    },
+    {
+      "t": 1.4,
+      "title": "Mesh Point Sells the Handoff",
+      "text": "The QB extends the mesh ride while the back flattens his path behind it, forcing both edge defenders to commit to a run they cannot yet rule out.",
+      "focus": ["QB", "RB", "WDE", "SDE"]
+    },
+    {
+      "t": 2.4,
+      "title": "The Playside Linebacker Flows",
+      "text": "MIKE keys the pullers-less wash and runs the sideline over the top — but the guard climb cuts him off exactly where the crease opens. He is the defender this whole scheme family attacks.",
+      "focus": ["MIKE", "RB", "SAM"]
+    },
+    {
+      "t": 3.3,
+      "title": "Bend Decision at the Second Level",
+      "text": "The back presses vertical then bends behind the climbing guards rather than bouncing to the SS fill — the bend read turns an eight-yard stretch into a chunk gain.",
+      "focus": ["RB", "FS", "WILL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["oconnell-boot-flood-rollout", "oconnell-pa-dagger-shot", "oconnell-duo-pa-crosser"],
+    "playsOff": ["outside-zone"],
+    "tell": "The ball actually goes to the back — no boot pivot, no pocket reset; the QB's ride ends in a carried-out fake rather than a throw."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

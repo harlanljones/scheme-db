@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flex-weak-tackle-power-sweep",
+  "schemeId": "landry-flex",
+  "order": 1,
+  "name": "Standard Weak-Tackle Flex vs Power Sweep",
+  "personnel": "Base 4-3 Flex (Weak DT Flexed)",
+  "formation": "21P Offset-I Right Power Sweep Left vs Flex",
+  "situation": "2nd & 5, +30, base run down",
+  "coverage": "Cover 3 Sky behind flex front",
+  "frontName": "4-3 Weak-Tackle Flex",
+  "summary": {
+    "motive": "Use the one-yard flex alignment to occupy blockers passively while three defenders converge independently on the sweep point of attack without needing a blocked lane.",
+    "keyDefender": "The flexed weak-side tackle on his free lateral chase",
+    "whyItWorks": "Sweep blocking schemes assign the playside guard to reach a defender who starts beyond his reach window, so the flexed tackle runs free down the line as a fourth pursuer.",
+    "failureMode": "A crack return block by the receiver on the forcing corner removes the third converger and lets the sweep bounce cleanly outside."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The Flex Picture",
+      "text": "The weak tackle lines up a full yard off the ball, denying the guard an immediate target while giving himself an unobstructed runway parallel to the line of scrimmage.",
+      "focus": ["WDT", "LG", "LDE"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. Sweep Flow Meets the Free Lane",
+      "text": "As the sweep launches, the flexed tackle chases laterally down the line untouched because no blocker can reach him in time, while WILL triggers downhill immediately.",
+      "focus": ["WDT", "WILL", "RG", "T"]
+    },
+    {
+      "t": 2,
+      "title": "3. The Edge Holds",
+      "text": "The fullback kick-out is absorbed square by the defensive end, who turns the ball carrier back toward the pursuing wave instead of letting him turn the corner.",
+      "focus": ["F", "LDE", "LCB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Three-Defender Convergence",
+      "text": "The flexed tackle chasing from inside, the triggering linebacker from depth, and the forcing corner from the perimeter all arrive simultaneously for a no-gain stop.",
+      "focus": ["WDT", "WILL", "LCB", "T"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["flex-tackle-tackle-two-back"],
+    "playsOff": [],
+    "tell": "The weak-side tackle aligns a visible yard off the line of scrimmage with hands free, unlike his strong-side partner who stays shaded on the snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

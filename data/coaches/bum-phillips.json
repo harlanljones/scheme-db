@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "bum-phillips",
+  "name": "Bum Phillips",
+  "role2026": "Two-Gap 3-4 Revivalist",
+  "team": "Houston Oilers (1975-1980) / New Orleans Saints",
+  "lineage": "phillips-two-gap",
+  "side": "defense",
+  "philosophy": "Revived the modern 3-4 to combat Pittsburgh’s power game: zero/one-tech nose two-gapping, stand-up edge linebackers as rush weapons, and second-level speed flowing over the top.",
+  "keyConcepts": ["Zero-Tech Two-Gap Nose", "Stand-Up Edge Duo", "Over-the-Top LB Flow", "Power Counter-Matches"],
+  "schemeIds": ["phillips-two-gap-34"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Revived the Modern 3-4 Base Defense", "Oilers Luv Ya Blue Defenses"]
+}

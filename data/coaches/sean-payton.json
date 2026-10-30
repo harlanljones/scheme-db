@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "sean-payton",
+  "name": "Sean Payton",
+  "role2026": "Head Coach, Denver Broncos",
+  "team": "Denver Broncos",
+  "lineage": "reid-west-coast",
+  "mentorId": "bill-parcells",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "The fastest pre-snap to post-snap pitch clock in football: quick-game rhythm throws (slant/flat, speed out), packaged with tunnel and fast screens, jet sweep run action, and lethal play-action shot plays that punish defenses for creeping up on the quick game.",
+  "keyConcepts": ["Quick Game Rhythm (Slant-Flat)", "Fast/Tunnel Screen Convoy", "Jet Sweep Run Action", "PA Deep Shot off Screen"],
+  "schemeIds": ["payton-quick-game-screens"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Super Bowl XLIV Champion HC", "Highest Quick-Game Usage Rate of His Era"]
+}

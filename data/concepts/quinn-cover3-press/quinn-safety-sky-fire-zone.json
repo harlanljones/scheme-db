@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "quinn-safety-sky-fire-zone",
+  "schemeId": "quinn-cover3-press",
+  "order": 4,
+  "name": "Safety Sky Fire Zone (3-Deep 2-Under)",
+  "personnel": "Base 4-3 Under",
+  "formation": "4-3 Under Fire vs 11P Gun Trips Right",
+  "situation": "3rd & 8, +40, passing down blitz",
+  "coverage": "Fire Zone 3 (3-Deep, 2-Under Hot Drop)",
+  "frontName": "5-Man Fire Zone Overload",
+  "summary": {
+    "motive": "Create a devastating overload edge blitz using Strong Safety from depth on a Sky path while dropping the defensive end to take away the primary hot throw.",
+    "keyDefender": "SS (Blazing Sky Edge Rusher) & SDE (Dropping Flat Defender)",
+    "whyItWorks": "The offensive tackle cannot pass off the spiking SAM linebacker fast enough to pick up the safety arriving at full speed from depth.",
+    "failureMode": "A deep wheel route by the slot receiver into the deep void behind the blitz if the outside cornerback bails too shallow."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Cover 3 Sky Disguise Look",
+      "text": "Dan Quinn presents a standard Cover 3 shell with SS aligned over Trips and SAM on the line of scrimmage, disguising the impending 5-man fire zone.",
+      "focus": ["SS", "SAM", "SDE", "RT", "QB"]
+    },
+    {
+      "t": 0.6,
+      "title": "SAM Pins the Edge, SS Launches",
+      "text": "At the snap, SAM spikes inside onto the right tackle, pinning him in place, while Strong Safety (SS) rockets off the edge with unchecked speed.",
+      "focus": ["SAM", "SS", "RT"]
+    },
+    {
+      "t": 1.8,
+      "title": "Defensive End Drops into Hot Window",
+      "text": "Defensive end SDE drops off the line directly into the strong flat, standing right in the window of H’s quick hitch hot route.",
+      "focus": ["SDE", "H", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "Strip-Sack Arrival by Strong Safety",
+      "text": "With the hot read denied by the dropping defensive lineman, SS levels the quarterback from the blind angle to create an instant turnover.",
+      "focus": ["SS", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["quinn-cover3-press-bail"],
+    "playsOff": ["quinn-under-front-overload", "quinn-cover1-rat-in-hole"],
+    "tell": "Strong safety creeps towards line before snap and launches outside as SAM crashes inside on tackle"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

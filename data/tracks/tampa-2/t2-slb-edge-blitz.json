@@ -1,0 +1,324 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "t2-slb-edge-blitz",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set inside on LE while Sam screams outside him",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Vertical set" },
+        { "t": 0.7, "x": 20.2, "y": -0.9, "note": "Eyes locked on LE charge" },
+        { "t": 1.4, "x": 19.9, "y": -1.3, "note": "Sam screams past his blind edge" },
+        { "t": 2.6, "x": 20.1, "y": -1.8, "note": "Panic slide outside, too late" },
+        { "t": 4, "x": 20.3, "y": -2.1, "note": "Chasing the wrong rusher" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Handle shade nose with center help",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Set inside" },
+        { "t": 0.9, "x": 24.7, "y": -0.9, "note": "Combo punch on NT" },
+        { "t": 2.4, "x": 24.9, "y": -1.3, "note": "Anchor against bull" },
+        { "t": 4, "x": 25, "y": -1.6, "note": "Interior intact" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Snap then slide to the under tackle combo",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap" },
+        { "t": 0.9, "x": 26.4, "y": -0.9, "note": "Slide to UT combo" },
+        { "t": 2.4, "x": 26.1, "y": -1.3, "note": "UT churning into lap depth" },
+        { "t": 4, "x": 26, "y": -1.6, "note": "Holding but stretched thin" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block the penetrating 3-tech",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Set on UT" },
+        { "t": 0.9, "x": 29, "y": -0.9, "note": "Engage 3-tech rip" },
+        { "t": 2.4, "x": 28.8, "y": -1.3, "note": "Fight to stay attached" },
+        { "t": 4, "x": 28.6, "y": -1.6, "note": "Driven back a yard" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on weak-side contain rush",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Kick slide out" },
+        { "t": 0.9, "x": 33.2, "y": -0.9, "note": "Meet RE climb" },
+        { "t": 2.4, "x": 33.6, "y": -1.4, "note": "Ride him up the rim" },
+        { "t": 4, "x": 33.9, "y": -1.7, "note": "Edge held" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Hinge block LE inside — Sam runs untouched past him",
+      "waypoints": [
+        { "t": 0, "x": 18.2, "y": -0.6, "note": "Yoked on LE" },
+        { "t": 0.8, "x": 17.6, "y": -1, "note": "Anchor on LE strike" },
+        { "t": 2, "x": 17.3, "y": -1.5, "note": "Sam already past outside" },
+        { "t": 4, "x": 17.1, "y": -1.8, "note": "Won his battle, lost the war" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Designed hot quick out into Sam’s vacated window",
+      "waypoints": [
+        { "t": 0, "x": 6, "y": 0.5, "note": "Quick stem" },
+        { "t": 0.7, "x": 6.2, "y": 1.5, "note": "Fast two-step release" },
+        { "t": 1.5, "x": 8, "y": 1, "note": "Break out at two yards" },
+        { "t": 2.6, "x": 11, "y": 0.8, "note": "Ball arrives into exchanged WILL" },
+        { "t": 4, "x": 12.5, "y": 1, "note": "Route picked off mid-break" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Climb seam vs deep half strong as secondary read",
+      "waypoints": [
+        { "t": 0, "x": 39.5, "y": 1.2, "note": "Slot alignment" },
+        { "t": 0.9, "x": 40.2, "y": 3, "note": "Push vertical" },
+        { "t": 2.2, "x": 41.5, "y": 8, "note": "Working the seam landmark" },
+        { "t": 4, "x": 42, "y": 12, "note": "Capped by FS half" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Take the top off the strong half",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 0.5, "note": "Outside release" },
+        { "t": 1, "x": 47, "y": 4, "note": "Push RCB vertical" },
+        { "t": 2.4, "x": 46.8, "y": 10, "note": "Clearing for H underneath" },
+        { "t": 4, "x": 46.5, "y": 14, "note": "No ball coming" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "Hot throw to Z out before the edge arrives",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -2.8, "note": "Hitch, feel edge collapsing" },
+        { "t": 1.7, "x": 27.3, "y": -3.4, "note": "Escape step right of UT churn" },
+        { "t": 2.4, "x": 26.9, "y": -3.6, "note": "Fires hot to the void" },
+        { "t": 4, "x": 26.7, "y": -3.7, "note": "Watches WILL return it" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Check-release strong flat away from pressure",
+      "waypoints": [
+        { "t": 0, "x": 30.5, "y": -3, "note": "Offset alignment" },
+        { "t": 1, "x": 31.5, "y": -2.4, "note": "Scan then release" },
+        { "t": 2.2, "x": 34, "y": 1, "note": "Flat working right" },
+        { "t": 4, "x": 35.5, "y": 2, "note": "Never a factor in the throw" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "LE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Pin the TE inside so Sam comes free around the rim",
+      "waypoints": [
+        { "t": 0, "x": 18.4, "y": 1, "note": "C-gap pin alignment" },
+        { "t": 1, "x": 17.8, "y": -0.2, "note": "Strike TE low, occupy him" },
+        { "t": 2.4, "x": 17.5, "y": -1.4, "note": "Grind vs hinge block" },
+        { "t": 4, "x": 17.4, "y": -2.2, "note": "Contained — job was the pin" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "One-tech bull through the combo",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 1, "note": "Shade alignment" },
+        { "t": 1, "x": 25.6, "y": -0.4, "note": "Strike the combo low" },
+        { "t": 2.4, "x": 25.5, "y": -1.8, "note": "Churning through hands" },
+        { "t": 4, "x": 25.6, "y": -3, "note": "Middle pocket collapsed" }
+      ]
+    },
+    {
+      "id": "UT",
+      "label": "UT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Three-tech penetrate strong B to flush the launch point",
+      "waypoints": [
+        { "t": 0, "x": 28.8, "y": 1, "note": "3-tech alignment" },
+        { "t": 1, "x": 29.2, "y": -0.4, "note": "Rip through RG" },
+        { "t": 2.4, "x": 29.5, "y": -2, "note": "Into the throwing lap" },
+        { "t": 4, "x": 29.3, "y": -3.2, "note": "Forced the escape step" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "RE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weak contain rush, keep the QB from climbing left",
+      "waypoints": [
+        { "t": 0, "x": 33.9, "y": 1, "note": "Contain rush alignment" },
+        { "t": 1, "x": 34.3, "y": -0.2, "note": "Speed to the arc" },
+        { "t": 2.4, "x": 34.6, "y": -1.6, "note": "RT rides him wide" },
+        { "t": 4, "x": 34.8, "y": -2.9, "note": "Escape door shut" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "carry",
+      "assignment": "Edge blitz around the LE rim, unblocked off the TE",
+      "waypoints": [
+        { "t": 0, "x": 16.6, "y": 4.2, "note": "Walked edge alignment" },
+        { "t": 0.6, "x": 16.2, "y": 1.5, "note": "Full-speed edge charge" },
+        { "t": 1.4, "x": 17, "y": -1.8, "note": "Past LT’s outside shoulder" },
+        { "t": 2.2, "x": 20.5, "y": -3.4, "note": "Bending to the launch point" },
+        { "t": 3.2, "x": 23.5, "y": -3.8, "note": "Arrives just after the throw" },
+        { "t": 4, "x": 25, "y": -3.9, "note": "Late hit pressure logged" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Still converts to the deep-middle hole behind the blitz",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 4.5, "note": "Hook alignment" },
+        { "t": 1, "x": 26.67, "y": 6.5, "note": "Backpedal reading QB" },
+        { "t": 2.2, "x": 27, "y": 9, "note": "Turn and run the hole" },
+        { "t": 4, "x": 28, "y": 12, "note": "Middle erased despite five-man count" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Zone exchange: slide into Sam’s hook-curl and rob the hot",
+      "waypoints": [
+        { "t": 0, "x": 24.5, "y": 3.4, "note": "Exchange key alignment" },
+        { "t": 0.7, "x": 22.5, "y": 4.5, "note": "Slide to Sam’s vacated hook" },
+        { "t": 1.6, "x": 20, "y": 4.8, "note": "Eyes jump to the hot release" },
+        { "t": 2.4, "x": 15.5, "y": 3, "note": "Break under the out route" },
+        { "t": 3, "x": 11.5, "y": 1.4, "note": "Interception at the catch point" },
+        { "t": 4, "x": 12.5, "y": 1.2, "note": "Pick returned upfield" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Squat deep half weak over the hot-side receiver",
+      "waypoints": [
+        { "t": 0, "x": 6, "y": 10.5, "note": "Squat alignment" },
+        { "t": 1, "x": 6, "y": 11.5, "note": "Pedal reading Z stem" },
+        { "t": 2.4, "x": 6.5, "y": 12, "note": "Stay on top of quick out" },
+        { "t": 4, "x": 7, "y": 12.5, "note": "Deep half capped" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Squat deep half strong",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 10.5, "note": "Squat alignment" },
+        { "t": 1, "x": 47, "y": 11.5, "note": "Mirror X push" },
+        { "t": 2.6, "x": 46.5, "y": 12.5, "note": "Sink down sideline" },
+        { "t": 4, "x": 46.3, "y": 13, "note": "Half capped" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep half weak: squeeze on the hot-side seam late",
+      "waypoints": [
+        { "t": 0, "x": 14, "y": 11.5, "note": "Deep half alignment" },
+        { "t": 1.2, "x": 13.5, "y": 12.2, "note": "Pedal on Z stem" },
+        { "t": 2.6, "x": 11, "y": 12.8, "note": "Squeeze toward boundary" },
+        { "t": 4, "x": 10, "y": 13.2, "note": "Watching WILL’s pick develop" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep half strong: cap the slot climb",
+      "waypoints": [
+        { "t": 0, "x": 40, "y": 11.5, "note": "Deep half alignment" },
+        { "t": 1.2, "x": 39.5, "y": 12.2, "note": "Pedal on H push" },
+        { "t": 2.6, "x": 41, "y": 13, "note": "Cap the climbing slot" },
+        { "t": 4, "x": 42, "y": 13.5, "note": "Seam erased strong" }
+      ]
+    }
+  ]
+}

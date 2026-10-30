@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stefanski-pin-pull-sweep",
+  "schemeId": "stefanski-multi-te-gap",
+  "order": 1,
+  "name": "13P Pin & Pull Sweep",
+  "personnel": "13",
+  "formation": "13P Heavy Wing Right",
+  "situation": "1st & 10, +45, heavy run down",
+  "coverage": "Cover 3 Sky (Single-High)",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Create overwhelming perimeter gap leverage against single-high defenses by pinning frontside defensive linemen inside and pulling interior linemen as lead escorts.",
+    "keyDefender": "Strong Safety (SS) & Mike Linebacker (MIKE)",
+    "whyItWorks": "Down blocks by the tackle and tight ends create natural, impenetrable blocking angles that neutralize defensive penetration. Pulling interior linemen provide massive lead blockers against smaller defensive backs in the alley.",
+    "failureMode": "A defensive lineman penetrating between the down blocks or a fast-flowing safety blowing up the pulling guard behind the line of scrimmage."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Heavy 13-Personnel Condensed Front",
+      "text": "Stefanski aligns 3 tight ends (Inline Y, Wing F, Backside U) in a condensed wing set to create overwhelming numerical leverage at the point of attack.",
+      "focus": ["Y", "F", "U", "RB", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "The Pin-Down Wall & Dual Pullers",
+      "text": "RT, Y, and F execute devastating down blocks pinning the 3T, SDE, and Sam LB inside, while Center and RG pull into the perimeter alley.",
+      "focus": ["RT", "Y", "F", "C", "RG", "3T", "SDE"]
+    },
+    {
+      "t": 1.8,
+      "title": "RG Kickout & Center Alley Wrap",
+      "text": "RG violently kicks out Strong Safety SS on the perimeter edge, while Center wraps up into the alley to seal the scraping Mike linebacker.",
+      "focus": ["RG", "SS", "C", "MIKE"]
+    },
+    {
+      "t": 2.8,
+      "title": "RB Plants & Detonates Through Crease",
+      "text": "Running back presses the perimeter toss, plants his outside foot inside the RG kickout, and accelerates 15+ yards through the gaping alley crease.",
+      "focus": ["RB", "C", "RG"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["stefanski-pa-seam-shot", "stefanski-naked-boot-slide"],
+    "playsOff": ["stefanski-counter-gap-lead"],
+    "tell": "Center & RG immediately pull playside while RT & Y down-block (pin)."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

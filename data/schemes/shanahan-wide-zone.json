@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "shanahan-wide-zone",
+  "name": "Kyle Shanahan's Wide Zone Family",
+  "coachId": "kyle-shanahan",
+  "team": "San Francisco 49ers",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "shanahan-kubiak",
+  "description": "The premier modern NFL offensive system built on horizontal stretch sequencing. The base Outside Zone run and its three constraint counters (Play-Action Deep Over, Naked Bootleg, and Jet Motion) present an identical visual picture to the defense for the first ~1.2 seconds, forcing defenders into impossible run-pass conflicts."
+}

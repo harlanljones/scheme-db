@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "quinn-cover3-press-bail",
+  "schemeId": "quinn-cover3-press",
+  "order": 1,
+  "name": "Cover 3 Press-Bail (Legion Foundation)",
+  "personnel": "Base 4-3 Under",
+  "formation": "4-3 Under Front vs 21P Offset-I Wing Right",
+  "situation": "1st & 10, Own 25, base down",
+  "coverage": "Cover 3 Sky (Press-Bail Corners, Strong Safety Force)",
+  "frontName": "4-3 Under Strong Shift",
+  "summary": {
+    "motive": "Suffocate explosive perimeter passing using physical press-bail cornerback technique and single-high Cover 3 Sky integrity while creating speed pressure with the Wide-9 LEO rusher.",
+    "keyDefender": "LCB (Press-Bail Corner) & LEO (Wide-9 Speed Edge Rusher)",
+    "whyItWorks": "Press-bail eliminates quick boundary throws without conceding deep vertical separation, buying time for the 4-man defensive line rush to collapse the pocket.",
+    "failureMode": "Four verticals concepts attacking both seams simultaneously if the single-high free safety gets held by an eye-manipulating quarterback."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Physical Press-Bail Alignment",
+      "text": "Dan Quinn deploys the iconic Seattle-style Cover 3: outside cornerbacks line up in suffocating press alignment at 1.5 yards, while the LEO edge rusher aligns in a Wide-9 track.",
+      "focus": ["LCB", "RCB", "LEO", "LT", "X"]
+    },
+    {
+      "t": 0.8,
+      "title": "Press-Bail Transition & Sky Rotation",
+      "text": "At the snap, both cornerbacks use disciplined side-saddle press-bail footwork to glide into deep thirds, while Strong Safety (SS) inserts aggressively downhill into the strong flat (Sky force).",
+      "focus": ["LCB", "RCB", "SS"]
+    },
+    {
+      "t": 2.2,
+      "title": "Deep Thirds Capped, Windows Clamped",
+      "text": "The QB wants to take a deep vertical shot vs press, but LCB and FS completely cap the boundary Go and field Post routes with zero daylight.",
+      "focus": ["LCB", "FS", "X", "Z", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "LEO Strip-Sack from Blindside",
+      "text": "With all initial passing concepts locked down by the 7-man coverage shell, the unassisted 4-man rush arrives as LEO rips past the left tackle to strip the football.",
+      "focus": ["LEO", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["quinn-cover1-rat-in-hole", "quinn-safety-sky-fire-zone"],
+    "playsOff": [],
+    "tell": "Corners show hard press at line then open hips into side-saddle bail at snap while SS rotates downhill"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

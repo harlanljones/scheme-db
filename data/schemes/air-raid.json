@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "air-raid",
+  "name": "Mike Leach's Air Raid Family",
+  "coachId": "mike-leach",
+  "team": "Texas Tech / Washington State / Mississippi State",
+  "side": "offense",
+  "era": "current-college",
+  "lineage": "air-raid",
+  "description": "The purest expression of spread passing: a handful of simple, repeatable concepts thrown from gun at high volume. Every play answers one leverage question, and the quarterback is taught to throw the open receiver rather than force landmarks."
+}

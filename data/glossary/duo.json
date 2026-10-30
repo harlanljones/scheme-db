@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "duo",
+  "term": "Duo",
+  "aliases": ["Duo concept", "Duo run", "Power without a puller", "duo"],
+  "category": "Run Concept",
+  "shortDef": "A downhill gap-style run concept characterized by multiple double-teams at the line of scrimmage, with the running back reading the middle linebacker's leverage.",
+  "tacticalNote": "Does not pull an offensive lineman; relies on vertical displacement of defensive tackles and forces the safety or unblocked defender to make the 1-on-1 tackle."
+}

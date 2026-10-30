@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coen-crack-toss-perimeter",
+  "schemeId": "coen-wide-zone-rpo",
+  "order": 3,
+  "name": "Crack-Toss Perimeter Attack (X Cracks the Force)",
+  "personnel": "11",
+  "formation": "11P Gun Wide-Zone Strong Right vs Nickel",
+  "situation": "1st & 10, midfield, punishing soft-corner force rules",
+  "coverage": "Cover 3 Cloud (soft field corner)",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Attack soft-force perimeter rules with speed toss plus a cross-field crack, making the force defender choose between an uncovered crack blocker and the alley he must fill.",
+    "keyDefender": "Force defender cracked by X (the nickel)",
+    "whyItWorks": "The crack-toss creates an unblockable geometry problem: if the nickel steps up to fill his alley, X cracks him out of the frame; if he waits on X, the RB has already turned the edge. Counter-flow line splits keep the box from slanting into the toss pocket.",
+    "failureMode": "An aggressive force player who spills the toss immediately at the edge — or a corner who plays press and defeats Z's stalk — collapses the perimeter before X's long crack angle can ever arrive."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Counter-Flow Sell",
+      "text": "Every offensive lineman takes a flow-left step while the QB opens away from the toss direction's eventual target — the front seven reads inside zone left and flows accordingly.",
+      "focus": ["C", "LG", "RT", "WILL", "MIKE"]
+    },
+    {
+      "t": 1,
+      "title": "2. Speed Toss Out of the Hand",
+      "text": "The QB flips the toss over the hinging tackle and the RB catches it in full stride at the edge. The TE's pin and RT hinge mean no defensive end can spill this outside the pocket.",
+      "focus": ["QB", "RB", "TE", "RT", "SDE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Crack Arrives",
+      "text": "X has sprinted across the formation on a max-effort crack angle and detonates the nickel precisely as the RB reaches the edge. The force defender — the one man whose fit was supposed to cap this play — never lays a hand on the ball carrier.",
+      "focus": ["X", "NICKEL", "RB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Perimeter Math Wins",
+      "text": "With force cracked, the alley walled by H, and the sideline stalked by Z, the RB turns upfield against only the free safety. Soft corner force rules made this math inevitable.",
+      "focus": ["RB", "H", "Z", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coen-wide-zone-glance-rpo"],
+    "playsOff": ["outside-zone", "jet-motion-oz"],
+    "tell": "Backside X sprints cross-field on a visible max-effort crack angle while the line's footwork points the opposite way from the eventual toss."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

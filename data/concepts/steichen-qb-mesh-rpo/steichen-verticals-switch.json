@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "steichen-verticals-switch",
+  "schemeId": "steichen-qb-mesh-rpo",
+  "order": 4,
+  "name": "4-Verticals Switch Shot",
+  "personnel": "11",
+  "formation": "11P Gun Spread Right",
+  "situation": "1st & 10, +45, shot down",
+  "coverage": "Two-High Quarters / Cover 4",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Destroy Two-High Quarters coverage by crossing the release paths of the #1 and #2 receivers on deep vertical tracks, triggering coverage miscommunication and blown assignments.",
+    "keyDefender": "Strong Safety (SS) & Right Cornerback (RCB)",
+    "whyItWorks": "In Quarters coverage, DBs play pattern-match rules based on receiver releases. When the outside receiver breaks inside on a post and the slot receiver wheels outside, both DBs frequently bite on the inside post, leaving the wheel vertical completely unguarded.",
+    "failureMode": "A safety and corner who execute seamless \"switch\" communication, or a 4-man defensive pass rush that gets home before the 5-step deep route develops."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Spread 11-Personnel Quarters Attack",
+      "text": "Steichen dials up a deep 4-verticals switch concept against Two-High Quarters coverage, targeting the spatial rules of the field safety and cornerback.",
+      "focus": ["H", "Z", "SS", "RCB", "QB"]
+    },
+    {
+      "t": 1.2,
+      "title": "The 6-Yard Stem Switch Confusion",
+      "text": "Slot H stems inside while outside Z crosses over the top. At 6 yards, they swap vertical tracks, causing instant panic between RCB and Strong Safety SS.",
+      "focus": ["H", "Z", "SS", "RCB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Double-Coverage on Post Leaves Sideline Naked",
+      "text": "Both RCB and SS squeeze inside to match Z on the post, leaving slot receiver H blowing completely uncontested down the wide open right sideline.",
+      "focus": ["SS", "RCB", "H"]
+    },
+    {
+      "t": 3.4,
+      "title": "The 35-Yard Touchdown Bomb",
+      "text": "QB steps cleanly into the pocket and delivers a breathtaking 35-yard dime to H in stride for an explosive touchdown.",
+      "focus": ["QB", "H", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["steichen-qb-power-read"],
+    "playsOff": ["steichen-zone-bubble-rpo"],
+    "tell": "Slot H and outside Z cross stems at 6 yards on vertical release instead of standard screen/blocking releases."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

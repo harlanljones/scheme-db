@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "meyer-inside-zone-read-give",
+  "schemeId": "meyer-spread-option",
+  "order": 1,
+  "name": "Inside Zone Read Give",
+  "personnel": "11",
+  "formation": "Gun Spread Right Slot, TE Right",
+  "situation": "1st & 10, own 32, base down",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Make the backside end choose between the quarterback and the A-gap, then punish the crash with an instant downhill give.",
+    "keyDefender": "Backside Defensive End (unblocked read key)",
+    "whyItWorks": "Spread spacing forces the end to declare immediately, and his aggression toward the keeper opens the exact lane the offset back is already attacking.",
+    "failureMode": "The end squeezes square and spills, clogging the give while staying connected enough to contest a late pull."
+  },
+  "beats": [
+    {
+      "t": 0.55,
+      "title": "1. The Read and the Crash",
+      "text": "The quarterback seats the mesh with eyes locked on the unblocked backside end. The end fires inside hunting the keeper instead of squeezing the gap.",
+      "focus": ["QB", "F", "LE"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Give Branch",
+      "text": "The crash declares the answer instantly: the ball goes into the belly of a back who is already at full forward lean through the vacated A-gap.",
+      "focus": ["LE", "QB", "F"]
+    },
+    {
+      "t": 2,
+      "title": "3. Downhill Finish",
+      "text": "The back presses downhill behind the scoop-and-climb guard while the quarterback sells the boot fake the other way, pinning the pursuit.",
+      "focus": ["F", "RG", "MIKE"]
+    },
+    {
+      "t": 3,
+      "title": "4. The Boot Fake Sells",
+      "text": "With the Mike scooped and both safeties triggering on the fake keeper, the give finishes vertically through the open middle field.",
+      "focus": ["QB", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["meyer-inverted-veer-power-read"],
+    "playsOff": [],
+    "tell": "The ball leaves the quarterback's hands before his shoulders ever turn — a true keep rides through the mesh point."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

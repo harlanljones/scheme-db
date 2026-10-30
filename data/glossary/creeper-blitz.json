@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "creeper-blitz",
+  "term": "Creeper Blitz",
+  "aliases": ["Creeper", "creeper pressure", "creeper blitz", "off-ball pressure", "Creeper Blitz", "creeper"],
+  "category": "Defensive Front",
+  "shortDef": "An off-ball 4-man pressure where a second- or third-level defender blitzes from depth while a defensive lineman drops into underneath zone coverage.",
+  "tacticalNote": "Attacks weak points in pass protection without displaying pre-snap blitz tells or giving up standard 7-man coverage spacing."
+}

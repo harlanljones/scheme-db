@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "johnson-pa-te-throwback",
+  "schemeId": "johnson-counter-deception",
+  "order": 2,
+  "name": "Play-Action TE Throwback Leak (Counter Shell PA)",
+  "personnel": "11",
+  "formation": "11P Gun Trips Left vs Nickel Under",
+  "situation": "2nd & 6, +38, early down",
+  "coverage": "Nickel Cover 2",
+  "frontName": "Nickel 4-2-5 Under Front",
+  "summary": {
+    "motive": "Use counter run look PA to move WILL linebacker inside, then throw back to leaking TE in the vacated flat.",
+    "keyDefender": "Will Linebacker (Weakside LB)",
+    "whyItWorks": "Counter action freezes all three second-level defenders simultaneously — WILL triggers inside, MIKE bites on H drag, SS over-triggers on QB boot — leaving the TE's flat completely unoccupied.",
+    "failureMode": "A disciplined WILL linebacker who ignores the PA fake and stays in flat zone coverage, or an SS who does not overcommit to the QB bootleg."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Counter PA Freeze",
+      "text": "The QB's reverse pivot and RB's counter false step perfectly mimic the counter trey run. Both linebackers freeze for a full second, allowing the TE to quietly leak backside underneath coverage.",
+      "focus": ["QB", "RB", "WILL", "MIKE"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. TE Throwback Release",
+      "text": "After selling a run block for 0.8 seconds, the TE slips off his block and leaks backside into the flat. The WILL linebacker is already committed inside, leaving the TE unguarded.",
+      "focus": ["TE", "WILL", "QB"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. The Void in the Flat",
+      "text": "As the QB boots weakside and the H drag draws the Nickel and MIKE linebackers across the field, the boundary flat opens completely. The TE runs freely behind the vacated WILL zone.",
+      "focus": ["TE", "NICKEL", "MIKE", "SS"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Big Gain on Throwback",
+      "text": "The SS over-triggers on the QB boot and cannot recover to the TE in time. Johnson's design creates a 15+ yard gain from an 11-personnel counter shell — the defense never anticipated the throwback.",
+      "focus": ["TE", "SS", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["johnson-hook-ladder-mesh", "johnson-orbit-reverse-screen"],
+    "playsOff": ["johnson-counter-trey-lead"],
+    "tell": "Same counter step from RB and reverse pivot from QB — but TE releases instead of blocking at 0.8s."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

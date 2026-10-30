@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sirianni-qb-sneak-push",
+  "schemeId": "sirianni-power-rpo",
+  "order": 4,
+  "name": "Brotherly Shove (Tush Push)",
+  "personnel": "22 Jumbo",
+  "formation": "Under Center Tight Wedge (Dual Pushers)",
+  "situation": "4th & 1, +1, goal line conversion",
+  "coverage": "Goal Line 6-2 Man",
+  "frontName": "Goal Line 6-2 Bear Front",
+  "summary": {
+    "motive": "Execute the mathematically and physically near-unstoppable short-yardage quarterback sneak by combining low offensive line pad leverage with dual backfield pushers.",
+    "keyDefender": "Nose Tackles & Mike Linebacker (Interior Goal-Line Squeeze)",
+    "whyItWorks": "The Center and Guards create a low-to-high wedge underneath the defensive line, while dual pushers deliver immediate secondary kinetic thrust before the defense can halt forward progress.",
+    "failureMode": "A false start / offsides penalty or defensive nose tackles timing the snap and cutting the center’s legs from underneath before the pushers engage."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Subterranean Pad Level at the Snap",
+      "text": "Philadelphia’s center and guards fire out with near-zero pad level, wedging their helmets beneath the breastplates of the goal-line nose tackles to create immediate underneath leverage.",
+      "focus": ["C", "LG", "RG", "NT1", "NT2"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Direct A-Gap Insertion",
+      "text": "The quarterback takes the snap and dives instantly into the low crevice created by the Center, keeping his center of gravity below the defensive line’s knees.",
+      "focus": ["QB", "C", "MIKE"]
+    },
+    {
+      "t": 1.8,
+      "title": "3. Dual-Pusher Kinetic Thrust",
+      "text": "Both flanking pushers (P1 and P2) latch firmly onto the quarterback’s hips, followed by the fullback, creating an overwhelming 600+ pound wall of forward kinetic force.",
+      "focus": ["RB1", "RB2", "FB", "QB"]
+    },
+    {
+      "t": 3,
+      "title": "4. The Inevitable Conversion",
+      "text": "Even with linebackers leaping over the pile, the sheer horizontal power of the wedge drives the entire defensive front 2 yards backwards across the goal line for a guaranteed conversion.",
+      "focus": ["QB", "MIKE", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["sirianni-power-duo-inside", "sirianni-slot-fade-out"],
+    "tell": "Ultra-tight wedge splits along the offensive line with dual pushers aligned directly behind the quarterback’s hips."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

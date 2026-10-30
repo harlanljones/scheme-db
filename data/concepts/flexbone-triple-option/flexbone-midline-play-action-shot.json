@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flexbone-midline-play-action-shot",
+  "schemeId": "flexbone-triple-option",
+  "order": 4,
+  "name": "Midline Play-Action Shot",
+  "personnel": "Flexbone Base",
+  "formation": "Flexbone Right, Twin Slots",
+  "situation": "2nd & 8, +42, off triple-tendency",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Weaponize the triple-option run identity to vacate the deep middle, then attack it with a post shot off an identical midline fake.",
+    "keyDefender": "Free Safety (middle-third defender)",
+    "whyItWorks": "Option teams force safeties to trigger on every mesh; this fake sends both second-level defenders and the buzz safety downhill before the quarterback even looks downfield.",
+    "failureMode": "The safety plays run-pass split discipline instead of triggering, keeping his shoulders square to the post route developing behind the crosser."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. Identical Midline Action",
+      "text": "Every tell from the midline triple is present: the same reverse pivot, the same seatbelt ride, the guard scooping past his key, and B driving the dive fake into the second level.",
+      "focus": ["QB", "B", "RG"]
+    },
+    {
+      "t": 1.7,
+      "title": "2. The Safety Trigger",
+      "text": "The buzz safety fires downhill on run action while the Mike triggers onto the diving back. Both vacate the middle of the field before the ball is ever thrown.",
+      "focus": ["SS", "MIKE", "B"]
+    },
+    {
+      "t": 2.7,
+      "title": "3. Rising Off the Fake",
+      "text": "The quarterback sells one more keep stride, then rises off the fake with a clean launch point. The crosser is dragging the free safety's eyes toward the boundary.",
+      "focus": ["QB", "H", "FS"]
+    },
+    {
+      "t": 3.6,
+      "title": "4. The Post Behind the Frozen Third",
+      "text": "Z breaks off his vertical into the post lane behind a middle-third defender who never recovered from the run fit. The shot lands over the trailing corner.",
+      "focus": ["Z", "FS", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["flexbone-inside-veer-triple"],
+    "tell": "The slot releases upfield instead of running a pitch track, and the tackle arcs then resets to pass set — live option plays never do either."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

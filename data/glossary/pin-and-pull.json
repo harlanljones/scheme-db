@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "pin-and-pull",
+  "term": "Pin & Pull",
+  "aliases": ["Pin and Pull", "pin-pull", "pin and pull concept", "Pin & Pull"],
+  "category": "Blocking Scheme",
+  "shortDef": "A perimeter run scheme where offensive linemen with defenders in their gap block down (\"pin\"), allowing uncovered adjacent linemen to pull around to the edge.",
+  "tacticalNote": "Creates superior geometric blocking angles against aggressive penetrating defensive fronts without requiring horizontal reach blocks."
+}

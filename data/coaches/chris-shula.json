@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "chris-shula",
+  "name": "Chris Shula",
+  "role2026": "Defensive Coordinator, Los Angeles Rams",
+  "team": "Los Angeles Rams",
+  "lineage": "fangio-two-high",
+  "mentorId": "vic-fangio",
+  "disciples": [],
+  "side": "defense",
+  "philosophy": "Light-box run fits utilizing interior stunts, quarters match coverage against condensed bunch formations, and late safety robber disguises.",
+  "keyConcepts": ["Match Quarters", "Tite Front B-Gap Pinch", "Cover 8 Split-Field", "Safety Down Robber"],
+  "schemeIds": ["shula-match-quarters"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Rams Defensive Coordinator"]
+}

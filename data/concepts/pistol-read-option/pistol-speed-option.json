@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "pistol-speed-option",
+  "schemeId": "pistol-read-option",
+  "order": 4,
+  "name": "Pistol Speed Option",
+  "personnel": "11",
+  "formation": "Pistol Right Slot, TE Right",
+  "situation": "2nd & 4, +45, perimeter numbers call",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Force the perimeter force player into an instantaneous declare so the pitch punishes any aggressive trigger.",
+    "keyDefender": "Field Corner (force player)",
+    "whyItWorks": "The arc plus pitch-track spacing makes the quarterback pitchable only when the corner commits upfield, converting his aggression directly into a numbers advantage.",
+    "failureMode": "The corner squeezes and stays square, keeping both phases alive until help arrives over the top of the option."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Arc and Flow",
+      "text": "The quarterback arcs flat off the pistol mesh while the slot sprints across to get ahead of the ball — the entire defense starts flowing to its right.",
+      "focus": ["QB", "H", "MIKE"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. Force Declares",
+      "text": "The pitch track puts F even with the arc as both men read one defender: the force corner. Whatever he does next decides the football.",
+      "focus": ["QB", "F", "RCB"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. Pitch on the Trigger",
+      "text": "The corner triggers upfield hunting the quarterback — exactly the cue that makes him pitchable. The ball goes out with F already at full speed.",
+      "focus": ["QB", "F", "RCB"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Perimeter Finish",
+      "text": "The safety arrives a beat late and gets led-on by the crossing slot while F turns north at full stride behind the displaced force.",
+      "focus": ["F", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["pistol-power-o-read", "pistol-pa-deep-shot"],
+    "tell": "The quarterback never rides a mesh before arcing — every other pistol run seats the ball for at least a full step."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

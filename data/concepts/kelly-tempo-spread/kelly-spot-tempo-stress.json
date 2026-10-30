@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "kelly-spot-tempo-stress",
+  "schemeId": "kelly-tempo-spread",
+  "order": 2,
+  "name": "Three-Level Spot Stress",
+  "personnel": "10",
+  "formation": "10P Gun Spread 2x2 vs Nickel",
+  "situation": "3rd & 4, +42, snapped at tempo before the nickel can re-communicate his apex assignment",
+  "coverage": "Nickel Cover 2 Zone",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Layer flat, spot/curl, and vertical takeoff off one shoulder so the apex nickel must defend three landmarks with two responsibilities, then beat the rotation clock with a one-hitch rhythm throw.",
+    "keyDefender": "Nickel (flat/curl conflict)",
+    "whyItWorks": "The spot sits precisely in the void between the flat and the deep drop-off — close enough that the nickel can't expand without surrendering the catch, far enough that sitting on it leaves the flat wide open — and tempo denies the rotation any chance to arrive.",
+    "failureMode": "A pattern-match quarters call where the apex defender carries the spot man-to-man and the flat is owned by a scraping safety or linebacker, erasing the conflict entirely."
+  },
+  "beats": [
+    {
+      "t": 0.3,
+      "title": "1. Apex Stress at Tempo",
+      "text": "Kelly snaps this before the nickel can settle into his apex landmark — he's still aligning while the ball is in play. The formation gives nothing away pre-snap, so the nickel must solve the flat/curl conflict live.",
+      "focus": ["QB", "NICKEL", "SS"]
+    },
+    {
+      "t": 0.8,
+      "title": "2. Three Levels Off One Shoulder",
+      "text": "The left side builds vertically in three layers: RB swings flat low, H settles the spot at exactly five yards, X takes off behind it all. The nickel cannot occupy two of those landmarks at once.",
+      "focus": ["RB", "H", "X"]
+    },
+    {
+      "t": 1.3,
+      "title": "3. The Nickel Freezes",
+      "text": "With eyes locked on the quarterback, the nickel is stuck between driving on H’s catcher-box spot and expanding to the RB flat. The QB sees the hesitation and delivers on the one-hitch rhythm before rotation can help.",
+      "focus": ["NICKEL", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "4. Ball Out Before Rotation",
+      "text": "Both safeties stay pinned by the vertical threats and never break down on the spot in time. H turns the five-yard grab upfield into green grass because the entire second level is flowing away from the throw.",
+      "focus": ["QB", "H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["kelly-four-verts-takeover"],
+    "playsOff": ["kelly-mesh-spacing-concept"],
+    "tell": "H freezes in a catcher-box spot at exactly five yards with the RB flat swinging under and X clearing over the top — every other receiver leaves the picture immediately."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

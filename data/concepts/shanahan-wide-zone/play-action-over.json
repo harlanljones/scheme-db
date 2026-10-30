@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "play-action-over",
+  "schemeId": "shanahan-wide-zone",
+  "order": 2,
+  "name": "Wide Zone Play-Action Deep Over",
+  "personnel": "21",
+  "formation": "Offset I, Wing Right",
+  "situation": "2nd & 2, +45, shot down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Exploit second-level defenders overplaying the run by throwing deep intermediate passes into the vacated zone behind them.",
+    "keyDefender": "Mike Linebacker (Playside Flow LB)",
+    "whyItWorks": "Because outside zone forces the Mike to sprint laterally and downhill to protect the edge, play-action easily draws him out of intermediate pass coverage windows.",
+    "failureMode": "Pass rush pressure beating the line before the deep crossing route has time to clear the linebackers at 16+ yards."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Identical Run-Action Picture",
+      "text": "The entire offensive line and running back mirror Outside Zone Left with 100% fidelity. For the first second, the defense sees only base run flow.",
+      "focus": ["LT", "LG", "C", "RB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Linebacker Run Bite",
+      "text": "Having been conditioned by wide zone, the Mike and Will linebackers trigger downhill into the A/B gaps to stop the run, completely abandoning intermediate zone depth.",
+      "focus": ["MIKE", "WILL", "QB", "RB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Intermediate Honey Hole Opens",
+      "text": "The QB pulls the ball at mesh. The X post route occupies the free safety deep, creating a 20-yard vacant void between the biting linebackers and the retreating deep third.",
+      "focus": ["QB", "Z", "X", "FS"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Deep Strike Across the Formation",
+      "text": "Z crosses cleanly behind the compromised linebackers, catching the ball in full stride with zero defenders within 10 yards.",
+      "focus": ["QB", "Z", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["naked-bootleg"],
+    "playsOff": ["outside-zone"],
+    "tell": "Backside WR (Z) cuts across the formation behind linebackers on a deep Over route instead of stalking downfield."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

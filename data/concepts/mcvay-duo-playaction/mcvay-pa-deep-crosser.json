@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcvay-pa-deep-crosser",
+  "schemeId": "mcvay-duo-playaction",
+  "order": 3,
+  "name": "Play-Action Deep Over / Crosser",
+  "personnel": "11",
+  "formation": "11P Condensed Bunch Right",
+  "situation": "1st & 10, +48, explosive shot play",
+  "coverage": "Cover 4 Quarters / Match",
+  "frontName": "4-2-5 Nickel Over front",
+  "summary": {
+    "motive": "Attack the vulnerable intermediate middle-of-the-field void (18-22 yards) against two-high and single-high defenses by pairing a deep post clearout with a crossing over-route.",
+    "keyDefender": "Weak Safety (FS in Quarters) & Mike Linebacker",
+    "whyItWorks": "The Duo run fake pulls the Mike linebacker into the line of scrimmage, while the Z vertical post forces both deep field safeties back, leaving X in single-coverage space on an over-route with a 20-yard running start.",
+    "failureMode": "Free safety sitting disciplined in the deep intermediate hole rather than biting on the run fake, or backside edge rusher beating the LT before the 7-step play-action drop develops."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Heavy Duo Play-Action Suck",
+      "text": "The offensive line surges forward with physical Duo run blocking while the QB executes a deep under-center mesh. Both the Mike and Will linebackers violently trigger into the A/B gaps.",
+      "focus": ["QB", "RB", "MIKE", "WILL"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. The Post Clearout & Crosser Stride",
+      "text": "Z explodes on a deep vertical post, forcing the strong safety and field corner 25 yards downfield. Meanwhile, X takes a clean inside release, building full acceleration into the deep intermediate void.",
+      "focus": ["Z", "SS", "RCB", "X"]
+    },
+    {
+      "t": 2.8,
+      "title": "3. The High-Low Crosser Dilemma",
+      "text": "Tight end Y drags across at 4 yards depth, freezing the Will LB underneath. Behind the linebackers and underneath the retreating safeties, a massive 15-yard green canyon opens for X.",
+      "focus": ["TE", "WILL", "X", "FS"]
+    },
+    {
+      "t": 3.6,
+      "title": "4. The Deep Over Cannon Strike",
+      "text": "The QB steps into a clean pocket and launches a 25-yard strike to X in full stride across the hashes, completely outflanking the defense for a 35-yard explosive touchdown.",
+      "focus": ["QB", "X", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcvay-glance-rpo-orbit"],
+    "playsOff": ["mcvay-duo-lead-run", "mcvay-pa-sail-flood"],
+    "tell": "Backside X receiver takes a deep inside release crossing behind second-level linebackers at 18-20 yards depth instead of digging or stalk blocking."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

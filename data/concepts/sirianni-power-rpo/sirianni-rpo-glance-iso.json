@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sirianni-rpo-glance-iso",
+  "schemeId": "sirianni-power-rpo",
+  "order": 2,
+  "name": "Backside Glance ISO RPO",
+  "personnel": "11",
+  "formation": "Gun 3x1 Trips Right, Solo X Left",
+  "situation": "2nd & 4, +42, RPO conflict call",
+  "coverage": "Cover 3 Match (Apex Conflict)",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Put the backside Will linebacker in an impossible run-pass conflict: if he steps up to stop the interior Duo run, punish him immediately with a rapid Glance route to the isolated X receiver.",
+    "keyDefender": "Will Linebacker (Backside Conflict / Run-Fit LB)",
+    "whyItWorks": "The threat of Philadelphia’s interior double teams forces the Will LB to commit downhill into the B-gap; the isolated X receiver wins instantly on an inside slant with zero safety help.",
+    "failureMode": "Will linebacker freezing in the passing lane to bat the ball down or boundary cornerback jumping the slant inside with aggressive trap technique."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Duo Run Action & Conflict Read",
+      "text": "From identical 3x1 Trips Right formation, the offensive line drives forward on an interior run block. QB rides the mesh with the RB while staring down the backside Will linebacker.",
+      "focus": ["QB", "RB", "WILL", "LG", "C"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Will LB Sucked Into the Box",
+      "text": "Stung by inside Duo on previous downs, the Will linebacker triggers downhill into the B-gap to stop the running back, completely vacating the intermediate slant window behind him.",
+      "focus": ["WILL", "QB", "X"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Clean Pull & Glance Laser",
+      "text": "QB snatches the ball out of the mesh, flips his hips, and fires a 12-yard dart to the isolated X receiver snapping inside on a physical 5-step Glance route.",
+      "focus": ["QB", "X", "LCB"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Physical Body Shield & YAC",
+      "text": "X boxes out the boundary cornerback with his frame, secures the catch in stride between the numbers and hash, and rumbles forward for a 16-yard first down.",
+      "focus": ["X", "LCB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sirianni-slot-fade-out"],
+    "playsOff": ["sirianni-power-duo-inside"],
+    "tell": "Quarterback keeping eyes locked on the backside linebacker during the mesh rather than carrying out a naked keeper."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

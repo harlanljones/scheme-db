@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "ryans-wide9-under-tackle-wrap",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 1-tech NT in weak A-gap",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 1, "x": 26.2, "y": -0.8, "note": "Engage NT" },
+        { "t": 2.2, "x": 26, "y": -1.6, "note": "Hold A-gap" },
+        { "t": 4, "x": 25.8, "y": -2.4, "note": "Anchor" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block spiking 3T DT -> pulled off balance by DT spike!",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Set inside" },
+        { "t": 1, "x": 26.5, "y": -0.8, "note": "Spike from 3T crashes across face" },
+        { "t": 2.2, "x": 27, "y": -1.4, "note": "Pinned inside by 3T; loop lane opens!" },
+        { "t": 4, "x": 26.8, "y": -2, "note": "Out of position" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block WDE Wide-9 rush",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Wide vertical kick slide" },
+        { "t": 1, "x": 21.5, "y": -1.2, "note": "Set to meet Wide-9 speed" },
+        { "t": 2.4, "x": 20.8, "y": -2.8, "note": "Straining vs edge bend" },
+        { "t": 4, "x": 20.5, "y": -4, "note": "Edge pushed deep" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 3T and pick up looping DE",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Set strongside" },
+        { "t": 1, "x": 28.5, "y": -0.8, "note": "Help on 3T spike" },
+        { "t": 2.2, "x": 28.8, "y": -1.6, "note": "SDE loops around 3T untouched!" },
+        { "t": 4, "x": 28.5, "y": -2.6, "note": "Late to recover" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block SDE Wide-9 rush -> oversets outside as SDE loops inside!",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Deep kick slide to wide 9-tech" },
+        { "t": 1, "x": 33, "y": -1.2, "note": "Overset to meet outside speed" },
+        { "t": 2, "x": 32.5, "y": -1.8, "note": "SDE plants and loops inside behind 3T!" },
+        { "t": 4, "x": 32, "y": -2.5, "note": "Beaten inside" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "5-step drop, read seam/curl -> interior wrap stunt destroys pocket!",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap" },
+        { "t": 1.2, "x": 26.67, "y": -6.5, "note": "5-step drop" },
+        { "t": 2.2, "x": 26.67, "y": -6.8, "note": "Hitch to throw Y seam: SDE wraps unblocked into face!" },
+        { "t": 3.2, "x": 26, "y": -7.5, "note": "Attempt escape" },
+        { "t": 4, "x": 25.5, "y": -8.5, "note": "Sacked by SDE loop" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Scan B-gap for wrap stunt",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -4.5, "note": "Step to strong B-gap" },
+        { "t": 1.2, "x": 25.5, "y": -2.8, "note": "Brace for inside stunt" },
+        { "t": 2.4, "x": 27.5, "y": -2.2, "note": "Attempt to cut looping SDE" },
+        { "t": 4, "x": 27.8, "y": -2.5, "note": "Powered through by SDE" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary 12yd Comeback route",
+      "waypoints": [
+        { "t": 0, "x": 8, "y": -0.5, "note": "Vertical stem" },
+        { "t": 1.2, "x": 8, "y": 6, "note": "Push CB deep" },
+        { "t": 2.4, "x": 8, "y": 12, "note": "Comeback break" },
+        { "t": 4, "x": 7.5, "y": 9.5, "note": "Covered by LCB deep 1/3" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Slot 5yd Speed Out route",
+      "waypoints": [
+        { "t": 0, "x": 16, "y": -0.8, "note": "Speed release" },
+        { "t": 1, "x": 15.5, "y": 3.5, "note": "Break out to numbers" },
+        { "t": 2.2, "x": 11, "y": 5, "note": "Rallied on by WILL" },
+        { "t": 4, "x": 8.5, "y": 5.5, "note": "Tackled immediately" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Field slot 12yd Seam / Dig route",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": -0.8, "note": "Inside stem" },
+        { "t": 1.2, "x": 36, "y": 6, "note": "Push to 10yd depth" },
+        { "t": 2.4, "x": 33, "y": 12, "note": "Dig cut into middle" },
+        { "t": 4, "x": 28, "y": 12, "note": "Matched by MIKE / SS" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Field 14yd Post route",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": -0.5, "note": "Vertical stem" },
+        { "t": 1.2, "x": 45.5, "y": 7, "note": "Drive RCB" },
+        { "t": 2.4, "x": 42, "y": 14, "note": "Post break" },
+        { "t": 4, "x": 36, "y": 19, "note": "Capped by FS deep single high" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "WDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Wide-9 speed rush: bend around LT outside shoulder",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 0.9, "note": "Wide-9 stance (wide split)" },
+        { "t": 1, "x": 19.2, "y": -0.8, "note": "Dip and bend edge" },
+        { "t": 2.4, "x": 20.5, "y": -3.8, "note": "Squeeze pocket left" },
+        { "t": 4, "x": 23.5, "y": -6.5, "note": "Closing pursuit" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "1-Tech push rush: lock weak A-gap on Center",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "1-tech shade on Center" },
+        { "t": 1, "x": 25.8, "y": -0.4, "note": "Bull rush Center" },
+        { "t": 2.2, "x": 25.6, "y": -1.5, "note": "Anchor inside lane" },
+        { "t": 4, "x": 25.5, "y": -2.5, "note": "Maintain push" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Spike Stunt (T-E): crash violently into A-gap to pick LG and Center",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": 0.9, "note": "3-tech alignment" },
+        { "t": 0.8, "x": 27.2, "y": -0.4, "note": "Violent interior spike into A-gap" },
+        { "t": 2, "x": 26.8, "y": -1.8, "note": "Pin LG inside; create loop runway!" },
+        { "t": 4, "x": 26.5, "y": -3, "note": "Pocket destroyed" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "SDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Wrap Stunt (T-E): sell wide 9-tech rush, then wrap tightly behind 3T spike!",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 0.9, "note": "Wide-9 stance outside RT" },
+        { "t": 0.8, "x": 35, "y": -0.8, "note": "Hard upfield step: force RT to overset" },
+        { "t": 1.8, "x": 29.5, "y": -2.5, "note": "Plant and loop tight behind 3T into B-gap!" },
+        { "t": 3, "x": 27.5, "y": -6, "note": "Direct line to QB in pocket" },
+        { "t": 4, "x": 25.8, "y": -8.2, "note": "Violent wrap sack" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak curl/flat dropper in Cover 3 Sky",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 4.5, "note": "Downhill LB alignment" },
+        { "t": 1, "x": 17.5, "y": 5.5, "note": "Drive downhill to flat" },
+        { "t": 2.2, "x": 13, "y": 6.5, "note": "Match H speed out route" },
+        { "t": 4, "x": 10, "y": 7, "note": "Immediate tackle" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong hook dropper: wall off Y dig/seam",
+      "waypoints": [
+        { "t": 0, "x": 26.5, "y": 4.8, "note": "Middle LB alignment" },
+        { "t": 1, "x": 28.5, "y": 6.5, "note": "Drop to strong hook" },
+        { "t": 2.2, "x": 31, "y": 9.5, "note": "Wall off Y dig route" },
+        { "t": 4, "x": 30.5, "y": 11.5, "note": "Lane closed" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NICK",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field curl/flat dropper in Cover 3",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": 4, "note": "Apex over slot Y" },
+        { "t": 1, "x": 38, "y": 6.5, "note": "Drop to field curl/flat" },
+        { "t": 2.2, "x": 40, "y": 8.5, "note": "Underneath Z post" },
+        { "t": 4, "x": 41, "y": 9.5, "note": "Flat secured" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep 1/3 boundary (Cover 3)",
+      "waypoints": [
+        { "t": 0, "x": 8, "y": 6.5, "note": "Press-bail alignment" },
+        { "t": 1.2, "x": 8, "y": 10.5, "note": "Bail with X vertical" },
+        { "t": 2.4, "x": 8, "y": 15, "note": "Over top of comeback" },
+        { "t": 4, "x": 8, "y": 20, "note": "Boundary locked" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep 1/3 field (Cover 3)",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": 6.5, "note": "Off coverage" },
+        { "t": 1.2, "x": 45.5, "y": 10.5, "note": "Bail to deep 1/3" },
+        { "t": 2.5, "x": 46, "y": 16, "note": "Cap Z route" },
+        { "t": 4, "x": 46.5, "y": 21, "note": "Field deep third secured" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Sky support / intermediate hole robber",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 8.5, "note": "Single-high sky alignment" },
+        { "t": 1, "x": 33, "y": 10, "note": "Buzz downhill to intermediate seam" },
+        { "t": 2.2, "x": 30.5, "y": 12, "note": "Bracket Y dig with MIKE" },
+        { "t": 4, "x": 28, "y": 12.5, "note": "Interception position" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle 1/3 post safety (Cover 3)",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 13.5, "note": "Deep centerfield" },
+        { "t": 1.2, "x": 26.67, "y": 16.5, "note": "Track QB drop" },
+        { "t": 2.5, "x": 28, "y": 19.5, "note": "Drive on post route by Z" },
+        { "t": 4, "x": 30, "y": 22, "note": "Post capped" }
+      ]
+    }
+  ]
+}

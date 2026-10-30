@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "pistol-power-o-read",
+  "schemeId": "pistol-read-option",
+  "order": 2,
+  "name": "Pistol Power-O Read",
+  "personnel": "11",
+  "formation": "Pistol Right Slot, TE Right",
+  "situation": "2nd & 5, own 38, gap-run tendency",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Combine gap-scheme power blocking with a read of the backside end so the defense must defend both the pull and the keep.",
+    "keyDefender": "Backside Defensive End (unblocked read key)",
+    "whyItWorks": "The pull is irresistible bait for the end, and once he chases it the wrap blocker owns the second level while the kick-out has already collapsed the edge.",
+    "failureMode": "The end stays home and squeezes the pull instead, forcing the quarterback to pull the ball into an unblocked C-gap with nowhere to go."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Pull and the Read",
+      "text": "The guard kicks flat toward the edge while the quarterback seats the pistol mesh with eyes locked on the unblocked backside end.",
+      "focus": ["LG", "LE", "QB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The End Chases the Puller",
+      "text": "The end bites on the pull and sprints inside chasing it. His edge is gone, so the give branch is declared before the ball even arrives.",
+      "focus": ["LE", "LG", "F"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Kick-Out and Wrap",
+      "text": "The guard logs the playside end inside while the wrapping tackle rises into the hole hunting the Mike linebacker.",
+      "focus": ["LG", "LT", "RE"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Off-Tackle Behind the Leader",
+      "text": "The back presses off-tackle behind the wrap block, turning upfield through a seam where both second-level defenders have been displaced.",
+      "focus": ["F", "LT", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["pistol-speed-option"],
+    "playsOff": ["pistol-inside-zone-read"],
+    "tell": "A guard pulls while the quarterback still reads a defender — pure power-o hands the ball immediately with no ride phase."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

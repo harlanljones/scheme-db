@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "todd-bowles",
+  "name": "Todd Bowles",
+  "role2026": "Head Coach, Tampa Bay Buccaneers",
+  "team": "Tampa Bay Buccaneers",
+  "lineage": "belichick-flores",
+  "mentorId": "bill-belichick",
+  "disciples": [],
+  "side": "defense",
+  "philosophy": "Pressure through deception: disguise base coverages as exotic blitzes, then shift post-snap into drop-8 Tampa 2 lurk patterns or unleash delayed cross blitzes from unexpected angles. Bowles makes offenses prepare for 10 different looks and then shows them an 11th.",
+  "keyConcepts": ["Dual A-Gap Cross Blitz", "Overload Boundary Fire", "Drop-8 Tampa 2 Lurk", "Peel Zone Sim Pressure"],
+  "schemeIds": ["bowles-creeper-blitz"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Super Bowl LV Champion DC", "Tampa Bay Buccaneers HC"]
+}

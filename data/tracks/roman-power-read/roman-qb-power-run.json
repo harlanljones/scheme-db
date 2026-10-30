@@ -1,0 +1,322 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "roman-qb-power-run",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Down block backside, seal the nose from the pull path",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.6, "x": 26.1, "y": 0.3, "note": "Down block on NT" },
+        { "t": 1.5, "x": 25.9, "y": 1, "note": "Seal interior" },
+        { "t": 4, "x": 25.7, "y": 1.8, "note": "Hold the wall" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pull playside and log the MIKE linebacker out of the B/C-gap",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Pull step" },
+        { "t": 0.5, "x": 26.5, "y": -1, "note": "Pulling right" },
+        { "t": 1.3, "x": 28.8, "y": -0.3, "note": "Flat pull behind QB" },
+        { "t": 2, "x": 29.5, "y": 2, "note": "Log MIKE inside-out" },
+        { "t": 4, "x": 30, "y": 3.5, "note": "Drive MIKE from hole" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Hinge on backside edge, cut off pursuit behind the play",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Hinge step" },
+        { "t": 0.7, "x": 22.9, "y": 0.3, "note": "Protect backdoor vs WDE" },
+        { "t": 1.6, "x": 22.6, "y": 1, "note": "Seal pursuit lane" },
+        { "t": 4, "x": 22.4, "y": 1.8, "note": "Maintain hinge" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Base the 3-tech as the anchor of the double team",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Base step on 3T" },
+        { "t": 0.7, "x": 29, "y": 0.4, "note": "Drive into 3T" },
+        { "t": 1.7, "x": 29.3, "y": 1.1, "note": "Anchor double team" },
+        { "t": 4, "x": 29.5, "y": 1.9, "note": "Sustain block" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Combo the 3-tech then climb to the filling safety",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Combo step with RG" },
+        { "t": 0.7, "x": 29.6, "y": 0.3, "note": "Double-team 3T" },
+        { "t": 1.7, "x": 30, "y": 1.2, "note": "Peel to second level" },
+        { "t": 2.8, "x": 30.8, "y": 3, "note": "Climb to SS" },
+        { "t": 4, "x": 31.5, "y": 4.5, "note": "Block safety in alley" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Down block inside to wall the B-gap and protect the pull lane",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Down step inside" },
+        { "t": 0.6, "x": 31, "y": 0.3, "note": "Wall interior of C-gap" },
+        { "t": 1.5, "x": 30.7, "y": 1.2, "note": "Seal any slanting DL" },
+        { "t": 4, "x": 30.5, "y": 2, "note": "Hold the wall" }
+      ]
+    },
+    {
+      "id": "U",
+      "label": "U",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Wing pins the force corner so the edge cannot box",
+      "waypoints": [
+        { "t": 0, "x": 33.8, "y": -1.2, "note": "Pin release" },
+        { "t": 0.8, "x": 35, "y": 0.8, "note": "Arc at force CB" },
+        { "t": 2, "x": 36.5, "y": 3.2, "note": "Engage RCB" },
+        { "t": 4, "x": 37, "y": 4.5, "note": "Wall RCB outside" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Designed keep — clamps ball at snap, follows F kick-out and LG log through the B/C-gap",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Under-center snap, ball clamped" },
+        { "t": 0.4, "x": 27.8, "y": -2.3, "note": "Open right, no mesh decision" },
+        { "t": 1, "x": 29, "y": -2.2, "note": "Ride RB fake, eyes on F kick" },
+        { "t": 1.8, "x": 30.2, "y": -0.5, "note": "Press B/C-gap behind kick-out" },
+        { "t": 2.6, "x": 31.2, "y": 3.5, "note": "Square up behind LG log" },
+        { "t": 4, "x": 32.5, "y": 8.5, "note": "Fall forward for the conversion" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Counter-flow fake left, then leak backside to cut off WILL",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -5.5, "note": "Counter false step left" },
+        { "t": 0.5, "x": 24.5, "y": -5, "note": "Sell counter away from keeper" },
+        { "t": 1.3, "x": 23.5, "y": -4, "note": "Gather, drift backside" },
+        { "t": 2.4, "x": 23, "y": -0.5, "note": "Leak to cut off WILL" },
+        { "t": 4, "x": 24, "y": 1.5, "note": "Finish backside block" }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Lead kicker — fullback kicks out the unblocked SDE to spring the keeper",
+      "waypoints": [
+        { "t": 0, "x": 28.4, "y": -3.4, "note": "Kick step through hole" },
+        { "t": 0.7, "x": 30.5, "y": -1.8, "note": "Aim at SDE inside shoulder" },
+        { "t": 1.5, "x": 32.2, "y": 0.5, "note": "Kick-out block on SDE" },
+        { "t": 4, "x": 33, "y": 1.8, "note": "Wash SDE down the line" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Backside X stalk-blocks LCB to kill backside pursuit",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Drive at LCB" },
+        { "t": 1.1, "x": 8.2, "y": 2.2, "note": "Stalk angle" },
+        { "t": 2.3, "x": 8.2, "y": 4.6, "note": "Engage LCB" },
+        { "t": 4, "x": 8.6, "y": 6, "note": "Sustain stalk block" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Backside contain held by LT hinge, late chase",
+      "waypoints": [
+        { "t": 0, "x": 21.8, "y": 0.9, "note": "Edge rush stance" },
+        { "t": 1, "x": 21.2, "y": 1.5, "note": "Spill step wrong way" },
+        { "t": 2.5, "x": 23.5, "y": 3.5, "note": "Chase keeper" },
+        { "t": 4, "x": 26, "y": 5, "note": "Trailing pursuit" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "A-gap defender down-blocked by center, washed from gap",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 0.9, "note": "Attack A-gap" },
+        { "t": 0.8, "x": 26, "y": 0.8, "note": "Caught by C down block" },
+        { "t": 2, "x": 25.9, "y": 1.5, "note": "Washed down" },
+        { "t": 4, "x": 25.8, "y": 2.1, "note": "Blocked out" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "B-gap defender doubled by RG/RT, anchored in place",
+      "waypoints": [
+        { "t": 0, "x": 29.2, "y": 0.9, "note": "Attack B-gap" },
+        { "t": 0.8, "x": 29.4, "y": 1, "note": "Doubled by RG/RT" },
+        { "t": 2, "x": 29.6, "y": 1.7, "note": "Anchored in place" },
+        { "t": 4, "x": 29.8, "y": 2.4, "note": "Unable to pursue" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "KEY DEFENDER — unblocked edge forced to wrong-arm; the FB kick-out catches him crashing inside",
+      "waypoints": [
+        { "t": 0, "x": 33.4, "y": 0.9, "note": "Unblocked edge alignment" },
+        { "t": 0.8, "x": 32.6, "y": 1.5, "note": "Wrong-arms down inside" },
+        { "t": 1.6, "x": 33, "y": 1, "note": "Met by F kick-out" },
+        { "t": 4, "x": 33.5, "y": 1.5, "note": "Washed out of the play" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Bites hard on RB counter fake, wrong-way recovery chase",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 4.5, "note": "Box alignment" },
+        { "t": 0.8, "x": 20.5, "y": 4.8, "note": "Bites on counter fake left" },
+        { "t": 2.2, "x": 23.5, "y": 5, "note": "Recovers toward keeper" },
+        { "t": 4, "x": 27, "y": 6, "note": "Trailing pursuit" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Fills the gap the QB runs through, logged by pulling guard",
+      "waypoints": [
+        { "t": 0, "x": 26, "y": 4.8, "note": "Fill read" },
+        { "t": 0.9, "x": 26.6, "y": 4.2, "note": "Trigger into box" },
+        { "t": 2, "x": 29, "y": 3, "note": "Logged by pulling LG" },
+        { "t": 4, "x": 30, "y": 3.8, "note": "Driven from the hole" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Playside LB spills late, chases the keeper from behind",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": 3.8, "note": "Edge fill alignment" },
+        { "t": 1, "x": 31.5, "y": 4, "note": "Late spill trigger" },
+        { "t": 2.5, "x": 30.5, "y": 5.5, "note": "Chase angle" },
+        { "t": 4, "x": 31, "y": 7, "note": "Trailing" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Backside run support trigger, absorbed by X stalk",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 7, "note": "Press bail" },
+        { "t": 1.5, "x": 8, "y": 5.6, "note": "Triggers on run read" },
+        { "t": 2.5, "x": 8.4, "y": 4.9, "note": "Absorbed by X stalk" },
+        { "t": 4, "x": 8.6, "y": 5.2, "note": "Blocked out" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Force player pinned outside by arcing wing U",
+      "waypoints": [
+        { "t": 0, "x": 43.5, "y": 7, "note": "Force/contain alignment" },
+        { "t": 1.4, "x": 39.5, "y": 5.4, "note": "Triggers down on run" },
+        { "t": 2.6, "x": 37, "y": 3.5, "note": "Engaged by wing U" },
+        { "t": 4, "x": 36.6, "y": 4, "note": "Pinned outside" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Sky safety fills the alley into a climbing RT",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 9, "note": "Sky alignment" },
+        { "t": 1.3, "x": 33, "y": 6.5, "note": "Trigger downhill" },
+        { "t": 2.8, "x": 31.2, "y": 4.6, "note": "Met by climbing RT" },
+        { "t": 4, "x": 31.8, "y": 5.6, "note": "Walled from alley" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle third, last-resort tackle attempt",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 14, "note": "Deep middle third" },
+        { "t": 1.5, "x": 27.5, "y": 12, "note": "Reads power action" },
+        { "t": 2.8, "x": 29.5, "y": 9, "note": "Breaks down on keeper" },
+        { "t": 4, "x": 31, "y": 7.5, "note": "Tackle attempt in open field" }
+      ]
+    }
+  ]
+}

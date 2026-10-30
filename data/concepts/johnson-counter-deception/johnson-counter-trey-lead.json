@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "johnson-counter-trey-lead",
+  "schemeId": "johnson-counter-deception",
+  "order": 1,
+  "name": "11P Gun Counter Trey Lead (Detroit Back-Side Deception)",
+  "personnel": "11",
+  "formation": "11P Gun Trips Left vs Nickel Under",
+  "situation": "1st & 10, +40, early down run/pass balance",
+  "coverage": "Nickel Cover 2 Match",
+  "frontName": "Nickel 4-2-5 Under Front",
+  "summary": {
+    "motive": "Use pre-snap counter step and dual pulling guard deception to freeze linebackers and create an explosive B-gap crease.",
+    "keyDefender": "Mike Linebacker (Playside LB)",
+    "whyItWorks": "The counter false step freezes both box linebackers for a half-second while the double-pull simultaneously creates both the kick-out and the lead block; by the time defenders react, two pullers have already cleared the gap.",
+    "failureMode": "A disciplined 3-tech DT with gap-control discipline who defeats the center reach and disrupts the pull timing before the guards can set up their blocks."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Counter Step Misdirection",
+      "text": "The running back takes a false step weakside and the QB reverses pivot — two simultaneous misdirection cues freeze both linebackers who cannot identify the point of attack for a critical half-second.",
+      "focus": ["QB", "RB", "WILL", "MIKE"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. Dual Pull Action",
+      "text": "Left Guard pulls playside as a kick-out blocker and Right Guard leads through the B-gap to log the MIKE linebacker. Johnson weaponizes two pullers to create a wide-open running lane that a traditional counter trey achieves with one.",
+      "focus": ["LG", "RG", "MIKE", "NICKEL"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. Point of Attack Crease",
+      "text": "LG kicks out the Nickel while RG logs the scraping MIKE. The RB presses through a massive hole in the B-gap with only the free safety unblocked in the secondary.",
+      "focus": ["RB", "LG", "RG", "FS"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Explosive YAC to Second Level",
+      "text": "With the front seven blocked out and receivers stalking the cornerbacks, the running back cuts upfield into open grass. Ben Johnson's counter deception has neutralized every defender in the box.",
+      "focus": ["RB", "FS", "WILL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["johnson-pa-te-throwback", "johnson-orbit-reverse-screen"],
+    "playsOff": [],
+    "tell": "Both guards pull simultaneously in same direction; RB counter false step with QB reverse pivot before handoff."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

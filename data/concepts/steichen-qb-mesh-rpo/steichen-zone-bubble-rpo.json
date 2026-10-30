@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "steichen-zone-bubble-rpo",
+  "schemeId": "steichen-qb-mesh-rpo",
+  "order": 3,
+  "name": "Inside Zone + Bubble Screen RPO",
+  "personnel": "11",
+  "formation": "11P Gun Spread Right",
+  "situation": "2nd & 4, +40, tempo pace",
+  "coverage": "Cover 3 Sky / Off-Nickel",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Conflict the apex/overhang defender with a simultaneous inside zone run and perimeter bubble screen, taking whatever the defense concedes with ruthless efficiency.",
+    "keyDefender": "Nickel DB (Overhang Conflict Key)",
+    "whyItWorks": "The defense cannot be right: if the Nickel defender fits the box to stop the inside zone, the perimeter bubble screen has a 2-on-2 numerical advantage with lead blockers. If the Nickel widens, the running back gains 6+ yards on inside zone.",
+    "failureMode": "A lightning-fast Nickel DB who feigns a run fit before darting outside to jump the bubble screen for a pick-six."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Spread RPO Pre-Snap Alignment",
+      "text": "Steichen aligns in 11 Gun Spread with a 2-man bubble screen combination to the field, putting the apex Nickel defender in direct spatial conflict.",
+      "focus": ["QB", "RB", "NICKEL", "H", "Z", "TE"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Nickel Conflict Trigger",
+      "text": "RB attacks the A-gap on inside zone. Seeing the run look, the Nickel DB abandons his perimeter leverage and sprints downhill into the B-gap.",
+      "focus": ["NICKEL", "RB", "QB"]
+    },
+    {
+      "t": 1.1,
+      "title": "The Lightning QB Pull & Throw",
+      "text": "QB reads the Nickel crashing, immediately pulls the ball from the mesh, and fires a lightning-fast strike to H on the perimeter bubble screen.",
+      "focus": ["QB", "H", "NICKEL"]
+    },
+    {
+      "t": 2.4,
+      "title": "Perimeter Blocks & 14-Yard Explosive Burst",
+      "text": "TE and Z execute textbook perimeter stalk blocks on the SS and RCB, allowing H to cut untouched up the sideline for a 14-yard gain.",
+      "focus": ["H", "TE", "Z", "SS", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["steichen-verticals-switch", "steichen-qb-power-read"],
+    "playsOff": ["steichen-mesh-rail-wheel"],
+    "tell": "Playside WRs immediately stalk block on snap while slot WR flares on bubble arc; QB catches and throws at mesh."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

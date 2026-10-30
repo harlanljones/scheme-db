@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "match-quarters",
+  "term": "Match Quarters",
+  "aliases": ["Quarters", "Cover 4 Match", "match quarters", "Palms coverage", "Mod coverage", "Match Quarters", "Cover 4"],
+  "category": "Coverage & Shell",
+  "shortDef": "A 4-deep split-field zone coverage that converts into man-to-man coverage based on the vertical releases and out-breaks of receivers #1 and #2.",
+  "tacticalNote": "Enables 9-man run-box support while retaining deep 4-way bracket coverage against vertical 4-verticals route trees."
+}

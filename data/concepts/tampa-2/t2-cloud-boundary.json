@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "t2-cloud-boundary",
+  "schemeId": "tampa-2",
+  "order": 4,
+  "name": "Cloud Boundary Call",
+  "personnel": "Base 4-3",
+  "formation": "Cloud Shell vs Gun 2x1 Boundary Left",
+  "situation": "3rd & 4, +42, short-medium passing down",
+  "coverage": "Cover 2 Cloud Boundary (Corner Deep Half)",
+  "frontName": "Under Front, Four-Man Rush",
+  "summary": {
+    "motive": "Bait the boundary rhythm throw by disguising which defender owns the deep half, then exchange roles at the snap so the hot answer lands in coverage.",
+    "keyDefender": "SS flashing down from his disguised half alignment — he is the one waiting in the flat the QB was promised",
+    "whyItWorks": "The pre-snap picture shows a soft corner over the slot; the exchange means that window is actually the safest-covered spot on the field.",
+    "failureMode": "A deep over route through the vacated intermediate zone behind the dropping safety before MIKE can widen."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Soft-Boundary Disguise",
+      "text": "The boundary corner sits at 7 yards looking beatable while his safety floats like a deep-half player — a picture built to invite the rhythm throw.",
+      "focus": ["LCB", "SS", "H", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "2. The Cloud Exchange",
+      "text": "At the snap the corner spins and bails while the safety breaks downhill — they swap responsibilities so smoothly the QB’s key never changes color.",
+      "focus": ["LCB", "SS"]
+    },
+    {
+      "t": 2,
+      "title": "3. Quick Out Into a Waiting Flat",
+      "text": "The H out is thrown exactly where a soft corner should be, only to find the exchanging safety sitting on the flat landmark with eyes on the QB.",
+      "focus": ["SS", "H", "QB", "WILL"]
+    },
+    {
+      "t": 3,
+      "title": "4. Pick in the Boundary Flat",
+      "text": "The interception is secured as the bailed corner caps the vertical behind it — both halves of the exchange cashing on one snap.",
+      "focus": ["SS", "LCB", "X"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["t2-slb-edge-blitz"],
+    "playsOff": ["t2-roll-cover3-trips"],
+    "tell": "The boundary corner lines up at 7 yards instead of the base call’s 10-yard squat — base Tampa 2 never gives its corner that much cushion to the slot side."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

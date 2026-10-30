@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "ben-johnson",
+  "name": "Ben Johnson",
+  "role2026": "Head Coach, Chicago Bears",
+  "team": "Chicago Bears",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "kyle-shanahan",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "A masterclass in pre-snap deception: counter step misdirection, orbit motion setups, hook-ladder mesh rubs, and throwback bootlegs that exploit every linebacker's gap assignment while creating explosive play opportunities from seemingly ordinary run formations.",
+  "keyConcepts": ["Counter Trey Lead", "PA TE Throwback", "Hook-Ladder Mesh", "Orbit Motion Screen"],
+  "schemeIds": ["johnson-counter-deception"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Top-5 Scoring Offense Detroit Lions (2023-2024)", "2025 Bears HC Hiring"]
+}

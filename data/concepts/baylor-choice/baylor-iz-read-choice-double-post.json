@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "baylor-iz-read-choice-double-post",
+  "schemeId": "baylor-choice",
+  "order": 2,
+  "name": "IZ Read + Choice Double-Post",
+  "personnel": "11",
+  "formation": "11P Gun, Slot Left",
+  "situation": "2nd & 6, own 30, vs single-high shell",
+  "coverage": "Cover 3 Zone",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Pair a true zone-read pull with a double-post shot so the run action buys the second level while the safety is forced to defend both deep middles alone.",
+    "keyDefender": "Free safety (single-high, caught between two posts)",
+    "whyItWorks": "The read makes the edge defend the quarterback, which freezes the linebackers on run fits, while two converging choice posts guarantee the lone deep defender picks the wrong lever.",
+    "failureMode": "The end squeezes rather than crashes, keeping the quarterback in the box, and the safety splits the posts from depth instead of committing."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Read Sells the Give",
+      "text": "Five linemen fire inside-zone steps and the quarterback rides the mesh. The linebackers trigger downhill and even the nickel tips toward the box.",
+      "focus": ["QB", "RB", "LE", "MIKE"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Pull Punishes the Crash",
+      "text": "The read end crashes on the running back and the quarterback pulls instantly. With the edge vacated, he escapes clean and looks downfield.",
+      "focus": ["QB", "LE", "NICKEL"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. Two Posts, One Safety",
+      "text": "Both boundary receivers climb vertically off choice releases and bend to the middle deep at staggered depths. The single-high safety has run eyes and two stems entering his vision.",
+      "focus": ["H", "X", "FS"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Deep Middle Surrenders",
+      "text": "The safety commits to the outside post and the inside post crosses free behind him. The quarterback delivers off the pulled read over the frozen second level.",
+      "focus": ["QB", "H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["baylor-bubble-go-glance"],
+    "playsOff": ["baylor-slot-choice-shot"],
+    "tell": "The ball stays in the quarterback's hands after the mesh — a pure zone-read RPO would throw immediately off the read instead of pulling and climbing to set feet."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

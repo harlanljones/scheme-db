@@ -1,0 +1,332 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "rns-switch-verticals",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set, wall the nose out of the launch point",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap and vertical pass set" },
+        { "t": 0.8, "x": 26.3, "y": -1.1, "note": "Anchoring vs nose surge" },
+        { "t": 2, "x": 26.1, "y": -1.5, "note": "Walling interior pressure" },
+        { "t": 4, "x": 26.1, "y": -1.8, "note": "Pocket secure" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Kick slide left, protect edge vs 3-tech angle",
+      "waypoints": [
+        { "t": 0, "x": 24.9, "y": -0.5, "note": "Vertical set step" },
+        { "t": 0.8, "x": 24.2, "y": -1.2, "note": "Mirroring 3-tech charge" },
+        { "t": 2, "x": 23.7, "y": -1.5, "note": "Sealing B-gap pressure" },
+        { "t": 4, "x": 23.5, "y": -1.8, "note": "Edge protected" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set vs shaded tackle, punch and reset",
+      "waypoints": [
+        { "t": 0, "x": 28.4, "y": -0.5, "note": "Vertical set step" },
+        { "t": 0.8, "x": 28.9, "y": -1.2, "note": "Striking shaded tackle" },
+        { "t": 2, "x": 29.2, "y": -1.5, "note": "Resetting anchor" },
+        { "t": 4, "x": 29.4, "y": -1.8, "note": "Interior secure" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Protect blindside edge vs wide rusher",
+      "waypoints": [
+        { "t": 0, "x": 23.2, "y": -0.5, "note": "Quick vertical set" },
+        { "t": 0.8, "x": 22.4, "y": -1.3, "note": "Riding rusher up the arc" },
+        { "t": 2, "x": 21.9, "y": -1.6, "note": "Anchored on edge" },
+        { "t": 4, "x": 21.6, "y": -1.8, "note": "Blindside clean" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Protect strong-side edge vs end rush",
+      "waypoints": [
+        { "t": 0, "x": 30.1, "y": -0.5, "note": "Quick vertical set" },
+        { "t": 0.8, "x": 30.8, "y": -1.3, "note": "Absorbing bull rush" },
+        { "t": 2, "x": 31.2, "y": -1.6, "note": "Re-anchoring inside" },
+        { "t": 4, "x": 31.4, "y": -1.8, "note": "Edge secure" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Quick drop, read the switch conversion, deliver vertical to the winner",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
+        { "t": 0.5, "x": 26.67, "y": -3.8, "note": "Three-step drop" },
+        { "t": 1.1, "x": 26.67, "y": -5.4, "note": "Hitch, eyes on the switch" },
+        { "t": 1.9, "x": 26.9, "y": -5.2, "note": "Checking single-high lever" },
+        { "t": 2.7, "x": 27.3, "y": -4.4, "note": "Loading the vertical" },
+        { "t": 3.5, "x": 28.2, "y": -3.4, "note": "Full delivery" },
+        { "t": 4, "x": 29, "y": -2.4, "note": "Ball in flight" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Switch call: slam inside release, convert to vertical seam",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split, switch call" },
+        { "t": 0.8, "x": 8.3, "y": 2.6, "note": "Slamming inside past H" },
+        { "t": 1.7, "x": 10.2, "y": 8, "note": "Converting vertical inside the numbers" },
+        { "t": 2.7, "x": 11.8, "y": 13.5, "note": "Climbing on the inside hip" },
+        { "t": 4, "x": 13.2, "y": 19, "note": "Seam established" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Switch call: burst outside behind X, convert vertical up the numbers",
+      "waypoints": [
+        { "t": 0, "x": 12, "y": -1.2, "note": "Slot alignment off the ball" },
+        { "t": 0.7, "x": 14.6, "y": 2.4, "note": "Bursting outside behind X" },
+        { "t": 1.6, "x": 15.8, "y": 8, "note": "Converting vertical outside the numbers" },
+        { "t": 2.6, "x": 17, "y": 14, "note": "Stacking the nickel outside" },
+        { "t": 4, "x": 18.4, "y": 20, "note": "Outside vertical free" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Pure go route to pin the robber and stretch right half",
+      "waypoints": [
+        { "t": 0, "x": 41.2, "y": -1.2, "note": "Slot right alignment" },
+        { "t": 1, "x": 41.8, "y": 5, "note": "Instant vertical stem" },
+        { "t": 2.1, "x": 42.8, "y": 12, "note": "Pressuring the deep half" },
+        { "t": 3.2, "x": 43.8, "y": 18, "note": "Carrying safety depth" },
+        { "t": 4, "x": 44.5, "y": 23, "note": "Right half stretched" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Pure go route to hold the corner deep on the right side",
+      "waypoints": [
+        { "t": 0, "x": 48.2, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0.9, "x": 47.6, "y": 4.2, "note": "Vertical stem at RCB" },
+        { "t": 2, "x": 46.4, "y": 11.5, "note": "Stacking the corner" },
+        { "t": 3.2, "x": 44.8, "y": 18.5, "note": "Clearing the third" },
+        { "t": 4, "x": 43.5, "y": 23.5, "note": "Corner carried deep" }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Check protection then release weakside as outlet",
+      "waypoints": [
+        { "t": 0, "x": 31.2, "y": -4.6, "note": "Offset alignment" },
+        { "t": 0.7, "x": 30, "y": -5.2, "note": "Checking edge pressure first" },
+        { "t": 1.7, "x": 26.8, "y": -6, "note": "Releasing weak" },
+        { "t": 2.7, "x": 23.5, "y": -6.5, "note": "Flaring to the weak outlet" },
+        { "t": 4, "x": 21.5, "y": -7, "note": "Outlet available" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weakside rush lane, close the blindside arc",
+      "waypoints": [
+        { "t": 0, "x": 20.4, "y": 0.9, "note": "Wide alignment" },
+        { "t": 0.8, "x": 19.9, "y": 2.3, "note": "Rushing up the arc" },
+        { "t": 2, "x": 19.6, "y": 3.7, "note": "Turned by LT" },
+        { "t": 4, "x": 19.3, "y": 4.3, "note": "Rush contained" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "N",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Shade A-gap, collapse the pocket interior",
+      "waypoints": [
+        { "t": 0, "x": 24.6, "y": 0.9, "note": "Shade alignment" },
+        { "t": 0.8, "x": 24.2, "y": 2.5, "note": "Penetrating A-gap" },
+        { "t": 2, "x": 24, "y": 4, "note": "Walled by Center" },
+        { "t": 4, "x": 23.8, "y": 4.6, "note": "Rush stalled" }
+      ]
+    },
+    {
+      "id": "T3",
+      "label": "T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "3-tech rush, work the B-gap to QB face",
+      "waypoints": [
+        { "t": 0, "x": 28.7, "y": 0.9, "note": "3-tech alignment" },
+        { "t": 0.8, "x": 29, "y": 2.6, "note": "Charging B-gap" },
+        { "t": 2, "x": 29.4, "y": 4.2, "note": "Spun wide by Guard" },
+        { "t": 4, "x": 29.6, "y": 4.8, "note": "Rush widened out" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Contain rush vs the right tackle",
+      "waypoints": [
+        { "t": 0, "x": 33.3, "y": 0.9, "note": "Strong alignment" },
+        { "t": 0.8, "x": 33.7, "y": 2.4, "note": "Rushing contain" },
+        { "t": 2, "x": 34, "y": 4, "note": "Handled by RT" },
+        { "t": 4, "x": 34.3, "y": 4.6, "note": "Contained" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "M",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Middle hook drop, wall any crosser",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 4.5, "note": "Middle alignment" },
+        { "t": 0.8, "x": 26.5, "y": 6.2, "note": "Opening to middle hook" },
+        { "t": 1.8, "x": 26.8, "y": 8.2, "note": "Reading QB eyes" },
+        { "t": 2.8, "x": 27.4, "y": 10.5, "note": "Walling the seam" },
+        { "t": 4, "x": 28, "y": 11.5, "note": "Pinned in the middle" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "W",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak hook drop, carry the first crosser",
+      "waypoints": [
+        { "t": 0, "x": 21.6, "y": 4.6, "note": "Weak alignment" },
+        { "t": 0.8, "x": 21.2, "y": 6.4, "note": "Opening weak hook" },
+        { "t": 1.8, "x": 20.8, "y": 8.4, "note": "Eyes dragged by X stem" },
+        { "t": 2.8, "x": 20.4, "y": 10, "note": "Chasing the seam late" },
+        { "t": 4, "x": 20.2, "y": 11, "note": "Trailing the climber" }
+      ]
+    },
+    {
+      "id": "N",
+      "label": "N",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man the slot — chase the switch outside release",
+      "waypoints": [
+        { "t": 0, "x": 11.6, "y": 4.2, "note": "Aligned over the slot" },
+        { "t": 0.7, "x": 13.2, "y": 5.4, "note": "Opening on the outside burst" },
+        { "t": 1.6, "x": 14.4, "y": 9.8, "note": "Trailing through the switch traffic" },
+        { "t": 2.7, "x": 15.6, "y": 15, "note": "Chasing from trail position" },
+        { "t": 4, "x": 16.8, "y": 19.5, "note": "Beaten over the top" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man X — follow the inside slam, get rubbed by the crosser",
+      "waypoints": [
+        { "t": 0, "x": 4.8, "y": 6.8, "note": "Press alignment on X" },
+        { "t": 0.8, "x": 6.4, "y": 5, "note": "Mirroring the inside slam" },
+        { "t": 1.7, "x": 8.8, "y": 10, "note": "Dragged inside by the stem" },
+        { "t": 2.7, "x": 10.4, "y": 15.5, "note": "Trailing through traffic" },
+        { "t": 4, "x": 12, "y": 20, "note": "Rubbed off the climb" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man Z — bail and trail the pure go",
+      "waypoints": [
+        { "t": 0, "x": 49.2, "y": 7.2, "note": "Off coverage on Z" },
+        { "t": 0.9, "x": 48.4, "y": 9.5, "note": "Bailing on the stem" },
+        { "t": 2, "x": 47, "y": 13.5, "note": "Trailing the go route" },
+        { "t": 3.2, "x": 45.2, "y": 19, "note": "Carried downfield" },
+        { "t": 4, "x": 44, "y": 22.5, "note": "Stuck on the clearout" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Robber buzz — rob the first crosser, cannot help both seams",
+      "waypoints": [
+        { "t": 0, "x": 33.8, "y": 7, "note": "Robber alignment" },
+        { "t": 0.9, "x": 33, "y": 9, "note": "Buzzing at snap" },
+        { "t": 2, "x": 31.8, "y": 11, "note": "Eyes pulled to right stems" },
+        { "t": 3.2, "x": 30.4, "y": 12.4, "note": "Late recognition of switch" },
+        { "t": 4, "x": 29.6, "y": 13, "note": "Wrong side of the throw" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep middle — split the two left climbers alone",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 13, "note": "Center-field alignment" },
+        { "t": 1, "x": 26.4, "y": 15, "note": "Pedaling middle hole" },
+        { "t": 2.1, "x": 25, "y": 16.8, "note": "Two stems entering his zone" },
+        { "t": 3.2, "x": 23.4, "y": 18, "note": "Split by the converted pair" },
+        { "t": 4, "x": 22.4, "y": 19, "note": "Choosing one, losing one" }
+      ]
+    }
+  ]
+}

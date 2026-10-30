@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "macdonald-double-mug-buzz",
+  "schemeId": "macdonald-hybrid-disguise",
+  "order": 1,
+  "name": "Double-A Mug to Cover 3 Buzz",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Double-A Gap Mug Front vs 11P Gun 2x2",
+  "situation": "3rd & 7, +35, high-leverage passing down",
+  "coverage": "Cover 3 Buzz (Disguised from Cover 0)",
+  "frontName": "Double-A Mug 6-Up Presentation",
+  "summary": {
+    "motive": "Manufacture pre-snap protection chaos and force inaccurate hot throws by showing a 6-man Cover 0 blitz, then dropping 7 defenders into a suffocating Cover 3 Buzz shell.",
+    "keyDefender": "WILL (A-gap bail linebacker) & SS (Downhill Buzz safety)",
+    "whyItWorks": "Offensive protections allocate extra blockers to pick up the mugged linebackers, wasting 6 blockers on 4 rushers while 7 defenders flood all immediate passing lanes.",
+    "failureMode": "Quick perimeter wide-receiver screens or outside zone runs that attack the light edge before safeties can rotate."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Double-A Mug Presentation (Cover 0 Illusion)",
+      "text": "Mike Macdonald presents a terrifying 6-up look with both inside linebackers (WILL & MIKE) threatening the A-gaps, forcing the offensive line into slide protection and the QB to look for a quick hot throw.",
+      "focus": ["WILL", "MIKE", "NT", "3T", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "Simultaneous Bail & Buzz Rotation",
+      "text": "At the snap, Macdonald only rushes 4! Both mugged linebackers bail instantly into underneath hook zones, while SS buzzes downhill from two-high depth into the intermediate hole.",
+      "focus": ["WILL", "MIKE", "SS", "FS"]
+    },
+    {
+      "t": 2,
+      "title": "Hot Read Baited & Window Trapped",
+      "text": "The QB throws his designated hot slant against what he thought was Cover 0, only to find WILL standing directly in the throwing lane and SS robbing the dig behind it.",
+      "focus": ["WILL", "SS", "H", "Y", "QB"]
+    },
+    {
+      "t": 3.5,
+      "title": "4-Man Organic Pressure Finishes",
+      "text": "With all hot throwing windows populated by 7 defenders, the 4-man defensive line rush arrives for the coverage sack.",
+      "focus": ["WDE", "3T", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["macdonald-creeper-overload", "macdonald-split-field-trap"],
+    "playsOff": [],
+    "tell": "Base mug look where both mugged linebackers bail into hook zones at snap while SS buzzes down"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

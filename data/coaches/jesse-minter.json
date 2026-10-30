@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "jesse-minter",
+  "name": "Jesse Minter",
+  "role2026": "Head Coach, Baltimore Ravens",
+  "team": "Baltimore Ravens",
+  "lineage": "macdonald-pressure",
+  "mentorId": "mike-macdonald",
+  "disciples": [],
+  "side": "defense",
+  "philosophy": "Exotic 5- and 6-man pressure packages mixed with amoeba fronts, baiting quarterbacks into pre-snap hot reads that rotate directly into post-snap traps.",
+  "keyConcepts": ["Amoeba Overload", "Fire Zone 3", "Cover 1 Lurk / Robber", "Slot Blitz Creepers"],
+  "schemeIds": ["minter-amoeba-creeper"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2026 Ravens HC Hiring", "Architect of #1 Total Defense (Chargers/Michigan)"]
+}

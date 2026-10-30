@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "june-jones",
+  "name": "June Jones",
+  "role2026": "Run and Shoot Pioneer",
+  "team": "Houston Oilers / Atlanta Falcons / Hawaii / SMU",
+  "lineage": "coryell-vertical",
+  "side": "offense",
+  "philosophy": "Four-wide read-route passing: receivers convert their routes on the fly against coverage leverage, with no huddle tempo and QB reads that attack grass the defense refuses to cover.",
+  "keyConcepts": ["Read-Route Adjustments", "Four-Wide Spacing", "No-Huddle Tempo", "Switch & Mesh Conversions"],
+  "schemeIds": ["run-and-shoot"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Revolutionized NFL Passing with Oilers Run and Shoot", "Hawaii Warrior Record Offenses"]
+}

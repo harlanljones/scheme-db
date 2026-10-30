@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "paul-johnson",
+  "name": "Paul Johnson",
+  "role2026": "Flexbone Triple Option Architect",
+  "team": "Georgia Tech (2008-2018) / Navy",
+  "lineage": "option-spread",
+  "side": "offense",
+  "philosophy": "Modern flexbone triple option: midline, veer, and rocket pitch series out of two-back slotback sets, mathematically forcing defenders into wrong answers on every snap.",
+  "keyConcepts": ["Midline Triple", "Rocket Toss", "Veer Pitch Key", "Slotback Pitch Geometry"],
+  "schemeIds": ["flexbone-triple-option"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["2x National Coach of the Year (I-AA)", "ACC Champion Georgia Tech Offenses"]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "dave-aranda",
+  "name": "Dave Aranda",
+  "role2026": "Tite Front / Peso Architect",
+  "team": "Baylor Bears HC / LSU DC (2016-2019)",
+  "lineage": "college-defensive-fronts",
+  "side": "defense",
+  "philosophy": "Engineered the tite front (4i-0-4i) to eliminate B-gaps against spread run, played from peso nickel/dime personnel with hybrid DB-linebackers, and layered simulated pressures on top.",
+  "keyConcepts": ["4i-0-4i Tite Box", "Peso Hybrid Personnel", "Apex Linebacker Splits", "ILB-DL Simulated Exchanges"],
+  "schemeIds": ["aranda-tite-peso"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2019 National Championship DC (LSU)", "Baylor Big 12 Championship Game Appearances"]
+}
