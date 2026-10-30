@@ -189,6 +189,30 @@ describe('validateDataset', () => {
     expect(errorsOf(ds).join('\n')).toContain('lists no sources');
   });
 
+  it('requires generatedFrom once a player is marked compiled', () => {
+    const ds = clone();
+    ds.tracks[0].offense[0].origin = 'compiled';
+    expect(errorsOf(ds).join('\n')).toContain('has compiled players');
+    ds.tracks[0].generatedFrom = { spec: 'a'.repeat(64), compiler: '0.1.0' };
+    expect(errorsOf(ds).join('\n')).not.toContain('has compiled players');
+  });
+
+  it('accepts only a sha256 spec hash and a semver compiler in generatedFrom', () => {
+    const base = structuredClone(dataset.tracks[0]);
+    expect(Tracks.safeParse({ ...base, generatedFrom: { spec: 'a'.repeat(64), compiler: '0.1.0' } }).success).toBe(true);
+    expect(Tracks.safeParse({ ...base, generatedFrom: { spec: 'abc', compiler: '0.1.0' } }).success).toBe(false);
+    expect(Tracks.safeParse({ ...base, generatedFrom: { spec: 'a'.repeat(64), compiler: 'latest' } }).success).toBe(false);
+    expect(Tracks.safeParse({ ...base, generatedFrom: { spec: 'a'.repeat(64), compiler: '0.1.0', extra: 1 } }).success).toBe(false);
+  });
+
+  it('accepts origin "compiled" or "authored" on a player and nothing else', () => {
+    const base = structuredClone(dataset.tracks[0]);
+    for (const [origin, ok] of [['compiled', true], ['authored', true], ['hand-drawn', false]] as const) {
+      const offense = [{ ...base.offense[0], origin }, ...base.offense.slice(1)];
+      expect(Tracks.safeParse({ ...base, offense }).success, origin).toBe(ok);
+    }
+  });
+
   it('flags a lineage that references an unknown coach', () => {
     const ds = clone();
     ds.lineages[0].rootNodes[0].coachId = 'nobody';

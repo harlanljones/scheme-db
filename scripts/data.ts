@@ -5,10 +5,12 @@
  *   bun run data:format          rewrite every record in canonical JSON formatting
  *   bun run data:format --check  fail if any record is not canonically formatted
  *   bun run data:schema          regenerate data/schema/*.schema.json from the Zod schemas
+ *   bun run data:frames [file]   write the 10 Hz frames export as CSV (default dist/data/frames.csv)
  */
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { z } from 'zod';
+import { framesFor, framesToCsv } from '../src/engine/frames';
 import { formatFile } from '../src/schema/format';
 import { DATA_DIR, loadDataset, RECORD_KIND_NAMES } from '../src/schema/load';
 import { Coach, Concept, Lineage, Scheme, Term, Tracks } from '../src/schema/schema';
@@ -70,7 +72,18 @@ if (command === 'validate') {
     fs.writeFileSync(path.join(dir, `${name}.schema.json`), `${JSON.stringify(z.toJSONSchema(schema), null, 2)}\n`);
   }
   console.log(`Wrote ${Object.keys(SCHEMAS).length} JSON Schemas to data/schema/.`);
+} else if (command === 'frames') {
+  const out = path.resolve(flags[0] ?? 'dist/data/frames.csv');
+  const { dataset, problems } = loadDataset();
+  if (problems.length > 0) {
+    console.error(`${problems.length} data problems; run \`bun run data:validate\` first.`);
+    process.exit(1);
+  }
+  const rows = dataset.tracks.flatMap((tracks) => framesFor(tracks));
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, framesToCsv(rows));
+  console.log(`Wrote ${rows.length} frames for ${dataset.tracks.length} concepts to ${path.relative(process.cwd(), out)}.`);
 } else {
-  console.error('Usage: bun run scripts/data.ts <validate | format [--check] | schema>');
+  console.error('Usage: bun run scripts/data.ts <validate | format [--check] | schema | frames [file]>');
   process.exit(1);
 }

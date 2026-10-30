@@ -3,6 +3,7 @@ import type { Play } from '../engine/types';
 import { Field } from './Field';
 import { PlayerMarker } from './PlayerMarker';
 import { positionAt } from '../engine/interpolate';
+import { DISGUISE_HOLD_PERCENT, disguiseSimilarity } from '../engine/disguise';
 
 export interface SequenceMapProps {
   plays: Play[];
@@ -48,7 +49,11 @@ export const SequenceMap: React.FC<SequenceMapProps> = memo(({
   const telemetry = useMemo(() => {
     const t = meshTime;
     const similarity =
-      t <= 0.4 ? 100 : t <= 0.8 ? 96 : t <= 1.2 ? 88 : Math.max(15, Math.round(88 - (t - 1.2) * 65));
+      basePlay && activeConstraint
+        ? isDefensive
+          ? disguiseSimilarity(basePlay.defense, activeConstraint.defense, t)
+          : disguiseSimilarity(basePlay.offense, activeConstraint.offense, t)
+        : 100;
 
     let phase = 'Pre-Snap Alignment';
     let defenderStatus = 'Balanced in Base Stance';
@@ -84,7 +89,7 @@ export const SequenceMap: React.FC<SequenceMapProps> = memo(({
       defenderDisplacement,
       statusColor,
     };
-  }, [meshTime]);
+  }, [meshTime, basePlay, activeConstraint, isDefensive]);
 
   // Mesh animation tick
   React.useEffect(() => {
@@ -631,7 +636,7 @@ export const SequenceMap: React.FC<SequenceMapProps> = memo(({
                   />
                 </div>
                 <span style={{ fontSize: '0.66rem', color: '#64748b' }}>
-                  {meshTime <= 1.2
+                  {telemetry.similarity >= DISGUISE_HOLD_PERCENT
                     ? '✓ Indistinguishable backfield tracks & OL reach steps'
                     : '⚡ Diverged: QB pulls ball, bootleg/shot launched into void'}
                 </span>

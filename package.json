@@ -37,6 +37,7 @@
     "data:validate": "bun run scripts/data.ts validate",
     "data:format": "bun run scripts/data.ts format",
     "data:schema": "bun run scripts/data.ts schema",
+    "data:frames": "bun run scripts/data.ts frames",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bun run build && wrangler deploy"

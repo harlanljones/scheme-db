@@ -13,6 +13,24 @@
       "type": "number",
       "exclusiveMinimum": 0
     },
+    "generatedFrom": {
+      "type": "object",
+      "properties": {
+        "spec": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "compiler": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?$"
+        }
+      },
+      "required": [
+        "spec",
+        "compiler"
+      ],
+      "additionalProperties": false
+    },
     "offense": {
       "type": "array",
       "items": {
@@ -59,6 +77,13 @@
           "assignment": {
             "type": "string",
             "minLength": 1
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "compiled",
+              "authored"
+            ]
           },
           "waypoints": {
             "minItems": 1,
@@ -147,6 +172,13 @@
           "assignment": {
             "type": "string",
             "minLength": 1
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "compiled",
+              "authored"
+            ]
           },
           "waypoints": {
             "minItems": 1,

@@ -90,6 +90,10 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
 
   for (const tracks of ds.tracks) {
     if (!conceptIds.has(tracks.conceptId)) problems.push(`Tracks record references unknown concept "${tracks.conceptId}"`);
+    const compiled = [...tracks.offense, ...tracks.defense].filter((player) => player.origin === 'compiled');
+    if (compiled.length > 0 && !tracks.generatedFrom) {
+      problems.push(`Tracks "${tracks.conceptId}" has compiled players (${compiled.map((p) => p.id).join(', ')}) but no generatedFrom`);
+    }
   }
 
   for (const coach of ds.coaches) {

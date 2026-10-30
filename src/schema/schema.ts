@@ -60,6 +60,9 @@ export const Waypoint = z.strictObject({
   note: text.optional(),
 });
 
+/** How a player's waypoints came to be. Absent means `authored`. */
+export const Origin = z.enum(['compiled', 'authored']);
+
 export const PlayerTrack = z.strictObject({
   id: text,
   label: text,
@@ -67,6 +70,7 @@ export const PlayerTrack = z.strictObject({
   role: Role,
   trail: Trail,
   assignment: text.optional(),
+  origin: Origin.optional(),
   waypoints: z.array(Waypoint).min(1),
 });
 
@@ -108,11 +112,18 @@ export const Concept = z.strictObject({
   provenance: Provenance,
 });
 
+/** Where compiled geometry came from: the sha256 of the play spec file and the compiler version that ran on it. */
+export const GeneratedFrom = z.strictObject({
+  spec: z.string().regex(/^[0-9a-f]{64}$/, 'must be a lowercase sha256 hex digest'),
+  compiler: z.string().regex(/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/, 'must be a semver version'),
+});
+
 /** Player geometry for one concept, in LOS-relative yards (x 0..53.33, y negative = backfield). */
 export const Tracks = z.strictObject({
   $schema: schemaRef,
   conceptId: slug,
   duration: z.number().positive(),
+  generatedFrom: GeneratedFrom.optional(),
   offense: z.array(PlayerTrack),
   defense: z.array(PlayerTrack),
 });
