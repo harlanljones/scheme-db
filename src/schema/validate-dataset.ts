@@ -1,3 +1,4 @@
+import { alignmentOverrides } from './formations';
 import { validatePlay } from '../engine/validate';
 import type { Play } from '../engine/types';
 import type { Concept, Dataset, Tracks } from './schema';
@@ -99,6 +100,8 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
           const missing = Object.keys(formation[side]).filter((label) => !trackIds.has(label));
           if (missing.length > 0) problems.push(`Concept "${concept.id}" has no ${side} track for formation "${formation.id}" players ${missing.join(', ')}`);
         }
+        const drift = alignmentOverrides(formation, tracks);
+        if (drift.length > 0) warnings.push(`Concept "${concept.id}" starts ${drift.map((d) => d.id).join(', ')} off formation "${formation.id}"`);
       }
     }
     for (const problem of validatePlay(asPlay(concept, tracks))) problems.push(`Concept "${concept.id}": ${problem}`);

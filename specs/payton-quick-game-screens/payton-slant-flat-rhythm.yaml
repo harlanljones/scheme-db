@@ -1,0 +1,24 @@
+$schema: ../../data/schema/spec.schema.json
+conceptId: payton-slant-flat-rhythm
+duration: 2.5
+formation: payton-11p-gun-spread-vs-nickel
+offense:
+  OL: { block: pass-set }
+  TE: { block: pass-set }
+  QB: { drop: gun }
+  RB: { block: pass-set }
+  X: { route: go }
+  H: { route: flat }
+  Z: { route: slant, depth: 2 }
+defense:
+  WDE: { rush: edge, depth: 6 }
+  NT: { rush: interior, depth: 5.5 }
+  3T: { rush: interior, depth: 5.5 }
+  SDE: { rush: edge, depth: 6.5 }
+  WILL: { zone: hook, side: left }
+  MIKE: { zone: hook, side: middle }
+  NICKEL: { man: H }
+  LCB: { man: X }
+  RCB: { man: Z }
+  SS: { zone: deep-half, side: right }
+  FS: { zone: deep-half, side: left }

@@ -29,7 +29,9 @@ describe('data/ library', () => {
 
   it('reports only the nine known people who are referenced as mentors or disciples but have no coach record', () => {
     const missing = new Set(
-      validateDataset(dataset, files).warnings.map((w) => /(?:mentor|disciple) "([^"]+)"/.exec(w)?.[1]),
+      validateDataset(dataset, files)
+        .warnings.map((w) => /(?:mentor|disciple) "([^"]+)"/.exec(w)?.[1])
+        .filter(Boolean),
     );
     expect([...missing].sort()).toEqual([
       'bill-parcells',
@@ -41,6 +43,17 @@ describe('data/ library', () => {
       'mike-holmgren',
       'monte-kiffin',
       'paul-brown',
+    ]);
+  });
+
+  it('warns about the five concepts whose tracks start off their formation preset', () => {
+    const drift = validateDataset(dataset, files).warnings.filter((w) => w.includes('off formation'));
+    expect(drift.map((w) => /Concept "([^"]+)"/.exec(w)![1]).sort()).toEqual([
+      'coen-motion-zone-cutback',
+      'macdonald-amoeba-cover0-peel',
+      'macdonald-split-field-trap',
+      'mcvay-glance-rpo-orbit',
+      'saleh-nascar-cover1-robber',
     ]);
   });
 
@@ -136,7 +149,9 @@ describe('parity with the legacy TypeScript library (temporary, removed with src
       const id = constName.toLowerCase().replace(/_/g, '-');
       const formation = dataset.formations.find((f) => f.id === id);
       expect(formation, id).toBeDefined();
-      expect(plain({ offense: formation!.offense, defense: formation!.defense }), id).toEqual(plain(preset));
+      const withoutRole = (side: Record<string, { x: number; y: number }>) =>
+        Object.fromEntries(Object.entries(side).map(([label, { x, y }]) => [label, { x, y }]));
+      expect(plain({ offense: withoutRole(formation!.offense), defense: withoutRole(formation!.defense) }), id).toEqual(plain(preset));
     }
   });
 
@@ -256,7 +271,7 @@ describe('validateDataset', () => {
     const concept = ds.concepts.find((c) => c.formationId)!;
     const tracks = ds.tracks.find((t) => t.conceptId === concept.id)!;
     const formation = ds.formations.find((f) => f.id === concept.formationId)!;
-    formation.offense['QB2'] = { x: 20, y: -5 };
+    formation.offense['QB2'] = { x: 20, y: -5, role: 'qb' };
     delete formation.offense['C'];
     expect(errorsOf(ds).join('\n')).toContain('has no offense track for formation');
     expect(tracks.offense.some((p) => p.id === 'QB2')).toBe(false);

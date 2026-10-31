@@ -134,6 +134,7 @@ export const Tracks = z.strictObject({
 export const Alignment = z.strictObject({
   x: z.number().min(0).max(53.33),
   y: z.number(),
+  role: Role,
 });
 
 /** Pre-snap alignment preset: the 11 offensive and 11 defensive players, keyed by their track id. */

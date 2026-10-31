@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "conceptId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "duration": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "formation": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Id of a record in data/formations/."
+    },
+    "offense": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "route": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "go",
+                    "description": "Vertical release straight upfield, leaning slightly toward the middle."
+                  },
+                  {
+                    "type": "string",
+                    "const": "seam",
+                    "description": "Vertical release up the seam between the numbers and the hash, leaning toward the middle."
+                  },
+                  {
+                    "type": "string",
+                    "const": "slant",
+                    "description": "Short stem, then a hard cut toward the middle at about 30 degrees from vertical."
+                  },
+                  {
+                    "type": "string",
+                    "const": "out",
+                    "description": "Stem to `depth`, then a flat 90-degree cut toward the sideline."
+                  },
+                  {
+                    "type": "string",
+                    "const": "in",
+                    "description": "Stem to `depth`, then a flat 90-degree cut toward the middle (a dig)."
+                  },
+                  {
+                    "type": "string",
+                    "const": "curl",
+                    "description": "Stem to `depth`, then turn back toward the quarterback and settle."
+                  },
+                  {
+                    "type": "string",
+                    "const": "comeback",
+                    "description": "Stem to `depth`, then return toward the sideline and the quarterback."
+                  },
+                  {
+                    "type": "string",
+                    "const": "corner",
+                    "description": "Stem to `depth`, then a 45-degree cut toward the sideline and the pylon."
+                  },
+                  {
+                    "type": "string",
+                    "const": "post",
+                    "description": "Stem to `depth`, then a 45-degree cut toward the goalposts."
+                  },
+                  {
+                    "type": "string",
+                    "const": "flat",
+                    "description": "Quick release toward the sideline, reaching `depth` yards upfield."
+                  },
+                  {
+                    "type": "string",
+                    "const": "shallow",
+                    "description": "Short crossing route that runs the field at `depth` yards, under the linebackers."
+                  },
+                  {
+                    "type": "string",
+                    "const": "swing",
+                    "description": "A back's slow arc toward the sideline behind and then past the line, reaching upfield."
+                  }
+                ]
+              },
+              "depth": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "description": "Yards upfield at the break (or total depth for flat and shallow)."
+              },
+              "delay": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Seconds to wait after the snap before releasing."
+              },
+              "side": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ],
+                "description": "Direction to run for flat, shallow and swing. Defaults to outward (inward for shallow)."
+              },
+              "assignment": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text for the viewer. Defaults to a description of the term."
+              }
+            },
+            "required": [
+              "route"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "block": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "pass-set",
+                    "description": "Retreat a step or two and form the pocket, spreading away from the center."
+                  },
+                  {
+                    "type": "string",
+                    "const": "check-release",
+                    "description": "Check for a blitzer first, then release into the flat on the `side` given."
+                  }
+                ]
+              },
+              "depth": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Yards of retreat for a pass set."
+              },
+              "side": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "right"
+                ],
+                "description": "Release direction for a check-release."
+              },
+              "assignment": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text for the viewer. Defaults to a description of the term."
+              }
+            },
+            "required": [
+              "block"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "drop": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "gun",
+                    "description": "Shotgun drop: about 1.5 yards back from the alignment."
+                  },
+                  {
+                    "type": "string",
+                    "const": "3-step",
+                    "description": "Three-step drop from under center: about 3 yards back, quickly."
+                  },
+                  {
+                    "type": "string",
+                    "const": "5-step",
+                    "description": "Five-step drop from under center: about 5 yards back."
+                  },
+                  {
+                    "type": "string",
+                    "const": "7-step",
+                    "description": "Seven-step drop from under center: about 7 yards back, unhurried."
+                  }
+                ]
+              },
+              "depth": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "description": "Overrides the drop distance in yards."
+              },
+              "assignment": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text for the viewer. Defaults to a description of the term."
+              }
+            },
+            "required": [
+              "drop"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "defense": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "rush": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "edge",
+                    "description": "Rush the passer around the tackle, keeping contain: penetrate while drifting outward."
+                  },
+                  {
+                    "type": "string",
+                    "const": "interior",
+                    "description": "Rush the passer between the tackles: penetrate straight upfield."
+                  }
+                ]
+              },
+              "depth": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "description": "Yards of penetration by the end of the play."
+              },
+              "assignment": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text for the viewer. Defaults to a description of the term."
+              }
+            },
+            "required": [
+              "rush"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "zone": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "hook",
+                    "description": "Underneath zone in the middle of the field, about 9 to 10 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "curl-flat",
+                    "description": "Underneath zone outside the hash, about 7 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "flat",
+                    "description": "Shallow outside zone, about 4 yards deep along the sideline."
+                  },
+                  {
+                    "type": "string",
+                    "const": "deep-quarter",
+                    "description": "Outside deep quarter of the field, about 16 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "deep-half",
+                    "description": "One half of the deep field, about 15 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "deep-third",
+                    "description": "One third of the deep field, about 15 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "deep-middle",
+                    "description": "Deep middle of the field, about 15 yards deep."
+                  }
+                ]
+              },
+              "side": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "middle",
+                  "right"
+                ]
+              },
+              "assignment": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text for the viewer. Defaults to a description of the term."
+              }
+            },
+            "required": [
+              "zone"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "man": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Follow the offensive player named in `man`, trailing him about `cushion` yards behind."
+              },
+              "cushion": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Yards behind the receiver once the defender has settled."
+              },
+              "lag": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Seconds the defender trails the receiver."
+              },
+              "assignment": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Text for the viewer. Defaults to a description of the term."
+              }
+            },
+            "required": [
+              "man"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "t": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "t",
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "path"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "conceptId",
+    "duration",
+    "formation",
+    "offense",
+    "defense"
+  ],
+  "additionalProperties": false
+}

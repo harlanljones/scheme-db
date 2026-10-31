@@ -55,14 +55,6 @@ for (const match of formationsSource.matchAll(/\/\*\*\n((?: \*[^\n]*\n)+) \*\/\n
   formationDocs.set(match[2], { name: first, description: rest.length > 0 ? rest.join(' ') : undefined });
 }
 
-for (const [constName, preset] of Object.entries(LEGACY_FORMATIONS)) {
-  const docs = formationDocs.get(constName);
-  if (!docs) throw new Error(`No doc comment for formation ${constName}`);
-  const record = Formation.parse({ id: formationIdOf(constName), ...docs, offense: preset.offense, defense: preset.defense });
-  formationRecords.set(record.id, record);
-  write('formations', [record.id], record);
-}
-
 // Plays name their preset only through an import, so find it in the source.
 const presetOfPlay = new Map<string, string>();
 const scanSchemes = (dir: string): void => {
@@ -76,6 +68,39 @@ const scanSchemes = (dir: string): void => {
   }
 };
 scanSchemes(path.resolve(import.meta.dirname, '../src/data/schemes'));
+
+// A preset does not say what position each label plays; the plays built on it do (and must agree).
+const rolesOfFormation = new Map<string, Map<string, string>>();
+for (const family of ALL_SCHEME_FAMILIES) {
+  for (const play of family.plays) {
+    const formationId = presetOfPlay.get(play.id);
+    if (!formationId) continue;
+    const roles = rolesOfFormation.get(formationId) ?? new Map<string, string>();
+    for (const player of [...play.offense, ...play.defense]) {
+      const key = `${player.side}/${player.id}`;
+      if (roles.has(key) && roles.get(key) !== player.role) throw new Error(`${play.id}: ${key} is "${player.role}" but "${roles.get(key)}" in another play on ${formationId}`);
+      roles.set(key, player.role);
+    }
+    rolesOfFormation.set(formationId, roles);
+  }
+}
+
+for (const [constName, preset] of Object.entries(LEGACY_FORMATIONS)) {
+  const docs = formationDocs.get(constName);
+  if (!docs) throw new Error(`No doc comment for formation ${constName}`);
+  const id = formationIdOf(constName);
+  const withRoles = (side: 'offense' | 'defense') =>
+    Object.fromEntries(
+      Object.entries(preset[side]).map(([label, point]) => {
+        const role = rolesOfFormation.get(id)?.get(`${side}/${label}`);
+        if (!role) throw new Error(`${id}: no play on this formation gives ${side}/${label} a role`);
+        return [label, { ...point, role }];
+      }),
+    );
+  const record = Formation.parse({ id, ...docs, offense: withRoles('offense'), defense: withRoles('defense') });
+  formationRecords.set(record.id, record);
+  write('formations', [record.id], record);
+}
 
 for (const family of ALL_SCHEME_FAMILIES) {
   if (!family.era) notes.push(`${family.id}: no era in legacy data, defaulted to "modern-nfl"`);

@@ -14,9 +14,10 @@ import { framesFor, framesToCsv } from '../src/engine/frames';
 import { formatFile } from '../src/schema/format';
 import { DATA_DIR, loadDataset, RECORD_KIND_NAMES } from '../src/schema/load';
 import { Coach, Concept, Formation, Lineage, Scheme, Term, Tracks } from '../src/schema/schema';
+import { Spec } from '../src/spec/schema';
 import { validateDataset } from '../src/schema/validate-dataset';
 
-const SCHEMAS = { scheme: Scheme, concept: Concept, tracks: Tracks, formation: Formation, coach: Coach, lineage: Lineage, term: Term };
+const SCHEMAS = { scheme: Scheme, concept: Concept, tracks: Tracks, formation: Formation, coach: Coach, lineage: Lineage, term: Term, spec: Spec };
 
 function recordFiles(): string[] {
   const out: string[] = [];

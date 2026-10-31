@@ -33,11 +33,25 @@
           },
           "y": {
             "type": "number"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ol",
+              "qb",
+              "rb",
+              "te",
+              "wr",
+              "dl",
+              "lb",
+              "db"
+            ]
           }
         },
         "required": [
           "x",
-          "y"
+          "y",
+          "role"
         ],
         "additionalProperties": false
       }
@@ -58,11 +72,25 @@
           },
           "y": {
             "type": "number"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ol",
+              "qb",
+              "rb",
+              "te",
+              "wr",
+              "dl",
+              "lb",
+              "db"
+            ]
           }
         },
         "required": [
           "x",
-          "y"
+          "y",
+          "role"
         ],
         "additionalProperties": false
       }

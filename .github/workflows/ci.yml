@@ -28,6 +28,9 @@ jobs:
       - name: Check data formatting
         run: bun run data:format --check
 
+      - name: Compile play specs
+        run: bun run specs:check
+
       - name: Run Vitest Validation Suite
         run: bun run test
 

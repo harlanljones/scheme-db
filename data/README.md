@@ -21,13 +21,15 @@ All 180 launch concepts are labeled `illustrative`. Their player geometry is han
 | `schemes/<scheme>.json` | scheme | Name, coach, team, side, era, lineage branch, description |
 | `concepts/<scheme>/<concept>.json` | concept | Personnel, formation, situation, coverage, front, summary, beats, relations, provenance |
 | `tracks/<scheme>/<concept>.json` | concept | Duration and the 22 player tracks with timed waypoints |
-| `formations/<formation>.json` | formation | A named pre-snap look: where the 11 offensive and 11 defensive players line up, keyed by track id |
+| `formations/<formation>.json` | formation | A named pre-snap look: where the 11 offensive and 11 defensive players line up and what position each plays, keyed by track id |
 | `coaches/<coach>.json` | coach | Profile, mentor and disciples, associated schemes |
 | `lineages/<branch>.json` | lineage | A coaching tree as nested coach ids |
 | `glossary/<term>.json` | term | Definition, aliases, category |
 | `schema/*.schema.json` | record kind | JSON Schema; each record points at its schema through `$schema` |
 
 A concept can name the formation it starts from with `formationId`. Its tracks may still move individual players off the preset, for example a pistol quarterback or a shifted front. 68 concepts name a formation; 63 start exactly on it and 5 move one or more players (`bun run data:validate` checks that every preset player has a track).
+
+Play specs in `specs/` compile to `tracks/` records, see [specs/README.md](../specs/README.md).
 
 Coordinates are yards relative to the line of scrimmage: `x` runs 0 to 53.33 across the field, `y` is negative in the offensive backfield and positive downfield.
 

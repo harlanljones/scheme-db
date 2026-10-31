@@ -38,6 +38,9 @@
     "data:format": "bun run scripts/data.ts format",
     "data:schema": "bun run scripts/data.ts schema",
     "data:frames": "bun run scripts/data.ts frames",
+    "specs:check": "bun run scripts/specs.ts check",
+    "specs:compile": "bun run scripts/specs.ts compile",
+    "specs:diff": "bun run scripts/specs.ts diff",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bun run build && wrangler deploy"
@@ -45,6 +48,7 @@
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "yaml": "^2.9.1",
     "zod": "^4.6.7"
   },
   "devDependencies": {
