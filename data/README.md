@@ -41,9 +41,32 @@ bun run data:format          rewrite every record in canonical formatting
 bun run data:format --check  fail if any record is not canonical (CI runs this)
 bun run data:schema          regenerate data/schema/*.schema.json
 bun run data:frames [file]   write the 10 Hz frames export as CSV (default dist/data/frames.csv)
+bun run data:release         build the JSON, CSV and SQLite downloads into dist/release (CI runs this)
 ```
 
 The frames export has one row per player per tenth of a second: `conceptId, playerId, frame, t, x, y`. It uses the same spline interpolation as the viewer, so it is a resampling of the waypoints, not tracking data.
+
+## Downloads
+
+`bun run data:release [--version v0.1.0] [--out dist/release]` writes three views of the same data, plus checksums and the license:
+
+- `scheme-db.json`: every record nested as in `data/`, plus a `meta` block.
+- `csv/*.csv`: 18 flat tables, one file each (schemes, coaches, concepts, concept beats, players, waypoints, frames and so on).
+- `scheme-db.sqlite`: the same tables with primary keys, ready to query.
+
+Lists of ids become join tables (`coach_schemes`, `concept_relations`, `glossary_aliases`); lists of free text, such as a coach's key concepts, are JSON arrays in one column. Booleans are 0 or 1 and a missing value is empty in CSV and NULL in SQLite. The build is deterministic, so the same data and version give the same checksums.
+
+```sql
+-- plays per scheme, with the coach
+SELECT c.name AS coach, s.name AS scheme, COUNT(*) AS plays
+FROM concepts k JOIN schemes s ON s.id = k.scheme_id JOIN coaches c ON c.id = s.coach_id
+GROUP BY s.id ORDER BY plays DESC;
+
+-- where receiver H is during the first second of a play
+SELECT frame, t, x, y FROM frames WHERE concept_id = 'kelly-mesh-spacing-concept' AND player_id = 'H' AND frame <= 10;
+```
+
+Pushing a tag such as `data-v0.1.0` runs `.github/workflows/release-data.yml`, which attaches the files to a GitHub release. Run that workflow by hand to get the same files as a workflow artifact without releasing.
 
 ## Migration from the TypeScript library
 

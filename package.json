@@ -38,6 +38,7 @@
     "data:format": "bun run scripts/data.ts format",
     "data:schema": "bun run scripts/data.ts schema",
     "data:frames": "bun run scripts/data.ts frames",
+    "data:release": "bun run scripts/release.ts",
     "specs:check": "bun run scripts/specs.ts check",
     "specs:compile": "bun run scripts/specs.ts compile",
     "specs:diff": "bun run scripts/specs.ts diff",

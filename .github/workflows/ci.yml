@@ -31,6 +31,9 @@ jobs:
       - name: Compile play specs
         run: bun run specs:check
 
+      - name: Build data release (JSON, CSV, SQLite)
+        run: bun run data:release --version ci
+
       - name: Run Vitest Validation Suite
         run: bun run test
 
