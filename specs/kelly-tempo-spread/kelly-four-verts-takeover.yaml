@@ -5,7 +5,7 @@ formation: kelly-10p-tempo-spread-vs-nickel
 offense:
   OL: { block: pass-set }
   QB: { drop: gun }
-  RB: { block: check-release, side: right }
+  RB: { block: check-release, side: left }
   X: { route: go }
   H: { route: seam }
   Y: { route: seam }

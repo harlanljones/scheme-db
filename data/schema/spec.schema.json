@@ -39,52 +39,52 @@
                   {
                     "type": "string",
                     "const": "seam",
-                    "description": "Vertical release up the seam between the numbers and the hash, leaning toward the middle (the lean is unverified against tracking data)."
+                    "description": "Vertical release up the seam between the numbers and the hash, leaning about 10 degrees toward the middle (the lean is unverified)."
                   },
                   {
                     "type": "string",
                     "const": "slant",
-                    "description": "Stem of about 3 yards, then a hard 45-degree cut toward the middle."
+                    "description": "Stem of about 3 yards, then a hard cut toward the middle at about 50 degrees from vertical."
                   },
                   {
                     "type": "string",
                     "const": "out",
-                    "description": "Stem to `depth`, then a flat 90-degree cut toward the sideline."
+                    "description": "Stem to `depth` (default 10), then a nearly flat cut toward the sideline, about 80 degrees from vertical."
                   },
                   {
                     "type": "string",
                     "const": "in",
-                    "description": "Stem to `depth`, then a flat 90-degree cut toward the middle (a dig)."
+                    "description": "Stem to `depth` (default 10), then a cut toward the middle at about 75 degrees from vertical (a dig). A `depth` of 5 gives a quick in."
                   },
                   {
                     "type": "string",
                     "const": "curl",
-                    "description": "Stem to `depth`, then turn back toward the quarterback and settle."
+                    "description": "Stem to `depth` (default 11), then turn back toward the quarterback and settle. A `depth` of 5 gives a hitch."
                   },
                   {
                     "type": "string",
                     "const": "comeback",
-                    "description": "Stem to `depth`, then return toward the sideline and the quarterback."
+                    "description": "Stem to `depth` (default 13), then return toward the sideline and the quarterback."
                   },
                   {
                     "type": "string",
                     "const": "corner",
-                    "description": "Stem to `depth`, then a 45-degree cut toward the sideline and the pylon."
+                    "description": "Stem to `depth` (default 12), then a cut toward the sideline and the pylon at about 40 degrees from vertical."
                   },
                   {
                     "type": "string",
                     "const": "post",
-                    "description": "Stem to `depth`, then a 45-degree cut toward the goalposts."
+                    "description": "Stem to `depth` (default 12), then a cut toward the goalposts at about 40 degrees from vertical."
                   },
                   {
                     "type": "string",
                     "const": "flat",
-                    "description": "Quick release toward the sideline, reaching `depth` yards upfield."
+                    "description": "Quick release toward the sideline, reaching `depth` yards upfield of the start (default 3 for a receiver, 4 for a back, who stays behind the line)."
                   },
                   {
                     "type": "string",
                     "const": "shallow",
-                    "description": "Short crossing route that runs the field at `depth` yards, under the linebackers."
+                    "description": "Short crossing route that runs the field at `depth` yards upfield of the start (default 4), under the linebackers."
                   },
                   {
                     "type": "string",
@@ -130,19 +130,19 @@
                   {
                     "type": "string",
                     "const": "pass-set",
-                    "description": "Retreat a step or two and form the pocket, spreading away from the center."
+                    "description": "Retreat and form the pocket, spreading away from the center, stopping about a yard in front of the quarterback."
                   },
                   {
                     "type": "string",
                     "const": "check-release",
-                    "description": "Check for a blitzer first, then release into the flat on the `side` given."
+                    "description": "Check for a blitzer for a moment, then release into the flat on the `side` given."
                   }
                 ]
               },
               "depth": {
                 "type": "number",
                 "minimum": 0,
-                "description": "Yards of retreat for a pass set."
+                "description": "Most yards of retreat for a pass set. Unset, a lineman retreats until he is about a yard in front of the quarterback."
               },
               "side": {
                 "type": "string",
@@ -171,22 +171,22 @@
                   {
                     "type": "string",
                     "const": "gun",
-                    "description": "Shotgun drop: about 1.5 yards back from the alignment."
+                    "description": "Shotgun drop: about 3 yards back from the alignment, set by about 2 seconds."
                   },
                   {
                     "type": "string",
                     "const": "3-step",
-                    "description": "Three-step drop from under center: about 3 yards back, quickly."
+                    "description": "Three-step drop from under center: about 3.5 yards back, quickly."
                   },
                   {
                     "type": "string",
                     "const": "5-step",
-                    "description": "Five-step drop from under center: about 5 yards back."
+                    "description": "Five-step drop from under center: about 6 yards back."
                   },
                   {
                     "type": "string",
                     "const": "7-step",
-                    "description": "Seven-step drop from under center: about 7 yards back, unhurried."
+                    "description": "Seven-step drop from under center: about 8 yards back, unhurried."
                   }
                 ]
               },
@@ -225,19 +225,19 @@
                   {
                     "type": "string",
                     "const": "edge",
-                    "description": "Rush the passer around the tackle: get into the backfield while drifting slightly toward the quarterback."
+                    "description": "Rush the passer around the tackle: get into the backfield, drifting toward the quarterback. `depth` caps the yards gained."
                   },
                   {
                     "type": "string",
                     "const": "interior",
-                    "description": "Rush the passer between the tackles: get into the backfield on a straight line."
+                    "description": "Rush the passer between the tackles: get into the backfield on a straight line. `depth` caps the yards gained."
                   }
                 ]
               },
               "depth": {
                 "type": "number",
                 "exclusiveMinimum": 0,
-                "description": "Yards of penetration by the end of the play."
+                "description": "Most yards the rusher gains into the backfield, as if a blocker stopped him. Unset, he rushes until he reaches the quarterback."
               },
               "assignment": {
                 "type": "string",
@@ -258,7 +258,7 @@
                   {
                     "type": "string",
                     "const": "hole",
-                    "description": "Underneath zone in the middle of the field, about 10 yards deep."
+                    "description": "Underneath zone in the middle of the field, about 9 yards deep."
                   },
                   {
                     "type": "string",
@@ -268,12 +268,12 @@
                   {
                     "type": "string",
                     "const": "curl-flat",
-                    "description": "Underneath zone outside the hash, about 7 yards deep."
+                    "description": "Underneath zone outside the hash, about 8 yards deep."
                   },
                   {
                     "type": "string",
                     "const": "flat",
-                    "description": "Shallow outside zone, about 4 yards deep along the sideline."
+                    "description": "Shallow outside zone, about 7 yards deep, near the sideline."
                   },
                   {
                     "type": "string",
@@ -283,22 +283,22 @@
                   {
                     "type": "string",
                     "const": "quarter-inside",
-                    "description": "Inside deep quarter of the field, about 16 yards deep."
+                    "description": "Inside deep quarter of the field, about 18 yards deep."
                   },
                   {
                     "type": "string",
                     "const": "deep-half",
-                    "description": "One half of the deep field, about 15 yards deep."
+                    "description": "One half of the deep field, about 22 yards deep."
                   },
                   {
                     "type": "string",
                     "const": "deep-third",
-                    "description": "One third of the deep field, about 15 yards deep."
+                    "description": "One third of the deep field, about 17 yards deep at the sidelines and 22 in the middle."
                   },
                   {
                     "type": "string",
                     "const": "deep-free",
-                    "description": "Deep middle of the field, about 15 yards deep: the single-high safety."
+                    "description": "Deep middle of the field, about 22 yards deep: the single-high safety."
                   }
                 ]
               },
@@ -327,17 +327,21 @@
               "man": {
                 "type": "string",
                 "minLength": 1,
-                "description": "Follow the offensive player named in `man`, trailing him about `cushion` yards behind."
+                "description": "Follow the offensive player named in `man`, a few tenths of a second behind him. The `technique` sets where he finishes: press and off over the top, trail behind."
               },
-              "cushion": {
-                "type": "number",
-                "minimum": 0,
-                "description": "Yards behind the receiver once the defender has settled."
+              "technique": {
+                "type": "string",
+                "enum": [
+                  "off",
+                  "press",
+                  "trail"
+                ],
+                "description": "Where the defender finishes: press and off end about half a yard deeper than the receiver (they differ only in how they line up), trail ends half a yard shallower. Defaults to off."
               },
               "lag": {
                 "type": "number",
                 "minimum": 0,
-                "description": "Seconds the defender trails the receiver."
+                "description": "Seconds the defender trails the receiver. Defaults to 0.4."
               },
               "assignment": {
                 "type": "string",

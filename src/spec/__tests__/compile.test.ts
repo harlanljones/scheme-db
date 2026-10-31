@@ -117,15 +117,16 @@ describe('compiled tracks obey physics', () => {
     }
   });
 
-  it('sends every rusher into the backfield and ends closer to the quarterback than he began', () => {
+  it('sends every rusher into the backfield, no deeper than his cap, and an uncapped rusher ends closer to the quarterback', () => {
     for (const { spec, tracks } of compiled) {
       for (const [id, job] of Object.entries(spec.defense)) {
         if (!('rush' in job)) continue;
-        let previousY = at(tracks, id, 0).y;
-        for (const t of timesTo(tracks.duration).slice(1)) {
-          const { y } = at(tracks, id, t);
-          expect(y, `${spec.conceptId} ${id} at ${t}s`).toBeLessThanOrEqual(previousY + 1e-6);
-          previousY = y;
+        // The waypoints, not the spline between them: Catmull-Rom can overshoot by a few hundredths of a yard where a rusher starts moving.
+        const { waypoints } = tracks.defense.find((p) => p.id === id)!;
+        waypoints.slice(1).forEach((w, i) => expect(w.y, `${spec.conceptId} ${id} at ${w.t}s`).toBeLessThanOrEqual(waypoints[i].y));
+        if (job.depth !== undefined) {
+          expect(waypoints[0].y - waypoints[waypoints.length - 1].y, `${spec.conceptId} ${id} cap`).toBeLessThanOrEqual(job.depth + 0.01);
+          continue;
         }
         const gap = (t: number) => {
           const rusher = at(tracks, id, t);
@@ -137,7 +138,7 @@ describe('compiled tracks obey physics', () => {
     }
   });
 
-  it('never stacks two teammates on the same spot', () => {
+  it('never puts two teammates on the same spot', () => {
     for (const { spec, tracks } of compiled) {
       for (const side of ['offense', 'defense'] as const) {
         const players = tracks[side];
@@ -261,8 +262,8 @@ describe('compileSpec', () => {
     const changed = structuredClone(meshSpec);
     (changed.offense as Record<string, unknown>).X = { route: 'slant' };
     const after = compileSpec(changed, formationForMesh, meshHash);
-    expect(xy(after, 'X', 1.2).x).toBeGreaterThan(xy(mesh.tracks, 'X', 1.2).x + 1);
-    expect(xy(after, 'LCB', 1.2).x).toBeGreaterThan(xy(mesh.tracks, 'LCB', 1.2).x + 0.5);
+    expect(xy(after, 'X', 2).x).toBeGreaterThan(xy(mesh.tracks, 'X', 2).x + 1);
+    expect(xy(after, 'LCB', 2).x).toBeGreaterThan(xy(mesh.tracks, 'LCB', 2).x + 0.5);
   });
 
   it('merges overrides after the compile and marks that player authored', () => {
@@ -292,7 +293,7 @@ describe('compileSpec', () => {
     for (const id of ['X', 'Z']) expect(at(tracks, id, 3).x, id).toBeCloseTo(at(tracks, id, 0).x, 1);
   });
 
-  it('cuts a slant at about 45 degrees after a stem of about 3 yards', () => {
+  it('cuts a slant at about 50 degrees after a stem of about 3 yards', () => {
     const tracks = compile((s) => {
       (s.offense as Record<string, unknown>).X = { route: 'slant' };
     });
@@ -302,8 +303,8 @@ describe('compileSpec', () => {
     expect(stemmed.length).toBeGreaterThan(0);
     for (const t of stemmed) expect(Math.abs(at(tracks, 'X', t).x - start.x), `at ${t}s`).toBeLessThan(0.1);
     const brokenAt = times.find((t) => Math.abs(at(tracks, 'X', t).x - start.x) > 0.5)!;
-    expect(heading(tracks, 'X', brokenAt, brokenAt + 1)).toBeGreaterThan(40);
-    expect(heading(tracks, 'X', brokenAt, brokenAt + 1)).toBeLessThan(50);
+    expect(heading(tracks, 'X', brokenAt, brokenAt + 1)).toBeGreaterThan(45);
+    expect(heading(tracks, 'X', brokenAt, brokenAt + 1)).toBeLessThan(55);
   });
 
   it('keeps a swing behind the line of scrimmage', () => {
@@ -337,5 +338,45 @@ describe('compileSpec', () => {
         (s.defense as Record<string, unknown>).MIKE = { zone: 'hole', side: 'left' };
       }),
     ).toThrow(/has no "left" side/);
+  });
+
+  // Medians from NFL Big Data Bowl 2025 (weeks 1-9 of 2022), rounded; see src/spec/calibration.ts. Tolerances are loose on purpose.
+  describe('calibration against published medians', () => {
+    const tracks = compile(() => undefined);
+    const run = (id: string, t: number) => {
+      const start = at(tracks, id, 0);
+      const now = at(tracks, id, t);
+      return { x: now.x - start.x, y: now.y - start.y };
+    };
+
+    it('starts a go route from rest: about 0.7 yd after 0.7 s, 2.7 after 1.2 s, 7.6 after 2.0 s, 19.6 after 3.8 s', () => {
+      const medians: [number, number, number][] = [[0.7, 0.7, 0.5], [1.2, 2.7, 0.6], [2, 7.6, 0.8], [3.8, 19.6, 1.2]];
+      for (const [t, yards, tolerance] of medians) expect(Math.abs(run('X', t).y - yards), `${t}s`).toBeLessThan(tolerance);
+    });
+
+    it('drops a shotgun quarterback about 3 yd by 2 s', () => {
+      expect(Math.abs(run('QB', 2).y + 3)).toBeLessThan(0.5);
+    });
+
+    it('retreats a tackle about 4 yd by 2 s and a center about 3 yd', () => {
+      expect(Math.abs(run('LT', 2).y + 4.1)).toBeLessThan(0.5);
+      expect(Math.abs(run('C', 2).y + 3.2)).toBeLessThan(0.5);
+    });
+
+    it('puts an edge rusher about 6 yd into the backfield by 2 s, drifting about 2 yd toward the quarterback', () => {
+      const uncapped = compile((s) => {
+        (s.defense as Record<string, unknown>).WDE = { rush: 'edge' };
+      });
+      const wde = (t: number) => ({ x: at(uncapped, 'WDE', t).x - at(uncapped, 'WDE', 0).x, y: at(uncapped, 'WDE', t).y - at(uncapped, 'WDE', 0).y });
+      expect(Math.abs(wde(2).y + 5.8)).toBeLessThan(0.7);
+      expect(Math.abs(wde(2.5).x - 2.7)).toBeLessThan(0.7);
+    });
+
+    it('moves zone defenders about half of the way to their spot by 2 s', () => {
+      const mike = at(tracks, 'MIKE', 0);
+      const share = (t: number) => (at(tracks, 'MIKE', t).y - mike.y) / (9 - mike.y);
+      expect(share(2)).toBeGreaterThan(0.43);
+      expect(share(2)).toBeLessThan(0.62);
+    });
   });
 });

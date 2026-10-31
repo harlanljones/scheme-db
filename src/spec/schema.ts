@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { Waypoint } from '../schema/schema';
-import { BLOCKS, DROPS, MAN, ROUTES, RUSHES, ZONES, keysOf } from './vocabulary';
+import { BLOCKS, DROPS, MAN, ROUTES, RUSHES, TECHNIQUES, ZONES, keysOf } from './vocabulary';
 
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'must be a kebab-case slug');
 const text = z.string().min(1);
@@ -23,7 +23,7 @@ export const RouteAction = z.strictObject({
 
 export const BlockAction = z.strictObject({
   block: terms(BLOCKS),
-  depth: z.number().min(0).describe('Yards of retreat for a pass set.').optional(),
+  depth: z.number().min(0).describe('Most yards of retreat for a pass set. Unset, a lineman retreats until he is about a yard in front of the quarterback.').optional(),
   side: Direction.describe('Release direction for a check-release.').optional(),
   assignment,
 });
@@ -38,7 +38,7 @@ export const OffenseAction = z.union([RouteAction, BlockAction, DropAction]);
 
 export const RushAction = z.strictObject({
   rush: terms(RUSHES),
-  depth: z.number().positive().describe('Yards of penetration by the end of the play.').optional(),
+  depth: z.number().positive().describe('Most yards the rusher gains into the backfield, as if a blocker stopped him. Unset, he rushes until he reaches the quarterback.').optional(),
   assignment,
 });
 
@@ -50,8 +50,8 @@ export const ZoneAction = z.strictObject({
 
 export const ManAction = z.strictObject({
   man: text.describe(MAN),
-  cushion: z.number().min(0).describe('Yards behind the receiver once the defender has settled.').optional(),
-  lag: z.number().min(0).describe('Seconds the defender trails the receiver.').optional(),
+  technique: z.enum(TECHNIQUES).describe('Where the defender finishes: press and off end about half a yard deeper than the receiver (they differ only in how they line up), trail ends half a yard shallower. Defaults to off.').optional(),
+  lag: z.number().min(0).describe('Seconds the defender trails the receiver. Defaults to 0.4.').optional(),
   assignment,
 });
 

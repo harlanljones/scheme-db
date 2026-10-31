@@ -44,6 +44,18 @@ Compiled tracks are tested against football, not against the hand-made tracks, b
 - **Physics.** No player exceeds a sprint speed no one reaches; blockers do not walk downfield past their start in pass protection; every rusher moves into the backfield and ends closer to the quarterback than he began; no two teammates share a spot.
 - **Concept.** Each spec states what its concept teaches and the test asserts it: four verts puts four receivers 10 yards deep by 2.6 seconds with the seams inside the numbers and the safeties on opposite sides; mesh brings the two crossers within 2.5 yards of each other; slant-flat leaves the slant inside the flat defender at the throw.
 
-`bun run specs:diff` still reports the distance to the hand-made tracks over the first 1.2 seconds (the disguise window), for information only. Today 12 of 66 players are within a yard. That number fell from 21 when the rush direction was fixed, since the hand-made rushers have the same error, and it should not be pushed back up.
+`bun run specs:diff` still reports the distance to the hand-made tracks over the first 1.2 seconds (the disguise window), for information only. Today 3 of 66 players are within a yard: 21 before the rush direction was fixed, 12 after, 3 after the calibration below. It falls each time the compiler gets closer to real football, because the hand-made plays start receivers at top speed, run rushers downfield and keep the offensive line at the line of scrimmage. Do not tune the compiler to push it back up.
 
-Not done yet: the receiver speed profile still starts at top speed (v0 fitted it to the hand-made routes), and the pocket depths and zone timings are v0 values. They wait on calibration against real tracking data, and on a decision about which data may be used. A distribution check against NFL tracking aggregates comes after that.
+## Calibration and credit
+
+The compiler's constants live in `src/spec/calibration.ts`. They are medians and fits from player tracking in the [NFL Big Data Bowl 2025](https://www.kaggle.com/competitions/nfl-big-data-bowl-2025) data (NFL Next Gen Stats, weeks 1 to 9 of the 2022 season, released by the NFL under CC BY-NC 4.0), rounded to one or two significant figures, plus coaching sources where the data cannot say (quarterback step counts, route angles). The tracking data itself is not in this repository, and neither are per-play measurements: only the rounded constants and a handful of published medians that the tests check. Credit for the data goes to the NFL and Next Gen Stats.
+
+What the constants change, against compiler v0:
+
+- Receivers start from rest after a 0.4 s first step and reach a top speed of about 7 yd/s (6.5 for tight ends, 6 for backs), instead of starting at top speed. A go route is about 2.7 yd downfield at 1.2 s and 19.6 at 3.8 s.
+- Pass rushers get 5 to 6 yd into the backfield by 2 s, reaching the quarterback near the median time to pressure of 2.5 s. `depth` is now a cap, as if a blocker stopped the rusher.
+- Offensive linemen retreat in pass protection, tackles about 4 yd by 2 s, and stop about a yard in front of the quarterback. A shotgun quarterback drops about 3 yd by 2 s.
+- Zone defenders wait about 0.9 s, then close on the spot where the throw would land, at the same rate in every zone. Zone depths follow the data: deep halves and the middle at about 22 yd, quarters at 16 to 18, hooks at 9.
+- Man defenders copy the receiver 0.4 s late and take 0.5 s to start closing. `cushion` is replaced by `technique` (`off`, `press`, `trail`).
+
+Not applied yet: the offensive linemen's alignment in the formation presets (tackles are about a yard off the line, guards 0.9, the center 0.35, where the presets put them at 0.4), because that changes 17 formation records and the starting point of 63 plays; extra route terms for quick outs, hitches and wheels; coverage shells and rotations; the distribution check against NFL aggregates; and a report of how far compiled paths sit from real ones for the same labels. The run game is next.
