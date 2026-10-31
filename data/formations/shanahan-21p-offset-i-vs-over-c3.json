@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/formation.schema.json",
+  "id": "shanahan-21p-offset-i-vs-over-c3",
+  "name": "21 Personnel Offset-I Wing Right vs 4-3 Over Front Cover 3 Sky",
+  "offense": {
+    "C": { "x": 26.67, "y": -0.4, "role": "ol" },
+    "LG": { "x": 25, "y": -0.4, "role": "ol" },
+    "LT": { "x": 23.3, "y": -0.4, "role": "ol" },
+    "RG": { "x": 28.3, "y": -0.4, "role": "ol" },
+    "RT": { "x": 30, "y": -0.4, "role": "ol" },
+    "TE": { "x": 31.8, "y": -0.6, "role": "te" },
+    "QB": { "x": 26.67, "y": -1.8, "role": "qb" },
+    "FB": { "x": 28.2, "y": -3.5, "role": "rb" },
+    "RB": { "x": 26.67, "y": -5.8, "role": "rb" },
+    "X": { "x": 7, "y": -0.5, "role": "wr" },
+    "Z": { "x": 46, "y": -1.5, "role": "wr" }
+  },
+  "defense": {
+    "WDE": { "x": 21.8, "y": 0.9, "role": "dl" },
+    "NT": { "x": 25.8, "y": 0.9, "role": "dl" },
+    "3T": { "x": 29.2, "y": 0.9, "role": "dl" },
+    "SDE": { "x": 33, "y": 0.9, "role": "dl" },
+    "WILL": { "x": 21, "y": 4.5, "role": "lb" },
+    "MIKE": { "x": 26, "y": 4.8, "role": "lb" },
+    "SAM": { "x": 31.5, "y": 3.8, "role": "lb" },
+    "LCB": { "x": 7, "y": 7, "role": "db" },
+    "RCB": { "x": 46, "y": 7, "role": "db" },
+    "SS": { "x": 34, "y": 8.5, "role": "db" },
+    "FS": { "x": 26.67, "y": 14, "role": "db" }
+  }
+}

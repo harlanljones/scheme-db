@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "tampa-2",
+  "name": "Tony Dungy's Tampa 2",
+  "coachId": "tony-dungy",
+  "team": "Tampa Bay Buccaneers (1996-2001)",
+  "side": "defense",
+  "era": "past-nfl",
+  "lineage": "two-deep-shell",
+  "description": "The defining middle-of-field-closed Cover 2 of its era: a penetrating four-man rush behind corners who squat in the deep halves with underneath-first eyes, and safeties splitting the field. The signature wrinkle is the Mike linebacker converting his hook-curl drop into a full sprint to the deep-middle hole, erasing the seams that normally kill Cover 2. Quick perimeter answers are contested instantly, forcing quarterbacks to hold for seam throws that sail straight into the sprinting Mike."
+}

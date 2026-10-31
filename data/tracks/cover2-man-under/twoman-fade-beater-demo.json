@@ -1,0 +1,328 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "twoman-fade-beater-demo",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on weak-side speed rush",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Short vertical set" },
+        { "t": 0.9, "x": 20.3, "y": -0.9, "note": "Engage LE charge" },
+        { "t": 2.2, "x": 20.2, "y": -1.3, "note": "Anchor against the arc" },
+        { "t": 4, "x": 20.3, "y": -1.6, "note": "Edge held" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Handle shade nose with center help",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Set inside" },
+        { "t": 0.9, "x": 24.7, "y": -0.9, "note": "Combo punch on NT" },
+        { "t": 2.2, "x": 24.9, "y": -1.3, "note": "Anchor against bull" },
+        { "t": 4, "x": 25, "y": -1.6, "note": "Interior intact" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Snap then slide to the under tackle combo",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap" },
+        { "t": 0.9, "x": 27.3, "y": -0.9, "note": "Slide to UT combo" },
+        { "t": 2.2, "x": 27.5, "y": -1.3, "note": "UT churning into lap depth" },
+        { "t": 4, "x": 27.6, "y": -1.6, "note": "Combo stretched but holding" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block the penetrating 3-tech",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Set on UT" },
+        { "t": 0.9, "x": 29, "y": -0.9, "note": "Engage 3-tech rip" },
+        { "t": 2.2, "x": 28.9, "y": -1.3, "note": "Fight to stay attached" },
+        { "t": 4, "x": 28.7, "y": -1.6, "note": "Driven back a yard" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on the edge rush around the wing",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Kick slide out" },
+        { "t": 0.9, "x": 33.2, "y": -0.9, "note": "Meet RE climb" },
+        { "t": 2.2, "x": 33.6, "y": -1.4, "note": "Ride him up the rim" },
+        { "t": 4, "x": 33.8, "y": -1.7, "note": "Contain forced wide" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Designed fade — the classic press-beater attempt",
+      "waypoints": [
+        { "t": 0, "x": 8.5, "y": 0.8, "note": "Island alignment" },
+        { "t": 0.6, "x": 8.9, "y": 0.8, "note": "Release meets immediate jam" },
+        { "t": 1.4, "x": 9.2, "y": 4, "note": "Pushed into a narrow upfield lane" },
+        { "t": 2.4, "x": 10, "y": 8.5, "note": "Riding the sideline in a trail" },
+        { "t": 3.2, "x": 10.4, "y": 11, "note": "Ball sails over both of them" },
+        { "t": 4, "x": 10.6, "y": 13, "note": "Incomplete out of bounds" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Chip RE then work the attached seam",
+      "waypoints": [
+        { "t": 0, "x": 35.3, "y": -0.6, "note": "Yoked on RE" },
+        { "t": 0.7, "x": 34.6, "y": -0.9, "note": "Chip as RE climbs" },
+        { "t": 1.8, "x": 35.6, "y": 3.5, "note": "Release to the seam" },
+        { "t": 3, "x": 35.3, "y": 7, "note": "Walled by carrying SAM" },
+        { "t": 4, "x": 35.1, "y": 9, "note": "Seam capped" }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Block down on RE, release flat late",
+      "waypoints": [
+        { "t": 0, "x": 38.2, "y": -0.8, "note": "Fire down" },
+        { "t": 0.8, "x": 37.2, "y": -1, "note": "Strike RE low" },
+        { "t": 2, "x": 36.4, "y": -1.3, "note": "Grind the contain rusher" },
+        { "t": 3.2, "x": 37.5, "y": 1, "note": "Late flat release" },
+        { "t": 4, "x": 38.5, "y": 1.5, "note": "Matched by WILL anyway" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Vertical stem to comeback vs press trail",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 0.8, "note": "Outside release" },
+        { "t": 1, "x": 46, "y": 4, "note": "Push RCB vertical" },
+        { "t": 2.2, "x": 45.5, "y": 9, "note": "Working upfield in trail" },
+        { "t": 3, "x": 43.2, "y": 11, "note": "Comeback break contested" },
+        { "t": 4, "x": 42.2, "y": 11.5, "note": "No window opened" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "Back-shoulder fade launch to the isolated island",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -2.6, "note": "Hitch, eyes on the island" },
+        { "t": 1.8, "x": 26.2, "y": -3, "note": "Second hitch, pump to hold RCB" },
+        { "t": 2.6, "x": 25.9, "y": -3.2, "note": "Launches the fade off balance" },
+        { "t": 4, "x": 25.7, "y": -3.3, "note": "Watches it sail out of bounds" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Check-release strong flat away from the shot",
+      "waypoints": [
+        { "t": 0, "x": 30.5, "y": -3, "note": "Offset alignment" },
+        { "t": 1, "x": 31.5, "y": -2.2, "note": "Scan then release" },
+        { "t": 2.2, "x": 34, "y": 1.2, "note": "Flat working right" },
+        { "t": 4, "x": 35.5, "y": 2, "note": "Fitted by MIKE instantly" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "LE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Four-man rush: contain weak, bend to the rim",
+      "waypoints": [
+        { "t": 0, "x": 19.8, "y": 1, "note": "Weak contain rush" },
+        { "t": 1, "x": 20, "y": -0.3, "note": "Pin LT up the arc" },
+        { "t": 2.6, "x": 19.7, "y": -1.6, "note": "Bend to the rim" },
+        { "t": 4, "x": 19.9, "y": -2.9, "note": "Pocket edge flushed" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "One-tech bull through the combo",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 1, "note": "Shade alignment" },
+        { "t": 1, "x": 25.7, "y": -0.4, "note": "Strike the combo low" },
+        { "t": 2.6, "x": 25.6, "y": -1.9, "note": "Churn through hands" },
+        { "t": 4, "x": 25.7, "y": -3.1, "note": "Middle pocket collapsed" }
+      ]
+    },
+    {
+      "id": "UT",
+      "label": "UT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Three-tech penetrate to speed the throw",
+      "waypoints": [
+        { "t": 0, "x": 28.8, "y": 1, "note": "3-tech alignment" },
+        { "t": 1, "x": 29.1, "y": -0.4, "note": "Rip through RG" },
+        { "t": 2.6, "x": 29.4, "y": -2, "note": "Into the throwing lap" },
+        { "t": 4, "x": 29.3, "y": -3.2, "note": "Forced the rushed platform" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "RE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Contain rush strong, occupy the blocking wing",
+      "waypoints": [
+        { "t": 0, "x": 34.4, "y": 1, "note": "Strong contain rush" },
+        { "t": 1, "x": 34.8, "y": -0.2, "note": "Absorb F down block" },
+        { "t": 2.6, "x": 34.6, "y": -1.5, "note": "Grind vs the wing" },
+        { "t": 4, "x": 34.8, "y": -2.7, "note": "Rim contained" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Walked-up man on the chipping tight end",
+      "waypoints": [
+        { "t": 0, "x": 36.3, "y": 3.5, "note": "Walk-up match alignment" },
+        { "t": 0.8, "x": 35.4, "y": 2, "note": "Absorb chip, stay glued" },
+        { "t": 2.2, "x": 35.3, "y": 4.8, "note": "Carry the seam in trail" },
+        { "t": 4, "x": 34.8, "y": 7.5, "note": "Wall complete underneath the half" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man-match the offset back on the check-flat",
+      "waypoints": [
+        { "t": 0, "x": 28.5, "y": 4, "note": "Matcher alignment" },
+        { "t": 0.9, "x": 29.5, "y": 1.5, "note": "Key the back release" },
+        { "t": 2.2, "x": 32.8, "y": 1.4, "note": "Burst to the flat fit" },
+        { "t": 4, "x": 34, "y": 1.8, "note": "Flat erased" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man-match the wing through his late release",
+      "waypoints": [
+        { "t": 0, "x": 39.5, "y": 3.5, "note": "Matcher alignment" },
+        { "t": 0.9, "x": 39, "y": 3, "note": "Read the F down block" },
+        { "t": 2.4, "x": 37.5, "y": 4, "note": "Sit in the hook while he blocks" },
+        { "t": 3.4, "x": 37.8, "y": 2, "note": "Match the late release" },
+        { "t": 4, "x": 38.3, "y": 1.7, "note": "Glued through the whistle" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press-trail on the fade target: steal the release, ride the sideline",
+      "waypoints": [
+        { "t": 0, "x": 8.5, "y": 1.5, "note": "Outside-leverage press" },
+        { "t": 0.6, "x": 8.7, "y": 1.4, "note": "Two-hand punch steals the release" },
+        { "t": 1.6, "x": 9.3, "y": 4.5, "note": "Ride the fade upfield narrow" },
+        { "t": 2.6, "x": 10.1, "y": 8.8, "note": "Trail locked along the boundary" },
+        { "t": 3.4, "x": 10.4, "y": 11.3, "note": "Underneath the sailing ball" },
+        { "t": 4, "x": 10.6, "y": 12, "note": "Route erased without a flag" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press-trail on Z comeback",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 1.5, "note": "Press-trail alignment" },
+        { "t": 0.8, "x": 45.8, "y": 1.8, "note": "Jam the release" },
+        { "t": 2, "x": 45.4, "y": 6.5, "note": "Mirror the vertical stem" },
+        { "t": 3.2, "x": 43.8, "y": 9.8, "note": "Trail the comeback break" },
+        { "t": 4, "x": 42.8, "y": 10.8, "note": "Window closed" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep half weak: cap over the top of the fade island",
+      "waypoints": [
+        { "t": 0, "x": 22, "y": 12, "note": "Half alignment" },
+        { "t": 1.2, "x": 20.5, "y": 12.5, "note": "Pedal reading the island" },
+        { "t": 2.4, "x": 14, "y": 13.5, "note": "Break over the fade path" },
+        { "t": 3.4, "x": 12, "y": 14, "note": "Bracket arrives above the trail" },
+        { "t": 4, "x": 11.5, "y": 14.2, "note": "Shot fully erased" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep half strong: cap seam and comeback",
+      "waypoints": [
+        { "t": 0, "x": 32, "y": 12, "note": "Half alignment" },
+        { "t": 1.2, "x": 31.5, "y": 13, "note": "Pedal on twin-side releases" },
+        { "t": 2.6, "x": 33.5, "y": 12.5, "note": "Split the seam and comeback" },
+        { "t": 4, "x": 34, "y": 12.5, "note": "Deep half capped" }
+      ]
+    }
+  ]
+}

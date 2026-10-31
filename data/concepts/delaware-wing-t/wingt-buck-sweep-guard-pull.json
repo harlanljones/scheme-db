@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "wingt-buck-sweep-guard-pull",
+  "schemeId": "delaware-wing-t",
+  "order": 1,
+  "name": "Buck Sweep w/ Guard Pull",
+  "personnel": "Wing-T Base",
+  "formation": "Wing-T Strong Right, SE Left",
+  "situation": "1st & 10, own 35, base down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Get two blockers on the perimeter before the ball carrier arrives, collapsing contain inward so the sweep can turn upfield.",
+    "keyDefender": "Right Corner (perimeter force player)",
+    "whyItWorks": "The double pull attacks the edge with sequential kick-out and lead blocks, and the wing's arc removes the last force player exactly as the ball turns the corner.",
+    "failureMode": "The end spills the kick-out and funnels the sweep inside, or the force safety squeezes the arc instead of taking the kick."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Double Pull",
+      "text": "Both guards pull in opposite roles: the playside guard kicks flat toward the end while the backside guard pulls as the lead through the hole. The entire defense's eyes snap to the backfield.",
+      "focus": ["RG", "LG", "RE"]
+    },
+    {
+      "t": 1.3,
+      "title": "2. Kick-Out and Deep Handoff",
+      "text": "The quarterback reverse-pivots and extends the handoff to B at depth while the guard logs the end inside. The sweep lane is now two gaps wide.",
+      "focus": ["QB", "B", "RG"]
+    },
+    {
+      "t": 2.3,
+      "title": "3. The Perimeter Block Sequence",
+      "text": "The wing kicks the force corner out just as the pulling guard arrives on the linebacker. Every defender who could squeeze the edge is being blocked outward.",
+      "focus": ["H", "RCB", "LG"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Turn Upfield Behind Escorts",
+      "text": "With containment collapsed inward and force displaced, B turns north at the numbers with escorts leading him into the open grass.",
+      "focus": ["B", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["wingt-waggle-flood", "wingt-wingback-trap-gut"],
+    "playsOff": [],
+    "tell": "Both guards leave their gaps at the same instant — no other Wing-T series moves both interior linemen horizontally on the snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

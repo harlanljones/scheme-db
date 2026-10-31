@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "payton-quick-game-screens",
+  "name": "Sean Payton's Quick Game & Screen Package",
+  "coachId": "sean-payton",
+  "team": "Denver Broncos",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "reid-west-coast",
+  "description": "A rhythm-first quick game built to beat man-match leverage and punish over-aggressive fronts before pressure can develop. Payton layers slant-flat rhythm throws, convoy fast screens, and interior shovel tunnels beneath jet-sweep play action — every call attacks the defender who triggers first, and every screen looks like protection until the geometry springs."
+}

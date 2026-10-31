@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bowles-overload-boundary-fire",
+  "schemeId": "bowles-creeper-blitz",
+  "order": 2,
+  "name": "Boundary Overload Fire Blitz",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Boundary Overload Tilt vs 11P Gun Trips Right",
+  "situation": "3rd & 10, +35, boundary hash passing down",
+  "coverage": "Cover 3 Fire Zone (Disguised Single-High)",
+  "frontName": "Boundary Overload Stunt",
+  "summary": {
+    "motive": "Exploit half-slide offensive protections toward passing strength by launching an unblockable boundary corner overload while rotating safety coverage into the vacated perimeter void.",
+    "keyDefender": "LCB (Boundary Corner Blitzer) & LOLB (Pinning Defensive End)",
+    "whyItWorks": "The boundary tackle cannot pass off the inside DE spike and pick up the blitzing corner, creating a pure free rusher to the quarterback’s blind side.",
+    "failureMode": "A quick slip screen to the running back into the boundary flat if the offensive line catches the blitz and releases early."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Boundary Press & Slide Bait",
+      "text": "Todd Bowles aligns LCB in hard press on isolated receiver X, enticing the offense to slide protection right toward the Trips side and leave the boundary tackle in 1-on-1 isolation.",
+      "focus": ["LCB", "LOLB", "LT", "FS", "QB"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Overload Launch",
+      "text": "At the snap, LOLB crashes inside into the B-gap, pulling the LT inside. LCB sprints off the perimeter with a free, unblocked runway straight to the QB’s blindside.",
+      "focus": ["LOLB", "LCB", "LT"]
+    },
+    {
+      "t": 1.8,
+      "title": "Safety Replaces the Void",
+      "text": "Free Safety (FS) screams downhill from two-high depth into the boundary flat, taking away the quarterback’s immediate hot answer to X.",
+      "focus": ["FS", "X", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Violent Blindside Turnover",
+      "text": "LCB drills the quarterback from behind at full speed, knocking the ball loose for a drive-ending strip-sack.",
+      "focus": ["LCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bowles-peel-zone-sim-pressure"],
+    "playsOff": ["bowles-drop8-tampa2-lurk"],
+    "tell": "Boundary corner creeps close to line with inside tilt while safety aligns at 12 yards on boundary hash preparing to rotate down"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

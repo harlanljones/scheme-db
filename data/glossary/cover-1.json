@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "cover-1",
+  "term": "Cover 1",
+  "aliases": ["Cover 1 Man", "Man-Free", "man-free coverage", "cover 1"],
+  "category": "Coverage & Shell",
+  "shortDef": "A single-high coverage featuring a lone free safety roaming the deep middle with five underneath defenders locked in aggressive man-to-man coverage.",
+  "tacticalNote": "Allows aggressive underneath contested catches and extra pass rushers, but remains vulnerable to crossers and deep perimeter fade balls."
+}

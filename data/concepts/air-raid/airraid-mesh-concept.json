@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "airraid-mesh-concept",
+  "schemeId": "air-raid",
+  "order": 1,
+  "name": "Mesh Concept",
+  "personnel": "10",
+  "formation": "10P Gun 2x2",
+  "situation": "2nd & 6, own 38, base down",
+  "coverage": "Cover 1 Robber",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Create guaranteed separation against man coverage through two crossing shallow routes that naturally screen each other's defenders.",
+    "keyDefender": "Nickel (defender on the inside slot)",
+    "whyItWorks": "Man defenders must turn and chase crossing routes, which means they cannot see the second crosser arriving — the collision at the mesh point is structural, not luck.",
+    "failureMode": "Zone coverage lets defenders pass off the crossers without turning their heads, keeping two bodies in every shallow window."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Crossers Depart",
+      "text": "Both inside receivers sell one vertical step before snapping down into the six-yard lanes. In man coverage, both defenders must turn their backs to the quarterback to chase.",
+      "focus": ["X", "Y", "LCB", "NICKEL"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. The First Read Is Taken Away",
+      "text": "The boundary crosser's defender stays attached. The quarterback rides without panic — the Air Raid rule is simple: never throw a covered receiver.",
+      "focus": ["QB", "X", "LCB"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. The Rub Forms",
+      "text": "The second crosser arrives exactly where the first was defended. The chasing nickel is screened by the first crosser's body — an unavoidable natural pick.",
+      "focus": ["Y", "NICKEL", "WILL"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Pitch and Catch",
+      "text": "With the nickel picked and the Mike sorted too late, the second crosser comes open in stride. The quarterback delivers and the chain moves.",
+      "focus": ["QB", "Y", "NICKEL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["airraid-shallow-distribution-drive"],
+    "playsOff": [],
+    "tell": "Both inside receivers take identical one-step vertical fakes before breaking at exactly six yards."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

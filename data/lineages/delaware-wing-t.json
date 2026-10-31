@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "delaware-wing-t",
+  "name": "Delaware Wing-T Deception Tree",
+  "patriarch": "Tubby Raymond",
+  "side": "offense",
+  "description": "Guard-pull buck sweep series with counter crisscross fakes and wingback motion — the gold standard of ball-handling deception, making three base plays look like nine through backfield choreography alone.",
+  "rootNodes": [
+    {
+      "coachId": "tubby-raymond",
+      "children": []
+    }
+  ]
+}

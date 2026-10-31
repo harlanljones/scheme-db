@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/formation.schema.json",
+  "id": "roman-22p-heavy-wing-vs-43",
+  "name": "Greg Roman 22 Personnel Heavy Wing Right (Under Center) vs 4-3 Over Front",
+  "description": "Downhill gap-scheme foundation: double TE with a fullback kick-out lead, single detached X, QB under center — pure power-read/QB-run environment.",
+  "offense": {
+    "C": { "x": 26.67, "y": -0.4, "role": "ol" },
+    "LG": { "x": 25, "y": -0.4, "role": "ol" },
+    "LT": { "x": 23.3, "y": -0.4, "role": "ol" },
+    "RG": { "x": 28.3, "y": -0.4, "role": "ol" },
+    "RT": { "x": 30, "y": -0.4, "role": "ol" },
+    "TE": { "x": 31.8, "y": -0.6, "role": "te" },
+    "U": { "x": 33.8, "y": -1.2, "role": "te" },
+    "QB": { "x": 26.67, "y": -1.8, "role": "qb" },
+    "RB": { "x": 26.67, "y": -5.5, "role": "rb" },
+    "F": { "x": 28.4, "y": -3.4, "role": "rb" },
+    "X": { "x": 7.5, "y": -0.5, "role": "wr" }
+  },
+  "defense": {
+    "WDE": { "x": 21.8, "y": 0.9, "role": "dl" },
+    "NT": { "x": 25.8, "y": 0.9, "role": "dl" },
+    "3T": { "x": 29.2, "y": 0.9, "role": "dl" },
+    "SDE": { "x": 33.4, "y": 0.9, "role": "dl" },
+    "WILL": { "x": 21.5, "y": 4.5, "role": "lb" },
+    "MIKE": { "x": 26, "y": 4.8, "role": "lb" },
+    "SAM": { "x": 32.5, "y": 3.8, "role": "lb" },
+    "LCB": { "x": 7.5, "y": 7, "role": "db" },
+    "RCB": { "x": 43.5, "y": 7, "role": "db" },
+    "SS": { "x": 34.5, "y": 9, "role": "db" },
+    "FS": { "x": 26.67, "y": 14, "role": "db" }
+  }
+}

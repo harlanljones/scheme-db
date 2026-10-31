@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "cloud-coverage",
+  "term": "Cloud Coverage",
+  "aliases": ["Cloud coverage", "Cover 2 Cloud", "Cloud support", "Cloud corner", "cloud coverage", "cloud"],
+  "category": "Coverage & Shell",
+  "shortDef": "A split-safety perimeter coverage structure (often Cover 2) where the cornerback plays aggressive jam-and-squat technique in the flat while the safety covers the deep half above.",
+  "tacticalNote": "Reroutes outside receivers to disrupt quick timing routes and forces quarterbacks to test tight windows along the sideline hole."
+}

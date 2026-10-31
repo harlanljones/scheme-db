@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "shula-tite-b-gap-pinch",
+  "schemeId": "shula-match-quarters",
+  "order": 1,
+  "name": "Tite Front B-Gap Pinch with Match Quarters",
+  "personnel": "Penny 5-1-5",
+  "formation": "3-4 Tite Front (4i - 0 - 4i) vs 11P Condensed 2x2",
+  "situation": "1st & 10, +45, base down run/pass balance",
+  "coverage": "Cover 4 Match (Quarters Mod / Sky Safety Support)",
+  "frontName": "3-4 Tite Pinch Front (404 Alignment)",
+  "summary": {
+    "motive": "Suffocate inside zone and Duo run concepts with a 3-man Tite front (404 alignment) by pinching the B-gaps, spilling the ball carrier into the waiting arms of unblocked edge defenders and downhill safeties.",
+    "keyDefender": "4iL (B-gap pinch tackle) & BS (downhill alley-fitting boundary safety)",
+    "whyItWorks": "The 4i alignments prevent offensive tackles from climbing to the second-level linebackers, keeping the box clean while allowing the defense to play two-high pass coverage.",
+    "failureMode": "Quick perimeter Pin-and-Pull or Outside Zone sweep runs that reach the edge before the stand-up linebackers can set the perimeter."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Tite Front (404 Alignment) Pre-Snap",
+      "text": "Chris Shula aligns in the modern 3-4 Tite front: two 4i-technique defensive tackles over the inside shoulders of the offensive tackles, a 0-tech Nose, and two stand-up edge linebackers in a two-high Quarters shell.",
+      "focus": ["4iL", "NOSE", "4iR", "LOLB", "ROLB", "MIKE"]
+    },
+    {
+      "t": 0.8,
+      "title": "Double B-Gap Pinch Clamps Inside Run",
+      "text": "At the snap, both 4i tackles slant violently inside into the B-gaps while the Nose controls both A-gaps. The interior run lanes are instantly choked off.",
+      "focus": ["4iL", "4iR", "NOSE", "LG", "RG", "C"]
+    },
+    {
+      "t": 1.8,
+      "title": "Run Spilled Horizontally to Unblocked LOLB",
+      "text": "With no interior crease available, the running back is forced to bounce wide to the weak C-gap, running directly into the unblocked LOLB setting the edge.",
+      "focus": ["RB", "4iL", "LOLB", "BS"]
+    },
+    {
+      "t": 3,
+      "title": "Boundary Safety Fills Alley for Decisive TFL",
+      "text": "Triggering on run action from the two-high shell, Boundary Safety (BS) sprints downhill to clean up the tackle for a 3-yard loss in the backfield.",
+      "focus": ["BS", "LOLB", "RB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["shula-penny-bracket-bunch", "shula-boundary-creeper-drop7"],
+    "playsOff": [],
+    "tell": "3-4 Tite front where both 4i interior linemen slant hard into the B-gaps spilling run action to perimeter OLBs and downhill safeties"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

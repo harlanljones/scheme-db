@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "boot-throwback-leak",
+  "schemeId": "kubiak-split-zone",
+  "order": 3,
+  "name": "Boot Throwback Y-Leak",
+  "personnel": "12",
+  "formation": "12P Condensed Wing Right",
+  "formationId": "kubiak-12p-condensed-wing-vs-43",
+  "situation": "1st & 10, +30, red zone boundary shot",
+  "coverage": "Cover 3 Sky (Single-High)",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Devastate over-aggressive defenses with the signature Y-Leak constraint: faking a slice block before leaking the H-back vertically into vacated boundary space.",
+    "keyDefender": "Backside Defensive End (WDE) & Boundary Cornerback (LCB)",
+    "whyItWorks": "The split-zone fake pulls the entire front seven and strong safety to the right. X’s deep post route drags the boundary corner inside, leaving the entire left sideline completely abandoned for the leaking H-back.",
+    "failureMode": "A disciplined backside DE or safety staying in deep boundary discipline and not biting on the run/post action."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Condensed Split-Zone Pre-Snap Look",
+      "text": "Identical 12P condensed wing alignment. Defense expects another heavy dose of inside/split-zone running.",
+      "focus": ["H", "QB", "RB", "X"]
+    },
+    {
+      "t": 0.6,
+      "title": "Full Zone Stretch & Slice Action",
+      "text": "Offensive line sells lateral stretch right. H-Back slices across the formation, heading straight for the unblocked backside WDE.",
+      "focus": ["C", "RG", "H", "WDE", "MIKE"]
+    },
+    {
+      "t": 1.2,
+      "title": "The Bluff Block at the Line of Scrimmage",
+      "text": "H makes subtle bluff contact with WDE at the line of scrimmage to simulate the kickout block, while QB executes a naked bootleg rollout to the left.",
+      "focus": ["H", "WDE", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "The Stealth Y-Leak Slip",
+      "text": "While the entire defense flows right or chases the QB, H slips completely untouched through the line and accelerates vertically up the left sideline.",
+      "focus": ["H", "LCB", "FS"]
+    },
+    {
+      "t": 3.8,
+      "title": "The Throwback Strike for the Touchdown",
+      "text": "With boundary corner LCB cleared out by X and safety FS pinned inside, QB squares up and throws back across the grain to H for a walk-in explosive score.",
+      "focus": ["QB", "H"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["orbit-motion-toss"],
+    "playsOff": ["split-zone-slice", "pa-dagger-shot"],
+    "tell": "H-Back bluffs the kick-out block on backside DE and leaks vertically untouched down the sideline."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

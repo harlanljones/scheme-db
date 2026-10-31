@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mesh-shallow-cross",
+  "schemeId": "reid-spread-rpo",
+  "order": 1,
+  "name": "Mesh Shallow Cross",
+  "personnel": "11",
+  "formation": "11P Gun Trips Right",
+  "formationId": "reid-11p-gun-trips-vs-mofo",
+  "situation": "2nd & 6, +35, boundary hash",
+  "coverage": "Cover 2 / Quarters MOFO",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Create impossible natural pick/rub traffic for underneath zone and man defenders while stretching the defense horizontally and vertically with perimeter rail and deep clearout routes.",
+    "keyDefender": "Mike Linebacker & Nickel DB (Underneath Hook/Curl defenders)",
+    "whyItWorks": "By crossing H and Y at 5-6 yards depth within arm's reach, underneath defenders cannot switch or track across the formation without colliding, freeing H for an easy catch in stride with massive YAC potential.",
+    "failureMode": "Underneath defenders passing off the crossers cleanly with banjo calls, or interior defensive tackle quick pressure collapsing the pocket before the mesh crosses."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Pre-Snap Trips Right Alignment & MOFO Shell",
+      "text": "Andy Reid aligns in 11 Personnel Gun Trips Right. The defense shows a two-high Middle of Field Open (MOFO) shell, creating space for underneath horizontal crossers.",
+      "focus": ["H", "Y", "Z", "X", "RB"]
+    },
+    {
+      "t": 1,
+      "title": "The Mesh Release & Initial Route Stems",
+      "text": "H and Y release on crossing paths at 5 and 6 yards depth, aiming for an arm-to-arm high-five rub. RB releases on a rapid rail route to widen the boundary Will linebacker.",
+      "focus": ["H", "Y", "RB", "WILL"]
+    },
+    {
+      "t": 1.8,
+      "title": "Underneath Rub Conflict on Mike & Nickel",
+      "text": "As H crosses underneath Y, the Nickel defender is impeded by the crossing body. The Mike is frozen in space, unable to pass off or mirror H through the collision traffic.",
+      "focus": ["H", "Y", "NICKEL", "MIKE"]
+    },
+    {
+      "t": 2.6,
+      "title": "Mesh Separation & RB Rail Isolation",
+      "text": "H clears the rub with clear green grass in the boundary flat. With the Will linebacker pulled wide by the RB rail route, the underneath throwing lane is completely open.",
+      "focus": ["QB", "H", "WILL", "RB"]
+    },
+    {
+      "t": 3.8,
+      "title": "Open Crosser Catch & Run-After-Catch (YAC)",
+      "text": "The QB delivers a strike in stride to H at the boundary hash, allowing Travis Kelce to turn upfield into open space for an explosive chunk gain.",
+      "focus": ["H", "LCB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["rpo-glance-post", "power-shovel-option", "sprintout-smash-wheel"],
+    "playsOff": [],
+    "tell": "Base mesh timing with RB releasing on a wide rail route while slot receivers execute underneath shallow cross rub."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

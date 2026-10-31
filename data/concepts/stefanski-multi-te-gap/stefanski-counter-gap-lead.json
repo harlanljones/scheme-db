@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stefanski-counter-gap-lead",
+  "schemeId": "stefanski-multi-te-gap",
+  "order": 4,
+  "name": "Counter Gap GT Lead",
+  "personnel": "13",
+  "formation": "13P Heavy Wing Right",
+  "formationId": "stefanski-13p-heavy-wing-vs-43",
+  "situation": "3rd & 2, +28, short yardage",
+  "coverage": "Cover 3 Match",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Gasoline the defense with heavy gap-scheme power: down blocks create an unmovable wall, while a pulling guard kicks out the edge and a lead tight end pancakes the linebacker.",
+    "keyDefender": "Strongside Defensive End (SDE) & Mike Linebacker (MIKE)",
+    "whyItWorks": "Down blocks give offensive linemen superior angles of leverage. The pulling guard creates a massive gap by kicking the edge defender out, while the lead-blocking tight end ensures the running back enters the secondary untouched.",
+    "failureMode": "A penetrating defensive tackle shooting through the vacated backside guard gap or an edge defender spilling inside to blow up the pullers."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "13-Personnel Heavy Alignment",
+      "text": "Stefanski shows his hallmark heavy 3-TE set, daring the defense to load the box before executing counter gap mechanics.",
+      "focus": ["Y", "F", "U", "LG", "RB"]
+    },
+    {
+      "t": 0.6,
+      "title": "Down Blocks & Backside Pullers",
+      "text": "RT and Y execute down blocks to seal the interior, while backside LG and Wing F pull across the formation into the attack point.",
+      "focus": ["RT", "Y", "LG", "F", "3T", "SDE"]
+    },
+    {
+      "t": 1.8,
+      "title": "The Kickout & Lead Collision",
+      "text": "LG violently kicks out the edge defender SDE, while F wraps tight through the B/C gap crease to pancake the Mike linebacker.",
+      "focus": ["LG", "SDE", "F", "MIKE"]
+    },
+    {
+      "t": 2.8,
+      "title": "RB Gash Through the Crease",
+      "text": "Running back follows the pulling convoy, cuts off the inside shoulder of the LG kickout, and erupts into the secondary for a 16-yard gain.",
+      "focus": ["RB", "F", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["stefanski-pin-pull-sweep"],
+    "playsOff": ["stefanski-naked-boot-slide"],
+    "tell": "Backside LG and F pull across formation on GT/GF counter paths; RB takes counter jab step before cutting back."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

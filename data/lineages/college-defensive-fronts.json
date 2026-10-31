@@ -1,0 +1,18 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "college-defensive-fronts",
+  "name": "Modern College Hybrid Front Tree",
+  "patriarch": "Dave Aranda / Rocky Long",
+  "side": "defense",
+  "description": "The current college counter-punch to spread offense: Aranda’s tite front (4i-0-4i) played from peso hybrid personnel to erase B-gaps against zone read, and Rocky Long’s 3-3-5 stack where every box defender is a potential blitzer behind total pre-snap ambiguity.",
+  "rootNodes": [
+    {
+      "coachId": "dave-aranda",
+      "children": []
+    },
+    {
+      "coachId": "rocky-long",
+      "children": []
+    }
+  ]
+}

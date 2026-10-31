@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "tite-base-zone-read",
+  "schemeId": "aranda-tite-peso",
+  "order": 1,
+  "name": "Base Tite vs 11P Zone Read",
+  "personnel": "Peso Nickel (4 DL + 2 LB + Hybrid DB-LB)",
+  "formation": "11P Gun, TE Strong Right (Zone Read)",
+  "situation": "2nd & 6, +30, spread run down",
+  "coverage": "Split-Field Quarters (Cover 4)",
+  "frontName": "Tite Front (4i-0-4i Box)",
+  "summary": {
+    "motive": "Eliminate every interior gap with the 4i-0-4i box so a spread-run play must bounce to the perimeter, where the walked-down peso waits as the unblockable extra defender.",
+    "keyDefender": "PESO nickel — the DB-LB hybrid whose walk-down turns a blocked-even run picture into a plus-one box",
+    "whyItWorks": "Zone read rules force the offense to leave a 4i unblocked, but the tite spacing means the read key squeezes instead of chasing, and the pulling quarterback’s lane is owned by a defender the run game cannot account for.",
+    "failureMode": "Pitch or perimeter constraint plays: once the box eats the interior, offenses flip to speed option and quick throws at the vacated nickel flat."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Tite Box Picture",
+      "text": "Two 4i techniques sit on the guards’ outside shoulders with a head-up nose between them — both B-gaps are doubled before the snap. The apex linebackers split the tackle-to-#2 lines while the peso nickel hovers ready to walk down.",
+      "focus": ["LE", "NOSE", "RE", "WILL", "MIKE"]
+    },
+    {
+      "t": 1,
+      "title": "2. Zone Flow Meets Two Squeezing 4is",
+      "text": "As the line reaches right, both 4is attack inside shoulders rather than chasing flow. Neither guard can reach a defender who refuses to be widened, so the reach blocks are already failing at the second step.",
+      "focus": ["LE", "RE", "LG", "RT"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Nose Anchors, Peso Becomes the Plus-One",
+      "text": "The nose splits the center-guard double team while the walked-down peso defeats the tight end’s arc. The offense left the 4i unblocked expecting numbers; the nickel walking down erases that math.",
+      "focus": ["NOSE", "PESO", "MIKE", "Y"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Pulled Ball Runs Into the Nickel",
+      "text": "The quarterback pulls on the squeeze exactly as coached, but his keep lane now belongs to the peso with WILL scraping behind. The read was honest — the front simply had an extra hat the offense could not block.",
+      "focus": ["QB", "PESO", "WILL", "RB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["tite-sim-pressure"],
+    "playsOff": ["tite-quarters-apex"],
+    "tell": "Both interior defenders aligned INSIDE the tackles (4i shades) rather than head-up or wide — the pure tite picture has no defender in either C-gap pre-snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

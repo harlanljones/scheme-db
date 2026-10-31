@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coachId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "team": {
+      "type": "string",
+      "minLength": 1
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "offense",
+        "defense"
+      ]
+    },
+    "era": {
+      "type": "string",
+      "enum": [
+        "past-nfl",
+        "past-college",
+        "current-college",
+        "modern-nfl"
+      ]
+    },
+    "lineage": {
+      "type": "string",
+      "enum": [
+        "shanahan-kubiak",
+        "reid-west-coast",
+        "power-gap-duo",
+        "macdonald-pressure",
+        "fangio-two-high",
+        "carroll-saleh-wide9",
+        "belichick-flores",
+        "coryell-vertical",
+        "air-raid",
+        "option-spread",
+        "delaware-wing-t",
+        "buddy-46",
+        "lebeau-zone-blitz",
+        "landry-dallas",
+        "phillips-two-gap",
+        "two-deep-shell",
+        "college-defensive-fronts"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "coachId",
+    "team",
+    "side",
+    "era",
+    "lineage",
+    "description"
+  ],
+  "additionalProperties": false
+}

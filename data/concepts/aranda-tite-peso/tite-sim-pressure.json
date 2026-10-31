@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "tite-sim-pressure",
+  "schemeId": "aranda-tite-peso",
+  "order": 2,
+  "name": "Tite 4 Simulated Pressure",
+  "personnel": "Peso Nickel (4 DL + 2 LB + Hybrid DB-LB)",
+  "formation": "11P Gun, TE Weak Left (Slant-Flat Right)",
+  "situation": "3rd & 4, +38, obvious pass down",
+  "coverage": "Sim Pressure — Man-Free With Hole Dropper",
+  "frontName": "Tite Front (4i-0-4i Box, Mug Mike)",
+  "summary": {
+    "motive": "Flash a five-man pressure from the tite box, rush only three, and occupy the quarterback’s scramble lane with a defensive end who replaces the blitzing Mike before dropping into the hook.",
+    "keyDefender": "LE — the 4i whose fake rush converts a blocked pass-rusher into the hook-zone dropper sitting exactly where the quarterback escapes",
+    "whyItWorks": "Protection counts the walked Mike and the charging interior trio, so five blockers chase four threats; when pressure forces movement, the only soft area already belongs to the replacing end.",
+    "failureMode": "Rhythm quick throws released before the cross develops — if the ball is out on time the defense rushed three and played light everywhere else."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Mug Show",
+      "text": "The Mike and the dime are both walked to a yard over the weak A-gap while the tite box stays compressed — the picture screams five-man fire. The offense slides protection left and puts the back on the walked defenders.",
+      "focus": ["MIKE", "DIME", "LE", "WILL"]
+    },
+    {
+      "t": 1,
+      "title": "2. Three Go, One Replaces",
+      "text": "Only three rushers actually come: the Mike fires the weak A-gap while the nose and 4i squeeze interior. The other weak 4i slants two steps behind the blitz, then stops — he is not rushing at all.",
+      "focus": ["MIKE", "NOSE", "RE", "LE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Replace Drop",
+      "text": "The end settles exactly where the blitzing Mike came from, turning the vacated rush lane into an occupied hook zone. Every escape lane the quarterback was taught to climb into now has a body in it.",
+      "focus": ["LE", "QB", "LG"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Escape Lane Erased",
+      "text": "Flushed by the three-man rush, the quarterback steps up into the replaced hook and his throw is tipped at the line of the drop. The defense rushed fewer men than the offense blocked for — and still won the down.",
+      "focus": ["QB", "LE", "WILL", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["tite-bear-condensed"],
+    "playsOff": ["tite-base-zone-read"],
+    "tell": "Both Mike and dime mugged over the weak A-gap while neither 4i widened — the walk-up says blitz, but no edge defender moved, the signature of a three-rush sim."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "lafleur-pa-dagger-dig",
+  "schemeId": "lafleur-illusion-packers",
+  "order": 4,
+  "name": "PA Dagger Seam-Dig Concept",
+  "personnel": "12",
+  "formation": "Under Center 2x2 Tight Bunch Left",
+  "situation": "3rd & 4, +38, intermediate dagger shot",
+  "coverage": "Cover 4 Quarters",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Attack 2-high / Cover 4 Quarters defenses using a two-man vertical stretch (Seam Pin + 15-yard Dig) over an underneath shallow drag crosser.",
+    "keyDefender": "Middle Linebacker & Quarters Free Safety",
+    "whyItWorks": "The vertical seam by TE1 forces the safeties to turn and run deep, while the shallow drag by X pulls the linebackers forward, creating a huge unobstructed intermediate window for the 15-yard Dig.",
+    "failureMode": "Mike linebacker sinking into the intermediate hole without respecting the shallow drag or defensive end batting down the pass at the line of scrimmage."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Condensed Bunch Play-Action Mesh",
+      "text": "Under-center run fake from 2x2 bunch pulls Mike and Will linebackers downhill into their A/B gap run fits, opening intermediate passing lanes behind them.",
+      "focus": ["QB", "RB", "MIKE", "WILL"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. The Dagger Seam Pin",
+      "text": "TE1 storms up the seam at full speed into the Cover 4 shell. Both the Free Safety and Strong Safety turn their hips and carry TE1 vertically 20+ yards downfield, pinning the top of the coverage.",
+      "focus": ["TE1", "FS", "SS"]
+    },
+    {
+      "t": 2.8,
+      "title": "3. The High-Low Conflict on the Mike",
+      "text": "X drags across at 3 yards depth, fixing the Mike linebacker’s eyes underneath. Above Mike and below the pinned safeties, a massive 15-yard void forms in the center of the field.",
+      "focus": ["X", "MIKE", "Z"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. The 16-Yard Intermediate Dig Strike",
+      "text": "Z snaps his 90-degree square-in right into the heart of the void. QB delivers a dart on the numbers for a first down and huge run-after-catch opportunity.",
+      "focus": ["QB", "Z", "LCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["lafleur-pony-screen-wheel"],
+    "playsOff": ["lafleur-wide-zone-cutback", "lafleur-cross-country-post"],
+    "tell": "Tight bunch alignment with TE1 bursting vertically up the seam rather than crossing behind the line of scrimmage."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stack335-slant-exchange",
+  "schemeId": "rlong-335-stack",
+  "order": 1,
+  "name": "Base Stack Slant Exchange",
+  "personnel": "Base 3-3-5 Stack (3 DL + 3 LB + 5 DB)",
+  "formation": "Pro I-Form Strong Right vs Stack",
+  "situation": "1st & 10, +30, base run down",
+  "coverage": "Cover 3 Behind the Exchange",
+  "frontName": "3-3-5 Stack (Slant-Exchange Call)",
+  "summary": {
+    "motive": "Hide every gap responsibility behind identical stacks, then move all six box defenders one gap at the snap so blockers chase a pre-snap picture that no longer exists while every gap stays owned.",
+    "keyDefender": "MIKE exchanging to weak A — the stacked backer whose late fill owns the gap the slanting nose abandoned",
+    "whyItWorks": "Blocking rules are built from pre-snap alignment; when all three linemen slant and all three backers exchange simultaneously, double teams form on empty spots and the puller kicks air.",
+    "failureMode": "Perimeter option and quick toss attack the loop side mid-exchange — if the timing slips even one beat, an edge goes unowned and the keeper hits daylight."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. Six Hats in a Single File",
+      "text": "Three linemen align across the formation with all three linebackers stacked exactly one yard behind them at identical depth. The offense cannot tell who owns which gap — the whole point of the picture.",
+      "focus": ["SAM", "MIKE", "WILL", "LE", "NOSE", "RE"]
+    },
+    {
+      "t": 1,
+      "title": "2. All Three Slant Strong",
+      "text": "At the snap every lineman moves one gap toward strength as a single unit. The weak end crosses the tackle’s face, the nose attacks strong A, and the strong end darts under the tight end — three blockers suddenly chasing ghosts.",
+      "focus": ["LE", "NOSE", "RE", "LG", "RT"]
+    },
+    {
+      "t": 2,
+      "title": "3. Backers Exchange Into Vacated Gaps",
+      "text": "Behind the slant, each stacked backer fills the gap his lineman just abandoned: Sam spills outside, Mike takes the weak A, Will loops to strong C. Every gap stays owned while every blocker’s rule breaks.",
+      "focus": ["SAM", "MIKE", "WILL"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Handoff Into a Moving Wall",
+      "text": "The fullback kicks at air where the looping Will was supposed to be, and the tailback runs straight into the slanting nose with the strong end stacking behind him. Tackle for loss inside a wall that moved.",
+      "focus": ["RB", "NOSE", "RE", "FB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["stack335-double-edge-storm"],
+    "playsOff": ["stack335-cross-dog-fire-zone"],
+    "tell": "All six box defenders in perfect single file — each linebacker exactly behind his lineman, a picture no four-man front can show."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

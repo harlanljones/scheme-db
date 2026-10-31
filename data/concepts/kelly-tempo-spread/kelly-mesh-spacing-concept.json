@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "kelly-mesh-spacing-concept",
+  "schemeId": "kelly-tempo-spread",
+  "order": 1,
+  "name": "Mesh Spacing Concept at Tempo",
+  "personnel": "10",
+  "formation": "10P Gun Spread 2x2 vs Nickel",
+  "formationId": "kelly-10p-tempo-spread-vs-nickel",
+  "situation": "2nd & 6, +35, snapped within seconds of the previous whistle — no huddle, no substitution window for the defense",
+  "coverage": "Nickel Cover 2 Man",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Weaponize tempo and classic Air Raid spacing — two shallow crossers rubbing under the quarterback with corners and over routes stacked behind — to stress man coverage's navigation rules and zone coverage's hook depth.",
+    "keyDefender": "Mike Linebacker (navigating crossing trash)",
+    "whyItWorks": "The snap comes seconds after the previous whistle so the defense can't substitute or re-communicate, and the five-yard crossers create a legal rub that man defenders must fight through while zone defenders must decide between walling and passing off mid-route.",
+    "failureMode": "A disciplined two-man-under zone package that walls each crosser at the line and passes them off cleanly, keeping both linebackers square to the quarterback with vision on the throw."
+  },
+  "beats": [
+    {
+      "t": 0.3,
+      "title": "1. Snap Before the Defense Can Breathe",
+      "text": "The ball is snapped within seconds of the previous whistle — no huddle, no substitution window — so Nickel is still backpedaling into an apex alignment he didn't choose. Kelly's tempo turns defensive communication into the first conflict of the play.",
+      "focus": ["QB", "NICKEL", "MIKE"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. The Mesh Exchange",
+      "text": "H and Y flatten at exactly five yards and cross directly under the quarterback, forcing any man defender to either fight over the top or chase through the wash. Against man, one of the crossers is guaranteed to be rubbed.",
+      "focus": ["H", "Y", "NICKEL"]
+    },
+    {
+      "t": 1.7,
+      "title": "3. MIKE Navigates the Trash",
+      "text": "The Mike linebacker must hold the middle hook while both crossers drag through his face — navigate too aggressively and he clears a throwing lane, sit too long and the catch-and-run has no pursuit. This is the single hardest job in Cover 2 Man against Mesh.",
+      "focus": ["MIKE", "H", "Y"]
+    },
+    {
+      "t": 2.5,
+      "title": "4. Corners Behind the Rub",
+      "text": "While the defense stares at the mesh, X breaks a corner and Z settles over the middle behind the trash at 8–12 yards. The spacing stress is layered: if man survives underneath, the corners win behind it; if zone sinks, the crossers eat grass all day.",
+      "focus": ["X", "Z", "LCB", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["kelly-four-verts-takeover"],
+    "playsOff": ["mesh-shallow-cross"],
+    "tell": "Both inside slots exchange full-field shallow crossers directly under the QB within a second of the previous whistle — zero huddle, zero pre-snap motion."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

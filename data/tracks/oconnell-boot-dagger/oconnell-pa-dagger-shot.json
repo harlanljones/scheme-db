@@ -1,0 +1,332 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "oconnell-pa-dagger-shot",
+  "duration": 3.8,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Identical reach track to the stretch base, then convert to pass protection",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 28, "y": -0.1, "note": "Reach step right — identical sell" },
+        { "t": 1, "x": 29, "y": 0.4, "note": "Drive off NT" },
+        { "t": 2, "x": 28.8, "y": 0.6, "note": "Convert to pass set" },
+        { "t": 3.8, "x": 28.4, "y": 0.8, "note": "Anchor in pocket" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Identical reach track to the stretch base, then pass set",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 26.3, "y": -0.1, "note": "Lateral reach step" },
+        { "t": 1, "x": 27.5, "y": 0.3, "note": "Overtake NT" },
+        { "t": 2, "x": 27.2, "y": 0.6, "note": "Convert to pass set" },
+        { "t": 3.8, "x": 26.8, "y": 0.8, "note": "Sustain pocket edge" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Identical backside reach on WDE, then pass set",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 24.6, "y": -0.1, "note": "Bucket-reach WDE" },
+        { "t": 1, "x": 25.8, "y": 0.3, "note": "Head across WDE" },
+        { "t": 2, "x": 25.4, "y": 0.4, "note": "Convert to pass set" },
+        { "t": 3.8, "x": 25, "y": 0.6, "note": "Hold backside edge" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Identical reach of the 3-tech, then pass set",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 29.6, "y": -0.1, "note": "Lateral reach step" },
+        { "t": 1, "x": 30.8, "y": 0.3, "note": "Drive off 3T" },
+        { "t": 2, "x": 30.4, "y": 0.6, "note": "Convert to pass set" },
+        { "t": 3.8, "x": 30.8, "y": 0.8, "note": "Sustain pocket edge" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Identical combo reach with TE on SDE, then pass set",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Snap" },
+        { "t": 0.5, "x": 31.3, "y": -0.1, "note": "Reach step on SDE" },
+        { "t": 1, "x": 32.5, "y": 0.4, "note": "Post SDE shoulder" },
+        { "t": 2, "x": 32, "y": 0.8, "note": "Convert to pass set" },
+        { "t": 3.8, "x": 31.6, "y": 1, "note": "Hold strong edge" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Sell the edge kick exactly like a run block for one second, then release up the seam",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Snap" },
+        { "t": 0.5, "x": 33.2, "y": 0, "note": "Drive step to SDE — identical sell" },
+        { "t": 1, "x": 34.2, "y": 0.9, "note": "Fit looks exactly like run block" },
+        { "t": 1.8, "x": 34.6, "y": 4, "note": "Slip off, release seam" },
+        { "t": 2.6, "x": 34, "y": 9, "note": "Pushing between MIKE and SAM" },
+        { "t": 3.4, "x": 33.8, "y": 13, "note": "Seam clearing deep middle" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Sell the mesh right, then reset to the back of the pocket and deliver the dagger",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap from gun" },
+        { "t": 0.5, "x": 28.2, "y": -4.2, "note": "Open right to mesh — identical sell" },
+        { "t": 1.3, "x": 27.4, "y": -5, "note": "Pull ball, reset opposite" },
+        { "t": 2.2, "x": 27.2, "y": -5.8, "note": "Hitch at back of pocket" },
+        { "t": 3, "x": 27, "y": -6.2, "note": "Set feet, deliver over MIKE" },
+        { "t": 3.8, "x": 27, "y": -6, "note": "Follow through on shot" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Take identical stretch path as pure run, continuing the fake through the launch window",
+      "waypoints": [
+        { "t": 0, "x": 29.8, "y": -4.8, "note": "Snap alignment" },
+        { "t": 0.5, "x": 28.8, "y": -3.8, "note": "Mesh point — identical sell" },
+        { "t": 1.2, "x": 31.5, "y": -3.2, "note": "Fake taken, flatten path" },
+        { "t": 2.2, "x": 33.5, "y": -2.4, "note": "Continue stretch path" },
+        { "t": 3.8, "x": 35, "y": -1.6, "note": "Fake carries SAM wide" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary X runs clearout vertical to vacate LCB and FS from the dagger window",
+      "waypoints": [
+        { "t": 0, "x": 9.5, "y": -0.5, "note": "Release vertical" },
+        { "t": 1.2, "x": 9.8, "y": 5, "note": "Pushing LCB vertical" },
+        { "t": 2.2, "x": 10.2, "y": 10, "note": "Carrying deep third" },
+        { "t": 3.2, "x": 10.5, "y": 14, "note": "Clearing out boundary third" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Condensed slot runs shallow drag to occupy MIKE eyes and clean the seam",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": -1.2, "note": "Release inside" },
+        { "t": 0.9, "x": 32, "y": 1.5, "note": "Cross-face SAM" },
+        { "t": 1.9, "x": 26, "y": 2.8, "note": "Shallow drag under MIKE" },
+        { "t": 2.9, "x": 21, "y": 3.2, "note": "Occupying hook zone eyes" },
+        { "t": 3.6, "x": 18.5, "y": 3.4, "note": "Draining coverage away" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Flanker stems hard over the dropping MLB and settles curl in the void behind the seam",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": -0.8, "note": "Release inside stem" },
+        { "t": 0.8, "x": 38, "y": 3, "note": "Hard stem at RCB cushion" },
+        { "t": 1.6, "x": 38.2, "y": 6, "note": "Threatening RCB vertical" },
+        { "t": 2.4, "x": 37.2, "y": 8.5, "note": "Settle into curl void" },
+        { "t": 3, "x": 36.6, "y": 9, "note": "Square in the hole" },
+        { "t": 3.8, "x": 36.4, "y": 9.2, "note": "Sitting behind MIKE shoulders" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Backside contain reached early by LT, converts to late rush after boot fear",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Contain alignment" },
+        { "t": 0.9, "x": 22.2, "y": 1.3, "note": "Reached inside by LT" },
+        { "t": 2, "x": 23.6, "y": 1.6, "note": "Disengaging late" },
+        { "t": 3.8, "x": 24.6, "y": 2.2, "note": "Chasing smoke" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Shade nose washed down the line by reach before reading pass",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Shade alignment" },
+        { "t": 0.9, "x": 26.8, "y": 1.2, "note": "Double-teamed on stretch" },
+        { "t": 2, "x": 28.2, "y": 1.4, "note": "Late pass-rush read" },
+        { "t": 3.8, "x": 29.2, "y": 1.6, "note": "Blocked out of window" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "3-tech engaged by RG reach, late to convert into rush lane",
+      "waypoints": [
+        { "t": 0, "x": 29.2, "y": 0.9, "note": "3-tech alignment" },
+        { "t": 0.9, "x": 30.3, "y": 1.2, "note": "RG reaches across face" },
+        { "t": 2, "x": 31.6, "y": 1.4, "note": "Fighting wash" },
+        { "t": 3.8, "x": 32.6, "y": 1.8, "note": "Neutralized" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Playside edge sold on kick-out, boxed outside while TE releases behind him",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Edge alignment" },
+        { "t": 0.9, "x": 33.9, "y": 1.4, "note": "Eats the TE drive step" },
+        { "t": 2, "x": 34.7, "y": 2, "note": "Boxed outside" },
+        { "t": 3.8, "x": 35.3, "y": 2.6, "note": "TE released untouched past him" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Backside LB steps to flow then recovers into hook, trailing the play entirely",
+      "waypoints": [
+        { "t": 0, "x": 23, "y": 4.5, "note": "Backside alignment" },
+        { "t": 1, "x": 24.8, "y": 4.2, "note": "Step toward flow read" },
+        { "t": 2.2, "x": 26.5, "y": 5.5, "note": "Recovering to hook late" },
+        { "t": 3.8, "x": 28, "y": 6.5, "note": "Out of the picture" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Key defender — hook-to-curl conflict: turns eyes on the seam and abandons the curl behind him",
+      "waypoints": [
+        { "t": 0, "x": 27.5, "y": 4.8, "note": "Keyed on backfield flow" },
+        { "t": 0.8, "x": 30, "y": 4.4, "note": "Steps with run action" },
+        { "t": 1.8, "x": 31.5, "y": 6, "note": "Bailing into hook-curl drop" },
+        { "t": 2.6, "x": 32.6, "y": 7.5, "note": "Eyes locked on climbing seam" },
+        { "t": 3.4, "x": 32.8, "y": 8, "note": "Turning too late — curl open behind" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Apex dragged to perimeter by RB fake, cannot close on Z curl",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": 3.8, "note": "Apex alignment" },
+        { "t": 1, "x": 33.8, "y": 3.3, "note": "Triggered on run fit" },
+        { "t": 2.2, "x": 34.8, "y": 2.8, "note": "Chasing stretch fake" },
+        { "t": 3.8, "x": 35.2, "y": 4.2, "note": "Stranded outside the curl" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep boundary third carried vertically by X clearout",
+      "waypoints": [
+        { "t": 0, "x": 9.5, "y": 6.5, "note": "Deep third alignment" },
+        { "t": 1.2, "x": 10, "y": 9.5, "note": "Retreating with X" },
+        { "t": 2.4, "x": 10.4, "y": 13.5, "note": "Carried to sideline hash" },
+        { "t": 3.6, "x": 10.7, "y": 15, "note": "Pinned deep by clearout" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field CB sinks under Z stem then trails the curl a half-beat behind",
+      "waypoints": [
+        { "t": 0, "x": 40, "y": 6.5, "note": "Off coverage" },
+        { "t": 1, "x": 39, "y": 6, "note": "Sinking under stem" },
+        { "t": 2.2, "x": 37.8, "y": 7, "note": "Reading Z settle" },
+        { "t": 3.4, "x": 36.8, "y": 8.2, "note": "Trail angle compromised" },
+        { "t": 3.8, "x": 36.6, "y": 8.6, "note": "Half-step behind catch point" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Sky force player triggered downhill on run fit, recovering too late for anything",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 9.5, "note": "Sky alignment" },
+        { "t": 1, "x": 35, "y": 6.5, "note": "Rolling down on run fit" },
+        { "t": 2, "x": 35.6, "y": 4, "note": "Locked into force fit" },
+        { "t": 3.4, "x": 34.6, "y": 6, "note": "Recovering, out of position" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Middle third split by X and Y verticals, cannot rob the curl underneath",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": 13.5, "note": "Middle-third alignment" },
+        { "t": 1.4, "x": 26.8, "y": 12, "note": "Splitting two threats" },
+        { "t": 2.4, "x": 30, "y": 11.5, "note": "Leaning to climbing seam" },
+        { "t": 3.4, "x": 31.5, "y": 11.5, "note": "Too deep to help on curl" }
+      ]
+    }
+  ]
+}

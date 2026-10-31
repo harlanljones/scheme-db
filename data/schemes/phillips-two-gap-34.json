@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "phillips-two-gap-34",
+  "name": "Bum Phillips' Two-Gap 3-4",
+  "coachId": "bum-phillips",
+  "team": "Houston Oilers (1975-80)",
+  "side": "defense",
+  "era": "past-nfl",
+  "lineage": "phillips-two-gap",
+  "description": "The original two-gap 3-4 that Bum Phillips brought to the Houston Oilers: a zero-tech nose and twin 5-tech ends who ENGAGE and hold two gaps apiece rather than penetrate, occupying all five blockers so both inside linebackers can flow untouched over the tops of engaged bodies. The stand-up outside linebacker duo serves as the front's rush weapons — walking wide on passing downs, stemming across tackles' faces, and attacking rims the anchored interior keeps bare."
+}

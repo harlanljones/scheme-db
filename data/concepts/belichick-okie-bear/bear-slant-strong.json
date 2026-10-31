@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bear-slant-strong",
+  "schemeId": "belichick-okie-bear",
+  "order": 3,
+  "name": "Bear Slant Strong",
+  "personnel": "Okie/Bear Package (5 DL, 2 LB, 4 DB)",
+  "formation": "Bear Front vs Under-Center 21 Personnel Strong Right",
+  "situation": "2nd & 3, red zone, short-yardage run-down",
+  "coverage": "Press Match, Safeties Near Box",
+  "frontName": "Bear Front Strong Slant (Interior Trio)",
+  "summary": {
+    "motive": "Trade gap-control patience for instant backfield penetration against gap runs, using synchronized one-gap movement so every blocker chases while the carrier runs into occupied gaps.",
+    "keyDefender": "NOSE slanting to strong B — he lands exactly where the lead blocker is aiming",
+    "whyItWorks": "Simultaneous movement means every combo is blocking the man who just left, while the replacing linebacker erases the backside escape hatch.",
+    "failureMode": "Reach blocks: if the front-side tackle hooks the slanting end, the entire slant chain gets reached and the run bounces outside."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Strong-Slant Picture",
+      "text": "The Bear front stacks its double 4is and zero-nose over the guards while the offense lines up strong right — every interior blocker is staring at a defender he cannot reach-block.",
+      "focus": ["NOSE", "4iL", "4iR", "LE", "RE"]
+    },
+    {
+      "t": 1,
+      "title": "2. Three Bodies Cross One Direction",
+      "text": "All three interior linemen rip across their blockers’ faces simultaneously, landing in strong A, B, and C before any combo has time to climb.",
+      "focus": ["4iL", "NOSE", "4iR"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Backside Replacement",
+      "text": "MIKE scrapes into the weak A the slanting 4iL abandoned while FS closes the cutback hatch behind him — nothing opens anywhere on the play.",
+      "focus": ["MIKE", "FS", "LE"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Met Head-On in the Hole",
+      "text": "The FB lead arrives to find NOSE already owning strong B, and the tailback is swallowed at the line by the converging slant wall.",
+      "focus": ["NOSE", "FB", "TB", "WILL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bear-to-46-stem-disguise"],
+    "playsOff": ["bear-goal-line-heavy"],
+    "tell": "All three interior linemen tilt their stances and stagger their steps strong during the cadence — the goal-line Bear sits flat-footed until the ball is snapped."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flexbone-rocket-toss-pitch",
+  "schemeId": "flexbone-triple-option",
+  "order": 2,
+  "name": "Rocket Toss Pitch Series",
+  "personnel": "Flexbone Base",
+  "formation": "Flexbone Right, Rocket Motion",
+  "situation": "1st & 10, own 25, perimeter speed advantage",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Attack the perimeter with a full-speed motion back so the pitch arrives at maximum velocity before the defense can reset its force geometry.",
+    "keyDefender": "Strong Safety (perimeter force player)",
+    "whyItWorks": "The motion outruns defensive flow calls, and sequential kick-outs on end, linebacker, and safety force every edge defender outward while the carrier turns north.",
+    "failureMode": "The force safety squeezes the pitch track instead of taking the kick-out, or the ends spill the blockers and funnel the sweep back inside."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Rocket Motion at Full Speed",
+      "text": "The slot crosses the formation at a dead sprint instead of shimmy-shifting. By the time the defense diagnoses direction he is already even with the tackles.",
+      "focus": ["H", "QB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Extended Pitch",
+      "text": "The quarterback reverse-pivots and extends the pitch all the way to the edge, handing the ball to H at top gear without breaking his stride.",
+      "focus": ["QB", "H"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Kick-Out Geometry",
+      "text": "B kicks the end inside while the guard leads on the linebacker and A climbs to the force safety. Every defender who could squeeze the edge is being blocked outward.",
+      "focus": ["B", "RG", "A"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Perimeter Edge",
+      "text": "With the force player kicked out and both corners stalked, H turns upfield into grass with escorts leading him to the numbers.",
+      "focus": ["H", "SS", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["flexbone-midline-triple"],
+    "playsOff": [],
+    "tell": "The pitch is extended laterally to a moving back at full speed — option triples hand or ride stationary before reading."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

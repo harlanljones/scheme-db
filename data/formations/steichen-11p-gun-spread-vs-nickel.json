@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/formation.schema.json",
+  "id": "steichen-11p-gun-spread-vs-nickel",
+  "name": "Shane Steichen 11 Personnel Gun Spread / Trips vs Nickel 4-2-5 Over Front",
+  "description": "Spread alignment with dual-threat QB, sidecar RB, slot WR H, and attached TE.",
+  "offense": {
+    "C": { "x": 26.67, "y": -0.4, "role": "ol" },
+    "LG": { "x": 25, "y": -0.4, "role": "ol" },
+    "LT": { "x": 23.3, "y": -0.4, "role": "ol" },
+    "RG": { "x": 28.3, "y": -0.4, "role": "ol" },
+    "RT": { "x": 30, "y": -0.4, "role": "ol" },
+    "QB": { "x": 26.67, "y": -4.5, "role": "qb" },
+    "RB": { "x": 23.5, "y": -4.5, "role": "rb" },
+    "TE": { "x": 32, "y": -0.6, "role": "te" },
+    "X": { "x": 7.5, "y": -0.5, "role": "wr" },
+    "H": { "x": 37, "y": -0.8, "role": "wr" },
+    "Z": { "x": 46, "y": -0.5, "role": "wr" }
+  },
+  "defense": {
+    "WDE": { "x": 21, "y": 0.9, "role": "dl" },
+    "NT": { "x": 25.5, "y": 0.9, "role": "dl" },
+    "3T": { "x": 29, "y": 0.9, "role": "dl" },
+    "SDE": { "x": 33, "y": 0.9, "role": "dl" },
+    "WILL": { "x": 23.5, "y": 4.5, "role": "lb" },
+    "MIKE": { "x": 28, "y": 4.5, "role": "lb" },
+    "NICKEL": { "x": 36.5, "y": 4, "role": "db" },
+    "LCB": { "x": 7.5, "y": 6.5, "role": "db" },
+    "RCB": { "x": 46, "y": 6.5, "role": "db" },
+    "SS": { "x": 36, "y": 11.5, "role": "db" },
+    "FS": { "x": 20, "y": 11.5, "role": "db" }
+  }
+}

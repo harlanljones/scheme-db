@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "minter-slot-blitz-creeper",
+  "schemeId": "minter-amoeba-creeper",
+  "order": 2,
+  "name": "Nickel Slot Blitz Creeper (Simulated Pressure)",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Over Front 4-Man Presentation vs 11P Gun 2x2",
+  "situation": "2nd & 10, +30, red zone boundary passing situation",
+  "coverage": "Cover 3 Match Creeper (4-Man Rush, 7 in Coverage)",
+  "frontName": "Over Front Sim-Pressure Presentation",
+  "summary": {
+    "motive": "Manufacture free edge pressure with only a 4-man rush by dropping a defensive end into coverage while sending a lightning-fast slot defensive back.",
+    "keyDefender": "NICKEL (unblocked slot blitzer) & WDE (creeper flat dropper)",
+    "whyItWorks": "Offensive line slide rules lock onto the 4-down front, leaving the tackle picking up the slanting DE while the DB rushes completely unblocked into the backfield.",
+    "failureMode": "Quick hot throws directly into the slot void if the safety fails to roll down in time to replace the blitzing nickelback."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Standard Over Front Disguise",
+      "text": "Jesse Minter aligns in a classic 4-down Over front with two-high safeties, giving zero pre-snap indication of pressure.",
+      "focus": ["WDE", "NT", "3T", "SDE", "NICKEL", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "Simulated Exchange: Nickel Fires, WDE Bails",
+      "text": "At the snap, SDE slants into the B-gap occupying the RT, freeing NICKEL to blitz clean off the edge. Simultaneously, WDE drops into the boundary flat, keeping 7 defenders in coverage.",
+      "focus": ["NICKEL", "SDE", "RT", "WDE", "LT"]
+    },
+    {
+      "t": 2,
+      "title": "Pass Protection Compromised & Lanes Flooded",
+      "text": "The LT is left blocking empty air as WDE drops, while the RT is pinned inside by the SDE stunt. 7 coverage defenders suffocate every intermediate throwing window.",
+      "focus": ["LT", "WDE", "RB", "SS", "H"]
+    },
+    {
+      "t": 2.8,
+      "title": "Free Edge Hitter Forces Strip-Sack",
+      "text": "NICKEL accelerates untouched off the edge, delivering a blindside hit on the quarterback before he can scan past his first read.",
+      "focus": ["NICKEL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["minter-cover1-robber-lurk"],
+    "playsOff": ["minter-amoeba-fire-zone3"],
+    "tell": "Standard 4-down look where SDE spikes inside to pin the RT while Nickel blitzes from the slot and WDE drops into coverage"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

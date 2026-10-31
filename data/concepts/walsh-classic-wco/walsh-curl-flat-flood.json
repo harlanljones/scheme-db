@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "walsh-curl-flat-flood",
+  "schemeId": "walsh-classic-wco",
+  "order": 3,
+  "name": "Curl-Flat Flood",
+  "personnel": "21",
+  "formation": "Split Backs Strong Right",
+  "situation": "2nd & 7, own 42, base down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Vertically stretch one flat defender with three routes at three depths until he must give up a leg of the flood.",
+    "keyDefender": "Right Corner (Cover 3 sky flat dropper)",
+    "whyItWorks": "The seam threat removes the hook linebacker and the deep third holds the safety high, leaving the corner alone to cover both an inside breaker and a flat runner.",
+    "failureMode": "The Sam refuses to carry the TE vertical and walls the curl while the corner takes the flat, erasing all three windows."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Three-Level Flood Forms",
+      "text": "To the right, three receivers attack three depths at once: the TE climbs past fifteen, the flanker works eight at the numbers, and the fullback swings into the flat.",
+      "focus": ["Y", "Z", "FB"]
+    },
+    {
+      "t": 1.7,
+      "title": "2. The Seam Threat Drags the Hook",
+      "text": "The TE's vertical stem forces the Sam linebacker to carry him up the seam, vacating the very curl window the flood is designed to hit underneath.",
+      "focus": ["Y", "SAM"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The High-Low Question",
+      "text": "The quarterback reads the sky safety against the curl. The safety stays above the fifteen-yard break, so the curl window is open if the corner does not close it.",
+      "focus": ["QB", "SS", "Y"]
+    },
+    {
+      "t": 3.1,
+      "title": "4. The Corner Loses the Flood",
+      "text": "The flat-drop corner sat on Z's inside break, and now the fullback runs free behind him in the flat. The quarterback throws down to the shallowest open leg.",
+      "focus": ["RCB", "FB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["walsh-sprint-right-option"],
+    "playsOff": ["walsh-slant-flat-combo"],
+    "tell": "All three flood legs release to one side within the first second — a true flood never distributes to both sides."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

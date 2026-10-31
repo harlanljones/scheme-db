@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "air-raid",
+  "name": "Air Raid Spacing Tree",
+  "patriarch": "Hal Mumme → Mike Leach",
+  "side": "offense",
+  "description": "The college game’s great equalizer: a handful of mesh, shallow, and stick spacing concepts repped thousands of times from empty and five-open formations, weaponizing distribution over play design and turning any coverage into a numbers problem.",
+  "rootNodes": [
+    {
+      "coachId": "hal-mumme",
+      "children": [
+        {
+          "coachId": "mike-leach",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "roman-pa-post-shot",
+  "schemeId": "roman-power-read",
+  "order": 4,
+  "name": "Heavy Personnel PA Deep Post Shot",
+  "personnel": "22",
+  "formation": "22P Heavy Wing Right (Under Center)",
+  "formationId": "roman-22p-heavy-wing-vs-43",
+  "situation": "1st & 10, +40, shot off heavy-run tendency",
+  "coverage": "Cover 1",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Weaponize the established Power Read Pull picture — same mesh, same pull, same lead — to bait the single-high safety downhill and take a deep post shot behind him.",
+    "keyDefender": "Free Safety — single-high defender who must honor heavy-run action or the deep middle",
+    "whyItWorks": "Every visual cue matches the run the defense has studied for weeks, so the safety’s downhill fit is correct football that loses anyway; the lone tell is X blocking nobody, and it is invisible until the stem.",
+    "failureMode": "A quarter-safety coverage or a disciplined post-safety who reads the X release early and sinks instead of fitting — the shot needs that downhill bite to exist."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Frame-for-Frame Deception",
+      "text": "The mesh, the pulling guard, the climbing tight end, the fullback lead — every offensive tell is identical to Power Read Pull. In heavy personnel against a single-high safety, the defense has earned the right to be wrong here.",
+      "focus": ["QB", "RB", "LG", "TE"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Safety’s Downhill Bite",
+      "text": "The free safety sees unblocked end, pulling guard, fullback lead — everything his run fits demand — and triggers downhill into the box. The moment he does, the deepest part of the field has nobody within twelve yards of it.",
+      "focus": ["FS", "SS", "SDE"]
+    },
+    {
+      "t": 1.9,
+      "title": "3. The Post Breaks Behind the Bite",
+      "text": "X has been stacking the corner since the snap because there is no stalk block coming — that absence is the only difference in the whole play. The post breaks inside at sixteen yards directly into the space the safety just vacated.",
+      "focus": ["X", "LCB", "FS"]
+    },
+    {
+      "t": 2.8,
+      "title": "4. Corner Turn and Recovery Race",
+      "text": "The quarterback rises off the boot action and lets it go. The safety turns and runs but he is chasing from nine yards downhill; U’s clear-out seam has also dragged the strong-side corner away from any help.",
+      "focus": ["QB", "FS", "RCB", "U"]
+    },
+    {
+      "t": 4,
+      "title": "5. Shot Money off Run Identity",
+      "text": "The catch lands where Roman designed it: the middle third, vacated by a bite he manufactured across four weeks of heavy-run film. This is why the power game exists — not just for yards, but for moments exactly like this one.",
+      "focus": ["X", "FS", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["roman-power-read-pull", "play-action-over"],
+    "tell": "The backfield is a perfect copy of Power Read Pull, but X never blocks — his vertical release off the snap is the one frame that gives it away."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

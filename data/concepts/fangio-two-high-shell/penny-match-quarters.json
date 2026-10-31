@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "penny-match-quarters",
+  "schemeId": "fangio-two-high-shell",
+  "order": 2,
+  "name": "Penny 5-1-5 Match Quarters (Palms / 2-Read)",
+  "personnel": "Penny 5-1-5 Nickel",
+  "formation": "Penny 5-1-5 vs 11P Gun 2x2 Smash-Out",
+  "formationId": "fangio-penny-515-vs-11p",
+  "situation": "2nd & 7, +35, medium passing down",
+  "coverage": "Cover 4 Match (Palms / 2-Read)",
+  "frontName": "Penny 5-1-5 4-Man Rush",
+  "summary": {
+    "motive": "Deploy symmetrical 4-deep match (Palms / 2-Read) from the identical 2-high pre-snap shell to jump quick out routes and rob crossing patterns.",
+    "keyDefender": "STAR (Nickel) reading #2 out-break and BS (Boundary Safety) driving top-down on #1",
+    "whyItWorks": "Palms rules allow the underneath nickel/corner to aggressively jump shallow out-breaking routes because the safety is keyed to drive on any inside break by #1.",
+    "failureMode": "Double moves or Wheel-Post combinations if the safety hesitates on the trigger."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Disguised Two-High Safety Stem",
+      "text": "Fangio shows the identical two-high safety look as Cover 6. Pre-snap, the QB anticipates soft boundary cushions or Cover 2 holes.",
+      "focus": ["BS", "FS", "STAR", "LCB"]
+    },
+    {
+      "t": 1.2,
+      "title": "Palms 2-Read: Star DB Jumps the Out",
+      "text": "The moment #2 H breaks on the shallow out route, STAR triggers downhill with full aggression to undercut the flat throw under Palms rules.",
+      "focus": ["STAR", "H", "LCB"]
+    },
+    {
+      "t": 2.3,
+      "title": "Boundary Safety Drives Top-Down on Post",
+      "text": "With STAR taking the out, Boundary Safety BS reads the route distribution and drives downhill from 12 yards to completely erase X on the post.",
+      "focus": ["BS", "X", "FS"]
+    },
+    {
+      "t": 3.5,
+      "title": "Contested Catch Window on Intermediate Dig",
+      "text": "The QB resets and fires to Y on the dig, but MIKE and FS close the vice clamp from underneath and over the top to force the incompletion.",
+      "focus": ["QB", "Y", "MIKE", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["tite-creeper-drop8"],
+    "playsOff": ["cover6-quarter-quarter-half"],
+    "tell": "Both safeties trigger top-down at 10-12 yards matching #2 receivers vertical while Star DB plays palms flat."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

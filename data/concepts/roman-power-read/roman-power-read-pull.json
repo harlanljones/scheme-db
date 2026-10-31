@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "roman-power-read-pull",
+  "schemeId": "roman-power-read",
+  "order": 1,
+  "name": "Power Read Pull (Keep off the Crashing End)",
+  "personnel": "22",
+  "formation": "22P Heavy Wing Right (Under Center)",
+  "formationId": "roman-22p-heavy-wing-vs-43",
+  "situation": "2nd & 5, +45, downhill gap-scheme environment",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Put the unblocked playside defensive end in an impossible choice between the RB's flow and the QB's keep, then punish the crash with a pulling guard and fullback lead.",
+    "keyDefender": "Playside Defensive End (Read Key) — unblocked SDE",
+    "whyItWorks": "The read key must honor the running back or contain the quarterback, never both; when he crashes, the pulling guard and lead fullback have already built a two-man wall at the second level for the keeper.",
+    "failureMode": "A disciplined end who squeezes rather than crashes — riding the mesh, staying square, and capping the quarterback until backside pursuit arrives."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Mesh and the Declared Read Key",
+      "text": "The playside defensive end is deliberately left unblocked — he is the entire play. The QB opens hard off under center, extends the ball to the arcing RB, and his eyes never leave that end.",
+      "focus": ["QB", "RB", "SDE"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The End Bites, Ball Comes Out",
+      "text": "The read key crashes downhill on the running back flow, abandoning the edge. The QB rips the ball back and the geometry flips instantly — the crashing end is now chasing from the wrong side.",
+      "focus": ["SDE", "QB", "LG"]
+    },
+    {
+      "t": 2,
+      "title": "3. Puller Meets the Kick-Out",
+      "text": "While the defense stares at the mesh, the left guard is already pulling flat to kick out the SAM, and the fullback is leading through the crease for the sky safety. Two blockers erase two second-level defenders.",
+      "focus": ["LG", "F", "SAM", "SS"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Quarterback in Open Grass",
+      "text": "With the edge kicked and the alley led into, the keeper hits its stride off tackle against only a trailing free safety. This is Roman football: a numbers advantage created by making one man defend two things.",
+      "focus": ["QB", "FS", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["roman-pa-post-shot"],
+    "playsOff": ["steichen-qb-power-read"],
+    "tell": "The QB rides the mesh with eyes locked on the unblocked end instead of securing the handoff — if that end crashes, the ball never leaves."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

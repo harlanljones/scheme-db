@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "wingt-wingback-trap-gut",
+  "schemeId": "delaware-wing-t",
+  "order": 4,
+  "name": "Wingback Trap-Gut",
+  "personnel": "Wing-T Base",
+  "formation": "Wing-T Strong Right, SE Left",
+  "situation": "3rd & 2, own 42, vs slanting fronts",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Punish aggressive interior slants by trapping the penetrating lineman under complete Buck Sweep disguise.",
+    "keyDefender": "3-Tech Defensive Tackle (slanting trap target)",
+    "whyItWorks": "The full sweep sell sends every perimeter defender wide while the trap converts the slant's own momentum into a kicked-open B-gap.",
+    "failureMode": "The tackle two-gaps instead of slanting, or linebackers play slow-to-the-ball discipline and meet the gut before the lead block lands."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Sweep Footwork Sell",
+      "text": "The quarterback pivots off the Buck Sweep mesh while both guards show their signature pull steps and B presses the edge — every perimeter trigger fires.",
+      "focus": ["QB", "B", "RG", "LG"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Trap Springs",
+      "text": "The slanting 3-tech penetrates himself into the trap as the guard whirs back and kicks him out of the very gap he was shooting.",
+      "focus": ["RG", "T3", "H"]
+    },
+    {
+      "t": 2,
+      "title": "3. Downhill Through the B-Gap",
+      "text": "The wing takes the hidden exchange and hits the vacated seam full speed behind the redirecting lead guard, who buries the filling linebacker.",
+      "focus": ["H", "LG", "WILL"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. The Perimeter Still Sold",
+      "text": "The force corner and safety are still chasing the sweep fake at the numbers while the gut gains vertically between the hashes.",
+      "focus": ["B", "RCB", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["wingt-buck-sweep-guard-pull", "wingt-counter-crisscross"],
+    "tell": "The playside guard pulls flat then reverses direction mid-step — true sweep pullers never come back to the interior."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

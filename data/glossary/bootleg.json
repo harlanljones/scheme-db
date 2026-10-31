@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "bootleg",
+  "term": "Bootleg",
+  "aliases": ["Naked boot", "keeper", "boot action", "naked bootleg", "bootleg"],
+  "category": "Pass Concept",
+  "shortDef": "A play-action pass where the quarterback fakes a zone handoff in one direction and rolls out in the opposite direction without lead protection.",
+  "tacticalNote": "Punishes backside defensive ends and linebackers who overcommit to stopping the run, generating clean throwing lanes into the vacated flat."
+}

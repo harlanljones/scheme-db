@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "quinn-cover1-rat-in-hole",
+  "schemeId": "quinn-cover3-press",
+  "order": 3,
+  "name": "Cover 1 Rat-in-the-Hole (Lurk Crosser)",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Nickel 4-2-5 vs 11P Gun 2x2 Mesh",
+  "situation": "3rd & 5, +36, medium conversion down",
+  "coverage": "Cover 1 Rat (Man-Free with Underneath Lurker)",
+  "frontName": "Even 4-Man Pass Rush",
+  "summary": {
+    "motive": "Neutralize man-beating Mesh and shallow cross combinations by freeing an underneath defender (The Rat) to lurk in the short intermediate hole while corners play trail technique.",
+    "keyDefender": "MIKE (Rat-in-the-Hole Lurker) & FS (Deep Post Safety)",
+    "whyItWorks": "Offenses design crossing rub routes expecting defenders to chase from behind; the lurking linebacker sits directly where the receiver crosses.",
+    "failureMode": "A deep comeback or back-shoulder throw outside the numbers where the underneath rat cannot provide help."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Cover 1 Presentation & Mug Illusion",
+      "text": "Quinn shows a single-high Cover 1 look with MIKE threatening the A-gap, inviting the offense to run a quick Mesh crossing concept to beat the man coverage.",
+      "focus": ["MIKE", "FS", "SS", "NCB", "QB"]
+    },
+    {
+      "t": 1,
+      "title": "The Rat Drops into the Hole",
+      "text": "Rather than blitzing or matching a man, MIKE bails 6 yards into the low hole as the designated \"Rat,\" reading the quarterback’s eyes while DBs trail the crossers.",
+      "focus": ["MIKE", "H", "Y"]
+    },
+    {
+      "t": 1.8,
+      "title": "The Mesh Rub Baited (Interception)",
+      "text": "The QB spots H clearing the Mesh rub and fires into the middle, but the lurking MIKE steps directly into the throwing lane to intercept the pass.",
+      "focus": ["MIKE", "H", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Defensive Return Underway",
+      "text": "With DBs in man coverage already sealing their receivers, the MIKE turns the interception upfield for a huge turnover return.",
+      "focus": ["MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["quinn-under-front-overload"],
+    "playsOff": ["quinn-cover3-press-bail"],
+    "tell": "Middle linebacker mugs A-gap then immediately drops to 6 yards depth as a free-floating lurker while DBs play tight trail man"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

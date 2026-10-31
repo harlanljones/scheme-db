@@ -1,0 +1,325 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "coen-motion-zone-cutback",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach step right with the wide-zone front, then hold the wall as the cutback opens backside",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.6, "x": 27.8, "y": 0.3, "note": "Wide-zone reach right" },
+        { "t": 1.5, "x": 29, "y": 0.8, "note": "Stretch NT playside" },
+        { "t": 4, "x": 30.5, "y": 1.5, "note": "Wall holds for cutback" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Scoop-reach behind center — his block becomes the hinge of the cutback lane",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Snap" },
+        { "t": 0.7, "x": 26.2, "y": 0.3, "note": "Scoop to NT" },
+        { "t": 1.5, "x": 27.2, "y": 0.9, "note": "Seal backside A-gap" },
+        { "t": 4, "x": 28.5, "y": 1.5, "note": "Cutback edge anchored" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Backside reach on WDE — turning this shoulder out is what creates the entire cutback seam",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.7, "x": 24.2, "y": 0.4, "note": "Reach WDE" },
+        { "t": 1.5, "x": 24.8, "y": 1, "note": "Turn WDE outside" },
+        { "t": 2.8, "x": 25, "y": 1.5, "note": "Backside reach held" },
+        { "t": 4, "x": 25.2, "y": 2, "note": "Cutback lane open inside" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Frontside zone reach on 3-tech, dragging defenders away from the eventual cutback",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.7, "x": 29.5, "y": 0.4, "note": "Reach 3T" },
+        { "t": 1.6, "x": 31, "y": 1, "note": "Stretch continues right" },
+        { "t": 4, "x": 32.5, "y": 1.8, "note": "Defenders displaced" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Full-stretch reach on SDE to sell maximum width and pull pursuit to the boundary",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Snap" },
+        { "t": 0.6, "x": 31.4, "y": 0.3, "note": "Wide reach SDE" },
+        { "t": 1.5, "x": 32.8, "y": 0.9, "note": "Maximum stretch sell" },
+        { "t": 4, "x": 34.5, "y": 1.8, "note": "Edge stretched" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Arc-release around the edge, adding one more body pulling pursuit toward the sideline",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Snap" },
+        { "t": 0.6, "x": 33.2, "y": 0.3, "note": "Arc release" },
+        { "t": 1.5, "x": 34.8, "y": 1, "note": "Wall edge defender" },
+        { "t": 4, "x": 36.5, "y": 2, "note": "Perimeter sealed" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Hand off on stretch action, then reverse-pivot away selling keep to freeze the backside",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap from gun" },
+        { "t": 0.6, "x": 27.8, "y": -4.2, "note": "Mesh and hand off" },
+        { "t": 1.2, "x": 27.5, "y": -4, "note": "Ball delivered" },
+        { "t": 2, "x": 27, "y": -3.8, "note": "Reverse pivot boot fake" },
+        { "t": 4, "x": 26, "y": -3.5, "note": "Carries out keeper threat" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Take handoff pressing stretch-right track, then bend hard back to the cutback lane behind LT's reach",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -4.8, "note": "Aligned playside" },
+        { "t": 0.7, "x": 31.5, "y": -3.2, "note": "Receive handoff, press right" },
+        { "t": 1.4, "x": 32, "y": -1, "note": "Bend at the mesh line" },
+        { "t": 2.2, "x": 30, "y": 1, "note": "Plant — frontside capped" },
+        { "t": 3, "x": 27.5, "y": 3.5, "note": "Hit cutback lane" },
+        { "t": 4, "x": 26, "y": 7, "note": "Through backside seam" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Stalk LCB on the backside to protect the cutback lane from that side of the field",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Release" },
+        { "t": 0.8, "x": 8.5, "y": 2, "note": "Work to LCB" },
+        { "t": 2, "x": 9, "y": 4.5, "note": "Engage stalk" },
+        { "t": 4, "x": 9.5, "y": 6, "note": "Boundary protected" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Pre-snap orbit across formation — drags the overhang with him, declaring the run fit; at snap continues orbit then climbs to lead the cutback",
+      "waypoints": [
+        { "t": 0, "x": 31, "y": -1, "note": "Mid-orbit at snap (motioned from right slot)" },
+        { "t": 0.8, "x": 27, "y": -0.5, "note": "Continue orbit left" },
+        { "t": 1.5, "x": 23, "y": 0.5, "note": "Crossed formation" },
+        { "t": 2.4, "x": 19.5, "y": 2.5, "note": "Settle near cutback side" },
+        { "t": 3.2, "x": 18.5, "y": 5, "note": "Climb for second-level block" },
+        { "t": 4, "x": 19, "y": 7, "note": "Lead the RB through seam" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Release vertical then work to stalk RCB, holding the field side while the play cuts away",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": -1.2, "note": "Release" },
+        { "t": 1, "x": 46, "y": 3, "note": "Vertical stem" },
+        { "t": 2.2, "x": 46.5, "y": 6, "note": "Engage RCB stalk" },
+        { "t": 4, "x": 46.8, "y": 8, "note": "Field side locked" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Reached by LT on the backside — the block that springs the cutback",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Contain fit" },
+        { "t": 0.8, "x": 22.3, "y": 0.7, "note": "Reached by LT" },
+        { "t": 2, "x": 23.8, "y": 0.9, "note": "Turned outside" },
+        { "t": 4, "x": 25, "y": 1.2, "note": "Cutback door open inside him" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "A-gap defender scooped by C/LG, walled from the cutback seam",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "A-gap attack" },
+        { "t": 0.8, "x": 26.8, "y": 0.9, "note": "Caught in scoop" },
+        { "t": 2, "x": 28.5, "y": 1.3, "note": "Stretched right" },
+        { "t": 4, "x": 30, "y": 1.8, "note": "Displaced from seam" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "B-gap reached and carried downfield by the stretch",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "B-gap attack" },
+        { "t": 0.8, "x": 30.2, "y": 0.9, "note": "Reached by RG" },
+        { "t": 2, "x": 31.5, "y": 1.4, "note": "Carried playside" },
+        { "t": 4, "x": 33, "y": 2, "note": "Wrong-side displacement" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Frontside edge arced around by TE, fully sold on perimeter contain",
+      "waypoints": [
+        { "t": 0, "x": 33.2, "y": 0.9, "note": "Set edge" },
+        { "t": 0.8, "x": 34.2, "y": 0.9, "note": "Arced by TE" },
+        { "t": 2, "x": 35.5, "y": 1.3, "note": "Chasing perimeter" },
+        { "t": 4, "x": 37, "y": 2, "note": "Furthest from the ball" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "BACKSIDE CUTBACK FIT — his flow commitment is what the motion declared; he cannot re-trace to the seam",
+      "waypoints": [
+        { "t": 0, "x": 23, "y": 4.5, "note": "Key motion, set cutback fit" },
+        { "t": 0.8, "x": 25.5, "y": 4.8, "note": "Trigger right with flow" },
+        { "t": 1.8, "x": 28.5, "y": 5.5, "note": "Chasing full stretch width" },
+        { "t": 2.8, "x": 30.5, "y": 6.5, "note": "Committed wrong-way" },
+        { "t": 4, "x": 29.5, "y": 8.5, "note": "Too late turning back" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Playside run-fit scraped all the way to the perimeter, vacating the middle entirely",
+      "waypoints": [
+        { "t": 0, "x": 28, "y": 4.5, "note": "Run fit" },
+        { "t": 0.8, "x": 30, "y": 4.5, "note": "Scrape with stretch" },
+        { "t": 2, "x": 32.5, "y": 5, "note": "Chasing width" },
+        { "t": 4, "x": 34, "y": 6, "note": "Vacated the cutback window" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Overhang dragged across by H's orbit motion pre-snap — his fit was declared before the snap",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": 4, "note": "Dragged by orbit look" },
+        { "t": 0.6, "x": 36.8, "y": 3.2, "note": "Re-anchoring after motion" },
+        { "t": 1.6, "x": 37.5, "y": 2.5, "note": "Eyes on stretch flow" },
+        { "t": 2.8, "x": 36, "y": 3, "note": "Sold on perimeter run" },
+        { "t": 4, "x": 33, "y": 5, "note": "Late recovery attempt" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Boundary corner stalk-blocked by X, removed from the cutback side",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 6.5, "note": "Soft alignment" },
+        { "t": 1.2, "x": 8.5, "y": 7, "note": "Reads run" },
+        { "t": 2.4, "x": 9, "y": 5, "note": "Absorbed by X stalk" },
+        { "t": 4, "x": 9.5, "y": 5.5, "note": "Blocked from seam" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field corner triggered hard on stretch direction, deepest from the actual cut",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": 6.5, "note": "Cloud leverage" },
+        { "t": 1, "x": 46.2, "y": 5.5, "note": "Trigger on stretch" },
+        { "t": 2.5, "x": 45.5, "y": 4.5, "note": "Chasing wrong direction" },
+        { "t": 4, "x": 44, "y": 4, "note": "Furthest defender from ball" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Strong safety filled perimeter alley, leaving no intermediate help over the cutback",
+      "waypoints": [
+        { "t": 0, "x": 36, "y": 11.5, "note": "Alley read" },
+        { "t": 1, "x": 36.5, "y": 9, "note": "Trigger to stretch alley" },
+        { "t": 2.5, "x": 35, "y": 8, "note": "Committed to perimeter" },
+        { "t": 4, "x": 31, "y": 9, "note": "Long recovery path" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Post safety breaking late on the cutback reversal — final tackle chance",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 11.5, "note": "Deep middle" },
+        { "t": 1.2, "x": 22, "y": 11, "note": "Reading flow right" },
+        { "t": 2.4, "x": 25, "y": 10.5, "note": "Recognizes reversal" },
+        { "t": 4, "x": 27, "y": 9, "note": "Closing on cutback" }
+      ]
+    }
+  ]
+}

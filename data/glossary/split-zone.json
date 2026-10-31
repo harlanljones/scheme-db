@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "split-zone",
+  "term": "Split Zone",
+  "aliases": ["Split zone", "split-zone", "split flow", "Split Zone"],
+  "category": "Run Concept",
+  "shortDef": "An inside or wide zone run where a tight end, fullback, or H-back crosses against the flow of the offensive line to seal the backside edge defender.",
+  "tacticalNote": "Eliminates backside defensive pursuit and sets up play-action bootlegs and tight end slip-screens in modern Shanahan/Kubiak offenses."
+}

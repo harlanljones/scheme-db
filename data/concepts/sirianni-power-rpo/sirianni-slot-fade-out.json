@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sirianni-slot-fade-out",
+  "schemeId": "sirianni-power-rpo",
+  "order": 3,
+  "name": "Slot Fade Out Isolation",
+  "personnel": "11",
+  "formation": "Gun 2x2 Doubles (Slot Left)",
+  "situation": "3rd & 6, +25, red zone fringe shot",
+  "coverage": "Cover 1 Man",
+  "frontName": "Nickel 4-2-5 Even Front",
+  "summary": {
+    "motive": "Create an isolated 1-on-1 matchup on the perimeter for an elite route-runner from the slot, using an underneath out route to pin the outside corner and clear the sideline.",
+    "keyDefender": "Star / Nickel Defensive Back (Inside Leverage Slot Defender)",
+    "whyItWorks": "The inside stem threatens the nickelback’s inside leverage before snapping outside; the outside receiver’s quick out prevents the cornerback from sinking under the fade.",
+    "failureMode": "Nickelback maintaining outside leverage off the line of scrimmage or Free Safety cheating over the slot fade instead of honoring the opposite post."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Pre-Snap Slot Isolation & Stem",
+      "text": "From 2x2 spread, slot receiver H (DeVonta Smith) stems directly at the inside shoulder of the Star nickelback, forcing the defender to honor an inside route.",
+      "focus": ["H", "STAR", "QB"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Rub & Out-Route Pin",
+      "text": "Outside receiver X snaps on a 5-yard quick out to the boundary, occupying the left CB and clearing out the entire deep sideline corridor.",
+      "focus": ["X", "LCB", "H"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The High-Arcing Fade Release",
+      "text": "H bursts outside off his inside stem, stacking the nickelback along the boundary. QB drops a perfect high-trajectory rainbow toward the front pylon.",
+      "focus": ["QB", "H", "STAR"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Toe-Tap Touchdown in the Corner",
+      "text": "H extends over his outside shoulder, snatches the ball over the trailing defender, and drags both feet cleanly in the back corner of the end zone for a 24-yard score.",
+      "focus": ["H", "STAR"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sirianni-qb-sneak-push"],
+    "playsOff": ["sirianni-rpo-glance-iso"],
+    "tell": "Straight dropback by the QB from 2x2 formation with no mesh handoff action."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

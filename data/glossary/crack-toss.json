@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "crack-toss",
+  "term": "Crack Toss",
+  "aliases": ["Crack toss", "crack block", "crack toss sweep", "crack toss"],
+  "category": "Run Concept",
+  "shortDef": "A perimeter sweep run where wide receivers or flexed tight ends block inward (\"crack\") on edge defenders and linebackers while the running back attacks the sideline.",
+  "tacticalNote": "Exploits the blind spot of edge run stoppers with crushing perimeter crack blocks, allowing pulling linemen to lead in open space."
+}

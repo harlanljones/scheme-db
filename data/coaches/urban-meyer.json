@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "urban-meyer",
+  "name": "Urban Meyer",
+  "role2026": "Spread Option Patriarch",
+  "team": "Florida / Ohio State (2001-2018)",
+  "lineage": "option-spread",
+  "side": "offense",
+  "philosophy": "Married spread-option zone-read runs with perimeter speed: inverted veer, inside-zone read, and snag-spacing RPOs built around an athletic quarterback as a true ball carrier.",
+  "keyConcepts": ["Inside Zone Read", "Inverted Veer", "Snag Triangle", "Perimeter Speed Sweep"],
+  "schemeIds": ["meyer-spread-option"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["3x National Champion HC", "Pioneered College Spread-Option Era"]
+}

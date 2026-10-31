@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "dan-quinn",
+  "name": "Dan Quinn",
+  "role2026": "Head Coach, Washington Commanders",
+  "team": "Washington Commanders",
+  "lineage": "carroll-saleh-wide9",
+  "mentorId": "pete-carroll",
+  "disciples": [],
+  "side": "defense",
+  "philosophy": "Relentless physical press coverage, Under front gap control, and disciplined three-deep zone integrity. Quinn's defenses suffocate offenses with press-bail corners, 4-man rush games from Under front alignments, and safety sky fire zones that create explosive turnover opportunities.",
+  "keyConcepts": ["Cover 3 Press-Bail", "Under Front Overload", "Cover 1 Rat-in-Hole", "Safety Sky Fire Zone"],
+  "schemeIds": ["quinn-cover3-press"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Super Bowl LI Appearance", "Legion of Boom DC", "2024 NFC Champions HC"]
+}

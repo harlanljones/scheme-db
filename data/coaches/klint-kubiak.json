@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "klint-kubiak",
+  "name": "Klint Kubiak",
+  "role2026": "Head Coach, Las Vegas Raiders",
+  "team": "Las Vegas Raiders",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "kyle-shanahan",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "Combining Gary Kubiak’s under-center split-zone fundamentals with Kyle Shanahan’s condensed formations and pre-snap glide/orbit motion to isolate linebackers on devastating Y-Leaks and Dagger shots.",
+  "keyConcepts": ["Split-Zone Slice", "PA Dagger Shot", "Boot Throwback Y-Leak", "Orbit Motion Perimeter Toss"],
+  "schemeIds": ["kubiak-split-zone"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2026 Raiders HC Hiring", "Orchestrated Top-5 Explosive Play Rates with Saints/49ers"]
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "kelly-four-verts-takeover",
+  "schemeId": "kelly-tempo-spread",
+  "order": 4,
+  "name": "Four Verts Takeover vs Two-High",
+  "personnel": "10",
+  "formation": "10P Gun Spread 2x2 vs Nickel",
+  "formationId": "kelly-10p-tempo-spread-vs-nickel",
+  "situation": "2nd & 8, +45, snapped at tempo against a two-high shell that hasn't settled its rotation",
+  "coverage": "Quarters Two-High",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Attack a two-high shell's structural weakness — the open middle third — with four simultaneous verticals and sideline takes, letting the pre-snap MOFO read dictate a seam shot before the safeties can squeeze.",
+    "keyDefender": "Middle-third/match safety",
+    "whyItWorks": "Sideline takes pin both quarters corners outside so no help can rotate in, and the mirrored seams force the middle-third safety to defend two routes with one pair of eyes; tempo removes the rotation adjustment entirely.",
+    "failureMode": "Cover 6 or a single-high rotation after motion that puts three deep defenders over four verticals, plus a pass rush that forces the QB off his MOFO read before the seam window opens."
+  },
+  "beats": [
+    {
+      "t": 0.3,
+      "title": "1. The Pre-Snap MOFO Read",
+      "text": "Kelly's QB confirms both safeties are split before the snap — the middle of the field is mathematically open. Four verticals is the only call needed: the picture alone dictates where the ball will go.",
+      "focus": ["QB", "SS", "FS"]
+    },
+    {
+      "t": 1,
+      "title": "2. Sideline Takes Pin the Quarters",
+      "text": "X and Z win their press releases and stack the corners up the sidelines. In true quarters both corners must carry their verticals, which means zero help can rotate toward the seams.",
+      "focus": ["X", "Z", "LCB", "RCB"]
+    },
+    {
+      "t": 1.8,
+      "title": "3. Attacking the Middle-Third Leverage",
+      "text": "The safety’s eyes bounce between two mirrored seams he can’t defend simultaneously. H stems to the inside shade — the one leverage a two-high shell structurally cannot give a single defender.",
+      "focus": ["H", "SS", "FS"]
+    },
+    {
+      "t": 2.6,
+      "title": "4. Takeover Complete",
+      "text": "The QB delivers off his hitch before the safeties can squeeze, and the catch lands in the MOFO void at 15+ yards. Tempo makes it worse: the next snap comes so fast the shell has no time to adjust its rotation rules.",
+      "focus": ["QB", "H", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["kelly-mesh-spacing-concept"],
+    "playsOff": ["kelly-zone-read-rb-draw"],
+    "tell": "All four receivers release vertically off the snap with sideline takes and zero intermediate cuts — the QB’s eyes lock on the MOFO window before anyone breaks."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

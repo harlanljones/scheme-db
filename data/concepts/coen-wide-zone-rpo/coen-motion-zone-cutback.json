@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coen-motion-zone-cutback",
+  "schemeId": "coen-wide-zone-rpo",
+  "order": 4,
+  "name": "Motion-Declared Zone Cutback (Orbit Drag)",
+  "personnel": "11",
+  "formation": "11P Gun Wide-Zone Strong Right vs Nickel (H orbiting pre-snap)",
+  "formationId": "coen-11p-gun-widezone-vs-nickel",
+  "situation": "1st & 10, own 35, probing run-fit discipline with motion",
+  "coverage": "Nickel Cover 3 Buzz",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Use pre-snap orbit motion to interrogate and declare the overhang's run fit, then punish the resulting flow commitment with a wide-zone cutback into the vacated backside seam.",
+    "keyDefender": "Backside WILL (cutback fit)",
+    "whyItWorks": "The motion tells Coen which defender owns the cutback before the ball is snapped; genuine full-width stretch action then pulls that same defender — plus MIKE — completely out of position, and the backside reach blocks have quietly built the return lane the whole time.",
+    "failureMode": "A disciplined backside linebacker who shuffles laterally instead of turning his shoulders uphill keeps his cutback leverage and meets the bend at the mesh line."
+  },
+  "beats": [
+    {
+      "t": 0.3,
+      "title": "1. Motion Declares the Fit",
+      "text": "H's orbit drag forces the nickel to either travel or bump his overhang fit before the snap — either way, Coen has already been told where that defender's run responsibility sits.",
+      "focus": ["H", "NICKEL", "WILL"]
+    },
+    {
+      "t": 1,
+      "title": "2. Full-Stretch Presentation",
+      "text": "Every blocker reaches right and the RB takes a genuine stretch track. The TE arc plus RT reach give the defense maximum width to defend — every box defender is being pulled toward the boundary.",
+      "focus": ["RB", "RT", "TE", "MIKE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Bend Back",
+      "text": "The frontside is capped, so the RB plants and bends against the grain. Because WILL chased the stretch and MIKE scraped wide, the entire middle of the field has emptied behind them.",
+      "focus": ["RB", "WILL", "MIKE"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Behind the Backside Reach",
+      "text": "The cutback hits exactly where LT turned the WDE out and LG sealed the A-gap. H arrives to climb for the second-level block, and the RB accelerates through the seam with only FS to beat.",
+      "focus": ["RB", "LT", "LG", "H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coen-bubble-triangle-rpo"],
+    "playsOff": ["jet-motion-oz", "mcdaniel-cheat-motion-toss"],
+    "tell": "H crosses the formation in orbit at the snap and never runs a route — he settles and climbs into a lead block while the RB visibly bends backward against the stretch flow."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "split-zone-slice",
+  "schemeId": "kubiak-split-zone",
+  "order": 1,
+  "name": "Split Zone (Slice)",
+  "personnel": "12",
+  "formation": "12P Condensed Wing Right",
+  "formationId": "kubiak-12p-condensed-wing-vs-43",
+  "situation": "1st & 10, +45, base down",
+  "coverage": "Cover 3 Sky (Single-High)",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use split-flow action to punish aggressive horizontal pursuit and create a massive cutback alley behind a sealing H-back.",
+    "keyDefender": "Backside Defensive End (WDE) & Mike Linebacker",
+    "whyItWorks": "Offensive line stretch forces the front to flow laterally while the H-back slices across the grain to kick out the unblocked backside edge. Linebackers flowing with the line are sealed off, opening an explosive backside cutback crease.",
+    "failureMode": "A disciplined backside DE squeezing down the line to spill the H-back block, or interior DT penetration blowing up the mesh."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Condensed 12P Alignment & Tight Splits",
+      "text": "Kubiak lines up in a condensed 12 personnel wing set. Tight WR splits compress the defensive front, creating favorable blocking angles on the perimeter.",
+      "focus": ["H", "TE", "X", "Z"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Lateral Stretch & Split Flow",
+      "text": "The offensive line surges laterally to the right in zone synchronization. Simultaneously, H-Back (H) slices back across the grain, leaving backside WDE unblocked by design.",
+      "focus": ["C", "RG", "RT", "H", "WDE"]
+    },
+    {
+      "t": 1.2,
+      "title": "Linebackers Commit to Run Flow",
+      "text": "The lateral stretch sucks Mike and Will linebackers hard toward the strongside B-gap, opening a massive natural cutback void behind them.",
+      "focus": ["MIKE", "WILL", "RB"]
+    },
+    {
+      "t": 1.8,
+      "title": "The H-Back Slice Kickout & RB Cutback",
+      "text": "H delivers a crushing kickout block on the crashing WDE. The RB plants his playside foot, bends back against the grain, and explodes through the split-zone alley.",
+      "focus": ["H", "WDE", "RB"]
+    },
+    {
+      "t": 3.4,
+      "title": "Second-Level Explosion",
+      "text": "With the climbing Center pinning Mike and LT walling off Will, the RB bursts untouched into the secondary for an explosive chunk gain.",
+      "focus": ["RB", "C", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["pa-dagger-shot", "boot-throwback-leak", "orbit-motion-toss"],
+    "playsOff": [],
+    "tell": "Base foundation call: H-Back slices across the formation to kick out the backside DE on true zone run."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

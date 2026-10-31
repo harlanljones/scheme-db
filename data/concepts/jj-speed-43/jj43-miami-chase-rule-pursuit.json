@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "jj43-miami-chase-rule-pursuit",
+  "schemeId": "jj-speed-43",
+  "order": 3,
+  "name": "Miami Chase Rule Pursuit",
+  "personnel": "Base 4-3 Speed",
+  "formation": "Pro Set Wing Sweep Right vs Even Speed Front",
+  "situation": "1st & 10, own 35, first-quarter perimeter test",
+  "coverage": "Cover 3 Sky with run-fit chase rules",
+  "frontName": "Even 4-3 Flowing Front",
+  "summary": {
+    "motive": "Turn perimeter runs into short gains by having all eleven defenders execute assigned pursuit angles rather than chasing the football.",
+    "keyDefender": "The strong safety filling the alley as the second hat",
+    "whyItWorks": "Every defender has a geometric landmark instead of a ball target, so the convergence point forms ahead of the runner regardless of how fast the play gets to the edge.",
+    "failureMode": "A single defender breaks his landmark and chases the ball, opening the cutback lane the cross-facing Will is counting on him to erase."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Chase Rule Declares",
+      "text": "The moment sweep flow shows, every defender executes a pre-assigned pursuit rule — the backside end runs down the line of scrimmage through the tailback’s original spot, not to the football.",
+      "focus": ["LDE", "RB", "WDT"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. Spill Forces Width",
+      "text": "The playside tackle spills the drive block and the end holds the edge, forcing the ball carrier wider than his intended landmark and directly toward waiting pursuit angles.",
+      "focus": ["SDT", "RDE", "RT"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. Three Angles, One Point",
+      "text": "Sam takes the inside-out angle from the box, Mike runs deeper than the ball through the guard’s original alignment, and the corner locks inside-out force at the numbers.",
+      "focus": ["SAM", "MIKE", "RCB", "SS"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Miami Swarm",
+      "text": "Five defenders converge at one coordinate from five different angles, tackling with shared responsibility exactly as Jimmy Johnson taught at Miami — pursuit is a system, not effort.",
+      "focus": ["RCB", "SS", "SAM", "RB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["jj43-goal-line-haley-edge-rush"],
+    "playsOff": ["jj43-man-free-will-dog"],
+    "tell": "The backside end takes visibly flat steps down the line of scrimmage instead of angling upfield — the chase rule targets a spot, not the runner."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

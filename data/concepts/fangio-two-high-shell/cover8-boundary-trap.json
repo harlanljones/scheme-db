@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "cover8-boundary-trap",
+  "schemeId": "fangio-two-high-shell",
+  "order": 4,
+  "name": "Cover 8 Boundary Corner Trap",
+  "personnel": "Penny 5-1-5 Nickel",
+  "formation": "Penny 5-1-5 vs 11P Gun 2x2 Out-Shot",
+  "formationId": "fangio-penny-515-vs-11p",
+  "situation": "3rd & 4, +30, boundary passing down",
+  "coverage": "Cover 8 (Half-Quarter-Quarter / Inverted Boundary Trap)",
+  "frontName": "Penny 5-1-5 4-Man Rush",
+  "summary": {
+    "motive": "Bait the quarterback into throwing a boundary intermediate out-route against what appears to be soft Quarters cushion, only for the boundary corner to trap the route while the safety caps deep.",
+    "keyDefender": "LCB (Boundary Corner) timing the trap break and BS (Boundary Safety) capping deep vertical routes",
+    "whyItWorks": "Quarterbacks are taught to take the quick boundary out against Quarters off-coverage; Cover 8 trap turns a high-percentage throw into a pick-six.",
+    "failureMode": "Quarterback pumps the out-route and hits the sideline seam before the safety reaches the deep half."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Two-High Safety Shell Disguise",
+      "text": "The defense presents the standard 2-high pre-snap look with LCB giving a soft 6.5-yard cushion on X, inviting the quick sideline out throw on 3rd down.",
+      "focus": ["BS", "FS", "LCB", "X"]
+    },
+    {
+      "t": 1.2,
+      "title": "Boundary Corner Bait & Trap",
+      "text": "As X stems to 8 yards and breaks toward the sideline, LCB plants his back foot and undercuts the out-route with full acceleration in Cover 8 trap.",
+      "focus": ["LCB", "X", "QB"]
+    },
+    {
+      "t": 2.3,
+      "title": "Safety Caps the Deep Post",
+      "text": "Boundary Safety BS rotates over top of the vacated corner to cap H on the vertical post, sealing the deep half against any double-move.",
+      "focus": ["BS", "H", "STAR"]
+    },
+    {
+      "t": 3.4,
+      "title": "Underneath Interception Trap",
+      "text": "LCB jumps in front of the sideline pass for a game-changing interception and pick-six return as the QB is caught in the split-field trap.",
+      "focus": ["LCB", "QB", "X"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["cover6-quarter-quarter-half"],
+    "tell": "Boundary corner squats and traps out-route underneath while Boundary safety rotates over top."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

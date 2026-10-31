@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "kelly-tempo-spread",
+  "name": "Chip Kelly's Tempo Spread & Air Raid System",
+  "coachId": "chip-kelly",
+  "team": "Las Vegas Raiders",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "reid-west-coast",
+  "description": "A snap-rate offense built to make defensive communication the first conflict on every play: Kelly snaps within seconds of the previous whistle, denying substitutions and rotations before the ball is even live. The system layers classic Air Raid spacing — Mesh rubs and Spot stress — over a spread-option run game whose zone-read/draw geometry breaks box math, then punishes two-high shells with four-verts takeoffs off a simple pre-snap MOFO read."
+}

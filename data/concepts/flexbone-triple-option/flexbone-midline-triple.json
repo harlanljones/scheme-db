@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flexbone-midline-triple",
+  "schemeId": "flexbone-triple-option",
+  "order": 1,
+  "name": "Midline Triple Option",
+  "personnel": "Flexbone Base",
+  "formation": "Flexbone Right, Twin Slots",
+  "situation": "2nd & 4, own 40, base down",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Attack the interior read defender with a three-phase conflict — take the dive and lose the keeper, squeeze the keeper and surrender the pitch.",
+    "keyDefender": "3-Tech Defensive Tackle (unblocked dive-read key)",
+    "whyItWorks": "Any aggressive squeeze by the read key opens the keep lane behind a scoop-and-climb guard, and the arc block forces the end into a pure pitch relationship he cannot win.",
+    "failureMode": "The read key stays square and two-gaps, or the force corner refuses the pitch trigger and closes on the quarterback instead."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Seatbelt Ride",
+      "text": "The quarterback reverse-pivots and seats the ball in B's belly at the midline hole while keeping both hands free and eyes locked on the uncovered 3-tech.",
+      "focus": ["QB", "B", "T3"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Squeeze Gives It Away",
+      "text": "The 3-tech slants hard down into B's dive path. By taking the dive himself he vacates the keep lane — the ball comes out of B's belly instantly.",
+      "focus": ["T3", "B", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. Bend Off the Reach",
+      "text": "The quarterback bends behind the tackle's arc block while the end constricts. The guard has scooped the Mike, so the keep lane is two defenders wide and empty.",
+      "focus": ["QB", "RT", "RE"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. The Pitch Phase",
+      "text": "With the end forcing width and the corner triggering, the quarterback extends the third phase. A takes the pitch with full momentum around the constriction.",
+      "focus": ["QB", "A", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["flexbone-inside-veer-triple"],
+    "playsOff": [],
+    "tell": "The dive hits the exact midline of the guard-center gap and the quarterback reads an interior defender — veer reads the end instead."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

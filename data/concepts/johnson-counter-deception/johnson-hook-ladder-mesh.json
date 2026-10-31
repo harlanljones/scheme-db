@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "johnson-hook-ladder-mesh",
+  "schemeId": "johnson-counter-deception",
+  "order": 3,
+  "name": "Hook-Ladder Mesh with TE Stack (Quick Deception Screen)",
+  "personnel": "11",
+  "formation": "11P Gun Trips Left vs Nickel Under",
+  "formationId": "johnson-11p-gun-trips-vs-nickel",
+  "situation": "3rd & 5, +32, third down conversion",
+  "coverage": "Nickel Cover 1 Man-Free",
+  "frontName": "Nickel 4-2-5 Under Press",
+  "summary": {
+    "motive": "Exploit man-coverage rules with a 2-man mesh rub that legally frees the RB against press-man Nickel coverage on 3rd down.",
+    "keyDefender": "Will Linebacker (Man Coverage on RB)",
+    "whyItWorks": "In man coverage, the TE's hook route creates a legal and physical pick that the WILL linebacker cannot follow through; the RB slips free into the flat with a full step of separation by the time the QB delivers.",
+    "failureMode": "A zone-coverage call that removes man assignments; in zone the hook/ladder becomes predictable and the curl-flat defender can collision both TE and RB."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. Two-Man Mesh Concept",
+      "text": "TE runs a 5-yard hook while the RB releases from the backfield on the \"ladder\" — the classic 2-man mesh where the second receiver (RB) slips past the first receiver's (TE) hook to create a natural pick.",
+      "focus": ["TE", "RB", "WILL", "QB"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Rub and Slip",
+      "text": "The WILL linebacker is in man coverage on the RB but cannot follow him through the natural rub that the TE's hook creates. The RB slips free with a full stride of separation as the WILL crashes into the TE body.",
+      "focus": ["RB", "TE", "WILL"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Lateral in Space",
+      "text": "The QB flips a quick lateral pass to the RB running free in space. Nickel is dragged across the field by H's drag, MIKE is too deep inside, leaving a wide-open throwing lane and clear space for the RB to work in.",
+      "focus": ["QB", "RB", "NICKEL", "MIKE"]
+    },
+    {
+      "t": 3,
+      "title": "4. First Down in Space",
+      "text": "The RB catches in space 8 yards beyond the LOS with only the free safety to beat. The hook-ladder deception has converted a critical third-and-5 by exploiting man-coverage rubs.",
+      "focus": ["RB", "FS", "WILL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["johnson-orbit-reverse-screen"],
+    "playsOff": ["johnson-pa-te-throwback"],
+    "tell": "TE aligned tight to line at tackle depth; RB initial release toward TE before sharp angle to mesh."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

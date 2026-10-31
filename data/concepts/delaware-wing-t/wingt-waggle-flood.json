@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "wingt-waggle-flood",
+  "schemeId": "delaware-wing-t",
+  "order": 2,
+  "name": "Waggle Pass Off Sweep Fake",
+  "personnel": "Wing-T Base",
+  "formation": "Wing-T Strong Right, SE Left",
+  "situation": "2nd & 5, own 40, off sweep tendency",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use the most convincing run action in football to move an entire defense one direction, then attack the vacated half with a three-level flood.",
+    "keyDefender": "Free Safety (deep middle)",
+    "whyItWorks": "Linebackers and the force safety trigger on the sweep and cannot recover, leaving the deep in isolated between a flat-watching corner and a flooded safety.",
+    "failureMode": "The spill-and-contain call keeps linebackers home, or the corner plays with depth instead of dropping flat, crowding the deep-in window."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Sweep Sell",
+      "text": "Both guards pull exactly like Buck Sweep, the quarterback meshes with the sweeping halfback, and the entire second level starts flowing to its right.",
+      "focus": ["RG", "LG", "B", "QB"]
+    },
+    {
+      "t": 1.7,
+      "title": "2. The Waggle Boot Away",
+      "text": "Instead of following the sweep, the quarterback reverses out to the left behind the fullback's edge block while the defense keeps chasing the fake.",
+      "focus": ["QB", "F", "LE"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. Three Levels Flooding Left",
+      "text": "The flood builds: the wing holds the flat, the tight end drives the crosser through the middle, and the split end climbs to the deep in.",
+      "focus": ["X", "Y", "H", "FS"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Deep In Behind Flowed Coverage",
+      "text": "The waggle arrives with the deep in breaking behind a flat-dropping corner whose eyes never left the quarterback and a safety still leaning toward the sweep.",
+      "focus": ["QB", "X", "LCB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["wingt-counter-crisscross"],
+    "playsOff": ["wingt-buck-sweep-guard-pull"],
+    "tell": "The quarterback reverses direction after the mesh instead of extending the handoff — live sweeps never send the ball carrier and passer to opposite halves."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

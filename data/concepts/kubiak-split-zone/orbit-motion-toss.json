@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "orbit-motion-toss",
+  "schemeId": "kubiak-split-zone",
+  "order": 4,
+  "name": "Orbit Motion Perimeter Toss",
+  "personnel": "12",
+  "formation": "12P Condensed Wing Right (Orbit Motion)",
+  "formationId": "kubiak-12p-condensed-wing-vs-43",
+  "situation": "3rd & 1, +35, high-leverage perimeter call",
+  "coverage": "Cover 3 Sky (Single-High)",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Outflank aggressive defenses by combining pre-snap orbit motion and a rapid perimeter toss with multiple pulling lead blockers.",
+    "keyDefender": "Strong Safety (SS) & Strongside Defensive End (SDE)",
+    "whyItWorks": "Pre-snap orbit motion distorts secondary coverage leverage. The quick toss gets the ball past the line of scrimmage in ~1.0s, allowing the pulling H-back and motion receiver to overwhelm edge run support.",
+    "failureMode": "A fast-flowing nickel/overhang shooting the backfield gap, or defensive line penetration disrupting the toss."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Fast Orbit Motion & Formation Distortion",
+      "text": "Speedy Z receiver sweeps in fast orbit motion behind the QB right at snap, pulling secondary eyes and creating immediate +1 numerical leverage to the perimeter.",
+      "focus": ["Z", "RCB", "SS"]
+    },
+    {
+      "t": 1,
+      "title": "The Quick Perimeter Pitch & Toss",
+      "text": "QB executes a quick reverse pivot and pitches the ball out to the sprinting RB, getting the ball to the edge faster than the front seven can scrape.",
+      "focus": ["QB", "RB"]
+    },
+    {
+      "t": 1.8,
+      "title": "The H-Back Lead & Crack Block Combo",
+      "text": "H pulls around the tight end and destroys SS in the alley, while the motion receiver Z cracks down on RCB to create a massive sideline runway.",
+      "focus": ["H", "SS", "Z", "RCB"]
+    },
+    {
+      "t": 2.6,
+      "title": "Turning the Corner into Green Grass",
+      "text": "RB follows the lead escort past the numbers, turning the corner into open space with only the deep safety left to pursue.",
+      "focus": ["RB", "FS"]
+    },
+    {
+      "t": 4.2,
+      "title": "Explosive Perimeter Chunk",
+      "text": "RB bursts 15+ yards down the sideline, punishing defenses trying to overplay Kubiak’s inside split-zone actions.",
+      "focus": ["RB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["split-zone-slice"],
+    "playsOff": ["split-zone-slice"],
+    "tell": "Z runs pre-snap orbit motion behind the QB to distort secondary fits before snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

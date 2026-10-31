@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "airraid-y-cross",
+  "schemeId": "air-raid",
+  "order": 2,
+  "name": "Y-Cross",
+  "personnel": "11",
+  "formation": "11P Gun 2x2",
+  "situation": "2nd & 8, own 25, base down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-2-5 Nickel front",
+  "summary": {
+    "motive": "Use the stick as bait to occupy the nickel and Will, then attack the vacated middle with the tight end's twelve-yard crosser.",
+    "keyDefender": "Mike Linebacker (middle hook dropper)",
+    "whyItWorks": "The vertical clearouts remove corner help, the stick removes the nickel, and the crosser arrives in the middle hole exactly as both linebackers are facing the wrong way.",
+    "failureMode": "The Mike sinks deeper instead of opening flat, keeping his body between the quarterback and the crosser's climbing lane."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Clearouts Leave First",
+      "text": "Both outside receivers fire instant vertical releases, pinning each corner in his deep third so no underneath help exists on the perimeter.",
+      "focus": ["X", "Z", "LCB", "RCB"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Stick Draws the Nickel",
+      "text": "The slot breaks his five-yard stick with outside leverage, and the nickel sits on it perfectly. The quarterback acknowledges but does not force it.",
+      "focus": ["H", "NICKEL", "WILL"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. The Crosser Climbs Underneath",
+      "text": "The tight end wins inside and climbs to twelve yards, breaking down directly through the Mike's face while the Sam is still turned chasing him vertically.",
+      "focus": ["Y", "MIKE", "SAM"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Behind the Free Safety's Shoulder",
+      "text": "With both corners held deep and the hooks trailing, the crosser works into the soft spot behind the free safety's break for a big intermediate gain.",
+      "focus": ["QB", "Y", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["airraid-stick-naked-constraint"],
+    "playsOff": ["airraid-mesh-concept"],
+    "tell": "The tight end releases inside immediately — on mesh both crossers come from slots; here only one crosser ever appears."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

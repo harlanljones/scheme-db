@@ -1,0 +1,24 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "macdonald-pressure",
+  "name": "Mike Macdonald Sim-Pressure & Hybrid Disguise Tree",
+  "patriarch": "John Harbaugh → Mike Macdonald",
+  "side": "defense",
+  "description": "The cutting edge of NFL defensive design. Built on pre-snap ambiguity, Double-A mug and Amoeba fronts, 4-man Simulated Pressures (Creepers) dropping interior linemen into throwing windows while sending DBs, post-snap split safety spins, and Cover 0 peel blitzes.",
+  "rootNodes": [
+    {
+      "coachId": "john-harbaugh",
+      "children": [
+        {
+          "coachId": "mike-macdonald",
+          "children": [
+            {
+              "coachId": "jesse-minter",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

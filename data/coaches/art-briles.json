@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "art-briles",
+  "name": "Art Briles",
+  "role2026": "Baylor Vertical Spread Architect",
+  "team": "Baylor Bears (2008-2015)",
+  "lineage": "option-spread",
+  "side": "offense",
+  "philosophy": "Vertical choice spread: outside receivers get single-word shot calls (\"choice\") off inside-zone run action, forcing safeties to defend the entire deep field on every snap.",
+  "keyConcepts": ["Slot Choice Shots", "Vertical Stretch off Run Action", "One-Word Shot Calls", "Explosive Play Hunting"],
+  "schemeIds": ["baylor-choice"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["2x Big 12 Champion Baylor", "Record-Breaking Explosive Play Offenses"]
+}

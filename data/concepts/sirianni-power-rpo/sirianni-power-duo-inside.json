@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sirianni-power-duo-inside",
+  "schemeId": "sirianni-power-rpo",
+  "order": 1,
+  "name": "Inside Power Duo (Double Teams)",
+  "personnel": "11",
+  "formation": "Gun 3x1 Trips Right, Offset RB Left",
+  "situation": "1st & 10, Own 40, base run down",
+  "coverage": "Cover 2 Man",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Impose pure physical will at the line of scrimmage with interior Duo double teams, blowing defensive tackles off the ball and creating a heavy north-south running lane.",
+    "keyDefender": "Mike Linebacker (Interior Gap Fitter)",
+    "whyItWorks": "Double-teaming both interior defensive linemen creates massive vertical displacement, leaving linebackers hesitant and easily climbed upon by guards.",
+    "failureMode": "A penetrating 3-technique DT splitting the RG/RT double-team before the combination can establish vertical push."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Dual Interior Double Teams",
+      "text": "Philadelphia’s offensive line unleashes violent synchronized double teams: LG & C strike the 1-tech NT while RG & RT hammer the 3-tech DT, moving the defensive front backwards.",
+      "focus": ["LG", "C", "RG", "RT", "NT", "3T"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. Vertical Displacement of the Defensive Line",
+      "text": "Both defensive tackles are blasted 2+ yards off the line of scrimmage, creating an impenetrable wall and swallowing up the interior gaps.",
+      "focus": ["NT", "3T", "LG", "RG"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. The Second-Level Climb & Mike Collision",
+      "text": "LG and RG seamlessly peel off their displaced defensive tackles to seal Mike and Will linebackers, opening a massive vertical crevice directly through the A-gap.",
+      "focus": ["RG", "LG", "MIKE", "WILL", "RB"]
+    },
+    {
+      "t": 3.6,
+      "title": "4. Physical North-South Explosion",
+      "text": "The running back hits the A-gap with high knees and north-south velocity, breaking through arm tackles for a punishing 9-yard gain.",
+      "focus": ["RB", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sirianni-rpo-glance-iso", "sirianni-slot-fade-out", "sirianni-qb-sneak-push"],
+    "playsOff": [],
+    "tell": "Gun 3x1 formation with offensive line firing straight ahead on vertical power angles without pulling guards."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

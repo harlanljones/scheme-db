@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "coryell-vertical",
+  "name": "Air Coryell / Run and Shoot Vertical Passing Tree",
+  "patriarch": "Don Coryell → June Jones",
+  "side": "offense",
+  "description": "The ancestor of every modern vertical passing attack. Don Coryell’s one-back Air Coryell route tree forced defenses to defend the entire depth of the field for the first time; June Jones’ Run and Shoot made receivers into live read-routes who converted their patterns on the fly against coverage leverage.",
+  "rootNodes": [
+    {
+      "coachId": "don-coryell",
+      "children": [
+        {
+          "coachId": "june-jones",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

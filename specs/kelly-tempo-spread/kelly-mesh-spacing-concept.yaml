@@ -1,0 +1,24 @@
+$schema: ../../data/schema/spec.schema.json
+conceptId: kelly-mesh-spacing-concept
+duration: 3.2
+formation: kelly-10p-tempo-spread-vs-nickel
+offense:
+  OL: { block: pass-set }
+  QB: { drop: gun }
+  RB: { route: swing, side: left }
+  X: { route: corner, depth: 11 }
+  H: { route: shallow, depth: 5 }
+  Y: { route: shallow, depth: 6.5 }
+  Z: { route: in, depth: 8 }
+defense:
+  WDE: { rush: edge, depth: 2.8 }
+  NT: { rush: interior, depth: 2.6 }
+  3T: { rush: interior, depth: 2.6 }
+  SDE: { rush: edge, depth: 2.8 }
+  WILL: { zone: hook-curl, side: left }
+  MIKE: { zone: hole }
+  NICKEL: { man: H }
+  LCB: { man: X }
+  RCB: { man: Z }
+  SS: { zone: deep-half, side: right }
+  FS: { zone: deep-half, side: left }

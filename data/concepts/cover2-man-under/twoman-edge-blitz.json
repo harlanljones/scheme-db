@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "twoman-edge-blitz",
+  "schemeId": "cover2-man-under",
+  "order": 3,
+  "name": "2-Man Edge Blitz",
+  "personnel": "Nickel 2-Man Package (4 DL, 3 LB, 4 DB)",
+  "formation": "2-Man Shell vs Gun 11 Personnel 2x1 Right",
+  "situation": "3rd & 6, +38, obvious passing down",
+  "coverage": "Cover 1-Man Rob (Lone Free Safety Deep)",
+  "frontName": "Under Front, Walked-Safety Edge Blitz",
+  "summary": {
+    "motive": "Convert the 2-man structure into maximum pressure by walking a safety off the edge while the lone free safety swallows the entire deep zone by himself.",
+    "keyDefender": "SS blitzing off the edge — the scanning back is his only blocker and arrives a full second late",
+    "whyItWorks": "Press coverage underneath buys exactly the extra beat of time the fifth rusher needs, and the center-field safety removes all fear of a shot over the top.",
+    "failureMode": "An instant perimeter RPO thrown before the edge walker clears the tight end’s hinge block."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Walked-Up Safety Tell",
+      "text": "The strong safety stands at 2 yards beside the tight end while the free safety roams completely alone at 13 — the five-man count is betrayed before the snap.",
+      "focus": ["SS", "FS", "Y"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. Five-Man Protection Math",
+      "text": "Five blockers must handle five rushers, and the only true blocker for the walking safety is a running back starting four yards away from the rim.",
+      "focus": ["SS", "RB", "RE", "RT"]
+    },
+    {
+      "t": 1.7,
+      "title": "3. Hot Windows Pressed Shut",
+      "text": "Every quick answer is pressed underneath while the lone free safety removes any fear of a shot — the QB has nowhere to go with the ball early.",
+      "focus": ["LCB", "RCB", "WILL", "FS"]
+    },
+    {
+      "t": 2.8,
+      "title": "4. Free Runner Off the Rim",
+      "text": "The safety bends off the vacant tight-end spot into the escaping QB’s lap — five-man pressure cashing because coverage never had to help.",
+      "focus": ["SS", "QB", "RE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["twoman-goal-line-double-robber"],
+    "playsOff": ["twoman-red-zone-compressed-twins"],
+    "tell": "The strong safety stands at 2 yards beside the tight end while the free safety roams alone at 13 — base 2-man keeps both safeties splitting halves at 12."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bowles-peel-zone-sim-pressure",
+  "schemeId": "bowles-creeper-blitz",
+  "order": 4,
+  "name": "Peel-Zone Simulated Pressure",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Odd Sim Mug vs 11P Gun Trips Right",
+  "situation": "2nd & 7, +40, passing down creeper",
+  "coverage": "Cover 3 Match (Peel Sim Pressure)",
+  "frontName": "Odd 5-Up Simulated Pressure",
+  "summary": {
+    "motive": "Manufacture an unblocked 4-man simulated pressure from the slot while utilizing peel rules on the edge defender to eliminate the offense’s primary hot checkdown to the running back.",
+    "keyDefender": "LOLB (Peel Technique Edge Dropper) & NCB (Sim Creeper Blitzer)",
+    "whyItWorks": "The offensive line accounts for the edge rusher who bails to cover the running back, leaving no blocker available to pick up the nickel cornerback rushing from depth.",
+    "failureMode": "A quick seam throw down the hash if the boundary safety is slow to rotate into deep centerfield."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "5-Up Simulated Pressure Presentation",
+      "text": "Todd Bowles aligns in an Odd 5-up mug look with nickel back (NCB) apexed over the weak slot, threatening a boundary overload.",
+      "focus": ["LOLB", "NCB", "DE_R", "LT", "RB", "QB"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Peel Rule & DB Launch",
+      "text": "As the running back free releases into the weak flat, edge rusher LOLB executes his \"peel\" assignment, bailing to blanket the RB, while NCB launches full-speed on an unblocked creeper track past the left tackle.",
+      "focus": ["LOLB", "NCB", "RB", "LT"]
+    },
+    {
+      "t": 1.8,
+      "title": "Hot Answer Trapped by Dropping Lineman",
+      "text": "The QB looks for his quick RB checkdown only to find LOLB in the hip pocket, and DE_R dropping into the intermediate window to take away H.",
+      "focus": ["LOLB", "DE_R", "RB", "H", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Untouched Blindside Sack",
+      "text": "With all hot options capped, the unblocked slot corner (NCB) crashes into the quarterback’s blind side for a clean 8-yard sack.",
+      "focus": ["NCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bowles-drop8-tampa2-lurk"],
+    "playsOff": ["bowles-dual-a-gap-cross-blitz", "bowles-overload-boundary-fire"],
+    "tell": "Edge rusher turns outside immediately to match running back release while slot cornerback sprints downhill on blindside track"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "buddy-ryan",
+  "name": "Buddy Ryan",
+  "role2026": "46 Defense Inventor",
+  "team": "Chicago Bears DC (1978-1985) / Philadelphia Eagles HC",
+  "lineage": "buddy-46",
+  "side": "defense",
+  "philosophy": "Eight-man box with zero deep-middle help: walk both safeties up, isolate corners on man islands outside, and overload protection rules with unblockable edge combinations.",
+  "keyConcepts": ["46 Eight-Man Box", "Man-Free Isolation Corners", "Edge Overload Combos", "Okie Slant Games"],
+  "schemeIds": ["buddy-46-defense"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Super Bowl XX Champion DC", "85 Bears Historic Scoring Defense"]
+}

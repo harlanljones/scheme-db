@@ -1,0 +1,344 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "payton-jet-sweep-pa-post",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Snap and reach toward the sweep look, then reset into the pocket as ball goes deep",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.4, "x": 25.87, "y": -0.2, "note": "Reach step selling sweep" },
+        { "t": 1.3, "x": 26.270000000000003, "y": -1, "note": "Reset to pass pro" },
+        { "t": 2.4, "x": 26.87, "y": -1.7999999999999998, "note": "Anchor vs NT inside charge" },
+        { "t": 4, "x": 27.07, "y": -2.4, "note": "Hold the pocket" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pull-sell toward the sweep edge for one step, then hinge back on the B-gap rusher",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Sweep pull-sell step" },
+        { "t": 0.45, "x": 23.8, "y": -0.6000000000000001, "note": "Fake pull toward sweep" },
+        { "t": 1.3, "x": 25.2, "y": -1.2000000000000002, "note": "Hinge back inside" },
+        { "t": 2.5, "x": 25.6, "y": -1.9, "note": "Wall WILL looping in" },
+        { "t": 4, "x": 25.7, "y": -2.4, "note": "Finish the block" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Down-block sell on WDE for the sweep look, then pass-set through the post timing",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Down-block sell vs WDE" },
+        { "t": 0.45, "x": 22.400000000000002, "y": -0.2, "note": "Sell reach on WDE" },
+        { "t": 1.3, "x": 23.5, "y": -1.2000000000000002, "note": "Reset vertical set" },
+        { "t": 2.6, "x": 23.7, "y": -2.1, "note": "Ride WDE upfield arc" },
+        { "t": 4, "x": 23.8, "y": -2.6999999999999997, "note": "WDE past the spot" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass-set the 3T immediately — this side sells drop-back while the backside sells sweep",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Immediate pass set" },
+        { "t": 0.5, "x": 28.1, "y": -1.1, "note": "Brace vs 3T get-off" },
+        { "t": 1.5, "x": 27.8, "y": -1.7999999999999998, "note": "Anchor interior" },
+        { "t": 4, "x": 27.7, "y": -2.4, "note": "Hold through deep drop" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Vertical set on SDE, protect the long-developing deep shot",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Vertical set vs SDE" },
+        { "t": 0.5, "x": 29.9, "y": -1.2000000000000002, "note": "Mirror SDE rush" },
+        { "t": 1.5, "x": 29.7, "y": -1.9, "note": "Anchor edge" },
+        { "t": 2.8, "x": 29.5, "y": -2.5, "note": "Deep drop protection holds" },
+        { "t": 4, "x": 29.4, "y": -2.8, "note": "Ball out over his head" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Kick-out sell on SDE for the sweep fake, then release into the right seam to occupy MIKE",
+      "waypoints": [
+        { "t": 0, "x": 32, "y": -0.6, "note": "Kick-out sell at SDE" },
+        { "t": 0.5, "x": 32.6, "y": -0.19999999999999996, "note": "Sell perimeter kick-out" },
+        { "t": 1.3, "x": 34, "y": 1, "note": "Release upfield into seam" },
+        { "t": 2.4, "x": 35, "y": 4.9, "note": "Seam route drags MIKE deep" },
+        { "t": 4, "x": 35.4, "y": 9.9, "note": "Clears the hook zone" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Open away, fake the jet sweep exchange with Z crossing, then reset feet and launch the post",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Catch snap from gun" },
+        { "t": 0.5, "x": 25.87, "y": -4.9, "note": "Opens toward sweep action" },
+        { "t": 1.2, "x": 25.07, "y": -4.7, "note": "Deep sweep fake handoff to Z" },
+        { "t": 2, "x": 26.07, "y": -4.1, "note": "Reset feet, eyes downfield" },
+        { "t": 2.7, "x": 26.87, "y": -3.5, "note": "Launches deep post" },
+        { "t": 4, "x": 27.87, "y": -2.5, "note": "Full follow-through" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Lead through the sweep hole selling the kick-out path, then leak to protect the edge",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": -4.8, "note": "Sweep lead alignment" },
+        { "t": 0.55, "x": 21, "y": -5.3999999999999995, "note": "Selling lead through sweep hole" },
+        { "t": 1.25, "x": 19, "y": -5, "note": "Fake kick-out at the edge" },
+        { "t": 2.1, "x": 20, "y": -3.5999999999999996, "note": "Leak back to protect" },
+        { "t": 3, "x": 21, "y": -2.4, "note": "Square WILL who loops late" },
+        { "t": 4, "x": 21.5, "y": -1.5999999999999996, "note": "Finish protection" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Stack stem outside then break the deep post over the biting safety",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": -0.5, "note": "Release off LOS" },
+        { "t": 0.8, "x": 8.2, "y": 3.5, "note": "Outside stem at LCB" },
+        { "t": 1.5, "x": 9.8, "y": 8.5, "note": "Stack to 12 yards" },
+        { "t": 2, "x": 11.5, "y": 12.5, "note": "Break the deep post inside" },
+        { "t": 2.75, "x": 15, "y": 16, "note": "Catch point over FS’ shoulder" },
+        { "t": 4, "x": 20.5, "y": 17, "note": "Upfield finish after the grab" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Crossing drag under the sweep action to occupy SS and clear the post window",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": -1, "note": "Underneath drag release" },
+        { "t": 0.7, "x": 33.5, "y": -0.19999999999999996, "note": "Drag behind sweep flow" },
+        { "t": 1.5, "x": 28.5, "y": 1.2000000000000002, "note": "Crossing at SS’ depth" },
+        { "t": 2.4, "x": 23.5, "y": 2.6, "note": "Drags SS across formation" },
+        { "t": 4, "x": 19.5, "y": 3.8, "note": "Clears left sideline area" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "carry",
+      "assignment": "Jet sweep runner — cross full-field on the sweep path, take the fake, carry out the decoy",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -0.5, "note": "Jet motion path across formation" },
+        { "t": 0.6, "x": 38.5, "y": -1.7, "note": "Sprinting across at full speed" },
+        { "t": 1.2, "x": 31, "y": -2.7, "note": "Receives fake exchange at mesh point" },
+        { "t": 2, "x": 24, "y": -2.1, "note": "Carries decoy to the edge" },
+        { "t": 3, "x": 18.5, "y": -1.1, "note": "Sells sweep to boundary" },
+        { "t": 4, "x": 14.5, "y": 0.09999999999999998, "note": "Decoy work complete" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Contain the sweep edge, chased wide by LT’s down-block sell",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Reads sweep flow" },
+        { "t": 0.5, "x": 21.6, "y": 1.2, "note": "Chases sweep flow left" },
+        { "t": 1.4, "x": 22.8, "y": 0.7, "note": "LT’s down-block washes him" },
+        { "t": 2.6, "x": 23.4, "y": 0.09999999999999998, "note": "Chasing a fake to the boundary" },
+        { "t": 4, "x": 23.6, "y": -0.29999999999999993, "note": "Out of the play entirely" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Slip the reach attempt, pressure through the A-gap during the deep drop",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Reads reach attempt" },
+        { "t": 0.6, "x": 25, "y": 1.4, "note": "Fights the C’s reach sell" },
+        { "t": 1.6, "x": 25.2, "y": 2.5, "note": "Slips inside the reset block" },
+        { "t": 2.8, "x": 25.4, "y": 4.1000000000000005, "note": "Interior pressure building" },
+        { "t": 4, "x": 25.5, "y": 5.300000000000001, "note": "A half-second late on the launch" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Penetrate B-gap against RG’s anchored set, hurry without disrupting the launch",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "B-gap penetration" },
+        { "t": 0.7, "x": 28.7, "y": 1.7000000000000002, "note": "RG anchored on him" },
+        { "t": 1.8, "x": 28.6, "y": 3.1, "note": "Grinding but contained" },
+        { "t": 2.9, "x": 28.5, "y": 4.5, "note": "Pressure arrives just late" },
+        { "t": 4, "x": 28.5, "y": 5.5, "note": "Watched the launch" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Force the sweep flow right, kicked by TE’s sell before resetting to rush",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "Reads TE kick-out sell" },
+        { "t": 0.55, "x": 32.6, "y": 1.3, "note": "Attacks the kick-out fake" },
+        { "t": 1.4, "x": 32.2, "y": 2.1, "note": "Realizes run fake, resets rush" },
+        { "t": 2.6, "x": 32.6, "y": 3.5, "note": "Late rush vs RT anchor" },
+        { "t": 4, "x": 33, "y": 4.5, "note": "Neutralized by wasted steps" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Flow hard with the sweep — pulled across the field by the decoy",
+      "waypoints": [
+        { "t": 0, "x": 23, "y": 4.5, "note": "Keys jet sweep flow" },
+        { "t": 0.6, "x": 20.5, "y": 4, "note": "Flows hard with the sweep" },
+        { "t": 1.4, "x": 18, "y": 3.7, "note": "Chasing Z across formation" },
+        { "t": 2.4, "x": 16, "y": 4.9, "note": "RB squares him on the loop-back" },
+        { "t": 4, "x": 17, "y": 6.9, "note": "Trapped behind his own pursuit" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Run-fit the sweep, then get carried vertically by the released TE seam",
+      "waypoints": [
+        { "t": 0, "x": 28.5, "y": 4.5, "note": "Runs to sweep fit" },
+        { "t": 0.6, "x": 27, "y": 4.1, "note": "Steps down to sweep fit" },
+        { "t": 1.4, "x": 26.5, "y": 4.9, "note": "TE releases past him" },
+        { "t": 2.4, "x": 27.3, "y": 7.5, "note": "Dragging with the seam" },
+        { "t": 4, "x": 28.9, "y": 10.5, "note": "Carried out of the middle" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Force-support the sweep edge, run with H’s drag until blocked off",
+      "waypoints": [
+        { "t": 0, "x": 37.5, "y": 4, "note": "Apex alignment" },
+        { "t": 0.6, "x": 37, "y": 3.2, "note": "Eyes sweep flow first" },
+        { "t": 1.5, "x": 35.5, "y": 2.8, "note": "Turns to H’s drag" },
+        { "t": 2.5, "x": 33, "y": 2.6, "note": "Running with the drag" },
+        { "t": 4, "x": 30, "y": 3, "note": "Dragged away from the post" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press X, carry the outside stem — beaten when the post breaks inside",
+      "waypoints": [
+        { "t": 0, "x": 7, "y": 6.5, "note": "Press alignment on X" },
+        { "t": 0.8, "x": 8, "y": 8.5, "note": "Riding X outside stem" },
+        { "t": 1.6, "x": 9.2, "y": 12.5, "note": "Still leaning outside leverage" },
+        { "t": 2.1, "x": 9.6, "y": 15.5, "note": "Post breaks inside on him" },
+        { "t": 3.2, "x": 10.4, "y": 19, "note": "Trailing the catch" },
+        { "t": 4, "x": 11, "y": 20, "note": "Chasing from behind" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Match Z pre-snap, then chase the jet sweep across the entire formation",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 6.5, "note": "Aligned on Z pre-motion" },
+        { "t": 0.6, "x": 42, "y": 5.5, "note": "Chasing Z’s jet path" },
+        { "t": 1.4, "x": 35, "y": 4.7, "note": "Sprint across formation" },
+        { "t": 2.6, "x": 28, "y": 5.1, "note": "Still chasing the decoy" },
+        { "t": 4, "x": 22, "y": 7.1, "note": "Nearest man to nothing" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Half-field right, sink with H’s drag while X climbs behind you",
+      "waypoints": [
+        { "t": 0, "x": 34, "y": 11.5, "note": "Quarter alignment" },
+        { "t": 0.8, "x": 33, "y": 10.7, "note": "Reading sweep then drag" },
+        { "t": 1.7, "x": 31.5, "y": 9.7, "note": "Eyes locked on crossing H" },
+        { "t": 2.6, "x": 31, "y": 9.1, "note": "X climbing behind him" },
+        { "t": 4, "x": 30.5, "y": 9.5, "note": "Never recovers to the post" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "The key defender — bites downhill on the sweep and cannot climb back to the post",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 12, "note": "Free safety read" },
+        { "t": 0.7, "x": 21.5, "y": 10, "note": "Triggering downhill on sweep" },
+        { "t": 1.4, "x": 23.5, "y": 7.5, "note": "Fully bitten on the run fake" },
+        { "t": 2.1, "x": 24, "y": 6.5, "note": "Post breaks over the top of him" },
+        { "t": 2.9, "x": 23, "y": 8.5, "note": "Frantic recovery sprint" },
+        { "t": 4, "x": 21.5, "y": 12.5, "note": "Arrives after the catch" }
+      ]
+    }
+  ]
+}

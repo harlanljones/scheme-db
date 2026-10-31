@@ -1,0 +1,18 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "power-gap-duo",
+  "name": "Power Gap & Duo / QB Run-Game Tree",
+  "patriarch": "John Harbaugh → Greg Roman",
+  "side": "offense",
+  "description": "The downhill gap-scheme lineage: power, duo, counter, and pin-and-pull runs married to genuine quarterback run threat. Built on heavy personnel, play-action off identical run pictures, and forcing light boxes into unblockable run-pass conflicts.",
+  "rootNodes": [
+    {
+      "coachId": "vince-lombardi",
+      "children": []
+    },
+    {
+      "coachId": "greg-roman",
+      "children": []
+    }
+  ]
+}

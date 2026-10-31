@@ -1,0 +1,325 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "t2-roll-cover3-trips",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on weak-side speed rush",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Vertical set" },
+        { "t": 0.9, "x": 20.3, "y": -0.9, "note": "Engage LE charge" },
+        { "t": 2.4, "x": 20.1, "y": -1.4, "note": "Ride the arc" },
+        { "t": 4, "x": 20.2, "y": -1.7, "note": "Edge held" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Handle shade nose with center help",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Set inside" },
+        { "t": 0.9, "x": 24.7, "y": -0.9, "note": "Combo punch on NT" },
+        { "t": 2.4, "x": 24.9, "y": -1.3, "note": "Anchor against bull" },
+        { "t": 4, "x": 25, "y": -1.6, "note": "Interior intact" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Snap then slide to the under tackle combo",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap" },
+        { "t": 0.9, "x": 27.2, "y": -0.9, "note": "Slide right to UT" },
+        { "t": 2.4, "x": 27.5, "y": -1.3, "note": "UT churning into lap depth" },
+        { "t": 4, "x": 27.6, "y": -1.6, "note": "Combo stretched but holding" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Block the penetrating 3-tech",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Set on UT" },
+        { "t": 0.9, "x": 29, "y": -0.9, "note": "Engage 3-tech rip" },
+        { "t": 2.4, "x": 28.9, "y": -1.3, "note": "Fight to stay attached" },
+        { "t": 4, "x": 28.7, "y": -1.6, "note": "Driven back a yard" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on the wide-edge rush around trips",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Kick slide out" },
+        { "t": 0.9, "x": 33.2, "y": -0.9, "note": "Meet RE climb" },
+        { "t": 2.4, "x": 33.6, "y": -1.4, "note": "Ride him up the rim" },
+        { "t": 4, "x": 33.8, "y": -1.7, "note": "Contain forced wide" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Iso vertical on the lone-receiver side",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 0.5, "note": "Outside release" },
+        { "t": 1, "x": 5.5, "y": 4, "note": "Stem the deep third" },
+        { "t": 2.4, "x": 5.3, "y": 10, "note": "LCB turns and runs" },
+        { "t": 4, "x": 5.2, "y": 14, "note": "Capped, no look" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Attached seam as the flood’s interior threat",
+      "waypoints": [
+        { "t": 0, "x": 35.3, "y": -0.6, "note": "Release vs SAM" },
+        { "t": 0.9, "x": 35.4, "y": 1.5, "note": "Push past leverage" },
+        { "t": 2, "x": 35.6, "y": 7, "note": "Climbing the seam" },
+        { "t": 3.2, "x": 35.4, "y": 11, "note": "Trailed by carrying SAM" },
+        { "t": 4, "x": 35.2, "y": 12.5, "note": "Seam capped" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Shallow drive underneath the flood",
+      "waypoints": [
+        { "t": 0, "x": 39.8, "y": 1.2, "note": "Slot release" },
+        { "t": 0.8, "x": 40.2, "y": 1.5, "note": "Flatten off the stem" },
+        { "t": 1.8, "x": 37, "y": 2, "note": "Driving across formation" },
+        { "t": 3, "x": 33, "y": 2.5, "note": "Robbed by sinking MIKE" },
+        { "t": 4, "x": 30, "y": 2.8, "note": "Lane closed all the way" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Designed corner route off the slot — the flood finisher",
+      "waypoints": [
+        { "t": 0, "x": 44.8, "y": 1, "note": "Slot alignment" },
+        { "t": 0.9, "x": 45.2, "y": 3.5, "note": "Push the deep third vertical" },
+        { "t": 1.8, "x": 46, "y": 9, "note": "Clearing RCB up the seam" },
+        { "t": 2.6, "x": 43.5, "y": 13, "note": "Corner climb at 12 yards" },
+        { "t": 4, "x": 42, "y": 14.5, "note": "Ball arrives into the sink" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "Progression flood high-to-low, finish on the corner",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -2.8, "note": "Hitch reading the flood" },
+        { "t": 1.8, "x": 27.2, "y": -3.3, "note": "Eyes on the corner window" },
+        { "t": 2.6, "x": 26.8, "y": -3.6, "note": "Throw into rotated coverage" },
+        { "t": 4, "x": 26.6, "y": -3.7, "note": "Watches the PBU sail loose" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Check-release weak flat on the back side",
+      "waypoints": [
+        { "t": 0, "x": 22.8, "y": -3, "note": "Offset alignment" },
+        { "t": 1, "x": 22, "y": -1.2, "note": "Scan then release" },
+        { "t": 2.4, "x": 18, "y": 1.5, "note": "Flat working weak" },
+        { "t": 4, "x": 15.5, "y": 2.5, "note": "Fitted by WILL immediately" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "LE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Four-man rush: contain weak, bend to the rim",
+      "waypoints": [
+        { "t": 0, "x": 19.8, "y": 1, "note": "Weak contain rush" },
+        { "t": 1, "x": 19.4, "y": -0.2, "note": "Pin LT up the arc" },
+        { "t": 2.6, "x": 19.2, "y": -1.6, "note": "Bend to the rim" },
+        { "t": 4, "x": 19.5, "y": -2.9, "note": "Pocket edge flushed" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "One-tech bull through the combo",
+      "waypoints": [
+        { "t": 0, "x": 25.8, "y": 1, "note": "Shade alignment" },
+        { "t": 1, "x": 25.6, "y": -0.4, "note": "Strike the combo low" },
+        { "t": 2.4, "x": 25.5, "y": -1.8, "note": "Churn through hands" },
+        { "t": 4, "x": 25.6, "y": -3, "note": "Middle pocket collapsed" }
+      ]
+    },
+    {
+      "id": "UT",
+      "label": "UT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Three-tech penetrate to flush the launch point",
+      "waypoints": [
+        { "t": 0, "x": 28.8, "y": 1, "note": "3-tech alignment" },
+        { "t": 1, "x": 29.2, "y": -0.4, "note": "Rip through RG" },
+        { "t": 2.4, "x": 29.5, "y": -2, "note": "Into the throwing lap" },
+        { "t": 4, "x": 29.3, "y": -3.2, "note": "Forced the rushed platform" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "RE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Contain rush strong around the trips edge",
+      "waypoints": [
+        { "t": 0, "x": 36.6, "y": 1, "note": "Wide contain rush" },
+        { "t": 1, "x": 37.2, "y": -0.2, "note": "Arc past the detached edge" },
+        { "t": 2.4, "x": 37.6, "y": -1.6, "note": "RT rides him wide" },
+        { "t": 4, "x": 37.8, "y": -3, "note": "Rim contained" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "SAM",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong hook: carry the attached seam, wall the flat",
+      "waypoints": [
+        { "t": 0, "x": 38, "y": 4.2, "note": "Over-trips alignment" },
+        { "t": 0.9, "x": 37.5, "y": 5.5, "note": "Read #3 release first" },
+        { "t": 2.2, "x": 36, "y": 7.5, "note": "Carry Y seam vertically" },
+        { "t": 4, "x": 34.8, "y": 9, "note": "Seam walled underneath" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Middle hook: rob the shallow crosser in the sky structure",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 4.5, "note": "Hook alignment" },
+        { "t": 1, "x": 26.67, "y": 6, "note": "Drop with QB eyes" },
+        { "t": 2.4, "x": 28.5, "y": 6.5, "note": "Eyes jump to crosser" },
+        { "t": 4, "x": 31, "y": 4.5, "note": "Shallow lane closed" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak curl-flat in the sky structure: fit the check-release",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 4.2, "note": "Weak alignment" },
+        { "t": 0.8, "x": 17.5, "y": 1.8, "note": "Burst to the flat landmark" },
+        { "t": 2.2, "x": 15.8, "y": 2, "note": "Fit on RB release" },
+        { "t": 4, "x": 15, "y": 2.4, "note": "Back side erased" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep third weak: turn-and-run on the iso vertical",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 10.5, "note": "Third alignment" },
+        { "t": 0.8, "x": 5.5, "y": 12, "note": "Turn-and-run pedal" },
+        { "t": 2.4, "x": 5.3, "y": 13.5, "note": "Carry X fade" },
+        { "t": 4, "x": 5.2, "y": 15, "note": "Weak third capped" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Deep third strong: sink under the corner route once Z clears",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": 10.5, "note": "Third alignment" },
+        { "t": 1, "x": 46, "y": 12, "note": "Pedal on Z clear-out" },
+        { "t": 2.2, "x": 44.5, "y": 12.5, "note": "Eyes transfer to the climber" },
+        { "t": 3, "x": 41, "y": 13, "note": "Break downhill on the corner" },
+        { "t": 3.6, "x": 42.5, "y": 14, "note": "PBU at the catch point" },
+        { "t": 4, "x": 42.2, "y": 14.2, "note": "Ball knocked loose" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Sky rotation: sprint down to the strong flat landmark",
+      "waypoints": [
+        { "t": 0, "x": 40.5, "y": 11.5, "note": "Rolling from deep half" },
+        { "t": 0.7, "x": 39, "y": 6, "note": "Sprint downhill at snap" },
+        { "t": 1.5, "x": 43, "y": 2.5, "note": "Flat landmark reached" },
+        { "t": 2.6, "x": 44.5, "y": 1.8, "note": "Wall the flat release" },
+        { "t": 4, "x": 45.5, "y": 1.6, "note": "Flat owned" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Rotate from weak half to the deep middle third",
+      "waypoints": [
+        { "t": 0, "x": 13.5, "y": 11.5, "note": "Rotating from half" },
+        { "t": 0.7, "x": 22, "y": 13, "note": "Spin to the post" },
+        { "t": 1.6, "x": 28, "y": 14, "note": "Middle third claimed" },
+        { "t": 2.8, "x": 36.5, "y": 15, "note": "Drift to the corner ball" },
+        { "t": 4, "x": 38.5, "y": 15.2, "note": "Bracketing behind the PBU" }
+      ]
+    }
+  ]
+}

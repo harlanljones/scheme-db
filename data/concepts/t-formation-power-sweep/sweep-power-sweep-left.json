@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sweep-power-sweep-left",
+  "schemeId": "t-formation-power-sweep",
+  "order": 1,
+  "name": "Power Sweep Left",
+  "personnel": "21",
+  "formation": "T Formation, Ends Both Sides",
+  "situation": "2nd & 4, own 45, base down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Run outside the tackles behind two pulling guards so the defense's edge structure collapses inward and the perimeter belongs to the offense.",
+    "keyDefender": "Will Linebacker (weak-side flow linebacker)",
+    "whyItWorks": "The double pull forces every defender to re-fit mid-play; the kick-out removes force and the lead block plus downfield escorts guarantee one clean running lane.",
+    "failureMode": "The force defender beats the kick-out block outside, or the backside pursuit angles close the lane before the escorts arrive."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Double Pull Begins",
+      "text": "Both guards pull simultaneously — the first leads through the lane while the second wraps to kick out the force player. The defense sees pulling linemen and must re-route its fits instantly.",
+      "focus": ["LG", "RG", "HB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Deep Handoff",
+      "text": "The quarterback extends the ball at full depth so the halfback receives it already moving sideways at the sideline landmark, never slowing his momentum.",
+      "focus": ["QB", "HB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Force Player Is Kicked Out",
+      "text": "The wrapping guard arrives at the force corner and drives him inside. The entire defensive edge collapses inward while the sweep lane stays wide.",
+      "focus": ["RG", "LCB", "WILL"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. The Downfield Escort",
+      "text": "With the force kicked out and the alley blocked, the halfback turns upfield behind three escorts — including a flanker who has crossed the formation to stalk the last pursuer.",
+      "focus": ["HB", "FB", "Z", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sweep-fullback-blast", "sweep-sweep-pass-bootleg"],
+    "playsOff": [],
+    "tell": "Two linemen leave the line of scrimmage immediately in opposite directions — no Lombardi companion play shows this picture."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

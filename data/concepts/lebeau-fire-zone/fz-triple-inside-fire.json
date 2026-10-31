@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "fz-triple-inside-fire",
+  "schemeId": "lebeau-fire-zone",
+  "order": 1,
+  "name": "Triple Inside Fire Zone",
+  "personnel": "3-4 Fire Zone Nickel",
+  "formation": "11P Gun Spread 2x2 vs Odd Front Fire Zone",
+  "situation": "3rd & 7, midfield, obvious pass",
+  "coverage": "Cover 3 Fire Zone (3-Deep / 3-Under)",
+  "frontName": "Odd 50 Triple Fire Zone",
+  "summary": {
+    "motive": "Generate true 5-man pressure with a double-A linebacker blast while a defensive end secretly trades his rush lane for the rat zone that swallows hot answers.",
+    "keyDefender": "RDE executing the rat trade drop",
+    "whyItWorks": "Offenses must account for six potential rushers with five blockers, so the hot progression fires directly into the vacated defender sitting in the intermediate window.",
+    "failureMode": "The offensive line slides to pick up both A-gap blasts cleanly, leaving the QB a free boundary flat or the isolated weak-side slant against a one-high shell."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "1. The Double-A Blast",
+      "text": "Both mugging linebackers trigger at full speed into opposite A-gaps. The Center and guards must split two simultaneous interior charges with no backside help committed.",
+      "focus": ["MIKE", "WILL", "C", "LG"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Rat Trade",
+      "text": "While five defenders swarm the pocket, the strong defensive end exits his rush lane on a smooth backward arc, trading his pass-rush rep for the free-release rat zone.",
+      "focus": ["RDE", "QB", "LOLB"]
+    },
+    {
+      "t": 2.3,
+      "title": "3. The Dig Into the Teeth",
+      "text": "The QB climbs the pocket and trusts his 12-yard dig to Z, unaware the vacated rusher is already squatting exactly where the route breaks.",
+      "focus": ["Z", "RDE", "QB"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Interior Convergence Sack",
+      "text": "With WILL occupying the running back protector, MIKE and NT converge on the step-up lane and bury the QB before the dig can develop.",
+      "focus": ["MIKE", "NT", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["fz-nose-drop-nasco"],
+    "playsOff": [],
+    "tell": "The strong end loosens his stance and takes a lateral first step rather than an upfield punch, signaling the trade before the ball is even thrown."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "reid-west-coast",
+  "name": "Andy Reid West Coast / Spread RPO Tree",
+  "patriarch": "Bill Walsh → Andy Reid",
+  "side": "offense",
+  "description": "A pillar of modern offensive innovation. Blends classic West Coast rhythm and pass spacing with modern college Spread RPOs, empty/bunch formations, Mesh shallow crosses, jet shovel screens, and 13-personnel tight-end power mismatches.",
+  "rootNodes": [
+    {
+      "coachId": "bill-walsh",
+      "children": [
+        {
+          "coachId": "andy-reid",
+          "children": [
+            {
+              "coachId": "john-harbaugh",
+              "children": []
+            },
+            {
+              "coachId": "shane-steichen",
+              "children": []
+            },
+            {
+              "coachId": "nick-sirianni",
+              "children": []
+            },
+            {
+              "coachId": "sean-payton",
+              "children": []
+            },
+            {
+              "coachId": "chip-kelly",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

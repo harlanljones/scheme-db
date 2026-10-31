@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "sirianni-power-rpo",
+  "name": "Nick Sirianni's Power RPO & Brotherly Shove System",
+  "coachId": "nick-sirianni",
+  "team": "Philadelphia Eagles",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "reid-west-coast",
+  "description": "A physical, identity-driven offense built on gap power football paired with perimeter RPO access. Nick Sirianni's Eagles combine power duo runs that rely on vertical double-teams, RPO glance and slant reads that punish aggressive linebackers, boundary isolation for elite wide receivers, and the most famous short-yardage play in the NFL — the Brotherly Shove quarterback sneak."
+}

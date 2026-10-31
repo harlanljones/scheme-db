@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "shane-steichen",
+  "name": "Shane Steichen",
+  "role2026": "Head Coach, Indianapolis Colts",
+  "team": "Indianapolis Colts",
+  "lineage": "reid-west-coast",
+  "mentorId": "nick-sirianni",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "Quarterback run-threat maximization, Mesh crossers, RPO bubble/glance combinations, and vertical boundary shots off zone-read fakes.",
+  "keyConcepts": ["Zone Read + Bubble RPO", "Mesh Rail", "4-Verticals Switch", "Power Read"],
+  "schemeIds": ["steichen-qb-mesh-rpo"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Orchestrated Top-5 Scoring Offenses in Philly & Indy"]
+}

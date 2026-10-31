@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "ryans-overload-edge-fire",
+  "schemeId": "ryans-wide9-attack",
+  "order": 4,
+  "name": "5-Man Overload Edge Fire Zone",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Overload 5-Up Wide-9 Front vs 11P Gun 3x1 Deep Shot",
+  "situation": "3rd & 9, +45, long-yardage blitz down",
+  "coverage": "Fire Zone 3 (3-Deep 3-Under Edge Overload)",
+  "frontName": "Field Overload Fire Presentation",
+  "summary": {
+    "motive": "Overload the field side of the pass protection with a 5-man fire zone blitz, creating an unblocked perimeter rusher while dropping the boundary defensive end into coverage.",
+    "keyDefender": "NICKEL (unblocked overload blitzer) & WDE (boundary flat dropper)",
+    "whyItWorks": "Offensive slide protections cannot account for both the interior looping linebacker and the perimeter slot DB, ensuring a free rusher to the quarterback.",
+    "failureMode": "A quick screen to the boundary side if the dropping defensive end fails to get sufficient width to make the tackle."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Wide-9 Overload Presentation",
+      "text": "DeMeco Ryans aligns 5 defenders threatening the field side of the formation, creating a numbers overload against the offensive pass protection.",
+      "focus": ["SDE", "3T", "NICKEL", "WILL", "RT", "C"]
+    },
+    {
+      "t": 0.8,
+      "title": "Overload Rush Fires; WDE Drops to Flat",
+      "text": "At the snap, SDE pins the RT inside with a B-gap stunt while WILL attacks the A-gap. Backside WDE bails into the boundary flat to maintain a 3-under 3-deep zone.",
+      "focus": ["NICKEL", "SDE", "WILL", "RT", "WDE", "LT"]
+    },
+    {
+      "t": 2,
+      "title": "Pass Protection Overwhelmed on Field Edge",
+      "text": "The running back steps up to pick WILL’s blitz, leaving NICKEL completely unblocked to scream off the field perimeter.",
+      "focus": ["NICKEL", "RB", "WILL", "QB"]
+    },
+    {
+      "t": 3,
+      "title": "Strip-Sack Fumble Forced",
+      "text": "NICKEL levels the quarterback from the blind side just as he prepares to throw, knocking the football free for a game-changing turnover.",
+      "focus": ["NICKEL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["ryans-wide9-under-tackle-wrap", "ryans-cover1-hole-mug"],
+    "tell": "Field-side overload pressure with SDE slanting inside to clear the edge for Nickel DB while boundary DE drops into coverage"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

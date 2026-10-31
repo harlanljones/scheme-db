@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "sail-concept",
+  "term": "Sail Concept",
+  "aliases": ["Sail concept", "Flood concept", "3-level flood", "Sail", "sail concept"],
+  "category": "Pass Concept",
+  "shortDef": "A three-level vertical passing combination consisting of a deep clear-out (go/post), an intermediate out/sail route (10–14 yards), and a quick flat route (0–4 yards).",
+  "tacticalNote": "Puts boundary zone defenders in an impossible vertical high-low bind, guaranteeing an open window against Cover 3 and Cover 4."
+}

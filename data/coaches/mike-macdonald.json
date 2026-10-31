@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "mike-macdonald",
+  "name": "Mike Macdonald",
+  "role2026": "Head Coach, Seattle Seahawks",
+  "team": "Seattle Seahawks",
+  "lineage": "macdonald-pressure",
+  "mentorId": "john-harbaugh",
+  "disciples": ["jesse-minter"],
+  "side": "defense",
+  "philosophy": "Pre-snap illusion of pressure with 4-man Simulated Pressures (Creepers), dropping interior linemen into passing windows while sending DBs, backed by post-snap safety rotation and trap coverages.",
+  "keyConcepts": ["Simulated Pressures (Creepers)", "Double-A Mug Buzz", "Split-Field Trap", "Cover 0 Peel Blitz"],
+  "schemeIds": ["macdonald-hybrid-disguise"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["#1 Scoring Defense in NFL (Ravens)", "2024 Seahawks HC Hiring"]
+}

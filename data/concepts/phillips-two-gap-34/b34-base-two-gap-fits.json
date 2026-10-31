@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b34-base-two-gap-fits",
+  "schemeId": "phillips-two-gap-34",
+  "order": 1,
+  "name": "Base Two-Gap Fits vs 21 Personnel",
+  "personnel": "Base Two-Gap 3-4",
+  "formation": "Two-Gap Front vs Under-Center 21 Strong Right",
+  "situation": "2nd & 5 from the 30, base run-down",
+  "coverage": "Single-High, Soft Corners vs Run",
+  "frontName": "Two-Gap 3-4 (Zero Nose, Double 5-Techs)",
+  "summary": {
+    "motive": "Trade penetration for total gap ownership — let linemen engage and control two gaps each so linebackers can run free over the top to every ball carrier.",
+    "keyDefender": "RILB scraping over the top — he arrives as the unblocked tackler precisely because the line ate every block",
+    "whyItWorks": "Engaged linemen guarantee no blocker is ever left unaccounted for, so the ball carrier always runs toward a flowing linebacker rather than a blocked hat.",
+    "failureMode": "Reach blocks: if a tackle hooks an end off the line, the two-gap chain collapses and the scraper runs into open space."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Two-Gap Geometry",
+      "text": "Three linemen stand squared between gaps rather than shaded into them — each one is responsible for two gaps and plans to win by engagement, not penetration.",
+      "focus": ["NG", "ELE", "ERE"]
+    },
+    {
+      "t": 1,
+      "title": "2. Engage and Hold the Point",
+      "text": "The nose absorbs a full double team while the strong end eats the tight-end clamp — every blocker is accounted for and none are moving backward.",
+      "focus": ["NG", "ERE", "C", "LG"]
+    },
+    {
+      "t": 1.9,
+      "title": "3. Linebackers Run the Ladder",
+      "text": "With the line holding its blocks, both inside linebackers scrape OVER THE TOP of the engaged bodies instead of fighting through them.",
+      "focus": ["LILB", "RILB"]
+    },
+    {
+      "t": 3,
+      "title": "4. Funneled Into the Scrape",
+      "text": "The setting edge forces the cutback inside exactly where the scraping RILB has arrived — the carrier meets the defense’s cleanest tackler.",
+      "focus": ["ROLB", "RILB", "TB", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b34-dual-edge-interior-anchor"],
+    "playsOff": ["b34-stack-slant-shift"],
+    "tell": "All three linemen stand square reading blockers instead of charging gaps — slant fronts explode sideways off this exact patient stance."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

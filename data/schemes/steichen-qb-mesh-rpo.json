@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "steichen-qb-mesh-rpo",
+  "name": "Shane Steichen's QB Mesh & Spread RPO System",
+  "coachId": "shane-steichen",
+  "team": "Indianapolis Colts",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "reid-west-coast",
+  "description": "A dual-threat quarterback maximization system rooted in Andy Reid's West Coast principles with modern college Spread DNA. Shane Steichen pairs zone-read power runs with RPO bubble/glance perimeter reads, Mesh shallow crosses that create natural rubs against man coverage, and vertical switch releases that exploit deep zone voids. The system demands a mobile signal-caller who threatens the edge on every designed run, compressing defensive end responsibilities into an impossible choice."
+}

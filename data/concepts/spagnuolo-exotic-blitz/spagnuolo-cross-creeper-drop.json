@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "spagnuolo-cross-creeper-drop",
+  "schemeId": "spagnuolo-exotic-blitz",
+  "order": 2,
+  "name": "Cross-Dog Creeper Sim Pressure",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Nickel Odd Over vs 11P Gun 2x2 Spread",
+  "situation": "2nd & 8, +42, passing situation",
+  "coverage": "Cover 3 Match (Simulated 4-Man Creeper)",
+  "frontName": "Odd Mug Sim Overload",
+  "summary": {
+    "motive": "Generate unblocked pressure with a 4-man simulated rush by replacing a dropping defensive end with a blitzing linebacker into the offense’s slide protection.",
+    "keyDefender": "WILL (Creeper Linebacker Rusher) & WDE (Dropping Defensive End)",
+    "whyItWorks": "The offensive line slides protection to the defensive end who bails, while failing to account for the linebacker shooting the opposite B-gap from second-level depth.",
+    "failureMode": "A designed perimeter quarterback rollout away from the creeper rush that isolates cornerbacks in man/zone match without edge contain."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Mug Front Sim Pressure Alignment",
+      "text": "Spagnuolo presents a 5-man line of scrimmage front with MIKE mugged in the A-gap, signaling an all-out pass rush to force 5-man slide protection.",
+      "focus": ["MIKE", "WILL", "WDE", "SDE", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "The Creeper Exchange",
+      "text": "At the snap, only 4 defenders rush! Defensive end WDE drops into the shallow hook zone while inside linebacker WILL shoots the strong B-gap on a creeper blitz.",
+      "focus": ["WDE", "WILL", "LT", "RT"]
+    },
+    {
+      "t": 2,
+      "title": "Hot Window Clogged by Defensive End",
+      "text": "The QB expects the blitz and looks to hit H on the shallow crossing hot route, only to find the 260-pound WDE standing directly in the throwing window.",
+      "focus": ["WDE", "H", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Unblocked Creeper Sacks Quarterback",
+      "text": "With his primary hot route taken away by the dropping defensive lineman, the QB is brought down by WILL blazing through the vacated B-gap.",
+      "focus": ["WILL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["spagnuolo-cover0-max-heat"],
+    "playsOff": ["spagnuolo-split-safety-invert2"],
+    "tell": "Defensive end steps back into hook drop at snap while off-ball linebacker triggers forward into B-gap"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

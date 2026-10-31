@@ -33,13 +33,24 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
+    "data:migrate": "bun run scripts/migrate-legacy.ts",
+    "data:validate": "bun run scripts/data.ts validate",
+    "data:format": "bun run scripts/data.ts format",
+    "data:schema": "bun run scripts/data.ts schema",
+    "data:frames": "bun run scripts/data.ts frames",
+    "data:release": "bun run scripts/release.ts",
+    "specs:check": "bun run scripts/specs.ts check",
+    "specs:compile": "bun run scripts/specs.ts compile",
+    "specs:diff": "bun run scripts/specs.ts diff",
     "lint": "oxlint",
     "preview": "vite preview",
     "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@testing-library/react": "^16.3.2",

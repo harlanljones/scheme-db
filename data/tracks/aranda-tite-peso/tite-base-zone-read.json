@@ -1,0 +1,319 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "tite-base-zone-read",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Zone step right, drive off LOS vs weak 4i",
+      "waypoints": [
+        { "t": 0, "x": 20.7, "y": -0.5, "note": "Zone step right" },
+        { "t": 1, "x": 22.3, "y": -0.9, "note": "Drive off LOS at squeezing 4i" },
+        { "t": 2.2, "x": 23.4, "y": -1.4, "note": "4i holds inside shoulder, no reach" },
+        { "t": 4, "x": 24.2, "y": -2, "note": "Climbs late as ball dies in box" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Combo weak B-gap defender with center",
+      "waypoints": [
+        { "t": 0, "x": 23.9, "y": -0.5, "note": "Zone step right" },
+        { "t": 1, "x": 25.6, "y": -0.9, "note": "Combo with C on NOSE" },
+        { "t": 2.2, "x": 26.8, "y": -1.3, "note": "Work off combo toward level two" },
+        { "t": 4, "x": 27.6, "y": -2, "note": "NOSE split leaves no climb lane" }
+      ]
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Anchor on NOSE with LG combo help",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Snap, combo call with LG" },
+        { "t": 1, "x": 26.4, "y": -0.9, "note": "Double-team NOSE" },
+        { "t": 2.2, "x": 27, "y": -1.2, "note": "NOSE refuses to be displaced" },
+        { "t": 4, "x": 27.4, "y": -1.7, "note": "Combo stalled at LOS" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Zone right, leave strong 4i unblocked as read key",
+      "waypoints": [
+        { "t": 0, "x": 29.4, "y": -0.5, "note": "Zone step right past key" },
+        { "t": 1, "x": 30.8, "y": -0.9, "note": "Skip strong 4i, sight apex" },
+        { "t": 2.2, "x": 31.9, "y": -1.4, "note": "Climb to MIKE apex" },
+        { "t": 4, "x": 32.4, "y": -2, "note": "MIKE scrapes past his block" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach upfield past read-key 4i to apex",
+      "waypoints": [
+        { "t": 0, "x": 32.6, "y": -0.5, "note": "Sight unblocked read key" },
+        { "t": 1, "x": 33.9, "y": -0.8, "note": "Skip past squeezing 4i" },
+        { "t": 2.2, "x": 34.8, "y": -1.3, "note": "Climb to second level" },
+        { "t": 4, "x": 35.4, "y": -1.9, "note": "Blocking air as QB pulled" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Arc release to block the walked-down peso",
+      "waypoints": [
+        { "t": 0, "x": 35.4, "y": -0.6, "note": "Arc release for PESO" },
+        { "t": 1, "x": 36.6, "y": 0.2, "note": "Arc upfield to nickel" },
+        { "t": 2.2, "x": 37.6, "y": 1.2, "note": "PESO defeats arc inside" },
+        { "t": 4, "x": 38.2, "y": 2, "note": "Whiffed arc as nickel tackles" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Read strong 4i, pull and keep on squeeze",
+      "waypoints": [
+        { "t": 0, "x": 25.9, "y": -1.8, "note": "Gun, open mesh with RB" },
+        { "t": 1, "x": 26.8, "y": -2.4, "note": "Mesh point, eyes on 4i key" },
+        { "t": 2, "x": 28.4, "y": -1.6, "note": "Pull on squeeze, keep around RT" },
+        { "t": 3.1, "x": 30.8, "y": 0.6, "note": "Bend upfield into keep lane" },
+        { "t": 4, "x": 32, "y": 2.4, "note": "Met by walking PESO, TFL" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Take mesh look, carry out give fake through box",
+      "waypoints": [
+        { "t": 0, "x": 24.2, "y": -5.5, "note": "Alignment for zone ride" },
+        { "t": 1, "x": 26, "y": -4.2, "note": "Mesh ride with QB" },
+        { "t": 2, "x": 27.6, "y": -2.6, "note": "Pull read, carries out fake" },
+        { "t": 3.1, "x": 29, "y": -1.2, "note": "Fake path collapses box eyes" },
+        { "t": 4, "x": 30.2, "y": -0.4, "note": "Fake drains WILL from backside" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Stalk LCB to cut off backside pursuit",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 0.5, "note": "Backside island alignment" },
+        { "t": 1, "x": 7, "y": 2.2, "note": "Work to press corner" },
+        { "t": 2.2, "x": 8, "y": 3.2, "note": "LCB fights over the stalk" },
+        { "t": 4, "x": 9, "y": 4, "note": "Contained, no cutback lane" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Vertical clear-out to move the strong quarter",
+      "waypoints": [
+        { "t": 0, "x": 47, "y": 0.5, "note": "Vertical release outside" },
+        { "t": 1, "x": 46.5, "y": 6, "note": "Clear out RCB" },
+        { "t": 2.2, "x": 45.5, "y": 12, "note": "Carries SS quarter deep" },
+        { "t": 4, "x": 44.5, "y": 15, "note": "Holds safety away from box" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Speed out under the vertical to occupy quarters match",
+      "waypoints": [
+        { "t": 0, "x": 39.5, "y": 0.7, "note": "Slot #2 alignment" },
+        { "t": 1, "x": 40.8, "y": 3.5, "note": "Speed out under Z" },
+        { "t": 2.2, "x": 41.6, "y": 5, "note": "Drifts flat away from box" },
+        { "t": 4, "x": 42.4, "y": 6.5, "note": "Cannot affect walked-down nickel" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "LE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weak 4i: squeeze weak B-gap, wrong-arm any puller",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 1, "note": "4i on LT inside shoulder" },
+        { "t": 1, "x": 22.4, "y": 0.2, "note": "Penetrate weak B-gap" },
+        { "t": 2.2, "x": 23.6, "y": 0.6, "note": "Hold ground as flow runs by" },
+        { "t": 4, "x": 24.6, "y": 1.4, "note": "Backside pursuit closes cutback" }
+      ]
+    },
+    {
+      "id": "NOSE",
+      "label": "NOSE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "0-tech: anchor both A-gaps, split the double team",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 1, "note": "Head-up anchor" },
+        { "t": 1, "x": 26.5, "y": -0.2, "note": "Absorb C/LG double team" },
+        { "t": 2.2, "x": 27.2, "y": 0.2, "note": "Split double toward ball side" },
+        { "t": 4, "x": 28.2, "y": 0.8, "note": "Living between both A-gaps" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "RE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Strong 4i read key: squeeze B-gap hard to sell pull",
+      "waypoints": [
+        { "t": 0, "x": 33.3, "y": 1, "note": "Unblocked read key" },
+        { "t": 1, "x": 32.2, "y": 0, "note": "Attack inside shoulder of RT" },
+        { "t": 2.2, "x": 31.4, "y": 0.6, "note": "Deep squeeze sells the pull" },
+        { "t": 4, "x": 30.6, "y": 1.4, "note": "B-gap eliminated behind QB" }
+      ]
+    },
+    {
+      "id": "EDGE",
+      "label": "EDGE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Wide end head-up TE: squeeze inside behind the 4i, close strong C",
+      "waypoints": [
+        { "t": 0, "x": 35.7, "y": 1, "note": "Head-up condensed TE alignment" },
+        { "t": 1, "x": 34.9, "y": 0.2, "note": "Strike TE, squeeze inside" },
+        { "t": 2.2, "x": 33.9, "y": 0.7, "note": "Hold strong C behind 4i squeeze" },
+        { "t": 4, "x": 32.9, "y": 1.4, "note": "C-gap wall behind the pile" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak apex: fill weak B behind squeeze, chase backdoor",
+      "waypoints": [
+        { "t": 0, "x": 24.8, "y": 4.5, "note": "Apex splitting tackle/#2 line" },
+        { "t": 1, "x": 25.8, "y": 3.2, "note": "Shuffle downhill on flow" },
+        { "t": 2.2, "x": 27.4, "y": 1.8, "note": "Fill over squeezed-out guard" },
+        { "t": 4, "x": 29.6, "y": 0.8, "note": "Second hat in keep lane" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong apex: spill first threat, scrape to keep lane",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": 4.5, "note": "Apex over strong tackle" },
+        { "t": 1, "x": 31.2, "y": 3, "note": "Trigger on zone flow" },
+        { "t": 2.2, "x": 30.4, "y": 2.2, "note": "Spill RT climb, scrape wide" },
+        { "t": 4, "x": 31.2, "y": 1.6, "note": "Stacks on PESO tackle" }
+      ]
+    },
+    {
+      "id": "PESO",
+      "label": "PESO",
+      "side": "defense",
+      "role": "db",
+      "trail": "carry",
+      "assignment": "Peso walks down at snap: defeat TE arc, make the tackle",
+      "waypoints": [
+        { "t": 0, "x": 38.2, "y": 4.5, "note": "Aligned over slot, box eyes" },
+        { "t": 1, "x": 36.4, "y": 3, "note": "Walks down at snap on run read" },
+        { "t": 2.2, "x": 35, "y": 1.6, "note": "Defeats TE arc inside" },
+        { "t": 4, "x": 32.6, "y": 2.2, "note": "Meets pulled QB for TFL" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press X, fight stalk, contain backside",
+      "waypoints": [
+        { "t": 0, "x": 6, "y": 1.5, "note": "Press alignment on X" },
+        { "t": 1, "x": 6.8, "y": 2, "note": "Jam release, feel stalk" },
+        { "t": 2.2, "x": 7.8, "y": 3, "note": "Fight over stalk block" },
+        { "t": 4, "x": 8.8, "y": 3.8, "note": "Owns island, no crack" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press Z, sink under vertical clear-out",
+      "waypoints": [
+        { "t": 0, "x": 46.8, "y": 1.5, "note": "Press alignment on Z" },
+        { "t": 1, "x": 46.2, "y": 3, "note": "Carry vertical release" },
+        { "t": 2.2, "x": 45.4, "y": 8, "note": "Trail under deep route" },
+        { "t": 4, "x": 44.6, "y": 11, "note": "Stuck on island by design" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Weak quarter: read run, replace if QB bends back",
+      "waypoints": [
+        { "t": 0, "x": 20.5, "y": 12, "note": "Weak quarter depth" },
+        { "t": 1, "x": 22, "y": 10, "note": "Read mesh, stay square" },
+        { "t": 2.2, "x": 24, "y": 7.5, "note": "Feel pull, slide to keep lane" },
+        { "t": 4, "x": 27, "y": 6, "note": "Last-line pursuit behind pile" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Strong quarter: carry Z vertical, stay off run fit",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 12, "note": "Strong quarter depth" },
+        { "t": 1, "x": 37, "y": 10, "note": "Eyes Z through run read" },
+        { "t": 2.2, "x": 40, "y": 10.5, "note": "Match Z vertical, no trigger" },
+        { "t": 4, "x": 42, "y": 11, "note": "Quarters rules hold him high" }
+      ]
+    }
+  ]
+}

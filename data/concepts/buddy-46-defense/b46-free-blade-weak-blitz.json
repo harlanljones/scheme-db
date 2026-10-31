@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b46-free-blade-weak-blitz",
+  "schemeId": "buddy-46-defense",
+  "order": 4,
+  "name": "Weak Free Blade Safety Blitz",
+  "personnel": "Base 46 Front (Free Blade Call)",
+  "formation": "46 Free Blade vs Gun 21 Personnel 2x1 Right",
+  "situation": "3rd & 5, +30, must-have stop",
+  "coverage": "Man-Free Rolled (Corner Replaces Blitzing Safety)",
+  "frontName": "46 Free Blade Weak Overload",
+  "summary": {
+    "motive": "Trade the free safety for a free weak-side runner while the boundary corner replaces him deep, keeping single-high shell integrity behind a five-man pressure.",
+    "keyDefender": "FS on the blade — unblocked by design because MIKE’s strong-side walk-up steals the running back’s scan",
+    "whyItWorks": "Protection rules send the back toward the walked-up linebacker, the hinge helps strong, and the blade hits the QB’s blind side before the third step.",
+    "failureMode": "A back who scans weak first, or a max-protect six-man slide, leaves the FB waiting on the blade and turns pressure into a coverage deficit outside."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Blade Alignment",
+      "text": "The free safety stands alone at 8 yards over the weak B-gap with MIKE walking up strong as a decoy. The offense keys MIKE and slides protection away from the real threat.",
+      "focus": ["FS", "MIKE", "RB"]
+    },
+    {
+      "t": 1,
+      "title": "2. Corner Rolls, Safety Fires",
+      "text": "At the snap the boundary corner bails over his receiver to take the deep middle while the free safety shoots downhill through the weak B-gap off the guard’s outside hip.",
+      "focus": ["LCB", "FS", "LG"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Hot Answer Walled Off",
+      "text": "The QB’s hot slant to X dies instantly because the rolled-down strong safety carries it man-to-man, and the running back has already committed to the walked-up MIKE on the wrong side.",
+      "focus": ["SS", "X", "RB", "MIKE"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Blind-Side Takedown",
+      "text": "The hinge blocker spins around one full second too late; the blade arrives untouched and the rolled corner owns everything behind him. Zero risk, five-man pressure.",
+      "focus": ["FS", "FB", "LCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["b46-mad-dog-double-a", "b46-ext-strong-combo"],
+    "tell": "One safety at 8 yards directly over the weak guard with a corner pressed opposite — the base 46 keeps both safeties in the box and no corner ever bails from the middle of the field."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

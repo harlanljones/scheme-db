@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bracket-doubles-star",
+  "schemeId": "belichick-flores-psycho",
+  "order": 4,
+  "name": "Psycho Chameleon Bracket (Double #1 Star)",
+  "personnel": "Psycho 7-Man Front / Nickel Chameleon",
+  "formation": "7-Man Psycho Mug vs 11P Gun 3x1",
+  "formationId": "flores-psycho-mug-vs-11p",
+  "situation": "3rd & 8, -45, 3rd down vs elite #1 WR",
+  "coverage": "Chameleon Bracket (High-Low Double on Star X Receiver)",
+  "frontName": "Psycho 5-Man Overload Pressure",
+  "summary": {
+    "motive": "Eliminate the opponent’s primary star wide receiver using a Belichick-style bracket double-team disguised out of Flores’ signature 7-man psycho mug front.",
+    "keyDefender": "LCB & LURKER (Bracket tandem on #1 Star WR)",
+    "whyItWorks": "Quarterbacks under pressure instinctively look to their #1 playmaker on 1-on-1 matchups; bracketing that star eliminates the primary outlet while a 5-man rush gets home.",
+    "failureMode": "Secondary slot receiver winning instantly on an option route against single man coverage."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Psycho Front Alignment",
+      "text": "Flores aligns 7 defenders at the line of scrimmage, disguising a Belichick-style double-team bracket coverage as an all-out house blitz.",
+      "focus": ["EDGE_L", "LB_A1", "LB_A2", "LB_B1", "LB_B2", "EDGE_R", "LURKER"]
+    },
+    {
+      "t": 0.7,
+      "title": "5-Man Pressure Collapsing Edges",
+      "text": "At the snap, 5 rushers charge while LB_B2 drops and LURKER sprints toward the boundary. EDGE_L wins with speed around the left tackle.",
+      "focus": ["EDGE_L", "LB_A1", "LB_A2", "LB_B1", "EDGE_R", "LT"]
+    },
+    {
+      "t": 1.6,
+      "title": "Star Receiver Bracketed Inside-Out",
+      "text": "The QB looks immediately to his #1 star wide receiver (X) expecting 1-on-1 zero coverage, only to find LCB outside and LURKER inside clamping the route in a vice.",
+      "focus": ["X", "LCB", "LURKER", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "QB Forced to 3rd Read & Crushed",
+      "text": "Hesitating with his primary target erased, the QB is swallowed up by EDGE_L for a 2.4-second drive-ending sack.",
+      "focus": ["QB", "EDGE_L", "EDGE_R"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["cover0-all-out-house"],
+    "tell": "Boundary corner plays outside leverage while safety brackets inside hip of star receiver in high-low double."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

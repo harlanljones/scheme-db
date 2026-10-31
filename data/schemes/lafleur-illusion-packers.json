@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "lafleur-illusion-packers",
+  "name": "Matt LaFleur's Illusion of Complexity & Deep Shot Family",
+  "coachId": "matt-lafleur",
+  "team": "Green Bay Packers",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "shanahan-kubiak",
+  "description": "A masterclass in schematic deception and visual illusion. Matt LaFleur marries condensed 12-personnel and dual-back Pony sets with identical under-center wide-zone run mechanics to lull defenses into overpursuing, before unlocking catastrophic deep Cross-Country Posts, Dagger intermediate concepts, and perimeter constraint wheels."
+}

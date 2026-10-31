@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sweep-power-sweep-right-boot-fake",
+  "schemeId": "t-formation-power-sweep",
+  "order": 2,
+  "name": "Power Sweep Right w/ Boot Fake",
+  "personnel": "21",
+  "formation": "T Formation, Ends Both Sides",
+  "situation": "1st & 10, own 32, after a sweep left gain",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use the sweep's identical picture to drag all eleven defenders right, then attack the abandoned backside with a counter-bootleg.",
+    "keyDefender": "Free Safety (split-field safety)",
+    "whyItWorks": "The carry-out fake holds every run-fit defender for two seconds; when the quarterback reverses, the backside contains are chasing the sweep and cannot recover.",
+    "failureMode": "The backside end stays home instead of chasing the sweep, meeting the bootleg in the lane before the quarterback can set."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Identical Sweep Picture",
+      "text": "Both guards pull and the halfback crosses for the same deep handoff as the base Power Sweep Left — the defense has no pre-snap reason to expect anything different.",
+      "focus": ["LG", "LT", "HB"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Full Carry-Out",
+      "text": "The quarterback pulls the ball only after selling the complete mesh, keeping his shoulders square to the sweep for two full steps while every linebacker flows right.",
+      "focus": ["QB", "FB", "MIKE"]
+    },
+    {
+      "t": 2.3,
+      "title": "3. The Counter Reversal",
+      "text": "The quarterback plants and reverses into the boot lane behind the left end's hinge. The entire defensive flow is now running away from the ball.",
+      "focus": ["QB", "LE", "LDE"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Open Grass Behind the Flow",
+      "text": "The quarterback sets his feet in the vacated backside with the free safety still recovering — every receiver-side option is now against single coverage.",
+      "focus": ["QB", "FS", "LCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sweep-power-sweep-left", "sweep-fullback-blast"],
+    "playsOff": ["sweep-power-sweep-left"],
+    "tell": "The quarterback keeps the ball after the mesh — on the true sweep he is empty-handed within one step."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

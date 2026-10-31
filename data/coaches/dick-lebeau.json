@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "dick-lebeau",
+  "name": "Dick LeBeau",
+  "role2026": "Fire Zone Blitz Patriarch",
+  "team": "Cincinnati Bengals / Pittsburgh Steelers (DC)",
+  "lineage": "lebeau-zone-blitz",
+  "side": "defense",
+  "philosophy": "Invented the zone blitz: send five while dropping a lineman into coverage behind a fire zone, breaking slide-protection arithmetic without sacrificing zone integrity.",
+  "keyConcepts": ["Fire Zone 3-Deep 3-Under", "DL Coverage Drops", "Slide Protection Conflict", "Safety Rotation Disguise"],
+  "schemeIds": ["lebeau-fire-zone"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["2x Super Bowl Champion DC (XL, XLIII)", "Pro Football Hall of Fame (2010)", "Inventor of Zone Blitz"]
+}

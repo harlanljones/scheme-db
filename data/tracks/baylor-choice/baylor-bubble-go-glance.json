@@ -1,0 +1,346 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "baylor-bubble-go-glance",
+  "duration": 3.8,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Quick-game pass set on the nose",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.5, "note": "Gun snap" },
+        { "t": 0.5, "x": 26.5, "y": -1, "note": "Short quick set" },
+        { "t": 1.5, "x": 26.4, "y": -1.2, "note": "Anchoring on the shade" },
+        { "t": 2.6, "x": 26.3, "y": -1, "note": "Wall held" },
+        { "t": 3.8, "x": 26.4, "y": -0.9, "note": "Pocket intact" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set and seal the backside three-tech",
+      "waypoints": [
+        { "t": 0, "x": 24.9, "y": -0.5, "note": "Quick set" },
+        { "t": 0.5, "x": 24.6, "y": -1, "note": "Mirroring the rush" },
+        { "t": 1.5, "x": 24.4, "y": -1.2, "note": "Sealing the B-gap rusher" },
+        { "t": 2.6, "x": 24.3, "y": -1, "note": "Wall held" },
+        { "t": 3.8, "x": 24.4, "y": -0.9, "note": "Pocket intact" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set and pass off the three-tech to the guard-side wall",
+      "waypoints": [
+        { "t": 0, "x": 28.4, "y": -0.5, "note": "Quick set" },
+        { "t": 0.5, "x": 28.7, "y": -1, "note": "Mirroring the rush" },
+        { "t": 1.5, "x": 28.9, "y": -1.2, "note": "Taking the three-tech" },
+        { "t": 2.6, "x": 29, "y": -1, "note": "Wall held" },
+        { "t": 3.8, "x": 28.9, "y": -0.9, "note": "Pocket intact" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Vertical set on the wide end",
+      "waypoints": [
+        { "t": 0, "x": 23.2, "y": -0.5, "note": "Quick set" },
+        { "t": 0.5, "x": 22.8, "y": -1, "note": "Kicking to the edge" },
+        { "t": 1.5, "x": 22.5, "y": -1.3, "note": "Ride the wide rusher" },
+        { "t": 2.6, "x": 22.4, "y": -1.1, "note": "Edge contained" },
+        { "t": 3.8, "x": 22.5, "y": -1, "note": "Blind side clean" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set on the strong end rushing off the slot edge",
+      "waypoints": [
+        { "t": 0, "x": 30.1, "y": -0.5, "note": "Quick set" },
+        { "t": 0.5, "x": 30.5, "y": -1, "note": "Kicking to the edge" },
+        { "t": 1.5, "x": 30.7, "y": -1.2, "note": "Handling the wide charge" },
+        { "t": 2.6, "x": 30.6, "y": -1, "note": "Edge contained" },
+        { "t": 3.8, "x": 30.5, "y": -1, "note": "Delivery lane clean" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Catch and flash the bubble throw posture, hold as the trigger flies, deliver the glance",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap, eyes right" },
+        { "t": 0.4, "x": 27.3, "y": -2.1, "note": "Flashing the screen arm" },
+        { "t": 1.2, "x": 27.6, "y": -2.2, "note": "Loading the bubble posture" },
+        { "t": 2, "x": 27.4, "y": -2.4, "note": "Trigger committed — holding" },
+        { "t": 2.8, "x": 27.2, "y": -2, "note": "Transferring to the glance window" },
+        { "t": 3.3, "x": 27.5, "y": -1.7, "note": "Glance delivery up the seam" },
+        { "t": 3.8, "x": 27.7, "y": -1.5, "note": "Follow-through" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Flare right selling the perimeter screen picture before checking up",
+      "waypoints": [
+        { "t": 0, "x": 28.8, "y": -2.6, "note": "Offset alignment" },
+        { "t": 0.5, "x": 30, "y": -2.2, "note": "Flaring into the screen picture" },
+        { "t": 1.2, "x": 32, "y": -1.6, "note": "Selling the outlet to the flat" },
+        { "t": 2, "x": 33.5, "y": -1, "note": "Checking up at the line" },
+        { "t": 3, "x": 35, "y": 0.5, "note": "Leaking as a late outlet" },
+        { "t": 3.8, "x": 36, "y": 1.5, "note": "Outlet depth reached" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Backside shallow drag clearing weak-side coverage under the glance",
+      "waypoints": [
+        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0.8, "x": 6.5, "y": 1.5, "note": "Driving inside on the drag" },
+        { "t": 1.8, "x": 10.5, "y": 2.2, "note": "Shallow cross building" },
+        { "t": 2.8, "x": 15.5, "y": 2.8, "note": "Clearing the weak hook" },
+        { "t": 3.8, "x": 19.5, "y": 3.2, "note": "Drag complete across the formation" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Bubble stem that converts vertical — the go behind the flying trigger",
+      "waypoints": [
+        { "t": 0, "x": 40, "y": -1.2, "note": "Slot alignment selling bubble pre-snap" },
+        { "t": 0.5, "x": 41.8, "y": -0.6, "note": "Bubbling outside toward numbers" },
+        { "t": 1, "x": 43.2, "y": 0.2, "note": "Flat arc continuing — defense triggering" },
+        { "t": 1.5, "x": 43.6, "y": 0.6, "note": "Plant — converting vertical" },
+        { "t": 2.3, "x": 43.4, "y": 4.5, "note": "Climbing the seam behind the trigger" },
+        { "t": 3, "x": 43.2, "y": 9, "note": "Into the glance window over the linebacker" },
+        { "t": 3.8, "x": 43, "y": 12.5, "note": "Catch point at the sticks-plus" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Go route clearing the corner out of the glance window",
+      "waypoints": [
+        { "t": 0, "x": 48, "y": 0.7, "note": "Wide split right" },
+        { "t": 0.8, "x": 47.6, "y": 4, "note": "Instant vertical release" },
+        { "t": 2, "x": 47.2, "y": 11, "note": "Pushing the corner deep" },
+        { "t": 3.2, "x": 47, "y": 16.5, "note": "Corner carried out of the window" },
+        { "t": 3.8, "x": 46.8, "y": 19.5, "note": "Clearout maintained" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Middle seam occupying the hole defender between the hash and the glance seam",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.7, "note": "Y alignment" },
+        { "t": 0.8, "x": 32.6, "y": 4, "note": "Instant vertical push" },
+        { "t": 1.8, "x": 31.8, "y": 9, "note": "Threatening the middle hole" },
+        { "t": 2.8, "x": 31, "y": 12, "note": "Holding the hole defender" },
+        { "t": 3.8, "x": 30.6, "y": 12.5, "note": "Occupied through the throw" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Interior pass rush on the quick game",
+      "waypoints": [
+        { "t": 0, "x": 21.2, "y": 1, "note": "Wide alignment" },
+        { "t": 0.7, "x": 21, "y": 1.9, "note": "Charging the edge" },
+        { "t": 1.6, "x": 21.2, "y": 2.9, "note": "Handled by the tackle" },
+        { "t": 2.5, "x": 21.5, "y": 3.6, "note": "Rush stalling" },
+        { "t": 3.8, "x": 21.8, "y": 4.2, "note": "Too late" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "N",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Interior push on the center",
+      "waypoints": [
+        { "t": 0, "x": 25.6, "y": 0.9, "note": "Shade alignment" },
+        { "t": 0.6, "x": 25.8, "y": 1.8, "note": "Bull rush on the center" },
+        { "t": 1.5, "x": 26, "y": 2.8, "note": "Driven wide of the pocket" },
+        { "t": 2.4, "x": 26.2, "y": 3.6, "note": "Rush spent" },
+        { "t": 3.8, "x": 26.4, "y": 4.2, "note": "Out of the play" }
+      ]
+    },
+    {
+      "id": "T3",
+      "label": "T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Three-tech speed rush vs the guard",
+      "waypoints": [
+        { "t": 0, "x": 28.2, "y": 1, "note": "3-tech alignment" },
+        { "t": 0.6, "x": 28.4, "y": 1.8, "note": "Penetrating the B-gap" },
+        { "t": 1.5, "x": 28.6, "y": 2.8, "note": "Scooped away from the pocket" },
+        { "t": 2.4, "x": 28.8, "y": 3.6, "note": "Rush stalled" },
+        { "t": 3.8, "x": 29, "y": 4.2, "note": "Too late" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Contain rush vs the strong-side tackle",
+      "waypoints": [
+        { "t": 0, "x": 32.8, "y": 0.9, "note": "Strong end alignment" },
+        { "t": 0.7, "x": 33.2, "y": 1.7, "note": "Boxing the edge" },
+        { "t": 1.6, "x": 33.6, "y": 2.7, "note": "Riding the tackle's set" },
+        { "t": 2.5, "x": 33.8, "y": 3.6, "note": "Contain rush continuing" },
+        { "t": 3.8, "x": 34, "y": 4.2, "note": "Ball already out" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "W",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Match the backside shallow drag across the formation",
+      "waypoints": [
+        { "t": 0, "x": 21.5, "y": 4.5, "note": "Weak alignment" },
+        { "t": 0.7, "x": 20, "y": 4, "note": "Opening to the drag side" },
+        { "t": 1.6, "x": 18, "y": 3.8, "note": "Trailing the crosser" },
+        { "t": 2.6, "x": 17, "y": 3.6, "note": "Chasing the shallow route" },
+        { "t": 3.8, "x": 16.5, "y": 3.4, "note": "Locked underneath" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "M",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Hook drop closing on the TE seam — never touches the glance window",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 4.5, "note": "Middle alignment" },
+        { "t": 0.8, "x": 28, "y": 5, "note": "Opening to the strong hook" },
+        { "t": 1.8, "x": 29.8, "y": 7, "note": "Carrying the TE seam briefly" },
+        { "t": 2.8, "x": 30.6, "y": 9.5, "note": "Walling the TE in the hole" },
+        { "t": 3.8, "x": 31, "y": 11, "note": "Glance thrown over his zone" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "S",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong hook under the Z go — leaves the glance seam uncovered",
+      "waypoints": [
+        { "t": 0, "x": 34.5, "y": 4.4, "note": "Strong alignment" },
+        { "t": 0.8, "x": 34.2, "y": 6, "note": "Opening strong hook" },
+        { "t": 1.8, "x": 33.6, "y": 9, "note": "Eyes on the Z go" },
+        { "t": 2.8, "x": 33.2, "y": 11.5, "note": "Walling under the clearout" },
+        { "t": 3.8, "x": 33, "y": 12, "note": "Glance seam left open inside him" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man on X — travels with the shallow drag",
+      "waypoints": [
+        { "t": 0, "x": 5.8, "y": 7, "note": "Press alignment on X" },
+        { "t": 0.9, "x": 6.8, "y": 8, "note": "Stacked on the drag release" },
+        { "t": 1.8, "x": 9.5, "y": 7.5, "note": "Traveling with the crosser" },
+        { "t": 2.8, "x": 13, "y": 6.5, "note": "In phase underneath" },
+        { "t": 3.8, "x": 16, "y": 6, "note": "Carried away from the play" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man on Z — cleared deep by the go route",
+      "waypoints": [
+        { "t": 0, "x": 48.3, "y": 7, "note": "Press alignment on Z" },
+        { "t": 1, "x": 47.8, "y": 10, "note": "Retreating with Z vertical" },
+        { "t": 2.2, "x": 47.4, "y": 14, "note": "In phase deep" },
+        { "t": 3.2, "x": 47.2, "y": 16.8, "note": "Locked on the go" },
+        { "t": 3.8, "x": 47, "y": 19, "note": "Nowhere near the glance" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "N",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "The conflicted player: triggers on the bubble arc and loses the convert",
+      "waypoints": [
+        { "t": 0, "x": 39.5, "y": 4.5, "note": "Nickel aligned over the slot" },
+        { "t": 0.6, "x": 40.8, "y": 3.2, "note": "Eyes jump to the bubble arc" },
+        { "t": 1.2, "x": 42, "y": 1.8, "note": "Flying up to the screen" },
+        { "t": 1.8, "x": 43.2, "y": 0.8, "note": "Arrives — no screen; H plants behind him" },
+        { "t": 2.6, "x": 43.4, "y": 4, "note": "Turning and chasing from a dead stop" },
+        { "t": 3.4, "x": 43.3, "y": 8.5, "note": "Recovering far too late" },
+        { "t": 3.8, "x": 43.2, "y": 11, "note": "Trailing the glance catch point" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Post safety leaning to the bubble side — closes late on the seam",
+      "waypoints": [
+        { "t": 0, "x": 30.5, "y": 12.5, "note": "Post alignment" },
+        { "t": 1, "x": 31.5, "y": 13, "note": "Reading the screen picture" },
+        { "t": 2.2, "x": 34.5, "y": 13.5, "note": "Drifting toward the bubble side" },
+        { "t": 3.2, "x": 37.5, "y": 14, "note": "Breaking on the glance late" },
+        { "t": 3.8, "x": 38.5, "y": 14.2, "note": "Closing as the catch lands" }
+      ]
+    }
+  ]
+}

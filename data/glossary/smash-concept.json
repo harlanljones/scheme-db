@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "smash-concept",
+  "term": "Smash Concept",
+  "aliases": ["Smash concept", "Smash", "hitch-corner", "smash concept"],
+  "category": "Pass Concept",
+  "shortDef": "A two-receiver passing concept featuring a quick 5-yard hitch route on the outside and an 8-to-10-yard corner route from the inside slot receiver.",
+  "tacticalNote": "A premier Cover 2 beater that forces the boundary cornerback to choose between biting the hitch or retreating under the corner route."
+}

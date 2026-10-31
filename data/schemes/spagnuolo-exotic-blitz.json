@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "spagnuolo-exotic-blitz",
+  "name": "Steve Spagnuolo Exotic Blitz & Sim Pressures",
+  "coachId": "steve-spagnuolo",
+  "team": "Kansas City Chiefs",
+  "side": "defense",
+  "era": "modern-nfl",
+  "lineage": "reid-west-coast",
+  "description": "Steve Spagnuolo’s championship-winning defensive scheme: aggressive situational blitzing, boundary corner overloads, 4-man creeper simulated pressures dropping interior linemen, 7-man Cover 0 house heat, and disguised inverted split-safety coverages that break standard quarterback protection reads."
+}

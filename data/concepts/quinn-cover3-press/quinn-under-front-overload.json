@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "quinn-under-front-overload",
+  "schemeId": "quinn-cover3-press",
+  "order": 2,
+  "name": "4-3 Under Front Overload Collapse",
+  "personnel": "Base 4-3 Under",
+  "formation": "4-3 Under Shift vs 11P Gun Trips Right",
+  "situation": "2nd & 4, +48, aggressive front down",
+  "coverage": "Cover 3 Match (Under Front Overload)",
+  "frontName": "4-3 Under Overload Tilt",
+  "summary": {
+    "motive": "Create immediate organic pass-rush disruption using 4-3 Under front alignment angles to generate simultaneous weakside edge speed and strongside interior 3T penetration.",
+    "keyDefender": "3T (Penetrating Under DT) & LEO (Weakside Edge Rusher)",
+    "whyItWorks": "The Under front forces standard 5-man offensive lines into true 1-on-1 matchups across all interior gaps, allowing elite defensive linemen to win without blitzing.",
+    "failureMode": "A designed perimeter screen or quick toss crack away from the 3-technique into the weak B/C gap."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Under Front Alignment Tilt",
+      "text": "Quinn shifts the defensive front into an Under alignment: the 1-technique NT and 3-technique DT dictate one-on-one isolations across the offensive line, while LEO is poised in Wide-9.",
+      "focus": ["LEO", "3T", "NT", "SDE", "LT", "RG"]
+    },
+    {
+      "t": 0.8,
+      "title": "Double Penetration Strikes",
+      "text": "At the snap, 3-tech DT explodes past the right guard with a quick arm-over while LEO beats the left tackle with outside speed, collapsing both flanks of the pocket instantly.",
+      "focus": ["3T", "LEO", "RG", "LT"]
+    },
+    {
+      "t": 2,
+      "title": "Cover 3 Match Erases Trips Quick Concepts",
+      "text": "SAM steps in front of H’s quick out while Strong Safety carries Y’s vertical seam downfield, eliminating all quick release answers for the passer.",
+      "focus": ["SAM", "SS", "H", "Y", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Pincer-Movement Sack",
+      "text": "Trapped between the interior rush of the 3-technique and the perimeter bend of the LEO, the quarterback is engulfed for a massive 7-yard sack.",
+      "focus": ["LEO", "3T", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["quinn-safety-sky-fire-zone"],
+    "playsOff": ["quinn-cover3-press-bail"],
+    "tell": "1-tech and 3-tech shifted into Under front alignment with LEO stretched out in Wide-9 stance"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

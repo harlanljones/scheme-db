@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coryell-cross-country-drag",
+  "schemeId": "coryell-vertical",
+  "order": 3,
+  "name": "Cross-Country Drag Series",
+  "personnel": "11",
+  "formation": "One-Back Pro, Twins Right",
+  "situation": "2nd & 8, own 40, base down",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Flood the middle of the field with two staggered deep crossers so zone drops cannot cover both layers.",
+    "keyDefender": "Mike Linebacker (middle hook drop)",
+    "whyItWorks": "Vertical stems remove the corners and hooks first; the crossers then arrive offset in time and depth, so whichever defender takes layer one abandons layer two.",
+    "failureMode": "The Mike sits in the middle hole without chasing either crosser, or man coverage lets defenders trade the crossers cleanly at the mesh point."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Vertical Stems Set the Table",
+      "text": "The slot and flanker fire pure vertical releases, pinning the corners deep and forcing both hooks to turn their backs to the middle before any crossing route shows.",
+      "focus": ["Z", "H", "RCB", "WILL"]
+    },
+    {
+      "t": 1.9,
+      "title": "2. Layer One Departs",
+      "text": "At twenty yards the split end breaks off his stem into the deep cross-country lane. The free safety must now honor the deepest threat in his middle third.",
+      "focus": ["X", "FS", "LCB"]
+    },
+    {
+      "t": 2.8,
+      "title": "3. Layer Two Crosses Underneath",
+      "text": "Four yards deeper and four seconds later, the tight end drives his fourteen-yard crosser directly beneath the first. The Mike is caught between layers.",
+      "focus": ["Y", "MIKE", "SS"]
+    },
+    {
+      "t": 3.6,
+      "title": "4. The Distribution Throw",
+      "text": "With the free safety committed to the deep crosser and the Mike dragged to the boundary, the second crosser runs free across the middle for an easy completion.",
+      "focus": ["QB", "Y", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coryell-z-snap-move-screen"],
+    "playsOff": ["coryell-seam-post-double-stroke"],
+    "tell": "Both inside receivers release instantly vertical and only break after passing twelve yards — shallow drags never appear in this series."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

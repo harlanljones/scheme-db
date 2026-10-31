@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "kevin-oconnell",
+  "name": "Kevin O'Connell",
+  "role2026": "Head Coach, Minnesota Vikings",
+  "team": "Minnesota Vikings",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "sean-mcvay",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "A play-action passing machine: wide-zone and Duo fakes feeding bootleg flood rollouts, Dagger (seam/curl-flat) intermediate shots, and condensed formations that force light boxes into unblockable run-pass conflicts.",
+  "keyConcepts": ["Wide-Zone Boot Flood", "Dagger Seam/Curl-Flat", "Play-Action Rate Leadership", "Condensed Light-Box Attacks"],
+  "schemeIds": ["oconnell-boot-dagger"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Top-3 Play-Action Offense (Vikings)", "Super Bowl LVI OC (Rams)"]
+}

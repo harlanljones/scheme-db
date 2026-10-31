@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/formation.schema.json",
+  "id": "kubiak-12p-condensed-wing-vs-43",
+  "name": "12 Personnel Condensed Wing Right vs 4-3 Over Front (Cover 3 Single-High)",
+  "description": "Hallmark Klint Kubiak formation with tight WR splits and an H-Back (H) sniffer.",
+  "offense": {
+    "C": { "x": 26.67, "y": -0.4, "role": "ol" },
+    "LG": { "x": 25, "y": -0.4, "role": "ol" },
+    "LT": { "x": 23.3, "y": -0.4, "role": "ol" },
+    "RG": { "x": 28.3, "y": -0.4, "role": "ol" },
+    "RT": { "x": 30, "y": -0.4, "role": "ol" },
+    "TE": { "x": 31.8, "y": -0.5, "role": "te" },
+    "H": { "x": 29.5, "y": -2.2, "role": "te" },
+    "QB": { "x": 26.67, "y": -1.8, "role": "qb" },
+    "RB": { "x": 26.67, "y": -4.8, "role": "rb" },
+    "X": { "x": 13.5, "y": -0.5, "role": "wr" },
+    "Z": { "x": 39.5, "y": -0.8, "role": "wr" }
+  },
+  "defense": {
+    "WDE": { "x": 21.8, "y": 0.9, "role": "dl" },
+    "NT": { "x": 25.8, "y": 0.9, "role": "dl" },
+    "3T": { "x": 29.2, "y": 0.9, "role": "dl" },
+    "SDE": { "x": 33, "y": 0.9, "role": "dl" },
+    "WILL": { "x": 21.5, "y": 4.5, "role": "lb" },
+    "MIKE": { "x": 26, "y": 4.8, "role": "lb" },
+    "SAM": { "x": 31, "y": 4, "role": "lb" },
+    "LCB": { "x": 13.5, "y": 6.5, "role": "db" },
+    "RCB": { "x": 39.5, "y": 6.5, "role": "db" },
+    "SS": { "x": 33.5, "y": 8, "role": "db" },
+    "FS": { "x": 26.67, "y": 13.5, "role": "db" }
+  }
+}

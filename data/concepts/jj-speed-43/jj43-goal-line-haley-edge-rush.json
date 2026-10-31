@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "jj43-goal-line-haley-edge-rush",
+  "schemeId": "jj-speed-43",
+  "order": 4,
+  "name": "Goal-Line Haley Edge Rush",
+  "personnel": "Base 4-3 Speed (Over Shift Strong)",
+  "formation": "Goal Line Heavy, Twin TE Right vs Over-Shifted Speed Front",
+  "situation": "3rd & Goal from the 3, goal-to-go",
+  "coverage": "Man-Free behind the over-shifted front",
+  "frontName": "Over Shift 4-3 with Hand-Down Wide End",
+  "summary": {
+    "motive": "Commit the goal-line protection strong with an over shift and slant package, then let one isolated edge rusher decide a short-field possession.",
+    "keyDefender": "The hand-down wide end rushing off the right edge",
+    "whyItWorks": "Goal-line slide protection must honor four interior threats and the back must take the Mike dog, so the wide end is guaranteed a one-on-one he usually wins.",
+    "failureMode": "The tight end stays on the edge and doubles the wide end with the tackle, freeing the nose for a clean three-step throw to the flat."
+  },
+  "beats": [
+    {
+      "t": 0.4,
+      "title": "The Over Shift Loads the Strong Side",
+      "text": "Four defenders crowd the twin-tight-end strength before the snap, so the offense tilts its slide protection strong — exactly where Jimmy Johnson wants the arithmetic committed.",
+      "focus": ["RDE", "SDT", "Y", "RT"]
+    },
+    {
+      "t": 1.3,
+      "title": "The Interior Slants Pin Four Blockers",
+      "text": "The tackles stagger their slants into strong A and strong B while the weak end crashes off the snap, gluing Center, both guards, and the snapping tight end to blocks they cannot leave.",
+      "focus": ["LDE", "WDT", "SDT", "C"]
+    },
+    {
+      "t": 2.3,
+      "title": "Haley Wins the Solo Edge",
+      "text": "The tight end snapped down instead of helping outside, leaving the right tackle alone against Charles Haley’s hand-down burst; one stab and a speed-bull later the edge is gone.",
+      "focus": ["RDE", "RT", "Y"]
+    },
+    {
+      "t": 3.5,
+      "title": "Corner Crush at the Stripe",
+      "text": "The climbing quarterback steps away from the interior surge directly into Haley’s flatten, and the ball comes out at the goal line — penetration philosophy cashed into points.",
+      "focus": ["RDE", "QB", "RB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["jj43-penetration-slant-loop"],
+    "playsOff": ["jj43-miami-chase-rule-pursuit"],
+    "tell": "The strong tight end snaps down to the slanting tackle at the snap — a true goal-line run keeps him glued to the wide end instead."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

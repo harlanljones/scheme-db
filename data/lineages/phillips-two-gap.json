@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "phillips-two-gap",
+  "name": "Phillips Two-Gap 3-4 Tree",
+  "patriarch": "Bum Phillips",
+  "side": "defense",
+  "description": "The revival of the modern 3-4: zero-tech nose two-gapping to free athletic linebackers, stand-up edge rushers as designated weapons, and second-level flow speed built specifically to counter Pittsburgh-style power football.",
+  "rootNodes": [
+    {
+      "coachId": "bum-phillips",
+      "children": []
+    }
+  ]
+}

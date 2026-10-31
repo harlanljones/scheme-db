@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "oconnell-duo-pa-crosser",
+  "schemeId": "oconnell-boot-dagger",
+  "order": 4,
+  "name": "Duo PA Boundary Crosser",
+  "personnel": "11",
+  "formation": "11P Condensed Gun Right vs 4-3 Over",
+  "formationId": "oconnell-11p-condensed-gun-vs-43",
+  "situation": "3rd & 3, +45, off the established stretch",
+  "coverage": "Cover 3 Sky",
+  "frontName": "Over Front",
+  "summary": {
+    "motive": "Pair a downhill duo run fake with a free backside crosser to punish linebackers and cornerbacks who trigger on run action.",
+    "keyDefender": "SAM / backside apex",
+    "whyItWorks": "Every second-level defender steps downhill into a double team that physically occupies them, and the run-triggering cornerback vacates the crosser entirely; X crosses behind all of it with no defender assigned to him.",
+    "failureMode": "A quarterback-spiering safety who plays half-field eyes-through-the-QB can rob the crosser, and an apex who refuses the downhill bait keeps his zone integrity intact."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "Downhill Trigger",
+      "text": "The identical stretch look pulls every second-level defender one more step right — MIKE shoots B-gap and WILL fills hard, both with their eyes on backfield rather than the crossing pattern developing behind them.",
+      "focus": ["MIKE", "WILL", "SAM"]
+    },
+    {
+      "t": 1.5,
+      "title": "Double Team Forms, Crosser Releases Free",
+      "text": "TE folds inside and the RT/TE combo buries the SDE while X releases untouched behind the downhill linebackers — the LCB has already abandoned him for a run fit that doesn't exist.",
+      "focus": ["RT", "TE", "X", "LCB"]
+    },
+    {
+      "t": 2.6,
+      "title": "Crosser Behind the Second Level",
+      "text": "X levels across at four yards exactly where the linebackers used to be; SAM recognizes it last because he was fitting the edge of the double team, and his recovery angle is already lost.",
+      "focus": ["X", "SAM", "FS"]
+    },
+    {
+      "t": 3.4,
+      "title": "Window Throw Over Traffic",
+      "text": "The QB delivers from a clean launch point created by the center's seal — the ball arrives before FS can break and while H's stalk keeps the sky safety pinned away from the catch point.",
+      "focus": ["QB", "X", "H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["oconnell-wide-zone-stretch-base", "play-action-over"],
+    "tell": "The RB plants downhill instead of pressing the perimeter — OL blockers converge into a vertical double team rather than washing laterally."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

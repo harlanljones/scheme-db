@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "spagnuolo-split-safety-invert2",
+  "schemeId": "spagnuolo-exotic-blitz",
+  "order": 4,
+  "name": "Split-Safety Invert Cover 2 Trap",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Disguised Single-High vs 11P Gun 2x2",
+  "situation": "2nd & 7, +30, red zone / four-down territory",
+  "coverage": "Cover 2 Invert (Corners Deep Half, Safeties Underneath)",
+  "frontName": "Even 4-Man Under Front",
+  "summary": {
+    "motive": "Deceive the quarterback by disguising a two-deep shell as single-high, inverting cornerbacks into deep halves while safeties trigger downhill to trap intermediate seams and out routes.",
+    "keyDefender": "FS (Downhill Invert Safety) & LCB (Deep-Half Sinking Corner)",
+    "whyItWorks": "Quarterbacks read the cornerback bailing deep and assume Cover 3, missing the safety driving downhill from 12 yards depth directly into the passing lane.",
+    "failureMode": "A deep post route between the sinking cornerbacks that exploits the vacant middle of the field if the safety triggers too aggressively downhill."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Single-High Disguise Alignment",
+      "text": "Steve Spagnuolo shows a classic single-high Cover 1/3 look before the snap, encouraging the quarterback to work the weak slot out/seam route against presumed off coverage.",
+      "focus": ["FS", "LCB", "RCB", "H", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "The Invert Rotation",
+      "text": "At the snap, both cornerbacks bail aggressively to deep halves, while Free Safety (FS) screams downhill into the weak intermediate flat to spring the trap.",
+      "focus": ["LCB", "RCB", "FS"]
+    },
+    {
+      "t": 2,
+      "title": "The Trap Sprung (Interception)",
+      "text": "The QB throws to H expecting a soft Cover 3 flat void, but FS steps directly in front of the pass with downhill momentum for the interception.",
+      "focus": ["FS", "H", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Pick-Six Return Underway",
+      "text": "With both outside cornerbacks already capping the deep boundaries, FS takes the turnover down the sideline for a game-changing score.",
+      "focus": ["FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["spagnuolo-corndog-corner-blitz", "spagnuolo-cross-creeper-drop"],
+    "playsOff": [],
+    "tell": "Corners sprint backwards into deep halves at snap while both safeties drive downhill into underneath curl/flat zones"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

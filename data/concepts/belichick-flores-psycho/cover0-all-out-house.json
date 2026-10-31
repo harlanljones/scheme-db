@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "cover0-all-out-house",
+  "schemeId": "belichick-flores-psycho",
+  "order": 1,
+  "name": "Psycho 7-Man All-Out House Blitz (Cover 0)",
+  "personnel": "Psycho 7-Man Mug Front",
+  "formation": "7-Man Psycho Mug vs 11P Gun 3x1",
+  "formationId": "flores-psycho-mug-vs-11p",
+  "situation": "3rd & 7, +35, high-leverage money down",
+  "coverage": "Cover 0 All-Out Zero (Zero Safety Help)",
+  "frontName": "Psycho 7-Man All-Out House Blitz",
+  "summary": {
+    "motive": "Overwhelm 5-man and 6-man pass protections with an unblockable 7-man zero-safety house blitz, forcing an immediate sub-2.0s throw or violent sack.",
+    "keyDefender": "LURKER (Unblocked interior house rusher) & LCB (Zero-safety press lock)",
+    "whyItWorks": "Offenses with 5 or 6 protectors mathematically cannot account for 7 rushers firing simultaneously into all 6 gaps, guaranteeing clean penetration.",
+    "failureMode": "Quick back-shoulder boundary fade or missed tackle in open space with zero safety help over the top."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "7-Man Psycho Mug Pre-Snap Chaos",
+      "text": "Flores crowds the line of scrimmage with 7 defenders threatening every gap, creating maximum pre-snap confusion for the protection call.",
+      "focus": ["EDGE_L", "LB_A1", "LB_A2", "LB_B1", "LB_B2", "EDGE_R", "LURKER"]
+    },
+    {
+      "t": 0.7,
+      "title": "All 7 Rushers Fire Across All 6 Gaps",
+      "text": "At the snap, there is no bluff. All 7 rushers explode forward into every protection gap, creating a direct +1 numerical overload against the 6-man pass protection.",
+      "focus": ["LB_A1", "LB_A2", "LURKER", "EDGE_L", "EDGE_R"]
+    },
+    {
+      "t": 1.6,
+      "title": "Offensive Protection Overwhelmed",
+      "text": "With the offensive line locked in 1-on-1 matchups and the running back consumed, LURKER and LB_A2 shoot clean through the interior untouched.",
+      "focus": ["LURKER", "LB_A2", "C", "RB", "QB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Instant 1.8s Sack & Hit on QB",
+      "text": "All receivers are suffocated in zero-safety press man coverage with zero hot answers open, resulting in a violent drive-killing sack before the QB can finish his drop.",
+      "focus": ["LURKER", "LB_A2", "QB", "LCB", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["drop8-psycho-lurk", "cross-dog-fire-hot", "bracket-doubles-star"],
+    "playsOff": [],
+    "tell": "All 7 defenders at the line of scrimmage rush full-tilt, leaving cornerbacks in pure zero-safety press man."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

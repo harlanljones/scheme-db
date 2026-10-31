@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "payton-tunnel-shovel-package",
+  "schemeId": "payton-quick-game-screens",
+  "order": 3,
+  "name": "Tunnel Screen Shovel Package",
+  "personnel": "11",
+  "formation": "11P Gun Spread 2x2 vs Nickel",
+  "formationId": "payton-11p-gun-spread-vs-nickel",
+  "situation": "2nd & 4, +40",
+  "coverage": "Nickel Cover 1 Robber",
+  "frontName": "Nickel 4-2-5 Under Front",
+  "summary": {
+    "motive": "Build an interior blocking tunnel between the guards, shovel the ball to a full-speed crossing receiver at its mouth, and outrun a defense that triggered on run and false-screen looks.",
+    "keyDefender": "3-technique Defensive Tackle (rush lane vs shovel window)",
+    "whyItWorks": "The 3T must pick between maintaining his rush lane and closing the shovel window — RG’s hinge makes the choice impossible — while the RB swing fake and TE false screen remove both linebackers and the NICKEL from the exact geometry where the tunnel bursts.",
+    "failureMode": "A 3T who spurns the rush to sit on the window meets Z before the shovel lands, and a WILL who ignores the swing fake scrapes clean into the tunnel — penetration plus disciplined scraping kills the play at birth."
+  },
+  "beats": [
+    {
+      "t": 0.35,
+      "title": "1. Protection Sell, Interior Fire",
+      "text": "Both tackles take real pass sets while the center snaps down and the LG fires into the B-gap — the front reads pure drop-back. The tunnel opens before anyone sniffs screen.",
+      "focus": ["LG", "RG", "NT", "3T"]
+    },
+    {
+      "t": 1.05,
+      "title": "2. The Tunnel Forms",
+      "text": "H crosses behind the line and enters the guard-to-guard window first, becoming the lead blocker. The center has NT walled and RG is hinging 3T outside — the shovel window is fully built.",
+      "focus": ["H", "C", "RG", "3T"]
+    },
+    {
+      "t": 1.25,
+      "title": "3. Shovel Timing",
+      "text": "Z catches the underhand flip at the tunnel mouth at nearly full crossing speed. The 3T peeks inside exactly one beat too long — his rush lane and the closing window are the same real estate, and he cannot take both.",
+      "focus": ["QB", "Z", "3T", "MIKE"]
+    },
+    {
+      "t": 2.1,
+      "title": "4. Misdirection Pays Twice",
+      "text": "WILL bit on the RB swing fake and NICKEL drifted to the TE’s false flat screen — the two fastest triggers on the defense are both blocked or screened. The MIKE who triggered correctly runs into the LG’s climb.",
+      "focus": ["WILL", "NICKEL", "MIKE", "LG"]
+    },
+    {
+      "t": 3,
+      "title": "5. Break Through the Second Level",
+      "text": "Z bursts vertically behind the LG escort with only the FS holding a legitimate angle. The robber SS arrives into a wall instead of a tackle window — classic shovel geometry.",
+      "focus": ["Z", "FS", "SS", "LG"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["payton-jet-sweep-pa-post"],
+    "playsOff": ["power-shovel-option"],
+    "tell": "H crosses behind the line and disappears between the two guards while Z sprints under the formation — nobody runs a route beyond eight yards."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "drop8-psycho-lurk",
+  "schemeId": "belichick-flores-psycho",
+  "order": 2,
+  "name": "Psycho Bluff Drop-8 Lurk",
+  "personnel": "Psycho 7-Man Front / Drop-8",
+  "formation": "7-Man Psycho Mug vs 11P Gun 3x1",
+  "formationId": "flores-psycho-mug-vs-11p",
+  "situation": "3rd & 9, +45, known passing situation",
+  "coverage": "Drop-8 Robber / Lurk (3-Under, 2-Deep, Floating Lurker)",
+  "frontName": "Psycho Bluff 3-Man Sim Pressure",
+  "summary": {
+    "motive": "Exploit the quarterback’s conditioned fear of the Cover 0 house blitz by bluffing 7 rushers and bailing 4 into the exact hot throwing windows.",
+    "keyDefender": "LURKER (Floating middle robber/lurker)",
+    "whyItWorks": "Quarterbacks facing Flores’ Cover 0 are coached to release the ball in under 1.5 seconds to their primary hot read; dropping 8 turns that hot throw into an interception.",
+    "failureMode": "QB with exceptional pocket poise who holds the ball, scrambles against the 3-man rush, and finds a late-developing scramble drill opening."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "7-Man Blitz Illusion at Snap",
+      "text": "Flores presents the exact same 7-man mug look that destroyed the offense earlier. The quarterback immediately identifies Cover 0 and keys his primary hot slant.",
+      "focus": ["EDGE_L", "LB_A1", "LB_A2", "LB_B1", "LB_B2", "EDGE_R", "LURKER"]
+    },
+    {
+      "t": 0.7,
+      "title": "4 Rushers Bail into Short Passing Lanes",
+      "text": "At the snap, 4 mugged linebackers bail backward into intermediate zone cushions while only 3 rushers push the pocket, instantly flooding all underneath passing lanes.",
+      "focus": ["LB_A1", "LB_A2", "LB_B1", "LURKER", "EDGE_L", "EDGE_R"]
+    },
+    {
+      "t": 1.6,
+      "title": "QB Throws Hot Right into Lurker’s Chest",
+      "text": "Conditioned to throw in 1.5 seconds against Cover 0, the QB delivers a blind hot slant directly to where LURKER has dropped into the passing window.",
+      "focus": ["QB", "LURKER", "X"]
+    },
+    {
+      "t": 2.2,
+      "title": "Turnover Forced: Lurk Interception",
+      "text": "LURKER intercepts the pass in stride with 8 defenders blanketing every receiver, converting Flores’ psychological pressure into an explosive defensive turnover.",
+      "focus": ["LURKER", "LB_A1", "LCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["cross-dog-fire-hot"],
+    "playsOff": ["cover0-all-out-house"],
+    "tell": "Four mugged rushers bail backward at snap into intermediate zone cushions while 3 rushers push pocket."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

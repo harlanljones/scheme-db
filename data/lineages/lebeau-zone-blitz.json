@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "lebeau-zone-blitz",
+  "name": "LeBeau Zone Blitz Fire Zone Tree",
+  "patriarch": "Dick LeBeau → Dom Capers",
+  "side": "defense",
+  "description": "The invention that changed defensive math forever: send five while dropping a lineman behind a fire zone, breaking slide-protection assignments without sacrificing zone integrity. The direct ancestor of today’s creeper and sim-pressure worlds.",
+  "rootNodes": [
+    {
+      "coachId": "dick-lebeau",
+      "children": [
+        {
+          "coachId": "dom-capers",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

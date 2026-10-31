@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "meyer-speed-option-reverse",
+  "schemeId": "meyer-spread-option",
+  "order": 4,
+  "name": "Speed Option w/ Reverse Constraint",
+  "personnel": "11",
+  "formation": "Gun Spread Right Slot, TE Right",
+  "situation": "2nd & 5, +45, perimeter speed call",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Attack the perimeter with a speed option while a reverse-constraint motion freezes the backside from pursuing.",
+    "keyDefender": "Field Corner (force player)",
+    "whyItWorks": "The reverse motion makes backside pursuit hesitate at the snap, so the only defenders who can make the play are the ones the option geometry already beats.",
+    "failureMode": "The backside end plays the mesh instead of the motion, keeping his contain shoulder free to squeeze the arc from behind."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. Reverse Motion Constraint",
+      "text": "The slot sprints leftward selling a reverse receipt. The backside end and Will freeze on it while the actual option geometry develops to the right.",
+      "focus": ["H", "LE", "WILL"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. The Arc Against Frozen Pursuit",
+      "text": "The quarterback arcs off the fake exchange with half the defense still keyed left. The Mike is already a full recovery behind the play.",
+      "focus": ["QB", "F", "MIKE"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. Pitch on the Force Trigger",
+      "text": "The force corner triggers upfield hunting the quarterback — the exact cue that makes him pitchable — and the stalk removes his recovery angle.",
+      "focus": ["QB", "F", "RCB", "Z"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Perimeter Finish",
+      "text": "The pitch is taken at full speed around displaced force while the backside remains frozen by a reverse threat that never existed.",
+      "focus": ["F", "RCB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["meyer-snag-triangle-spacing"],
+    "tell": "Motion moves away from the run direction at full sprint — normal speed-option motions always move toward the play."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

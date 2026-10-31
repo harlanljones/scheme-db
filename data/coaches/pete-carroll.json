@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "pete-carroll",
+  "name": "Pete Carroll",
+  "role2026": "Super Bowl XLVIII Champion HC / Cover 3 Patriarch",
+  "team": "Seattle Seahawks (Patriarch)",
+  "lineage": "carroll-saleh-wide9",
+  "mentorId": "monte-kiffin",
+  "disciples": ["robert-saleh", "demeco-ryans", "dan-quinn", "gus-bradley"],
+  "side": "defense",
+  "philosophy": "Architect of the \"Legion of Boom\" single-high Cover 3 match system: physical press-bail corners, disciplined deep-third integrity, and relentless 4-man front pressure.",
+  "keyConcepts": ["Cover 3 Match (Rip/Liz)", "4-3 Under Front", "Wide-9 Speed Edge Rush", "Physical Alley Tackling"],
+  "schemeIds": ["saleh-43-wide9"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Super Bowl XLVIII Champion", "2x NCAA National Champion", "Pioneered Modern Single-High Cover 3 Era"]
+}

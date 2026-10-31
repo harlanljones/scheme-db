@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "johnson-counter-deception",
+  "name": "Ben Johnson's Counter Deception & Gadget Offense",
+  "coachId": "ben-johnson",
+  "team": "Detroit Lions",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "shanahan-kubiak",
+  "description": "A brilliantly layered offensive system built on counter run misdirection, pre-snap orbit motion, and seamless play-action packaging. Ben Johnson weaponizes dual-pull counters, hook-ladder mesh rubs, TE throwback leaks off counter PA, and orbit-driven RB screen convoys to create a complete deception ecosystem where every play looks identical from the defensive perspective until it's too late."
+}

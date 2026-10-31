@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "roman-pin-pull-leverage",
+  "schemeId": "roman-power-read",
+  "order": 3,
+  "name": "Pin & Pull Leverage Sweep",
+  "personnel": "22",
+  "formation": "22P Heavy Wing Right (Under Center)",
+  "formationId": "roman-22p-heavy-wing-vs-43",
+  "situation": "1st & 10, own 35, perimeter leverage attack",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Attack the perimeter's leverage math: pin every down defender with interior blockers, then outnumber the edge with tandem pulling guards, a fullback, and an arcing wing.",
+    "keyDefender": "Force Player (SAM) — caught between spilling the sweep and boxing the edge",
+    "whyItWorks": "The pins guarantee no interior defender can pursue, so the defense’s edge support must handle three separate blockers arriving in sequence; any hesitation between spill and box leaves the corner turned.",
+    "failureMode": "A defensive end who fights across the pin’s face, or a force player who commits instantly to one answer and lets the second puller be blocked by design rather than by reaction."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Pins Set the Trap",
+      "text": "Four interior blockers — tackle, center, right guard’s replacement, tight end — each drive their man down and inward. Not one defender on the line of scrimmage can pursue; the entire front is erased before a single puller moves.",
+      "focus": ["LT", "C", "RT", "TE"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. Tandem Pull Around the Wreckage",
+      "text": "Both guards pull in tandem through the vacuum: the left guard kicks, the right guard leads. This is leverage math — two pullers against a defense that has zero unblocked linemen to disrupt them.",
+      "focus": ["LG", "RG", "RB"]
+    },
+    {
+      "t": 2.1,
+      "title": "3. Force Player in Conflict",
+      "text": "The SAM must spill or box — and he hesitates between the two, which means he does neither well. The kicking guard catches him mid-decision and spills him out of the play entirely.",
+      "focus": ["SAM", "LG", "RCB"]
+    },
+    {
+      "t": 3,
+      "title": "4. Convoy Turns the Corner",
+      "text": "The fullback and arcing wing form a moving convoy with the safety and force corner already walled. The running back bends off the pin-blocked edge into green grass — Roman trading interior muscle for perimeter leverage.",
+      "focus": ["RB", "U", "F", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["roman-power-read-pull"],
+    "playsOff": ["stefanski-pin-pull-sweep"],
+    "tell": "Both guards pull together around four stationary pins while the QB hands and boots away — no mesh read, no decision, pure numbers sweep."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

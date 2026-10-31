@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "lebeau-fire-zone",
+  "name": "Dick LeBeau's Zone Blitz Fire Zone Family",
+  "coachId": "dick-lebeau",
+  "team": "Pittsburgh Steelers (1995-2014)",
+  "side": "defense",
+  "era": "past-nfl",
+  "lineage": "lebeau-zone-blitz",
+  "description": "The definitive zone-blitz system: true 5-man pressures where a defensive lineman or safety trades his rush lane for a rat/hook zone while replacement blitzers attack vacated gaps. Every call pairs 3-deep/3-under fire zone coverage behind disguised rotations from Cover 2 and single-high shells, forcing hot answers directly into dropped rushers."
+}

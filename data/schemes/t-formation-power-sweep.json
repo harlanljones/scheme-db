@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "t-formation-power-sweep",
+  "name": "Vince Lombardi's T-Formation Power Sweep",
+  "coachId": "vince-lombardi",
+  "team": "Green Bay Packers (1959-67)",
+  "side": "offense",
+  "era": "past-nfl",
+  "lineage": "power-gap-duo",
+  "description": "The most sequenced run system in football history. The double-pull sweep ran dozens of times a game, and every companion play — counter-boot, fullback blast, and flood bootleg — borrowed its exact picture so defenses could never trust what they saw."
+}

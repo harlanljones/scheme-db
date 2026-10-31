@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "t2-slb-edge-blitz",
+  "schemeId": "tampa-2",
+  "order": 2,
+  "name": "SLB Edge Blitz Variant",
+  "personnel": "Base 4-3",
+  "formation": "Tampa 2 Shell vs Gun 11 Personnel 2x1 Right",
+  "situation": "3rd & 5, +35, passing down",
+  "coverage": "Cover 2 Tub w/ Edge Pressure",
+  "frontName": "Under Front, SLB Edge Blitz (Sam/Will Exchange)",
+  "summary": {
+    "motive": "Add a fifth rusher off the edge without weakening the Tampa 2 structure by having the Will exchange directly into the Sam’s vacated hook-curl window.",
+    "keyDefender": "SAM off the edge — the tight end must take the inside LE, leaving the rim completely bare",
+    "whyItWorks": "The offense’s hot rule sends its quickest answer straight into the zone the blitzing defender just abandoned — where the Will is now waiting.",
+    "failureMode": "A max-protect shift or back releases the back to the edge, turning the free runner into a blocked hat and stranding the exchange."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Walk-Up Edge Threat",
+      "text": "SAM stands walked wide at 4 yards off the tight end with the four-man shell otherwise untouched — one extra body the protection math cannot hide.",
+      "focus": ["SAM", "LE", "Y", "LT"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. Free Rusher Off the Rim",
+      "text": "The LE pins the tight end low so SAM turns the corner unblocked while the interior trio keeps the pocket compressed from the middle.",
+      "focus": ["SAM", "LE", "UT", "NT"]
+    },
+    {
+      "t": 2,
+      "title": "3. The Zone Exchange Behind It",
+      "text": "WILL has slid across into SAM’s vacated hook-curl, eyes jumping instantly to the designed hot answer in that exact window.",
+      "focus": ["WILL", "Z", "QB"]
+    },
+    {
+      "t": 3,
+      "title": "4. Hot Answer Picked",
+      "text": "The panic throw into Sam’s old zone lands in the exchanging WILL’s hands — pressure and coverage trading places in one call.",
+      "focus": ["WILL", "QB", "Z", "SAM"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["t2-cloud-boundary"],
+    "playsOff": ["t2-base-vs-2x2"],
+    "tell": "The Sam linebacker stands upright at 4 yards staring at the tackle’s outside shoulder — the base Tampa 2 keeps him stacked over the tight end at 4.5."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

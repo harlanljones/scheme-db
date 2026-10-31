@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "tubby-raymond",
+  "name": "Tubby Raymond",
+  "role2026": "Delaware Wing-T Patriarch",
+  "team": "Delaware Fightin Blue Hens (1966-2001)",
+  "lineage": "delaware-wing-t",
+  "side": "offense",
+  "philosophy": "Guard-pull buck sweep series with counter-crisscross fakes, wingback motion, and ball-handling deception that made three plays look like nine.",
+  "keyConcepts": ["Buck Sweep Series", "Guard Pull Mechanics", "Counter Crisscross", "Wingback Motion Deception"],
+  "schemeIds": ["delaware-wing-t"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["300 Career Wins at Delaware", "2x Division I-AA National Champion"]
+}

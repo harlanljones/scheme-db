@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b34-stack-slant-shift",
+  "schemeId": "phillips-two-gap-34",
+  "order": 3,
+  "name": "Stack Slant Shift",
+  "personnel": "Base Two-Gap 3-4",
+  "formation": "Two-Gap Front vs Under-Center 21 Strong Right",
+  "situation": "3rd & 1 from the 38, short-yardage run-down",
+  "coverage": "Single-High, Soft Corners vs Run",
+  "frontName": "Two-Gap 3-4, Interior Slant Shift",
+  "summary": {
+    "motive": "Disguise instant penetration inside a patient two-gap stance, then send all three linemen across blockers’ faces at once so every combo chases while linebackers replace behind.",
+    "keyDefender": "NG shooting across center into strong A — he lands exactly in the lead-blocker geometry of any strong-side run",
+    "whyItWorks": "Simultaneous inward movement turns every committed down block into a chase, and replacing linebackers guarantee the abandoned gaps stay occupied.",
+    "failureMode": "Reach blocks hooking the slanting ends outward, springing the exact gaps the slant walked away from."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Patient Stack Bait",
+      "text": "The interior trio sits squared in two-gap stances inviting double teams — the offense commits its combos against defenders who are about to leave.",
+      "focus": ["NG", "ELE", "ERE"]
+    },
+    {
+      "t": 0.7,
+      "title": "2. Three Bodies Cross Inward",
+      "text": "Nose and both ends explode across their blockers’ faces simultaneously, collapsing into the A and B gaps before any combo can climb or adjust.",
+      "focus": ["NG", "ELE", "ERE"]
+    },
+    {
+      "t": 2,
+      "title": "3. Linebackers Replace Behind the Slant",
+      "text": "Both inside backers fill the gaps the slant abandoned — no vacated space ever exists even though three linemen just moved.",
+      "focus": ["LILB", "RILB"]
+    },
+    {
+      "t": 3,
+      "title": "4. Head-On in Strong B",
+      "text": "The lead blocker arrives to find the slanting nose already in his aiming point while the squeezing edge funnels the carrier into the pile.",
+      "focus": ["NG", "ROLB", "FB", "TB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b34-base-two-gap-fits"],
+    "playsOff": ["b34-dual-edge-interior-anchor"],
+    "tell": "The interior trio tilts and staggers its steps during the cadence before exploding inward — base two-gap fits sit flat-footed reading blocks."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

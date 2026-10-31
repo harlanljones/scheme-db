@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "tom-landry",
+  "name": "Tom Landry",
+  "role2026": "Flex Defense Inventor",
+  "team": "Dallas Cowboys (1960-1988)",
+  "lineage": "landry-dallas",
+  "side": "defense",
+  "philosophy": "Invented the 4-3 and perfected the Flex: staggered one-yard-off tackle alignments, patient gap occupation instead of pursuit, and pre-snap strength-shift linebackers designed to strangle sweeps.",
+  "keyConcepts": [
+    "Flexed Tackle Alignments",
+    "Gap-Zone Run Fits",
+    "Three-Defender Point-of-Attack Convergence",
+    "Strength Shift Linebackers"
+  ],
+  "schemeIds": ["landry-flex"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["2x Super Bowl Champion HC", "20 Consecutive Winning Seasons", "Inventor of the 4-3 Defense"]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "tite-front",
+  "term": "Tite Front",
+  "aliases": ["Tite front", "Tite", "Mint Front", "Mint front", "3-4 Tite", "tite front"],
+  "category": "Defensive Front",
+  "shortDef": "A three-down interior front featuring a head-up nose tackle (0-tech) flanked by two interior 4i-technique defensive ends positioned on the inside shoulders of the offensive tackles.",
+  "tacticalNote": "Clogs both offensive B-gaps and spills inside zone runs laterally toward waiting alley linebackers without requiring safety run support."
+}

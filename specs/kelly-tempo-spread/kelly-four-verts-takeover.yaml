@@ -1,0 +1,24 @@
+$schema: ../../data/schema/spec.schema.json
+conceptId: kelly-four-verts-takeover
+duration: 3.8
+formation: kelly-10p-tempo-spread-vs-nickel
+offense:
+  OL: { block: pass-set }
+  QB: { drop: gun }
+  RB: { block: check-release, side: left }
+  X: { route: go }
+  H: { route: seam }
+  Y: { route: seam }
+  Z: { route: go }
+defense:
+  WDE: { rush: edge, depth: 2.8 }
+  NT: { rush: interior, depth: 2.6 }
+  3T: { rush: interior, depth: 2.6 }
+  SDE: { rush: edge, depth: 2.8 }
+  WILL: { zone: hook-curl, side: left }
+  MIKE: { zone: hole }
+  NICKEL: { man: H }
+  LCB: { zone: quarter-outside, side: left }
+  RCB: { zone: quarter-outside, side: right }
+  SS: { zone: quarter-inside, side: right }
+  FS: { zone: quarter-inside, side: left }

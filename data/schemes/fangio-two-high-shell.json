@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "fangio-two-high-shell",
+  "name": "Vic Fangio's Two-High Shell & Quarters Matching",
+  "coachId": "vic-fangio",
+  "team": "Philadelphia Eagles / Denver Broncos",
+  "side": "defense",
+  "era": "modern-nfl",
+  "lineage": "fangio-two-high",
+  "description": "The defensive philosophy that reshaped modern NFL game-planning. Built on a static, impenetrable two-high safety shell pre-snap that disguises split-field Cover 6 (Quarter-Quarter-Half), Palms Match Quarters (2-Read), Drop-8 simulated creeper pressures, and lethal boundary corner traps. Paired with light-box 5-1-5 Penny fronts that suffocate explosive passing concepts while matching underneath crossing routes."
+}

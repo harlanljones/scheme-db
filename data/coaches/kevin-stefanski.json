@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "kevin-stefanski",
+  "name": "Kevin Stefanski",
+  "role2026": "Head Coach, Atlanta Falcons",
+  "team": "Atlanta Falcons",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "gary-kubiak",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "Heavy 12/13 multi-tight end sets, under-center bootlegs, pin-and-pull gap schemes, and intermediate boundary comebacks.",
+  "keyConcepts": ["12/13 Personnel Heavy", "Bootleg Flood", "Pin & Pull", "Play-Action Seam Shot"],
+  "schemeIds": ["stefanski-multi-te-gap"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2x NFL Coach of the Year (2020, 2023)", "2026 Falcons HC Hiring"]
+}

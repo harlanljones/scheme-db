@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "t2-roll-cover3-trips",
+  "schemeId": "tampa-2",
+  "order": 3,
+  "name": "Cover 2 Roll to Cover 3 Sky vs Trips",
+  "personnel": "Base 4-3",
+  "formation": "Tampa Shell vs Gun Trips Right (3x1)",
+  "situation": "2nd & 8, +30, tendency-down vs trips",
+  "coverage": "Cover 2 Roll to Cover 3 Sky",
+  "frontName": "Under Front, Weak-Side Rotation",
+  "summary": {
+    "motive": "Answer a trips overload by rotating out of the baited two-high shell into three-deep coverage, trading one deep half for a middle-third eraser without weakening the flood side.",
+    "keyDefender": "FS spinning from his weak half to the deep middle third — the rotation that turns a flood beater into a contested throw",
+    "whyItWorks": "The offense keys the frozen two-safety picture and attacks the strength half, but the sky rotation has already replaced it with a sinking corner over the corner route.",
+    "failureMode": "Late motion that flips the strength call after the rotation, stranding the rolling safety on the wrong side of the new flood."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Two-High Trips Shell",
+      "text": "Tampa 2 halves are shown to a trips formation — the exact picture offenses tag as a flood beater, with both safeties frozen deep.",
+      "focus": ["SS", "FS", "SAM", "MIKE"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. Sky Rotation Away From the Weak Side",
+      "text": "At the snap the free safety spins to the deep middle third while the strong safety sprints down to the flat — corners sink over the top into thirds.",
+      "focus": ["FS", "SS", "RCB", "LCB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Flood Into Rotated Threes",
+      "text": "The trips flood climbs exactly on schedule, but the corner route now rises into a deep third that did not exist before the snap, with MIKE closing the intermediate wall.",
+      "focus": ["Z", "RCB", "MIKE", "SAM"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Broken Up Over the Top",
+      "text": "The sinking RCB arrives with the rotating FS bracketing behind — the flood finisher is swatted loose at its highest point.",
+      "focus": ["RCB", "FS", "Z", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["t2-base-vs-2x2"],
+    "playsOff": ["t2-cloud-boundary"],
+    "tell": "The free safety starts drifting toward the hash mid-cadence while the strong safety tilts flat-side — base Tampa 2 keeps both safeties perfectly still until the snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "minter-cover1-robber-lurk",
+  "schemeId": "minter-amoeba-creeper",
+  "order": 3,
+  "name": "Amoeba Cover 1 Robber Lurk",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Amoeba Sugar Front vs 11P Gun 2x2 Mesh",
+  "situation": "3rd & 5, midfield (+48), critical conversion down",
+  "coverage": "Cover 1 Lurk (Man-Free with Underneath Hole Robber)",
+  "frontName": "Amoeba Sugar Double-Mug Presentation",
+  "summary": {
+    "motive": "Show all-out blitz pre-snap to force quick man-beating throws (Mesh/Slants), then drop a linebacker into the low hole to bait and intercept the quarterback.",
+    "keyDefender": "MIKE (Lurk / Rat-in-the-hole robber linebacker)",
+    "whyItWorks": "Offenses rely on crossing routes to beat man coverage, but the lurking linebacker operates without an assigned man, reading the QB’s eyes to rob the crosser.",
+    "failureMode": "Back-shoulder vertical shot plays down the sideline or deep double-moves that isolate the perimeter corners without safety help."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Amoeba Sugar Blitz Look Pre-Snap",
+      "text": "Jesse Minter lines up both inside linebackers sugar-coating the A-gaps while safeties walk down, projecting an aggressive Cover 0 all-out house blitz.",
+      "focus": ["WILL", "MIKE", "NT", "3T", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "Post-Snap Disguise: Cover 1 Lurk Rotation",
+      "text": "At the snap, Minter sends a 5-man pressure with WILL blitzing the A-gap, while MIKE bails 5 yards back to become an unassigned \"Lurker / Rat in the Hole\".",
+      "focus": ["WILL", "MIKE", "FS"]
+    },
+    {
+      "t": 1.8,
+      "title": "Mesh Crosser Trapped in Lurk Window",
+      "text": "The QB throws his trusted man-beater Mesh shallow crosser to H, believing he has leverage against trail-man coverage, but MIKE lurks right in the passing lane.",
+      "focus": ["MIKE", "H", "QB"]
+    },
+    {
+      "t": 2.8,
+      "title": "Turnover Generated: Interception in the Hole",
+      "text": "MIKE steps in front of the shallow crosser for a game-changing interception, punishing the quarterback for reading the pre-snap blitz look.",
+      "focus": ["MIKE", "H", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["minter-double-mug-peel"],
+    "playsOff": ["minter-slot-blitz-creeper"],
+    "tell": "Pre-snap sugar front rotates into Cover 1 Man-Free with MIKE squatting as a middle-hole robber on crossers"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

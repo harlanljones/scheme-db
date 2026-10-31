@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "walsh-sprint-right-option",
+  "schemeId": "walsh-classic-wco",
+  "order": 2,
+  "name": "Sprint Right Option",
+  "personnel": "21",
+  "formation": "Pro Set, Strong Right",
+  "situation": "3rd & 3, own 30, must convert",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Use the sprint to displace the entire defense horizontally so the primary corner route or the naked flat checkdown comes open.",
+    "keyDefender": "Sam Linebacker (strong-flat defender)",
+    "whyItWorks": "The corner route removes the deep help and the sprint pulls every linebacker away from the line of scrimmage, leaving the flat completely undefended.",
+    "failureMode": "The flat defender stays home instead of chasing the sprint, closing the checkdown window before the quarterback can set his feet."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Sprint Begins",
+      "text": "The quarterback takes the snap under center and drives full speed for the right sideline while the line slides with him. The defense's pass rush lanes are instantly misaligned.",
+      "focus": ["QB", "RT", "RE"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Corner Route Climbs",
+      "text": "Z wins his release and sells pure vertical before snapping to the corner at twelve. The bail corner must turn and run, and the sky safety rotates over the top.",
+      "focus": ["Z", "RCB", "SS"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. The Bracket Forms",
+      "text": "The corner route is bracketed by the corner and safety — exactly as designed. Both defenders are now staring at Z, and the sprint has dragged every linebacker sideways.",
+      "focus": ["Z", "SS", "MIKE"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. The Checkdown Escape",
+      "text": "With Z consuming two defenders and the linebackers chasing the sprint, the fullback is alone in the flat. The sprinting quarterback sets and delivers the easy completion.",
+      "focus": ["QB", "FB", "SAM"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["walsh-curl-flat-flood"],
+    "playsOff": ["walsh-slant-flat-combo"],
+    "tell": "The quarterback leaves the launch point horizontally within half a second — no drop step ever occurs."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

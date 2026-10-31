@@ -1,0 +1,74 @@
+name: Release data
+
+# Pushing a tag like data-v0.1.0 builds the dataset downloads and attaches them to a GitHub release.
+# Run it by hand (Actions tab, "Release data") to build the same files as a downloadable workflow artifact without releasing.
+on:
+  push:
+    tags: ['data-v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Validate data records
+        run: bun run data:validate
+
+      - name: Name the version
+        id: version
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            echo "name=${GITHUB_REF_NAME#data-}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=dev-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build the downloads
+        run: bun run data:release --version "${{ steps.version.outputs.name }}"
+
+      - name: Package the CSV tables
+        working-directory: dist/release
+        run: zip -r "scheme-db-${{ steps.version.outputs.name }}-csv.zip" csv LICENSE.md
+
+      - name: Upload as a workflow artifact
+        if: github.ref_type != 'tag'
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheme-db-${{ steps.version.outputs.name }}
+          path: |
+            dist/release/scheme-db.json
+            dist/release/scheme-db.sqlite
+            dist/release/*.zip
+            dist/release/SHA256SUMS
+            dist/release/LICENSE.md
+
+      - name: Attach to the GitHub release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd dist/release
+          mv scheme-db.json "scheme-db-${{ steps.version.outputs.name }}.json"
+          mv scheme-db.sqlite "scheme-db-${{ steps.version.outputs.name }}.sqlite"
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "Scheme DB data ${{ steps.version.outputs.name }}" \
+            --notes "Dataset downloads (CC BY 4.0): one JSON file, a zip of CSV tables, and a SQLite database. All 180 plays are labeled illustrative. Checksums are in SHA256SUMS." \
+            "scheme-db-${{ steps.version.outputs.name }}.json" \
+            "scheme-db-${{ steps.version.outputs.name }}.sqlite" \
+            "scheme-db-${{ steps.version.outputs.name }}-csv.zip" \
+            SHA256SUMS LICENSE.md

@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'release/**']
   pull_request:
-    branches: [main]
+    branches: [main, 'release/**']
 
 jobs:
   test-and-build:
@@ -21,6 +21,18 @@ jobs:
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
+
+      - name: Validate data records
+        run: bun run data:validate
+
+      - name: Check data formatting
+        run: bun run data:format --check
+
+      - name: Compile play specs
+        run: bun run specs:check
+
+      - name: Build data release (JSON, CSV, SQLite)
+        run: bun run data:release --version ci
 
       - name: Run Vitest Validation Suite
         run: bun run test

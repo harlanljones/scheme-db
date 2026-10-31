@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "cover-3-press",
+  "term": "Cover 3 Press",
+  "aliases": ["Cover 3 press", "Cover 3 Sky", "Cover 3 Buzz", "Single-High Press", "Cover 3", "cover 3"],
+  "category": "Coverage & Shell",
+  "shortDef": "A single-high safety structure dividing the deep field into three equal thirds, paired with physical press technique by outside cornerbacks at the line of scrimmage.",
+  "tacticalNote": "Crowds the 8-man box against the run while jamming outside receivers to eliminate rhythm passing in the quick game."
+}

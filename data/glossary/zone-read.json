@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "zone-read",
+  "term": "Zone Read",
+  "aliases": ["Zone read", "read option", "mesh read", "zone read"],
+  "category": "Read & Assignment",
+  "shortDef": "A foundational option mechanic where the offensive line leaves the backside defensive end unblocked, and the quarterback reads their hip commitment at the mesh point.",
+  "tacticalNote": "If the end crashes down on the running back, the QB pulls and keeps around the edge; if the end widens or hesitates, the QB gives to the running back."
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "bear-double-a-mug",
+  "schemeId": "belichick-okie-bear",
+  "order": 2,
+  "name": "Third-and-1 Double-A Mug Blitz",
+  "personnel": "Okie/Bear Package (5 DL, 2 LB, 4 DB)",
+  "formation": "Bear Front vs Gun 11 Personnel 2x2",
+  "situation": "3rd & 1 from midfield, must-punt distance",
+  "coverage": "Man-Free, Single-High Post Safety",
+  "frontName": "Bear Front Double-A Mug (0-Nose, Double 4is)",
+  "summary": {
+    "motive": "Guarantee zero yards on third-and-short by sending both mugged backers through the only gaps the offense must block, converting a run-stuffing front into instant pass overload.",
+    "keyDefender": "WILL over the strong A-gap — the guard assigned to him cannot get square before the knife arrives",
+    "whyItWorks": "The Bear wall occupies all five blockers, so each mugged backer meets only one scanning back, and island press delays every perimeter answer past the pressure clock.",
+    "failureMode": "An instant RPO or slant thrown on rhythm before either mugged backer clears the guards’ hands."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Mug Picture",
+      "text": "MIKE and WILL stand upright directly over both A-gaps at 1.2 yards with the safety crowding the box and only the free safety deep. Six protectors must account for seven immediate threats.",
+      "focus": ["MIKE", "WILL", "SS", "FS"]
+    },
+    {
+      "t": 0.9,
+      "title": "2. Same-Gap Knives Behind the Wall",
+      "text": "Both backers cross the guards’ inside shoulders simultaneously while the zero-nose drives the center and both 4is angle into the B gaps behind them.",
+      "focus": ["MIKE", "WILL", "NOSE", "4iL", "4iR"]
+    },
+    {
+      "t": 1.9,
+      "title": "3. The Hot Window Never Opens",
+      "text": "The designed hot slant to H demands the ball out in 1.5 seconds, but the scanning back took the wrong knife and WILL has already cleared the guard’s hands.",
+      "focus": ["QB", "H", "RB", "WILL"]
+    },
+    {
+      "t": 3,
+      "title": "4. Swallowed on Third-and-One",
+      "text": "The free-runner hit from strong A buries the QB behind the line of scrimmage and forces the long field-goal unit onto the field.",
+      "focus": ["WILL", "QB", "NOSE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["bear-slant-strong"],
+    "playsOff": ["bear-goal-line-heavy"],
+    "tell": "Both linebackers stand upright directly over the guards staring at the QB at 1.2 yards — the goal-line Bear keeps its backers at 3.4 yards in downhill run fits."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

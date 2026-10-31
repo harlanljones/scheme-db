@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "twoman-goal-line-double-robber",
+  "schemeId": "cover2-man-under",
+  "order": 4,
+  "name": "Goal-Line Double Robber",
+  "personnel": "Nickel 2-Man Package (4 DL, 3 LB, 4 DB)",
+  "formation": "Double Robber Shell vs Goal-Line Heavy I-Form",
+  "situation": "3rd & Goal from the 4, red zone",
+  "coverage": "Cover 2 Man Rob (Safeties at 8, Corners Over Top)",
+  "frontName": "Under Front, Four-Man Rush",
+  "summary": {
+    "motive": "Protect the goal line without pressing by aligning corners over the top and converting both safeties into eye-keyed robbers who attack every throwing window in front.",
+    "keyDefender": "FS as the weak-side robber — he sits on the exact lane the goal-line slant must occupy",
+    "whyItWorks": "Run action freezes the linebackers but changes nothing for chest-keyed robbers, and over-the-top corners remove any fear of a shot behind the robbery.",
+    "failureMode": "A true max-protect flood with four verticals stretching the over-the-top corners before the robbers can converge."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Over-the-Top Shell",
+      "text": "Both corners align 9 yards deep directly over their receivers while both safeties sit at 8 as robbers — nothing is pressed, everything is watched.",
+      "focus": ["LCB", "RCB", "SS", "FS"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Fake Moves Linebackers, Not Robbers",
+      "text": "The dive action pulls both linebackers downhill for a beat, but the safeties key the QB’s chest and eyes instead of the backfield.",
+      "focus": ["MIKE", "WILL", "FS", "SS"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Double Robbery Reads",
+      "text": "On the shoulder turn both safeties break simultaneously — one to the seam window, one to the slant lane — while the over-the-top corners erase anything deeper.",
+      "focus": ["SS", "FS", "X", "Y"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Slant Picked at Its Break",
+      "text": "The goal-line slant lands directly in the weak robber’s hands with zero risk taken behind it — the double-robb structure cashes its specialty call.",
+      "focus": ["FS", "QB", "X"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["twoman-red-zone-compressed-twins"],
+    "playsOff": ["twoman-fade-beater-demo"],
+    "tell": "Corners line up 9 yards deep directly over their receivers instead of pressed at the line — base 2-man never surrenders that much cushion."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

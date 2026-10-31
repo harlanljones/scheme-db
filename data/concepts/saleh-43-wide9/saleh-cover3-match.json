@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "saleh-cover3-match",
+  "schemeId": "saleh-43-wide9",
+  "order": 1,
+  "name": "Cover 3 Match (Rip/Liz)",
+  "personnel": "Base 4-3",
+  "formation": "4-3 Over Wide-9 vs 11P Gun 3x1",
+  "formationId": "saleh-43-over-wide9-vs-11p",
+  "situation": "1st & 10, +45, early down passing look",
+  "coverage": "Cover 3 Match (Rip/Liz)",
+  "frontName": "4-3 Over Wide-9 Penetrating Front",
+  "summary": {
+    "motive": "Generate organic 4-man pass rush via Wide-9 speed angles while suffocating passing concepts with pattern-matching Cover 3 Rip/Liz rules.",
+    "keyDefender": "WDE (Wide-9 speed rusher) & SAM (Apex match defender on slot seam)",
+    "whyItWorks": "Wide-9 ends force offensive tackles onto an island without chip help, while the match rules turn zone coverage into tight man coverage on all vertical routes.",
+    "failureMode": "Quick four-vertical flood concepts that stretch the single-high FS, or power gap runs attacking the widened defensive line B-gaps."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Wide-9 Stance & Single-High Shell",
+      "text": "Robert Saleh aligns both defensive ends (WDE & SDE) in extreme Wide-9 alignments outside offensive tackles to create unmatched speed-rush angles, while safety shell rolls into single-high Rip/Liz match.",
+      "focus": ["WDE", "SDE", "FS", "SS"]
+    },
+    {
+      "t": 1.2,
+      "title": "Pattern Match Triggers & Edge Surge",
+      "text": "As the ball is snapped, SAM matches slot H vertically, SS buzzes down to jump the TE out route, and WDE bends past the LT on an unstoppable 9-technique arc.",
+      "focus": ["WDE", "SAM", "SS", "LT"]
+    },
+    {
+      "t": 2.5,
+      "title": "Windows Bracketed & Pocket Clamped",
+      "text": "MIKE walls off the crossing dig from Z, FS caps the slot seam, and WDE hits full speed bending around the edge, giving the QB nowhere to deliver the football.",
+      "focus": ["MIKE", "FS", "WDE", "QB"]
+    },
+    {
+      "t": 3.8,
+      "title": "4-Man Pressure Finishes",
+      "text": "Without committing an extra blitzer, the 4-man Wide-9 front generates instant pressure while all 7 coverage defenders clamp their pattern-matched receivers.",
+      "focus": ["WDE", "3T", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["saleh-cover6-bracket", "saleh-cross-dog-fire3"],
+    "playsOff": [],
+    "tell": "Base single-high alignment with SS rolling into the 8-man box/overhang at snap"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

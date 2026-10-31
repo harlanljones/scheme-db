@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "naked-bootleg",
+  "schemeId": "shanahan-wide-zone",
+  "order": 3,
+  "name": "Wide Zone Naked Bootleg",
+  "personnel": "21",
+  "formation": "Offset I, Wing Right",
+  "formationId": "shanahan-21p-offset-i-vs-over-c3",
+  "situation": "1st & 10, +30, red zone boundary",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Punish aggressive backside defensive ends and pursuit defenders who crash down the line against wide zone runs.",
+    "keyDefender": "Backside Defensive End (Contain) & Strong Safety",
+    "whyItWorks": "Wide zone forces the entire defense to sprint laterally in one direction; pulling the ball and booting opposite creates a numbers advantage with no pass rushers in front of the QB.",
+    "failureMode": "A disciplined backside DE staying home in contain and hitting the quarterback as soon as he turns around on the bootleg."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. Full Wide Zone Flow Left",
+      "text": "Offensive line and running back sprint on outside zone left tracks. The defense shifts its entire momentum to the left sideline.",
+      "focus": ["LT", "LG", "C", "RB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Backside DE Crashes Inside",
+      "text": "Strongside DE (backside contain) bites inside on the run mesh, leaving the entire right flank completely unprotected.",
+      "focus": ["SDE", "QB", "TE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. QB Naked Rollout & Triangle Flood",
+      "text": "The QB pulls the ball and sprints into open space. TE slips into the flat (short), X crosses on a drag (intermediate), and Z clears the corner (deep).",
+      "focus": ["QB", "TE", "X", "Z"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Pitch-and-Catch in the Flat",
+      "text": "With the defense completely out of position on the opposite hash, QB delivers an easy completion to the TE for a 15+ yard walk-in gain.",
+      "focus": ["QB", "TE", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["jet-motion-oz"],
+    "playsOff": ["outside-zone", "play-action-over"],
+    "tell": "QB pulls the ball out of the mesh and rolls right away from the offensive line flow, while TE releases into the backside flat."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "spagnuolo-corndog-corner-blitz",
+  "schemeId": "spagnuolo-exotic-blitz",
+  "order": 1,
+  "name": "Boundary Corner Blitz (Spags Heat)",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Nickel Over vs 11P Gun Trips Right",
+  "situation": "3rd & 6, +38, high-leverage pressure down",
+  "coverage": "Cover 2 Invert Roll (Disguised 2-High)",
+  "frontName": "Over Front Slant-Strong",
+  "summary": {
+    "motive": "Manufacture an unblockable blindside corner blitz by manipulating offensive protection with an interior DE stunt while rotating the free safety into the vacated flat.",
+    "keyDefender": "LCB (Boundary Corner Blitz) & FS (Flat Replacement Safety)",
+    "whyItWorks": "The offensive tackle is forced to honor the interior B-gap spike by WDE, leaving no eligible blocker to pick up the blitzing boundary cornerback.",
+    "failureMode": "A quick pre-snap smoke screen or boundary tunnel screen that hits before the free safety can rotate down from 12 yards depth."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Two-High Disguise & Press Bluff",
+      "text": "Steve Spagnuolo presents a standard 2-high shell with boundary corner LCB pressed tight on isolated receiver X, enticing the offense to set half-slide protection right toward the Trips overload.",
+      "focus": ["LCB", "FS", "SS", "WDE", "LT"]
+    },
+    {
+      "t": 0.6,
+      "title": "The Crash & Corner Launch",
+      "text": "At the snap, WDE aggressively slants inside into the B-gap, pulling the LT down with him. LCB sprints off the perimeter with a free runway directly to the quarterback’s blindside.",
+      "focus": ["LCB", "WDE", "LT", "QB"]
+    },
+    {
+      "t": 1.8,
+      "title": "Safety Downhill Rotation Erases Hot Read",
+      "text": "The QB looks to punish the vacated corner with a quick hitch/out to X, but Free Safety (FS) is already screaming downhill into the flat window to erase the throw.",
+      "focus": ["FS", "X", "QB"]
+    },
+    {
+      "t": 2.4,
+      "title": "Blindside Strip-Sack Arrival",
+      "text": "With the hot window replaced and the blindside tackle pinned inside by the defensive end stunt, LCB crushes the QB before the third step is complete.",
+      "focus": ["LCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["spagnuolo-cover0-max-heat"],
+    "playsOff": ["spagnuolo-split-safety-invert2"],
+    "tell": "LCB shows press alignment with no safety help over the top, then sprints downhill at snap while FS rotates down"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

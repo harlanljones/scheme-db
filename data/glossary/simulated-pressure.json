@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "simulated-pressure",
+  "term": "Simulated Pressure",
+  "aliases": ["Simulated pressure", "Sim Pressure", "sim pressure", "simulated pressure", "simulated blitz", "Sim-Pressure"],
+  "category": "Defensive Front",
+  "shortDef": "A 4-man rush package showing 5 to 7 potential rushers at the line, where only 4 actually rush (including secondary/linebacker blitzers) while defensive linemen drop into coverage.",
+  "tacticalNote": "Forces the offensive line into slide protection confusion and hot-throw checks while maintaining 7-man zone coverage integrity."
+}

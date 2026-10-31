@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b46-mad-dog-double-a",
+  "schemeId": "buddy-46-defense",
+  "order": 2,
+  "name": "Double A-Gap Mad Dog Overload",
+  "personnel": "Base 46 Front (Mad Dog Mug)",
+  "formation": "46 Mad Dog vs Gun 21 Personnel 2x1 Right",
+  "situation": "3rd & 6, +38, passing down",
+  "coverage": "Man-Free (Single-High Safety, Press Corners)",
+  "frontName": "46 Double A-Gap Overload",
+  "summary": {
+    "motive": "Overload both A-gaps with walked defenders so the offense’s pass-protection slide cannot account for every interior threat, forcing an instant-pressure throw or sack.",
+    "keyDefender": "SS mugged over the strong A-gap — the blocker assigned to him cannot get depth fast enough",
+    "whyItWorks": "A single running back can pick up only one of the two A-gap knives, and the head-up end slant removes the tackle’s ability to help either guard.",
+    "failureMode": "A quick perimeter throw (slant/flat) released on time beats the press corner before the interior knives arrive."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The Mad Dog Picture",
+      "text": "WILL and the strong safety stand mugged directly over both A-gaps at 1.2 yards with corners pressing outside. The offense must account for five immediate threats with only six protectors.",
+      "focus": ["WILL", "SS", "LCB", "RCB"]
+    },
+    {
+      "t": 0.8,
+      "title": "2. Same-Gap Knives",
+      "text": "Both A-gap defenders cross the guards’ inside shoulders simultaneously while the head-up end slants hard off the tight end. The center-guard doubles are left blocking air.",
+      "focus": ["WILL", "SS", "RE", "LG", "RG"]
+    },
+    {
+      "t": 1.8,
+      "title": "3. Hot Window Slams Shut",
+      "text": "The QB’s hot slant to X was the escape valve, but the island press corner rides it upfield while the safety blitz arrives before the third step lands.",
+      "focus": ["QB", "SS", "X", "LCB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Buried Between Both Gaps",
+      "text": "The NOSE has driven the center into the QB’s lap and the slanting end closes the scramble lane. Six rushers versus five blockers plus a scanning back ends one way.",
+      "focus": ["NOSE", "RE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b46-free-blade-weak-blitz"],
+    "playsOff": ["b46-base-i-form"],
+    "tell": "Both A-gap defenders are standing upright at 1.2 yards staring across the line pre-snap — the base 46 keeps its safeties at 5 and 8 yards instead."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

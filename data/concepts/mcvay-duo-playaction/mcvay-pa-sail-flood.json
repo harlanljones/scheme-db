@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcvay-pa-sail-flood",
+  "schemeId": "mcvay-duo-playaction",
+  "order": 2,
+  "name": "Play-Action Sail 3-Level Flood",
+  "personnel": "11",
+  "formation": "11P Condensed Bunch Right",
+  "formationId": "mcvay-11p-condensed-bunch-vs-nickel",
+  "situation": "2nd & 3, +35, play-action shot",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-2-5 Nickel Over front",
+  "summary": {
+    "motive": "Create a 3-level vertical flood (deep clearout, 12-yard intermediate out, 2-yard flat) off under-center Duo play-action to overload Cover 3 and Cover 4 zone defenders.",
+    "keyDefender": "Nickel Apex Defender / Strong Safety (Curl-Flat Defender)",
+    "whyItWorks": "The vertical post by Z removes the deep corner while the RB flat route pins the overhang DB near the line of scrimmage, opening an unguardable intermediate void for H on the Sail.",
+    "failureMode": "Immediate edge rush beating the play-action protection before the QB can set his platform or the boundary cornerback ignoring the vertical clearout to squat on the intermediate Sail."
+  },
+  "beats": [
+    {
+      "t": 0.8,
+      "title": "1. The Identical Duo Run Action",
+      "text": "The entire offensive line and running back execute the exact physical posture of the Duo lead run. The Mike and Will linebackers bite hard downhill to plug the interior gaps.",
+      "focus": ["QB", "RB", "MIKE", "WILL"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Apex Defender Freeze",
+      "text": "The QB pulls the ball out of the mesh while the RB leaks into the strongside flat. The Nickel apex defender triggers downhill on the flat threat, widening the intermediate window behind him.",
+      "focus": ["QB", "RB", "NICKEL"]
+    },
+    {
+      "t": 2.8,
+      "title": "3. The 3-Level Flood Geometry",
+      "text": "Z’s vertical post clears out the Cover 3 corner (RCB) deep, the RB flat route holds the Nickel short, leaving Cooper Kupp (H) running wide open on the 13-yard Sail into 20 yards of empty sideline green.",
+      "focus": ["H", "Z", "RCB", "NICKEL"]
+    },
+    {
+      "t": 3.6,
+      "title": "4. Pinpoint Strike to the Boundary",
+      "text": "The QB sets his platform and drives a 14-yard laser into the chest of H before the strong safety can recover, creating a clean catch and 10+ yards of run-after-catch down the sideline.",
+      "focus": ["QB", "H", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcvay-pa-deep-crosser"],
+    "playsOff": ["mcvay-duo-lead-run"],
+    "tell": "Slot receiver H stems vertical before breaking 90 degrees outward on a 12-yard Sail route while QB pulls the ball out of Duo mesh."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

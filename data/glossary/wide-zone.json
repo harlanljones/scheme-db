@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "wide-zone",
+  "term": "Wide Zone",
+  "aliases": ["Wide zone", "outside zone", "stretch run", "lateral stretch", "Wide Zone", "Outside Zone"],
+  "category": "Run Concept",
+  "shortDef": "A perimeter run concept where the entire offensive line takes synchronized lateral bucket steps to stretch the defense sideline to sideline.",
+  "tacticalNote": "Forces defensive linemen into lateral displacement, creating natural vertical cutback lanes (A-gap or B-gap) for patient one-cut runners."
+}

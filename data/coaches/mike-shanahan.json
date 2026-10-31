@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "mike-shanahan",
+  "name": "Mike Shanahan",
+  "role2026": "2x Super Bowl Champion HC / Wide Zone Pioneer",
+  "team": "Denver Broncos / SF 49ers (Patriarch)",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "bill-walsh",
+  "disciples": ["kyle-shanahan", "sean-mcvay", "gary-kubiak", "matt-lafleur"],
+  "side": "offense",
+  "philosophy": "Pioneered the outside zone stretch run married to Alex Gibbs blocking mechanics, paired with lethal bootleg rollouts and intermediate crossers that tore apart single-high coverages.",
+  "keyConcepts": ["Outside Zone Stretch", "Naked Bootleg Flood", "Cutback Lanework", "Play-Action Deep Over"],
+  "schemeIds": ["shanahan-wide-zone"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["2x Super Bowl Champion HC (XXXII, XXXIII)", "3x Super Bowl Ring Total", "Father of the Modern Wide Zone Family"]
+}

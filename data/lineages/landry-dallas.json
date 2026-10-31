@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "landry-dallas",
+  "name": "Landry Flex / Doomsday Front Tree",
+  "patriarch": "Tom Landry → Jimmy Johnson",
+  "side": "defense",
+  "description": "From the inventor of the 4-3 to its speed evolution: Landry’s staggered Flex alignments strangled sweeps with patient gap-zone convergence; Jimmy Johnson rebuilt Dallas with undersized penetration chaos that prefigured the modern attacking front.",
+  "rootNodes": [
+    {
+      "coachId": "tom-landry",
+      "children": [
+        {
+          "coachId": "jimmy-johnson",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

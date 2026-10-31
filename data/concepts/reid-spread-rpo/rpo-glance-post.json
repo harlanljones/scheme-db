@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "rpo-glance-post",
+  "schemeId": "reid-spread-rpo",
+  "order": 2,
+  "name": "Inside Zone RPO Glance",
+  "personnel": "11",
+  "formation": "11P Gun Trips Right",
+  "formationId": "reid-11p-gun-trips-vs-mofo",
+  "situation": "1st & 10, +42, open field",
+  "coverage": "Quarters / Cover 4 Match",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Put the backside second-level linebacker in an inescapable run-pass conflict, punishing aggressive run fits with immediate intermediate completions.",
+    "keyDefender": "Will Linebacker (Backside Run-Fit Conflict Defender)",
+    "whyItWorks": "Inside zone action forces Will LB to trigger into the B-gap. Because the cornerback is in off-coverage, X's sharp glance cut attacks the exact window Will vacated, giving the QB a wide-open throw before the safety can trigger.",
+    "failureMode": "Will LB buzzing out into the throwing lane under the glance, or boundary safety driving downhill aggressively on the slant stem."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "11P Trips Right Alignment & Pre-Snap Conflict Read",
+      "text": "Reid shows the identical 11 Personnel Gun Trips Right formation. The QB identifies the backside Will linebacker as the key conflict defender in Quarters coverage.",
+      "focus": ["QB", "RB", "WILL", "X"]
+    },
+    {
+      "t": 0.8,
+      "title": "Inside Zone Mesh Fake & Linebacker Downhill Trigger",
+      "text": "The offensive line surges left on an inside zone track. The QB rides the mesh with the RB, forcing the Will linebacker to crash into the B-gap to fit the run.",
+      "focus": ["QB", "RB", "WILL", "LG", "C"]
+    },
+    {
+      "t": 1.4,
+      "title": "QB Pull & Rapid Second-Level Window Vacated",
+      "text": "With the Will linebacker sucked into the line of scrimmage, the QB cleanly pulls the ball from the mesh. A massive intermediate passing window opens directly behind the linebacker.",
+      "focus": ["QB", "WILL", "X"]
+    },
+    {
+      "t": 2.2,
+      "title": "Glance Delivery Behind Crashing Will LB",
+      "text": "X breaks sharply on his 5-step glance route at 45 degrees, cutting inside the cushion of the off-cornerback. The QB fires a laser into the vacated window.",
+      "focus": ["QB", "X", "LCB", "FS"]
+    },
+    {
+      "t": 3.2,
+      "title": "X Receives in Stride for Explosive YAC",
+      "text": "X catches the pass in full stride between the hashes, easily beating the trailing cornerback and splitting the deep safeties for a huge explosive play.",
+      "focus": ["X", "FS", "LCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["power-shovel-option"],
+    "playsOff": ["mesh-shallow-cross"],
+    "tell": "QB reads backside Will linebacker crashing the B-gap and pulls ball for rapid glance release to X."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

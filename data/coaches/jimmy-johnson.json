@@ -1,0 +1,18 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "jimmy-johnson",
+  "name": "Jimmy Johnson",
+  "role2026": "Speed 4-3 Template Builder",
+  "team": "Miami Hurricanes / Dallas Cowboys (1989-1993)",
+  "lineage": "landry-dallas",
+  "side": "defense",
+  "philosophy": "Undersized, hyper-fast linemen slanting upfield at the snap: pure penetration chaos, one-gap attacking fits, and coverage built to survive the resulting one-on-ones.",
+  "keyConcepts": ["Penetration Slant Loops", "Speed-over-Size Front", "Man-Free Blitz Dogs", "Relentless Pursuit Rules"],
+  "schemeIds": ["jj-speed-43"],
+  "isHeadCoach2026": false,
+  "notableAchievements": [
+    "2x Super Bowl Champion HC (XXVII, XXVIII)",
+    "National Champion Miami Hurricanes",
+    "Template for Modern Speed Fronts"
+  ]
+}

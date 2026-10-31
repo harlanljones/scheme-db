@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coryell-z-snap-move-screen",
+  "schemeId": "coryell-vertical",
+  "order": 4,
+  "name": "Z-Snap Move Screen",
+  "personnel": "11",
+  "formation": "One-Back Pro, Strong Right",
+  "situation": "3rd & 4, +42, expecting pressure",
+  "coverage": "Cover 2 Zone",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Punish Cover 2 flat defenders who sit on the short routes created by the vertical passing game.",
+    "keyDefender": "Sam Linebacker (strong-flat defender)",
+    "whyItWorks": "The snap move steals the corner's leverage and the pump freeze delays the flat defender exactly long enough for the wall to form in front of the catch.",
+    "failureMode": "The flat trigger fires immediately on the guard release and meets the receiver at the catch point before any wall can form."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Snap Move",
+      "text": "The flanker takes a hard two-step inside move that snaps the corner's eyes and leverage down into the route, while the line sells a full pass-protection look.",
+      "focus": ["Z", "RCB", "RG"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Constraint Releases",
+      "text": "With the corner leaning inside, Z snaps back outside for width and the near guards release to build the screen wall. The defense still reads pure dropback.",
+      "focus": ["Z", "RG", "RT", "F"]
+    },
+    {
+      "t": 1.8,
+      "title": "3. The Freeze Pump",
+      "text": "The quarterback pumps vertically, freezing the Mike and the deep-half safeties for one critical beat while the wall blockers get their heads on pursuers.",
+      "focus": ["QB", "MIKE", "SS"]
+    },
+    {
+      "t": 2.4,
+      "title": "4. The Screen Catch and Turn",
+      "text": "The screen arrives with Z already facing upfield behind three escorts. The flat defender is stalk-blocked and the corner is recovering from the wrong lever.",
+      "focus": ["Z", "SAM", "RCB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coryell-seam-post-double-stroke"],
+    "playsOff": ["coryell-cross-country-drag"],
+    "tell": "Z's alignment move happens before the ball is out of the quarterback's hand — a true vertical shot has no pre-break stem move."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

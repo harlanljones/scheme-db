@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stack335-double-edge-storm",
+  "schemeId": "rlong-335-stack",
+  "order": 2,
+  "name": "Double-Edge Storm Dog",
+  "personnel": "Base 3-3-5 Stack (3 DL + 3 LB + 5 DB)",
+  "formation": "11P Gun Spread 2x2 vs Stack",
+  "situation": "3rd & 6, own 40, must-pass down",
+  "coverage": "Man-Free Behind the Dog",
+  "frontName": "3-3-5 Stack (Double-Edge Storm)",
+  "summary": {
+    "motive": "Storm both C-gaps with the stacked backers while the ends slant inward, so the protection must choose an edge while the anchoring nose erases any interior answer.",
+    "keyDefender": "JACK — the weak stack backer whose outside burst arrives exactly after the tackle chases the slanting end inside",
+    "whyItWorks": "The four-man weave scrambles every slide call, the back can only take one storming edge, and man coverage behind removes all hot answers while the nose makes climbing the pocket impossible.",
+    "failureMode": "Rhythm throws released before the weave develops, or max protect with two backs — the dog needs a standard five-man protection count to manufacture its free runner."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. Stacks Hide the Storm",
+      "text": "Nothing about the pre-snap picture says blitz: three linemen across, three backers hidden directly behind them at identical depth, one safety high. Four potential rushers are invisible inside that single file.",
+      "focus": ["JACK", "MIKE", "SPUR"]
+    },
+    {
+      "t": 1,
+      "title": "2. Ends Slant In, Edges Storm Out",
+      "text": "The call fires as a four-man weave: both ends dart inside to the B-gaps while Jack and Spur burst outward through the C-gaps their linemen just vacated. Every blocker’s first target is already moving the wrong way.",
+      "focus": ["LE", "RE", "JACK", "SPUR"]
+    },
+    {
+      "t": 2,
+      "title": "3. The Nose Anchors While Protection Tilts",
+      "text": "The nose swallows the guard-center combo and refuses both A-gaps, so nobody can slide to help. The running back commits to the strong stormer — which means the weak edge now belongs to nobody.",
+      "focus": ["NOSE", "C", "RB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Free Edge Off the Blind Side",
+      "text": "The tackle chased the slanting end inside and the left edge stands empty. Jack rounds it untouched and buries the quarterback as he climbs — the price of blocking rules written against a static front.",
+      "focus": ["JACK", "QB", "LT"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["stack335-cross-dog-fire-zone"],
+    "playsOff": ["stack335-slant-exchange"],
+    "tell": "Pre-snap it reads like plain Cover 3 stack — no walk-ups anywhere; every rusher hid directly behind a lineman until the snap."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

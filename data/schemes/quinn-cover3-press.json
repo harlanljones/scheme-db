@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "quinn-cover3-press",
+  "name": "Dan Quinn Cover 3 Press-Bail & Under Front",
+  "coachId": "dan-quinn",
+  "team": "Washington Commanders / Seattle Seahawks",
+  "side": "defense",
+  "era": "modern-nfl",
+  "lineage": "carroll-saleh-wide9",
+  "description": "Dan Quinn’s definitive single-high defensive system: physical press-bail cornerback mechanics, 4-3 Under front overloads generating organic 4-man speed rush with the LEO defensive end, Cover 1 Rat-in-the-Hole lurking underneath crossers, and lethal safety Sky fire zone pressures."
+}

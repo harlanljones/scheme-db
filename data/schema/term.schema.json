@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "term": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Blocking Scheme",
+        "Run Concept",
+        "Pass Concept",
+        "Defensive Front",
+        "Coverage & Shell",
+        "Read & Assignment",
+        "Scheme & Concept"
+      ]
+    },
+    "shortDef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tacticalNote": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "id",
+    "term",
+    "aliases",
+    "category",
+    "shortDef",
+    "tacticalNote"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "lovie-smith",
+  "name": "Lovie Smith",
+  "role2026": "Tampa 2 Disciple",
+  "team": "Chicago Bears HC (2004-2012, 2022) / Tampa Bay Buccaneers",
+  "lineage": "two-deep-shell",
+  "mentorId": "tony-dungy",
+  "side": "defense",
+  "philosophy": "Ran Dungy’s Tampa 2 blueprint to a Super Bowl: four-man rush discipline, Mike-hole depth by linebacker committee, and strip-at-the-ball takeaway drills.",
+  "keyConcepts": ["Mike Hole Rotation", "Four-Man Rush Discipline", "Strip Sack Takeaway Drills", "Cloud Boundary Variants"],
+  "schemeIds": [],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Super Bowl XLI Appearance HC", "Bears NFC Championship Defense"]
+}

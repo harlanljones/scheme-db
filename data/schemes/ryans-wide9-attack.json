@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "ryans-wide9-attack",
+  "name": "DeMeco Ryans' Wide-9 Attack & Match Coverage",
+  "coachId": "demeco-ryans",
+  "team": "Houston Texans",
+  "side": "defense",
+  "era": "modern-nfl",
+  "lineage": "carroll-saleh-wide9",
+  "description": "An aggressive, downhill defensive system engineered around pure physical dominance and geometric leverage. Features extreme Wide-9 defensive end alignments and Tackle-Wrap stunt games that crush pass protections with 4 rushers, backed by split-field Cover 2 Palms (2-Read) cloud traps, Cover 1 Low-Hole mug looks, and field-overload 5-man fire zones."
+}

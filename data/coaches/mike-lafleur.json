@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "mike-lafleur",
+  "name": "Mike LaFleur",
+  "role2026": "Head Coach, Arizona Cardinals",
+  "team": "Arizona Cardinals",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "kyle-shanahan",
+  "disciples": [],
+  "side": "offense",
+  "philosophy": "High-tempo horizontal stretch concepts leveraging dual-threat quarterback mobility, pistol wide-zone reads, and perimeter screens that punish aggressive edge rushers.",
+  "keyConcepts": ["Pistol Zone Read", "Naked Boot Flood", "Tunnel Screens", "Quick Perimeter Motion"],
+  "schemeIds": ["shanahan-wide-zone"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["2026 Cardinals HC Hiring", "Former Rams & 49ers Passing Game Coordinator"]
+}

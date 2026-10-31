@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "walsh-play-action-deep-cross",
+  "schemeId": "walsh-classic-wco",
+  "order": 4,
+  "name": "Play-Action Deep Cross",
+  "personnel": "21",
+  "formation": "Split Backs Pro Right",
+  "situation": "1st & 10, own 30, after a big slant-flat gain",
+  "coverage": "Cover 2 Zone",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Exploit the slant-flat success by freezing the second-level defenders with run action and shooting the vacated middle.",
+    "keyDefender": "Mike Linebacker (run-fit linebacker)",
+    "whyItWorks": "Two simultaneous fakes force both linebackers into run fits; the twenty-yard crosser attacks the exact grass they leave when the pass reveals itself.",
+    "failureMode": "Linebackers play run-pass split discipline and keep their eyes on the receivers, staying attached to the crosser."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Bite",
+      "text": "The fullback's dive and the halfback's sweep path present two run threats at once. The Mike triggers downhill and the free safety rocks up — the whole shell tilts to the run.",
+      "focus": ["FB", "RB", "MIKE", "FS"]
+    },
+    {
+      "t": 1.6,
+      "title": "2. The Ball Comes Out",
+      "text": "The quarterback pulls the ball from the mesh and resets to his drop while the linebackers are still in their run fits with their backs to the routes.",
+      "focus": ["QB", "MIKE", "SAM"]
+    },
+    {
+      "t": 2.8,
+      "title": "3. The Crosser Departs",
+      "text": "X breaks inside at twenty yards exactly as the Mike begins his recovery scramble. The post behind him pins both deep-half defenders.",
+      "focus": ["X", "Z", "FS"]
+    },
+    {
+      "t": 3.7,
+      "title": "4. Behind the Frozen Hooks",
+      "text": "The crosser runs free through the space the linebackers occupied during the bite. The throw arrives where only the recovering free safety can contest it.",
+      "focus": ["QB", "X", "MIKE"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["walsh-slant-flat-combo"],
+    "playsOff": ["walsh-slant-flat-combo"],
+    "tell": "The fullback crosses the line of scrimmage carrying the fake — on the real slant-flat he never leaves the pocket."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

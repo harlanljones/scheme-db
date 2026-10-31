@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "robber-coverage",
+  "term": "Robber Coverage",
+  "aliases": ["Robber", "robber coverage", "Cover 1 Robber", "Safety Robber", "robber"],
+  "category": "Coverage & Shell",
+  "shortDef": "A hybrid coverage where a safety drops from a deep two-high alignment down into the intermediate middle \"hole\" to intercept crossing routes.",
+  "tacticalNote": "Baits the quarterback into throwing over-the-middle slants and digs, only for the disguise robber safety to jump the passing lane."
+}

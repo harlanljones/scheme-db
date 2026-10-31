@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "chris-ault",
+  "name": "Chris Ault",
+  "role2026": "Pistol Offense Inventor",
+  "team": "Nevada Wolf Pack (multiple tenures)",
+  "lineage": "option-spread",
+  "side": "offense",
+  "philosophy": "Invented the Pistol at Nevada: quarterback in a short gun at 4 yards with the back directly behind, blending downhill zone-run physics with modern read-option threat.",
+  "keyConcepts": ["Pistol Alignment", "Zone Read from Pistol", "Downhill Run Physics", "Play-Action Off Gun Run"],
+  "schemeIds": ["pistol-read-option"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Invented the Pistol Formation", "Colin Kaepernick Nevada Record Offenses"]
+}

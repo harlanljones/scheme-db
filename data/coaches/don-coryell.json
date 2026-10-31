@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "don-coryell",
+  "name": "Don Coryell",
+  "role2026": "Pro Football Hall of Fame Patriarch",
+  "team": "San Diego Chargers (1978-1986) / St. Louis Cardinals",
+  "lineage": "coryell-vertical",
+  "side": "offense",
+  "philosophy": "Father of the modern vertical passing game: one-back sets, full route trees for every receiver, deep shots downfield off a power run game, and quarterback progressions that attacked every level of the field.",
+  "keyConcepts": ["Vertical Route Tree", "One-Back Z-Snap Sets", "Deep Ball Geometry", "Seam & Post Strokes"],
+  "schemeIds": ["coryell-vertical"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Pro Football Hall of Fame (2023)", "5x Division Champion", "Air Coryell Ancestor of Modern Passing Trees"]
+}

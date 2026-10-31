@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "oconnell-pa-dagger-shot",
+  "schemeId": "oconnell-boot-dagger",
+  "order": 3,
+  "name": "PA Dagger Seam-Curl Shot",
+  "personnel": "11",
+  "formation": "11P Condensed Gun Right vs 4-3 Over",
+  "formationId": "oconnell-11p-condensed-gun-vs-43",
+  "situation": "2nd & 5, +40, off the established stretch",
+  "coverage": "Cover 3 Sky",
+  "frontName": "Over Front",
+  "summary": {
+    "motive": "Use the stretch-action pocket reset to attack the middle of Cover 3 Sky with a Dagger — seam above, curl in the void behind the dropping MLB.",
+    "keyDefender": "MIKE (hook-to-curl conflict)",
+    "whyItWorks": "MIKE must turn and run with the seam or the tight end wins over the top instantly; the moment he commits his eyes there, Z's curl sits undefended in the exact grass he just vacated.",
+    "failureMode": "A MOFO-spinning safety or a MIKE who plays the curl first with trail technique on the seam forces the QB into his checkdown, turning the shot into a three-yard gain."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "Identical Run Picture",
+      "text": "The offensive line reaches and the mesh is real — the tight end even lands his drive step on the edge setter, so no defender can separate this frame from the base stretch.",
+      "focus": ["QB", "RB", "TE", "RT"]
+    },
+    {
+      "t": 1.5,
+      "title": "The Seam Releases Behind the Edge",
+      "text": "Y slips off a block the SDE fully bought and climbs the seam between the linebackers; MIKE bails into his hook-curl drop with his eyes glued to the climbing tight end.",
+      "focus": ["TE", "MIKE", "FS"]
+    },
+    {
+      "t": 2.5,
+      "title": "Z Settles Into the Void",
+      "text": "With MIKE turned chasing the seam and RCB trailing the stem, Z plants at nine yards directly behind the linebacker's shoulders — the textbook dagger void.",
+      "focus": ["Z", "MIKE", "RCB"]
+    },
+    {
+      "t": 3.3,
+      "title": "Shot Over the Linebacker",
+      "text": "From the back of the pocket the QB throws the curl over MIKE's outside shoulder; the free safety is 12 yards deep splitting verticals and has no play on an intermediate ball.",
+      "focus": ["QB", "Z", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["oconnell-duo-pa-crosser"],
+    "playsOff": ["oconnell-wide-zone-stretch-base", "pa-dagger-shot", "play-action-over"],
+    "tell": "The QB never leaves the pocket — the ride ends in a hitch-and-reset rather than a handoff, a boot pivot, or a carried-out fake."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

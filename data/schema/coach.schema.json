@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role2026": {
+      "type": "string",
+      "minLength": 1
+    },
+    "team": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lineage": {
+      "type": "string",
+      "enum": [
+        "shanahan-kubiak",
+        "reid-west-coast",
+        "power-gap-duo",
+        "macdonald-pressure",
+        "fangio-two-high",
+        "carroll-saleh-wide9",
+        "belichick-flores",
+        "coryell-vertical",
+        "air-raid",
+        "option-spread",
+        "delaware-wing-t",
+        "buddy-46",
+        "lebeau-zone-blitz",
+        "landry-dallas",
+        "phillips-two-gap",
+        "two-deep-shell",
+        "college-defensive-fronts"
+      ]
+    },
+    "mentorId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "disciples": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "offense",
+        "defense"
+      ]
+    },
+    "philosophy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keyConcepts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "schemeIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "isHeadCoach2026": {
+      "type": "boolean"
+    },
+    "notableAchievements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "role2026",
+    "team",
+    "lineage",
+    "side",
+    "philosophy",
+    "keyConcepts",
+    "schemeIds"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "payton-jet-sweep-pa-post",
+  "schemeId": "payton-quick-game-screens",
+  "order": 4,
+  "name": "Jet Sweep PA Deep Post",
+  "personnel": "11",
+  "formation": "11P Gun Spread 2x2 vs Nickel",
+  "formationId": "payton-11p-gun-spread-vs-nickel",
+  "situation": "1st & 10, own 25",
+  "coverage": "Cover 6 (Quarter-Quarter-Half)",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Use full-field jet sweep action to pull both linebackers and the free safety downhill, then hit a deep post behind the displaced coverage.",
+    "keyDefender": "Free Safety",
+    "whyItWorks": "The jet motion commits the RCB and both linebackers before the snap cadence finishes, the mesh-point fake holds the FS downhill through his run fit, and the post breaks over the top precisely when his leverage is worst.",
+    "failureMode": "A FS who reads mesh-point-to-launch footwork rather than the run fake stays on top and squeezes the post window shut — one disciplined safety erases the entire concept."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Jet Sweep Pulls the Trigger Men",
+      "text": "Z crosses at full speed and every force defender keys him: RCB sprints across the formation, WILL flows hard, and the FS starts creeping downhill. The decoy is doing real work before any fake is even made.",
+      "focus": ["Z", "RCB", "WILL", "FS"]
+    },
+    {
+      "t": 1.25,
+      "title": "2. Mesh Point Sell",
+      "text": "The QB opens away and presents a genuine-looking exchange at the mesh point while RB sells the kick-out. At full speed this is indistinguishable from Payton’s actual jet sweep package.",
+      "focus": ["QB", "Z", "RB", "SDE"]
+    },
+    {
+      "t": 2.05,
+      "title": "3. Safety Bites, Post Breaks",
+      "text": "The FS is four yards downhill and gaining — fully committed to sweep fits — exactly when X breaks the post inside off an outside stem. The LCB is still leaning on outside leverage he no longer owns.",
+      "focus": ["FS", "X", "LCB"]
+    },
+    {
+      "t": 2.75,
+      "title": "4. Launch Over the Top",
+      "text": "The QB resets his feet and launches with the interior pressure arriving a half-beat late. The throw clears the dragged SS and NICKEL, who spent the play chasing the crossing route.",
+      "focus": ["QB", "X", "SS", "NICKEL"]
+    },
+    {
+      "t": 3.6,
+      "title": "5. Catch Behind the Recovery",
+      "text": "X secures the catch at sixteen-plus yards over the recovering FS’s shoulder. The defense traded its two deepest defenders for a fake run to the wrong hash.",
+      "focus": ["X", "FS", "RCB", "WILL"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["payton-slant-flat-rhythm"],
+    "playsOff": ["jet-motion-oz", "play-action-over"],
+    "tell": "Z carries a true full-field sweep path across the formation while X stems outside then stacks a deep post — the only deep route on the call."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

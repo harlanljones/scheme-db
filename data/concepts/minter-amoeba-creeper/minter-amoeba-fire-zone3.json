@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "minter-amoeba-fire-zone3",
+  "schemeId": "minter-amoeba-creeper",
+  "order": 1,
+  "name": "Amoeba Front 5-Man Fire Zone 3",
+  "personnel": "Nickel 2-4-5",
+  "formation": "Amoeba Standing 6-Up vs 11P Gun 3x1",
+  "situation": "3rd & 8, +42, late 3rd quarter passing situation",
+  "coverage": "Fire Zone 3 (3-Deep 3-Under Overload)",
+  "frontName": "Amoeba Sugar 6-Up Presentation",
+  "summary": {
+    "motive": "Use pre-snap Amoeba chaos to dictate offensive pass protections, then bring a timed 5-man A-gap fire pressure while dropping the mugged MIKE directly into the hot slant lane.",
+    "keyDefender": "WILL (weak A-gap blitzer) & MIKE (Amoeba bail linebacker)",
+    "whyItWorks": "Offenses check to quick hot throws against 6-up looks, but the 3-deep 3-under structure floods intermediate passing windows while 5 rushers overwhelm 5 blockers.",
+    "failureMode": "Quick perimeter smoke screens or max-protect 7-man deep shots that beat 3-deep zone outside the numbers."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Amoeba Standing 6-Up Presentation",
+      "text": "Jesse Minter lines up 6 defenders standing across the line of scrimmage, disguising who will rush and who will drop while threatening an all-out Cover 0 blitz.",
+      "focus": ["WDE", "NT", "3T", "SDE", "WILL", "MIKE", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "5-Man Fire Zone Overload & MIKE Drop",
+      "text": "At the snap, Minter sends 5 rushers with WILL blitzing through the weak A-gap, while MIKE bails from his A-gap mug into the strong hook zone.",
+      "focus": ["WILL", "MIKE", "LG", "RB"]
+    },
+    {
+      "t": 2.2,
+      "title": "Hot Read Slant Trapped",
+      "text": "The QB expects Cover 0 and looks to throw his quick hot slant to Y, only to find MIKE occupying the exact throwing window with SS and Nickel bracketing the flats.",
+      "focus": ["MIKE", "Y", "QB", "SS"]
+    },
+    {
+      "t": 3.5,
+      "title": "A-Gap Overload Pressure Closes",
+      "text": "With the hot throw eliminated, WILL defeats the running back block and collapses the pocket for an emphatic sack.",
+      "focus": ["WILL", "WDE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["minter-slot-blitz-creeper", "minter-double-mug-peel"],
+    "playsOff": [],
+    "tell": "Standing 6-up look where 5 rushers fire while MIKE bails to strong hook and SS buzzes down to boundary flat"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

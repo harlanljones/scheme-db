@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "stefanski-naked-boot-slide",
+  "schemeId": "stefanski-multi-te-gap",
+  "order": 3,
+  "name": "Naked Bootleg Slide",
+  "personnel": "13",
+  "formation": "13P Heavy Wing Right",
+  "formationId": "stefanski-13p-heavy-wing-vs-43",
+  "situation": "2nd & 4, +32, red zone edge",
+  "coverage": "Cover 3 Sky / Flow Match",
+  "frontName": "4-3 Over Front",
+  "summary": {
+    "motive": "Exploit defenses over-pursuing Stefanski's heavy pin-and-pull run flow by rolling the quarterback naked to the opposite boundary with a 3-level flood/slide concept.",
+    "keyDefender": "Weakside Defensive End (WDE) & Will Linebacker (WILL)",
+    "whyItWorks": "The aggressive sweep action pulls all 7 front-seven defenders flowing horizontally right. When the quarterback rolls naked left, there are literally zero defensive players left in the weakside flat.",
+    "failureMode": "A disciplined backside edge defender who stays home for bootleg contain, forcing the QB to throw away or take a sack."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Heavy Frontside Run Illusion",
+      "text": "Offense shows identical 13-personnel condensed wing alignment, executing full lateral sweep steps to the right at the snap.",
+      "focus": ["QB", "RB", "C", "RG", "RT"]
+    },
+    {
+      "t": 0.8,
+      "title": "The Front Seven Flow & Backside Vacuum",
+      "text": "The entire defensive front seven bites aggressively on the right sweep. Backside WDE crashes hard inside, completely giving up backside contain.",
+      "focus": ["WDE", "WILL", "MIKE", "SS", "QB", "RB"]
+    },
+    {
+      "t": 2,
+      "title": "The Naked Bootleg Rollout",
+      "text": "QB executes a pristine bootleg fake, pulls the ball cleanly, and rolls naked back to the left into 20 yards of empty green grass.",
+      "focus": ["QB", "WDE"]
+    },
+    {
+      "t": 2.8,
+      "title": "The Slide Strike in Wide Open Space",
+      "text": "Backside inline TE U slips underneath the crashed edge on the Slide route, catching a crisp strike on the run from QB for a 14-yard first down.",
+      "focus": ["QB", "U", "WILL", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["stefanski-counter-gap-lead"],
+    "playsOff": ["stefanski-pin-pull-sweep", "stefanski-pa-seam-shot"],
+    "tell": "QB keeps ball around backside edge naked; backside TE (U) releases into weakside flat."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

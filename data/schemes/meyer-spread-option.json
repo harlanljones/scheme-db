@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "meyer-spread-option",
+  "name": "Urban Meyer's Spread Option",
+  "coachId": "urban-meyer",
+  "team": "Florida / Ohio State (2001-18)",
+  "side": "offense",
+  "era": "past-college",
+  "lineage": "option-spread",
+  "description": "The Meyer spread option pairs zone-read runs and inverted veer with snag-triangle passing, all built on one principle: make the defense defend the quarterback as a runner on every snap. Perimeter jet motion and reverse constraints stretch the field horizontally while the read game attacks it vertically. Two national championships were built on this foundation."
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "rocky-long",
+  "name": "Rocky Long",
+  "role2026": "3-3-5 Stack Evangelist",
+  "team": "San Diego State HC / New Mexico (1998-2019)",
+  "lineage": "college-defensive-fronts",
+  "side": "defense",
+  "philosophy": "Odd-stack defense where every box defender is a potential blitzer: constant slant-exchange games, safety/corner cross-dogs, and total pre-snap ambiguity about who rushes.",
+  "keyConcepts": ["Stacked Linebacker Exchange", "Committee Pressure Generation", "Five-DB Every-Down Structure", "Slant-Game Chaos"],
+  "schemeIds": ["rlong-335-stack"],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["Mountain West Dominance at San Diego State", "Popularized the Modern 3-3-5 Stack"]
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "mcvay-glance-rpo-orbit",
+  "schemeId": "mcvay-duo-playaction",
+  "order": 4,
+  "name": "Glance RPO with Orbit Return Motion",
+  "personnel": "11",
+  "formation": "11P Condensed Bunch Right with Orbit Motion",
+  "formationId": "mcvay-11p-condensed-bunch-vs-nickel",
+  "situation": "2nd & 4, +28, red zone edge",
+  "coverage": "Cover 1 / Cover 3 Robber",
+  "frontName": "4-2-5 Nickel Over front",
+  "summary": {
+    "motive": "Punish aggressive run-stopping linebackers by reading the apex/Will defender on a post-snap RPO, pairing interior Duo power with a rapid Glance slant route.",
+    "keyDefender": "Will Linebacker (Weakside Second-Level Conflict Defender)",
+    "whyItWorks": "Pre-snap orbit motion holds the strong safety while the Duo run mesh pulls the Will linebacker downhill, creating an uncontested throwing window on the skinny slant to X.",
+    "failureMode": "Will linebacker staying disciplined in the slant throwing lane while defensive front stuffs the Duo run with a light box, or quarterback misreading the conflict key and forcing a contested throw."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Orbit Motion Displacement",
+      "text": "Z fires in rapid pre-snap orbit motion across the backfield. The Nickel defender and Strong Safety are forced to widen their alignment and hesitate, opening up the weakside second level.",
+      "focus": ["Z", "NICKEL", "SS"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Post-Snap Conflict Read",
+      "text": "The QB meshes with the RB on a Duo track while reading the Will linebacker. Seeing the Will crash downhill into the B-gap to stop the power run, the QB instantly pulls the ball.",
+      "focus": ["QB", "RB", "WILL"]
+    },
+    {
+      "t": 1.8,
+      "title": "3. The Quick Glance Strike",
+      "text": "The QB plants and fires a quick-release dart on a 6-yard Glance slant to X, hitting him in the vacant window directly vacated by the crashing Will linebacker.",
+      "focus": ["QB", "X", "WILL", "LCB"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Red Zone Touchdown Burst",
+      "text": "X snatches the ball in stride, defeats the off-balance boundary corner, and slices between the closing safeties for an explosive 28-yard red-zone touchdown.",
+      "focus": ["X", "LCB", "FS", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["mcvay-duo-lead-run"],
+    "playsOff": ["mcvay-duo-lead-run", "mcvay-pa-sail-flood"],
+    "tell": "Pre-snap orbit motion across the backfield paired with post-snap mesh read; QB keeps eyes glued on the conflict apex linebacker."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

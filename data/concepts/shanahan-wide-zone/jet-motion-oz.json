@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "jet-motion-oz",
+  "schemeId": "shanahan-wide-zone",
+  "order": 4,
+  "name": "Jet Motion Outside Zone Left",
+  "personnel": "21",
+  "formation": "Offset I, Jet Motion",
+  "formationId": "shanahan-21p-offset-i-vs-over-c3",
+  "situation": "3rd & 2, +25, short yardage",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Force the defense to shift gap fits and rotate secondary coverage laterally before/at snap, creating perimeter numbers advantages.",
+    "keyDefender": "Overhang / Strong Safety & Playside Cornerback",
+    "whyItWorks": "Jet motion pulls the cornerback wide and forces safety rotation, while the wide zone offensive line track washes the interior defensive front.",
+    "failureMode": "A blitzing nickel or safety shooting into the backfield to blow up the double-mesh timing before the handoff."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Jet Motion Forces Defense to Declare",
+      "text": "Z-receiver runs full sprint across the backfield. The defense is forced to rotate safeties and bump linebackers laterally before the snap, compromising their gap integrity.",
+      "focus": ["Z", "SS", "WILL", "LCB"]
+    },
+    {
+      "t": 1.2,
+      "title": "2. The Double-Mesh Sequencing",
+      "text": "The QB executes a quick jet fake to Z before handing off to the RB on wide zone. This hesitation completely freezes the Mike and holds the defensive end.",
+      "focus": ["QB", "Z", "RB", "MIKE"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. Perimeter Overload & Crack Block",
+      "text": "Because jet motion widened the cornerback, the X receiver easily executes an inside crack block on the Will linebacker, creating a massive perimeter highway.",
+      "focus": ["X", "WILL", "FB", "RB"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. Explosive Edge Gain",
+      "text": "The running back bounces untouched around the perimeter for a dominant chunk gain.",
+      "focus": ["RB", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["outside-zone"],
+    "tell": "Z-receiver runs full-speed jet motion across the formation before/at snap, creating a 2nd mesh point in the backfield."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

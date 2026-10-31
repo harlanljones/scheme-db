@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "buddy-46-defense",
+  "name": "Buddy Ryan's 46 Defense",
+  "coachId": "buddy-ryan",
+  "team": "Chicago Bears (1982-85)",
+  "side": "defense",
+  "era": "past-nfl",
+  "lineage": "buddy-46",
+  "description": "The most aggressive defense in NFL history. Ends aligned head-up at tight-end width, tackles shaded inside, three linebackers bunched at 2-3 yards, and BOTH safeties walked into an eight-man box with zero deep-middle help. Corners survive on islands in press-man. The base picture alone forces offenses to abandon their blocking rules; the mad-dog mug, E-X-T combo, and free blade blitzes turn that confusion into sacks."
+}

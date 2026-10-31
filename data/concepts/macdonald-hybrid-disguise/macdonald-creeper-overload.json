@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "macdonald-creeper-overload",
+  "schemeId": "macdonald-hybrid-disguise",
+  "order": 2,
+  "name": "4-Man Creeper Fire Zone (Sim Blitz)",
+  "personnel": "Nickel 3-3-5 Sim Front",
+  "formation": "Amoeba Sim Look vs 11P Gun 2x2",
+  "formationId": "macdonald-mug-amoeba-vs-11p",
+  "situation": "3rd & 5, +40, known passing down",
+  "coverage": "Cover 3 Cloud (3-Deep, 4-Under Creeper)",
+  "frontName": "4-Man Simulated Creeper Pressure",
+  "summary": {
+    "motive": "Manufacture an unblocked free rusher (Nickel DB) while keeping 7 coverage defenders on the field by dropping interior DT into the quick hot-throw window.",
+    "keyDefender": "NICKEL (Unblocked creeper blitzer) & 3T (Interior simulated dropper)",
+    "whyItWorks": "Offensive line protection rules slide to account for defensive linemen, leaving slot DBs unaccounted for; dropping a 300lb DT into the hot slant lane removes the QB’s only escape.",
+    "failureMode": "Quick wide-receiver tunnel screens to the boundary or RB quick flairs to the vacated edge."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Amoeba Front Disguises Creeper Pressure",
+      "text": "Macdonald aligns in a hybrid 3-3-5 look. Offense checks pass protection to slide toward the heavy interior, assuming standard four-down rush.",
+      "focus": ["NICKEL", "3T", "WDE", "LT", "C"]
+    },
+    {
+      "t": 0.8,
+      "title": "Nickel Ignites & 3-Tech Drops (Simulated Blitz)",
+      "text": "The defense rushes exactly 4, but replaces the 3-Tech tackle with Nickel DB coming off the edge. WDE pinches inside, pinning the LT and giving Nickel a free runway.",
+      "focus": ["NICKEL", "3T", "WDE", "LT"]
+    },
+    {
+      "t": 1.8,
+      "title": "Hot Slant Baited by 300lb Dropper",
+      "text": "As the QB sees the edge pressure and tries to release his hot slant to X, 3-Tech DT drops directly into the slant window, suffocating the hot throw.",
+      "focus": ["3T", "X", "QB"]
+    },
+    {
+      "t": 2.6,
+      "title": "Unblocked Blindside Strip Sack",
+      "text": "With his hot read erased and protection slid the wrong way, the QB is crushed by the unblocked Nickel DB in under 2.5 seconds.",
+      "focus": ["NICKEL", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["macdonald-split-field-trap"],
+    "playsOff": ["macdonald-double-mug-buzz"],
+    "tell": "Nickel DB triggers on a blitz trajectory while 3-Tech drops into the shallow throwing lane"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

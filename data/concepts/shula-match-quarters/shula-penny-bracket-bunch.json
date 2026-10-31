@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "shula-penny-bracket-bunch",
+  "schemeId": "shula-match-quarters",
+  "order": 2,
+  "name": "Penny 5-1-5 Bracket Coverage vs Condensed Bunch",
+  "personnel": "Penny 5-1-5",
+  "formation": "Penny 5-1-5 Front vs 11P Gun 3x1 Condensed Bunch",
+  "situation": "3rd & 6, +35, McVay/Shanahan condensed bunch passing down",
+  "coverage": "Box / Triangle Bracket Match vs 3x1 Bunch",
+  "frontName": "Penny 5-1-5 Front (5 on line, 1 ILB, 5 DBs)",
+  "summary": {
+    "motive": "Eliminate natural pick and rub routes from condensed bunch sets by employing a 3-over-2 Triangle Bracket match coverage while retaining a disciplined 4-man Penny rush.",
+    "keyDefender": "STAR (inside bracket DB) & FS (top cap safety)",
+    "whyItWorks": "Offenses use condensed bunches to create free releases against man coverage. Triangle matching plays zone distribution based on route directions (in, out, up), eliminating picks entirely.",
+    "failureMode": "A deep scissors or post-corner combination by the bunch if the safety hesitates between two vertical stems."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Penny 5-1-5 Front & Triangle Bracket Pre-Snap",
+      "text": "Chris Shula deploys a 5-man Penny front with a 3-over-2 \"Box/Triangle\" bracket over the condensed 3x1 bunch, featuring STAR (inside), RCB (outside), and FS (top).",
+      "focus": ["STAR", "RCB", "FS", "H", "Y", "Z"]
+    },
+    {
+      "t": 0.8,
+      "title": "Triangle Rules Distribute Bunch Releases",
+      "text": "As the bunch releases, the defense seamlessly sorts the routes without getting picked: RCB jumps the flat (Y), STAR clamps the shallow in-cut (H), and FS caps the vertical wheel (Z).",
+      "focus": ["RCB", "Y", "STAR", "H", "FS", "Z"]
+    },
+    {
+      "t": 2,
+      "title": "Natural Rubs Neutralized; All Windows Clamped",
+      "text": "The offense’s designed pick-plays are completely countered by zone distribution rules. The QB is forced to hold the ball as all three bunch receivers are suffocated.",
+      "focus": ["QB", "H", "Y", "Z"]
+    },
+    {
+      "t": 3.5,
+      "title": "4-Man Penny Front Sacks QB",
+      "text": "With nowhere to deliver the football, 4iR breaks free from the interior rush to combine with LOLB for the third-down coverage sack.",
+      "focus": ["4iR", "LOLB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["shula-cover8-field-quarter"],
+    "playsOff": ["shula-tite-b-gap-pinch"],
+    "tell": "Penny 5-1-5 front with STAR, corner, and safety forming a tight triangle bracket over the condensed bunch to exchange routes in-and-out"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

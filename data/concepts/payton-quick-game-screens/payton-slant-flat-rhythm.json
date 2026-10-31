@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "payton-slant-flat-rhythm",
+  "schemeId": "payton-quick-game-screens",
+  "order": 1,
+  "name": "Quick Game Slant-Flat Rhythm",
+  "personnel": "11",
+  "formation": "11P Gun Spread 2x2 vs Nickel",
+  "formationId": "payton-11p-gun-spread-vs-nickel",
+  "situation": "2nd & 6, +35",
+  "coverage": "Nickel Cover 2 Man Match",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Force the apex defender into an instant flat-vs-slant leverage decision and attack the answer he does not pick, on a one-hitch rhythm clock.",
+    "keyDefender": "Nickel Corner (apex over H)",
+    "whyItWorks": "Cover 2 Man Match asks the NICKEL to carry both the flat and the slant off one alignment; H’s immediate flat release pulls him sideways while Z’s slant hits the vacated window at 0.9 seconds, before the press corner can re-route.",
+    "failureMode": "A NICKEL who sits on the slant rather than triggering to the flat, plus interior pressure that forces the throw off its rhythm beat — a late ball lets the RCB recover on the slant."
+  },
+  "beats": [
+    {
+      "t": 0.15,
+      "title": "1. Clean Catch, One Hitch",
+      "text": "The gun snap is clean and the QB takes exactly one hitch step — Payton’s rhythm meter starts now. The whole design assumes the ball leaves before the second hitch ever happens.",
+      "focus": ["QB", "NICKEL", "RCB"]
+    },
+    {
+      "t": 0.5,
+      "title": "2. Press Stems Create the Conflict",
+      "text": "Z pushes vertical into the press and H fires flat outside the apex, forcing the NICKEL to choose his leverage instantly. He triggers on the flat because that is the throw that threatens his zone first.",
+      "focus": ["Z", "H", "NICKEL", "RCB"]
+    },
+    {
+      "t": 0.9,
+      "title": "3. The Rhythm Throw",
+      "text": "The QB delivers on the one-hitch beat, before the RCB can re-establish outside leverage on the slant. The NICKEL is three yards into his flat trigger and cannot flip his hips back inside.",
+      "focus": ["QB", "Z", "RCB", "NICKEL"]
+    },
+    {
+      "t": 1.5,
+      "title": "4. Catch Behind the Apex",
+      "text": "Z secures the slant at nine yards in the exact window the vacating NICKEL was supposed to close. With the corner trailing and the safety splitting halves, nothing is left between the catch and the sideline.",
+      "focus": ["Z", "NICKEL", "SS", "FS"]
+    },
+    {
+      "t": 2.2,
+      "title": "5. Finish Upfield",
+      "text": "The slant climbs to eighteen yards as the NICKEL chases laterally from the flat — the classic man-match tax. This is why Payton lives on these throws on second-and-medium.",
+      "focus": ["Z", "NICKEL", "SS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["payton-fast-screen-convoy"],
+    "playsOff": ["rpo-glance-post"],
+    "tell": "The NICKEL opens flat-side at 0.5s while Z stems outside then cuts the slant behind his shoulders — the ball is gone before the RCB re-establishes."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

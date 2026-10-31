@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema/scheme.schema.json",
+  "id": "roman-power-read",
+  "name": "Greg Roman's Power Read & QB Run Attack",
+  "coachId": "greg-roman",
+  "team": "Los Angeles Chargers",
+  "side": "offense",
+  "era": "modern-nfl",
+  "lineage": "power-gap-duo",
+  "description": "The most quarterback-centric gap-scheme system in modern football, built on heavy 22 personnel and the unblocked-read-key geometry that made Lamar Jackson an MVP. Greg Roman packages power read pulls, designed QB power keepers, pin-and-pull perimeter leverage, and identical-picture play-action shots so that every defensive run fit is simultaneously a pass-fit decision — and heavy personnel becomes an offensive weapon instead of a tell."
+}

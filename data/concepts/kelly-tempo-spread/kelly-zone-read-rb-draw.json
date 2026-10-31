@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "kelly-zone-read-rb-draw",
+  "schemeId": "kelly-tempo-spread",
+  "order": 3,
+  "name": "Zone-Read RB Draw Package",
+  "personnel": "10",
+  "formation": "10P Gun Spread 2x2 vs Nickel",
+  "formationId": "kelly-10p-tempo-spread-vs-nickel",
+  "situation": "1st & 10, +25, tempo snap into a light nickel box before the defense can add a hat",
+  "coverage": "Nickel Cover 3 Sky",
+  "frontName": "Nickel 4-2-5 Over Front",
+  "summary": {
+    "motive": "Pair the zone-read's unblocked-end geometry with an RB delayed draw so the defense's box math commits to a play flowing one way while the ball hits a vacated gap going the other.",
+    "keyDefender": "Unblocked read-key DE and the WILL fitting the draw",
+    "whyItWorks": "The read forces the end to declare, and his crash — plus the linebackers' and sky safety's flow reads against the zone action — empties both the edge and the backside B-gap simultaneously; by the time the draw reveals itself, every hat is wrong-sided.",
+    "failureMode": "A disciplined end who stays home on the near-back and squeezes rather than crashes, letting the defense spill the draw to the WILL before the redirect can clear the hole."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Unblocked Read Key",
+      "text": "Kelly's offensive line deliberately leaves the backside end untouched — LT hinges away from him. The QB presents the ball on a wide-zone ride and stares straight at that defender, whose next step decides where the ball goes.",
+      "focus": ["QB", "WDE", "LT"]
+    },
+    {
+      "t": 1.3,
+      "title": "2. Box Math Breaks",
+      "text": "The WDE crashes down on the give while WILL and the rolling SS trigger downhill with the zone flow. The defense now has seven hats chasing a play that's about to reverse direction — the box is mathematically wrong-sided.",
+      "focus": ["WDE", "WILL", "SS", "RB"]
+    },
+    {
+      "t": 2,
+      "title": "3. The Draw Redirect",
+      "text": "RB gathers, plants, and takes the handoff back through the B-gap the crashing WDE just vacated — behind C and LG double-walls. Every defender who flowed right is now taking the longest possible angle to the ball.",
+      "focus": ["RB", "LG", "C", "WILL"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Second Level, Wrong-Way Fits",
+      "text": "The WILL arrives at the hole a full beat after the back hits it, and the free safety — the only clean body — breaks down from 15 yards away. Kelly's tempo means this same geometry stress repeats on the very next snap.",
+      "focus": ["RB", "WILL", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["kelly-spot-tempo-stress"],
+    "playsOff": [],
+    "tell": "RB presses wide-zone right for two steps, then sinks his hips and snaps back into the backside B-gap — the mid-play hip turn at the mesh point is the only visual cue."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

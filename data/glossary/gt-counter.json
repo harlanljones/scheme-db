@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "gt-counter",
+  "term": "GT Counter",
+  "aliases": ["Counter", "Counter Trey", "GT counter", "guard-tackle counter", "Counter Deception"],
+  "category": "Run Concept",
+  "shortDef": "A misdirection gap run where the backside guard pulls to kick out the play-side edge defender, followed by the backside tackle wrapping through the hole for the linebacker.",
+  "tacticalNote": "Fakes initial zone flow to freeze linebackers before hitting back against the grain with overwhelming mass at the point of attack."
+}

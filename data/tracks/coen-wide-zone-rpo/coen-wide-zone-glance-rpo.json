@@ -1,0 +1,321 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "coen-wide-zone-glance-rpo",
+  "duration": 3.5,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach step right, scoop the NT and seal him playside",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.6, "x": 27.2, "y": 0.4, "note": "Reach step to NT" },
+        { "t": 1.5, "x": 27.8, "y": 1.2, "note": "Seal NT inside" },
+        { "t": 3.5, "x": 28, "y": 2, "note": "Maintain reach" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Scoop-reach behind center to wall off NT",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Snap" },
+        { "t": 0.7, "x": 26.2, "y": 0.5, "note": "Scoop through A-gap" },
+        { "t": 1.6, "x": 27.2, "y": 1.3, "note": "Combo climb with C" },
+        { "t": 3.5, "x": 27.8, "y": 2, "note": "Wall established" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Backside cutoff on WDE, turn shoulders to create the stretch edge",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.7, "x": 22.8, "y": 0.5, "note": "Cutoff step on WDE" },
+        { "t": 1.6, "x": 22.5, "y": 1.2, "note": "Turn WDE out of pursuit" },
+        { "t": 3.5, "x": 22.6, "y": 2, "note": "Backside sealed" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Reach 3-tech then climb to MIKE at the second level",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Snap" },
+        { "t": 0.7, "x": 29, "y": 0.8, "note": "Reach 3T" },
+        { "t": 1.8, "x": 29.6, "y": 2.5, "note": "Climb to MIKE" },
+        { "t": 3.5, "x": 30, "y": 4, "note": "Engaged at LB level" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Frontside reach on SDE, pin him inside the stretch path",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Snap" },
+        { "t": 0.6, "x": 31.2, "y": 0.5, "note": "Wide reach on SDE" },
+        { "t": 1.5, "x": 32.2, "y": 1.3, "note": "Pin SDE inside-out" },
+        { "t": 3.5, "x": 32.8, "y": 2.2, "note": "Edge held" }
+      ]
+    },
+    {
+      "id": "TE",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Arc-release around SDE, wall the edge defender for the stretch lane",
+      "waypoints": [
+        { "t": 0, "x": 31.8, "y": -0.6, "note": "Snap" },
+        { "t": 0.6, "x": 33, "y": 0.6, "note": "Arc release outside SDE" },
+        { "t": 1.5, "x": 34, "y": 1.8, "note": "Wall edge defender" },
+        { "t": 3.5, "x": 34.8, "y": 3.2, "note": "Sustained perimeter block" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "carry",
+      "assignment": "Ride the mesh reading box numbers; if the nickel flies downhill, pull and throw glance to H",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Snap from gun" },
+        { "t": 0.5, "x": 28, "y": -3.8, "note": "Mesh point, eyes on box numbers" },
+        { "t": 1, "x": 28.5, "y": -3.2, "note": "Nickel flies — pull ball" },
+        { "t": 1.6, "x": 28.8, "y": -2.8, "note": "Throw glance over nickel" },
+        { "t": 3.5, "x": 29.5, "y": -1.5, "note": "Follow through, escape lane" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "carry",
+      "assignment": "Run the wide-zone handoff action regardless of pull — his flow is what forces the nickel trigger",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -4.8, "note": "Aligned to zone direction" },
+        { "t": 0.6, "x": 30.5, "y": -3, "note": "Press mesh point" },
+        { "t": 1.2, "x": 31.5, "y": -1, "note": "Flow right through stretch track" },
+        { "t": 2.2, "x": 33, "y": 1.5, "note": "Bend downfield off RT reach" },
+        { "t": 3.5, "x": 34, "y": 4, "note": "Threat continues as decoy" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Vertical takeoff to vacate the boundary and hold LCB",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": -0.5, "note": "Release" },
+        { "t": 1, "x": 9.5, "y": 3, "note": "Stem upfield" },
+        { "t": 2.2, "x": 10.5, "y": 7, "note": "Stack LCB" },
+        { "t": 3.5, "x": 11, "y": 11, "note": "Clear-out continues" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Glance route — two-step inside release, catch in the window the flying nickel vacates",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": -1, "note": "Inside release" },
+        { "t": 0.6, "x": 35.5, "y": 2, "note": "Quick glance stem" },
+        { "t": 1.2, "x": 34.8, "y": 4.5, "note": "Catch at 5 yards" },
+        { "t": 2.2, "x": 35.2, "y": 9, "note": "Turn upfield vs soft leverage" },
+        { "t": 3.5, "x": 35.5, "y": 13, "note": "YAC into open grass" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "block",
+      "assignment": "Perimeter stalk block on RCB to protect the glance catch",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": -1.2, "note": "Release" },
+        { "t": 1, "x": 45, "y": 2.5, "note": "Work to RCB" },
+        { "t": 2, "x": 44.5, "y": 5, "note": "Engage stalk block" },
+        { "t": 3.5, "x": 44.2, "y": 6.5, "note": "Finish on RCB" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "WDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Backside C-gap contain, cut off by LT cutoff block",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 0.9, "note": "Downhill fit" },
+        { "t": 0.8, "x": 22.2, "y": 1.5, "note": "Squeezed by LT" },
+        { "t": 2, "x": 22.6, "y": 2.2, "note": "Pinned inside" },
+        { "t": 3.5, "x": 23, "y": 2.8, "note": "Unable to pursue" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "A-gap shade, absorbed by the C/LG scoop combination",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Attack A-gap" },
+        { "t": 0.8, "x": 26.5, "y": 1.6, "note": "Caught by scoop" },
+        { "t": 2, "x": 27.2, "y": 2.2, "note": "Reached and walled" },
+        { "t": 3.5, "x": 27.8, "y": 2.6, "note": "Blocked out of flow" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "B-gap defender, reached by RG and climbed past",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "Attack B-gap" },
+        { "t": 0.8, "x": 29.4, "y": 1.8, "note": "Reached by RG" },
+        { "t": 2, "x": 29.6, "y": 2.6, "note": "Climbed past" },
+        { "t": 3.5, "x": 30, "y": 3.2, "note": "Trailing flow" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "DE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "drop",
+      "assignment": "Frontside edge contain, reached by RT and arced around by TE",
+      "waypoints": [
+        { "t": 0, "x": 33.2, "y": 0.9, "note": "Set the edge" },
+        { "t": 0.8, "x": 32.6, "y": 1.8, "note": "Reached by RT" },
+        { "t": 2, "x": 32.4, "y": 2.6, "note": "Pinned inside the arc" },
+        { "t": 3.5, "x": 32.6, "y": 3.2, "note": "Edge lost" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Flow-right pursuit on wide-zone action, late to any throw",
+      "waypoints": [
+        { "t": 0, "x": 23, "y": 4.5, "note": "Key run flow" },
+        { "t": 1, "x": 26, "y": 4, "note": "Flow right with zone" },
+        { "t": 2.2, "x": 29, "y": 4.5, "note": "Chasing RB track" },
+        { "t": 3.5, "x": 31, "y": 5, "note": "Frozen by run picture" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Playside run-fit, climbed onto by RG and locked out of the throwing window",
+      "waypoints": [
+        { "t": 0, "x": 28, "y": 4.5, "note": "Run fit" },
+        { "t": 0.8, "x": 28.8, "y": 3.6, "note": "Trigger downhill" },
+        { "t": 1.8, "x": 29.4, "y": 2.8, "note": "Engaged by climbing RG" },
+        { "t": 3.5, "x": 30, "y": 4.2, "note": "Blocked, no throw vision" }
+      ]
+    },
+    {
+      "id": "NICKEL",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Apex conflict defender — read says fly downhill on run; doing so abandons H for the glance",
+      "waypoints": [
+        { "t": 0, "x": 36.5, "y": 4, "note": "Apex alignment" },
+        { "t": 0.6, "x": 37.5, "y": 2.5, "note": "Reads zone flow, triggers" },
+        { "t": 1.4, "x": 37, "y": 1.2, "note": "Flies into box run-fit" },
+        { "t": 2.4, "x": 35, "y": 2, "note": "Too late — ball is gone" },
+        { "t": 3.5, "x": 34.5, "y": 4, "note": "Turning to chase catch" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Boundary corner, carried vertical by X takeoff",
+      "waypoints": [
+        { "t": 0, "x": 7.5, "y": 6.5, "note": "Soft bail" },
+        { "t": 1.2, "x": 9.5, "y": 8, "note": "Retreating with X" },
+        { "t": 2.4, "x": 10.5, "y": 9, "note": "Stacked deep" },
+        { "t": 3.5, "x": 11, "y": 10, "note": "Out of play" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Field corner, stalk-blocked by Z after run read",
+      "waypoints": [
+        { "t": 0, "x": 45.5, "y": 6.5, "note": "Off coverage" },
+        { "t": 1, "x": 45, "y": 5.5, "note": "Triggers on run look" },
+        { "t": 2.2, "x": 44.5, "y": 5.2, "note": "Absorbed by Z stalk" },
+        { "t": 3.5, "x": 44.3, "y": 5.5, "note": "Blocked out of tackle" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Strong safety in Cover 2 match, caught between run fit and post-snap glance",
+      "waypoints": [
+        { "t": 0, "x": 36, "y": 11.5, "note": "Quarters-ish alignment" },
+        { "t": 1, "x": 36.5, "y": 9, "note": "Eyes on run flow" },
+        { "t": 2.2, "x": 35.5, "y": 10.5, "note": "Late break on throw" },
+        { "t": 3.5, "x": 35, "y": 12, "note": "Recovering over top too late" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Free safety, halves the field and breaks late on the short glance completion",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 11.5, "note": "Deep half" },
+        { "t": 1.2, "x": 24, "y": 10.5, "note": "Reading QB" },
+        { "t": 2.4, "x": 30, "y": 10, "note": "Breaking on ball" },
+        { "t": 3.5, "x": 33.5, "y": 10, "note": "Closing on catch" }
+      ]
+    }
+  ]
+}

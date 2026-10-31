@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coryell-seam-post-double-stroke",
+  "schemeId": "coryell-vertical",
+  "order": 1,
+  "name": "Seam-Post Double Stroke",
+  "personnel": "11",
+  "formation": "One-Back Pro, Slot Left",
+  "situation": "1st & 10, midfield, base down",
+  "coverage": "Cover 3 Buzz",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Attack the deep middle with two synchronized seam-post strokes that force the single-high safety to pick a side.",
+    "keyDefender": "Free Safety (middle-third defender)",
+    "whyItWorks": "Identical outside stems freeze both corners on the fake fades, and the TE middle-hole stretch removes any underneath help, isolating the free safety between two posts.",
+    "failureMode": "Corners sit on the stems instead of bailing, or the safety splits the double post with depth and takes away both throws."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Five-Step Drop and Outside Stems",
+      "text": "The quarterback takes his full five-step Coryell drop while both outside receivers hammer hard outside stems, convincing soft-bailing corners that fades are coming.",
+      "focus": ["QB", "X", "Z"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Double Stroke",
+      "text": "At twelve yards both receivers stroke inside off their stems simultaneously. Both corners are still leaning on the fake fades, leaving the seams open behind them.",
+      "focus": ["X", "Z", "LCB", "RCB"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Middle Hole Stretch",
+      "text": "The TE climbs to fourteen and settles in the middle hole while the slot pressures the weak seam, forcing the free safety to defend three deep threats alone.",
+      "focus": ["Y", "H", "FS"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. The Frazee Shot Delivery",
+      "text": "The quarterback throws the seam-post away from the safety's lever. Whichever post he chooses, the backside post runs free down the middle of the field.",
+      "focus": ["QB", "X", "Z"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coryell-deep-out-comeback", "coryell-cross-country-drag"],
+    "playsOff": [],
+    "tell": "Both outside receivers take identical vertical stems before breaking — the stroke only happens after the stems have sold pure fades."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

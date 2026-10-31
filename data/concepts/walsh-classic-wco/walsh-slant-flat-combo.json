@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "walsh-slant-flat-combo",
+  "schemeId": "walsh-classic-wco",
+  "order": 1,
+  "name": "Slant-Flat Combo",
+  "personnel": "21",
+  "formation": "Split Backs Pro Right",
+  "situation": "2nd & 5, own 35, vs off coverage",
+  "coverage": "Cover 2 Zone",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Turn an off-coverage corner's cushion into free yardage with a timed slant-flat stretch.",
+    "keyDefender": "Right Corner (Cover 2 flat defender)",
+    "whyItWorks": "The flat route forces the corner to choose; whichever way he leans, one receiver occupies him while the other runs into the space he vacated.",
+    "failureMode": "The corner sits on the slant instead of widening, or press coverage disrupts the timing before the three-step drop can finish."
+  },
+  "beats": [
+    {
+      "t": 0.5,
+      "title": "1. The Rhythm Drop",
+      "text": "The quarterback takes his three big steps without ever leaving his footwork rhythm. The play is designed to be thrown at the top of the drop no matter what.",
+      "focus": ["QB", "X", "Z"]
+    },
+    {
+      "t": 1.1,
+      "title": "2. The Leverage Question",
+      "text": "The flanker shoots the flat instantly, putting the Cover 2 corner in a bind: widen with the flat or sit on the slant lane. He chooses the flat.",
+      "focus": ["Z", "RCB"]
+    },
+    {
+      "t": 1.7,
+      "title": "3. The Slant Window Opens",
+      "text": "As the corner widens, X snaps downfield and drives at the guard's outside hip — exactly where both linebackers are a beat late to close.",
+      "focus": ["X", "MIKE", "LCB"]
+    },
+    {
+      "t": 2.3,
+      "title": "4. The Catch on the Move",
+      "text": "The ball arrives in stride at the top of the drop. X is running north with blockers ahead — the West Coast philosophy made physical: a pass that runs like a run.",
+      "focus": ["X", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["walsh-curl-flat-flood", "walsh-play-action-deep-cross"],
+    "playsOff": [],
+    "tell": "The flanker releases flat on his first step and the ball is out within 1.2 seconds — anything slower means the defense triggered correctly."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

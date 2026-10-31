@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "b46-ext-strong-combo",
+  "schemeId": "buddy-46-defense",
+  "order": 3,
+  "name": "Strong-Side E-X-T Combo Blitz",
+  "personnel": "Base 46 Front (E-X-T Stagger)",
+  "formation": "46 E-X-T Combo vs Pro I-Form Strong Right",
+  "situation": "2nd & 9, +42, dropback pass",
+  "coverage": "Man-Free with Free Hook (Single-High)",
+  "frontName": "46 Strong-Side Combo Overload",
+  "summary": {
+    "motive": "Send three staggered strong-side rushers (end-B gap, tackle-C loop, linebacker-edge) so one protection slide always leaves the second-wave looper unblocked.",
+    "keyDefender": "DT running the loop — his path is invisible until he bursts out of the crashing end’s trash",
+    "whyItWorks": "Offensive linemen block the first rusher they see; the crash occupies guard and tight end while the loop and edge arrive together on an uncovered tackle.",
+    "failureMode": "A max-protect formation with a back releasing to the strong side adds the missing blocker and kills the loop’s timing."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. The E-X-T Stack Call",
+      "text": "The end is called into a hard B-gap crash, the shaded tackle is told to loop all the way around him to the outside, and SAM rushes the edge widest. Three staggered waves hit one protection gap.",
+      "focus": ["RE", "DT", "SAM"]
+    },
+    {
+      "t": 1,
+      "title": "2. First Wave Occupies Two Blockers",
+      "text": "The crashing end slams inside off the tight end and engages the right guard, eating both the guard and the tight-end chip while opening the arc behind him.",
+      "focus": ["RE", "RG", "Y"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Loop Appears Out of Nowhere",
+      "text": "The tackle has sprinted a full circle behind the crash and appears inside the right tackle just as SAM forces that tackle to widen. Protection has nobody left for him.",
+      "focus": ["DT", "RT", "SAM"]
+    },
+    {
+      "t": 3.4,
+      "title": "4. Hit While Throwing",
+      "text": "The QB feels the free runner and hurries his throw to the corner route; the looping tackle arrives mid-throw and the pass sails incomplete with FS waiting over the top.",
+      "focus": ["DT", "QB", "FS", "Z"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["b46-mad-dog-double-a"],
+    "playsOff": ["b46-base-i-form", "b46-free-blade-weak-blitz"],
+    "tell": "The shaded tackle swings wide behind the crashing end rather than firing straight — pure interior slants never leave the box."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

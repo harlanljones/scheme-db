@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "buddy-46",
+  "name": "Buddy Ryan 46 Pressure Tree",
+  "patriarch": "Buddy Ryan",
+  "side": "defense",
+  "description": "The most radical base defense ever fielded: an eight-man box with zero deep-middle help, isolated press corners, and unblockable edge overload combinations that broke protection rules by arithmetic. Its DNA survives in every modern Bear front and mug pressure.",
+  "rootNodes": [
+    {
+      "coachId": "buddy-ryan",
+      "children": []
+    }
+  ]
+}

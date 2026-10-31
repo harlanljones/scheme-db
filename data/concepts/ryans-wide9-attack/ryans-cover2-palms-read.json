@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "ryans-cover2-palms-read",
+  "schemeId": "ryans-wide9-attack",
+  "order": 2,
+  "name": "Split-Safety Palms (2-Read) Match",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Nickel Wide-9 Two-High vs 11P Gun 2x2 Smash",
+  "situation": "3rd & 6, -40, midfield passing down against 2x2 spread",
+  "coverage": "Cover 2 Palms (2-Read / Cloud Trap on #2 Out)",
+  "frontName": "Base 4-Down Wide-9 Front",
+  "summary": {
+    "motive": "Obliterate standard Smash and quick-out concepts by using split-field 2-Read (Palms) matching, enabling the cornerback to trap underneath out routes while the safety caps deep corner routes.",
+    "keyDefender": "LCB (Palms flat trap corner) & SS (over-the-top corner cap safety)",
+    "whyItWorks": "Smash concepts are designed to stress standard Cover 2 or Cover 3, but Palms matches the routes in reverse: the corner takes the underneath out, and the safety takes the deep corner.",
+    "failureMode": "A double-vertical concept (4-Verticals) if the safety hesitates or gets occupied by a tight-end seam route."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "Split-Safety Palms Pre-Snap Alignment",
+      "text": "DeMeco Ryans shows a balanced two-high safety shell. Cornerbacks align at 6 yards with their eyes locked entirely on the inside #2 slot receivers, using Palms (2-Read) rules.",
+      "focus": ["LCB", "SS", "H", "X", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "2-Read Key Triggers: #2 Breaks Out",
+      "text": "As slot receiver H breaks on an out route (the classic Smash concept), LCB reads the release, instantly abandons X, and drives aggressively downhill to trap the out route.",
+      "focus": ["LCB", "H", "SS", "X"]
+    },
+    {
+      "t": 1.8,
+      "title": "Safety Rolls Over Top of Corner Route",
+      "text": "Simultaneously, SS sees #2 break out, opens his hips toward the sideline, and walls off X’s deep corner route from over the top, neutralizing the offense’s deep shot.",
+      "focus": ["SS", "X", "LCB", "H"]
+    },
+    {
+      "t": 2.6,
+      "title": "LCB Intercepts Out Route for Pick-Six",
+      "text": "The QB throws the out route expecting single-high Cover 3 coverage, but LCB jumps the route with full momentum for an interception and touchdown return.",
+      "focus": ["LCB", "H", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["ryans-cover1-hole-mug"],
+    "playsOff": ["ryans-wide9-under-tackle-wrap"],
+    "tell": "Two-high shell where the cornerback reads the #2 slot receiver and aggressively jumps the out-route while safety carries #1 deep"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

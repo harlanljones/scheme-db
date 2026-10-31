@@ -1,0 +1,15 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "dom-capers",
+  "name": "Dom Capers",
+  "role2026": "Zone Blitz Systemizer",
+  "team": "Pittsburgh Steelers DC / Carolina Panthers / Houston Texans HC / Green Bay Packers DC",
+  "lineage": "lebeau-zone-blitz",
+  "mentorId": "dick-lebeau",
+  "side": "defense",
+  "philosophy": "Industrialized LeBeau’s zone blitz into a full pressure menu: Blitzburgh 3-4 packages, fire zones from every alignment, and formation-agnostic pressure distribution.",
+  "keyConcepts": ["Blitzburgh 3-4 Pressure Menu", "Fire Zone Multiplicity", "Formation-Agnostic Pressure", "OL Assignment Confusion"],
+  "schemeIds": [],
+  "isHeadCoach2026": false,
+  "notableAchievements": ["First Carolina Panthers HC", "Super Bowl XLV Champion DC"]
+}

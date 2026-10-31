@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "wham",
+  "term": "Wham",
+  "aliases": ["Wham Block", "Wham block", "wham block", "Wham trap", "whamming"],
+  "category": "Blocking Scheme",
+  "shortDef": "A surprise inside trap block delivered by an off-line tight end, H-back, or fullback against an unblocked interior defensive lineman (typically a 1-tech or 3-tech).",
+  "tacticalNote": "Exploits aggressive upfield defensive line penetration by using their forward momentum to create an instant interior cutback lane."
+}

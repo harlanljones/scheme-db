@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "ryans-cover1-hole-mug",
+  "schemeId": "ryans-wide9-attack",
+  "order": 3,
+  "name": "Cover 1 Hole with Linebacker A-Gap Mug",
+  "personnel": "Nickel 4-2-5",
+  "formation": "Nickel 4-2-5 Single-Mug Front vs 11P Gun 3x1 Slant/Choice",
+  "situation": "3rd & 4, +18, red zone critical conversion down",
+  "coverage": "Cover 1 Hole (Man-to-Man with Low-Hole MIKE Rat)",
+  "frontName": "A-Gap Mug Front with Wide-9 Edges",
+  "summary": {
+    "motive": "Threaten A-gap pressure to force quick slant/in routes, then drop the mugged linebacker into the low hole to bracket underneath passes while the 4-man Wide-9 front collapses the pocket.",
+    "keyDefender": "MIKE (A-gap mug low-hole robber) & 3T (interior penetrator)",
+    "whyItWorks": "Offensive quarterbacks are coached to throw hot slants against A-gap pressure, throwing the football directly to the low-hole defender who baited the throw.",
+    "failureMode": "A double-move route (whip/pivot or slant-and-go) that breaks back outside away from the inside low-hole linebacker."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "A-Gap Mug Presentation Pre-Snap",
+      "text": "DeMeco Ryans lines up MIKE mugging the A-gap while corners press tight on the perimeter, presenting an aggressive 5-man pressure look in the red zone.",
+      "focus": ["MIKE", "NT", "3T", "C", "QB"]
+    },
+    {
+      "t": 0.8,
+      "title": "MIKE Bails to Low Hole, 4-Man Rush Fires",
+      "text": "At the snap, MIKE drops into the 5-yard low hole (\"Rat in the Hole\") while the 4-man defensive line brings ferocious organic pressure led by 3T penetrating inside.",
+      "focus": ["MIKE", "3T", "RG", "C"]
+    },
+    {
+      "t": 1.8,
+      "title": "Slot Slant Choked in Low-Hole Bracket",
+      "text": "The QB throws his hot slant to H against what he believed was man-pressure, only for MIKE to wall off the slant lane while NICKEL trails on the outside hip.",
+      "focus": ["MIKE", "NICKEL", "H", "QB"]
+    },
+    {
+      "t": 3.2,
+      "title": "Interior Penetration Finishes the Sack",
+      "text": "With the quick throw eliminated, 3T rips past the RG for an unblocked interior sack before the quarterback can scan to his secondary progressions.",
+      "focus": ["3T", "WDE", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["ryans-overload-edge-fire"],
+    "playsOff": ["ryans-cover2-palms-read"],
+    "tell": "MIKE mugs the A-gap pre-snap then immediately drops 5 yards into the low hole while corners press and safeties roll into single-high robber"
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "conflict-defender",
+  "term": "Conflict Defender",
+  "aliases": ["Conflict defender", "conflict read", "key read defender", "read key", "conflict defender", "Conflict Defender"],
+  "category": "Read & Assignment",
+  "shortDef": "The specific defensive player placed in a spatial dilemma where their assignment requires defending two mutually exclusive outcomes simultaneously (e.g. run fit vs. slant).",
+  "tacticalNote": "Modern offensive schemes and RPOs are engineered specifically to isolate this defender and make them wrong regardless of their reaction."
+}

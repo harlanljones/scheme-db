@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "coryell-deep-out-comeback",
+  "schemeId": "coryell-vertical",
+  "order": 2,
+  "name": "Deep Out & Comeback",
+  "personnel": "11",
+  "formation": "Pro Set, Strong Left",
+  "situation": "2nd & 6, +35, vs press coverage",
+  "coverage": "Cover 1 Robber",
+  "frontName": "4-3 Under front",
+  "summary": {
+    "motive": "Force a press corner to defend two throws at one landmark: the 18-yard deep out first, then the 16-yard comeback.",
+    "keyDefender": "Right Corner (press corner on the flanker)",
+    "whyItWorks": "The deep out forces the corner to open and sprint; once he commits to erasing the out, the comeback breaks back into space he has vacated.",
+    "failureMode": "The corner plays trail technique with inside help over the top, or the free safety refuses to commit to the deep-out bracket."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. Press Release Battles",
+      "text": "Both corners are pressed to the receivers' chests because there is no help over the top. The flanker fights for an outside stack while the split end grinds out an inside release.",
+      "focus": ["Z", "X", "RCB", "LCB"]
+    },
+    {
+      "t": 1.8,
+      "title": "2. The Deep-Out Window Opens",
+      "text": "The quarterback hits his fifth step and looks at the 18-yard deep out. The corner is still in phase, but the receiver has leverage — this is the primary read if it stays open.",
+      "focus": ["QB", "Z", "RCB"]
+    },
+    {
+      "t": 2.6,
+      "title": "3. The Progression Flip",
+      "text": "The corner sits on the out-break and closes the window. The quarterback hitches and flips his eyes to the backside comeback, where X has stacked his press corner.",
+      "focus": ["QB", "X", "LCB"]
+    },
+    {
+      "t": 3.6,
+      "title": "4. The Comeback Completion",
+      "text": "X snaps down at sixteen while the free safety is committed to the deep-out help. The comeback is thrown where only X can catch it along the boundary.",
+      "focus": ["QB", "X", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["coryell-seam-post-double-stroke"],
+    "playsOff": ["coryell-z-snap-move-screen"],
+    "tell": "The flanker runs a pure vertical stem past twelve yards before any break — the throw is always late-breaking at the top of the route."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

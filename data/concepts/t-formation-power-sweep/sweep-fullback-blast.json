@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "sweep-fullback-blast",
+  "schemeId": "t-formation-power-sweep",
+  "order": 3,
+  "name": "Fullback Blast",
+  "personnel": "21",
+  "formation": "T Formation, Ends Both Sides",
+  "situation": "3rd & 1, own 40, short yardage after sweep success",
+  "coverage": "Cover 1 Robber",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Punish defenses that over-play the sweep by handing to the fullback between the tackles off identical footwork.",
+    "keyDefender": "Will Linebacker (flow linebacker)",
+    "whyItWorks": "The sweep fake removes both flow defenders while the ISO combo physically removes the Mike, leaving one uncovered gap for the fullback.",
+    "failureMode": "Linebackers stay home on the sweep look and the Mike defeats the combo block before the fullback reaches the hole."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. Identical Sweep Footwork",
+      "text": "The quarterback opens with the exact same steps as Power Sweep Left and the halfback crosses on the same path. Every linebacker keys the sweep flow immediately.",
+      "focus": ["QB", "HB", "WILL"]
+    },
+    {
+      "t": 1.3,
+      "title": "2. The Ball Changes Direction",
+      "text": "At the last moment the quarterback pulls the ball back and hands to the fullback diving up the middle. The Will and weak corner are already committed left.",
+      "focus": ["QB", "FB", "WILL"]
+    },
+    {
+      "t": 2,
+      "title": "3. The ISO Combo Arrives",
+      "text": "The guard and center climb off their double-team directly onto the Mike linebacker — the classic isolation block that defines this companion play.",
+      "focus": ["LG", "C", "MIKE"]
+    },
+    {
+      "t": 2.9,
+      "title": "4. Through the Filled Hole",
+      "text": "With the Mike driven off the ball and both flow defenders chasing the decoy, the fullback falls forward through the vacated A/B gap for the conversion.",
+      "focus": ["FB", "SS", "SAM"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["sweep-power-sweep-right-boot-fake"],
+    "playsOff": ["sweep-power-sweep-left"],
+    "tell": "The fullback takes the ball instead of leading it — every true sweep shows the fullback blocking on the perimeter."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

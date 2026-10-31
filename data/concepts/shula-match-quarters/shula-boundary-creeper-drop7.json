@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "shula-boundary-creeper-drop7",
+  "schemeId": "shula-match-quarters",
+  "order": 4,
+  "name": "Boundary Creeper with Drop-7 Quarter Coverage Shell",
+  "personnel": "Penny 5-1-5",
+  "formation": "Penny 5-1-5 vs 11P Gun 3x1 Boundary Trips",
+  "situation": "3rd & 7, +35, passing down conversion",
+  "coverage": "Drop 7 — Cover 3 Match with Simulated Edge Creeper",
+  "frontName": "Penny 5-1-5 Front (3-1-7 Drop)",
+  "summary": {
+    "motive": "Drop 7 defenders into multi-layered zone coverage by disguising a pass rusher as a creeper, then rushing only 3 linemen while flooding all throwing windows.",
+    "keyDefender": "Left OLB Creeper (Pre-snap Rush Alignment, Post-snap Drop)",
+    "whyItWorks": "The LOLB creeper fools the QB's hot-read expectations — the QB expects a 5-man pressure but gets only 3 rushers and 7 coverage defenders. Every intermediate route is bracketed by quarters match rules, leaving only a short check-down under the first-down marker.",
+    "failureMode": "A mobile QB who scrambles away from the pocket, or a TE on a crossing route that forces the MIKE linebacker out of position before the FS can provide over-the-top help."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. LOLB Creeper Disguise",
+      "text": "The left outside linebacker aligns in a two-point pass rush stance on the boundary edge, baiting the offensive tackle into a set position. At the snap, he drops into flat zone coverage — creating an extra dropper that confuses the QB's hot-read system.",
+      "focus": ["LOLB", "LT", "QB"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. 3-Man Rush, 7-Man Drop",
+      "text": "Only three linemen rush (4iL, NOSE, 4iR) while 7 defenders drop into deep coverage zones. The defense sacrifices immediate pressure for a coverage umbrella that has no throwing windows anywhere on the field.",
+      "focus": ["NOSE", "4iL", "4iR", "MIKE", "STAR", "FS", "BS"]
+    },
+    {
+      "t": 2.5,
+      "title": "3. TE Cross Split Zone Read",
+      "text": "The TE attempts to split the MIKE and STAR zones on a 10-yard cross. Shula's quarters shell activates zone replacement rules — MIKE sinks with TE, FS rotates over-the-top as a second layer of help, and STAR holds H's hook in quarters match.",
+      "focus": ["TE", "MIKE", "FS", "STAR"]
+    },
+    {
+      "t": 3.5,
+      "title": "4. QB Pressured, Check-Down",
+      "text": "With 7 defenders in coverage and all primary targets bracketed or covered, the QB is flushed from the pocket. The only outlet is a short RB check-down — Shula's Drop-7 design forces exactly this outcome: a minimal gain on 3rd-and-7.",
+      "focus": ["QB", "RB", "ROLB", "4iR"]
+    }
+  ],
+  "relations": {
+    "setsUp": [],
+    "playsOff": ["shula-tite-b-gap-pinch", "shula-penny-bracket-bunch"],
+    "tell": "LOLB walks up to line in edge rush stance before snap — this is the creeper tell; if he drops, expect a 3-man rush with 7 in coverage."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

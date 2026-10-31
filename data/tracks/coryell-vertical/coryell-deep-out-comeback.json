@@ -1,0 +1,339 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "coryell-deep-out-comeback",
+  "duration": 4.2,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set and wall the shade tackle",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.7, "note": "Snap from under center" },
+        { "t": 0.8, "x": 26.2, "y": -1.4, "note": "Vertical set" },
+        { "t": 2, "x": 25.9, "y": -1.8, "note": "Walling the shade" },
+        { "t": 3.6, "x": 25.8, "y": -2, "note": "Pocket holding" },
+        { "t": 4.2, "x": 25.7, "y": -2.1, "note": "Clean pocket" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass protect weak edge",
+      "waypoints": [
+        { "t": 0, "x": 24.9, "y": -0.7, "note": "Pull-step pass set" },
+        { "t": 0.8, "x": 24, "y": -1.4, "note": "Taking the B-gap rusher" },
+        { "t": 2, "x": 23.5, "y": -1.8, "note": "Anchored" },
+        { "t": 4.2, "x": 23.3, "y": -2, "note": "Edge held" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass protect strong interior",
+      "waypoints": [
+        { "t": 0, "x": 28.4, "y": -0.7, "note": "Pass set step" },
+        { "t": 0.8, "x": 28.8, "y": -1.4, "note": "Striking the 3-tech" },
+        { "t": 2, "x": 29.1, "y": -1.8, "note": "Resetting hands" },
+        { "t": 4.2, "x": 29.2, "y": -2, "note": "Interior secure" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Protect the blindside edge on the long-developing throw",
+      "waypoints": [
+        { "t": 0, "x": 23.2, "y": -0.7, "note": "Quick vertical set" },
+        { "t": 0.8, "x": 22.3, "y": -1.5, "note": "Riding the end wide" },
+        { "t": 2, "x": 21.8, "y": -1.8, "note": "Deep anchor — ball is coming out late" },
+        { "t": 4.2, "x": 21.5, "y": -2, "note": "Blindside clean" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass set vs strong-side end",
+      "waypoints": [
+        { "t": 0, "x": 30.1, "y": -0.7, "note": "Vertical set" },
+        { "t": 0.8, "x": 30.7, "y": -1.5, "note": "Absorbing the rush" },
+        { "t": 2, "x": 31, "y": -1.8, "note": "Re-anchoring" },
+        { "t": 4.2, "x": 31.2, "y": -2, "note": "Edge secure" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "none",
+      "assignment": "Five-step drop with a hitch, progression deep-out to comeback",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -1.6, "note": "Under-center snap" },
+        { "t": 0.5, "x": 27.2, "y": -3.8, "note": "Opening and dropping off the snap" },
+        { "t": 1.1, "x": 27.4, "y": -6.2, "note": "Five steps complete" },
+        { "t": 1.7, "x": 27.4, "y": -7, "note": "Hitch — eyes on the deep-out window" },
+        { "t": 2.4, "x": 27.2, "y": -7.2, "note": "Window closed by press corner, progressing" },
+        { "t": 3.1, "x": 27, "y": -7, "note": "Reset feet to comeback side" },
+        { "t": 3.7, "x": 27.4, "y": -6.6, "note": "Delivering the comeback" },
+        { "t": 4.2, "x": 28, "y": -6, "note": "Follow-through" }
+      ]
+    },
+    {
+      "id": "F",
+      "label": "F",
+      "side": "offense",
+      "role": "rb",
+      "trail": "block",
+      "assignment": "Check strong edge pressure then release right flat as emergency outlet",
+      "waypoints": [
+        { "t": 0, "x": 29.8, "y": -4.4, "note": "Offset alignment" },
+        { "t": 0.8, "x": 31, "y": -5, "note": "Checking the edge rusher" },
+        { "t": 1.6, "x": 32.5, "y": -5.6, "note": "Releasing to the right flat" },
+        { "t": 2.6, "x": 34.5, "y": -6, "note": "Flat outlet available" },
+        { "t": 4.2, "x": 36, "y": -6.2, "note": "Holding the checkdown lane" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Beat press with a release, run the comeback at 16 — second read",
+      "waypoints": [
+        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0.8, "x": 5.2, "y": 3, "note": "Fighting an inside release off press" },
+        { "t": 1.6, "x": 5.8, "y": 8, "note": "Winning the stack" },
+        { "t": 2.4, "x": 7, "y": 13.5, "note": "Selling vertical at the top" },
+        { "t": 3, "x": 8.5, "y": 16.5, "note": "Snapping down into the comeback" },
+        { "t": 3.7, "x": 10.5, "y": 15.5, "note": "Comeback break, facing QB" },
+        { "t": 4.2, "x": 12, "y": 15, "note": "Settled on the comeback landmark" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "block",
+      "assignment": "Release into a 10-yard hook over the strong-side hook defender",
+      "waypoints": [
+        { "t": 0, "x": 20.3, "y": 0.7, "note": "Y tight left" },
+        { "t": 0.8, "x": 20.8, "y": 3, "note": "Working release vs Sam" },
+        { "t": 1.8, "x": 21.5, "y": 7.5, "note": "Climbing to the hook depth" },
+        { "t": 2.8, "x": 23, "y": 10, "note": "Settling in the window" },
+        { "t": 4.2, "x": 23.5, "y": 10.2, "note": "Sitting in the hole" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Clear the middle with a vertical seam push from the slot",
+      "waypoints": [
+        { "t": 0, "x": 11, "y": -1.4, "note": "Slot alignment left" },
+        { "t": 1, "x": 11.5, "y": 4.5, "note": "Instant vertical release" },
+        { "t": 2.2, "x": 13, "y": 11, "note": "Pushing the seam" },
+        { "t": 3.2, "x": 15.5, "y": 17, "note": "Carrying the robber deep" },
+        { "t": 4.2, "x": 18, "y": 21, "note": "Clearing the middle" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Primary: beat press and drive the 18-yard deep out away from the sideline",
+      "waypoints": [
+        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right vs press" },
+        { "t": 0.8, "x": 47.2, "y": 3, "note": "Two-hand fight for outside release" },
+        { "t": 1.6, "x": 46.5, "y": 8.5, "note": "Stacking the corner" },
+        { "t": 2.4, "x": 45.5, "y": 14, "note": "Vertical sell at 14" },
+        { "t": 3, "x": 44.8, "y": 18, "note": "Breaking hard to the deep-out landmark" },
+        { "t": 3.8, "x": 41.5, "y": 18.5, "note": "Driving back inside toward the numbers" },
+        { "t": 4.2, "x": 40, "y": 18.6, "note": "Open in the deep-out window" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Weakside rush on the long-developing drop",
+      "waypoints": [
+        { "t": 0, "x": 21, "y": 1, "note": "Weak end alignment" },
+        { "t": 0.8, "x": 20.6, "y": 2.4, "note": "Charging the blindside arc" },
+        { "t": 2.2, "x": 20.2, "y": 4, "note": "Turned wide by LT" },
+        { "t": 4.2, "x": 19.8, "y": 4.6, "note": "Rush contained" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "N",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "A-gap shade, collapse the pocket",
+      "waypoints": [
+        { "t": 0, "x": 25.6, "y": 0.9, "note": "Shade alignment" },
+        { "t": 0.8, "x": 25.4, "y": 2.4, "note": "Penetrating A-gap" },
+        { "t": 2.2, "x": 25.2, "y": 4, "note": "Walled out" },
+        { "t": 4.2, "x": 25, "y": 4.4, "note": "Stalled" }
+      ]
+    },
+    {
+      "id": "T3",
+      "label": "T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "B-gap rush vs guard",
+      "waypoints": [
+        { "t": 0, "x": 28.2, "y": 1, "note": "3-tech alignment" },
+        { "t": 0.8, "x": 28.5, "y": 2.4, "note": "Slanting to the guard" },
+        { "t": 2.2, "x": 28.9, "y": 4, "note": "Spun inside-out" },
+        { "t": 4.2, "x": 29.2, "y": 4.6, "note": "Washed" }
+      ]
+    },
+    {
+      "id": "RE",
+      "label": "E",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Strong-side contain rush",
+      "waypoints": [
+        { "t": 0, "x": 32.5, "y": 0.9, "note": "Strong end alignment" },
+        { "t": 0.8, "x": 32.9, "y": 2.4, "note": "Contain rush" },
+        { "t": 2.2, "x": 33.2, "y": 4, "note": "Handled by RT" },
+        { "t": 4.2, "x": 33.5, "y": 4.6, "note": "Contained" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "M",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Middle hole drop under the robber",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 4.5, "note": "Middle alignment" },
+        { "t": 0.9, "x": 26.5, "y": 6.5, "note": "Dropping the middle hole" },
+        { "t": 2, "x": 26, "y": 8.5, "note": "Reading the QB" },
+        { "t": 3.4, "x": 25.5, "y": 10, "note": "Wall on the TE hook" },
+        { "t": 4.2, "x": 25.2, "y": 10.5, "note": "Pinned inside" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "W",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Weak hook, carry the slot vertical",
+      "waypoints": [
+        { "t": 0, "x": 22.8, "y": 4.5, "note": "Weak alignment" },
+        { "t": 0.9, "x": 22.4, "y": 6, "note": "Opening weak" },
+        { "t": 2, "x": 20, "y": 8, "note": "Trailing H up the seam" },
+        { "t": 3.4, "x": 17.5, "y": 12, "note": "Chasing the slot deep" },
+        { "t": 4.2, "x": 16, "y": 14, "note": "Dragged out of the box" }
+      ]
+    },
+    {
+      "id": "SAM",
+      "label": "S",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Strong hook over the TE, wall the 10-yard window",
+      "waypoints": [
+        { "t": 0, "x": 31, "y": 4.8, "note": "Strong alignment" },
+        { "t": 0.9, "x": 31.5, "y": 6.5, "note": "Hook drop" },
+        { "t": 2.2, "x": 28.5, "y": 8.5, "note": "Wall on Y" },
+        { "t": 3.6, "x": 26.5, "y": 9.5, "note": "Bracket help arriving" },
+        { "t": 4.2, "x": 26, "y": 10, "note": "Sealed on the TE" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press man on X — no help over the top",
+      "waypoints": [
+        { "t": 0, "x": 5.9, "y": 7.5, "note": "Press alignment moved up" },
+        { "t": 0.8, "x": 6, "y": 3, "note": "Hand-fighting X at the line" },
+        { "t": 1.8, "x": 6.6, "y": 9, "note": "Losing the stack battle" },
+        { "t": 3, "x": 8, "y": 15, "note": "Trail position on the comeback" },
+        { "t": 4.2, "x": 10, "y": 15.8, "note": "A half-step behind" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "CB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Press man on Z — take away the deep out",
+      "waypoints": [
+        { "t": 0, "x": 48.6, "y": 7.5, "note": "Press alignment" },
+        { "t": 0.8, "x": 48, "y": 3, "note": "Jamming the release" },
+        { "t": 1.8, "x": 47.2, "y": 9.5, "note": "Still in phase vertically" },
+        { "t": 3, "x": 46.2, "y": 16, "note": "Sitting on the deep-out break" },
+        { "t": 3.8, "x": 44, "y": 18.2, "note": "Closing the out window" },
+        { "t": 4.2, "x": 42.5, "y": 18.4, "note": "Erasing the primary" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Robber — sit on the first underneath breaking route",
+      "waypoints": [
+        { "t": 0, "x": 35, "y": 8, "note": "Robber alignment" },
+        { "t": 1, "x": 32, "y": 7.5, "note": "Robbing at 8-10" },
+        { "t": 2.2, "x": 29.5, "y": 9, "note": "Keying the TE hook" },
+        { "t": 3.4, "x": 28, "y": 9.8, "note": "Locked on the TE window" },
+        { "t": 4.2, "x": 27, "y": 10, "note": "Out of position for the comeback" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Post safety — bracket help to the field side",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 14, "note": "Middle alignment" },
+        { "t": 1, "x": 30, "y": 14.5, "note": "Sliding toward strength" },
+        { "t": 2.4, "x": 36, "y": 15.5, "note": "Helping over Z deep out" },
+        { "t": 3.6, "x": 40, "y": 15, "note": "Committed to the field hash" },
+        { "t": 4.2, "x": 42, "y": 14.5, "note": "Too far from the boundary comeback" }
+      ]
+    }
+  ]
+}

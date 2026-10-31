@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "enum": [
+        "shanahan-kubiak",
+        "reid-west-coast",
+        "power-gap-duo",
+        "macdonald-pressure",
+        "fangio-two-high",
+        "carroll-saleh-wide9",
+        "belichick-flores",
+        "coryell-vertical",
+        "air-raid",
+        "option-spread",
+        "delaware-wing-t",
+        "buddy-46",
+        "lebeau-zone-blitz",
+        "landry-dallas",
+        "phillips-two-gap",
+        "two-deep-shell",
+        "college-defensive-fronts"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "patriarch": {
+      "type": "string",
+      "minLength": 1
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "offense",
+        "defense"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rootNodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/__schema0"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "patriarch",
+    "side",
+    "description",
+    "rootNodes"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "coachId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema0"
+          }
+        }
+      },
+      "required": [
+        "coachId",
+        "children"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

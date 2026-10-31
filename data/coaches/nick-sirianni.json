@@ -1,0 +1,16 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "nick-sirianni",
+  "name": "Nick Sirianni",
+  "role2026": "Head Coach, Philadelphia Eagles",
+  "team": "Philadelphia Eagles",
+  "lineage": "reid-west-coast",
+  "mentorId": "andy-reid",
+  "disciples": ["shane-steichen"],
+  "side": "offense",
+  "philosophy": "Power running with RPO perimeter access, boundary isolation for elite wideouts, and high-percentage short-yardage conversions.",
+  "keyConcepts": ["RPO Glance / Slant", "Duo Power", "Slot Fade Isolation", "Brotherly Shove"],
+  "schemeIds": ["sirianni-power-rpo"],
+  "isHeadCoach2026": true,
+  "notableAchievements": ["Super Bowl LVII Appearance", "2x NFC East Champion"]
+}

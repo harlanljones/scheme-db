@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema/term.schema.json",
+  "id": "wide-9",
+  "term": "Wide-9",
+  "aliases": ["Wide-9 front", "Wide 9", "9-technique", "wide-9 alignment", "Wide-9"],
+  "category": "Defensive Front",
+  "shortDef": "A defensive end alignment stationed extremely wide outside the tight end's exterior shoulder (9-technique).",
+  "tacticalNote": "Creates steep, unhindered speed-rush angles around the edge and eliminates outside tackle punch reach, forcing the offense to commit extra blockers."
+}

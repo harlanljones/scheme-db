@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "baylor-bubble-go-glance",
+  "schemeId": "baylor-choice",
+  "order": 3,
+  "name": "Bubble-Go Glance",
+  "personnel": "11",
+  "formation": "11P Gun, Slot Right Strong",
+  "situation": "3rd & 3, own 42, vs man-coverage nickel look",
+  "coverage": "Cover 1 Man",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Sell the bubble-screen picture to trigger the force defenders uphill, then convert the slot to a glance vertical that attacks the vacated seam.",
+    "keyDefender": "Nickel (the screen trigger)",
+    "whyItWorks": "Every offensive cue screams screen — the arc, the flare, the arm flash — so the nickel abandons his deep responsibility at full speed and cannot recover once the slot plants behind him.",
+    "failureMode": "The nickel stays patient and sinks rather than triggers, playing the slot's hips through the plant and staying attached to the glance."
+  },
+  "beats": [
+    {
+      "t": 0.6,
+      "title": "1. The Bubble Picture Is Painted",
+      "text": "The slot bubbles outside while the back flares into the flat and the quarterback flashes his screen arm. Every cue points to a perimeter throw.",
+      "focus": ["H", "QB", "NICKEL"]
+    },
+    {
+      "t": 1.4,
+      "title": "2. The Trigger Commits",
+      "text": "The nickel bites fully, sprinting up to strangle the screen at the numbers. The flat defender follows the picture instead of sinking with the slot.",
+      "focus": ["NICKEL", "H", "RB"]
+    },
+    {
+      "t": 2.2,
+      "title": "3. The Plant Converts",
+      "text": "At full bubble speed the slot plants and converts straight upfield, passing behind the committed trigger. The corner is already cleared by the go route.",
+      "focus": ["H", "NICKEL", "Z"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. The Glance Over the Top",
+      "text": "The quarterback transfers from the fake posture and delivers the glance over the hook linebacker. The post safety is leaning the wrong way as it lands.",
+      "focus": ["QB", "H", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["baylor-speed-sweep-constraint"],
+    "playsOff": [],
+    "tell": "The slot's first two steps carry him toward the sideline like a true bubble — but a real bubble keeps flattening; this one plants and climbs at the numbers."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

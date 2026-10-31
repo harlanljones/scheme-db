@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "airraid-shallow-distribution-drive",
+  "schemeId": "air-raid",
+  "order": 4,
+  "name": "Shallow Distribution Drive",
+  "personnel": "10",
+  "formation": "10P Gun 2x2",
+  "situation": "2nd & 9, own 20, backed up",
+  "coverage": "Cover 3 Sky",
+  "frontName": "4-3 Over front",
+  "summary": {
+    "motive": "Distribute the ball to whichever shallow receiver wins his individual leverage race, reading defenders rather than landmarks.",
+    "keyDefender": "Mike Linebacker (middle hook dropper)",
+    "whyItWorks": "Two staggered crossing layers mean any defender who covers one has turned his back on the other; the quarterback simply throws to the uncovered lever.",
+    "failureMode": "Zone defenders trade assignments without turning their heads, keeping a fresh body square to the quarterback in both lanes."
+  },
+  "beats": [
+    {
+      "t": 0.7,
+      "title": "1. The Verticals Clear the Stage",
+      "text": "Both slots fire instant seams while the flanker pins the corner, dragging every deep and hook defender away from the middle of the field.",
+      "focus": ["Z", "H", "LCB", "WILL"]
+    },
+    {
+      "t": 1.5,
+      "title": "2. The Near Shallow Departs",
+      "text": "The split end drives his six-yard shallow across the formation. The Mike takes one step with it — exactly the bait the Air Raid wants.",
+      "focus": ["X", "MIKE"]
+    },
+    {
+      "t": 2.4,
+      "title": "3. The Deep Layer Crosses Behind",
+      "text": "Four yards deeper, the drive route crosses directly beneath the first. The nickel who chased Y vertically is now trailing by a full body.",
+      "focus": ["Y", "NICKEL", "SAM"]
+    },
+    {
+      "t": 3.3,
+      "title": "4. Leverage Read Complete",
+      "text": "With the near layer defended over the top and the deep layer trailed from behind, the quarterback throws to whichever shallow ran away from its leverage.",
+      "focus": ["QB", "Y", "FS"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["airraid-mesh-concept"],
+    "playsOff": ["airraid-stick-naked-constraint"],
+    "tell": "The two crossers never converge at one point — they stay four yards apart in depth for the entire route."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "$schema": "../../schema/tracks.schema.json",
+  "conceptId": "quinn-cover1-rat-in-hole",
+  "duration": 4,
+  "offense": [
+    {
+      "id": "C",
+      "label": "C",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 0/1-tech NT",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
+        { "t": 0.8, "x": 26.2, "y": -0.7, "note": "Engage NT" },
+        { "t": 2.2, "x": 26, "y": -1.3, "note": "Anchoring" },
+        { "t": 4, "x": 25.8, "y": -1.8, "note": "Sustained" }
+      ]
+    },
+    {
+      "id": "LG",
+      "label": "LG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 1-tech NT helper",
+      "waypoints": [
+        { "t": 0, "x": 25, "y": -0.4, "note": "Set left" },
+        { "t": 0.8, "x": 25.2, "y": -0.7, "note": "Punch NT" },
+        { "t": 2.2, "x": 25, "y": -1.4, "note": "Firm wall" },
+        { "t": 4, "x": 24.8, "y": -2, "note": "Solid" }
+      ]
+    },
+    {
+      "id": "LT",
+      "label": "LT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block LEO speed rush",
+      "waypoints": [
+        { "t": 0, "x": 23.3, "y": -0.4, "note": "Kick slide" },
+        { "t": 1, "x": 21.5, "y": -1.2, "note": "Engage LEO" },
+        { "t": 2.5, "x": 20.5, "y": -3, "note": "Pushed back" },
+        { "t": 4, "x": 20, "y": -4.5, "note": "Edge collapsed" }
+      ]
+    },
+    {
+      "id": "RG",
+      "label": "RG",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block 3-tech DT",
+      "waypoints": [
+        { "t": 0, "x": 28.3, "y": -0.4, "note": "Set right" },
+        { "t": 0.8, "x": 28.8, "y": -0.8, "note": "Engage 3T" },
+        { "t": 2.2, "x": 28.5, "y": -1.6, "note": "Driven back" },
+        { "t": 4, "x": 28.2, "y": -2.4, "note": "Pocket dented" }
+      ]
+    },
+    {
+      "id": "RT",
+      "label": "RT",
+      "side": "offense",
+      "role": "ol",
+      "trail": "block",
+      "assignment": "Pass block SDE edge rush",
+      "waypoints": [
+        { "t": 0, "x": 30, "y": -0.4, "note": "Kick set" },
+        { "t": 1, "x": 32, "y": -1.2, "note": "Engage SDE" },
+        { "t": 2.5, "x": 32.5, "y": -2.8, "note": "Holding edge" },
+        { "t": 4, "x": 32.8, "y": -3.8, "note": "Straining" }
+      ]
+    },
+    {
+      "id": "QB",
+      "label": "QB",
+      "side": "offense",
+      "role": "qb",
+      "trail": "drop",
+      "assignment": "3-step drop, read Mesh shallow crosser H -> intercepted by the Rat in the Hole!",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": -4.5, "note": "Shotgun snap" },
+        { "t": 1, "x": 26.67, "y": -6, "note": "3-step drop" },
+        {
+          "t": 2,
+          "x": 26.67,
+          "y": -6,
+          "note": "Throws to open H shallow cross: MIKE (The Rat) steps directly into path!"
+        },
+        { "t": 3, "x": 26, "y": -6.5, "note": "Turnover / Interception" },
+        { "t": 4, "x": 25.5, "y": -7, "note": "Play dead" }
+      ]
+    },
+    {
+      "id": "RB",
+      "label": "RB",
+      "side": "offense",
+      "role": "rb",
+      "trail": "route",
+      "assignment": "Check-release strong flat route",
+      "waypoints": [
+        { "t": 0, "x": 29.5, "y": -4.5, "note": "Scan blitz" },
+        { "t": 1, "x": 32, "y": -3, "note": "Release into flat" },
+        { "t": 2.2, "x": 38, "y": 0, "note": "Flat route" },
+        { "t": 4, "x": 44, "y": 2, "note": "Covered by Will in man" }
+      ]
+    },
+    {
+      "id": "X",
+      "label": "X",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Boundary 12yd Dig / Over route behind Mesh",
+      "waypoints": [
+        { "t": 0, "x": 8, "y": -0.5, "note": "Vertical stem" },
+        { "t": 1.2, "x": 8, "y": 6.5, "note": "Drive cushion" },
+        { "t": 2.4, "x": 13, "y": 11.5, "note": "Dig cut across middle" },
+        { "t": 4, "x": 20, "y": 11.5, "note": "Trailed by LCB in man" }
+      ]
+    },
+    {
+      "id": "H",
+      "label": "H",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Weak slot Mesh shallow crosser (setting the rub)",
+      "waypoints": [
+        { "t": 0, "x": 16, "y": -0.8, "note": "Inside shallow release" },
+        { "t": 1, "x": 19, "y": 2.5, "note": "Mesh point under Y" },
+        { "t": 2, "x": 26, "y": 4.5, "note": "Sprints into middle: jumped by lurking MIKE!" },
+        { "t": 4, "x": 32, "y": 6, "note": "Ball intercepted" }
+      ]
+    },
+    {
+      "id": "Y",
+      "label": "Y",
+      "side": "offense",
+      "role": "te",
+      "trail": "route",
+      "assignment": "Strong slot Mesh shallow crosser (going left)",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": -0.8, "note": "Inside shallow release" },
+        { "t": 1, "x": 34, "y": 3, "note": "Mesh over H" },
+        { "t": 2.2, "x": 24, "y": 4.5, "note": "Cross to weak flat" },
+        { "t": 4, "x": 16, "y": 5.5, "note": "Trailed by NCB in man" }
+      ]
+    },
+    {
+      "id": "Z",
+      "label": "Z",
+      "side": "offense",
+      "role": "wr",
+      "trail": "route",
+      "assignment": "Field 12yd Post route",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": -0.5, "note": "Stem outside" },
+        { "t": 1.2, "x": 46, "y": 7, "note": "Vertical stem" },
+        { "t": 2.4, "x": 42, "y": 13.5, "note": "Post cut across hash" },
+        { "t": 4, "x": 36, "y": 19, "note": "Capped by FS deep post" }
+      ]
+    }
+  ],
+  "defense": [
+    {
+      "id": "LEO",
+      "label": "LEO",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Wide-9 edge rush: speed bend around LT",
+      "waypoints": [
+        { "t": 0, "x": 20, "y": 0.9, "note": "Wide 9 stance" },
+        { "t": 1, "x": 19, "y": -1, "note": "Dip and bend" },
+        { "t": 2.2, "x": 20.5, "y": -3.8, "note": "Pressure QB blindside" },
+        { "t": 4, "x": 24.5, "y": -6.5, "note": "Close on QB" }
+      ]
+    },
+    {
+      "id": "NT",
+      "label": "NT",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "1-tech nose rush: push A-gap pocket",
+      "waypoints": [
+        { "t": 0, "x": 25.5, "y": 0.9, "note": "Shade on Center" },
+        { "t": 1, "x": 25.8, "y": -0.2, "note": "Power push on C" },
+        { "t": 2.2, "x": 25.8, "y": -1.5, "note": "Collapse middle" },
+        { "t": 4, "x": 25.5, "y": -2.5, "note": "Interior pressure" }
+      ]
+    },
+    {
+      "id": "3T",
+      "label": "3T",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "3-tech upfield rush right B-gap",
+      "waypoints": [
+        { "t": 0, "x": 29, "y": 0.9, "note": "3-tech stance" },
+        { "t": 1, "x": 29.2, "y": -0.4, "note": "Club move on RG" },
+        { "t": 2.2, "x": 28.8, "y": -2, "note": "Collapse pocket right" },
+        { "t": 4, "x": 27.5, "y": -4.5, "note": "Push QB" }
+      ]
+    },
+    {
+      "id": "SDE",
+      "label": "SDE",
+      "side": "defense",
+      "role": "dl",
+      "trail": "block",
+      "assignment": "Strong edge contain rush",
+      "waypoints": [
+        { "t": 0, "x": 33, "y": 0.9, "note": "5-tech stance" },
+        { "t": 1, "x": 33.8, "y": -0.8, "note": "Squeeze RT" },
+        { "t": 2.4, "x": 33, "y": -3, "note": "Contain pocket right" },
+        { "t": 4, "x": 30, "y": -6, "note": "Close in" }
+      ]
+    },
+    {
+      "id": "WILL",
+      "label": "WILL",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "Man-to-man lock on RB check-release",
+      "waypoints": [
+        { "t": 0, "x": 23.5, "y": 4.5, "note": "Stacked over guard" },
+        { "t": 1, "x": 26, "y": 3.5, "note": "Trigger on RB release" },
+        { "t": 2.2, "x": 34, "y": 2, "note": "Match RB into flat" },
+        { "t": 4, "x": 42, "y": 2.5, "note": "RB blanketed in man" }
+      ]
+    },
+    {
+      "id": "MIKE",
+      "label": "MIKE",
+      "side": "defense",
+      "role": "lb",
+      "trail": "drop",
+      "assignment": "The Rat in the Hole: lurk at 6-8 yards depth, jump shallow crosser!",
+      "waypoints": [
+        { "t": 0, "x": 27.5, "y": 4.5, "note": "Disguised mug in A-gap pre-snap" },
+        { "t": 0.8, "x": 27, "y": 6, "note": "Drop into intermediate hole, eyes on QB" },
+        { "t": 1.8, "x": 25.5, "y": 5, "note": "Undercuts H Mesh crosser for interception!" },
+        { "t": 3, "x": 26.5, "y": 2, "note": "Rallies with interception return" },
+        { "t": 4, "x": 28, "y": -1, "note": "Crosses LOS with ball" }
+      ]
+    },
+    {
+      "id": "NCB",
+      "label": "NCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man-to-man trail on Y slot",
+      "waypoints": [
+        { "t": 0, "x": 37, "y": 4, "note": "Over Y in slot" },
+        { "t": 1, "x": 34, "y": 5, "note": "Trail Y on crossing route" },
+        { "t": 2.2, "x": 26, "y": 5.5, "note": "Fight through rub in trail position" },
+        { "t": 4, "x": 18, "y": 6.5, "note": "Y covered" }
+      ]
+    },
+    {
+      "id": "LCB",
+      "label": "LCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man-to-man trail on X receiver with underneath leverage",
+      "waypoints": [
+        { "t": 0, "x": 8, "y": 2, "note": "Press-trail on X" },
+        { "t": 1.2, "x": 8, "y": 7.5, "note": "Trail underneath X stem" },
+        { "t": 2.4, "x": 14, "y": 12, "note": "Drive on X dig cut" },
+        { "t": 4, "x": 20, "y": 12, "note": "In phase on dig" }
+      ]
+    },
+    {
+      "id": "RCB",
+      "label": "RCB",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man-to-man trail on Z receiver",
+      "waypoints": [
+        { "t": 0, "x": 46, "y": 2, "note": "Press-trail on Z" },
+        { "t": 1.2, "x": 46, "y": 8, "note": "Trail in hip pocket" },
+        { "t": 2.4, "x": 42, "y": 14.5, "note": "Funnel Z inside to FS post" },
+        { "t": 4, "x": 36, "y": 20, "note": "Z blanketed" }
+      ]
+    },
+    {
+      "id": "SS",
+      "label": "SS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Man-to-man lock on H slot receiver (funnels to Rat)",
+      "waypoints": [
+        { "t": 0, "x": 16, "y": 3.5, "note": "Aligned on H slot" },
+        { "t": 1, "x": 18, "y": 4, "note": "Trail H shallow crosser" },
+        { "t": 2, "x": 23, "y": 5.5, "note": "Drives H directly into lurking MIKE" },
+        { "t": 4, "x": 29, "y": 6.5, "note": "Trail support" }
+      ]
+    },
+    {
+      "id": "FS",
+      "label": "FS",
+      "side": "defense",
+      "role": "db",
+      "trail": "drop",
+      "assignment": "Single-high deep post safety: cap all vertical routes",
+      "waypoints": [
+        { "t": 0, "x": 26.67, "y": 13.5, "note": "Deep middle post" },
+        { "t": 1, "x": 26.67, "y": 16, "note": "Patrol middle 1/3" },
+        { "t": 2.4, "x": 35, "y": 18.5, "note": "Drive over top of Z post" },
+        { "t": 4, "x": 36, "y": 21, "note": "Deep middle locked" }
+      ]
+    }
+  ]
+}

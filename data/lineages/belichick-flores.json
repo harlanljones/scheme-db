@@ -1,0 +1,27 @@
+{
+  "$schema": "../schema/lineage.schema.json",
+  "id": "belichick-flores",
+  "name": "Bill Belichick / Brian Flores Psycho Blitz Tree",
+  "patriarch": "Bill Belichick → Brian Flores",
+  "side": "defense",
+  "description": "A radical, highly aggressive defensive philosophy based on extreme binary pressure looks: either sending 6-7 rushers in all-out Cover 0 house blitzes, or bluffing everybody and dropping 8 into muddy coverage zones.",
+  "rootNodes": [
+    {
+      "coachId": "bill-belichick",
+      "children": [
+        {
+          "coachId": "brian-flores",
+          "children": []
+        },
+        {
+          "coachId": "steve-spagnuolo",
+          "children": []
+        },
+        {
+          "coachId": "todd-bowles",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "offense": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 53.33
+          },
+          "y": {
+            "type": "number"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ol",
+              "qb",
+              "rb",
+              "te",
+              "wr",
+              "dl",
+              "lb",
+              "db"
+            ]
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "role"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "defense": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 53.33
+          },
+          "y": {
+            "type": "number"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "ol",
+              "qb",
+              "rb",
+              "te",
+              "wr",
+              "dl",
+              "lb",
+              "db"
+            ]
+          }
+        },
+        "required": [
+          "x",
+          "y",
+          "role"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "offense",
+    "defense"
+  ],
+  "additionalProperties": false
+}

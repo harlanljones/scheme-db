@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "flex-lb-strength-shift-motion",
+  "schemeId": "landry-flex",
+  "order": 3,
+  "name": "Linebacker Strength Shift vs Motion",
+  "personnel": "Base 4-3 Flex (Both DTs Flexed)",
+  "formation": "11P Gun Slot Motion Right vs Shifting Flex",
+  "situation": "1st & 10, +25, formation-strength down",
+  "coverage": "Cover 3 Sky behind strength shift",
+  "frontName": "4-3 Double Flex with Shifting Backers",
+  "summary": {
+    "motive": "Answer offensive formation-strength motion with a synchronized linebacker shift so the defense is never caught flowing cross-eyed into a perimeter run.",
+    "keyDefender": "The Mike linebacker executing the strength shift",
+    "whyItWorks": "Most defenses lose leverage when strength flips; Landry’s shift keeps every defender aligned to declared strength, so sweeps meet pre-positioned pursuit instead of reactive flow.",
+    "failureMode": "A quick snap immediately after the motion catches the shift incomplete, leaving the old strength side soft to an inside zone hit."
+  },
+  "beats": [
+    {
+      "t": 0.2,
+      "title": "1. The Motion That Moves Both Sides",
+      "text": "The slot receiver carries the motion across the formation, flipping the offensive strength, but the Dallas linebackers begin sliding in perfect sync before the ball is snapped.",
+      "focus": ["H", "MIKE", "SAM", "SS"]
+    },
+    {
+      "t": 0.6,
+      "title": "2. The Synchronized Shift",
+      "text": "Mike sprints his shift to stack over the new play-side guard, Sam walks to the apex of the motioned slot, and the safety rotates to the sky half, preserving strength leverage everywhere.",
+      "focus": ["MIKE", "SAM", "SS", "WILL"]
+    },
+    {
+      "t": 1.8,
+      "title": "3. Sweeping Into Prepared Strength",
+      "text": "The offense launches its flank sweep directly into the freshly shifted strength, running straight at defenders who moved there voluntarily.",
+      "focus": ["T", "MIKE", "RCB", "SDT"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. The Strength-Side Swarm",
+      "text": "The chasing flexed tackle, shifted Mike, and forcing corner converge at the perimeter landmark, holding the sweep to a token gain.",
+      "focus": ["WDT", "MIKE", "RCB", "T"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["flex-line-game-rush"],
+    "playsOff": ["flex-tackle-tackle-two-back"],
+    "tell": "The Mike takes visible sprint steps parallel to the line during the motion rather than shuffling, showing the shift is coached as a sprint-to-landmark rule."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}

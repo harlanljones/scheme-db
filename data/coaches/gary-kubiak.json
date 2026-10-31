@@ -1,0 +1,20 @@
+{
+  "$schema": "../schema/coach.schema.json",
+  "id": "gary-kubiak",
+  "name": "Gary Kubiak",
+  "role2026": "Super Bowl 50 Champion HC / Split-Zone Master",
+  "team": "Denver Broncos / Houston Texans (Patriarch)",
+  "lineage": "shanahan-kubiak",
+  "mentorId": "mike-shanahan",
+  "disciples": ["klint-kubiak", "kevin-stefanski"],
+  "side": "offense",
+  "philosophy": "Perfected under-center stretch-zone and split-zone slicing action with the fullback/tight end, unleashing devastating throwback bootlegs, deep dagger shots, and Y-Leaks against over-aggressive front sevens.",
+  "keyConcepts": ["Split-Zone Slice", "Under-Center Play-Action", "Tight-End Y-Leak", "Condensed Formations"],
+  "schemeIds": ["kubiak-split-zone"],
+  "isHeadCoach2026": false,
+  "notableAchievements": [
+    "Super Bowl 50 Champion HC",
+    "4x Super Bowl Champion (Player & Coach)",
+    "Architect of Historic Run-Play-Action Offenses"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schema/concept.schema.json",
+  "id": "twoman-fade-beater-demo",
+  "schemeId": "cover2-man-under",
+  "order": 2,
+  "name": "Fade Beater Demo",
+  "personnel": "Nickel 2-Man Package (4 DL, 3 LB, 4 DB)",
+  "formation": "2-Man Shell vs Gun 12 Personnel Solo Left",
+  "situation": "3rd & Goal from the 6, red zone",
+  "coverage": "Cover 2 Man-Under (Press-Trail Corners)",
+  "frontName": "Under Front, Four-Man Rush",
+  "summary": {
+    "motive": "Demonstrate why the classic red-zone fade fails against press-trail — the isolation throw offenses covet is exactly what this structure invites and erases.",
+    "keyDefender": "LCB playing outside-leverage press — his jam converts the fade into a footrace along a sideline he already owns",
+    "whyItWorks": "Outside leverage narrows the route before it develops, while the deep half erases anything that somehow clears the trail.",
+    "failureMode": "A clean inside-to-outside stack beating the jam in one move — then only the safety’s angle stands between the fade and six."
+  },
+  "beats": [
+    {
+      "t": 0,
+      "title": "1. Why the Fade Tempts",
+      "text": "An isolated receiver with the end zone behind him is the throw every coordinator wants — but this island comes pre-loaded with an outside-leverage press corner.",
+      "focus": ["X", "LCB", "FS"]
+    },
+    {
+      "t": 0.8,
+      "title": "2. The Jam Steals the Release",
+      "text": "A fade needs a clean stack from step one; the two-hand punch converts the release into a shoving match that kills the route’s spacing.",
+      "focus": ["X", "LCB"]
+    },
+    {
+      "t": 1.9,
+      "title": "3. Trail Rides It to the Sideline",
+      "text": "With no room to stack, the receiver runs the fade alongside the corner, narrowing himself against the boundary he cannot escape.",
+      "focus": ["LCB", "X", "FS"]
+    },
+    {
+      "t": 3.2,
+      "title": "4. Half Safety Erases the Shot",
+      "text": "The back-shoulder launch sails over both trail and receiver and out of bounds — the defense gambled nothing and lost nothing.",
+      "focus": ["FS", "LCB", "QB"]
+    }
+  ],
+  "relations": {
+    "setsUp": ["twoman-edge-blitz"],
+    "playsOff": ["twoman-red-zone-compressed-twins"],
+    "tell": "The corner is at 1 yard with pure outside leverage staring through the receiver — soft-squat Cover 2 sits at 7 yards with eyes on the QB."
+  },
+  "provenance": {
+    "confidence": "illustrative",
+    "sources": []
+  }
+}
