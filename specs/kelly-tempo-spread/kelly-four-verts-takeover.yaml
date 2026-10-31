@@ -15,10 +15,10 @@ defense:
   NT: { rush: interior, depth: 2.6 }
   3T: { rush: interior, depth: 2.6 }
   SDE: { rush: edge, depth: 2.8 }
-  WILL: { zone: hook, side: left }
-  MIKE: { zone: hook, side: middle }
+  WILL: { zone: hook-curl, side: left }
+  MIKE: { zone: hole }
   NICKEL: { man: H }
-  LCB: { zone: deep-quarter, side: left }
-  RCB: { zone: deep-quarter, side: right }
-  SS: { zone: deep-middle }
-  FS: { zone: deep-middle }
+  LCB: { zone: quarter-outside, side: left }
+  RCB: { zone: quarter-outside, side: right }
+  SS: { zone: quarter-inside, side: right }
+  FS: { zone: quarter-inside, side: left }

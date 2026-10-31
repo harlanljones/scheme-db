@@ -1,12 +1,12 @@
 import type { Formation, Tracks } from '../schema/schema';
 import type { Spec } from './schema';
-import { DROPS, ROUTES, ZONE_SHAPES, type Point, type ZoneSide } from './vocabulary';
+import { DEEP_ZONES, DROPS, ROUTES, ZONE_SHAPES, type Point, type ZoneSide } from './vocabulary';
 
 /** Bump when a template changes in a way that moves compiled waypoints. Recorded in `generatedFrom`. */
-export const COMPILER_VERSION = '0.1.0';
+export const COMPILER_VERSION = '0.2.0';
 
-/** Seconds between compiled waypoints; the viewer's spline smooths the corners between them. */
-export const STEP_SECONDS = 0.4;
+/** Seconds between compiled waypoints. Short enough that the viewer's spline keeps the corner of a route break. */
+export const STEP_SECONDS = 0.2;
 
 const MIDFIELD = 26.67;
 const FIELD_MIN_X = 0.5;
@@ -57,12 +57,12 @@ function routePath(route: keyof typeof ROUTES, start: Point, depth: number | und
   const stem = (d: number): Point[] => [start, { x, y: y + d }];
   switch (route) {
     case 'go':
-      return { path: [start, { x: x + inward * 0.12 * REACH, y: y + REACH }], pace: 1 };
+      return { path: [start, { x, y: y + REACH }], pace: 1 };
     case 'seam':
       return { path: [start, { x: x + inward * 0.4 * REACH, y: y + REACH }], pace: 1 };
     case 'slant': {
-      const d = depth ?? 2;
-      return { path: [...stem(d), { x: x + inward * 0.6 * REACH, y: y + d + REACH }], pace: 1 };
+      const d = depth ?? 3;
+      return { path: [...stem(d), { x: x + inward * REACH, y: y + d + REACH }], pace: 1 };
     }
     case 'out': {
       const d = depth ?? 10;
@@ -103,7 +103,7 @@ function routePath(route: keyof typeof ROUTES, start: Point, depth: number | und
     }
     case 'swing': {
       const dir = toward ?? outward;
-      return { path: [start, { x: x + dir * 3, y: y + 1.5 }, { x: x + dir * 8, y: y + 5.5 }, { x: x + dir * 14, y: y + 11 }], pace: 0.5 };
+      return { path: [start, { x: x + dir * 3, y: y + 0.5 }, { x: x + dir * 8, y: y + 1.5 }, { x: x + dir * 14, y: y + 3 }], pace: 0.5 };
     }
   }
 }
@@ -200,17 +200,23 @@ export function compileSpec(spec: Spec, formation: Formation, specHash: string):
     }
   }
 
+  const deepZonesTaken = new Map<string, string>();
   for (const player of all.filter((p) => p.side === 'defense')) {
     const job = defenseJobs.get(player.id)!;
     const { start } = player;
     if ('rush' in job) {
       const penetration = job.depth ?? 3;
-      const drift = job.rush === 'edge' ? Math.sign(start.x - MIDFIELD || 1) * 0.8 : 0;
-      motions.set(player.id, (t) => ({ x: start.x + drift * settle(t, TAU), y: start.y + penetration * settle(t, TAU) }));
+      const drift = job.rush === 'edge' ? -Math.sign(start.x - MIDFIELD || 1) * 0.8 : 0;
+      motions.set(player.id, (t) => ({ x: start.x + drift * settle(t, TAU), y: start.y - penetration * settle(t, TAU) }));
     } else if ('zone' in job) {
       const { landmarks, tau } = ZONE_SHAPES[job.zone];
       const side: ZoneSide = job.side ?? (Object.keys(landmarks).length === 1 ? (Object.keys(landmarks)[0] as ZoneSide) : start.x < MIDFIELD ? 'left' : 'right');
       const landmark = landmarks[side];
+      if (DEEP_ZONES.includes(job.zone)) {
+        const key = `${job.zone}/${side}`;
+        if (deepZonesTaken.has(key)) throw new Error(`defense: ${player.id}: ${key} is already covered by ${deepZonesTaken.get(key)}`);
+        deepZonesTaken.set(key, player.id);
+      }
       if (!landmark) throw new Error(`defense: ${player.id}: zone "${job.zone}" has no "${side}" side (${Object.keys(landmarks).join(', ')})`);
       motions.set(player.id, (t) => ({
         x: landmark.x + (start.x - landmark.x) * Math.exp(-t / tau),

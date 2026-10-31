@@ -3,6 +3,7 @@ import * as path from 'node:path';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
 import { parse } from 'yaml';
+import { positionAt } from '../../engine/interpolate';
 import { validatePlay } from '../../engine/validate';
 import { alignmentOverrides } from '../../schema/formations';
 import { loadDataset } from '../../schema/load';
@@ -29,6 +30,7 @@ const compiled = FILES.map((file) => {
   const { spec, hash } = load(file);
   return { file, spec, hash, tracks: compileSpec(spec, formationOf(spec.formation), hash) };
 });
+const MIDFIELD_X = 26.67;
 const mesh = compiled.find((c) => c.spec.conceptId === 'kelly-mesh-spacing-concept')!;
 const xy = (tracks: Tracks, id: string, t: number): { x: number; y: number } => {
   const player = [...tracks.offense, ...tracks.defense].find((p) => p.id === id)!;
@@ -76,19 +78,119 @@ describe('play specs', () => {
     }
   });
 
-  it('stays close to the hand-made tracks in the first 1.2 s (regression floor, not a claim of equality)', () => {
-    let within = 0;
+  it('compares against the hand-made tracks without gating on them (they carry known errors; see specs/README.md)', () => {
     let total = 0;
-    let worst = 0;
-    for (const { spec, tracks } of compiled) {
-      const fit = compareTracks(tracks, dataset.tracks.find((t) => t.conceptId === spec.conceptId)!);
-      within += fit.within;
-      total += fit.total;
-      worst = Math.max(worst, ...fit.players.map((p) => p.maxGapEarly));
-    }
+    for (const { spec, tracks } of compiled) total += compareTracks(tracks, dataset.tracks.find((t) => t.conceptId === spec.conceptId)!).total;
     expect(total).toBe(66);
-    expect(within).toBeGreaterThanOrEqual(20);
-    expect(worst).toBeLessThan(5);
+  });
+});
+
+const everyTrack = (tracks: Tracks) => [...tracks.offense, ...tracks.defense];
+const at = (tracks: Tracks, id: string, t: number) => positionAt(everyTrack(tracks).find((p) => p.id === id)!, t);
+const timesTo = (duration: number): number[] => Array.from({ length: Math.floor(duration * 10 + 1e-9) + 1 }, (_, i) => i / 10);
+const tracksOf = (conceptId: string): Tracks => compiled.find((c) => c.spec.conceptId === conceptId)!.tracks;
+
+// Gate A: physics. Hard limits that hold for any football play, not a fit to anyone's data.
+describe('compiled tracks obey physics', () => {
+  const MAX_SPEED_YARDS_PER_SECOND = 11;
+
+  it('keeps every player at or below a sprint speed no NFL player reaches', () => {
+    for (const { spec, tracks } of compiled) {
+      for (const player of everyTrack(tracks)) {
+        let previous = positionAt(player, 0);
+        for (const t of timesTo(tracks.duration).slice(1)) {
+          const next = positionAt(player, t);
+          const speed = Math.hypot(next.x - previous.x, next.y - previous.y) * 10;
+          expect(speed, `${spec.conceptId} ${player.id} at ${t}s`).toBeLessThan(MAX_SPEED_YARDS_PER_SECOND);
+          previous = next;
+        }
+      }
+    }
+  });
+
+  it('keeps blockers from walking downfield past their start in pass protection', () => {
+    for (const { spec, tracks } of compiled) {
+      for (const player of tracks.offense.filter((p) => p.role === 'ol')) {
+        const start = positionAt(player, 0);
+        for (const t of timesTo(tracks.duration)) expect(positionAt(player, t).y, `${spec.conceptId} ${player.id} at ${t}s`).toBeLessThanOrEqual(start.y + 0.5);
+      }
+    }
+  });
+
+  it('sends every rusher into the backfield and ends closer to the quarterback than he began', () => {
+    for (const { spec, tracks } of compiled) {
+      for (const [id, job] of Object.entries(spec.defense)) {
+        if (!('rush' in job)) continue;
+        let previousY = at(tracks, id, 0).y;
+        for (const t of timesTo(tracks.duration).slice(1)) {
+          const { y } = at(tracks, id, t);
+          expect(y, `${spec.conceptId} ${id} at ${t}s`).toBeLessThanOrEqual(previousY + 1e-6);
+          previousY = y;
+        }
+        const gap = (t: number) => {
+          const rusher = at(tracks, id, t);
+          const qb = at(tracks, 'QB', t);
+          return Math.hypot(rusher.x - qb.x, rusher.y - qb.y);
+        };
+        expect(gap(tracks.duration), `${spec.conceptId} ${id}`).toBeLessThan(gap(0));
+      }
+    }
+  });
+
+  it('never stacks two teammates on the same spot', () => {
+    for (const { spec, tracks } of compiled) {
+      for (const side of ['offense', 'defense'] as const) {
+        const players = tracks[side];
+        for (const t of timesTo(tracks.duration)) {
+          for (let i = 0; i < players.length; i++) {
+            for (let j = i + 1; j < players.length; j++) {
+              const a = positionAt(players[i], t);
+              const b = positionAt(players[j], t);
+              expect(Math.hypot(a.x - b.x, a.y - b.y), `${spec.conceptId} ${players[i].id}/${players[j].id} at ${t}s`).toBeGreaterThanOrEqual(0.5);
+            }
+          }
+        }
+      }
+    }
+  });
+});
+
+// Gate C: concept assertions. What the concept is supposed to teach, stated once per spec.
+describe('compiled tracks still teach their concept', () => {
+  const NUMBERS_X = [12, 41.33];
+
+  it('four verts: all four receivers are 10 yards deep by 2.6 s, the seams stay inside the numbers, and the two safeties split the middle', () => {
+    const tracks = tracksOf('kelly-four-verts-takeover');
+    for (const id of ['X', 'H', 'Y', 'Z']) expect(at(tracks, id, 2.6).y, id).toBeGreaterThanOrEqual(10);
+    for (const id of ['H', 'Y']) {
+      const { x } = at(tracks, id, 2.6);
+      expect(x, id).toBeGreaterThan(NUMBERS_X[0]);
+      expect(x, id).toBeLessThan(NUMBERS_X[1]);
+    }
+    expect(at(tracks, 'FS', 2.6).x).toBeLessThan(MIDFIELD_X);
+    expect(at(tracks, 'SS', 2.6).x).toBeGreaterThan(MIDFIELD_X);
+  });
+
+  it('mesh: the two shallow crossers bring their paths within 2.5 yards of each other', () => {
+    // The stronger form, crossing within 2 yd at 1.4-2.0 s as real mesh does, waits on the receiver speed profile.
+    const tracks = tracksOf('kelly-mesh-spacing-concept');
+    const closest = Math.min(
+      ...timesTo(tracks.duration).map((t) => {
+        const h = at(tracks, 'H', t);
+        const y = at(tracks, 'Y', t);
+        return Math.hypot(h.x - y.x, h.y - y.y);
+      }),
+    );
+    expect(closest).toBeLessThan(2.5);
+    for (const id of ['H', 'Y']) expect(at(tracks, id, tracks.duration).y, id).toBeLessThan(8);
+  });
+
+  it('slant-flat: at the throw the slant is inside the defender who carries the flat', () => {
+    const tracks = tracksOf('payton-slant-flat-rhythm');
+    const z = at(tracks, 'Z', tracks.duration);
+    const flatDefender = at(tracks, 'NICKEL', tracks.duration);
+    expect(Math.abs(z.x - MIDFIELD_X)).toBeLessThan(Math.abs(flatDefender.x - MIDFIELD_X));
+    expect(z.y).toBeGreaterThan(at(tracks, 'H', tracks.duration).y);
   });
 });
 
@@ -177,5 +279,63 @@ describe('compileSpec', () => {
 
   it('refuses an override for a player that is not in the formation', () => {
     expect(() => compile((s) => (s.overrides = { Q: { path: [{ t: 1, x: 1, y: 1 }] } }))).toThrow(/overrides: "Q"/);
+  });
+
+  const heading = (tracks: Tracks, id: string, from: number, to: number): number => {
+    const a = at(tracks, id, from);
+    const b = at(tracks, id, to);
+    return (Math.atan2(Math.abs(b.x - a.x), b.y - a.y) * 180) / Math.PI;
+  };
+
+  it('runs a go route straight upfield with no lateral drift', () => {
+    const tracks = compile(() => undefined);
+    for (const id of ['X', 'Z']) expect(at(tracks, id, 3).x, id).toBeCloseTo(at(tracks, id, 0).x, 1);
+  });
+
+  it('cuts a slant at about 45 degrees after a stem of about 3 yards', () => {
+    const tracks = compile((s) => {
+      (s.offense as Record<string, unknown>).X = { route: 'slant' };
+    });
+    const start = at(tracks, 'X', 0);
+    const times = timesTo(tracks.duration);
+    const stemmed = times.filter((t) => at(tracks, 'X', t).y - start.y < 2.5);
+    expect(stemmed.length).toBeGreaterThan(0);
+    for (const t of stemmed) expect(Math.abs(at(tracks, 'X', t).x - start.x), `at ${t}s`).toBeLessThan(0.1);
+    const brokenAt = times.find((t) => Math.abs(at(tracks, 'X', t).x - start.x) > 0.5)!;
+    expect(heading(tracks, 'X', brokenAt, brokenAt + 1)).toBeGreaterThan(40);
+    expect(heading(tracks, 'X', brokenAt, brokenAt + 1)).toBeLessThan(50);
+  });
+
+  it('keeps a swing behind the line of scrimmage', () => {
+    const tracks = compile((s) => {
+      (s.offense as Record<string, unknown>).RB = { route: 'swing', side: 'left' };
+    });
+    for (const t of timesTo(tracks.duration)) expect(at(tracks, 'RB', t).y).toBeLessThan(0);
+  });
+
+  it('moves rushers into the backfield, edges drifting toward the quarterback', () => {
+    const tracks = compile(() => undefined);
+    const end = tracks.duration;
+    for (const id of ['WDE', 'NT', '3T', 'SDE']) expect(at(tracks, id, end).y, id).toBeLessThan(at(tracks, id, 0).y);
+    expect(at(tracks, 'WDE', end).x).toBeGreaterThan(at(tracks, 'WDE', 0).x);
+    expect(at(tracks, 'SDE', end).x).toBeLessThan(at(tracks, 'SDE', 0).x);
+    expect(at(tracks, 'NT', end).x).toBeCloseTo(at(tracks, 'NT', 0).x, 5);
+  });
+
+  it('refuses two defenders in the same deep zone and side, and allows them in different sides', () => {
+    expect(() =>
+      compile((s) => {
+        (s.defense as Record<string, unknown>).FS = { zone: 'quarter-inside', side: 'right' };
+      }),
+    ).toThrow(/quarter-inside\/right is already covered by SS/);
+    expect(() => compile(() => undefined)).not.toThrow();
+  });
+
+  it('gives the middle hole no sides and the hook-curl a left and a right', () => {
+    expect(() =>
+      compile((s) => {
+        (s.defense as Record<string, unknown>).MIKE = { zone: 'hole', side: 'left' };
+      }),
+    ).toThrow(/has no "left" side/);
   });
 });

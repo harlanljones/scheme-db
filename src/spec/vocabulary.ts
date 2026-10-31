@@ -7,9 +7,9 @@
  */
 
 export const ROUTES = {
-  go: 'Vertical release straight upfield, leaning slightly toward the middle.',
-  seam: 'Vertical release up the seam between the numbers and the hash, leaning toward the middle.',
-  slant: 'Short stem, then a hard cut toward the middle at about 30 degrees from vertical.',
+  go: 'Vertical release straight upfield.',
+  seam: 'Vertical release up the seam between the numbers and the hash, leaning toward the middle (the lean is unverified against tracking data).',
+  slant: 'Stem of about 3 yards, then a hard 45-degree cut toward the middle.',
   out: 'Stem to `depth`, then a flat 90-degree cut toward the sideline.',
   in: 'Stem to `depth`, then a flat 90-degree cut toward the middle (a dig).',
   curl: 'Stem to `depth`, then turn back toward the quarterback and settle.',
@@ -18,7 +18,7 @@ export const ROUTES = {
   post: 'Stem to `depth`, then a 45-degree cut toward the goalposts.',
   flat: 'Quick release toward the sideline, reaching `depth` yards upfield.',
   shallow: 'Short crossing route that runs the field at `depth` yards, under the linebackers.',
-  swing: "A back's slow arc toward the sideline behind and then past the line, reaching upfield.",
+  swing: "A back's slow arc toward the sideline, staying behind the line of scrimmage while widening.",
 } as const;
 
 export const BLOCKS = {
@@ -34,19 +34,24 @@ export const DROPS = {
 } as const;
 
 export const RUSHES = {
-  edge: 'Rush the passer around the tackle, keeping contain: penetrate while drifting outward.',
-  interior: 'Rush the passer between the tackles: penetrate straight upfield.',
+  edge: 'Rush the passer around the tackle: get into the backfield while drifting slightly toward the quarterback.',
+  interior: 'Rush the passer between the tackles: get into the backfield on a straight line.',
 } as const;
 
 export const ZONES = {
-  hook: 'Underneath zone in the middle of the field, about 9 to 10 yards deep.',
+  hole: 'Underneath zone in the middle of the field, about 10 yards deep.',
+  'hook-curl': 'Underneath zone between the hash and the numbers, about 9 yards deep.',
   'curl-flat': 'Underneath zone outside the hash, about 7 yards deep.',
   flat: 'Shallow outside zone, about 4 yards deep along the sideline.',
-  'deep-quarter': 'Outside deep quarter of the field, about 16 yards deep.',
+  'quarter-outside': 'Outside deep quarter of the field, about 16 yards deep.',
+  'quarter-inside': 'Inside deep quarter of the field, about 16 yards deep.',
   'deep-half': 'One half of the deep field, about 15 yards deep.',
   'deep-third': 'One third of the deep field, about 15 yards deep.',
-  'deep-middle': 'Deep middle of the field, about 15 yards deep.',
+  'deep-free': 'Deep middle of the field, about 15 yards deep: the single-high safety.',
 } as const;
+
+/** A deep zone is defended by one player; a spec that gives two players the same deep zone and side is refused. */
+export const DEEP_ZONES: readonly (keyof typeof ZONES)[] = ['quarter-outside', 'quarter-inside', 'deep-half', 'deep-third', 'deep-free'];
 
 export const MAN = 'Follow the offensive player named in `man`, trailing him about `cushion` yards behind.';
 
@@ -74,11 +79,14 @@ export interface ZoneShape {
 }
 
 export const ZONE_SHAPES: Record<Zone, ZoneShape> = {
-  hook: { tau: 0.95, landmarks: { left: { x: 21, y: 9 }, middle: { x: 26.67, y: 10 }, right: { x: 32.3, y: 9 } } },
+  hole: { tau: 0.95, landmarks: { middle: { x: 26.67, y: 10 } } },
+  'hook-curl': { tau: 0.95, landmarks: { left: { x: 21, y: 9 }, right: { x: 32.3, y: 9 } } },
   'curl-flat': { tau: 0.95, landmarks: { left: { x: 12, y: 7 }, right: { x: 41.3, y: 7 } } },
   flat: { tau: 0.95, landmarks: { left: { x: 7, y: 4 }, right: { x: 46.3, y: 4 } } },
-  'deep-quarter': { tau: 1.8, landmarks: { left: { x: 9, y: 16 }, right: { x: 44.3, y: 16 } } },
+  'quarter-outside': { tau: 1.8, landmarks: { left: { x: 9, y: 16 }, right: { x: 44.3, y: 16 } } },
+  // Landmarks are the centres of the two inside quarters of the field (3/8 and 5/8 of its width).
+  'quarter-inside': { tau: 4, landmarks: { left: { x: 20, y: 16 }, right: { x: 33.3, y: 16 } } },
   'deep-half': { tau: 4, landmarks: { left: { x: 14, y: 15 }, right: { x: 39.3, y: 15 } } },
   'deep-third': { tau: 2.5, landmarks: { left: { x: 9, y: 15 }, middle: { x: 26.67, y: 16 }, right: { x: 44.3, y: 15 } } },
-  'deep-middle': { tau: 4, landmarks: { middle: { x: 26.67, y: 15 } } },
+  'deep-free': { tau: 4, landmarks: { middle: { x: 26.67, y: 15 } } },
 };

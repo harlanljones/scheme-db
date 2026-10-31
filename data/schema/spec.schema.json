@@ -34,17 +34,17 @@
                   {
                     "type": "string",
                     "const": "go",
-                    "description": "Vertical release straight upfield, leaning slightly toward the middle."
+                    "description": "Vertical release straight upfield."
                   },
                   {
                     "type": "string",
                     "const": "seam",
-                    "description": "Vertical release up the seam between the numbers and the hash, leaning toward the middle."
+                    "description": "Vertical release up the seam between the numbers and the hash, leaning toward the middle (the lean is unverified against tracking data)."
                   },
                   {
                     "type": "string",
                     "const": "slant",
-                    "description": "Short stem, then a hard cut toward the middle at about 30 degrees from vertical."
+                    "description": "Stem of about 3 yards, then a hard 45-degree cut toward the middle."
                   },
                   {
                     "type": "string",
@@ -89,7 +89,7 @@
                   {
                     "type": "string",
                     "const": "swing",
-                    "description": "A back's slow arc toward the sideline behind and then past the line, reaching upfield."
+                    "description": "A back's slow arc toward the sideline, staying behind the line of scrimmage while widening."
                   }
                 ]
               },
@@ -225,12 +225,12 @@
                   {
                     "type": "string",
                     "const": "edge",
-                    "description": "Rush the passer around the tackle, keeping contain: penetrate while drifting outward."
+                    "description": "Rush the passer around the tackle: get into the backfield while drifting slightly toward the quarterback."
                   },
                   {
                     "type": "string",
                     "const": "interior",
-                    "description": "Rush the passer between the tackles: penetrate straight upfield."
+                    "description": "Rush the passer between the tackles: get into the backfield on a straight line."
                   }
                 ]
               },
@@ -257,8 +257,13 @@
                 "anyOf": [
                   {
                     "type": "string",
-                    "const": "hook",
-                    "description": "Underneath zone in the middle of the field, about 9 to 10 yards deep."
+                    "const": "hole",
+                    "description": "Underneath zone in the middle of the field, about 10 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "hook-curl",
+                    "description": "Underneath zone between the hash and the numbers, about 9 yards deep."
                   },
                   {
                     "type": "string",
@@ -272,8 +277,13 @@
                   },
                   {
                     "type": "string",
-                    "const": "deep-quarter",
+                    "const": "quarter-outside",
                     "description": "Outside deep quarter of the field, about 16 yards deep."
+                  },
+                  {
+                    "type": "string",
+                    "const": "quarter-inside",
+                    "description": "Inside deep quarter of the field, about 16 yards deep."
                   },
                   {
                     "type": "string",
@@ -287,8 +297,8 @@
                   },
                   {
                     "type": "string",
-                    "const": "deep-middle",
-                    "description": "Deep middle of the field, about 15 yards deep."
+                    "const": "deep-free",
+                    "description": "Deep middle of the field, about 15 yards deep: the single-high safety."
                   }
                 ]
               },
