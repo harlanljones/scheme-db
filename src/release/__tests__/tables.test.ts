@@ -25,7 +25,9 @@ describe('release tables', () => {
   });
 
   it('gives every row exactly as many cells as the table has columns', () => {
-    for (const t of tables) for (const row of t.rows) expect(row, t.name).toHaveLength(t.columns.length);
+    // One assertion per table: 160,000 frame rows make a per-row expect() slow enough to time out on CI.
+    const ragged = tables.filter((t) => t.rows.some((row) => row.length !== t.columns.length)).map((t) => t.name);
+    expect(ragged).toEqual([]);
   });
 
   it('has unique primary keys in every table', () => {
@@ -56,7 +58,8 @@ describe('release tables', () => {
     for (const [name, column, valid] of refs) {
       const t = table(name);
       const index = t.columns.findIndex((c) => c.name === column);
-      for (const row of t.rows) if (row[index] !== null) expect(valid.has(row[index]), `${name}.${column} = ${row[index]}`).toBe(true);
+      const dangling = t.rows.filter((row) => row[index] !== null && !valid.has(row[index])).map((row) => row[index]);
+      expect(dangling, `${name}.${column}`).toEqual([]);
     }
   });
 
