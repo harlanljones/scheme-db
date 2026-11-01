@@ -11,7 +11,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     team: 'San Francisco 49ers (Patriarch)',
     treeBranch: 'shanahan-kubiak',
     mentorId: 'paul-brown',
-    disciples: ['mike-shanahan', 'andy-reid', 'mike-holmgren', 'george-seifert'],
+    disciples: ['mike-holmgren', 'george-seifert'],
     category: 'offense',
     philosophy:
       'The architect of the West Coast Offense: short, horizontal rhythm passing as a controlled extension of the run game, utilizing spacing, timed drops, and run-after-catch geometry to manipulate defensive leverage.',
@@ -27,7 +27,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: '2x Super Bowl Champion HC / Wide Zone Pioneer',
     team: 'Denver Broncos / SF 49ers (Patriarch)',
     treeBranch: 'shanahan-kubiak',
-    mentorId: 'bill-walsh',
+    mentorId: 'george-seifert',
     disciples: ['kyle-shanahan', 'sean-mcvay', 'gary-kubiak', 'matt-lafleur'],
     category: 'offense',
     philosophy:
@@ -62,7 +62,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     team: 'Seattle Seahawks (Patriarch)',
     treeBranch: 'carroll-saleh-wide9',
     mentorId: 'monte-kiffin',
-    disciples: ['robert-saleh', 'demeco-ryans', 'dan-quinn', 'gus-bradley'],
+    disciples: ['robert-saleh', 'dan-quinn', 'gus-bradley'],
     category: 'defense',
     philosophy:
       'Architect of the "Legion of Boom" single-high Cover 3 match system: physical press-bail corners, disciplined deep-third integrity, and relentless 4-man front pressure.',
@@ -102,7 +102,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     disciples: ['klint-kubiak', 'mike-lafleur', 'mike-mcdaniel', 'matt-lafleur', 'bobby-slowik'],
     category: 'offense',
     philosophy:
-      'Mastery of offensive sequencing: running outside zone to stretch defensive flow horizontally, then attacking with play-action overs and naked bootlegs that look identical for the first 1.2 seconds.',
+      'Mastery of offensive sequencing: running outside zone to stretch defensive flow horizontally, then attacking with play-action overs and naked bootlegs that stay close to it for the first 1.2 seconds.',
     keyConcepts: ['Outside Zone', 'Play-Action Over', 'Naked Bootleg', 'Pre-Snap Jet Motion', '21 Personnel Iso'],
     schemeFamilyIds: ['shanahan-wide-zone'],
     isHeadCoach2026: true,
@@ -133,7 +133,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     team: 'Los Angeles Rams',
     treeBranch: 'shanahan-kubiak',
     mentorId: 'mike-shanahan',
-    disciples: ['matt-lafleur', 'kevin-stefanski', 'kevin-oconnell', 'liam-coen'],
+    disciples: ['matt-lafleur', 'kevin-oconnell', 'liam-coen'],
     category: 'offense',
     philosophy:
       'Marrying condensed 11 and 13 personnel groupings with Duo and Mid-Zone runs, feeding boundary crossers, Sail concepts, and illusionary play-action reads off condensed bunch sets.',
@@ -220,8 +220,8 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: 'Head Coach, Kansas City Chiefs',
     team: 'Kansas City Chiefs',
     treeBranch: 'reid-west-coast',
-    mentorId: 'bill-walsh',
-    disciples: ['john-harbaugh', 'shane-steichen', 'nick-sirianni', 'sean-payton', 'chip-kelly'],
+    mentorId: 'mike-holmgren',
+    disciples: ['john-harbaugh', 'steve-spagnuolo'],
     category: 'offense',
     philosophy:
       'Master of spacing, motion, and vertical stretch. Melds traditional West Coast timing with Spread-RPO concepts, Mesh shallow crosses, and tight-end Iso matchups.',
@@ -271,7 +271,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: 'Head Coach, Philadelphia Eagles',
     team: 'Philadelphia Eagles',
     treeBranch: 'reid-west-coast',
-    mentorId: 'andy-reid',
+    mentorId: 'frank-reich',
     disciples: ['shane-steichen'],
     category: 'offense',
     philosophy:
@@ -329,7 +329,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     team: 'Philadelphia Eagles',
     treeBranch: 'fangio-two-high',
     mentorId: 'jim-mora',
-    disciples: ['chris-shula'],
+    disciples: [],
     category: 'defense',
     philosophy:
       'Presenting an impenetrable two-high safety shell pre-snap to disguise Cover 6, Cover 8, and Quarters, paired with light 3-man Tite/Penny fronts to eliminate explosive crossers.',
@@ -345,7 +345,6 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: 'Defensive Coordinator, Los Angeles Rams',
     team: 'Los Angeles Rams',
     treeBranch: 'fangio-two-high',
-    mentorId: 'vic-fangio',
     disciples: [],
     category: 'defense',
     philosophy:
@@ -362,8 +361,8 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
   'robert-saleh': {
     id: 'robert-saleh',
     name: 'Robert Saleh',
-    role2026: 'Defensive Strategist / Head Coach',
-    team: 'San Francisco 49ers / NY Jets',
+    role2026: 'Head Coach, Tennessee Titans',
+    team: 'Tennessee Titans',
     treeBranch: 'carroll-saleh-wide9',
     mentorId: 'pete-carroll',
     disciples: ['demeco-ryans'],
@@ -422,7 +421,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: 'Head Coach, Chicago Bears',
     team: 'Chicago Bears',
     treeBranch: 'shanahan-kubiak',
-    mentorId: 'kyle-shanahan',
+    mentorId: 'dan-campbell',
     disciples: [],
     category: 'offense',
     philosophy:
@@ -442,8 +441,8 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: 'Defensive Coordinator, Kansas City Chiefs',
     team: 'Kansas City Chiefs',
     treeBranch: 'belichick-flores',
-    mentorId: 'bill-belichick',
-    disciples: ['dan-quinn'],
+    mentorId: 'jim-johnson',
+    disciples: [],
     category: 'defense',
     philosophy:
       'Exotic blitz packages designed to create mental confusion rather than just physical pressure. Spagnuolo deploys corner blitzes, cross creepers, split-safety inversions, and Cover 0 max-heat looks that render pre-snap identification impossible for quarterbacks.',
@@ -482,7 +481,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     role2026: 'Head Coach, Tampa Bay Buccaneers',
     team: 'Tampa Bay Buccaneers',
     treeBranch: 'belichick-flores',
-    mentorId: 'bill-belichick',
+    mentorId: 'bruce-arians',
     disciples: [],
     category: 'defense',
     philosophy:
@@ -519,7 +518,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
   'greg-roman': {
     id: 'greg-roman',
     name: 'Greg Roman',
-    role2026: 'Offensive Coordinator, Los Angeles Chargers',
+    role2026: 'Former Offensive Coordinator, Los Angeles Chargers',
     team: 'Los Angeles Chargers',
     treeBranch: 'power-gap-duo',
     mentorId: 'john-harbaugh',
@@ -579,10 +578,9 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
   'chip-kelly': {
     id: 'chip-kelly',
     name: 'Chip Kelly',
-    role2026: 'Offensive Coordinator, Las Vegas Raiders',
+    role2026: 'Former Offensive Coordinator, Las Vegas Raiders',
     team: 'Las Vegas Raiders',
     treeBranch: 'reid-west-coast',
-    mentorId: 'jack-elway',
     disciples: [],
     category: 'offense',
     philosophy:
@@ -909,7 +907,7 @@ export const COACHING_TREES: CoachingTree[] = [
     patriarch: 'Bill Walsh → Mike Shanahan & Gary Kubiak',
     category: 'offense',
     description:
-      'The most influential offensive lineage in modern NFL football. Stemming from Bill Walsh’s West Coast spacing and Mike Shanahan & Gary Kubiak’s legendary Denver Broncos zone-stretch run game. Powers today’s elite offenses led by Kyle Shanahan, Sean McVay, Klint Kubiak, Matt LaFleur, and Mike McDaniel through horizontal stretch runs, play-action deep shots, and disguise meshes identical for the first 1.2 seconds.',
+      'The most influential offensive lineage in modern NFL football. Stemming from Bill Walsh’s West Coast spacing and Mike Shanahan & Gary Kubiak’s legendary Denver Broncos zone-stretch run game. Powers today’s elite offenses led by Kyle Shanahan, Sean McVay, Klint Kubiak, Matt LaFleur, and Mike McDaniel through horizontal stretch runs, play-action deep shots, and disguise meshes that look alike for the first 1.2 seconds.',
     rootNodes: [
       {
         coach: COACH_PROFILES['bill-walsh'],

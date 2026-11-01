@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import SchemeTable from '../../islands/SchemeTable';
+import { ERA_LABELS, ERA_ORDER, library, schemeRows } from '../../lib/data';
+
+const lib = library();
+const rows = schemeRows();
+const eras = ERA_ORDER.map((id) => ({ id, label: ERA_LABELS[id] }));
+---
+
+<Base
+  title="The schemes"
+  description={`All ${lib.counts.schemes} football schemes on SchemeDB, by coach, with the team, side of the ball and era. Each opens four illustrative plays.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Contents</span></span>
+    </nav>
+  </div>
+  <section class="wrap section" style="padding-top:8px;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:8px">
+      <p class="eyebrow">Contents · Listed by coach</p>
+      <h1 class="page-title">The {lib.counts.schemes} schemes</h1>
+      <p class="body" style="font-size:18px;line-height:28px">Four play sheets each. A play is reached through its scheme, so pick a row first.</p>
+    </div>
+    <SchemeTable client:load rows={rows} eras={eras} idPrefix="schemes" />
+  </section>
+</Base>

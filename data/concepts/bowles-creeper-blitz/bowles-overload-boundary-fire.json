@@ -6,6 +6,7 @@
   "name": "Boundary Overload Fire Blitz",
   "personnel": "Nickel 2-4-5",
   "formation": "Boundary Overload Tilt vs 11P Gun Trips Right",
+  "ballSpot": "left",
   "situation": "3rd & 10, +35, boundary hash passing down",
   "coverage": "Cover 3 Fire Zone (Disguised Single-High)",
   "frontName": "Boundary Overload Stunt",

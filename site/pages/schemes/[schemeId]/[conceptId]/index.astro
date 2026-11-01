@@ -1,0 +1,201 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import PlayViewer from '../../../../islands/PlayViewer';
+import PlayCompare from '../../../../islands/PlayCompare';
+import {
+  DISGUISE_HOLD_PERCENT,
+  DISGUISE_SECONDS,
+  SITE,
+  comparisonsFor,
+  library,
+  litePlay,
+  litePlayById,
+  playHref,
+  playImagePath,
+  prevNext,
+  recordPath,
+  type PlayView,
+  type SchemeView,
+} from '../../../../lib/data';
+import { fieldWindow } from '../../../../lib/field';
+import { count, capitalize, list, lookWord, plural, sideAdjective, tidy } from '../../../../lib/format';
+
+export function getStaticPaths() {
+  const lib = library();
+  return lib.schemes.flatMap((scheme) => scheme.plays.map((play) => ({ params: { schemeId: scheme.id, conceptId: play.id }, props: { scheme, play } })));
+}
+
+interface Props {
+  scheme: SchemeView;
+  play: PlayView;
+}
+const { scheme, play } = Astro.props;
+const lib = library();
+const tracks = lib.tracksById.get(play.id)!;
+const lite = litePlay(play, tracks);
+const comparisons = comparisonsFor(play);
+const others = comparisons.map((c) => ({ c, lite: litePlayById(c.id) }));
+
+const viewerWin = fieldWindow([lite], tracks.duration);
+const { prev, next } = prevNext(scheme, play);
+const total = scheme.plays.length;
+
+const beats = play.beats.map((b) => ({ t: b.t, title: b.title, text: b.text, focus: b.focus ?? [] }));
+
+const compareProps = others.map(({ c, lite: other }) => ({
+  id: c.id,
+  sheet: c.sheet,
+  name: c.name,
+  score: c.score,
+  atEnd: c.atEnd,
+  breakSeconds: c.breakSeconds,
+  profile: c.profile,
+  paired: c.paired,
+  total: c.total,
+  tellName: c.tellName,
+  tell: c.tell,
+  play: JSON.stringify(other),
+}));
+
+const sheetsText = list(comparisons.map((c) => c.sheet.toLowerCase().replace('sheet ', '')));
+const namesText = list(comparisons.map((c) => c.name));
+const side = scheme.side;
+// Say "starts like this one" only for plays that really do: at least the 80% line at the snap.
+const alike = comparisons.filter((c) => c.profile[0] >= DISGUISE_HOLD_PERCENT);
+const apart = comparisons.filter((c) => c.profile[0] < DISGUISE_HOLD_PERCENT);
+const sheetList = (items: typeof comparisons) => `${plural(items.length, 'Sheet')} ${list(items.map((c) => c.sheet.toLowerCase().replace('sheet ', '')))}`;
+const verdictText = [
+  alike.length > 0 ? `${sheetList(alike)} ${alike.length === 1 ? 'starts' : 'start'} out looking like this one.` : '',
+  apart.length > 0
+    ? `${sheetList(apart)} ${apart.length === 1 ? 'does' : 'do'} not: ${apart.length === 1 ? 'it scores' : 'they score'} ${list(apart.map((c) => `${c.profile[0]}%`))} at the snap.`
+    : '',
+]
+  .filter(Boolean)
+  .join(' ');
+
+const preview = {
+  id: play.id,
+  schemeId: play.schemeId,
+  name: play.name,
+  personnel: play.personnel,
+  ...(play.formationId ? { formationId: play.formationId } : {}),
+  coverage: play.coverage,
+  beats: `[ ...${play.beats.length} beats ]`,
+  relations: { setsUp: play.relations.setsUp, playsOff: play.relations.playsOff },
+  provenance: play.provenance,
+};
+const previewText = JSON.stringify(preview, null, 2).replace('"[ ...' + play.beats.length + ' beats ]"', `[ ...${play.beats.length} beats ]`);
+const fileBase = `${play.schemeId}/${play.id}`;
+---
+
+<Base
+  title={`${play.nameDisplay}, ${scheme.nameDisplay}`}
+  description={`${play.nameDisplay} from ${scheme.nameDisplay}: an illustrative play you can scrub a tenth of a second at a time, with coaching points${comparisons.length ? ' and a comparison with the plays it mirrors' : ''}.`}
+  image={playImagePath(scheme.id, play.id)}
+  imageAlt={`${play.nameDisplay}: the players of an illustrative play 1.2 seconds after the snap. Offense is filled amber, defense is ringed blue.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><a href="/schemes/">Contents</a></span>
+      <span class="sep"><span aria-hidden="true">/</span><a href={scheme.href}>{scheme.nameDisplay}</a></span>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Play sheet {play.order} of {total}</span></span>
+    </nav>
+  </div>
+
+  <section class="wrap" style="padding-top:8px;padding-bottom:28px">
+    <div class="sheet">
+      <div class="strip">
+        <p>Play sheet {play.order} of {total} · {scheme.nameDisplay}</p>
+        <p>{fileBase}</p>
+      </div>
+      <div class="callhead">
+        <div class="call">
+          <p class="lab">Call</p>
+          <h1 class="slab">{play.nameDisplay}</h1>
+        </div>
+        {comparisons.length > 0 && (
+          <a class="lnk" href="#compare" style="font-size:15px">Jump to the comparison with {namesText} <span aria-hidden="true">↓</span></a>
+        )}
+      </div>
+      <div class="sheethead">
+        <div class="cell"><p class="lab">Formation</p><p class="val">{tidy(play.formation)}</p></div>
+        <div class="cell"><p class="lab">Personnel</p><p class="val">{play.personnel}</p></div>
+        <div class="cell"><p class="lab">Front</p><p class="val">{play.frontName}</p></div>
+        <div class="cell"><p class="lab">Coverage</p><p class="val">{play.coverage}</p></div>
+        <div class="cell"><p class="lab">Down and distance</p><p class="val">{play.situation}</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-bottom:56px">
+    <PlayViewer client:load play={JSON.stringify(lite)} win={viewerWin} beats={beats} duration={tracks.duration} />
+  </section>
+
+  <section class="wrap section">
+    <div class="divider">
+      <p class="eyebrow">Notes</p>
+      <h2>Why it works, and how it fails</h2>
+    </div>
+    <div class="notes-grid">
+      <div class="note"><p class="lab">Motive</p><p>{play.summary.motive}</p></div>
+      <div class="note"><p class="lab">Key defender</p><p>{play.summary.keyDefender}</p></div>
+      <div class="note"><p class="lab">Why it works</p><p>{play.summary.whyItWorks}</p></div>
+      <div class="note"><p class="lab" style="color:var(--conft)">Failure mode</p><p>{play.summary.failureMode}</p></div>
+    </div>
+  </section>
+
+  {comparisons.length > 0 && (
+    <section id="compare" class="wrap section" style="scroll-margin-top:16px">
+      <div class="divider">
+        <p class="eyebrow">{lookWord(side)}</p>
+        <h2>This play against {comparisons.length === 1 ? `sheet ${sheetsText}` : `sheets ${sheetsText}`}</h2>
+        <p class="aside">Scored over the first {DISGUISE_SECONDS.toFixed(1)} s, {side} only</p>
+      </div>
+      <p class="body">{verdictText} Pick a sheet, then scrub the time. Both fields move together with the scrubber above and below.</p>
+      <PlayCompare
+        client:idle
+        base={JSON.stringify(lite)}
+        side={side}
+        baseSheet={`Sheet ${play.order}`}
+        baseName={play.nameDisplay}
+        duration={tracks.duration}
+        comparisons={compareProps}
+        holdPercent={DISGUISE_HOLD_PERCENT}
+        windowSeconds={DISGUISE_SECONDS}
+      />
+      <div style="max-width:680px;display:flex;flex-direction:column;gap:6px">
+        <p class="lab">How the score works</p>
+        <p class="small" style="font-size:14px;line-height:22px">
+          Every tenth of a second, SchemeDB measures how far apart each {sideAdjective(side)} player stands in the two plays and averages those gaps. Only the {side} is counted, because it is the side selling the look; the {side === 'offense' ? 'defense' : 'offense'} is drawn for context and is the side reading it. Zero yards apart scores 100. Six yards or more scores 0. The dashed {DISGUISE_HOLD_PERCENT}% line is SchemeDB’s own cutoff for plays that still look the same. It has not been tested against real defenders, so read it as a way to compare plays, not as a measure of what a defense can see.{' '}
+          <a href="/about/#similarity" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;padding:14px 0">Read the full method</a>
+        </p>
+      </div>
+    </section>
+  )}
+
+  <section class="wrap section" style="padding-bottom:64px">
+    <div class="divider">
+      <p class="eyebrow">Record</p>
+      <h2>The data behind this sheet</h2>
+      <p class="aside">{SITE.dataLicense}, credit SchemeDB</p>
+    </div>
+    <div class="recordrow">
+      <div class="side">
+        <p class="prose">Every number on this sheet comes from files you can download.</p>
+        <div class="dl-list">
+          <a class="dl" href={recordPath('concepts', play.schemeId, play.id)}><span>Play record</span><span class="fmt">JSON</span></a>
+          <a class="dl" href={recordPath('tracks', play.schemeId, play.id)}><span>Tracks, waypoints</span><span class="fmt">JSON</span></a>
+          <a class="dl" href={`/records/frames/${fileBase}.csv`}><span>Tracks, 10 Hz frames</span><span class="fmt">CSV</span></a>
+        </div>
+      </div>
+      <div class="sheet json"><pre class="code">{previewText}</pre></div>
+    </div>
+    {(prev || next) && (
+      <nav aria-label="Play sheets in this scheme" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;border-top:1px solid var(--fg);padding-top:8px">
+        {prev ? <a class="lnk" href={prev.href}><span aria-hidden="true">←</span> {prev.sheet}, {prev.nameDisplay}</a> : <span></span>}
+        {next ? <a class="lnk" href={next.href}>{next.sheet}, {next.nameDisplay} <span aria-hidden="true">→</span></a> : <span></span>}
+      </nav>
+    )}
+  </section>
+</Base>

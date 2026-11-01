@@ -31,7 +31,7 @@ A concept can name the formation it starts from with `formationId`. Its tracks m
 
 Play specs in `specs/` compile to `tracks/` records, see [specs/README.md](../specs/README.md).
 
-Coordinates are yards relative to the line of scrimmage: `x` runs 0 to 53.33 across the field, `y` is negative in the offensive backfield and positive downfield.
+Coordinates are yards relative to the line of scrimmage: `x` runs 0 to 53.33 across the field, `y` is negative in the offensive backfield and positive downfield. Every play is drawn with the ball at `x = 26.67`, the middle of the field. A concept's optional `ballSpot` (`left`, `middle` or `right`) says where the ball really sits; add the offset in `src/engine/field.ts` to place the play on the field. NFL hash marks are 23.58 and 29.75 yards from the left sideline and college hash marks are 20 and 33.33. The release `concepts` table carries `ball_spot` and `ball_x`.
 
 ## Working with the data
 
