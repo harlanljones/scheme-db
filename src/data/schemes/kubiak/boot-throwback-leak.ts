@@ -10,7 +10,7 @@ export const bootThrowbackLeak: Play = {
   family: 'split-zone-leak',
   personnel: '12',
   formation: '12P Condensed Wing Right',
-  situation: '1st & 10, +30, red zone boundary shot',
+  situation: '1st & 10, +30, boundary shot',
   coverage: 'Cover 3 Sky (Single-High)',
   frontName: '4-3 Over front',
   duration: 4.8,

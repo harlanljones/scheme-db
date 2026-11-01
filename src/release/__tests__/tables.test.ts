@@ -84,4 +84,20 @@ describe('release tables', () => {
     expect(meta.version).toBe('test');
     expect(JSON.parse(meta.row_counts as string).concepts).toBe(dataset.concepts.length);
   });
+
+  it('records where the ball is spotted and its x on the field', () => {
+    const concepts = table('concepts');
+    const col = (name: string) => concepts.columns.findIndex((c) => c.name === name);
+    expect(col('ball_spot')).toBeGreaterThan(-1);
+    expect(col('ball_x')).toBeGreaterThan(-1);
+    const row = (id: string) => concepts.rows.find((r) => r[col('id')] === id)!;
+    // An NFL scheme on the left hash, and a middle spot, which the data leaves unnamed.
+    expect(row('t2-cloud-boundary')[col('ball_spot')]).toBe('left');
+    expect(row('t2-cloud-boundary')[col('ball_x')]).toBe(23.58);
+    expect(row('outside-zone')[col('ball_spot')]).toBe('middle');
+    expect(row('outside-zone')[col('ball_x')]).toBe(26.67);
+    // A college scheme is spotted against the college hash marks.
+    const college = dataset.concepts.find((c) => c.ballSpot && dataset.schemes.find((s) => s.id === c.schemeId)?.era.endsWith('college'));
+    if (college) expect([20, 33.33]).toContain(row(college.id)[col('ball_x')]);
+  });
 });

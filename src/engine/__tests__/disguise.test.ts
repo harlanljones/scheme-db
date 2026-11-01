@@ -67,3 +67,29 @@ describe('summarizeDisguise', () => {
     expect(summary.profile).toEqual([...summary.profile].sort((a, b) => b - a));
   });
 });
+
+describe('scoring one side', () => {
+  const dTrack = (id: string, x: number, y: number): PlayerTrack => ({ ...still(id, x, y), side: 'defense', role: 'db' });
+  // The offense stands in the same place in both plays. One defender moves 6 yd, which is the full no resemblance gap.
+  const base = [still('RB', 20, 0), dTrack('CB', 10, 5)];
+  const other = [still('RB', 20, 0), dTrack('CB', 10 + NO_RESEMBLANCE_YARDS, 5)];
+
+  it('counts both sides when no side is given', () => {
+    expect(disguiseSimilarity(base, other, 0)).toBe(50);
+  });
+
+  it('counts only the side that sells the look', () => {
+    expect(disguiseSimilarity(base, other, 0, 'offense')).toBe(100);
+    expect(disguiseSimilarity(base, other, 0, 'defense')).toBe(0);
+  });
+
+  it('scores 0 when the chosen side has no player in both plays', () => {
+    expect(disguiseSimilarity([still('RB', 20, 0)], [still('RB', 20, 0)], 0, 'defense')).toBe(0);
+  });
+
+  it('summarizes on the chosen side too', () => {
+    expect(summarizeDisguise(base, other, 'offense').score).toBe(100);
+    expect(summarizeDisguise(base, other, 'offense').breakFrame).toBeNull();
+    expect(summarizeDisguise(base, other, 'defense').breakFrame).toBe(0);
+  });
+});

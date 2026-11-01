@@ -34,6 +34,14 @@
       "type": "string",
       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
     },
+    "ballSpot": {
+      "type": "string",
+      "enum": [
+        "left",
+        "middle",
+        "right"
+      ]
+    },
     "situation": {
       "type": "string",
       "minLength": 1

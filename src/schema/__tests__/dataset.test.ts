@@ -27,7 +27,7 @@ describe('data/ library', () => {
     expect(validateDataset(dataset, files).errors).toEqual([]);
   });
 
-  it('reports only the nine known people who are referenced as mentors or disciples but have no coach record', () => {
+  it('reports only the twelve known people who are referenced as mentors or disciples but have no coach record', () => {
     const missing = new Set(
       validateDataset(dataset, files)
         .warnings.map((w) => /(?:mentor|disciple) "([^"]+)"/.exec(w)?.[1])
@@ -36,9 +36,12 @@ describe('data/ library', () => {
     expect([...missing].sort()).toEqual([
       'bill-parcells',
       'bobby-slowik',
+      'bruce-arians',
+      'dan-campbell',
+      'frank-reich',
       'george-seifert',
       'gus-bradley',
-      'jack-elway',
+      'jim-johnson',
       'jim-mora',
       'mike-holmgren',
       'monte-kiffin',

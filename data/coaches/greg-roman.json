@@ -2,7 +2,7 @@
   "$schema": "../schema/coach.schema.json",
   "id": "greg-roman",
   "name": "Greg Roman",
-  "role2026": "Offensive Coordinator, Los Angeles Chargers",
+  "role2026": "Former Offensive Coordinator, Los Angeles Chargers",
   "team": "Los Angeles Chargers",
   "lineage": "power-gap-duo",
   "mentorId": "john-harbaugh",

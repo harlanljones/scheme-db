@@ -7,7 +7,7 @@ export const spagnuoloSplitSafetyInvert2: Play = {
   family: 'spagnuolo-exotic-blitz',
   personnel: 'Nickel 4-2-5',
   formation: 'Disguised Single-High vs 11P Gun 2x2',
-  situation: '2nd & 7, +30, red zone / four-down territory',
+  situation: '2nd & 7, +30, four-down territory',
   coverage: 'Cover 2 Invert (Corners Deep Half, Safeties Underneath)',
   frontName: 'Even 4-Man Under Front',
   duration: 4.0,

@@ -1,6 +1,6 @@
 import { FRAME_RATE_HZ } from './frames';
 import { positionAt } from './interpolate';
-import type { PlayerTrack } from './types';
+import type { PlayerTrack, Side } from './types';
 
 /** The disguise window is frames 0 through 12 of the 10 Hz export: the first 1.2 s after the snap. */
 export const DISGUISE_WINDOW_FRAMES = 12;
@@ -8,7 +8,7 @@ export const DISGUISE_WINDOW_FRAMES = 12;
 /** A mean gap of this many yards between two plays' players counts as no resemblance at all (0%). */
 export const NO_RESEMBLANCE_YARDS = 6;
 
-/** Similarity at or above this value reads as "the defense cannot tell the plays apart". */
+/** Similarity at or above this value counts as the two plays still looking alike. It is this project's own cutoff, not tested against real defenders. */
 export const DISGUISE_HOLD_PERCENT = 80;
 
 /**
@@ -16,12 +16,16 @@ export const DISGUISE_HOLD_PERCENT = 80;
  * labels for the same job (they do within a scheme). The score falls linearly with the mean distance between paired
  * players and reaches 0 at NO_RESEMBLANCE_YARDS. Players that appear in only one play are ignored; two plays that
  * share no player ids score 0.
+ *
+ * Pass `side` to score only that side. A scheme sells its look with its own players, so offensive schemes are scored
+ * on the offense and defensive schemes on the defense; the other side is the one reading the look and does not count.
  */
-export function disguiseSimilarity(base: PlayerTrack[], other: PlayerTrack[], t: number): number {
+export function disguiseSimilarity(base: PlayerTrack[], other: PlayerTrack[], t: number, side?: Side): number {
   const otherById = new Map(other.map((track) => [track.id, track]));
   let total = 0;
   let paired = 0;
   for (const track of base) {
+    if (side && track.side !== side) continue;
     const match = otherById.get(track.id);
     if (!match) continue;
     const a = positionAt(track, t);
@@ -43,11 +47,11 @@ export interface DisguiseSummary {
   breakFrame: number | null;
 }
 
-/** Scores a pair of plays on the 10 Hz frames 0..12. */
-export function summarizeDisguise(base: PlayerTrack[], other: PlayerTrack[]): DisguiseSummary {
+/** Scores a pair of plays on the 10 Hz frames 0..12, counting only `side` when given. */
+export function summarizeDisguise(base: PlayerTrack[], other: PlayerTrack[], side?: Side): DisguiseSummary {
   const profile: number[] = [];
   for (let frame = 0; frame <= DISGUISE_WINDOW_FRAMES; frame++) {
-    profile.push(disguiseSimilarity(base, other, frame / FRAME_RATE_HZ));
+    profile.push(disguiseSimilarity(base, other, frame / FRAME_RATE_HZ, side));
   }
   const score = Math.round(profile.reduce((sum, value) => sum + value, 0) / profile.length);
   const broken = profile.findIndex((value) => value < DISGUISE_HOLD_PERCENT);
