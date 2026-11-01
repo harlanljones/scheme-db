@@ -1,0 +1,143 @@
+---
+import Base from '../../../layouts/Base.astro';
+import {
+  DISGUISE_HOLD_PERCENT,
+  SITE,
+  disciplesOf,
+  library,
+  mentorChain,
+  schemePlayRows,
+  type SchemeView,
+} from '../../../lib/data';
+import { count, capitalize, list, pad2, plural, tidy } from '../../../lib/format';
+
+export function getStaticPaths() {
+  return library().schemes.map((scheme) => ({ params: { schemeId: scheme.id }, props: { scheme } }));
+}
+
+interface Props {
+  scheme: SchemeView;
+}
+const { scheme } = Astro.props;
+const lib = library();
+const total = lib.counts.schemes;
+const coach = lib.coachById.get(scheme.coachId);
+const lineage = lib.lineageById.get(scheme.lineage);
+const rows = schemePlayRows(scheme);
+const mentors = coach ? mentorChain(coach.id) : [];
+const disciples = coach ? disciplesOf(coach) : [];
+const sideLabel = scheme.side === 'offense' ? 'Offense' : 'Defense';
+const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.play;
+---
+
+<Base
+  title={scheme.nameDisplay}
+  description={`${scheme.nameDisplay}: ${scheme.coachName}, ${scheme.teamDisplay}. ${count(scheme.plays.length)} illustrative plays you can scrub a tenth of a second at a time, with the data to download.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/schemes/">Contents</a>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Section {scheme.no} of {total}</span></span>
+    </nav>
+  </div>
+
+  <section class="wrap schemehead" style="padding-top:8px;padding-bottom:32px">
+    <div class="sheet">
+      <div class="strip">
+        <p>Section {scheme.no} of {total} · {sideLabel} · {capitalize(count(scheme.plays.length))} play {plural(scheme.plays.length, 'sheet')}</p>
+        <p>{scheme.id}</p>
+      </div>
+      <div style="padding:22px 14px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span class="chip"><span class={`mk ${scheme.side === 'offense' ? 'mko' : 'mkd'}`} aria-hidden="true"></span>{sideLabel}</span>
+          <span class="chip">{scheme.eraLabel}</span>
+          {lineage && <span class="chip">{tidy(lineage.name)}</span>}
+        </div>
+        <h1>{scheme.nameDisplay}</h1>
+        <p class="type small" style="font-size:14px">{scheme.coachName}, {scheme.teamDisplay}</p>
+        <p class="body" style="font-size:17px;line-height:27px">{tidy(scheme.description)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap scheme-grid" style="padding-bottom:64px">
+    <div class="plays">
+      <div class="divider">
+        <p class="eyebrow">Play sheets</p>
+        <h2>{capitalize(count(scheme.plays.length))} {plural(scheme.plays.length, 'play')}</h2>
+      </div>
+      {ref && (
+        <p class="small" style="font-size:14px;line-height:21px">
+          Scores compare where players stand in two plays. 100% means the same spots.{' '}
+          <a href="/about/#similarity" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;padding:14px 0">How the score works</a>
+        </p>
+      )}
+      <ol style="border-top:2px solid var(--fg)">
+        {rows.map(({ play, comparison, referenceFor }) => (
+          <li>
+            <a class="prow" href={play.href}>
+              <span class="type" style="font-size:13px;line-height:20px;font-weight:700;color:var(--fg2);white-space:nowrap">{play.sheet}</span>
+              <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+                <span class="slab" style="font-size:22px;line-height:1.15;font-weight:600">{play.nameDisplay}</span>
+                <span class="type" style="font-size:13px;line-height:20px;color:var(--fg2)">{play.personnel} personnel, {tidy(play.formation)}</span>
+                <span style="font-size:14px;line-height:20px;color:var(--fg2)">{play.situation}. {play.coverage}.</span>
+              </span>
+              {comparison ? (
+                <span class="chart">
+                  <span class="lab">Similarity to {comparison.refSheet.toLowerCase()}</span>
+                  <span class="bars" role="img" aria-label={`${play.nameDisplay}, similarity to ${comparison.refName} by tenth of a second: ${comparison.profile.join(', ')} percent.`} style="height:48px">
+                    <span class="cut" style={`bottom:${Math.round(DISGUISE_HOLD_PERCENT * 0.48)}px`}></span>
+                    {comparison.profile.map((v) => <span class={`bar${v < DISGUISE_HOLD_PERCENT ? ' bad' : ''}`} style={`height:${Math.round(v * 0.48)}px`}></span>)}
+                  </span>
+                  <span class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
+                    {comparison.score}% on average.
+                    {comparison.breakSeconds === null ? `Stays above the ${DISGUISE_HOLD_PERCENT}% line.` : `Drops below the ${DISGUISE_HOLD_PERCENT}% line at ${comparison.breakSeconds.toFixed(1)} s.`}
+                  </span>
+                </span>
+              ) : referenceFor.length > 0 ? (
+                <span class="chart">
+                  <span class="lab">Base play</span>
+                  <span class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">The reference for {list(referenceFor.map((s) => s.toLowerCase()))}</span>
+                </span>
+              ) : null}
+            </a>
+          </li>
+        ))}
+      </ol>
+      <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
+        Dashed line: the {DISGUISE_HOLD_PERCENT}% cutoff. Red bars fall below it. Scores cover the first 1.2 seconds after the snap, a tenth of a second per bar.
+      </p>
+    </div>
+
+    <aside>
+      {coach && (
+        <div>
+          <div class="divider sm"><p class="eyebrow">Coach</p><h2>{coach.name}</h2></div>
+          <div class="note"><p>{tidy(coach.role2026)}.{mentors.length > 0 ? ` Mentor: ${mentors[mentors.length - 1].name}.` : ''}</p></div>
+          <div class="note" style="border-bottom:1px solid var(--rule)"><p>{tidy(coach.philosophy)}</p></div>
+        </div>
+      )}
+
+      {coach && (mentors.length > 0 || disciples.length > 0) && (
+        <div>
+          <div class="divider sm"><p class="eyebrow">Lineage</p><h2>Where it comes from</h2></div>
+          <ul class="tree">
+            {mentors.map((mentor, i) => <li style={`padding-left:${i * 16}px`}>{mentor.name}</li>)}
+            <li class="here" style={`padding-left:${mentors.length * 16}px`}>{coach.name} <span class="t">This scheme</span></li>
+            {disciples.length > 0 && <li style={`padding-left:${(mentors.length + 1) * 16}px`}>{list(disciples.map((d) => d.name))}</li>}
+          </ul>
+        </div>
+      )}
+
+      <div>
+        <div class="divider sm"><p class="eyebrow">Record</p><h2>Download this scheme</h2></div>
+        <div>
+          <a class="dl" href={`/records/schemes/${scheme.id}.json`}><span>Scheme record</span><span class="fmt">JSON</span></a>
+          <a class="dl" href={`/records/bundles/${scheme.id}.json`}><span>Plays and tracks</span><span class="fmt">JSON, {scheme.plays.length * 2} records</span></a>
+          <a class="dl" href="/downloads/scheme-db.sqlite"><span>Every scheme</span><span class="fmt">SQLite</span></a>
+        </div>
+        <p class="type" style="padding-top:10px;font-size:12px;line-height:18px;color:var(--fg2)">{SITE.dataLicense}. Credit SchemeDB.</p>
+      </div>
+    </aside>
+  </section>
+</Base>

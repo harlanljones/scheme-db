@@ -1,0 +1,43 @@
+---
+import Brand from './Brand.astro';
+import { library, SITE } from '../lib/data';
+import { NAV } from '../lib/nav';
+
+const { counts } = library();
+---
+
+<footer class="footer">
+  <div class="wrap cols">
+    <div class="about">
+      <Brand />
+      <p class="prose" style="max-width:380px;font-size:15px;line-height:24px">
+        A free, open database of football scheme strategy. {counts.schemes} schemes, {counts.plays} illustrative plays, {counts.coaches} coaches and {counts.lineages} coaching lineages, kept in the open.
+      </p>
+      <p class="mono-small">Data {SITE.dataLicense}. Code {SITE.codeLicense}.</p>
+    </div>
+    <div class="col">
+      <h2>Explore</h2>
+      {NAV.filter((item) => item.key === 'schemes').map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href="/#disguise">Disguise</a>
+    </div>
+    <div class="col">
+      <h2>Data</h2>
+      <a href="/downloads/scheme-db.json">Download JSON</a>
+      <a href="/data/#csv">Download CSV</a>
+      <a href="/downloads/scheme-db.sqlite">Download SQLite</a>
+      <a href="/data/#schema">Schema</a>
+    </div>
+    <div class="col">
+      <h2>Project</h2>
+      <a href={SITE.repo}>GitHub</a>
+      <a href="/about/">About and method</a>
+      <a href="/about/#corrections">Corrections</a>
+    </div>
+  </div>
+  <div class="fine">
+    <div class="wrap">
+      <p>All plays on SchemeDB are illustrative. They show how a scheme works, not what a team ran on one snap.</p>
+      <p>SchemeDB is an independent project. It is not affiliated with the NFL, any college or any team named on the site.</p>
+    </div>
+  </div>
+</footer>

@@ -40,5 +40,8 @@ jobs:
       - name: Typecheck
         run: bun run typecheck
 
-      - name: Build Production Bundle
+      - name: Build the site
         run: bun run build
+
+      - name: Check the built site
+        run: bun run site:check
