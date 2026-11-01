@@ -22,7 +22,7 @@ const files = walk(dist);
 const pages = files.filter((f) => f.endsWith('.html'));
 
 const { dataset } = loadDataset();
-const expectedPages = 4 + dataset.schemes.length + dataset.concepts.length + 1; // home, schemes, about, data, schemes, plays, 404
+const expectedPages = 5 + dataset.schemes.length + dataset.concepts.length + 1; // home, schemes, lineages, about, data, schemes, plays, 404
 
 const problems: string[] = [];
 const rel = (file: string): string => path.relative(dist, file);
@@ -45,6 +45,10 @@ for (const file of pages) {
   if (!/<meta name="description" content="[^"]{20,}"/.test(html)) problems.push(`${name}: missing description`);
   if ((html.match(/<h1[\s>]/g) ?? []).length !== 1) problems.push(`${name}: expected exactly one h1`);
   if (!is404 && !/<link rel="canonical" href="https:\/\/schemedb\.harlanljones\.com\//.test(html)) problems.push(`${name}: missing canonical link`);
+  const share = html.match(/<meta property="og:image" content="https:\/\/schemedb\.harlanljones\.com(\/[^"]+)"/);
+  if (!share) problems.push(`${name}: missing og:image`);
+  else if (!exists(share[1])) problems.push(`${name}: og:image ${share[1]} does not exist`);
+  if (!/<meta name="twitter:card" content="summary_large_image"/.test(html)) problems.push(`${name}: twitter:card is not summary_large_image`);
   const visible = html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/<style[\s\S]*?<\/style>/g, '');
   for (const bad of ['undefined', 'NaN', '[object', 'null%']) {
     // Props for islands are serialized into attributes; only look at text outside tags.

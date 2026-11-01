@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import { buildTables } from '../../../src/release/tables';
 import { fieldWindow, pos, type LitePlay } from '../field';
 import { capitalize, spell, tidy } from '../format';
-import { FEATURED, comparisonsFor, library, litePlay, playHref, relatedPlays, schemePlayRows } from '../data';
+import { FEATURED, comparisonsFor, disciplesOf, library, litePlay, mentorChain, playHref, relatedPlays, schemePlayRows, schemeRows } from '../data';
 import { CSV_TABLES } from '../downloads';
 import { llmsFullTxt, llmsTxt, sitePaths, sitemapXml } from '../seo';
 
@@ -40,17 +40,18 @@ describe('comparisons', () => {
 
   it('scores the wide zone family as the About page and the home page state', () => {
     expect(comparisons.map((c) => [c.id, c.score, c.atEnd, c.breakSeconds])).toEqual([
-      ['play-action-over', 96, 92, null],
-      ['naked-bootleg', 97, 93, null],
-      ['jet-motion-oz', 79, 61, 0.6],
+      ['play-action-over', 95, 89, null],
+      ['naked-bootleg', 95, 89, null],
+      ['jet-motion-oz', 71, 48, 0.4],
     ]);
   });
 
-  it('names the three players more than a yard from outside zone at 1.2 s against play action', () => {
+  it('names the offensive players more than a yard from outside zone at 1.2 s against play action', () => {
     const pa = comparisons.find((c) => c.id === 'play-action-over')!;
-    expect(pa.gapDetails.map((g) => g.id)).toEqual(['Z', 'X', 'LCB']);
-    expect(pa.gapDetails.map((g) => Math.round(g.yards * 10) / 10)).toEqual([4.6, 2.9, 1.3]);
-    expect(comparisons.find((c) => c.id === 'jet-motion-oz')!.gapsAtEnd).toHaveLength(8);
+    // Only the offense is scored, so the cornerback who also stands 1.3 yd apart does not count.
+    expect(pa.gapDetails.map((g) => g.id)).toEqual(['Z', 'X']);
+    expect(pa.gapDetails.map((g) => Math.round(g.yards * 10) / 10)).toEqual([4.6, 2.9]);
+    expect(comparisons.find((c) => c.id === 'jet-motion-oz')!.gapsAtEnd).toHaveLength(2);
   });
 
   it('attributes the tell to the play that plays off the other', () => {
@@ -115,7 +116,7 @@ describe('downloads and indexes', () => {
   });
 
   it('lists every page in the sitemap and every scheme in llms.txt', () => {
-    expect(sitePaths()).toHaveLength(4 + 45 + 180);
+    expect(sitePaths()).toHaveLength(5 + 45 + 180);
     const xml = sitemapXml('2026-11-01');
     for (const path of sitePaths()) expect(xml).toContain(`<loc>https://schemedb.harlanljones.com${path}</loc>`);
     const text = llmsTxt();
@@ -127,7 +128,7 @@ describe('downloads and indexes', () => {
   it('puts every play and its comparisons in llms-full.txt', () => {
     const text = llmsFullTxt();
     for (const concept of lib.dataset.concepts) expect(text).toContain(`/schemes/${concept.schemeId}/${concept.id}/`);
-    expect(text).toContain('Compared with sheet 4, Jet Motion Outside Zone Left: 79% alike on average');
+    expect(text).toContain('Compared with sheet 4, Jet Motion Outside Zone Left: 71% alike on average');
   });
 });
 
@@ -151,5 +152,76 @@ describe('robots.txt', () => {
     }
     expect(robots).toContain('Sitemap: https://schemedb.harlanljones.com/sitemap.xml');
     expect(robots).toContain('llms.txt');
+  });
+});
+
+describe('where each play stands on the field', () => {
+  const level = (conceptId: string) => play(conceptId).level;
+  it('draws college schemes on college hash marks and the rest on NFL hash marks', () => {
+    for (const scheme of lib.schemes) {
+      const expected = scheme.era === 'current-college' || scheme.era === 'past-college' ? 'college' : 'nfl';
+      for (const p of scheme.plays) expect(level(p.id), p.id).toBe(expected);
+    }
+  });
+
+  it('spots the ball on the hash a concept names and in the middle otherwise', () => {
+    expect(play('t2-cloud-boundary').spot).toBe('left');
+    expect(play('shula-boundary-creeper-drop7').spot).toBe('right');
+    expect(play('outside-zone').spot).toBe('middle');
+    const named = lib.dataset.concepts.filter((c) => c.ballSpot).map((c) => c.id);
+    expect(named).toHaveLength(5);
+  });
+
+  it('scores the side the scheme belongs to', () => {
+    for (const scheme of lib.schemes) for (const p of scheme.plays) expect(play(p.id).scored, p.id).toBe(scheme.side);
+  });
+});
+
+describe('scheme search rows', () => {
+  const rows = schemeRows();
+  it('carries every play of every scheme with text a search can look through', () => {
+    expect(rows).toHaveLength(45);
+    for (const row of rows) {
+      expect(row.plays, row.id).toHaveLength(4);
+      for (const p of row.plays) expect(p.hay, p.id).toBe(p.hay.toLowerCase());
+    }
+  });
+
+  it('finds a scheme by a play name that the scheme and coach names do not hold', () => {
+    const hits = rows.filter((row) => row.plays.some((p) => p.hay.includes('bootleg')));
+    expect(hits.length).toBeGreaterThan(0);
+    expect(hits.some((row) => !`${row.name} ${row.coach} ${row.team}`.toLowerCase().includes('bootleg'))).toBe(true);
+  });
+});
+
+describe('who worked under whom', () => {
+  it('follows mentor ids up the chain, oldest first, and ends at a person with no record', () => {
+    const chain = mentorChain('sean-mcvay');
+    expect(chain.map((p) => p.id)).toEqual(['george-seifert', 'mike-shanahan']);
+    // George Seifert has no coach record, so the chain ends with his name and no page.
+    expect(chain.map((p) => p.known)).toEqual([false, true]);
+  });
+
+  it('names people without a record from their id and gives them no page', () => {
+    const bowles = mentorChain('todd-bowles');
+    expect(bowles).toHaveLength(1);
+    expect(bowles[0]).toMatchObject({ id: 'bruce-arians', name: 'Bruce Arians', known: false });
+    expect(bowles[0]!.href).toBeUndefined();
+  });
+
+  it('links people who have a record to their first scheme', () => {
+    const reid = lib.coachById.get('andy-reid')!;
+    const harbaugh = disciplesOf(reid).find((p) => p.id === 'john-harbaugh')!;
+    expect(harbaugh.known).toBe(true);
+    expect(harbaugh.href).toMatch(/^\/schemes\//);
+  });
+
+  it('keeps the corrected mentors', () => {
+    expect(lib.coachById.get('andy-reid')!.mentorId).toBe('mike-holmgren');
+    expect(lib.coachById.get('mike-shanahan')!.mentorId).toBe('george-seifert');
+    expect(lib.coachById.get('ben-johnson')!.mentorId).toBe('dan-campbell');
+    expect(lib.coachById.get('steve-spagnuolo')!.mentorId).toBe('jim-johnson');
+    expect(lib.coachById.get('chris-shula')!.mentorId).toBeUndefined();
+    expect(lib.coachById.get('chip-kelly')!.mentorId).toBeUndefined();
   });
 });

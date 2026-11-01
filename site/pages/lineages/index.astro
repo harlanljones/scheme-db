@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import NetworkGraph from '../../components/NetworkGraph.astro';
+import { coachHref, library } from '../../lib/data';
+import { tidy } from '../../lib/format';
+import { describeNetwork, layoutNetwork, network } from '../../lib/network';
+import type { LineageNode } from '../../../src/schema/schema';
+
+const lib = library();
+const net = network();
+const layout = layoutNetwork(net);
+const label = describeNetwork(net);
+const worked = net.edges.filter((edge) => edge.kind === 'worked').length;
+const influence = net.edges.length - worked;
+const unknown = net.nodes.filter((node) => !node.known).length;
+
+interface Row {
+  depth: number;
+  id: string;
+  name: string;
+  href?: string;
+}
+function rowsOf(nodes: LineageNode[], depth = 0): Row[] {
+  return nodes.flatMap((node) => {
+    const coach = lib.coachById.get(node.coachId);
+    return [
+      { depth, id: node.coachId, name: coach?.name ?? node.coachId, href: coach ? coachHref(coach) : undefined },
+      ...rowsOf(node.children, depth + 1),
+    ];
+  });
+}
+const trees = lib.dataset.lineages.map((lineage) => ({ lineage, rows: rowsOf(lineage.rootNodes) }));
+---
+
+<Base
+  title="Lineages"
+  description={`Who taught whom: ${net.nodes.length} football coaches joined by who worked directly under whom and by how schemes passed on, with the ${lib.counts.lineages} lineage trees in full.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Lineages</span></span>
+    </nav>
+  </div>
+
+  <section class="wrap" style="padding-top:8px;padding-bottom:32px;display:flex;flex-direction:column;gap:14px">
+    <p class="eyebrow">Lineages · Who taught whom</p>
+    <h1 class="page-title">Where the schemes came from</h1>
+    <p class="body" style="font-size:18px;line-height:28px">
+      A scheme rarely starts from nothing. This chart joins {net.nodes.length - unknown} coaches in the binder, and {unknown} others they name, by who worked under whom and by how their ideas passed on.
+    </p>
+  </section>
+
+  <section class="wrap section" id="network">
+    <div class="divider"><p class="eyebrow">The chart</p><h2>Two kinds of line</h2><p class="aside">{worked} solid · {influence} dashed</p></div>
+    <div class="two-col">
+      <div class="text">
+        <h3>Solid: worked directly under</h3>
+        <p class="prose">The coach worked on the other coach’s staff, in any role: assistant, coordinator or head coach. Each coach’s page lists the same links.</p>
+      </div>
+      <div class="text">
+        <h3>Dashed: the scheme passed on</h3>
+        <p class="prose">The two sit next to each other in one of the lineage trees below, but the data records no job together. Mike Shanahan ran a Walsh family offense under George Seifert and never coached under Bill Walsh, so that line is dashed.</p>
+      </div>
+    </div>
+    <NetworkGraph layout={layout} label={label} />
+    <p class="type narrow-hint" style="font-size:12px;line-height:18px;color:var(--fg2)">
+      On a narrow screen, slide the chart sideways. The lists below hold the same links in order. A name with a filled or ringed mark opens that coach’s scheme.
+    </p>
+    <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
+      Spot a wrong or missing link? <a href="/about/#corrections">Send a correction</a>.
+    </p>
+  </section>
+
+  <section class="wrap section" id="trees">
+    <div class="divider"><p class="eyebrow">Lineage trees</p><h2>The {lib.counts.lineages} trees in full</h2></div>
+    <div class="trees">
+      {trees.map(({ lineage, rows }) => (
+        <article id={`tree-${lineage.id}`} class="treecard">
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+            <span class="chip"><span class={`mk ${lineage.side === 'offense' ? 'mko' : 'mkd'}`} aria-hidden="true"></span>{lineage.side === 'offense' ? 'Offense' : 'Defense'}</span>
+          </div>
+          <h3 class="slab" style="font-size:20px;line-height:26px;font-weight:600">{tidy(lineage.name)}</h3>
+          <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">Begins with {tidy(lineage.patriarch)}</p>
+          <p class="prose" style="font-size:15px;line-height:24px">{tidy(lineage.description)}</p>
+          <ul class="tree" aria-label={`${tidy(lineage.name)}, in order`}>
+            {rows.map((row) => (
+              <li style={`padding-left:${row.depth * 16}px`}>
+                {row.href ? <a href={row.href}>{row.name}</a> : row.name}
+              </li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

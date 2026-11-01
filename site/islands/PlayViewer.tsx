@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { parsePlay, type FieldWindow } from '../lib/field';
-import { ROLE_WORDS } from '../lib/format';
+import { capitalize, count, playerWord } from '../lib/format';
 import { Field, FieldLegend } from './Field';
 import { setPlayState, tenth, usePlayState } from './playState';
 
@@ -24,7 +24,7 @@ const pad2 = (n: number): string => (n < 10 ? `0${n}` : String(n));
 /** The field, transport, scrubber and coaching points of one play, all driven by one clock. */
 export default function PlayViewer({ play: json, win, beats, duration }: Props) {
   const play = useMemo(() => parsePlay(json), [json]);
-  const { t, playing, speed } = usePlayState();
+  const { t, playing, speed, fresh } = usePlayState();
 
   const clock = useRef({ t, speed });
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
     if (t >= b.t - 0.001) active = i;
   });
   const focus = active >= 0 ? beats[active].focus : [];
-  const roleOf = (id: string): string => ROLE_WORDS[play.tracks.find((track) => track.id === id)?.role ?? ''] ?? 'player';
+  const roleOf = (id: string): string => playerWord(id, play.tracks.find((track) => track.id === id)?.role ?? '');
   const goTo = (to: number) => setPlayState({ t: to, playing: false });
 
   const prevBeat = () => {
@@ -74,15 +74,15 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
   const live =
     active < 0
       ? 'Before the first beat.'
-      : `Beat ${active + 1} of ${beats.length}: ${stripNumber(beats[active].title)}.`;
+      : `Beat ${active + 1} of ${beats.length}: ${stripNumber(beats[active].title)}, ${beats[active].t.toFixed(1)} seconds after the snap.`;
 
   return (
     <div className="viewer">
     <div className="stage">
-      <Field play={play} t={t} win={win} dot={18} refWidth={700} focus={focus} animated={playing} />
-      <FieldLegend />
+      <Field play={play} t={t} win={win} dot={18} refWidth={700} focus={focus} />
+      <FieldLegend level={play.level} />
 
-      <div className="transport">
+      <div className="transport js-only">
         <button className="ibtn" type="button" aria-label="Previous beat" onClick={prevBeat}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M6 5h3v14H6zM19 5v14l-9-7z" />
@@ -92,7 +92,7 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
           className="ibtn solid"
           type="button"
           aria-label={playing ? 'Pause' : 'Play'}
-          onClick={() => setPlayState(playing ? { playing: false } : { playing: true, t: t >= duration ? 0 : t })}
+          onClick={() => setPlayState(playing ? { playing: false } : { playing: true, t: fresh || t >= duration ? 0 : t })}
         >
           {playing ? (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -122,7 +122,7 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
         </div>
       </div>
 
-      <div className="scrub">
+      <div className="scrub js-only">
         <label htmlFor="scrub-t" className="sr">
           Time after the snap in tenths of a second
         </label>
@@ -165,7 +165,7 @@ function PointsList({ beats, active, onPick }: { beats: BeatProp[]; active: numb
         <h2 className="slab" style={{ fontSize: 26, lineHeight: 1.1, fontWeight: 700 }}>
           Coaching points
         </h2>
-        <p className="mono-small">{beats.length} beats</p>
+        <p className="mono-small">{capitalize(count(beats.length))} beats</p>
       </div>
       <p className="small" style={{ fontSize: 14, lineHeight: '20px' }}>
         Pick a beat to jump the field to that moment. The ticks under the scrubber mark the same {beats.length} beats.

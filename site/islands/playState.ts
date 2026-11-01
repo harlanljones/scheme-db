@@ -12,17 +12,20 @@ export interface PlayState {
   speed: 0.5 | 1;
   /** Id of the play the comparison shows. */
   compareId: string | null;
+  /** True until the visitor moves the clock: the page opens on a still frame at 1.2 s, and the first Play starts from the snap. */
+  fresh: boolean;
 }
 
 export const OPENING_T = 1.2;
 
-const INITIAL: PlayState = { t: OPENING_T, playing: false, speed: 1, compareId: null };
+const INITIAL: PlayState = { t: OPENING_T, playing: false, speed: 1, compareId: null, fresh: true };
 
 let state: PlayState = INITIAL;
 const listeners = new Set<() => void>();
 
-export function setPlayState(patch: Partial<PlayState>): void {
-  state = { ...state, ...patch };
+export function setPlayState(patch: Partial<Omit<PlayState, 'fresh'>>): void {
+  const moved = 't' in patch || 'playing' in patch;
+  state = { ...state, ...patch, fresh: state.fresh && !moved };
   listeners.forEach((listener) => listener());
 }
 

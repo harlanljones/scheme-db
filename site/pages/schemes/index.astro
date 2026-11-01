@@ -1,21 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
-import SchemeTable, { type SchemeRow } from '../../islands/SchemeTable';
-import { ERA_LABELS, ERA_ORDER, library } from '../../lib/data';
-import { pad2 } from '../../lib/format';
+import SchemeTable from '../../islands/SchemeTable';
+import { ERA_LABELS, ERA_ORDER, library, schemeRows } from '../../lib/data';
 
 const lib = library();
-const rows: SchemeRow[] = lib.schemes.map((scheme) => ({
-  id: scheme.id,
-  no: pad2(scheme.no),
-  name: scheme.nameDisplay,
-  coach: scheme.coachName,
-  team: scheme.teamDisplay,
-  side: scheme.side,
-  era: scheme.era,
-  eraLabel: scheme.eraLabel,
-  href: scheme.href,
-}));
+const rows = schemeRows();
 const eras = ERA_ORDER.map((id) => ({ id, label: ERA_LABELS[id] }));
 ---
 

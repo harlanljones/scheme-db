@@ -596,7 +596,7 @@ input[type='range'] {
   border-top: 2px solid var(--fg);
 }
 
-.toc .row a {
+.toc .row > a {
   display: grid;
   grid-template-columns: 36px minmax(0, 1fr);
   grid-template-areas:
@@ -612,7 +612,7 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.toc .row a:hover {
+.toc .row > a:hover {
   background: var(--s1);
 }
 
@@ -689,7 +689,7 @@ input[type='range'] {
     display: grid;
   }
 
-  .toc .row a {
+  .toc .row > a {
     grid-template-columns: 44px minmax(0, 1.5fr) 132px minmax(0, 1.25fr) 100px 128px;
     grid-template-areas: 'no name coach team side era';
     gap: 4px 16px;
@@ -808,7 +808,8 @@ input[type='range'] {
 }
 
 .bar.bad {
-  background: var(--conf);
+  background: repeating-linear-gradient(135deg, var(--conf) 0 3px, var(--s1) 3px 6px);
+  box-shadow: inset 0 0 0 1px var(--conf);
 }
 
 .bar.cur {
@@ -820,7 +821,12 @@ input[type='range'] {
   position: absolute;
   left: 0;
   right: 0;
-  border-top: 1px dashed var(--conf);
+  border-top: 2px dashed var(--fg);
+  /* A halo of paper keeps the line readable where it crosses a bar. */
+  box-shadow:
+    0 -1px 0 var(--s1),
+    0 1px 0 var(--s1);
+  z-index: 1;
 }
 
 /* ---------- Beats list ---------- */
@@ -1060,12 +1066,6 @@ pre.code {
   border-radius: 50%;
 }
 
-.dot.anim {
-  transition:
-    left 0.12s linear,
-    top 0.12s linear;
-}
-
 .dot.o {
   background: var(--off);
   box-shadow: 0 0 0 1.5px var(--s1);
@@ -1091,12 +1091,6 @@ pre.code {
   color: var(--fg);
   background: var(--s1);
   white-space: nowrap;
-}
-
-.tag.anim {
-  transition:
-    left 0.12s linear,
-    top 0.12s linear;
 }
 
 .tag.up {
@@ -1144,13 +1138,6 @@ pre.code {
   background: var(--s2);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .dot.anim,
-  .tag.anim {
-    transition: none;
-  }
-}
-
 /* ---------- Header and footer ---------- */
 
 .notice {
@@ -1183,6 +1170,10 @@ pre.code {
   color: var(--fg2);
 }
 
+.notice p.tag-n {
+  flex: none;
+}
+
 .notice strong {
   font-weight: 600;
   color: var(--fg);
@@ -1202,6 +1193,7 @@ pre.code {
 
 .masthead .bar-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   gap: 12px;
   border-bottom: 1px solid var(--fg);
@@ -1814,17 +1806,21 @@ pre.code {
 
 .compare {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px 40px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .compare .pair {
-  flex: 1 1 320px;
   min-width: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
+}
+
+@media (min-width: 700px) {
+  .compare .pair {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .compare .pair .span {
@@ -1835,7 +1831,6 @@ pre.code {
 }
 
 .compare .score {
-  flex: 1 1 320px;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -1846,6 +1841,24 @@ pre.code {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (min-width: 860px) {
+  .compare .score .inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 16px 40px;
+    align-items: start;
+  }
+
+}
+
+.compare .range,
+.compare .reading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
 }
 
 .compare .chart {
@@ -1978,4 +1991,264 @@ pre.code {
 
 .list-lines li {
   border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- Ball, hash marks, no-script and print ---------- */
+
+.fld .ball {
+  position: absolute;
+  z-index: 1;
+  width: 14px;
+  height: 8px;
+  transform: translate(-50%, -50%);
+  border: 1.5px solid var(--fg);
+  border-radius: 50%;
+  background: var(--s1);
+}
+
+.mkb {
+  display: inline-block;
+  border: 1.5px solid var(--fg);
+  border-radius: 50%;
+  background: var(--s1);
+  flex: none;
+}
+
+/* Controls that need scripts stay out of the page when there are none. */
+html:not(.js) .js-only {
+  display: none !important;
+}
+
+.toc .row:has(.hits) > a {
+  border-bottom: 0;
+}
+
+.hits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 18px;
+  padding: 0 4px 10px 50px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hits li {
+  flex: none;
+}
+
+.hits a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.hits .type {
+  color: var(--fg2);
+  font-size: 12px;
+}
+
+@media (max-width: 380px) {
+  .tog span {
+    display: none;
+  }
+}
+
+@media print {
+  .dot,
+  .bar,
+  .mk,
+  .mkb,
+  .ball,
+  .cut,
+  .los,
+  .yl,
+  .hash {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .tools,
+  .tabs,
+  .menu,
+  .transport,
+  .scrub,
+  .group,
+  .filters,
+  .pbtn,
+  .skip,
+  .more-row,
+  .margin {
+    display: none !important;
+  }
+
+  .shell,
+  .column {
+    display: block;
+  }
+
+  .sheet,
+  .note,
+  .beat,
+  .prow {
+    break-inside: avoid;
+  }
+}
+
+/* ---------- Coaching network ---------- */
+
+.net {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.netscroll {
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  background: var(--s1);
+}
+
+.netsvg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ed {
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.ed.worked {
+  stroke: var(--fg2);
+}
+
+.ed.influence {
+  stroke: var(--rule2);
+  stroke-dasharray: 5 4;
+}
+
+.netsvg .nlab {
+  font: 500 13px 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  fill: var(--fg);
+}
+
+.netsvg .plain .nlab {
+  fill: var(--fg3);
+}
+
+.netsvg .mo {
+  fill: var(--off);
+}
+
+.netsvg .md {
+  fill: none;
+  stroke: var(--def);
+  stroke-width: 2;
+}
+
+.netsvg .mu {
+  fill: none;
+  stroke: var(--fg3);
+  stroke-width: 1.5;
+  stroke-dasharray: 2 2;
+}
+
+.netsvg .hit {
+  fill: transparent;
+  stroke: none;
+}
+
+.netsvg a.node {
+  outline: none;
+  cursor: pointer;
+}
+
+.netsvg a.node:hover .nlab {
+  text-decoration: underline;
+}
+
+.netsvg a.node:focus-visible .hit,
+.netsvg .node:target .hit,
+.netsvg .focus .hit {
+  fill: var(--s2);
+  stroke: var(--fg);
+  stroke-width: 1.5;
+}
+
+.netsvg .focus .nlab {
+  font-weight: 700;
+}
+
+.netkey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  font: 12px/18px 'Courier Prime', 'Courier New', monospace;
+  color: var(--fg2);
+}
+
+.netkey .k {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.netkey .swatch {
+  flex: none;
+}
+
+.mku {
+  border: 1.5px dashed var(--fg3);
+}
+
+.trees {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.treecard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 16px;
+  border: 1px solid var(--rule);
+  background: var(--s1);
+  scroll-margin-top: 16px;
+}
+
+.treecard .tree {
+  margin-top: 4px;
+}
+
+.tree li a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.tree li a:hover {
+  color: var(--fg);
+}
+
+@media (min-width: 900px) {
+  .trees {
+    grid-template-columns: 1fr 1fr;
+  }
+  .narrow-hint {
+    display: none;
+  }
+}
+
+@media print {
+  .netscroll {
+    overflow: visible;
+  }
 }

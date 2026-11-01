@@ -41,10 +41,56 @@ export function plural(n: number, one: string, many = `${one}s`): string {
 export const ROLE_WORDS: Record<string, string> = {
   ol: 'offensive lineman',
   qb: 'quarterback',
-  rb: 'back',
+  rb: 'running back',
   te: 'tight end',
   wr: 'receiver',
   dl: 'defensive lineman',
   lb: 'linebacker',
   db: 'defensive back',
 };
+
+/** What a coach calls a player, by the label on the sheet. Labels not listed here fall back to the role. */
+const PLAYER_WORDS: Record<string, string> = {
+  QB: 'quarterback',
+  RB: 'running back',
+  HB: 'halfback',
+  TB: 'tailback',
+  FB: 'fullback',
+  TE: 'tight end',
+  X: 'split end',
+  Z: 'flanker',
+  C: 'center',
+  LG: 'left guard',
+  RG: 'right guard',
+  LT: 'left tackle',
+  RT: 'right tackle',
+  MIKE: 'middle linebacker',
+  SAM: 'strongside linebacker',
+  WILL: 'weakside linebacker',
+  FS: 'free safety',
+  SS: 'strong safety',
+  LCB: 'left cornerback',
+  RCB: 'right cornerback',
+  NICKEL: 'nickel back',
+  NT: 'nose tackle',
+  NOSE: 'nose tackle',
+};
+
+/** "quarterback" for QB, and the role word for labels that mean different jobs in different plays. */
+export function playerWord(id: string, role: string): string {
+  return PLAYER_WORDS[id] ?? ROLE_WORDS[role] ?? 'player';
+}
+
+/** Coaches say an offense sells "the same look" and a defense "disguises". */
+export const lookWord = (side: 'offense' | 'defense'): string => (side === 'offense' ? 'Same look' : 'Disguise');
+
+/** "offensive" or "defensive", for sentences about the side that is scored. */
+export const sideAdjective = (side: 'offense' | 'defense'): string => (side === 'offense' ? 'offensive' : 'defensive');
+
+/** `jim-johnson` to `Jim Johnson`. Used only for people without a record, whose names the data gives as ids. */
+export function nameFromId(id: string): string {
+  return id
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}

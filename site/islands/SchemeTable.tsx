@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export interface SchemeRow {
   id: string;
@@ -10,6 +10,8 @@ export interface SchemeRow {
   era: string;
   eraLabel: string;
   href: string;
+  /** Plays of the scheme, for search. `hay` is the lower case text a search looks through. */
+  plays: Array<{ id: string; name: string; sheet: string; hay: string }>;
 }
 
 interface Props {
@@ -29,9 +31,34 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
   const [side, setSide] = useState<SideFilter>('all');
   const [era, setEra] = useState('all');
   const [expanded, setExpanded] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  // The search and filters live in the address, so Back returns to the same list and a link can share it.
+  useEffect(() => {
+    // Read after hydration, so the server and the first client render match.
+    const params = new URLSearchParams(window.location.search);
+    setQ(params.get('q') ?? '');
+    const sideParam = params.get('side');
+    if (sideParam === 'offense' || sideParam === 'defense') setSide(sideParam);
+    const eraParam = params.get('era');
+    if (eraParam && eras.some((e) => e.id === eraParam)) setEra(eraParam);
+    setReady(true);
+  }, [eras]);
+  useEffect(() => {
+    if (!ready) return;
+    const params = new URLSearchParams();
+    if (q.trim()) params.set('q', q.trim());
+    if (side !== 'all') params.set('side', side);
+    if (era !== 'all') params.set('era', era);
+    const query = params.toString();
+    const next = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
+    if (next !== `${window.location.pathname}${window.location.search}${window.location.hash}`) window.history.replaceState(null, '', next);
+  }, [ready, q, side, era]);
 
   const needle = q.trim().toLowerCase();
-  const match = (r: SchemeRow) => !needle || `${r.name} ${r.coach} ${r.team}`.toLowerCase().includes(needle);
+  const schemeText = (r: SchemeRow) => `${r.name} ${r.coach} ${r.team}`.toLowerCase();
+  const playHits = (r: SchemeRow) => (needle ? r.plays.filter((p) => p.hay.includes(needle)) : []);
+  const match = (r: SchemeRow) => !needle || schemeText(r).includes(needle) || playHits(r).length > 0;
   const bySide = (r: SchemeRow) => side === 'all' || r.side === side;
   const byEra = (r: SchemeRow) => era === 'all' || r.era === era;
 
@@ -57,14 +84,20 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
     ...eras.map((e): [string, string, number] => [e.id, e.label, pool.filter((r) => bySide(r) && r.era === e.id).length]),
   ];
 
-  const status = list.length === 0 ? 'No schemes match' : filtered ? `${list.length} of ${rows.length} schemes match` : `All ${rows.length} schemes`;
+  const hitCount = needle ? list.reduce((n, r) => n + (schemeText(r).includes(needle) ? 0 : playHits(r).length), 0) : 0;
+  const status =
+    list.length === 0
+      ? 'No schemes match'
+      : filtered
+        ? `${list.length} of ${rows.length} schemes match${hitCount ? `, ${hitCount} by play` : ''}`
+        : `All ${rows.length} schemes`;
 
   return (
     <div>
-      <div className="filters">
+      <div className="filters js-only">
         <div className="search">
           <label htmlFor={`${idPrefix}-q`} className="lab">
-            Find a scheme, coach or team
+            Find a scheme, coach, team or play
           </label>
           <input id={`${idPrefix}-q`} className="input" type="search" value={q} onChange={(e) => setQ(e.target.value)} autoComplete="off" />
         </div>
@@ -106,7 +139,9 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
         </div>
         {list.length > 0 ? (
           <ol className="toc" data-collapsed={collapsible ? 'true' : undefined}>
-            {list.map((r) => (
+            {list.map((r) => {
+              const hits = schemeText(r).includes(needle) ? [] : playHits(r);
+              return (
               <li key={r.id} className="row">
                 <a href={r.href}>
                   <span className="no">{r.no}</span>
@@ -125,8 +160,20 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
                     <span className="era">{r.eraLabel}</span>
                   </span>
                 </a>
+                {hits.length > 0 ? (
+                  <ul className="hits" aria-label={`Plays in ${r.name} that match`}>
+                    {hits.slice(0, 4).map((p) => (
+                      <li key={p.id}>
+                        <a href={`${r.href}${p.id}/`}>
+                          {p.name} <span className="type">{p.sheet}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
-            ))}
+              );
+            })}
           </ol>
         ) : (
           <div className="empty">
@@ -134,7 +181,7 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
               {needle ? `No scheme matches “${q.trim()}”` : 'No schemes in this combination'}
             </h3>
             <p className="prose" style={{ fontSize: 15, lineHeight: '24px' }}>
-              Try a coach&rsquo;s last name, a team or a shorter word. You can also clear the side and era filters.
+              Try a coach&rsquo;s last name, a team, a play name or a shorter word. You can also clear the side and era filters.
             </p>
             <button className="pill" type="button" onClick={clear}>
               Clear filters

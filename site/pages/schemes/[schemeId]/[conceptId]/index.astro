@@ -11,13 +11,14 @@ import {
   litePlay,
   litePlayById,
   playHref,
+  playImagePath,
   prevNext,
   recordPath,
   type PlayView,
   type SchemeView,
 } from '../../../../lib/data';
 import { fieldWindow } from '../../../../lib/field';
-import { count, capitalize, list, tidy } from '../../../../lib/format';
+import { count, capitalize, list, lookWord, plural, sideAdjective, tidy } from '../../../../lib/format';
 
 export function getStaticPaths() {
   const lib = library();
@@ -57,6 +58,20 @@ const compareProps = others.map(({ c, lite: other }) => ({
 }));
 
 const sheetsText = list(comparisons.map((c) => c.sheet.toLowerCase().replace('sheet ', '')));
+const namesText = list(comparisons.map((c) => c.name));
+const side = scheme.side;
+// Say "starts like this one" only for plays that really do: at least the 80% line at the snap.
+const alike = comparisons.filter((c) => c.profile[0] >= DISGUISE_HOLD_PERCENT);
+const apart = comparisons.filter((c) => c.profile[0] < DISGUISE_HOLD_PERCENT);
+const sheetList = (items: typeof comparisons) => `${plural(items.length, 'Sheet')} ${list(items.map((c) => c.sheet.toLowerCase().replace('sheet ', '')))}`;
+const verdictText = [
+  alike.length > 0 ? `${sheetList(alike)} ${alike.length === 1 ? 'starts' : 'start'} out looking like this one.` : '',
+  apart.length > 0
+    ? `${sheetList(apart)} ${apart.length === 1 ? 'does' : 'do'} not: ${apart.length === 1 ? 'it scores' : 'they score'} ${list(apart.map((c) => `${c.profile[0]}%`))} at the snap.`
+    : '',
+]
+  .filter(Boolean)
+  .join(' ');
 
 const preview = {
   id: play.id,
@@ -76,10 +91,13 @@ const fileBase = `${play.schemeId}/${play.id}`;
 <Base
   title={`${play.nameDisplay}, ${scheme.nameDisplay}`}
   description={`${play.nameDisplay} from ${scheme.nameDisplay}: an illustrative play you can scrub a tenth of a second at a time, with coaching points${comparisons.length ? ' and a comparison with the plays it mirrors' : ''}.`}
+  image={playImagePath(scheme.id, play.id)}
+  imageAlt={`${play.nameDisplay}: the players of an illustrative play 1.2 seconds after the snap. Offense is filled amber, defense is ringed blue.`}
 >
   <div class="wrap">
     <nav aria-label="Breadcrumb" class="crumbs">
-      <a href="/schemes/">Contents</a>
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><a href="/schemes/">Contents</a></span>
       <span class="sep"><span aria-hidden="true">/</span><a href={scheme.href}>{scheme.nameDisplay}</a></span>
       <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Play sheet {play.order} of {total}</span></span>
     </nav>
@@ -97,7 +115,7 @@ const fileBase = `${play.schemeId}/${play.id}`;
           <h1 class="slab">{play.nameDisplay}</h1>
         </div>
         {comparisons.length > 0 && (
-          <a class="lnk" href="#compare" style="font-size:15px">Jump to the comparison with sheet{comparisons.length > 1 ? 's' : ''} {sheetsText} <span aria-hidden="true">↓</span></a>
+          <a class="lnk" href="#compare" style="font-size:15px">Jump to the comparison with {namesText} <span aria-hidden="true">↓</span></a>
         )}
       </div>
       <div class="sheethead">
@@ -130,14 +148,15 @@ const fileBase = `${play.schemeId}/${play.id}`;
   {comparisons.length > 0 && (
     <section id="compare" class="wrap section" style="scroll-margin-top:16px">
       <div class="divider">
-        <p class="eyebrow">Disguise</p>
-        <h2>{comparisons.length === 1 ? `Sheet ${sheetsText} starts` : `Sheets ${sheetsText} start`} like this one</h2>
-        <p class="aside">Scored over the first {DISGUISE_SECONDS.toFixed(1)} s</p>
+        <p class="eyebrow">{lookWord(side)}</p>
+        <h2>This play against {comparisons.length === 1 ? `sheet ${sheetsText}` : `sheets ${sheetsText}`}</h2>
+        <p class="aside">Scored over the first {DISGUISE_SECONDS.toFixed(1)} s, {side} only</p>
       </div>
-      <p class="body">Pick a sheet, then scrub the time. Both fields move together with the scrubber above and below.</p>
+      <p class="body">{verdictText} Pick a sheet, then scrub the time. Both fields move together with the scrubber above and below.</p>
       <PlayCompare
         client:idle
         base={JSON.stringify(lite)}
+        side={side}
         baseSheet={`Sheet ${play.order}`}
         baseName={play.nameDisplay}
         duration={tracks.duration}
@@ -148,7 +167,7 @@ const fileBase = `${play.schemeId}/${play.id}`;
       <div style="max-width:680px;display:flex;flex-direction:column;gap:6px">
         <p class="lab">How the score works</p>
         <p class="small" style="font-size:14px;line-height:22px">
-          Every tenth of a second, SchemeDB measures how far apart each player stands in the two plays and averages those gaps. Zero yards apart scores 100. Six yards or more scores 0. The dashed {DISGUISE_HOLD_PERCENT}% line is SchemeDB’s own cutoff for plays that still look the same. It has not been tested against real defenders, so read it as a way to compare plays, not as a measure of what a defense can see.{' '}
+          Every tenth of a second, SchemeDB measures how far apart each {sideAdjective(side)} player stands in the two plays and averages those gaps. Only the {side} is counted, because it is the side selling the look; the {side === 'offense' ? 'defense' : 'offense'} is drawn for context and is the side reading it. Zero yards apart scores 100. Six yards or more scores 0. The dashed {DISGUISE_HOLD_PERCENT}% line is SchemeDB’s own cutoff for plays that still look the same. It has not been tested against real defenders, so read it as a way to compare plays, not as a measure of what a defense can see.{' '}
           <a href="/about/#similarity" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;padding:14px 0">Read the full method</a>
         </p>
       </div>

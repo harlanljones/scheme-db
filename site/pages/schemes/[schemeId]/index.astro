@@ -9,7 +9,9 @@ import {
   schemePlayRows,
   type SchemeView,
 } from '../../../lib/data';
-import { count, capitalize, list, pad2, plural, tidy } from '../../../lib/format';
+import { count, capitalize, list, pad2, plural, sideAdjective, tidy } from '../../../lib/format';
+import NetworkGraph from '../../../components/NetworkGraph.astro';
+import { describeNetwork, egoNetwork, layoutNetwork, network } from '../../../lib/network';
 
 export function getStaticPaths() {
   return library().schemes.map((scheme) => ({ params: { schemeId: scheme.id }, props: { scheme } }));
@@ -26,6 +28,8 @@ const lineage = lib.lineageById.get(scheme.lineage);
 const rows = schemePlayRows(scheme);
 const mentors = coach ? mentorChain(coach.id) : [];
 const disciples = coach ? disciplesOf(coach) : [];
+const ego = coach ? egoNetwork(network(), coach.id) : undefined;
+const egoLayout = ego ? layoutNetwork(ego) : undefined;
 const sideLabel = scheme.side === 'offense' ? 'Offense' : 'Defense';
 const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.play;
 ---
@@ -36,8 +40,9 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
 >
   <div class="wrap">
     <nav aria-label="Breadcrumb" class="crumbs">
-      <a href="/schemes/">Contents</a>
-      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Section {scheme.no} of {total}</span></span>
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><a href="/schemes/">Contents</a></span>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">{scheme.nameDisplay}</span></span>
     </nav>
   </div>
 
@@ -51,7 +56,7 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
         <div style="display:flex;flex-wrap:wrap;gap:8px">
           <span class="chip"><span class={`mk ${scheme.side === 'offense' ? 'mko' : 'mkd'}`} aria-hidden="true"></span>{sideLabel}</span>
           <span class="chip">{scheme.eraLabel}</span>
-          {lineage && <span class="chip">{tidy(lineage.name)}</span>}
+          {lineage && <a class="chip" href={`/lineages/#tree-${lineage.id}`}>{tidy(lineage.name)}</a>}
         </div>
         <h1>{scheme.nameDisplay}</h1>
         <p class="type small" style="font-size:14px">{scheme.coachName}, {scheme.teamDisplay}</p>
@@ -68,7 +73,7 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
       </div>
       {ref && (
         <p class="small" style="font-size:14px;line-height:21px">
-          Scores compare where players stand in two plays. 100% means the same spots.{' '}
+          Scores compare where the {scheme.side === 'offense' ? 'offense' : 'defense'} stands in two plays, because that is the side selling the look. 100% means the same spots.{' '}
           <a href="/about/#similarity" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px;padding:14px 0">How the score works</a>
         </p>
       )}
@@ -84,13 +89,13 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
               </span>
               {comparison ? (
                 <span class="chart">
-                  <span class="lab">Similarity to {comparison.refSheet.toLowerCase()}</span>
+                  <span class="lab">Similarity to {comparison.refName}</span>
                   <span class="bars" role="img" aria-label={`${play.nameDisplay}, similarity to ${comparison.refName} by tenth of a second: ${comparison.profile.join(', ')} percent.`} style="height:48px">
                     <span class="cut" style={`bottom:${Math.round(DISGUISE_HOLD_PERCENT * 0.48)}px`}></span>
                     {comparison.profile.map((v) => <span class={`bar${v < DISGUISE_HOLD_PERCENT ? ' bad' : ''}`} style={`height:${Math.round(v * 0.48)}px`}></span>)}
                   </span>
                   <span class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
-                    {comparison.score}% on average.
+                    {comparison.score}% on average.{' '}
                     {comparison.breakSeconds === null ? `Stays above the ${DISGUISE_HOLD_PERCENT}% line.` : `Drops below the ${DISGUISE_HOLD_PERCENT}% line at ${comparison.breakSeconds.toFixed(1)} s.`}
                   </span>
                 </span>
@@ -120,12 +125,21 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
 
       {coach && (mentors.length > 0 || disciples.length > 0) && (
         <div>
-          <div class="divider sm"><p class="eyebrow">Lineage</p><h2>Where it comes from</h2></div>
+          <div class="divider sm"><p class="eyebrow">Lineage</p><h2>Worked directly under</h2></div>
           <ul class="tree">
-            {mentors.map((mentor, i) => <li style={`padding-left:${i * 16}px`}>{mentor.name}</li>)}
+            {mentors.map((mentor, i) => (
+              <li style={`padding-left:${i * 16}px`}>{mentor.href ? <a href={mentor.href}>{mentor.name}</a> : mentor.name}</li>
+            ))}
             <li class="here" style={`padding-left:${mentors.length * 16}px`}>{coach.name} <span class="t">This scheme</span></li>
-            {disciples.length > 0 && <li style={`padding-left:${(mentors.length + 1) * 16}px`}>{list(disciples.map((d) => d.name))}</li>}
+            {disciples.length > 0 && (
+              <li style={`padding-left:${(mentors.length + 1) * 16}px`}>
+                {disciples.map((d, i) => (
+                  <>{i > 0 ? (i === disciples.length - 1 ? ' and ' : ', ') : ''}{d.href ? <a href={d.href}>{d.name}</a> : d.name}</>
+                ))}
+              </li>
+            )}
           </ul>
+          {egoLayout && <p class="type" style="padding-top:10px;font-size:12px;line-height:18px"><a href="#network">See how the coaches connect</a></p>}
         </div>
       )}
 
@@ -140,4 +154,15 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
       </div>
     </aside>
   </section>
+  {egoLayout && ego && coach && (
+    <section class="wrap section" id="network">
+      <div class="divider">
+        <p class="eyebrow">Lineage</p>
+        <h2>Who taught whom</h2>
+        <p class="aside"><a href={`/lineages/#n-${coach.id}`}>Open the full lineage</a></p>
+      </div>
+      <NetworkGraph layout={egoLayout} label={describeNetwork(ego, coach.id)} focusId={coach.id} />
+      <p class="type narrow-hint" style="font-size:12px;line-height:18px;color:var(--fg2)">On a narrow screen, slide the chart sideways.</p>
+    </section>
+  )}
 </Base>

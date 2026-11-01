@@ -6,11 +6,13 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { loadDataset } from '../../src/schema/load';
 import { DISGUISE_HOLD_PERCENT, DISGUISE_WINDOW_FRAMES, summarizeDisguise } from '../../src/engine/disguise';
+import { levelOfEra } from '../../src/engine/field';
 import { FRAME_RATE_HZ } from '../../src/engine/frames';
 import type { Coach, Concept, Dataset, Lineage, Scheme, Term, Tracks } from '../../src/schema/schema';
 import type { PlayerTrack } from '../../src/engine/types';
 import { fieldWindow, gapDistances, pairedCount, type FieldWindow, type LitePlay } from './field';
-import { pad2, tidy } from './format';
+import type { SchemeRow } from '../islands/SchemeTable';
+import { nameFromId, pad2, tidy } from './format';
 
 export const SITE = {
   url: 'https://schemedb.harlanljones.com',
@@ -73,6 +75,8 @@ export interface Comparison {
   gapsAtEnd: string[];
   /** The same players with their distance in yards, farthest first. */
   gapDetails: Array<{ id: string; yards: number }>;
+  /** The side the score counts. */
+  side: 'offense' | 'defense';
   /** The play whose tell separates the two, and its words. */
   tellName: string;
   tell: string;
@@ -159,13 +163,22 @@ export const playHref = (schemeId: string, conceptId: string): string => `/schem
 
 /** A play's tracks reduced to what a figure needs. */
 export function litePlay(concept: Concept, tracks: Tracks): LitePlay {
+  const scheme = library().schemeById.get(concept.schemeId)!;
   const lite = (track: Tracks['offense'][number]) => ({
     id: track.id,
     side: track.side,
     role: track.role,
     w: track.waypoints.map((w) => [w.t, w.x, w.y] as [number, number, number]),
   });
-  return { id: concept.id, name: tidy(concept.name), duration: tracks.duration, tracks: [...tracks.offense, ...tracks.defense].map(lite) };
+  return {
+    id: concept.id,
+    name: tidy(concept.name),
+    duration: tracks.duration,
+    level: levelOfEra(scheme.era),
+    spot: concept.ballSpot ?? 'middle',
+    scored: scheme.side,
+    tracks: [...tracks.offense, ...tracks.defense].map(lite),
+  };
 }
 
 export function litePlayById(id: string): LitePlay {
@@ -201,12 +214,14 @@ export function compare(base: Concept, other: Concept): Comparison {
   const lib = library();
   const a = lib.tracksById.get(base.id)!;
   const b = lib.tracksById.get(other.id)!;
-  const summary = summarizeDisguise(engineTracks(a), engineTracks(b));
+  // A scheme sells its look with its own players, so only that side is scored. The other side is reading the look.
+  const side = lib.schemeById.get(base.schemeId)!.side;
+  const summary = summarizeDisguise(engineTracks(a), engineTracks(b), side);
   const la = litePlay(base, a);
   const lb = litePlay(other, b);
-  const { paired, total } = pairedCount(la, lb);
+  const { paired, total } = pairedCount(la, lb, side);
   const counter = counterOf(base, other);
-  const gaps = gapDistances(la, lb, DISGUISE_SECONDS);
+  const gaps = gapDistances(la, lb, DISGUISE_SECONDS, 1, side);
   return {
     id: other.id,
     order: other.order,
@@ -219,6 +234,7 @@ export function compare(base: Concept, other: Concept): Comparison {
     profile: summary.profile,
     paired,
     total,
+    side,
     gapsAtEnd: gaps.map((gap) => gap.id),
     gapDetails: [...gaps].sort((x, y) => y.yards - x.yards),
     tellName: tidy(counter.name),
@@ -269,30 +285,69 @@ export function schemePlayRows(scheme: SchemeView): SchemePlayRow[] {
   });
 }
 
+/** One row per scheme for the contents table, with the text a search looks through. */
+export function schemeRows(): SchemeRow[] {
+  return library().schemes.map((scheme) => ({
+    id: scheme.id,
+    no: pad2(scheme.no),
+    name: scheme.nameDisplay,
+    coach: scheme.coachName,
+    team: scheme.teamDisplay,
+    side: scheme.side,
+    era: scheme.era,
+    eraLabel: scheme.eraLabel,
+    href: scheme.href,
+    plays: scheme.plays.map((play) => ({
+      id: play.id,
+      name: play.nameDisplay,
+      sheet: play.sheet,
+      hay: `${play.name} ${play.formation} ${play.frontName} ${play.coverage} ${play.personnel}`.toLowerCase(),
+    })),
+  }));
+}
+
 export function prevNext(scheme: SchemeView, concept: Concept): { prev?: PlayView; next?: PlayView } {
   const i = scheme.plays.findIndex((play) => play.id === concept.id);
   return { prev: scheme.plays[i - 1], next: scheme.plays[i + 1] };
 }
 
-/** The chain of mentors above a coach, oldest first, using only coaches that have a record. */
-export function mentorChain(coachId: string): Coach[] {
+/** A person named as a mentor or disciple. `known` is false when the data has no coach record for them, so there is no page to link to. */
+export interface Person {
+  id: string;
+  name: string;
+  known: boolean;
+  href?: string;
+}
+
+/** The page of the coach's first scheme, if the coach has one. */
+export function coachHref(coach: Coach): string | undefined {
   const lib = library();
-  const chain: Coach[] = [];
-  const seen = new Set<string>();
+  const schemeId = coach.schemeIds.find((id) => lib.schemeById.has(id));
+  return schemeId ? lib.schemeById.get(schemeId)!.href : undefined;
+}
+
+function personOf(id: string): Person {
+  const coach = library().coachById.get(id);
+  return coach ? { id, name: coach.name, known: true, href: coachHref(coach) } : { id, name: nameFromId(id), known: false };
+}
+
+/** The chain of people above a coach by `mentorId` (worked directly under), oldest first. A person with no record ends the chain. */
+export function mentorChain(coachId: string): Person[] {
+  const lib = library();
+  const chain: Person[] = [];
+  const seen = new Set<string>([coachId]);
   let current = lib.coachById.get(coachId);
   while (current?.mentorId && !seen.has(current.mentorId)) {
     seen.add(current.mentorId);
-    const mentor = lib.coachById.get(current.mentorId);
-    if (!mentor) break;
-    chain.unshift(mentor);
-    current = mentor;
+    chain.unshift(personOf(current.mentorId));
+    current = lib.coachById.get(current.mentorId);
   }
   return chain;
 }
 
-export function disciplesOf(coach: Coach): Coach[] {
-  const lib = library();
-  return (coach.disciples ?? []).map((id) => lib.coachById.get(id)).filter((c): c is Coach => !!c);
+/** The people who worked directly under a coach, as the coach's record lists them. */
+export function disciplesOf(coach: Coach): Person[] {
+  return (coach.disciples ?? []).map(personOf);
 }
 
 export function recordPath(kind: 'concepts' | 'tracks', schemeId: string, conceptId: string): string {
@@ -324,3 +379,7 @@ export function termList(): Term[] {
 }
 
 export { pad2 };
+
+/** Where the share images are published. They are drawn at build time by `og.ts`. */
+export const siteImagePath = '/og/default.png';
+export const playImagePath = (schemeId: string, conceptId: string): string => `/og/${schemeId}/${conceptId}.png`;

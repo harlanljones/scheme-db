@@ -21,6 +21,8 @@ export interface CompareProp {
 
 interface Props {
   base: string;
+  /** The side the score counts, which also gets the red rings. */
+  side: 'offense' | 'defense';
   baseSheet: string;
   baseName: string;
   duration: number;
@@ -32,7 +34,7 @@ interface Props {
 }
 
 /** The comparison with the plays this one mirrors: two fields on the shared clock, the score by tenth of a second, and the tell. */
-export default function PlayCompare({ base: baseJson, baseSheet, baseName, duration, comparisons, holdPercent, windowSeconds }: Props) {
+export default function PlayCompare({ base: baseJson, side, baseSheet, baseName, duration, comparisons, holdPercent, windowSeconds }: Props) {
   const base = useMemo(() => parsePlay(baseJson), [baseJson]);
   const state = usePlayState();
   const t = tenth(state.t);
@@ -57,7 +59,7 @@ export default function PlayCompare({ base: baseJson, baseSheet, baseName, durat
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-      <div role="group" aria-label="Compare against" className="group">
+      <div role="group" aria-label="Compare against" className="group js-only">
         {comparisons.map((c) => (
           <button key={c.id} className="pill" type="button" aria-pressed={c.id === cmp.id} onClick={() => setPlayState({ compareId: c.id })}>
             <span className="type" style={{ fontWeight: 700 }}>
@@ -76,7 +78,7 @@ export default function PlayCompare({ base: baseJson, baseSheet, baseName, durat
               <p>t = {t.toFixed(1)} s</p>
             </div>
             <div style={{ padding: '12px 12px 6px' }}>
-              <Field play={base} t={state.t} win={win} dot={10} refWidth={250} />
+              <Field play={base} t={state.t} win={win} dot={12} refWidth={300} />
             </div>
             <figcaption className="small" style={{ padding: '4px 14px 12px' }}>
               {baseName}.
@@ -88,19 +90,20 @@ export default function PlayCompare({ base: baseJson, baseSheet, baseName, durat
               <p>t = {t.toFixed(1)} s</p>
             </div>
             <div style={{ padding: '12px 12px 6px' }}>
-              <Field play={other} against={base} againstName={baseName} t={state.t} win={win} dot={10} refWidth={250} />
+              <Field play={other} against={base} againstName={baseName} ringSide={side} spot={base.spot} t={state.t} win={win} dot={12} refWidth={300} />
             </div>
             <figcaption className="small" style={{ padding: '4px 14px 12px' }}>
-              {cmp.name}. Red rings mark players more than 1 yard from where they stand in {baseName}.
+              {cmp.name}. Red rings mark {side} players more than 1 yard from where they stand in {baseName}.
             </figcaption>
           </figure>
           <div className="span">
-            <FieldLegend against />
-            <label htmlFor="scrub-t2" className="mono-small">
+            <FieldLegend against level={base.level} />
+            <label htmlFor="scrub-t2" className="mono-small js-only">
               Time after the snap: <span style={{ fontWeight: 700, color: 'var(--fg)' }}>{t.toFixed(1)} s</span>
             </label>
             <input
               id="scrub-t2"
+              className="js-only"
               type="range"
               min={0}
               max={Math.round(duration * 10)}
@@ -117,43 +120,47 @@ export default function PlayCompare({ base: baseJson, baseSheet, baseName, durat
             <p>How alike the two plays are, 0.0 to {windowSeconds.toFixed(1)} s</p>
           </div>
           <div className="inner">
-            <p aria-live="polite" className="type" style={{ fontSize: 14, lineHeight: '20px', color: 'var(--fg)' }}>
-              {readout}
-            </p>
-            <div
-              className="chart"
-              role="img"
-              aria-label={`Similarity between ${baseName} and ${cmp.name} by tenth of a second: ${cmp.profile.join(', ')} percent.`}
-            >
-              <div className="cut" style={{ bottom: Math.round(holdPercent * 0.96) }} />
-              <span className="cut-label" aria-hidden="true" style={{ bottom: Math.round(holdPercent * 0.96) - 6 }}>
-                {holdPercent}%
-              </span>
-              {cmp.profile.map((v, i) => (
-                <div key={i} className={`bar${v < holdPercent ? ' bad' : ''}${inWindow && i === frame ? ' cur' : ''}`} style={{ height: Math.round(v * 0.96) }} />
-              ))}
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
-              <p className="type" style={{ fontSize: 11, lineHeight: '16px', color: 'var(--fg2)' }}>
-                0.0 s, {cmp.profile[0]}%
+            <div className="range">
+              <p aria-live={state.playing ? 'off' : 'polite'} className="type" style={{ fontSize: 14, lineHeight: '20px', color: 'var(--fg)' }}>
+                {readout}
               </p>
-              <p className="type" style={{ fontSize: 11, lineHeight: '16px', color: 'var(--fg2)' }}>
-                {windowSeconds.toFixed(1)} s, {last}%
-              </p>
+              <div
+                className="chart"
+                role="img"
+                aria-label={`Similarity between ${baseName} and ${cmp.name} by tenth of a second: ${cmp.profile.join(', ')} percent.`}
+              >
+                <div className="cut" style={{ bottom: Math.round(holdPercent * 0.96) }} />
+                <span className="cut-label" aria-hidden="true" style={{ bottom: Math.round(holdPercent * 0.96) - 6 }}>
+                  {holdPercent}%
+                </span>
+                {cmp.profile.map((v, i) => (
+                  <div key={i} className={`bar${v < holdPercent ? ' bad' : ''}${inWindow && i === frame ? ' cur' : ''}`} style={{ height: Math.round(v * 0.96) }} />
+                ))}
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+                <p className="type" style={{ fontSize: 11, lineHeight: '16px', color: 'var(--fg2)' }}>
+                  0.0 s, {cmp.profile[0]}%
+                </p>
+                <p className="type" style={{ fontSize: 11, lineHeight: '16px', color: 'var(--fg2)' }}>
+                  {windowSeconds.toFixed(1)} s, {last}%
+                </p>
+              </div>
             </div>
-            <p style={{ fontSize: 15, lineHeight: '22px', color: 'var(--fg)' }}>
-              {cmp.score}% on average. {verdict}
-            </p>
-            {cmp.paired < cmp.total ? (
+            <div className="reading">
+              <p style={{ fontSize: 15, lineHeight: '22px', color: 'var(--fg)' }}>
+                {cmp.score}% on average. {verdict}
+              </p>
               <p className="small" style={{ fontSize: 13, lineHeight: '19px' }}>
-                Scored on the {cmp.paired} of {cmp.total} players who appear in both plays.
+                {cmp.paired < cmp.total
+                  ? `Scored on the ${cmp.paired} of ${cmp.total} ${side} players who appear in both plays.`
+                  : `Scored on the ${side}, the side that sells the look. The ${side === 'offense' ? 'defense' : 'offense'} is shown for context.`}
               </p>
-            ) : null}
-            <div style={{ borderTop: '1px solid var(--rule)', paddingTop: 14, display: 'flex', flexDirection: 'column', gap: 6 }}>
-              <p className="lab">The tell</p>
-              <p className="small" style={{ fontSize: 14, lineHeight: '21px' }}>
-                <span style={{ color: 'var(--fg)' }}>{cmp.tellName}:</span> {cmp.tell}
-              </p>
+              <div style={{ borderTop: '1px solid var(--rule)', paddingTop: 14, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <p className="lab">The tell</p>
+                <p className="small" style={{ fontSize: 14, lineHeight: '21px' }}>
+                  <span style={{ color: 'var(--fg)' }}>{cmp.tellName}:</span> {cmp.tell}
+                </p>
+              </div>
             </div>
           </div>
         </div>

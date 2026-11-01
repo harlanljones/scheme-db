@@ -38,6 +38,23 @@ Harlan found the first mockups too much like a SaaS product page. Three directio
 
 What every direction avoided: gradient headline text, a band of large stats, three equal feature cards, a three step row, an FAQ list, paired pill buttons and uniform rounded card grids.
 
+## Astro audit follow ups (2026-11-01)
+
+An independent audit of the first Astro build (UI and UX, football accuracy, usability, motion) asked six questions. Harlan's answers, and what was done:
+
+| # | Question | Decision | Done |
+|---|---|---|---|
+| 1 | What does "mentor" mean? | **Worked directly under, in any role.** Influence that passed on without a job link is a separate, dashed line. A network chart shows both. | Coach records corrected (11 coaches). A mentor or disciple link with no source was removed rather than kept (Chris Shula, Chip Kelly). New Lineages page and a chart on every scheme page. |
+| 2 | Score both sides of the ball? | **Score only the side that sells the look.** Offense on offense schemes, defense on defense schemes. The other side is the one reading it. | Engine takes a `side`. Scores changed (average / at 1.2 s): Play Action Deep Over 95/89 (was 96/92), Naked Bootleg 95/89 (was 97/93), Jet Motion 71/48 (was 79/61). Jet Motion now drops below the 80% line at 0.4 s, not 0.6 s. About and the Compare panel say which side is counted. |
+| 3 | Pre snap time (negative `t`)? | **Spec it, do not build it yet.** | Spec in the Claude Docs list: "Pre-snap time: spec for negative t". Four phases, 30 to 40 hours. |
+| 4 | Hash marks? | **Draw NFL and college hash marks and the ball spot.** | `data/` has an optional `ballSpot` (left, middle, right) on a concept. Fields draw the hash marks of the scheme's level and a ball marker. The release `concepts` table has `ball_spot` and `ball_x`. Five plays name a spot. |
+| 5 | "Disguise" or "Same look" on offense? | **My call: "Same look" on offense pages, "Disguise" on defense pages.** Coaches say disguise for defense and "same look" for matching offensive plays. | Labels and section titles follow the side. |
+| 6 | Per play share images? | **Yes, if sensible.** | `satori` and `@resvg/resvg-js` as build only dependencies. 180 play images and one site image, 1200 by 630, about 5 MB in all, drawn at build time. Each says the play is an illustration. |
+
+Also done from the audit: comparison headings now say which sheets start alike and which do not, plays are searchable, the first Play press starts at the snap, the compare fields are larger, hash and ball legend, print styles, wrong role titles fixed (Greg Roman, Chip Kelly, Robert Saleh), "red zone" removed from five plays that sit in midfield, and the "identical" claim removed next to a score under 100%.
+
+Still open from the audit (not done): a motion catalog (ghost overlay, routes inking in, beat focus, view transitions), offside starts (FB-3), quarterback depth in shotgun (FB-4), personnel labels that disagree with the drawn players (FB-12), a copy pass over data text (FB-13), a `comparisons.csv` download (UX-5), name only records for people who are named as mentors but have no coach page.
+
 ## Alternatives that were considered
 
 - Home action: download the data (developer first), or contribute on GitHub. Rejected because a moving play shows both the craft and the data in seconds.

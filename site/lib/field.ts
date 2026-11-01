@@ -3,10 +3,11 @@
  * No node imports. Positions come from the same engine the downloads and tests use: a smooth curve through
  * each player's timed waypoints.
  */
+import { FIELD_WIDTH_YARDS, type BallSpot, type Level } from '../../src/engine/field';
 import { positionAt } from '../../src/engine/interpolate';
 import type { PlayerTrack } from '../../src/engine/types';
 
-export const FIELD_WIDTH_YARDS = 53.33;
+export { FIELD_WIDTH_YARDS };
 
 /** One player, reduced to what a figure needs. `w` holds [t, x, y] triples in yards from the left sideline and the line of scrimmage. */
 export interface LiteTrack {
@@ -20,6 +21,12 @@ export interface LitePlay {
   id: string;
   name: string;
   duration: number;
+  /** Which hash marks the field has: NFL or college. */
+  level: Level;
+  /** Where the ball is spotted. Positions are drawn with the ball at midfield; add the spot offset to place them. */
+  spot: BallSpot;
+  /** The side the score counts: the side the scheme belongs to. */
+  scored: 'offense' | 'defense';
   tracks: LiteTrack[];
 }
 
@@ -84,10 +91,17 @@ export function fieldWindow(plays: LitePlay[], tMax: number): FieldWindow {
 }
 
 /** Players, in both plays, that stand more than `threshold` yards apart at time `t`, with the distance, in track order. */
-export function gapDistances(a: LitePlay, b: LitePlay, t: number, threshold = 1): Array<{ id: string; yards: number }> {
+export function gapDistances(
+  a: LitePlay,
+  b: LitePlay,
+  t: number,
+  threshold = 1,
+  side?: 'offense' | 'defense',
+): Array<{ id: string; yards: number }> {
   const other = new Map(b.tracks.map((track) => [track.id, track]));
   const out: Array<{ id: string; yards: number }> = [];
   for (const track of a.tracks) {
+    if (side && track.side !== side) continue;
     const match = other.get(track.id);
     if (!match) continue;
     const p = pos(track, t);
@@ -99,14 +113,15 @@ export function gapDistances(a: LitePlay, b: LitePlay, t: number, threshold = 1)
 }
 
 /** Ids of players, in both plays, that stand more than `threshold` yards apart at time `t`. */
-export function gapsAt(a: LitePlay, b: LitePlay, t: number, threshold = 1): string[] {
-  return gapDistances(a, b, t, threshold).map((gap) => gap.id);
+export function gapsAt(a: LitePlay, b: LitePlay, t: number, threshold = 1, side?: 'offense' | 'defense'): string[] {
+  return gapDistances(a, b, t, threshold, side).map((gap) => gap.id);
 }
 
-/** Players in `a` that also stand in `b` (same id), and the size of `a`. */
-export function pairedCount(a: LitePlay, b: LitePlay): { paired: number; total: number } {
+/** Players in `a` that also stand in `b` (same id), and the size of `a`. Counts only `side` when given. */
+export function pairedCount(a: LitePlay, b: LitePlay, side?: 'offense' | 'defense'): { paired: number; total: number } {
   const ids = new Set(b.tracks.map((track) => track.id));
-  return { paired: a.tracks.filter((track) => ids.has(track.id)).length, total: a.tracks.length };
+  const mine = side ? a.tracks.filter((track) => track.side === side) : a.tracks;
+  return { paired: mine.filter((track) => ids.has(track.id)).length, total: mine.length };
 }
 
 export function parsePlay(json: string): LitePlay {

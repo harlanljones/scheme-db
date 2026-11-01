@@ -12,6 +12,7 @@ export function sitePaths(lib: Library = library()): string[] {
   return [
     '/',
     '/schemes/',
+    '/lineages/',
     '/about/',
     '/data/',
     ...lib.schemes.flatMap((scheme) => [scheme.href, ...scheme.plays.map((play) => play.href)]),
@@ -34,6 +35,7 @@ export function llmsTxt(lib: Library = library()): string {
   const lines: string[] = ['# SchemeDB', '', `> ${intro(lib)}`, ''];
   lines.push('## Start here', '');
   lines.push(`- [The schemes](${abs('/schemes/')}): all ${lib.counts.schemes}, by coach`);
+  lines.push(`- [Lineages](${abs('/lineages/')}): who worked under whom, and how schemes passed on`);
   lines.push(`- [About and method](${abs('/about/')}): what illustrative means, how plays are drawn, how the similarity score works`);
   lines.push(`- [Data](${abs('/data/')}): downloads, schema and how to cite`);
   lines.push('', '## Downloads', '');
