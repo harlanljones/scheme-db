@@ -102,7 +102,7 @@ export const COACH_PROFILES: Record<string, CoachProfile> = {
     disciples: ['klint-kubiak', 'mike-lafleur', 'mike-mcdaniel', 'matt-lafleur', 'bobby-slowik'],
     category: 'offense',
     philosophy:
-      'Mastery of offensive sequencing: running outside zone to stretch defensive flow horizontally, then attacking with play-action overs and naked bootlegs that look identical for the first 1.2 seconds.',
+      'Mastery of offensive sequencing: running outside zone to stretch defensive flow horizontally, then attacking with play-action overs and naked bootlegs that stay close to it for the first 1.2 seconds.',
     keyConcepts: ['Outside Zone', 'Play-Action Over', 'Naked Bootleg', 'Pre-Snap Jet Motion', '21 Personnel Iso'],
     schemeFamilyIds: ['shanahan-wide-zone'],
     isHeadCoach2026: true,
@@ -909,7 +909,7 @@ export const COACHING_TREES: CoachingTree[] = [
     patriarch: 'Bill Walsh → Mike Shanahan & Gary Kubiak',
     category: 'offense',
     description:
-      'The most influential offensive lineage in modern NFL football. Stemming from Bill Walsh’s West Coast spacing and Mike Shanahan & Gary Kubiak’s legendary Denver Broncos zone-stretch run game. Powers today’s elite offenses led by Kyle Shanahan, Sean McVay, Klint Kubiak, Matt LaFleur, and Mike McDaniel through horizontal stretch runs, play-action deep shots, and disguise meshes identical for the first 1.2 seconds.',
+      'The most influential offensive lineage in modern NFL football. Stemming from Bill Walsh’s West Coast spacing and Mike Shanahan & Gary Kubiak’s legendary Denver Broncos zone-stretch run game. Powers today’s elite offenses led by Kyle Shanahan, Sean McVay, Klint Kubiak, Matt LaFleur, and Mike McDaniel through horizontal stretch runs, play-action deep shots, and disguise meshes that look alike for the first 1.2 seconds.',
     rootNodes: [
       {
         coach: COACH_PROFILES['bill-walsh'],
