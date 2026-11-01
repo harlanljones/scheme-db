@@ -90,22 +90,22 @@ describe('comparisons', () => {
 
 describe('field windows', () => {
   it('keeps every player of every play in view for the whole play', () => {
+    // One assertion at the end: thousands of expect() calls take long enough to time out on a CI runner.
+    const problems: string[] = [];
     for (const concept of lib.dataset.concepts) {
       const p = play(concept.id);
       const win = fieldWindow([p], p.duration);
-      expect(Math.abs(win.yLo % 5)).toBe(0);
-      expect(Math.abs(win.yHi % 5)).toBe(0);
-      expect(win.yHi - win.yLo).toBeGreaterThanOrEqual(25);
+      if (win.yLo % 5 !== 0 || win.yHi % 5 !== 0) problems.push(`${concept.id}: window ${win.yLo} to ${win.yHi} is not on a five yard line`);
+      if (win.yHi - win.yLo < 25) problems.push(`${concept.id}: window is only ${win.yHi - win.yLo} yd tall`);
       for (const track of p.tracks) {
         for (let t = 0; t <= p.duration + 1e-9; t += 0.1) {
           const { x, y } = pos(track, t);
-          expect(y, `${concept.id} ${track.id} at ${t.toFixed(1)} s`).toBeGreaterThanOrEqual(win.yLo);
-          expect(y, `${concept.id} ${track.id} at ${t.toFixed(1)} s`).toBeLessThanOrEqual(win.yHi);
-          expect(x).toBeGreaterThanOrEqual(0);
-          expect(x).toBeLessThanOrEqual(53.34);
+          if (y < win.yLo || y > win.yHi) problems.push(`${concept.id} ${track.id} at ${t.toFixed(1)} s: y ${y.toFixed(1)} is outside the window`);
+          if (x < 0 || x > 53.34) problems.push(`${concept.id} ${track.id} at ${t.toFixed(1)} s: x ${x.toFixed(1)} is off the field`);
         }
       }
     }
+    expect(problems).toEqual([]);
   });
 });
 
