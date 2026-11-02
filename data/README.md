@@ -76,12 +76,12 @@ A data release is a Git tag named `data-vMAJOR.MINOR.PATCH`, for example `data-v
 git tag data-v0.1.0 && git push origin data-v0.1.0
 ```
 
-That runs `.github/workflows/release-data.yml`, which validates the data, builds the downloads, packages them with `bun run data:package` and creates a GitHub release with these files (the CSV tables are zipped):
+That runs `.github/workflows/release-data.yml`, which validates the data, builds the downloads, packages them with `bun run data:package` and creates a **draft** GitHub release with these files (the CSV tables are zipped):
 
 - `scheme-db-v0.1.0.json`, `scheme-db-v0.1.0.sqlite`, `scheme-db-v0.1.0-csv.zip` and `LICENSE.md`
 - `SHA256SUMS`, which names those four files, so `sha256sum -c SHA256SUMS` works in the folder you download them to (macOS: `shasum -a 256 -c SHA256SUMS`)
 
-The release notes are written from the data (counts, and whether the plays are illustrative), so they cannot go stale. A tag with a suffix, such as `data-v0.1.0-rc.1`, makes a pre-release. A tag that does not look like `data-v1.2.3` or `data-v1.2.3-rc.1` fails the workflow before anything is built. A release cannot be rebuilt over an existing one: delete the release and the tag first.
+Nothing is public until you open the draft on the Releases page, look at the files and notes, and press Publish. The release notes are written from the data (counts, and whether the plays are illustrative), so they cannot go stale. A tag with a suffix, such as `data-v0.1.0-rc.1`, makes a pre-release. A tag that does not look like `data-v1.2.3` or `data-v1.2.3-rc.1` fails the workflow before anything is built. To redo a release, delete the draft (or release) and the tag, then push the tag again.
 
 To try the whole path without releasing, run the workflow by hand (Actions tab, "Release data"; it appears once the workflow is on `main`). It builds the same files and keeps them as a workflow artifact instead of releasing. `bun run data:release --version v0.1.0 && bun run data:package --version v0.1.0` does the same on your machine and needs the `zip` command.
 

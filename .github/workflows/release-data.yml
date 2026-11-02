@@ -1,6 +1,7 @@
 name: Release data
 
-# Pushing a tag like data-v0.1.0 builds the dataset downloads and attaches them to a GitHub release.
+# Pushing a tag like data-v0.1.0 builds the dataset downloads and attaches them to a DRAFT GitHub release; nothing is
+# public until you open the draft on the Releases page, check the files and notes, and press Publish.
 # A tag with a suffix, like data-v0.1.0-rc.1, makes a pre-release.
 # Run it by hand (Actions tab, "Release data") to build the same files as a downloadable workflow artifact without releasing.
 # The packaging steps also run in CI on every push (bun run data:package), so only the last step is new on a tag.
@@ -79,7 +80,7 @@ jobs:
           VERSION: ${{ steps.version.outputs.name }}
           PRERELEASE: ${{ steps.version.outputs.prerelease }}
         run: |
-          flags=()
+          flags=(--draft)
           if [ "$PRERELEASE" = "true" ]; then
             flags+=(--prerelease)
           fi
