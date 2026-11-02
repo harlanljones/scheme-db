@@ -32,6 +32,10 @@ the visual system is in `DESIGN.md` and the product brief in `PRODUCT.md`.
   release build, and the command line tools.
 - `site/`: pages, components, React islands and `site/lib/data.ts`, which reads `data/`. Copy that
   states a count or says "illustrative" is built from the data, never typed.
+- `worker/`: the one Cloudflare Worker. It runs first for `/` only and 301s the links the first version
+  of the site gave out (`/?play=outside-zone`, `/?scheme=…`, `/?tab=trees`) to their pages; everything
+  else is static files. `worker/legacy-links.json` is frozen: never delete an entry. If a play or scheme
+  moves or is renamed, point its old id at the new page (a test fails until you do).
 - `specs/`: play specs (YAML) that compile to tracks. `docs/redesign/`: the decision record.
 
 ## Hard conventions
