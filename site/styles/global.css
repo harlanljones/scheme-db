@@ -1798,6 +1798,50 @@ pre.code {
   color: var(--fg2);
 }
 
+/* A play with time before the snap: bands under the beat ticks say what each stretch of the lead in is. */
+.scrub.has-phases {
+  padding-bottom: 40px;
+}
+
+.scrub .phases {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 62px;
+  height: 20px;
+}
+
+.scrub .phase {
+  position: absolute;
+  top: 0;
+  height: 20px;
+  padding-top: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  font: 700 10px/14px 'Courier Prime', 'Courier New', monospace;
+  letter-spacing: 0.08em;
+  color: var(--fg2);
+  border-top: 2px solid var(--rule2);
+}
+
+.scrub .phase.set {
+  border-top-style: dashed;
+}
+
+.scrub .phase.motion {
+  border-top-color: var(--offt);
+  color: var(--offt);
+}
+
+.scrub .phase.snap {
+  border-top: 0;
+  border-left: 2px solid var(--fg);
+  padding-left: 4px;
+  top: -2px;
+  height: 22px;
+  color: var(--fg);
+}
+
 .notes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
