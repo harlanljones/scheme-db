@@ -1,0 +1,154 @@
+---
+import Base from '../../../layouts/Base.astro';
+import NetworkGraph from '../../../components/NetworkGraph.astro';
+import SchemeList from '../../../components/SchemeList.astro';
+import { ERA_LABELS, SITE, coachViews, disciplesOf, library, mentorChain, type CoachView } from '../../../lib/data';
+import { capitalize, count, plural, tidy } from '../../../lib/format';
+import { describeNetwork, egoNetwork, layoutNetwork, network } from '../../../lib/network';
+
+export function getStaticPaths() {
+  return coachViews().map((coach) => ({ params: { coachId: coach.id }, props: { coach } }));
+}
+
+interface Props {
+  coach: CoachView;
+}
+const { coach } = Astro.props;
+const lib = library();
+const total = lib.counts.coaches;
+const lineage = lib.lineageById.get(coach.lineage);
+const mentors = mentorChain(coach.id);
+const disciples = disciplesOf(coach);
+const ego = egoNetwork(network(), coach.id);
+const egoLayout = ego ? layoutNetwork(ego) : undefined;
+const sideLabel = coach.side === 'offense' ? 'Offense' : 'Defense';
+const schemeCount = coach.schemes.length;
+const achievements = (coach.notableAchievements ?? []).map(tidy);
+const concepts = coach.keyConcepts.map(tidy);
+const description =
+  schemeCount > 0
+    ? `${coach.name}, ${coach.roleDisplay}. ${coach.schemes.map((s) => s.nameDisplay).join(' and ')}, with ${count(schemeCount * 4)} illustrative plays, who they worked under and who worked under them.`
+    : `${coach.name}, ${coach.roleDisplay}. Part of the ${coach.lineageName} on SchemeDB, with who they worked under and who worked under them.`;
+---
+
+<Base title={coach.name} description={description}>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><a href="/coaches/">Coaches</a></span>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">{coach.name}</span></span>
+    </nav>
+  </div>
+
+  <section class="wrap schemehead" style="padding-top:8px;padding-bottom:32px">
+    <div class="sheet">
+      <div class="strip">
+        <p>Coach {coach.no} of {total} · {sideLabel} · {schemeCount > 0 ? `${capitalize(count(schemeCount))} ${plural(schemeCount, 'scheme')}` : coach.linked.length > 0 ? `Linked to ${count(coach.linked.length)} ${plural(coach.linked.length, 'scheme')}` : 'Lineage only'}</p>
+        <p>{coach.id}</p>
+      </div>
+      <div style="padding:22px 14px;display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span class="chip"><span class={`mk ${coach.side === 'offense' ? 'mko' : 'mkd'}`} aria-hidden="true"></span>{sideLabel}</span>
+          {coach.eras.map((era) => <span class="chip">{ERA_LABELS[era]}</span>)}
+          {lineage && <a class="chip" href={`/lineages/#tree-${lineage.id}`}>{coach.lineageName}</a>}
+        </div>
+        <h1>{coach.name}</h1>
+        <p class="type small" style="font-size:14px">{coach.roleDisplay}</p>
+        <p class="body" style="font-size:17px;line-height:27px">{tidy(coach.philosophy)}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap scheme-grid" style="padding-bottom:64px">
+    <div class="plays">
+      <div class="divider">
+        <p class="eyebrow">In the binder</p>
+        <h2>{schemeCount > 0 ? `${capitalize(count(schemeCount))} ${plural(schemeCount, 'scheme')}` : coach.linked.length > 0 ? `Linked ${plural(coach.linked.length, 'scheme')}` : 'No scheme yet'}</h2>
+      </div>
+      {schemeCount > 0 ? (
+        <SchemeList schemes={coach.schemes} />
+      ) : (
+        <p class="prose" style="max-width:600px">
+          {coach.linked.length > 0
+            ? `${coach.name} has no scheme of their own in the binder yet. The coach record links them to the ${coach.linked.length === 1 ? 'scheme' : 'schemes'} below.`
+            : `${coach.name} is in the binder for the lineages, in the ${coach.lineageName}. No scheme of theirs has been drawn yet.`}
+        </p>
+      )}
+
+      {coach.linked.length > 0 && (
+        <div style={schemeCount > 0 ? 'padding-top:32px' : undefined}>
+          {schemeCount > 0 && <div class="divider sm"><p class="eyebrow">Linked</p><h2>Also linked to</h2></div>}
+          {schemeCount > 0 && (
+            <p class="small" style="font-size:14px;line-height:21px;padding:8px 0 12px">
+              {coach.linked.length === 1 ? 'A scheme' : 'Schemes'} credited to another coach that this coach’s record names, because they shaped it, ran it or passed it on.
+            </p>
+          )}
+          <SchemeList schemes={coach.linked} showCoach />
+        </div>
+      )}
+
+      {concepts.length > 0 && (
+        <div style="padding-top:32px">
+          <div class="divider sm"><p class="eyebrow">Concepts</p><h2>Known for</h2></div>
+          <ul class="ruled-list" style="border-top:0">
+            {concepts.map((concept) => <li>{concept}</li>)}
+          </ul>
+        </div>
+      )}
+    </div>
+
+    <aside>
+      {(mentors.length > 0 || disciples.length > 0) && (
+        <div>
+          <div class="divider sm"><p class="eyebrow">Lineage</p><h2>Worked directly under</h2></div>
+          <ul class="tree">
+            {mentors.map((mentor, i) => (
+              <li style={`padding-left:${i * 16}px`}>{mentor.href ? <a href={mentor.href}>{mentor.name}</a> : mentor.name}</li>
+            ))}
+            <li class="here" style={`padding-left:${mentors.length * 16}px`}>{coach.name} <span class="t">This coach</span></li>
+            {disciples.length > 0 && (
+              <li style={`padding-left:${(mentors.length + 1) * 16}px`}>
+                {disciples.map((d, i) => (
+                  <>{i > 0 ? (i === disciples.length - 1 ? ' and ' : ', ') : ''}{d.href ? <a href={d.href}>{d.name}</a> : d.name}</>
+                ))}
+              </li>
+            )}
+          </ul>
+          <p class="type" style="padding-top:10px;font-size:12px;line-height:18px;color:var(--fg2)">A name without a link has no coach record yet.</p>
+        </div>
+      )}
+
+      {achievements.length > 0 && (
+        <div>
+          <div class="divider sm"><p class="eyebrow">Record</p><h2>Career notes</h2></div>
+          {achievements.map((note, i) => (
+            <div class="note" style={i === achievements.length - 1 ? 'border-bottom:1px solid var(--rule)' : undefined}><p>{note}</p></div>
+          ))}
+        </div>
+      )}
+
+      <div>
+        <div class="divider sm"><p class="eyebrow">Data</p><h2>Download this coach</h2></div>
+        <div>
+          <a class="dl" href={`/records/coaches/${coach.id}.json`}><span>Coach record</span><span class="fmt">JSON</span></a>
+          <a class="dl" href="/downloads/csv/coaches.csv"><span>Every coach</span><span class="fmt">CSV</span></a>
+        </div>
+        <p class="type" style="padding-top:10px;font-size:12px;line-height:18px;color:var(--fg2)">
+          {SITE.dataLicense}. Credit SchemeDB. Something wrong? <a href="/about/#corrections">Send a correction</a>.
+        </p>
+      </div>
+    </aside>
+  </section>
+
+  {egoLayout && ego && (
+    <section class="wrap section" id="network">
+      <div class="divider">
+        <p class="eyebrow">Lineage</p>
+        <h2>Who taught whom</h2>
+        <p class="aside"><a href={`/lineages/#n-${coach.id}`}>Open the full lineage</a></p>
+      </div>
+      <NetworkGraph layout={egoLayout} label={describeNetwork(ego, coach.id)} focusId={coach.id} />
+      <p class="type narrow-hint" style="font-size:12px;line-height:18px;color:var(--fg2)">On a narrow screen, slide the chart sideways.</p>
+    </section>
+  )}
+</Base>

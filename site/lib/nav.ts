@@ -7,6 +7,8 @@ export interface NavItem {
 
 export const NAV: NavItem[] = [
   { key: 'schemes', label: 'Schemes', href: '/schemes/' },
+  { key: 'plays', label: 'Plays', href: '/plays/' },
+  { key: 'coaches', label: 'Coaches', href: '/coaches/' },
   { key: 'lineages', label: 'Lineages', href: '/lineages/' },
   { key: 'data', label: 'Data', href: '/data/' },
   { key: 'about', label: 'About', href: '/about/' },

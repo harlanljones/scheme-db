@@ -98,13 +98,8 @@ describe('laying out the network', () => {
     expect(new Set(worked)).toEqual(pairs);
   });
 
-  it('has a page for every known coach who has a scheme', () => {
-    const lib = library();
-    for (const n of net.nodes) {
-      if (!n.known) continue;
-      const hasScheme = lib.coachById.get(n.id)!.schemeIds.some((id) => lib.schemeById.has(id));
-      expect(Boolean(n.href), n.id).toBe(hasScheme);
-    }
+  it('links every coach with a record to their page, and nobody else', () => {
+    for (const n of net.nodes) expect(n.href, n.id).toBe(n.known ? `/coaches/${n.id}/` : undefined);
   });
 
   it('builds an ego network for a coach in the middle of the tree', () => {

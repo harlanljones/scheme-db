@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useQueryFilters } from './useQueryFilters';
 
 export interface SchemeRow {
   id: string;
@@ -27,33 +28,15 @@ interface Props {
 type SideFilter = 'all' | 'offense' | 'defense';
 
 export default function SchemeTable({ rows, eras, collapseAt, allHref = '/schemes/', idPrefix = 'schemes' }: Props) {
-  const [q, setQ] = useState('');
-  const [side, setSide] = useState<SideFilter>('all');
-  const [era, setEra] = useState('all');
+  const filters = useQueryFilters<'q' | 'side' | 'era'>({ q: '', side: 'all', era: 'all' }, (key, value) =>
+    key === 'side' ? value === 'offense' || value === 'defense' : key === 'era' ? eras.some((e) => e.id === value) : true,
+  );
+  const { q, era } = filters.values;
+  const side = filters.values.side as SideFilter;
+  const setQ = (value: string) => filters.set('q', value);
+  const setSide = (value: SideFilter) => filters.set('side', value);
+  const setEra = (value: string) => filters.set('era', value);
   const [expanded, setExpanded] = useState(false);
-  const [ready, setReady] = useState(false);
-
-  // The search and filters live in the address, so Back returns to the same list and a link can share it.
-  useEffect(() => {
-    // Read after hydration, so the server and the first client render match.
-    const params = new URLSearchParams(window.location.search);
-    setQ(params.get('q') ?? '');
-    const sideParam = params.get('side');
-    if (sideParam === 'offense' || sideParam === 'defense') setSide(sideParam);
-    const eraParam = params.get('era');
-    if (eraParam && eras.some((e) => e.id === eraParam)) setEra(eraParam);
-    setReady(true);
-  }, [eras]);
-  useEffect(() => {
-    if (!ready) return;
-    const params = new URLSearchParams();
-    if (q.trim()) params.set('q', q.trim());
-    if (side !== 'all') params.set('side', side);
-    if (era !== 'all') params.set('era', era);
-    const query = params.toString();
-    const next = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`;
-    if (next !== `${window.location.pathname}${window.location.search}${window.location.hash}`) window.history.replaceState(null, '', next);
-  }, [ready, q, side, era]);
 
   const needle = q.trim().toLowerCase();
   const schemeText = (r: SchemeRow) => `${r.name} ${r.coach} ${r.team}`.toLowerCase();
@@ -68,9 +51,7 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
   const filtered = !!needle || side !== 'all' || era !== 'all';
   const collapsible = !!collapseAt && !filtered && !expanded && rows.length > collapseAt;
   const clear = () => {
-    setQ('');
-    setSide('all');
-    setEra('all');
+    filters.reset();
     setExpanded(false);
   };
 

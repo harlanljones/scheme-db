@@ -1,6 +1,6 @@
 ---
 /**
- * The coaching network as a static drawing. Each name is a link to the coach's scheme page when there is one.
+ * The coaching network as a static drawing. Each name is a link to the coach's page when the coach has a record.
  * The lines are hidden from assistive technology; `label` and the text lists beside the drawing carry the same facts.
  */
 import { MARK_R, LABEL_X, type Layout } from '../lib/network';
@@ -45,7 +45,7 @@ const hasUnknown = layout.nodes.some((node) => !node.known);
             </>
           );
           return node.href ? (
-            <a class={cls} id={`n-${node.id}`} href={node.href} aria-label={`${node.name}${node.side ? `, ${node.side}` : ''}. Open the scheme`}>{inner}</a>
+            <a class={cls} id={`n-${node.id}`} href={node.href} aria-label={`${node.name}${node.side ? `, ${node.side}` : ''}. Open the coach’s page`}>{inner}</a>
           ) : (
             <g class={cls} id={`n-${node.id}`}>{inner}</g>
           );

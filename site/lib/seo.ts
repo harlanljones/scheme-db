@@ -2,7 +2,7 @@
  * Machine readable indexes of the site: sitemap.xml, llms.txt and llms-full.txt. All three are built from `data/`
  * at build time, so they list the same pages and say the same things as the site.
  */
-import { DISGUISE_HOLD_PERCENT, SITE, comparisonsFor, library, playHref, type Library } from './data';
+import { DISGUISE_HOLD_PERCENT, SITE, coachViews, comparisonsFor, library, playHref, type Library } from './data';
 import { tidy } from './format';
 
 const abs = (path: string): string => new URL(path, SITE.url).toString();
@@ -12,10 +12,13 @@ export function sitePaths(lib: Library = library()): string[] {
   return [
     '/',
     '/schemes/',
+    '/plays/',
+    '/coaches/',
     '/lineages/',
     '/about/',
     '/data/',
     ...lib.schemes.flatMap((scheme) => [scheme.href, ...scheme.plays.map((play) => play.href)]),
+    ...coachViews().map((coach) => coach.href),
   ];
 }
 
@@ -35,6 +38,8 @@ export function llmsTxt(lib: Library = library()): string {
   const lines: string[] = ['# SchemeDB', '', `> ${intro(lib)}`, ''];
   lines.push('## Start here', '');
   lines.push(`- [The schemes](${abs('/schemes/')}): all ${lib.counts.schemes}, by coach`);
+  lines.push(`- [The plays](${abs('/plays/')}): all ${lib.counts.plays} in one list, by side, era and down`);
+  lines.push(`- [The coaches](${abs('/coaches/')}): all ${lib.counts.coaches}, with a page each`);
   lines.push(`- [Lineages](${abs('/lineages/')}): who worked under whom, and how schemes passed on`);
   lines.push(`- [About and method](${abs('/about/')}): what illustrative means, how plays are drawn, how the similarity score works`);
   lines.push(`- [Data](${abs('/data/')}): downloads, schema and how to cite`);
@@ -46,6 +51,10 @@ export function llmsTxt(lib: Library = library()): string {
   lines.push('', '## Schemes', '');
   for (const scheme of lib.schemes) {
     lines.push(`- [${scheme.nameDisplay}](${abs(scheme.href)}): ${scheme.coachName}, ${scheme.teamDisplay}. ${scheme.side === 'offense' ? 'Offense' : 'Defense'}, ${scheme.eraLabel.toLowerCase()}.`);
+  }
+  lines.push('', '## Coaches', '');
+  for (const coach of coachViews()) {
+    lines.push(`- [${coach.name}](${abs(coach.href)}): ${coach.roleDisplay}. ${coach.side === 'offense' ? 'Offense' : 'Defense'}, ${coach.lineageName}.`);
   }
   lines.push('', '## Credit', '', `Suggested credit: ${SITE.credit}`, '');
   return lines.join('\n');
