@@ -134,7 +134,7 @@ describe('downloads and indexes', () => {
   });
 
   it('lists every page in the sitemap and every scheme in llms.txt', () => {
-    expect(sitePaths()).toHaveLength(7 + 45 + 180 + 53);
+    expect(sitePaths()).toHaveLength(8 + 45 + 180 + 53);
     const xml = sitemapXml('2026-11-01');
     for (const path of sitePaths()) expect(xml).toContain(`<loc>https://schemedb.harlanljones.com${path}</loc>`);
     const text = llmsTxt();

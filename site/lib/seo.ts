@@ -4,6 +4,7 @@
  */
 import { DISGUISE_HOLD_PERCENT, SITE, coachViews, comparisonsFor, library, playHref, type Library } from './data';
 import { tidy } from './format';
+import { glossaryRows } from './glossary';
 
 const abs = (path: string): string => new URL(path, SITE.url).toString();
 
@@ -15,6 +16,7 @@ export function sitePaths(lib: Library = library()): string[] {
     '/plays/',
     '/coaches/',
     '/lineages/',
+    '/glossary/',
     '/about/',
     '/data/',
     ...lib.schemes.flatMap((scheme) => [scheme.href, ...scheme.plays.map((play) => play.href)]),
@@ -41,6 +43,7 @@ export function llmsTxt(lib: Library = library()): string {
   lines.push(`- [The plays](${abs('/plays/')}): all ${lib.counts.plays} in one list, by side, era and down`);
   lines.push(`- [The coaches](${abs('/coaches/')}): all ${lib.counts.coaches}, with a page each`);
   lines.push(`- [Lineages](${abs('/lineages/')}): who worked under whom, and how schemes passed on`);
+  lines.push(`- [Glossary](${abs('/glossary/')}): all ${lib.counts.terms} terms, with other names and the schemes that use them`);
   lines.push(`- [About and method](${abs('/about/')}): what illustrative means, how plays are drawn, how the similarity score works`);
   lines.push(`- [Data](${abs('/data/')}): downloads, schema and how to cite`);
   lines.push('', '## Downloads', '');
@@ -95,6 +98,15 @@ export function llmsFullTxt(lib: Library = library()): string {
       for (const beat of play.beats) out.push(`${beat.t.toFixed(1)} s, ${beat.title.replace(/^\d+\.\s*/, '')}: ${beat.text}`);
       out.push('');
     }
+  }
+  out.push('## Glossary', '', `The ${lib.counts.terms} terms the play sheets use, A to Z. Page: ${abs('/glossary/')}`, '');
+  for (const row of glossaryRows()) {
+    out.push(`### ${row.term}`, '');
+    out.push(`- Page: ${abs(`/glossary/#${row.id}`)}`);
+    out.push(`- Kind: ${row.category}`);
+    if (row.also.length > 0) out.push(`- Also called: ${row.also.join(', ')}`);
+    out.push(`- Meaning: ${row.def}`);
+    out.push(`- Tactical note: ${row.note}`, '');
   }
   out.push('## Credit', '', `Suggested credit: ${SITE.credit}`, '');
   return out.join('\n');

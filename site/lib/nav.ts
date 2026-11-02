@@ -10,6 +10,7 @@ export const NAV: NavItem[] = [
   { key: 'plays', label: 'Plays', href: '/plays/' },
   { key: 'coaches', label: 'Coaches', href: '/coaches/' },
   { key: 'lineages', label: 'Lineages', href: '/lineages/' },
+  { key: 'glossary', label: 'Glossary', href: '/glossary/' },
   { key: 'data', label: 'Data', href: '/data/' },
   { key: 'about', label: 'About', href: '/about/' },
 ];
