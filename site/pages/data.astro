@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { SITE, formatBytes, library, publishedBytes, playHref, FEATURED } from '../lib/data';
+import { SITE, allIllustrative, formatBytes, library, publishedBytes, playHref, FEATURED } from '../lib/data';
 import { CSV_TABLES, SCHEMA_FILES } from '../lib/downloads';
 
 const lib = library();
@@ -35,7 +35,11 @@ const sample = `${playHref(FEATURED.schemeId, FEATURED.conceptId)}`;
       <div class="text" id="json">
         <h3>One bundle or one table</h3>
         <p class="prose">The JSON bundle holds every record nested as in the repository. The SQLite file holds the same tables with primary keys, so you can query it straight away. CSV gives one flat table per file.</p>
-        <p class="prose">The {counts.plays} plays are all marked <span class="type" style="color:var(--fg)">illustrative</span>. They were drawn by hand and are not tracking data. See <a href="/about/#illustrative">what that means</a>.</p>
+        {allIllustrative(lib) ? (
+          <p class="prose">The {counts.plays} plays are all marked <span class="type" style="color:var(--fg)">illustrative</span>. They were drawn by hand and are not tracking data. See <a href="/about/#illustrative">what that means</a>.</p>
+        ) : (
+          <p class="prose">{lib.confidence.illustrative} of the {counts.plays} plays are marked <span class="type" style="color:var(--fg)">illustrative</span>: drawn by hand, and not tracking data. The rest cite their sources. See <a href="/about/#illustrative">what that means</a>.</p>
+        )}
       </div>
       <div class="text" style="gap:0">
         <div class="dl-list">
@@ -64,7 +68,7 @@ const sample = `${playHref(FEATURED.schemeId, FEATURED.conceptId)}`;
       <div class="text">
         <p class="prose">Every record is a JSON file checked against a JSON Schema, and a set of cross record checks makes sure every id points at something real. Coordinates are yards relative to the line of scrimmage: <span class="type">x</span> runs 0 to 53.33 across the field, <span class="type">y</span> is negative in the backfield and positive downfield.</p>
         <p class="prose">Each play has its own record, tracks and 10 frame a second CSV. Open any play sheet and look under <em>The data behind this sheet</em>. <a href={sample}>Outside zone left</a> is a good one to start with.</p>
-        <p class="prose">The <span class="type">confidence</span> field says how far to trust a record: <span class="type">illustrative</span>, <span class="type">reconstructed</span> or <span class="type">verified</span>. Today every play is illustrative.</p>
+        <p class="prose">The <span class="type">confidence</span> field says how far to trust a record: <span class="type">illustrative</span>, <span class="type">reconstructed</span> or <span class="type">verified</span>. {allIllustrative(lib) ? 'Today every play is illustrative.' : `Today ${lib.confidence.illustrative} plays are illustrative, ${lib.confidence.reconstructed} reconstructed and ${lib.confidence.verified} verified.`}</p>
       </div>
       <div class="text" style="gap:0">
         <div class="dl-list">
@@ -79,6 +83,7 @@ const sample = `${playHref(FEATURED.schemeId, FEATURED.conceptId)}`;
     <div class="two-col">
       <div class="text">
         <p class="prose">The data lives in the <a href={SITE.repo}>GitHub repository</a> under <span class="type">data/</span>. Tagged data releases are attached to GitHub releases, with the same files as above.</p>
+        <p class="prose">Anyone can add to it. Spotted a mistake or have a play to suggest? <a href={`${SITE.repo}/issues/new/choose`}>Open an issue</a>; there is a form for each. Want to add a record yourself? <a href={`${SITE.repo}/blob/main/CONTRIBUTING.md`}>Read the contributing guide</a>. Contributions are licensed {SITE.dataLicense} like the rest.</p>
         <p class="prose">To cite, use the credit line above. If you changed the data, say so.</p>
       </div>
     </div>

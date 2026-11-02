@@ -7,37 +7,36 @@
 web
 
 ## Users
-Serious NFL fans, film-study learners, analysts, and coaches who already understand core football concepts (personnel groupings, route concepts, defensive coverages) and want to dissect *why* modern schemes work at an architectural and temporal level.
+Football fans and analysts who already know the basics (personnel groupings, route concepts, coverages) and want to see why a scheme works: who a play puts in conflict, and how it looks like the play it is built from. Coaches and students use it the same way. Developers and data people are a second audience, served by the Data page and the repository, not by the home page.
 
 ## Product Purpose
-Deconstruct NFL offensive and defensive schemes through interactive playback, coaching tree lineages, and timeline-anchored sequencing analysis—specifically demonstrating how constraint plays mirror base looks during the first ~1.2 seconds to manipulate defensive keys.
+A free, open, data first database of football scheme strategy. Schemes, plays, coaches, lineages and a glossary are published as JSON, CSV and SQLite under CC BY 4.0, and an animated static site reads the same files. The viewer shows 22 players moving through time and compares a play with the play it mirrors over the first 1.2 seconds after the snap.
 
 ## Positioning
-Unlike static chalkboard diagrams (which freeze geometry and hide sequencing/timing) or All-22 game film (which shows everything but explains nothing), NFL Scheme Visualizer dynamically reveals the disguised symmetries, mesh points, and sequencing mathematics of modern NFL play design.
+Static chalkboard diagrams freeze the geometry and hide timing. All-22 film shows the outcome and explains nothing. SchemeDB sits between them: hand drawn plays with timing, labeled for what they are, and open data anyone can query, correct and extend.
 
 ## Operating Context
-Film-study and coaching analysis workstation. Used across desktop browsers for in-depth scheme breakdown: navigating coaching trees, browsing scheme directories, scrubbing synchronized All-22 playbacks, and inspecting side-by-side sequencing comparisons.
+A reference that people reach from LinkedIn, GitHub and search, mostly on a phone first and a laptop second. Visits are short: find a scheme, press play, read the beats, maybe download the data. A smaller group works in the repository and sends pull requests. The author maintains it alone in about 8 hours a week, so every page has to earn its place and contributing has to be possible without the author's help.
 
 ## Capabilities and Constraints
-- LOS-relative yard coordinate system (`x: 0..53.33`, `y` negative = backfield, positive = downfield).
-- Real-time SVG rendering and keyframe interpolation engine driven by pure TypeScript models.
-- Hand-authored play datasets with strict validation (`validatePlay`, `validateLibrary`).
-- Modern interactive coaching playbook interface: synchronized timeline, beat-by-beat tactical breakdowns, coaching tree graphs, and multi-play sequence comparison.
-- Strict stack: Bun, Vite 8 (Rolldown), React 19, TypeScript.
+- Static pages built from `data/` (Astro with React islands), hosted on Cloudflare Workers. Islands add the play viewer, the comparison and the list filters; the pages read without scripts.
+- Field coordinates are yards, relative to the line of scrimmage (`x: 0..53.33`, `y` negative is the backfield). Paths are timed waypoints drawn as splines.
+- Light and dark themes, both checked for contrast. Phone first for the home page and lists; the play viewer stacks on a phone (field, scrubber, beats).
+- Data is CC BY 4.0 and code is MIT. No player tracking data (the Big Data Bowl data is non-commercial) and no copied diagrams.
+- Strict stack: Bun, Astro, React islands, TypeScript, Zod, Vitest.
 
 ## Brand Commitments
-Interactive Coaching Playbook: Clean modern analytical dashboard with high-contrast tactical clarity, authentic coaching notation, legible field telemetry, and purposeful film-room typography—eschewing generic AI dark-mode gradients and clutter.
+The Playbook: a coach's install binder. Warm paper and ink, ruled tables, numbered play sheets and margin notes instead of cards, stat bands and feature rows. It avoids the look of a SaaS product page. Plain words, sentence case, no hype.
 
 ## Evidence on Hand
-- Authored and typed play datasets across 45 full scheme families (180 plays; 25 offensive, 20 defensive systems) spanning modern NFL, historical NFL, and college football: the 15 modern-NFL offensive systems (Shanahan Wide Zone through Kelly Tempo Spread), 10 modern-NFL defensive systems (Saleh 4-3 Wide-9 through Bowles Creeper Blitz), plus historical/college expansions — Air Coryell, Walsh Classic WCO, Run and Shoot, Flexbone Triple Option, Air Raid, Delaware Wing-T, T-Formation Power Sweep, Pistol Read-Option, Baylor Choice, Meyer Spread-Option on offense; Buddy Ryan 46, LeBeau Fire Zone, Tampa 2, Landry Flex, Phillips Two-Gap 3-4, Jimmy Johnson Speed 4-3, Belichick Okie/Bear Package, Aranda Tite/Peso, Rocky Long 3-3-5 Stack, and Cover 2 Man-Under on defense.
-- Every expansion family carries a `SchemeEra` tag (`past-nfl` | `past-college` | `current-college` | `modern-nfl`) for era-aware catalog slicing.
-- 17 interactive coaching lineage trees comprising 53 detailed coach profiles with career achievements and scheme mappings — from Vince Lombardi, Don Coryell, Tom Landry, Buddy Ryan, and Dick LeBeau to all current 2026 NFL coaches in the library.
-- Contextual Football Glossary system (`glossary.ts`, `GlossaryTooltip.tsx`) auto-detecting core NFL schematic concepts across film room analysis.
-- Mathematical interpolation and sequencing engine (`interpolate.ts`, `playback.ts`, `beats.ts`, `validate.ts`).
-- Architectural roadmap (`ROADMAP.md`), design specification (`DESIGN.md`), and Vitest validation suites (72/72 tests passing).
+- The launch library: 45 schemes (25 offense, 20 defense) with 180 plays, 53 coaches, 17 lineage trees and 30 glossary terms, in `data/`. Every play is `illustrative`. Counts on the site are computed from the data, so they change as records are added.
+- A schema and cross record validator that fails on unresolved ids, broken geometry, missing sources and unfinished `TODO:` text, plus a scaffold (`bun run data:new`), issue forms and a contributing guide, so an outside person can add a play with a pull request.
+- A deterministic release build (JSON, 18 CSV tables, SQLite) and a similarity score that is documented on the About page, with its limits stated.
+- A decision record (`docs/redesign/DECISIONS.md`) with Harlan's answers to the design, audit and contributor path questions, and a test suite that asserts floors and invariants rather than counts.
 
 ## Product Principles
-1. **Sequencing is the Scheme**: Timing and visual disguise during the initial mesh/drop steps define modern offensive systems.
-2. **Tactical Authenticity**: Diagrams, hashes, player badges, trails, and terminology adhere to genuine NFL coaching standards.
-3. **Structured Analytical Hierarchy**: Macro scheme trees, family catalogs, and micro player-track timelines form a cohesive, low-friction investigation flow.
-
+1. **Say what a play is.** Plays are illustrations until they cite sources. The notice is hard to miss, and it follows the data: it changes the day a play is reconstructed or verified.
+2. **Sequencing is the scheme.** The first second after the snap, where a constraint play and its base play look alike, is the idea the product exists to show.
+3. **The data is the product.** Pages are readers of the files. Anything the site says about the library (a count, a claim) is built from the data, never typed.
+4. **Earn every screen.** One page per scheme, play and coach; a list and a search for each; no top level pages that repeat each other.
+5. **Open to correction.** A mistake should be easy to report and a fix easy to send. Credit goes to contributors through the git history.

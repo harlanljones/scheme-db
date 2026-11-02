@@ -1,9 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import { positionAt, sampleTrack } from '../interpolate';
 import type { PlayerTrack } from '../types';
-import { outsideZone } from '../../data/schemes/shanahan/outside-zone';
-import { playActionOver } from '../../data/schemes/shanahan/play-action-over';
-import { nakedBootleg } from '../../data/schemes/shanahan/naked-bootleg';
+import { playById } from './fixtures';
+
+const outsideZone = playById('outside-zone');
+const playActionOver = playById('play-action-over');
+const nakedBootleg = playById('naked-bootleg');
 
 describe('interpolate engine', () => {
   const track: PlayerTrack = {

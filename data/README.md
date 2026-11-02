@@ -2,11 +2,11 @@
 
 A free, open database of football scheme strategy. Every record is a JSON file validated by a schema in `data/schema/` (generated from `src/schema/schema.ts`) and by cross-record checks in `src/schema/validate-dataset.ts`.
 
-The data is licensed CC BY 4.0, see [LICENSE.md](./LICENSE.md). The code in this repository stays MIT.
+The data is licensed CC BY 4.0, see [LICENSE.md](./LICENSE.md). The code in this repository stays MIT. These files are the source of truth: the site, the downloads and the tests all read them. To add or fix a record, see [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Accuracy
 
-All 180 launch concepts are labeled `illustrative`. Their player geometry is hand-authored to teach the idea of a scheme. It is not tracking data and has not been checked against film. A record can only move to `reconstructed` or `verified` when it lists at least one source.
+All 180 launch concepts are labeled `illustrative`; contributions may be `reconstructed` when they cite sources. Their player geometry is hand-authored to teach the idea of a scheme. It is not tracking data and has not been checked against film. A record can only move to `reconstructed` or `verified` when it lists at least one source.
 
 | `confidence` | Meaning |
 | --- | --- |
@@ -36,6 +36,7 @@ Coordinates are yards relative to the line of scrimmage: `x` runs 0 to 53.33 acr
 ## Working with the data
 
 ```
+bun run data:new <kind>      start a concept, scheme, coach or term with a valid skeleton (TODO: marks what to write)
 bun run data:validate        parse every record and run the cross-record checks
 bun run data:format          rewrite every record in canonical formatting
 bun run data:format --check  fail if any record is not canonical (CI runs this)
@@ -68,9 +69,9 @@ SELECT frame, t, x, y FROM frames WHERE concept_id = 'kelly-mesh-spacing-concept
 
 Pushing a tag such as `data-v0.1.0` runs `.github/workflows/release-data.yml`, which attaches the files to a GitHub release. Run that workflow by hand to get the same files as a workflow artifact without releasing.
 
-## Migration from the TypeScript library
+## Where the launch data came from
 
-`bun run data:migrate` regenerated these files from `src/data`. It is a one-off and goes away when the app reads `data/` directly. A parity test (`src/schema/__tests__/dataset.test.ts`) proves every play, coach, tree and glossary term round-trips unchanged. What changed on the way:
+The 180 launch plays, 53 coaches, 17 lineages and 30 glossary terms were migrated once from the previous TypeScript library (`src/data`, since removed from the repository; it is in git history at commit `134ac94`). From the migration on, `data/` is edited directly. What changed on the way:
 
 - A play is split in two: the descriptive record (`concepts/`) and the geometry (`tracks/`).
 - `Play.coach` and `Play.family` are gone. The scheme links to its coach through `coachId`, and a concept links to its scheme through `schemeId`. `Play.family` disagreed with the scheme id for the 8 Shanahan and Kubiak plays (`wide-zone`, `split-zone-leak`).
@@ -81,4 +82,4 @@ Pushing a tag such as `data-v0.1.0` runs `.github/workflows/release-data.yml`, w
 
 ## Known gaps
 
-Nine people are named as a mentor or disciple but have no coach record: Bill Parcells, Paul Brown, Mike Holmgren, George Seifert, Jack Elway, Bobby Slowik, Monte Kiffin, Gus Bradley and Jim Mora. The validator reports them as warnings. The mentor links themselves were carried over from the legacy data and have not been fact-checked.
+Twelve people are named as a mentor or disciple but have no coach record: Bill Parcells, Bobby Slowik, Bruce Arians, Dan Campbell, Frank Reich, George Seifert, Gus Bradley, Jim Johnson, Jim Mora, Mike Holmgren, Monte Kiffin and Paul Brown. The validator reports them as warnings and accepts only these names; any other mentor or disciple id without a coach record is an error. Adding a record for one of them is a welcome contribution. The mentor links were carried over from the previous library; the audit corrected several, and none has been fact-checked against a source.

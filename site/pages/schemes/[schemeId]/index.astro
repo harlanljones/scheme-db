@@ -7,6 +7,7 @@ import {
   disciplesOf,
   library,
   mentorChain,
+  playsNoun,
   schemePlayRows,
   type SchemeView,
 } from '../../../lib/data';
@@ -37,7 +38,7 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
 
 <Base
   title={scheme.nameDisplay}
-  description={`${scheme.nameDisplay}: ${scheme.coachName}, ${scheme.teamDisplay}. ${count(scheme.plays.length)} illustrative plays you can scrub a tenth of a second at a time, with the data to download.`}
+  description={`${scheme.nameDisplay}: ${scheme.coachName}, ${scheme.teamDisplay}. ${count(scheme.plays.length)} ${playsNoun()} you can scrub a tenth of a second at a time, with the data to download.`}
 >
   <div class="wrap">
     <nav aria-label="Breadcrumb" class="crumbs">
