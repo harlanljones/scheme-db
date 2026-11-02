@@ -46,6 +46,7 @@
     "specs:compile": "bun run scripts/specs.ts compile",
     "specs:diff": "bun run scripts/specs.ts diff",
     "speed:report": "bun run scripts/speed-report.ts",
+    "retime": "bun run scripts/retime.ts",
     "lint": "oxlint",
     "preview": "bun --bun astro preview",
     "preview:legacy": "vite preview",
