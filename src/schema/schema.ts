@@ -14,6 +14,7 @@ const schemaRef = z.string().optional();
 export const Side = z.enum(['offense', 'defense']);
 export const Role = z.enum(['ol', 'qb', 'rb', 'te', 'wr', 'dl', 'lb', 'db']);
 export const Trail = z.enum(['route', 'block', 'carry', 'drop', 'none']);
+export const BallSpot = z.enum(['left', 'middle', 'right']);
 export const Era = z.enum(['past-nfl', 'past-college', 'current-college', 'modern-nfl']);
 export const LineageBranch = z.enum([
   'shanahan-kubiak',
@@ -105,6 +106,11 @@ export const Concept = z.strictObject({
   formation: text,
   /** The pre-snap alignment preset this concept starts from. Its tracks may move individual players off it. */
   formationId: slug.optional(),
+  /**
+   * Where the ball is spotted: on the left hash, in the middle (the default) or on the right hash. Published tracks are
+   * always drawn with the ball at midfield; see `src/engine/field.ts` for the offset that places a play on the field.
+   */
+  ballSpot: BallSpot.optional(),
   situation: text,
   coverage: text,
   frontName: text,

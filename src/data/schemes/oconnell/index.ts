@@ -20,6 +20,6 @@ export const OCONNELL_BOOT_DAGGER_FAMILY: SchemeFamily = {
   category: 'offense',
   treeBranch: 'shanahan-kubiak',
   description:
-    "A play-action ecosystem where every call wears the same uniform: a condensed gun formation that produces an identical wide-zone reach wash and mesh point for the first full second of every snap. The stretch base establishes the picture, the boot flood punishes flow-away defenders, the Dagger seam-curl attacks the dropping Mike, and the duo PA crosser exploits downhill triggers — four answers off one visual lie.",
+    "A play-action ecosystem where every call wears the same uniform: a condensed gun formation that gives every call nearly the same wide-zone reach wash and mesh point for the first full second of every snap. The stretch base establishes the picture, the boot flood punishes flow-away defenders, the Dagger seam-curl attacks the dropping Mike, and the duo PA crosser exploits downhill triggers — four answers off one visual lie.",
   plays: OCONNELL_BOOT_DAGGER_PLAYS,
 };

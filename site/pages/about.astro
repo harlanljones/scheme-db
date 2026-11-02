@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+import GapSlider from '../islands/GapSlider';
+import {
+  DISGUISE_HOLD_PERCENT,
+  DISGUISE_SECONDS,
+  FEATURED,
+  SITE,
+  comparisonsFor,
+  library,
+  playHref,
+} from '../lib/data';
+import { NO_RESEMBLANCE_YARDS } from '../../src/engine/disguise';
+import { FRAME_RATE_HZ } from '../../src/engine/frames';
+import { HASHES } from '../../src/engine/field';
+import { capitalize, count, list, tidy } from '../lib/format';
+
+const lib = library();
+const { counts } = lib;
+const featured = lib.conceptById.get(FEATURED.conceptId)!;
+const featuredScheme = lib.schemeById.get(FEATURED.schemeId)!;
+const worked = comparisonsFor(featured).map((c) => {
+  const far = c.gapDetails;
+  const detail =
+    far.length === 0
+      ? 'Everyone within 1 yd'
+      : far.length <= 4
+        ? `${list(far.map((g) => `${g.id} at ${g.yards.toFixed(1)} yd`))}. Everyone else within 1 yd`
+        : `${capitalize(count(far.length))} players`;
+  return { ...c, detail };
+});
+const frames = Math.round(DISGUISE_SECONDS * FRAME_RATE_HZ) + 1;
+const contents = [
+  ['A', 'illustrative', 'What illustrative means'],
+  ['B', 'drawing', 'How a play is drawn'],
+  ['C', 'similarity', 'How the similarity score works'],
+  ['D', 'compiler', 'The optional spec compiler'],
+  ['E', 'lineages', 'Coaches and lineages'],
+  ['F', 'licence', 'Data and licence'],
+  ['G', 'corrections', 'Corrections'],
+];
+---
+
+<Base
+  title="About and method"
+  description={`What SchemeDB's ${counts.plays} plays are, how they are drawn, how two plays are scored against each other, and what you may do with the data.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Appendix</span></span>
+    </nav>
+  </div>
+
+  <section class="wrap" style="padding-top:8px;padding-bottom:40px;display:flex;flex-direction:column;gap:14px">
+    <p class="eyebrow">Appendix · How this binder was made</p>
+    <h1 class="page-title">About and method</h1>
+    <p class="body" style="font-size:18px;line-height:28px">What the plays are, how they are drawn, how two plays are scored against each other, and what you may do with the data.</p>
+  </section>
+
+  <section class="wrap appendix" style="padding-bottom:64px">
+    <nav aria-label="Appendix contents">
+      <div class="divider sm"><p class="eyebrow">Contents</p></div>
+      <ol class="apx">
+        {contents.map(([n, id, label]) => <li><a href={`#${id}`}><span class="n">{n}</span> <span>{label}</span></a></li>)}
+      </ol>
+    </nav>
+
+    <div class="text">
+      <section id="illustrative">
+        <div class="divider"><p class="eyebrow">Appendix A</p><h2>What illustrative means</h2></div>
+        <p class="body">All {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and none of them comes from tracking data. The data marks each one <span class="type" style="color:var(--fg)">illustrative</span>, with no sources yet.</p>
+        <p class="body">Read a play as a coach’s chalk drawing of the idea, not as film of a game. When plays gain sources, the record will say so.</p>
+      </section>
+
+      <section id="drawing">
+        <div class="divider"><p class="eyebrow">Appendix B</p><h2>How a play is drawn</h2></div>
+        <p class="body">Each play is a set of timed waypoints for 22 players. A waypoint is a position in yards, measured from the line of scrimmage and from the left sideline, at a moment after the snap. The viewer moves each player along a smooth curve through the waypoints and redraws on every screen refresh. The scrubber, the scores and the downloadable frames step in tenths of a second, which is {FRAME_RATE_HZ} frames a second.</p>
+        <p class="body">On every field, offense attacks up the page, filled amber marks are offense, blue rings are defense, and the heavy line is the line of scrimmage.</p>
+        <p class="body">The field is 53.33 yards wide. Hash marks follow the level of the scheme: NFL schemes show hash marks {HASHES.nfl.left} and {HASHES.nfl.right} yards from the left sideline, and college schemes show them at {HASHES.college.left} and {HASHES.college.right}. Older eras are drawn with today’s hash marks. The small oval on the line of scrimmage is the ball. Plays are drawn with the ball at midfield unless the record says it sits on a hash; the downloads carry the ball spot with each play.</p>
+      </section>
+
+      <section id="similarity">
+        <div class="divider"><p class="eyebrow">Appendix C</p><h2>How the similarity score works</h2></div>
+        <p class="body">At each tenth of a second from the snap to {DISGUISE_SECONDS.toFixed(1)} s, SchemeDB measures how far apart each player stands in the two plays and averages those gaps. A mean gap of 0 yards scores 100. A mean gap of {NO_RESEMBLANCE_YARDS} yards or more scores 0. Between them the score falls in a straight line. A play’s score is its average over the {frames} frames.</p>
+        <p class="body">Only one side is counted: the side that runs the scheme. In an offensive scheme that is the offense, and the defense is drawn for context because it is the side reading the look. In a defensive scheme the defense is counted. Coaches call this selling the same look on offense and disguise on defense.</p>
+        <p class="body">Players are matched by their label, so a player who appears in only one of the two plays is left out of that score. The play page says when that happens.</p>
+        <p class="body">The {DISGUISE_HOLD_PERCENT}% line is SchemeDB’s own cutoff for plays that still look alike. It has not been tested against real defenders, so it compares plays and does not measure what a defense sees.</p>
+
+        <div class="sheet try">
+          <div class="strip"><p>The straight line rule</p><p>Try a mean gap</p></div>
+          <div class="inner">
+            <GapSlider client:visible />
+            <div style="overflow-x:auto">
+              <table>
+                <thead><tr><th>Mean gap</th><th>Score</th></tr></thead>
+                <tbody>
+                  {[0, 1.5, 3, 4.5, NO_RESEMBLANCE_YARDS].map((gap) => (
+                    <tr>
+                      <td class="k type">{gap === NO_RESEMBLANCE_YARDS ? `${gap} yd or more` : `${gap} yd`}</td>
+                      <td class="type">{Math.round(100 * (1 - gap / NO_RESEMBLANCE_YARDS))}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="slab" style="font-size:22px;line-height:1.2;font-weight:600;padding-top:8px">A worked example from {featuredScheme.nameDisplay}</h3>
+        <p class="body">Each of the {count(worked.length)} related plays scored against {tidy(featured.name)}, over the first {DISGUISE_SECONDS.toFixed(1)} seconds. This is an offensive scheme, so only the offense is counted.</p>
+        <div class="only-wide" style="max-width:820px">
+          <table>
+            <thead><tr><th>Play</th><th>Average, 0 to {DISGUISE_SECONDS.toFixed(1)} s</th><th>At {DISGUISE_SECONDS.toFixed(1)} s</th><th>Offensive players more than 1 yd apart at {DISGUISE_SECONDS.toFixed(1)} s</th><th>The {DISGUISE_HOLD_PERCENT}% line</th></tr></thead>
+            <tbody>
+              {worked.map((c) => (
+                <tr>
+                  <td class="k">{c.name}</td>
+                  <td class="type">{c.score}%</td>
+                  <td class="type">{c.atEnd}%</td>
+                  <td>{c.detail}</td>
+                  <td>{c.breakSeconds === null ? 'Stays above it' : `Drops below it at ${c.breakSeconds.toFixed(1)} s`}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="only-compact">
+          <div class="stack">
+            {worked.map((c) => (
+              <div class="row">
+                <p style="color:var(--fg);font-weight:500;font-size:15px">{c.name}</p>
+                <p><span class="type">{c.score}%</span> on average, <span class="type">{c.atEnd}%</span> at {DISGUISE_SECONDS.toFixed(1)} s. {c.breakSeconds === null ? `Stays above the ${DISGUISE_HOLD_PERCENT}% line.` : `Drops below the ${DISGUISE_HOLD_PERCENT}% line at ${c.breakSeconds.toFixed(1)} s.`}</p>
+                <p>Offensive players more than 1 yd apart at {DISGUISE_SECONDS.toFixed(1)} s: {c.detail}.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <p class="body">Scrub these numbers yourself on the <a href={`${playHref(featuredScheme.id, featured.id)}#compare`}>play sheet comparison</a>.</p>
+      </section>
+
+      <section id="compiler">
+        <div class="divider"><p class="eyebrow">Appendix D</p><h2>The optional spec compiler</h2></div>
+        <p class="body">The spec compiler is a separate tool that turns a coach style play description into waypoints. Its timing constants are rounded medians from NFL Big Data Bowl 2025 player tracking (NFL Next Gen Stats, weeks 1 to 9 of the 2022 season, released by the NFL under CC BY NC 4.0). Source: <a href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2025">NFL Big Data Bowl 2025 on Kaggle</a>.</p>
+        <p class="body">Today the compiler has produced three sample plays and none of the {counts.plays} on the site. The {counts.plays} plays were drawn by hand, do not use its timing constants, and do not use tracking data.</p>
+      </section>
+
+      <section id="lineages">
+        <div class="divider"><p class="eyebrow">Appendix E</p><h2>Coaches and lineages</h2></div>
+        <p class="body">A coach record may name a mentor and disciples. Here a mentor is someone the coach <strong>worked directly under, in any role</strong>: assistant, coordinator or head coach. A scheme that passed on without a job together is not a mentor link. It belongs in one of the {counts.lineages} lineage trees instead.</p>
+        <p class="body">The <a href="/lineages/">Lineages page</a> draws both. A solid line is worked directly under. A dashed line is a step in a lineage tree with no job link recorded, for example Bill Walsh to Mike Shanahan, who ran a Walsh family offense under George Seifert and never coached under Walsh.</p>
+        <p class="body">Some people named as mentors, such as Bruce Arians, have no coach page yet. They appear on the chart with a dashed ring and no link. A mentor link that could not be sourced was removed rather than kept.</p>
+      </section>
+
+      <section id="licence">
+        <div class="divider"><p class="eyebrow">Appendix F</p><h2>Data and licence</h2></div>
+        <p class="body">The data is {SITE.dataLicense}, so you may use it for anything if you credit SchemeDB. The code is {SITE.codeLicense}. Downloads come as JSON, as CSV tables and as a SQLite file, from the <a href="/data/">Data page</a>.</p>
+        <p class="lab">Suggested credit</p>
+        <p><span class="cred">{SITE.credit}</span></p>
+        <p class="body">SchemeDB is not affiliated with the NFL, any college or any team named on the site.</p>
+      </section>
+
+      <section id="corrections">
+        <div class="divider"><p class="eyebrow">Appendix G</p><h2>Corrections</h2></div>
+        <p class="body">Found a mistake? Open an issue at <a href={SITE.repo}>github.com/harlanljones/scheme-db</a>. SchemeDB is an independent project by Harlan Jones.</p>
+      </section>
+    </div>
+  </section>
+</Base>

@@ -7,7 +7,7 @@ export const minterSlotBlitzCreeper: Play = {
   family: 'minter-amoeba-creeper',
   personnel: 'Nickel 2-4-5',
   formation: 'Over Front 4-Man Presentation vs 11P Gun 2x2',
-  situation: '2nd & 10, +30, red zone boundary passing situation',
+  situation: '2nd & 10, +30, boundary passing situation',
   coverage: 'Cover 3 Match Creeper (4-Man Rush, 7 in Coverage)',
   frontName: 'Over Front Sim-Pressure Presentation',
   duration: 4.0,

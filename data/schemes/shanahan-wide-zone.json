@@ -7,5 +7,5 @@
   "side": "offense",
   "era": "modern-nfl",
   "lineage": "shanahan-kubiak",
-  "description": "The premier modern NFL offensive system built on horizontal stretch sequencing. The base Outside Zone run and its three constraint counters (Play-Action Deep Over, Naked Bootleg, and Jet Motion) present an identical visual picture to the defense for the first ~1.2 seconds, forcing defenders into impossible run-pass conflicts."
+  "description": "The premier modern NFL offensive system built on horizontal stretch sequencing. The base Outside Zone run and its three constraint counters (Play-Action Deep Over, Naked Bootleg, and Jet Motion) start from the same look. Play-Action Deep Over and Naked Bootleg stay close to the base run through the first 1.2 seconds and Jet Motion shows itself sooner, but each one puts defenders in a run-pass conflict."
 }

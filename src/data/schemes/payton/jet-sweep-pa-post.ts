@@ -363,7 +363,7 @@ export const paytonJetSweepPaPost: Play = {
     {
       t: 1.25,
       title: '2. Mesh Point Sell',
-      text: 'The QB opens away and presents a genuine-looking exchange at the mesh point while RB sells the kick-out. At full speed this is indistinguishable from Payton’s actual jet sweep package.',
+      text: 'The QB opens away and presents a genuine-looking exchange at the mesh point while RB sells the kick-out. At full speed it is built to look like Payton’s jet sweep package for as long as it can.',
       focus: ['QB', 'Z', 'RB', 'SDE'],
     },
     {

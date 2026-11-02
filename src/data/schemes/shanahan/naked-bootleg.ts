@@ -10,7 +10,7 @@ export const nakedBootleg: Play = {
   family: 'wide-zone',
   personnel: '21',
   formation: 'Offset I, Wing Right',
-  situation: '1st & 10, +30, red zone boundary',
+  situation: '1st & 10, +30, boundary',
   coverage: 'Cover 3 Sky',
   frontName: '4-3 Over front',
   duration: 4.5,

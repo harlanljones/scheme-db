@@ -1,0 +1,161 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroField from '../islands/HeroField';
+import SchemeTable from '../islands/SchemeTable';
+import { Field } from '../islands/Field';
+import { ERA_ORDER, ERA_LABELS, FEATURED, SITE, compare, litePlay, library, relatedPlays, playHref, schemeRows } from '../lib/data';
+import { capitalize, count, list, sideAdjective, spell, tidy } from '../lib/format';
+import { fieldWindow } from '../lib/field';
+
+const lib = library();
+const { counts } = lib;
+
+const featuredScheme = lib.schemeById.get(FEATURED.schemeId)!;
+const featured = featuredScheme.plays.find((play) => play.id === FEATURED.conceptId)!;
+const against = lib.conceptById.get(FEATURED.againstId)!;
+
+const heroPlay = litePlay(featured, lib.tracksById.get(featured.id)!);
+const otherPlay = litePlay(against, lib.tracksById.get(against.id)!);
+const heroWin = fieldWindow([heroPlay], 1.2);
+const pairWin = fieldWindow([heroPlay, otherPlay], 1.2);
+const pair = compare(featured, against);
+const weakest = relatedPlays(featured)
+  .map((other) => compare(featured, other))
+  .sort((a, b) => a.score - b.score)[0];
+
+const rows = schemeRows();
+const eras = ERA_ORDER.map((id) => ({ id, label: ERA_LABELS[id] }));
+
+const cells = [
+  ['Call', featured.nameDisplay],
+  ['Formation', tidy(featured.formation)],
+  ['Personnel', featured.personnel],
+  ['Coverage', featured.coverage],
+  ['Down and distance', featured.situation.split(',').slice(0, 2).join(',')],
+];
+---
+
+<Base
+  title="SchemeDB, a free open database of football schemes"
+  description={`${counts.schemes} football schemes, drawn up as ${counts.plays} animated illustrative plays you can scrub a tenth of a second at a time. The data is free to download under ${SITE.dataLicense}.`}
+>
+  <section class="wrap cover">
+    <div class="intro">
+      <p class="eyebrow">Install binder · Football scheme strategy</p>
+      <h1>{capitalize(spell(counts.schemes))} schemes, drawn&nbsp;up.</h1>
+      <p class="lede">
+        SchemeDB is a free, open database of football scheme strategy. Each scheme is installed as four animated plays you can scrub a tenth of a second at a time, and each play is set beside the plays it mirrors to show how long they look the same after the snap. Every number can be downloaded.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#schemes">Explore the plays <span aria-hidden="true">→</span></a>
+        <a class="lnk" href="/data/">Download the data <span class="type" style="font-size:13px;color:var(--fg2)">{SITE.dataLicense}</span></a>
+      </div>
+      <dl class="type inventory">
+        <div class="lead"><dt>Schemes</dt><span class="dots" aria-hidden="true"></span><dd>{counts.schemes}</dd></div>
+        <div class="lead"><dt>Plays, all illustrative</dt><span class="dots" aria-hidden="true"></span><dd>{counts.plays}</dd></div>
+        <div class="lead"><dt>Coaches</dt><span class="dots" aria-hidden="true"></span><dd>{counts.coaches}</dd></div>
+        <div class="lead"><dt><a href="/lineages/">Coaching lineages</a></dt><span class="dots" aria-hidden="true"></span><dd>{counts.lineages}</dd></div>
+      </dl>
+    </div>
+
+    <div class="sheet hero">
+      <div class="strip">
+        <p>Play sheet {featured.order} of {featuredScheme.plays.length} · {featuredScheme.nameDisplay}</p>
+        <p>{featuredScheme.id} / {featured.id}</p>
+      </div>
+      <div class="sheethead">
+        {cells.map(([label, value]) => <div class="cell"><p class="lab">{label}</p><p class="val" style="font-size:14px">{value}</p></div>)}
+      </div>
+      <div style="padding:14px 14px 10px">
+        <HeroField client:load play={JSON.stringify(heroPlay)} win={heroWin} focus={['QB', 'RB', 'Z']} dot={15} />
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px;padding:6px 14px 10px;border-top:1px solid var(--rule)">
+        <p class="small" style="flex:1 1 280px;min-width:0">
+          {featured.nameDisplay} against {featured.coverage}, the first 1.2 seconds after the snap, looping. Below, it sits next to a play that starts the same way.
+        </p>
+        <a class="lnk" href={playHref(featuredScheme.id, featured.id)} style="font-size:15px">Open play sheet {featured.order} <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="schemes" class="wrap section" style="padding-top:16px;gap:20px">
+    <div class="divider">
+      <p class="eyebrow">Contents</p>
+      <h2>The {counts.schemes} schemes</h2>
+      <p class="aside">Listed by coach. Four play sheets each.</p>
+    </div>
+    <SchemeTable client:load rows={rows} eras={eras} collapseAt={15} idPrefix="home" />
+    <p class="fine-print">A play is reached through its scheme. Open a row to see its four plays.</p>
+  </section>
+
+  <section id="disguise" class="wrap section">
+    <div class="divider">
+      <p class="eyebrow">Section 2</p>
+      <h2>The same look</h2>
+      <p class="aside">One comparison on every play sheet</p>
+    </div>
+    <div class="two-col">
+      <div class="text">
+        <h3>Two plays that look alike for the first 1.2 seconds</h3>
+        <p class="prose">
+          {featured.nameDisplay} and {tidy(against.name)} score {pair.score}% alike on average over the first 1.2 seconds after the snap, and {pair.atEnd}% at 1.2 s.
+          Red rings mark the {count(pair.gapsAtEnd.length)} {sideAdjective(pair.side)} {pair.gapsAtEnd.length === 1 ? 'player' : 'players'} standing more than 1 yard from where they stand in {featured.nameDisplay}: {list(pair.gapsAtEnd)}.
+        </p>
+        <p class="prose">
+          Only the side that sells the look is scored. On offense that is the same look; on defense it is called disguise, and the score counts the defense.
+        </p>
+        {weakest && weakest.breakSeconds !== null && (
+          <p class="prose">
+            {weakest.name} gives itself away sooner. It scores {weakest.score}% on average and drops below the 80% line at {weakest.breakSeconds.toFixed(1)} s.
+          </p>
+        )}
+        <a class="lnk" href={`${playHref(featuredScheme.id, featured.id)}#compare`}>Scrub this comparison on the play sheet <span aria-hidden="true">→</span></a>
+        <p class="marginalia">
+          Note. The 80% line is SchemeDB’s own cutoff for plays that still look alike. It has not been tested against real defenders.{' '}
+          <a href="/about/#similarity">How the score works</a>
+        </p>
+      </div>
+      <div class="figures">
+        <figure class="sheet">
+          <div class="strip"><p>Sheet {featured.order} · {featured.nameDisplay}</p><p>t = 1.2 s</p></div>
+          <div class="pad"><Field play={heroPlay} t={1.2} win={pairWin} dot={10} refWidth={250} /></div>
+          <figcaption>The base play. Everyone is where the scheme puts them.</figcaption>
+        </figure>
+        <figure class="sheet">
+          <div class="strip"><p>Sheet {against.order} · {tidy(against.name)}</p><p>t = 1.2 s</p></div>
+          <div class="pad"><Field play={otherPlay} against={heroPlay} againstName={featured.nameDisplay} ringSide={pair.side} t={1.2} win={pairWin} dot={10} refWidth={250} /></div>
+          <figcaption>Red rings mark the {sideAdjective(pair.side)} players more than 1 yard from their {featured.nameDisplay} spots: {list(pair.gapsAtEnd)}.</figcaption>
+        </figure>
+        <p class="legend-row">
+          <span><span class="mk mko" aria-hidden="true"></span>Offense, filled</span>
+          <span><span class="mk mkd" aria-hidden="true"></span>Defense, ring</span>
+          <span><span class="mk mkc" aria-hidden="true"></span>More than 1 yard apart</span>
+          <span>Offense attacks up the page. The heavy line is the line of scrimmage.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="data" class="wrap section" style="padding-bottom:64px">
+    <div class="divider">
+      <p class="eyebrow">Section 3</p>
+      <h2>Data and licence</h2>
+      <p class="aside">Data {SITE.dataLicense} · Code {SITE.codeLicense}</p>
+    </div>
+    <div class="two-col">
+      <div class="text">
+        <h3>Take the whole binder with you</h3>
+        <p class="prose">Every number on the site comes from files you can download. The data is {SITE.dataLicense}, so use it for anything and credit SchemeDB. The code is {SITE.codeLicense}.</p>
+        <p class="prose">Building with it? The <a href="/data/" style="padding:15px 0">Data page</a> and the <a href={SITE.repo}>GitHub repository</a> carry the schema and the record for every play.</p>
+      </div>
+      <div class="text" style="gap:0">
+        <div class="dl-list">
+          <a class="dl" href="/downloads/scheme-db.json"><span>All schemes, plays and tracks</span><span class="fmt">JSON</span></a>
+          <a class="dl" href="/data/#csv"><span>Flat tables</span><span class="fmt">CSV</span></a>
+          <a class="dl" href="/downloads/scheme-db.sqlite"><span>One file database</span><span class="fmt">SQLite</span></a>
+          <a class="dl" href="/data/#schema"><span>Schema and how to cite</span><span class="fmt">Data page</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

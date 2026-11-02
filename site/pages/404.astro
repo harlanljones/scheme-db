@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { library } from '../lib/data';
+
+const { counts } = library();
+---
+
+<Base title="Page not found" description="That page is not in the binder." noindex>
+  <section class="wrap" style="padding-top:56px;padding-bottom:96px;display:flex;flex-direction:column;align-items:flex-start;gap:20px;max-width:760px">
+    <p class="eyebrow">Error 404 · Missing sheet</p>
+    <h1 class="page-title">That page is not in the binder.</h1>
+    <p class="body" style="font-size:18px;line-height:28px">The link may be out of date. Every one of the {counts.schemes} schemes is listed in the contents, and each opens its plays.</p>
+    <a class="btn" href="/schemes/">Open the contents <span aria-hidden="true">→</span></a>
+    <a class="lnk" href="/">Back to the cover</a>
+  </section>
+</Base>

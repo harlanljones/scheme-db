@@ -7,7 +7,7 @@ export const minterDoubleMugPeel: Play = {
   family: 'minter-amoeba-creeper',
   personnel: 'Nickel 2-4-5',
   formation: 'Double-A Gap Mug Front vs 11P Gun 2x2',
-  situation: '3rd & 3, +22, red zone strike zone high-pressure down',
+  situation: '3rd & 3, +22, just outside the red zone, strike zone high-pressure down',
   coverage: 'Cover 0 Peel (Aggressive Man Pressure with RB Peel Rule)',
   frontName: 'Double-A Mug 6-Up Presentation',
   duration: 4.0,

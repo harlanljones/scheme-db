@@ -6,6 +6,7 @@
   "name": "Boundary Creeper with Drop-7 Quarter Coverage Shell",
   "personnel": "Penny 5-1-5",
   "formation": "Penny 5-1-5 vs 11P Gun 3x1 Boundary Trips",
+  "ballSpot": "right",
   "situation": "3rd & 7, +35, passing down conversion",
   "coverage": "Drop 7 — Cover 3 Match with Simulated Edge Creeper",
   "frontName": "Penny 5-1-5 Front (3-1-7 Drop)",

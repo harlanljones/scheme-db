@@ -1,0 +1,89 @@
+---
+/**
+ * The coaching network as a static drawing. Each name is a link to the coach's scheme page when there is one.
+ * The lines are hidden from assistive technology; `label` and the text lists beside the drawing carry the same facts.
+ */
+import { MARK_R, LABEL_X, type Layout } from '../lib/network';
+
+interface Props {
+  layout: Layout;
+  label: string;
+  /** Draws this name in bold with a box round it. */
+  focusId?: string;
+  legend?: boolean;
+}
+const { layout, label, focusId, legend = true } = Astro.props;
+const { width, height } = layout;
+const has = (kind: 'worked' | 'influence'): boolean => layout.edges.some((edge) => edge.kind === kind);
+const hasUnknown = layout.nodes.some((node) => !node.known);
+---
+
+<figure class="net">
+  <div class="netscroll">
+    <svg
+      class="netsvg"
+      viewBox={`0 0 ${width} ${height}`}
+      width={width}
+      height={height}
+      role="group"
+      aria-label={label}
+      style={`min-width:${Math.round(width * 0.85)}px`}
+    >
+      <g aria-hidden="true">
+        {layout.edges.map((edge) => <path class={`ed ${edge.kind}`} d={edge.d} />)}
+      </g>
+      <g>
+        {layout.nodes.map((node) => {
+          const cls = `node${node.id === focusId ? ' focus' : ''}${node.known ? '' : ' plain'}`;
+          const inner = (
+            <>
+              <rect class="hit" x={node.x - 6} y={node.y - 13} width={node.w + 10} height="26" rx="3" />
+              {node.known && node.side === 'offense' ? <circle class="mo" cx={node.x + MARK_R + 1} cy={node.y} r={MARK_R} /> : null}
+              {node.known && node.side === 'defense' ? <circle class="md" cx={node.x + MARK_R + 1} cy={node.y} r={MARK_R - 1} /> : null}
+              {!node.known ? <circle class="mu" cx={node.x + MARK_R + 1} cy={node.y} r={MARK_R - 1} /> : null}
+              <text class="nlab" x={node.x + LABEL_X} y={node.y} dy="0.35em">{node.name}</text>
+            </>
+          );
+          return node.href ? (
+            <a class={cls} id={`n-${node.id}`} href={node.href} aria-label={`${node.name}${node.side ? `, ${node.side}` : ''}. Open the scheme`}>{inner}</a>
+          ) : (
+            <g class={cls} id={`n-${node.id}`}>{inner}</g>
+          );
+        })}
+      </g>
+    </svg>
+  </div>
+  {legend && (
+    <figcaption class="netkey">
+      <span class="k"><span class="mk mko" aria-hidden="true"></span>Offensive coach</span>
+      <span class="k"><span class="mk mkd" aria-hidden="true"></span>Defensive coach</span>
+      {hasUnknown && <span class="k"><span class="mk mku" aria-hidden="true"></span>No coach page yet</span>}
+      {has('worked') && (
+        <span class="k">
+          <svg class="swatch" width="34" height="8" viewBox="0 0 34 8" aria-hidden="true"><path class="ed worked" d="M1 4H33" /></svg>
+          Worked directly under, in any role
+        </span>
+      )}
+      {has('influence') && (
+        <span class="k">
+          <svg class="swatch" width="34" height="8" viewBox="0 0 34 8" aria-hidden="true"><path class="ed influence" d="M1 4H33" /></svg>
+          Scheme passed on, no job link recorded
+        </span>
+      )}
+      <span class="k">Read left to right. Columns count steps in a chain, not years.</span>
+    </figcaption>
+  )}
+</figure>
+
+<script>
+  // On a screen too narrow for the chart, start with the coach this page is about (or the one in the address) in view.
+  for (const box of document.querySelectorAll<HTMLElement>('.netscroll')) {
+    if (box.scrollWidth <= box.clientWidth) continue;
+    const hashed = location.hash.length > 1 ? box.querySelector(`[id="${CSS.escape(location.hash.slice(1))}"]`) : null;
+    const el = hashed ?? box.querySelector('.focus');
+    if (!el) continue;
+    const a = el.getBoundingClientRect();
+    const b = box.getBoundingClientRect();
+    box.scrollLeft += a.left - b.left - (box.clientWidth - a.width) / 2;
+  }
+</script>

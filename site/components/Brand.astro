@@ -1,0 +1,11 @@
+---
+interface Props {
+  href?: string;
+}
+const { href = '/' } = Astro.props;
+---
+
+<a class="brand" href={href} aria-label="SchemeDB home">
+  <span class="marks" aria-hidden="true"><i></i><i></i></span>
+  <span class="name slab">SchemeDB</span>
+</a>
