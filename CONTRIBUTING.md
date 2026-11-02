@@ -119,6 +119,8 @@ bun run dev             # open the play's page and scrub it
 
 `data:validate` fails while any `TODO:` is left, so it is your checklist. Fix what it reports, then run `bun run data:format` and `bun run check`.
 
+It also fails a play that draws something a person cannot do or that contradicts its own text: a player faster than 12 yd/s, an offensive player past the line of scrimmage, a Gun quarterback standing under center, or personnel and front labels that name players the play does not draw. If a speed is the problem, `bun run retime <concept-id>` shows the same path at a time a person can run (add `--write` to keep it). A man in motion starts before the snap at a negative `t`; see [Movement checks](data/README.md#movement-checks).
+
 ## Add a scheme, a coach or a glossary term
 
 ```bash
