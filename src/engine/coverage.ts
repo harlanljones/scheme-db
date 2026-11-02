@@ -11,6 +11,10 @@ import { positionAt } from './interpolate';
  * 11-player defense from the offence's actual alignment and route structure, so the
  * off-the-shelf `Play` data (whose defense is hand-authored for a single coverage) can be
  * re-rendered against any of these schemes.
+ *
+ * Nothing on the Astro site uses this yet. It powered the coverage-variant switcher of the previous
+ * single page app, which was removed from the tree; it stays, tested against `data/`, as the starting
+ * point for bringing the switcher back.
  */
 
 export type CoverageSchemeId =

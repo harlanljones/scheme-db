@@ -3,8 +3,8 @@ import { z } from 'zod';
 /**
  * SchemeDB data model. Every record under `data/` is parsed against one of these schemas.
  * Entities: Scheme, Concept (descriptive record), Tracks (geometry), Coach, Lineage, Term.
- * Field names follow the legacy TypeScript model where the meaning is unchanged; the
- * structural moves are documented in `data/README.md`.
+ * Field names follow the TypeScript model this data was first written in where the meaning is
+ * unchanged; the structural moves are documented in `data/README.md`.
  */
 
 const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'must be a kebab-case slug');

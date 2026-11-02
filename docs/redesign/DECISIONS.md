@@ -78,7 +78,7 @@ The last unbuilt page. It settles the open question about the glossary: it is a 
 
 The site reads `data/` since the Astro build, which is the point at which `data/` became canonical (it ends the parity test against `src/data`, and the open question below about when to make it canonical). Opening the contributor path then meant removing what still assumed the launch library was closed:
 
-- The parity test and `scripts/migrate-legacy.ts` are gone. `src/data` and the previous single page app are frozen and read by nothing that builds the site.
+- The parity test and `scripts/migrate-legacy.ts` are gone. `src/data` and the previous single page app were frozen here and then removed (see "Not done" below).
 - Tests assert floors and invariants (at least the launch counts, play orders running 1 to N, every id resolving) instead of exact counts, so adding a record no longer fails ten tests.
 - The validator now errors on a mentor or disciple with no coach record unless the person is on the known list of twelve, on a play that relates to no other play in its scheme (the site compares plays with the plays they relate to), on a `situation` that does not start with a down (the plays list filters by it), and on any `TODO:` text. The last one lets the scaffold hand out records that already parse while still failing CI until a person has written them.
 - Trust copy follows the data. The notice bar, footer, home, About, Data, `llms.txt` and share image say "All N plays are illustrative" only while that is true, and otherwise say how many are. A play that is `reconstructed` or `verified` shows its confidence in the sheet strip and a Sources section; an illustrative play looks exactly as before, which keeps decision 4's lightest label.
@@ -86,7 +86,9 @@ The site reads `data/` since the Astro build, which is the point at which `data/
 - Confidence: contributors set `illustrative` or `reconstructed` (with at least one source). `verified` is set by the maintainer after a second person has checked the sources.
 - Contributions are published under CC BY 4.0 for data and MIT for code, and credit is the git history. No tracking data or copied diagrams.
 
-Not done, and why: a `contributors` field on a record (git history credits people for now), a hosted form that opens a pull request, and removing `src/data` and the legacy app (it still holds the coverage variant switcher, which the Astro site does not have, and is the reference for porting it).
+Removed afterwards (same pull request, on Harlan's go ahead): the previous single page app (`src/App.tsx`, `src/components/`, its styles, `index.html`, `vite.config.ts`), its TypeScript copy of the library (`src/data/`), `ROADMAP.md`, the `dev:legacy` scripts and the dependencies only it used. Its last commit on the release branch is `134ac94`. The engine tests that read `src/data` now read `data/` through `src/engine/__tests__/fixtures.ts`. The coverage variant switcher is the one feature the Astro site does not have: its logic stays in `src/engine/coverage.ts`, unused by the site, and the component is in git history (`git show 134ac94:src/components/CoverageSwitcher.tsx`).
+
+Not done, and why: a `contributors` field on a record (git history credits people for now) and a hosted form that opens a pull request.
 
 ## Alternatives that were considered
 

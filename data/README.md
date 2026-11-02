@@ -71,7 +71,7 @@ Pushing a tag such as `data-v0.1.0` runs `.github/workflows/release-data.yml`, w
 
 ## Where the launch data came from
 
-The 180 launch plays, 53 coaches, 17 lineages and 30 glossary terms were migrated once from the previous TypeScript library, which is frozen in `src/data` and read by nothing that builds the site. From the migration on, `data/` is edited directly. What changed on the way:
+The 180 launch plays, 53 coaches, 17 lineages and 30 glossary terms were migrated once from the previous TypeScript library (`src/data`, since removed from the repository; it is in git history at commit `134ac94`). From the migration on, `data/` is edited directly. What changed on the way:
 
 - A play is split in two: the descriptive record (`concepts/`) and the geometry (`tracks/`).
 - `Play.coach` and `Play.family` are gone. The scheme links to its coach through `coachId`, and a concept links to its scheme through `schemeId`. `Play.family` disagreed with the scheme id for the 8 Shanahan and Kubiak plays (`wide-zone`, `split-zone-leak`).
@@ -82,4 +82,4 @@ The 180 launch plays, 53 coaches, 17 lineages and 30 glossary terms were migrate
 
 ## Known gaps
 
-Twelve people are named as a mentor or disciple but have no coach record: Bill Parcells, Bobby Slowik, Bruce Arians, Dan Campbell, Frank Reich, George Seifert, Gus Bradley, Jim Johnson, Jim Mora, Mike Holmgren, Monte Kiffin and Paul Brown. The validator reports them as warnings and accepts only these names; any other mentor or disciple id without a coach record is an error. Adding a record for one of them is a welcome contribution. The mentor links were carried over from the legacy data; the audit corrected several, and none has been fact-checked against a source.
+Twelve people are named as a mentor or disciple but have no coach record: Bill Parcells, Bobby Slowik, Bruce Arians, Dan Campbell, Frank Reich, George Seifert, Gus Bradley, Jim Johnson, Jim Mora, Mike Holmgren, Monte Kiffin and Paul Brown. The validator reports them as warnings and accepts only these names; any other mentor or disciple id without a coach record is an error. Adding a record for one of them is a welcome contribution. The mentor links were carried over from the previous library; the audit corrected several, and none has been fact-checked against a source.

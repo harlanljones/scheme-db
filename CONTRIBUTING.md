@@ -169,6 +169,6 @@ What the reviewer looks at: whether the play teaches the idea it claims to, whet
 - Add a test with every change. `bun run test` runs the whole suite.
 - Site copy follows the data: counts, the "illustrative" notice and play lists are built from `data/`, so a new record never needs a code change. If a page says a number that the data could change, build it from the data and add a test.
 - Always install the latest version of a dependency with `bun add <pkg>`; do not pin versions copied from elsewhere.
-- `src/data/`, `src/components/`, `src/App.tsx` and `bun run dev:legacy` are the previous single page app and its TypeScript copy of the library. **They are frozen**: nothing reads `data/` through them and nothing in `data/` is tested against them. Do not add plays there; add them to `data/`.
+- Tests assert floors and invariants, never an exact number of schemes, plays or coaches, so adding a record should not break one.
 
 Thank you for helping.
