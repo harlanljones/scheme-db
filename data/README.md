@@ -51,7 +51,29 @@ The frames export has one row per player per tenth of a second: `conceptId, play
 
 ### Movement checks
 
-`bun run data:validate` and the `speed:report` script check every track against numbers in `src/engine/limits.ts`: speed over any tenth of a second (warn above 10.5 yd/s, error above 12), acceleration over half a second (12 and 16 yd/s²), more than one player moving at the snap, a player moving toward the line of scrimmage at the snap, and a shift that ends less than a second before the snap. The thresholds are this project's own, set against the rounded constants in `src/spec/calibration.ts`, not measured on tracking data. Findings are reported, not enforced, until the launch library has been fixed.
+`bun run data:validate` checks every track against numbers in `src/engine/limits.ts`. Past the error line it fails; between the warn and the error line it warns.
+
+| Check | Warn | Error |
+|---|---|---|
+| Speed over any tenth of a second | above 10.5 yd/s | above 12 yd/s |
+| Speed change over half a second | above 12 yd/s² | above 16 yd/s² |
+| More than one offensive player moving at the snap | | yes |
+| An offensive player moving toward the line of scrimmage at the snap | | yes |
+| A shift that ends less than a second before the snap | | yes |
+
+The thresholds are this project's own, set against the rounded constants in `src/spec/calibration.ts`, not measured on tracking data. `bun run speed:report` lists every finding with the segments to edit.
+
+A fast run needs an even pace on the viewer's curve, which gives each waypoint a speed from its neighbours without looking at their times. A short segment next to a long one is run too fast and the long one too slow, so a run at one speed wants waypoints a quarter second apart. `bun run retime <concept-id>` does the work for a player who is over a line: it slows the segments that are too fast, adds the in between waypoints, and prints what it would change (add `--write` to write it). `--player Z --lead-in` starts a player running before the snap: a set position, then a run that reaches the snap at speed. Read the beats after a write, since a later arrival can move them.
+
+### Play checks
+
+`data:validate` also fails a play whose text and tracks disagree (`src/schema/consistency.ts`):
+
+- No offensive player stands past the line of scrimmage at or before the snap, and seven stand on it (a player moving at the snap is in motion, not on the line).
+- A quarterback in the gun is at least 3.5 yd deep, a pistol quarterback is 3 to 5 yd deep, and one under center is no deeper than 2.5 yd. A back in the gun stands no more than 1.5 yd deeper than the quarterback.
+- The personnel (`11`, `21P Pony`) names the backs and tight ends the play draws, and a front that names its secondary (`4-2-5`) draws that many defensive backs.
+
+These checks skip a field that still starts with `TODO`, the placeholder a scaffolded play starts with.
 
 ## Downloads
 

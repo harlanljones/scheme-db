@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "twoman-edge-blitz",
-  "duration": 4,
+  "duration": 4.1,
   "offense": [
     {
       "id": "LT",
@@ -96,7 +96,7 @@
       "trail": "route",
       "assignment": "Quick out vs press — hot answer if edge is late",
       "waypoints": [
-        { "t": 0, "x": 6.5, "y": 0.8, "note": "Release vs jam" },
+        { "t": 0, "x": 6.5, "y": -0.5, "note": "Release vs jam" },
         { "t": 0.8, "x": 7.5, "y": 1.2, "note": "Fight the press punch" },
         { "t": 2, "x": 9, "y": 1.5, "note": "Out break delayed by trail" },
         { "t": 4, "x": 10.5, "y": 1.8, "note": "Window never opened in time" }
@@ -110,7 +110,7 @@
       "trail": "route",
       "assignment": "Slant across vs the walked-out WILL",
       "waypoints": [
-        { "t": 0, "x": 39.8, "y": 1.2, "note": "Slot alignment" },
+        { "t": 0, "x": 39.8, "y": -0.5, "note": "Slot alignment" },
         { "t": 0.8, "x": 40.5, "y": 1.8, "note": "Release vs walked match" },
         { "t": 2, "x": 37.5, "y": 4, "note": "Slant across formation" },
         { "t": 4, "x": 34.5, "y": 5.5, "note": "Trailed all the way across" }
@@ -124,7 +124,7 @@
       "trail": "route",
       "assignment": "Take the top off vs press with one safety deep",
       "waypoints": [
-        { "t": 0, "x": 46, "y": 0.8, "note": "Outside release" },
+        { "t": 0, "x": 46, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 46, "y": 4, "note": "Push vertical" },
         { "t": 2.4, "x": 45.5, "y": 9.5, "note": "FS drifting over the top" },
         { "t": 4, "x": 45, "y": 13, "note": "Capped by center field" }
@@ -138,11 +138,11 @@
       "trail": "drop",
       "assignment": "Hitch and slide away from the building edge pressure",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.8, "x": 26.67, "y": -2.7, "note": "Hitch, feel the edge building" },
-        { "t": 1.6, "x": 27.3, "y": -3.2, "note": "Panic slide away from the rim" },
-        { "t": 2.4, "x": 27, "y": -3.5, "note": "Swallowed by the charging safety" },
-        { "t": 4, "x": 26.8, "y": -3.7, "note": "Sacked behind the line" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.8, "x": 26.67, "y": -5.4, "note": "Hitch, feel the edge building" },
+        { "t": 1.6, "x": 27.3, "y": -5.7, "note": "Panic slide away from the rim" },
+        { "t": 2.4, "x": 27, "y": -5.8, "note": "Swallowed by the charging safety" },
+        { "t": 4, "x": 26.8, "y": -5.9, "note": "Sacked behind the line" }
       ]
     },
     {
@@ -153,8 +153,8 @@
       "trail": "block",
       "assignment": "Scan protect — sprint to the walked-up blitzer",
       "waypoints": [
-        { "t": 0, "x": 23, "y": -3, "note": "Scan alignment" },
-        { "t": 0.9, "x": 25.5, "y": -3, "note": "Sees SS fire off the edge" },
+        { "t": 0, "x": 23, "y": -5, "note": "Scan alignment" },
+        { "t": 0.9, "x": 25.5, "y": -3.8, "note": "Sees SS fire off the edge" },
         { "t": 1.8, "x": 30.5, "y": -1.8, "note": "Sprinting to the rim" },
         { "t": 2.6, "x": 32.5, "y": -1.2, "note": "Arrives as SS blows past him" },
         { "t": 4, "x": 33.5, "y": -0.8, "note": "Chasing the play that ended" }
@@ -230,8 +230,8 @@
         { "t": 0.6, "x": 35.5, "y": 0.5, "note": "Full-speed edge charge" },
         { "t": 1.4, "x": 36.8, "y": -1.8, "note": "Past the vacated TE spot untouched" },
         { "t": 2.2, "x": 31.5, "y": -3.4, "note": "Bending down to the launch point" },
-        { "t": 2.7, "x": 27.4, "y": -3.6, "note": "Sack hit on the sliding QB" },
-        { "t": 4, "x": 27, "y": -3.8, "note": "Pile finish behind the line" }
+        { "t": 2.8, "x": 27.4, "y": -3.6, "note": "Sack hit on the sliding QB" },
+        { "t": 4.1, "x": 27, "y": -3.8, "note": "Pile finish behind the line" }
       ]
     },
     {

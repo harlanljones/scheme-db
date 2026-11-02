@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "rns-go-route-stab",
-  "duration": 4,
+  "duration": 4.2,
   "offense": [
     {
       "id": "C",
@@ -81,13 +81,13 @@
       "trail": "none",
       "assignment": "Five-step drop, deliver to Y's converted stab window",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
-        { "t": 0.5, "x": 26.67, "y": -3.8, "note": "Big first steps of five-step drop" },
-        { "t": 1.1, "x": 26.67, "y": -5.8, "note": "Completing the drop" },
-        { "t": 1.9, "x": 26.67, "y": -6, "note": "Hitch, eyes right on stab conversion" },
-        { "t": 2.6, "x": 27.3, "y": -5.2, "note": "Loading between the levels" },
-        { "t": 3.2, "x": 27.9, "y": -4.4, "note": "Full delivery to the window" },
-        { "t": 4, "x": 28.7, "y": -3.4, "note": "Ball in flight" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.5, "x": 26.67, "y": -6, "note": "Big first steps of five-step drop" },
+        { "t": 1.1, "x": 26.67, "y": -7, "note": "Completing the drop" },
+        { "t": 1.9, "x": 26.67, "y": -7.1, "note": "Hitch, eyes right on stab conversion" },
+        { "t": 2.6, "x": 27.3, "y": -6.7, "note": "Loading between the levels" },
+        { "t": 3.2, "x": 27.9, "y": -6.3, "note": "Full delivery to the window" },
+        { "t": 4, "x": 28.7, "y": -5.8, "note": "Ball in flight" }
       ]
     },
     {
@@ -98,12 +98,24 @@
       "trail": "route",
       "assignment": "Dig at fourteen — clear the weak hook and stress the left quarter",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
+        { "t": 0.23, "x": 5.63, "y": 0.88 },
+        { "t": 0.45, "x": 5.75, "y": 2.25 },
+        { "t": 0.68, "x": 5.88, "y": 3.63 },
         { "t": 0.9, "x": 6, "y": 5, "note": "Vertical stem at the bail corner" },
+        { "t": 1.18, "x": 6.38, "y": 6.5 },
+        { "t": 1.45, "x": 6.75, "y": 8 },
+        { "t": 1.73, "x": 7.13, "y": 9.5 },
         { "t": 2, "x": 7.5, "y": 11, "note": "Pushing the quarter deep" },
+        { "t": 2.23, "x": 8.88, "y": 11.75 },
+        { "t": 2.45, "x": 10.25, "y": 12.5 },
+        { "t": 2.68, "x": 11.63, "y": 13.25 },
         { "t": 2.9, "x": 13, "y": 14, "note": "Breaking inside at fourteen" },
+        { "t": 3.13, "x": 15, "y": 14.33 },
+        { "t": 3.37, "x": 17, "y": 14.67 },
         { "t": 3.6, "x": 19, "y": 15, "note": "Dig climbing across middle" },
-        { "t": 4, "x": 24, "y": 15.5, "note": "Weak side cleared" }
+        { "t": 3.9, "x": 21.5, "y": 15.25 },
+        { "t": 4.2, "x": 24, "y": 15.5, "note": "Weak side cleared" }
       ]
     },
     {
@@ -146,7 +158,7 @@
       "trail": "route",
       "assignment": "Pure go route to carry the bail corner and right quarter safety",
       "waypoints": [
-        { "t": 0, "x": 48.2, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48.2, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 47.5, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 46.5, "y": 12, "note": "Stacking the bail corner" },
         { "t": 3.2, "x": 45, "y": 19, "note": "Carrying both defenders deep" },
@@ -265,10 +277,10 @@
       "assignment": "Carry X dig then hand off to the free safety",
       "waypoints": [
         { "t": 0, "x": 32.4, "y": 4.7, "note": "Strong alignment" },
-        { "t": 0.9, "x": 12, "y": 6.5, "note": "Opening to the X stem" },
-        { "t": 2, "x": 10.5, "y": 9.5, "note": "Carrying the vertical push" },
-        { "t": 2.9, "x": 9.5, "y": 11.5, "note": "Handing dig to FS late" },
-        { "t": 4, "x": 9, "y": 12.5, "note": "Out of position vs Y" }
+        { "t": 0.9, "x": 25.8, "y": 6.5, "note": "Opening to the X stem" },
+        { "t": 2, "x": 20.5, "y": 9.5, "note": "Carrying the vertical push" },
+        { "t": 2.9, "x": 15.5, "y": 11.5, "note": "Handing dig to FS late" },
+        { "t": 4, "x": 12, "y": 12.5, "note": "Out of position vs Y" }
       ]
     },
     {

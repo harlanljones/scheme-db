@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "walsh-play-action-deep-cross",
-  "duration": 4.2,
+  "duration": 4.5,
   "offense": [
     {
       "id": "C",
@@ -135,12 +135,26 @@
       "trail": "route",
       "assignment": "Primary: twenty-yard cross-country deep crosser behind the frozen linebackers",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
+        { "t": 0.23, "x": 5.68, "y": 0.63 },
+        { "t": 0.45, "x": 5.85, "y": 1.75 },
+        { "t": 0.68, "x": 6.03, "y": 2.88 },
         { "t": 0.9, "x": 6.2, "y": 4, "note": "Vertical stem selling fade" },
+        { "t": 1.15, "x": 6.65, "y": 5.75 },
+        { "t": 1.4, "x": 7.1, "y": 7.5 },
+        { "t": 1.65, "x": 7.55, "y": 9.25 },
         { "t": 1.9, "x": 8, "y": 11, "note": "Stacking the bail corner" },
-        { "t": 2.8, "x": 12, "y": 19, "note": "Breaking inside at twenty" },
-        { "t": 3.6, "x": 20, "y": 20, "note": "Cross-country lane behind the hooks" },
-        { "t": 4.2, "x": 26, "y": 20.5, "note": "Crossing the middle open" }
+        { "t": 2.15, "x": 9, "y": 13 },
+        { "t": 2.4, "x": 10, "y": 15 },
+        { "t": 2.65, "x": 11, "y": 17 },
+        { "t": 2.9, "x": 12, "y": 19, "note": "Breaking inside at twenty" },
+        { "t": 3.13, "x": 14, "y": 19.25 },
+        { "t": 3.35, "x": 16, "y": 19.5 },
+        { "t": 3.58, "x": 18, "y": 19.75 },
+        { "t": 3.8, "x": 20, "y": 20, "note": "Cross-country lane behind the hooks" },
+        { "t": 4.03, "x": 22, "y": 20.17 },
+        { "t": 4.27, "x": 24, "y": 20.33 },
+        { "t": 4.5, "x": 26, "y": 20.5, "note": "Crossing the middle open" }
       ]
     },
     {
@@ -151,7 +165,7 @@
       "trail": "block",
       "assignment": "Sell the down block on the Sam then release into a short drag",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y tight right" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y tight right" },
         { "t": 0.5, "x": 33.4, "y": 0.5, "note": "Violent down-block sell on Sam" },
         { "t": 1.3, "x": 33, "y": 1.8, "note": "Releasing inside off the block" },
         { "t": 2.2, "x": 30, "y": 4.5, "note": "Short drag under the crossers" },
@@ -167,7 +181,7 @@
       "trail": "route",
       "assignment": "Run the post behind X's crosser to occupy the deep-half defenders",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.9, "x": 47.4, "y": 4, "note": "Vertical stem off the snap" },
         { "t": 2, "x": 46, "y": 12, "note": "Pushing the half safety deep" },
         { "t": 3, "x": 43.5, "y": 18.5, "note": "Post break at sixteen" },

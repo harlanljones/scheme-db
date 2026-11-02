@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "johnson-hook-ladder-mesh",
-  "duration": 3.5,
+  "duration": 3.9,
   "offense": [
     {
       "id": "C",
@@ -108,11 +108,19 @@
       "assignment": "Ladder route: set up inside the TE hook, slip past the rub, receive lateral in space",
       "waypoints": [
         { "t": 0, "x": 30, "y": -4.5, "note": "Gun alignment" },
+        { "t": 0.25, "x": 29.75, "y": -4.25 },
         { "t": 0.5, "x": 29.5, "y": -4, "note": "Release inside toward TE" },
-        { "t": 1, "x": 25, "y": -2, "note": "Create mesh rub angle" },
-        { "t": 1.6, "x": 21, "y": 1.5, "note": "Ladder free — slip the rub" },
-        { "t": 2.2, "x": 18, "y": 4, "note": "Catch lateral in space" },
-        { "t": 3.5, "x": 14, "y": 8, "note": "Run for first down" }
+        { "t": 0.85, "x": 27.25, "y": -3 },
+        { "t": 1.2, "x": 25, "y": -2, "note": "Create mesh rub angle" },
+        { "t": 1.5, "x": 23, "y": -0.25 },
+        { "t": 1.8, "x": 21, "y": 1.5, "note": "Ladder free — slip the rub" },
+        { "t": 2.1, "x": 19.5, "y": 2.75 },
+        { "t": 2.4, "x": 18, "y": 4, "note": "Catch lateral in space" },
+        { "t": 2.7, "x": 17.2, "y": 4.8 },
+        { "t": 3, "x": 16.4, "y": 5.6 },
+        { "t": 3.3, "x": 15.6, "y": 6.4 },
+        { "t": 3.6, "x": 14.8, "y": 7.2 },
+        { "t": 3.9, "x": 14, "y": 8, "note": "Run for first down" }
       ]
     },
     {

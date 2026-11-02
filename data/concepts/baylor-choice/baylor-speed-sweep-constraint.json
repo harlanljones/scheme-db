@@ -17,7 +17,7 @@
   },
   "beats": [
     {
-      "t": 0.7,
+      "t": 0.75,
       "title": "1. The Jet Stretches the Edge",
       "text": "The slot jets across at full speed while the line reaches right and the back fakes weak. The nickel must declare himself as force before the exchange even lands.",
       "focus": ["H", "NICKEL", "SAM"]
@@ -29,13 +29,13 @@
       "focus": ["Y", "NICKEL", "FS"]
     },
     {
-      "t": 2.4,
+      "t": 2.6,
       "title": "3. The Corner Is Stalked",
       "text": "The flanker stalks the sweep-side corner as the carrier presses the numbers. Both primary force defenders are now accounted for without throwing a pass.",
       "focus": ["Z", "RCB", "H"]
     },
     {
-      "t": 3.3,
+      "t": 3.35,
       "title": "4. The Perimeter Pays",
       "text": "The carrier bends up off the kickout with the whole defense flowing laterally behind him. This is the constraint that makes every choice shot credible.",
       "focus": ["H", "FS"]

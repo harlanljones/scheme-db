@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "mcdaniel-cheat-motion-wheel",
-  "duration": 4.5,
+  "duration": 5.9,
   "offense": [
     {
       "id": "C",
@@ -160,13 +160,33 @@
       "trail": "route",
       "assignment": "Sprint cheat motion, bluff crack block for 0.4s, then explode vertically up sideline on 22+ MPH Wheel route",
       "waypoints": [
-        { "t": 0, "x": 42, "y": -1.5, "note": "Cheat motion sprint right at snap" },
-        { "t": 0.6, "x": 36, "y": -0.5, "note": "Angle inside bluffing crack block on SAM" },
+        { "t": -1.65, "x": 42, "y": -1.5, "note": "Set in the formation" },
+        { "t": -0.65, "x": 42, "y": -1.5, "note": "Cheat motion sprint right at snap" },
+        { "t": -0.43, "x": 41.81, "y": -1.48 },
+        { "t": -0.22, "x": 41.25, "y": -1.44 },
+        { "t": 0, "x": 40.32, "y": -1.36, "note": "In motion at the snap" },
+        { "t": 0.3, "x": 38.4, "y": -1.21 },
+        { "t": 0.6, "x": 36, "y": -1.01, "note": "Angle inside bluffing crack block on SAM" },
+        { "t": 0.9, "x": 37.25, "y": 0.74 },
         { "t": 1.2, "x": 38.5, "y": 2.5, "note": "Plant foot and explode vertically up sideline" },
-        { "t": 2.2, "x": 43, "y": 12, "note": "Accelerate past frozen field corner" },
-        { "t": 3.2, "x": 46, "y": 24, "note": "High-speed wheel stride with 5 yards separation" },
-        { "t": 4, "x": 48, "y": 34, "note": "Catch pass in stride for 38-yard touchdown" },
-        { "t": 4.5, "x": 49, "y": 38, "note": "Cross goal line" }
+        { "t": 1.45, "x": 39.4, "y": 4.4 },
+        { "t": 1.7, "x": 40.3, "y": 6.3 },
+        { "t": 1.95, "x": 41.2, "y": 8.2 },
+        { "t": 2.2, "x": 42.1, "y": 10.1 },
+        { "t": 2.45, "x": 43, "y": 12, "note": "Accelerate past frozen field corner" },
+        { "t": 2.69, "x": 43.5, "y": 14 },
+        { "t": 2.93, "x": 44, "y": 16 },
+        { "t": 3.18, "x": 44.5, "y": 18 },
+        { "t": 3.42, "x": 45, "y": 20 },
+        { "t": 3.66, "x": 45.5, "y": 22 },
+        { "t": 3.9, "x": 46, "y": 24, "note": "High-speed wheel stride with 5 yards separation" },
+        { "t": 4.14, "x": 46.4, "y": 26 },
+        { "t": 4.38, "x": 46.8, "y": 28 },
+        { "t": 4.62, "x": 47.2, "y": 30 },
+        { "t": 4.86, "x": 47.6, "y": 32 },
+        { "t": 5.1, "x": 48, "y": 34, "note": "Catch pass in stride for 38-yard touchdown" },
+        { "t": 5.35, "x": 48.5, "y": 36 },
+        { "t": 5.6, "x": 49, "y": 38, "note": "Cross goal line" }
       ]
     }
   ],
@@ -292,11 +312,27 @@
       "assignment": "Field corner, bites aggressively downhill on toss fake, completely burnt by Z wheel route",
       "waypoints": [
         { "t": 0, "x": 42, "y": 6.5, "note": "Field corner" },
-        { "t": 0.8, "x": 41.5, "y": 3.5, "note": "Drive hard downhill to stop perimeter toss" },
-        { "t": 1.6, "x": 42, "y": 3, "note": "Realize Z has wheeled past him" },
-        { "t": 2.6, "x": 44, "y": 12, "note": "Desperate turn and sprint" },
-        { "t": 3.6, "x": 46, "y": 24, "note": "Trailing Z by 8 yards" },
-        { "t": 4.5, "x": 47.5, "y": 34, "note": "Beaten for TD" }
+        { "t": 0.3, "x": 41.83, "y": 5.5 },
+        { "t": 0.6, "x": 41.67, "y": 4.5 },
+        { "t": 0.9, "x": 41.5, "y": 3.5, "note": "Drive hard downhill to stop perimeter toss" },
+        { "t": 1.2, "x": 41.67, "y": 3.33 },
+        { "t": 1.5, "x": 41.83, "y": 3.17 },
+        { "t": 1.8, "x": 42, "y": 3, "note": "Realize Z has wheeled past him" },
+        { "t": 2.2, "x": 42.5, "y": 5.25 },
+        { "t": 2.55, "x": 43, "y": 7.5 },
+        { "t": 2.85, "x": 43.5, "y": 9.75 },
+        { "t": 3.15, "x": 44, "y": 12, "note": "Desperate turn and sprint" },
+        { "t": 3.4, "x": 44.33, "y": 14 },
+        { "t": 3.65, "x": 44.67, "y": 16 },
+        { "t": 3.9, "x": 45, "y": 18 },
+        { "t": 4.15, "x": 45.33, "y": 20 },
+        { "t": 4.4, "x": 45.67, "y": 22 },
+        { "t": 4.65, "x": 46, "y": 24, "note": "Trailing Z by 8 yards" },
+        { "t": 4.9, "x": 46.3, "y": 26 },
+        { "t": 5.15, "x": 46.6, "y": 28 },
+        { "t": 5.4, "x": 46.9, "y": 30 },
+        { "t": 5.65, "x": 47.2, "y": 32 },
+        { "t": 5.9, "x": 47.5, "y": 34, "note": "Beaten for TD" }
       ]
     },
     {
@@ -323,10 +359,27 @@
       "assignment": "Free safety, held in middle of field by TE crossing dig, unable to provide sideline help",
       "waypoints": [
         { "t": 0, "x": 26.67, "y": 14, "note": "Free safety" },
-        { "t": 1.2, "x": 24, "y": 13, "note": "Read QB drop" },
-        { "t": 2.4, "x": 26, "y": 14, "note": "Match TE crossing dig in middle" },
-        { "t": 3.5, "x": 35, "y": 20, "note": "Late break toward right sideline" },
-        { "t": 4.5, "x": 43, "y": 30, "note": "Too late to contest catch" }
+        { "t": 0.25, "x": 26.14, "y": 13.8 },
+        { "t": 0.5, "x": 25.6, "y": 13.6 },
+        { "t": 0.75, "x": 25.07, "y": 13.4 },
+        { "t": 1, "x": 24.53, "y": 13.2 },
+        { "t": 1.25, "x": 24, "y": 13, "note": "Read QB drop" },
+        { "t": 1.5, "x": 24.4, "y": 13.2 },
+        { "t": 1.75, "x": 24.8, "y": 13.4 },
+        { "t": 2, "x": 25.2, "y": 13.6 },
+        { "t": 2.25, "x": 25.6, "y": 13.8 },
+        { "t": 2.5, "x": 26, "y": 14, "note": "Match TE crossing dig in middle" },
+        { "t": 2.8, "x": 27.8, "y": 15.2 },
+        { "t": 3.1, "x": 29.6, "y": 16.4 },
+        { "t": 3.35, "x": 31.4, "y": 17.6 },
+        { "t": 3.6, "x": 33.2, "y": 18.8 },
+        { "t": 3.85, "x": 35, "y": 20, "note": "Late break toward right sideline" },
+        { "t": 4.1, "x": 36.33, "y": 21.67 },
+        { "t": 4.35, "x": 37.67, "y": 23.33 },
+        { "t": 4.6, "x": 39, "y": 25 },
+        { "t": 4.85, "x": 40.33, "y": 26.67 },
+        { "t": 5.1, "x": 41.67, "y": 28.33 },
+        { "t": 5.35, "x": 43, "y": 30, "note": "Too late to contest catch" }
       ]
     }
   ]

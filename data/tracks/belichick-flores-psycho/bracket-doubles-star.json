@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "bracket-doubles-star",
-  "duration": 4,
+  "duration": 4.3,
   "offense": [
     {
       "id": "C",
@@ -254,9 +254,22 @@
       "assignment": "CHAMELEON BRACKET: sprint to bracket Star X receiver inside hip in high-low double!",
       "waypoints": [
         { "t": 0, "x": 26.67, "y": 3.5, "note": "Mugged pre-snap look" },
-        { "t": 0.7, "x": 17, "y": 4.5, "note": "Sprint to boundary intermediate void" },
-        { "t": 1.8, "x": 10.5, "y": 9.5, "note": "BRACKET X INSIDE HIP / UNDER-CUT COMEBACK!" },
-        { "t": 4, "x": 9, "y": 11, "note": "Star receiver totally erased" }
+        { "t": 0.3, "x": 24.25, "y": 3.75 },
+        { "t": 0.6, "x": 21.84, "y": 4 },
+        { "t": 0.9, "x": 19.42, "y": 4.25 },
+        { "t": 1.2, "x": 17, "y": 4.5, "note": "Sprint to boundary intermediate void" },
+        { "t": 1.45, "x": 15.38, "y": 5.75 },
+        { "t": 1.7, "x": 13.75, "y": 7 },
+        { "t": 2, "x": 12.13, "y": 8.25 },
+        { "t": 2.3, "x": 10.5, "y": 9.5, "note": "BRACKET X INSIDE HIP / UNDER-CUT COMEBACK!" },
+        { "t": 2.55, "x": 10.31, "y": 9.69 },
+        { "t": 2.8, "x": 10.13, "y": 9.88 },
+        { "t": 3.05, "x": 9.94, "y": 10.06 },
+        { "t": 3.3, "x": 9.75, "y": 10.25 },
+        { "t": 3.55, "x": 9.56, "y": 10.44 },
+        { "t": 3.8, "x": 9.38, "y": 10.63 },
+        { "t": 4.05, "x": 9.19, "y": 10.81 },
+        { "t": 4.3, "x": 9, "y": 11, "note": "Star receiver totally erased" }
       ]
     },
     {

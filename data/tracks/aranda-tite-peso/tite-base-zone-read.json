@@ -95,11 +95,11 @@
       "trail": "carry",
       "assignment": "Read strong 4i, pull and keep on squeeze",
       "waypoints": [
-        { "t": 0, "x": 25.9, "y": -1.8, "note": "Gun, open mesh with RB" },
-        { "t": 1, "x": 26.8, "y": -2.4, "note": "Mesh point, eyes on 4i key" },
-        { "t": 2, "x": 28.4, "y": -1.6, "note": "Pull on squeeze, keep around RT" },
-        { "t": 3.1, "x": 30.8, "y": 0.6, "note": "Bend upfield into keep lane" },
-        { "t": 4, "x": 32, "y": 2.4, "note": "Met by walking PESO, TFL" }
+        { "t": 0, "x": 25.9, "y": -5, "note": "Gun, open mesh with RB" },
+        { "t": 1, "x": 26.8, "y": -5.3, "note": "Mesh point, eyes on 4i key" },
+        { "t": 2, "x": 28.4, "y": -4.8, "note": "Pull on squeeze, keep around RT" },
+        { "t": 3.1, "x": 30.8, "y": -2.6, "note": "Bend upfield into keep lane" },
+        { "t": 4, "x": 32, "y": -0.8, "note": "Met by walking PESO, TFL" }
       ]
     },
     {
@@ -125,7 +125,7 @@
       "trail": "block",
       "assignment": "Stalk LCB to cut off backside pursuit",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Backside island alignment" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Backside island alignment" },
         { "t": 1, "x": 7, "y": 2.2, "note": "Work to press corner" },
         { "t": 2.2, "x": 8, "y": 3.2, "note": "LCB fights over the stalk" },
         { "t": 4, "x": 9, "y": 4, "note": "Contained, no cutback lane" }
@@ -139,7 +139,7 @@
       "trail": "route",
       "assignment": "Vertical clear-out to move the strong quarter",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Vertical release outside" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Vertical release outside" },
         { "t": 1, "x": 46.5, "y": 6, "note": "Clear out RCB" },
         { "t": 2.2, "x": 45.5, "y": 12, "note": "Carries SS quarter deep" },
         { "t": 4, "x": 44.5, "y": 15, "note": "Holds safety away from box" }
@@ -153,7 +153,7 @@
       "trail": "route",
       "assignment": "Speed out under the vertical to occupy quarters match",
       "waypoints": [
-        { "t": 0, "x": 39.5, "y": 0.7, "note": "Slot #2 alignment" },
+        { "t": 0, "x": 39.5, "y": -0.5, "note": "Slot #2 alignment" },
         { "t": 1, "x": 40.8, "y": 3.5, "note": "Speed out under Z" },
         { "t": 2.2, "x": 41.6, "y": 5, "note": "Drifts flat away from box" },
         { "t": 4, "x": 42.4, "y": 6.5, "note": "Cannot affect walked-down nickel" }

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "mesh-shallow-cross",
-  "duration": 4.5,
+  "duration": 5,
   "offense": [
     {
       "id": "C",
@@ -151,11 +151,24 @@
       "assignment": "Middle slot shallow cross over the top of H at 6 yards depth, rub Nickel DB",
       "waypoints": [
         { "t": 0, "x": 41.5, "y": -0.8, "note": "Trips middle receiver" },
-        { "t": 0.8, "x": 38, "y": 3, "note": "Stem inside across formation" },
-        { "t": 1.6, "x": 30.5, "y": 6, "note": "Over-the-top mesh rub with H" },
-        { "t": 2.6, "x": 35, "y": 6.5, "note": "Clear out into right flat void" },
-        { "t": 3.6, "x": 41, "y": 7.5, "note": "Running open on field side" },
-        { "t": 4.5, "x": 45, "y": 9.5, "note": "Secondary outlet" }
+        { "t": 0.3, "x": 40.33, "y": 0.47 },
+        { "t": 0.6, "x": 39.17, "y": 1.73 },
+        { "t": 0.9, "x": 38, "y": 3, "note": "Stem inside across formation" },
+        { "t": 1.15, "x": 36.13, "y": 3.75 },
+        { "t": 1.45, "x": 34.25, "y": 4.5 },
+        { "t": 1.75, "x": 32.38, "y": 5.25 },
+        { "t": 2.05, "x": 30.5, "y": 6, "note": "Over-the-top mesh rub with H" },
+        { "t": 2.35, "x": 32, "y": 6.17 },
+        { "t": 2.65, "x": 33.5, "y": 6.33 },
+        { "t": 2.95, "x": 35, "y": 6.5, "note": "Clear out into right flat void" },
+        { "t": 3.2, "x": 36.5, "y": 6.75 },
+        { "t": 3.45, "x": 38, "y": 7 },
+        { "t": 3.7, "x": 39.5, "y": 7.25 },
+        { "t": 3.95, "x": 41, "y": 7.5, "note": "Running open on field side" },
+        { "t": 4.2, "x": 42, "y": 8 },
+        { "t": 4.45, "x": 43, "y": 8.5 },
+        { "t": 4.7, "x": 44, "y": 9 },
+        { "t": 4.95, "x": 45, "y": 9.5, "note": "Secondary outlet" }
       ]
     },
     {

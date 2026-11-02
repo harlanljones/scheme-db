@@ -29,13 +29,13 @@
       "focus": ["QB", "TE1", "SS", "FS"]
     },
     {
-      "t": 3,
+      "t": 3.5,
       "title": "3. The Cross-Country Post Break",
       "text": "Z receiver stems from the condensed right split, crosses the face of the right corner, and climbs across the entire formation at 22+ yards depth, slicing directly into the gaping void vacated by the lured Free Safety.",
       "focus": ["Z", "FS", "RCB"]
     },
     {
-      "t": 4.2,
+      "t": 5.55,
       "title": "4. The 45-Yard Deep Touchdown Strike",
       "text": "With clean 7-man protection in the pocket and X pinning the boundary corner deep, the QB launches a majestic 45-yard rainbow to Z streaking wide open across the opposite deep seam.",
       "focus": ["QB", "Z", "X", "LT", "RT"]

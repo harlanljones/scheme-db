@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { loadDataset } from '../../schema/load';
-import { frameCount } from '../../engine/frames';
+import { frameCount, leadInFrames } from '../../engine/frames';
+import { leadIn } from '../../engine/presnap';
 import { buildTables, createStatement, tableToCsv } from '../tables';
 
 const { dataset } = loadDataset();
@@ -21,7 +22,7 @@ describe('release tables', () => {
     const players = dataset.tracks.flatMap((t) => [...t.offense, ...t.defense]);
     expect(table('players').rows).toHaveLength(players.length);
     expect(table('waypoints').rows).toHaveLength(players.reduce((n, p) => n + p.waypoints.length, 0));
-    expect(table('frames').rows).toHaveLength(dataset.tracks.reduce((n, t) => n + 22 * frameCount(t.duration), 0));
+    expect(table('frames').rows).toHaveLength(dataset.tracks.reduce((n, t) => n + 22 * (leadInFrames(leadIn([...t.offense, ...t.defense])) + frameCount(t.duration)), 0));
   });
 
   it('gives every row exactly as many cells as the table has columns', () => {

@@ -49,9 +49,14 @@ describe('tracks with time before the snap', () => {
 describe('movement findings in the dataset report', () => {
   const report = validateDataset(dataset, files);
 
-  it('keeps them apart from errors and warnings while the checks are not enforced', () => {
-    expect(MOTION_ENFORCED).toBe(false);
+  it('fails validation on a finding at the error line, and the library has none', () => {
+    expect(MOTION_ENFORCED).toBe(true);
     expect(report.errors).toEqual([]);
+    // The gate: nobody in data/ runs, speeds up or stops faster than a person can, or is in motion toward the line.
+    expect(report.movement.filter((finding) => finding.level === 'error')).toEqual([]);
+  });
+
+  it('keeps findings at the warn line out of the errors', () => {
     expect(report.warnings.some((warning) => warning.includes('yd/s'))).toBe(false);
     expect(Array.isArray(report.movement)).toBe(true);
   });
@@ -69,5 +74,6 @@ describe('movement findings in the dataset report', () => {
     ds.tracks[0].offense[0].waypoints = [{ t: 0, x: 40, y: -1 }, { t: 0.5, x: 10, y: -1 }, { t: 1, x: 10, y: -1 }];
     const found = validateDataset(ds).movement.filter((finding) => finding.conceptId === ds.tracks[0].conceptId && finding.playerId === ds.tracks[0].offense[0].id && finding.check === 'speed');
     expect(found.map((finding) => finding.level)).toEqual(['error']);
+    expect(validateDataset(ds).errors.some((error) => error.includes(`Concept "${ds.tracks[0].conceptId}"`) && error.includes('yd/s'))).toBe(true);
   });
 });

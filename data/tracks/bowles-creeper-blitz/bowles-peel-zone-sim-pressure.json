@@ -125,7 +125,7 @@
       "assignment": "Trips inside slot 5yd quick hitch",
       "waypoints": [
         { "t": 0, "x": 36, "y": -0.8, "note": "Quick stem" },
-        { "t": 0.8, "x": 36, "y": 4.5, "note": "Sit in zone void" },
+        { "t": 0.9, "x": 36, "y": 4.5, "note": "Sit in zone void" },
         { "t": 2, "x": 36, "y": 4.5, "note": "Dropping DE_R sits right in front!" },
         { "t": 4, "x": 36, "y": 4.5, "note": "Suffocated" }
       ]

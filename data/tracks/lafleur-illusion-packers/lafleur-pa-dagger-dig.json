@@ -163,10 +163,21 @@
       "assignment": "Outside bunch left, vertical stem 14 yards then snap 90-degree Dig route into intermediate hole",
       "waypoints": [
         { "t": 0, "x": 12, "y": -0.5, "note": "Bunch outside WR" },
+        { "t": 0.27, "x": 12.17, "y": 1.17 },
+        { "t": 0.53, "x": 12.33, "y": 2.83 },
         { "t": 0.8, "x": 12.5, "y": 4.5, "note": "Vertical stem outside numbers" },
+        { "t": 1.05, "x": 12.63, "y": 6.38 },
+        { "t": 1.3, "x": 12.75, "y": 8.25 },
+        { "t": 1.55, "x": 12.88, "y": 10.13 },
         { "t": 1.8, "x": 13, "y": 12, "note": "Sell deep post / corner route to LCB" },
+        { "t": 2.1, "x": 13.75, "y": 13.25 },
         { "t": 2.4, "x": 14.5, "y": 14.5, "note": "Plant outside foot, sharp 90-degree square-in cut" },
-        { "t": 3.1, "x": 23, "y": 14.5, "note": "Catch laser pass between hashes in open void" },
+        { "t": 2.63, "x": 16.63, "y": 14.5 },
+        { "t": 2.85, "x": 18.75, "y": 14.5 },
+        { "t": 3.08, "x": 20.88, "y": 14.5 },
+        { "t": 3.3, "x": 23, "y": 14.5, "note": "Catch laser pass between hashes in open void" },
+        { "t": 3.53, "x": 24.67, "y": 15.67 },
+        { "t": 3.77, "x": 26.33, "y": 16.83 },
         { "t": 4, "x": 28, "y": 18, "note": "Turn upfield for 8+ yards YAC" }
       ]
     }

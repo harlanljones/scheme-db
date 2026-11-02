@@ -113,9 +113,18 @@
       "assignment": "Corner route behind the mesh at ~12 yards",
       "waypoints": [
         { "t": 0, "x": 7, "y": -0.5, "note": "Release vertical" },
-        { "t": 0.7, "x": 8.8, "y": 6, "note": "Push LCB upfield" },
+        { "t": 0.25, "x": 7.6, "y": 1.67 },
+        { "t": 0.5, "x": 8.2, "y": 3.83 },
+        { "t": 0.75, "x": 8.8, "y": 6, "note": "Push LCB upfield" },
+        { "t": 1, "x": 9.27, "y": 7.33 },
+        { "t": 1.25, "x": 9.73, "y": 8.67 },
         { "t": 1.5, "x": 10.2, "y": 10, "note": "Stem to corner" },
+        { "t": 1.73, "x": 9.7, "y": 10.75 },
+        { "t": 1.95, "x": 9.2, "y": 11.5 },
+        { "t": 2.17, "x": 8.7, "y": 12.25 },
         { "t": 2.4, "x": 8.2, "y": 13, "note": "Break outside at 12" },
+        { "t": 2.67, "x": 7.87, "y": 13.5 },
+        { "t": 2.93, "x": 7.53, "y": 14 },
         { "t": 3.2, "x": 7.2, "y": 14.5, "note": "Climb corner window" }
       ]
     },
@@ -128,10 +137,17 @@
       "assignment": "Shallow crosser left-to-right at ~5 yards, run off MIKE leverage",
       "waypoints": [
         { "t": 0, "x": 16.5, "y": -1, "note": "Inside release" },
+        { "t": 0.3, "x": 16.35, "y": 1 },
         { "t": 0.6, "x": 16.2, "y": 3, "note": "Stem to crosser depth" },
+        { "t": 0.9, "x": 16.6, "y": 4 },
         { "t": 1.2, "x": 17, "y": 5, "note": "Flatten across formation" },
+        { "t": 1.47, "x": 19.33, "y": 5.27 },
+        { "t": 1.73, "x": 21.67, "y": 5.53 },
         { "t": 2, "x": 24, "y": 5.8, "note": "Rub under QB" },
+        { "t": 2.27, "x": 26.33, "y": 5.93 },
+        { "t": 2.53, "x": 28.67, "y": 6.07 },
         { "t": 2.8, "x": 31, "y": 6.2, "note": "Cross NICKEL face" },
+        { "t": 3, "x": 32.75, "y": 6.35 },
         { "t": 3.2, "x": 34.5, "y": 6.5, "note": "Clear to right edge" }
       ]
     },
@@ -144,10 +160,17 @@
       "assignment": "Shallow crosser right-to-left at ~5 yards, first read off the mesh",
       "waypoints": [
         { "t": 0, "x": 37, "y": -1, "note": "Inside release" },
+        { "t": 0.3, "x": 36.9, "y": 1 },
         { "t": 0.6, "x": 36.8, "y": 3, "note": "Stem to crosser depth" },
+        { "t": 0.9, "x": 36.4, "y": 4 },
         { "t": 1.2, "x": 36, "y": 5, "note": "Flatten across formation" },
+        { "t": 1.47, "x": 33.67, "y": 5.27 },
+        { "t": 1.73, "x": 31.33, "y": 5.53 },
         { "t": 2, "x": 29, "y": 5.8, "note": "Cross under H at mesh point" },
+        { "t": 2.27, "x": 26.67, "y": 5.93 },
+        { "t": 2.53, "x": 24.33, "y": 6.07 },
         { "t": 2.8, "x": 22, "y": 6.2, "note": "Separate from SS trail" },
+        { "t": 3, "x": 20.25, "y": 6.35 },
         { "t": 3.2, "x": 18.5, "y": 6.5, "note": "Catch and turn upfield" }
       ]
     },
@@ -160,9 +183,17 @@
       "assignment": "Over route settling behind the mesh at 8–9 yards",
       "waypoints": [
         { "t": 0, "x": 46.5, "y": -0.5, "note": "Vertical release" },
-        { "t": 0.8, "x": 45, "y": 7, "note": "Push RCB vertical" },
+        { "t": 0.28, "x": 46, "y": 2 },
+        { "t": 0.57, "x": 45.5, "y": 4.5 },
+        { "t": 0.85, "x": 45, "y": 7, "note": "Push RCB vertical" },
+        { "t": 1.13, "x": 43.17, "y": 7.67 },
+        { "t": 1.42, "x": 41.33, "y": 8.33 },
         { "t": 1.7, "x": 39.5, "y": 9, "note": "Break inside over the mesh" },
+        { "t": 1.97, "x": 37.17, "y": 8.87 },
+        { "t": 2.23, "x": 34.83, "y": 8.73 },
         { "t": 2.5, "x": 32.5, "y": 8.6, "note": "Settle in soft spot" },
+        { "t": 2.73, "x": 31.5, "y": 8.73 },
+        { "t": 2.97, "x": 30.5, "y": 8.87 },
         { "t": 3.2, "x": 29.5, "y": 9, "note": "Drift away from coverage" }
       ]
     }

@@ -2,15 +2,9 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
-import { ALL_SCHEME_FAMILIES } from '../../data/schemes/index';
-import { COACH_PROFILES, COACHING_TREES } from '../../data/coaches/index';
-import * as LEGACY_FORMATIONS from '../../data/formations';
-import { FOOTBALL_GLOSSARY } from '../../data/glossary';
-import type { CoachingTreeNode } from '../../engine/types';
 import { formatFile } from '../format';
 import { DATA_DIR, loadDataset, RECORD_KIND_NAMES } from '../load';
-import { alignmentOverrides } from '../formations';
-import { Coach, Concept, Formation, Lineage, Scheme, Term, Tracks, type Dataset, type LineageNode } from '../schema';
+import { Coach, Concept, Formation, Lineage, Scheme, Term, Tracks, type Dataset } from '../schema';
 import { validateDataset } from '../validate-dataset';
 
 const { dataset, files, problems } = loadDataset();
@@ -49,10 +43,9 @@ describe('data/ library', () => {
     ]);
   });
 
-  it('warns about the five concepts whose tracks start off their formation preset', () => {
+  it('warns about the four concepts whose tracks start off their formation preset', () => {
     const drift = validateDataset(dataset, files).warnings.filter((w) => w.includes('off formation'));
     expect(drift.map((w) => /Concept "([^"]+)"/.exec(w)![1]).sort()).toEqual([
-      'coen-motion-zone-cutback',
       'macdonald-amoeba-cover0-peel',
       'macdonald-split-field-trap',
       'mcvay-glance-rpo-orbit',
@@ -77,130 +70,6 @@ describe('data/ library', () => {
       const onDisk = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'schema', `${name}.schema.json`), 'utf-8'));
       expect(onDisk, `${name}.schema.json is stale; run bun run data:schema`).toEqual(plain(z.toJSONSchema(schema)));
     }
-  });
-});
-
-describe('parity with the legacy TypeScript library (temporary, removed with src/data)', () => {
-  const legacyPlays = ALL_SCHEME_FAMILIES.flatMap((f) => f.plays);
-
-  it('has the same number of records', () => {
-    expect(dataset.schemes).toHaveLength(ALL_SCHEME_FAMILIES.length);
-    expect(dataset.concepts).toHaveLength(legacyPlays.length);
-    expect(dataset.tracks).toHaveLength(legacyPlays.length);
-    expect(dataset.coaches).toHaveLength(Object.keys(COACH_PROFILES).length);
-    expect(dataset.lineages).toHaveLength(COACHING_TREES.length);
-    expect(dataset.glossary).toHaveLength(FOOTBALL_GLOSSARY.length);
-  });
-
-  it('reproduces every scheme in the same order, with concepts in the same play order', () => {
-    expect(dataset.schemes.map((s) => s.id).sort()).toEqual(ALL_SCHEME_FAMILIES.map((f) => f.id).sort());
-    for (const family of ALL_SCHEME_FAMILIES) {
-      const scheme = dataset.schemes.find((s) => s.id === family.id)!;
-      expect(scheme).toMatchObject({
-        name: family.name,
-        coachId: family.coachId,
-        team: family.team,
-        side: family.category,
-        lineage: family.treeBranch,
-        description: family.description,
-      });
-      if (family.era) expect(scheme.era).toBe(family.era);
-
-      const ordered = dataset.concepts.filter((c) => c.schemeId === family.id).sort((a, b) => a.order - b.order);
-      expect(ordered.map((c) => c.id)).toEqual(family.plays.map((p) => p.id));
-    }
-  });
-
-  it('reproduces every play from its concept and tracks records, field for field', () => {
-    const tracksById = new Map(dataset.tracks.map((t) => [t.conceptId, t]));
-    for (const play of legacyPlays) {
-      const concept = dataset.concepts.find((c) => c.id === play.id)!;
-      const tracks = tracksById.get(play.id)!;
-      const rebuilt = {
-        id: concept.id,
-        name: concept.name,
-        personnel: concept.personnel,
-        formation: concept.formation,
-        situation: concept.situation,
-        coverage: concept.coverage,
-        frontName: concept.frontName,
-        duration: tracks.duration,
-        offense: tracks.offense,
-        defense: tracks.defense,
-        beats: concept.beats,
-        summary: concept.summary,
-        sequence: concept.relations,
-      };
-      // `coach` and `family` are derived from the scheme in the new model.
-      const { coach: _coach, family: _family, ...legacy } = play;
-      void _coach;
-      void _family;
-      expect(plain(rebuilt), play.id).toEqual(plain(legacy));
-    }
-  });
-
-  it('labels all legacy concepts illustrative with no sources', () => {
-    for (const concept of dataset.concepts) {
-      expect(concept.provenance).toEqual({ confidence: 'illustrative', sources: [] });
-    }
-  });
-
-  it('reproduces every formation preset', () => {
-    const legacy = Object.entries(LEGACY_FORMATIONS);
-    expect(dataset.formations).toHaveLength(legacy.length);
-    for (const [constName, preset] of legacy) {
-      const id = constName.toLowerCase().replace(/_/g, '-');
-      const formation = dataset.formations.find((f) => f.id === id);
-      expect(formation, id).toBeDefined();
-      const withoutRole = (side: Record<string, { x: number; y: number }>) =>
-        Object.fromEntries(Object.entries(side).map(([label, { x, y }]) => [label, { x, y }]));
-      expect(plain({ offense: withoutRole(formation!.offense), defense: withoutRole(formation!.defense) }), id).toEqual(plain(preset));
-    }
-  });
-
-  it('links the 68 plays built on a preset to it, and starts all but five exactly on it', () => {
-    const tracksOf = new Map(dataset.tracks.map((t) => [t.conceptId, t]));
-    const formationOf = new Map(dataset.formations.map((f) => [f.id, f]));
-    const linked = dataset.concepts.filter((c) => c.formationId);
-    expect(linked).toHaveLength(68);
-    const moved = linked
-      .filter((c) => alignmentOverrides(formationOf.get(c.formationId!)!, tracksOf.get(c.id)!).length > 0)
-      .map((c) => c.id)
-      .sort();
-    expect(moved).toEqual([
-      'coen-motion-zone-cutback',
-      'macdonald-amoeba-cover0-peel',
-      'macdonald-split-field-trap',
-      'mcvay-glance-rpo-orbit',
-      'saleh-nascar-cover1-robber',
-    ]);
-  });
-
-  it('reproduces every coach profile', () => {
-    for (const profile of Object.values(COACH_PROFILES)) {
-      const coach = dataset.coaches.find((c) => c.id === profile.id)!;
-      const { treeBranch, category, schemeFamilyIds, ...rest } = profile;
-      expect(plain(coach), profile.id).toMatchObject(plain({ ...rest, lineage: treeBranch, side: category, schemeIds: schemeFamilyIds }));
-    }
-  });
-
-  it('reproduces every coaching tree', () => {
-    const toNode = (node: CoachingTreeNode): LineageNode => ({ coachId: node.coach.id, children: node.children.map(toNode) });
-    for (const tree of COACHING_TREES) {
-      const lineage = dataset.lineages.find((l) => l.id === tree.id)!;
-      expect(plain(lineage.rootNodes), tree.id).toEqual(plain(tree.rootNodes.map(toNode)));
-      expect(lineage).toMatchObject({ name: tree.name, patriarch: tree.patriarch, side: tree.category, description: tree.description });
-    }
-  });
-
-  it('reproduces the glossary (record order is by id; the matcher sorts by alias length)', () => {
-    const byId = <T extends { id: string }>(list: T[]): T[] => [...list].sort((a, b) => a.id.localeCompare(b.id));
-    const rebuilt = dataset.glossary.map((term) => {
-      const { $schema, ...rest } = term;
-      void $schema;
-      return rest;
-    });
-    expect(plain(byId(rebuilt))).toEqual(plain(byId(FOOTBALL_GLOSSARY)));
   });
 });
 

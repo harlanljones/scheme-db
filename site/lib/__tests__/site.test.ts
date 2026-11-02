@@ -58,9 +58,9 @@ describe('comparisons', () => {
 
   it('scores the wide zone family as the About page and the home page state', () => {
     expect(comparisons.map((c) => [c.id, c.score, c.atEnd, c.breakSeconds])).toEqual([
-      ['play-action-over', 95, 89, null],
-      ['naked-bootleg', 95, 89, null],
-      ['jet-motion-oz', 71, 48, 0.4],
+      ['play-action-over', 94, 88, null],
+      ['naked-bootleg', 95, 88, null],
+      ['jet-motion-oz', 68, 59, 0.1],
     ]);
   });
 
@@ -68,7 +68,7 @@ describe('comparisons', () => {
     const pa = comparisons.find((c) => c.id === 'play-action-over')!;
     // Only the offense is scored, so the cornerback who also stands 1.3 yd apart does not count.
     expect(pa.gapDetails.map((g) => g.id)).toEqual(['Z', 'X']);
-    expect(pa.gapDetails.map((g) => Math.round(g.yards * 10) / 10)).toEqual([4.6, 2.9]);
+    expect(pa.gapDetails.map((g) => Math.round(g.yards * 10) / 10)).toEqual([5, 2.9]);
     expect(comparisons.find((c) => c.id === 'jet-motion-oz')!.gapsAtEnd).toHaveLength(2);
   });
 
@@ -146,7 +146,7 @@ describe('downloads and indexes', () => {
   it('puts every play and its comparisons in llms-full.txt', () => {
     const text = llmsFullTxt();
     for (const concept of lib.dataset.concepts) expect(text).toContain(`/schemes/${concept.schemeId}/${concept.id}/`);
-    expect(text).toContain('Compared with sheet 4, Jet Motion Outside Zone Left: 71% alike on average');
+    expect(text).toContain('Compared with sheet 4, Jet Motion Outside Zone Left: 68% alike on average');
   });
 });
 
