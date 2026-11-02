@@ -17,7 +17,7 @@ const { counts } = library();
     </div>
     <div class="col">
       <h2>Explore</h2>
-      {NAV.filter((item) => ['schemes', 'plays', 'coaches', 'lineages'].includes(item.key)).map((item) => <a href={item.href}>{item.label}</a>)}
+      {NAV.filter((item) => ['schemes', 'plays', 'coaches', 'lineages', 'glossary'].includes(item.key)).map((item) => <a href={item.href}>{item.label}</a>)}
       <a href="/#disguise">Disguise</a>
     </div>
     <div class="col">

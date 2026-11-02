@@ -62,7 +62,17 @@ Harlan asked for the scheme, coaches and play libraries for the mid-season relea
 - **Plays** (`/plays/`): all 180 sheets in one ruled list, numbered by scheme and sheet (39.2), with search over play, formation, coverage, front and coach, filters for side, era and down, and a contents or A to Z order. Filters live in the address like the scheme index. This adds a second way in without changing the contents table as the main index.
 - **Coaches** (`/coaches/` and a page for each of the 53): a staff list by surname with role, side, lineage tree and era, filters for side, era and tree. Each coach page has the coach's own schemes with their four sheets, schemes the record links them to (`schemeIds` that belong to another coach, such as Bill Walsh and Kyle Shanahan's wide zone), concepts, career notes, who they worked under, the lineage chart and the coach record download. The 12 people named as mentors or disciples without a record are listed at the bottom of the coaches page, still without pages.
 - Coach names across the site (Lineages, the network charts, scheme pages) now open the coach page rather than the coach's first scheme. Lovie Smith and Dom Capers, who have no scheme, now have pages too.
-- The header has six tabs: Schemes, Plays, Coaches, Lineages, Data, About.
+- The header has six tabs: Schemes, Plays, Coaches, Lineages, Data, About. (The Glossary page added a seventh; see below.)
+
+## Glossary page (2026-11-02)
+
+The last unbuilt page. It settles the open question about the glossary: it is a page (`/glossary/`), not inline popovers, and the Data page keeps the CSV files.
+
+- One list, A to Z, of the 30 terms in `data/glossary/`, under letter headings with a letter row to jump to. Each entry has the meaning, the tactical note, the other names (aliases, with repeats and case variants removed), the terms it mentions ("See also"), and the schemes that use it. An entry has an anchor, so `/glossary/#wide-zone` opens on it.
+- Search covers a term, its other names, its kind and its words. Filters are the seven term kinds. Both live in the address like the other lists, and the page works without scripts (the filters are hidden and every entry shows).
+- "In the library" lists a scheme when one of its plays names the term, or another name for it, in its title, formation, front or coverage. Prose is left out because words like "counter" and "mesh" mean other things in a sentence. Three terms (Conflict Defender, Disguise Window, Spill and Lever) are not named that way, and say so. Disguise Window links to the similarity method on the About page.
+- Seven header tabs: Glossary sits after Lineages. The tabs tighten between 860 and 1099 px so seven tabs and the lamp still share one row.
+- The entries show the data text as written. That text still has hyphens, en dashes and "vs." in it, so the glossary joins the open copy pass over data text (FB-13).
 
 ## Alternatives that were considered
 
@@ -104,5 +114,5 @@ These follow from the decisions above and are not settled yet.
 
 - Headline voice: the Playbook mockup uses "Forty five schemes, drawn up." The earlier tagline candidates are retired with the tagline reveal section.
 - Name on the page: "SchemeDB" as in the README, or "Scheme DB".
-- Whether the glossary becomes a section or stays inline popovers plus a Data page table.
+- Inline glossary popovers on scheme and play pages. The glossary is a page now (see above); popovers would link the terms where they are used and are not built.
 - When to make `data/` canonical (needed for the glossary, coach records and the contributor path).

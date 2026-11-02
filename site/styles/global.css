@@ -2529,10 +2529,10 @@ html:not(.js) .js-only {
   }
 }
 
-/* Six tabs and the lamp share one row from 860px; tighten the tabs until there is room to spare. */
+/* Seven tabs and the lamp share one row from 860px; tighten the tabs until there is room to spare. */
 @media (min-width: 860px) and (max-width: 1099px) {
   .tabs a {
-    padding: 0 10px;
+    padding: 0 8px;
     font-size: 14px;
   }
 
