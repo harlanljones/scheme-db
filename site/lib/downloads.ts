@@ -7,7 +7,7 @@ export const CSV_TABLES: Array<[name: string, note: string]> = [
   ['concept_sources', 'The sources a play cites (none yet for illustrative plays)'],
   ['players', 'One row per player per play, with role and assignment'],
   ['waypoints', 'The timed waypoints of every player'],
-  ['frames', 'Every player of every play resampled to 10 frames a second'],
+  ['frames', 'Every player of every play resampled to 10 frames a second (frame 0 is the snap; a play with motion before the snap also has negative frames)'],
   ['formations', 'Named pre snap looks'],
   ['formation_players', 'Where each player lines up in a formation'],
   ['coaches', 'One row per coach'],

@@ -100,4 +100,19 @@ describe('release tables', () => {
     const college = dataset.concepts.find((c) => c.ballSpot && dataset.schemes.find((s) => s.id === c.schemeId)?.era.endsWith('college'));
     if (college) expect([20, 33.33]).toContain(row(college.id)[col('ball_x')]);
   });
+
+  it('records how many seconds a play runs before the snap, and numbers the frames before it from the snap', () => {
+    const concepts = table('concepts');
+    const col = (name: string) => concepts.columns.findIndex((c) => c.name === name);
+    expect(concepts.columns[col('duration') + 1].name).toBe('lead_in');
+    const leadIns = new Map(concepts.rows.map((r) => [r[col('id')] as string, r[col('lead_in')] as number]));
+    expect(leadIns.size).toBe(dataset.concepts.length);
+    const frames = table('frames');
+    const fcol = (name: string) => frames.columns.findIndex((c) => c.name === name);
+    const earliest = new Map<string, number>();
+    for (const r of frames.rows) earliest.set(r[fcol('concept_id')] as string, Math.min(earliest.get(r[fcol('concept_id')] as string) ?? 0, r[fcol('frame')] as number));
+    for (const [id, leadIn] of leadIns) expect(earliest.get(id) ?? 0, id).toBe(-Math.ceil(leadIn * 10 - 1e-9) + 0);
+    const meta = Object.fromEntries(table('meta').rows.map((r) => [r[0], r[1]]));
+    expect(String(meta.time)).toContain('negative value is before it');
+  });
 });

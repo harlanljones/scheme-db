@@ -1,5 +1,6 @@
 import { ballX, levelOfEra } from '../engine/field';
 import { framesFor } from '../engine/frames';
+import { leadIn } from '../engine/presnap';
 import type { Coach, Dataset, LineageNode } from '../schema/schema';
 
 export type Cell = string | number | boolean | null;
@@ -69,7 +70,7 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
     [
       text('id'), text('scheme_id'), int('ord'), text('name'), text('personnel'), text('formation'), text('formation_id'), text('ball_spot'), real('ball_x'), text('situation'), text('coverage'), text('front_name'),
       text('motive'), text('key_defender'), text('why_it_works'), text('failure_mode'), text('tell'), text('confidence'), text('provenance_notes'),
-      real('duration'), text('spec_sha256'), text('compiler_version'),
+      real('duration'), real('lead_in'), text('spec_sha256'), text('compiler_version'),
     ],
     ['id'],
     dataset.concepts.map((c) => {
@@ -77,7 +78,7 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
       return [
         c.id, c.schemeId, c.order, c.name, c.personnel, c.formation, c.formationId ?? null, c.ballSpot ?? 'middle', ballX(levelOfEra(eraOf.get(c.schemeId) ?? 'modern-nfl'), c.ballSpot), c.situation, c.coverage, c.frontName,
         c.summary.motive, c.summary.keyDefender, c.summary.whyItWorks, c.summary.failureMode, c.relations.tell, c.provenance.confidence, c.provenance.notes ?? null,
-        tracks?.duration ?? null, tracks?.generatedFrom?.spec ?? null, tracks?.generatedFrom?.compiler ?? null,
+        tracks?.duration ?? null, tracks ? leadIn([...tracks.offense, ...tracks.defense]) : null, tracks?.generatedFrom?.spec ?? null, tracks?.generatedFrom?.compiler ?? null,
       ];
     }),
   );
@@ -177,6 +178,7 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
       ['version', version],
       ['license', 'CC BY 4.0 (data), MIT (code)'],
       ['coordinates', 'yards, x across the field 0..53.33 drawn with the ball at 26.67 (concepts.ball_x is where the ball really sits), y relative to the line of scrimmage with negative = backfield'],
+      ['time', 'seconds from the snap: t = 0 and frame 0 are the snap and a negative value is before it (concepts.lead_in is how many seconds a play runs before the snap; concepts.duration is the seconds after it)'],
       ['frame_rate_hz', '10'],
       ['row_counts', json(counts)],
     ],

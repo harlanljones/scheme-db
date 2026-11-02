@@ -94,3 +94,15 @@ export function nameFromId(id: string): string {
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(' ');
 }
+
+/** A time on the play clock to a tenth of a second, with the sign dropped: `1.2` for both 1.2 and -1.2. Never `-0.0`. */
+export const clockTenths = (t: number): string => Math.abs(Math.round(t * 10) / 10).toFixed(1);
+
+/** True when the clock reads before the snap, to the tenth: -0.04 is the snap, -0.06 is 0.1 s before it. */
+export const beforeSnap = (t: number): boolean => Math.round(t * 10) / 10 < 0;
+
+/** The time on the play clock in words: `1.2 seconds after the snap` or `1.0 seconds before the snap`. */
+export const clockWords = (t: number): string => `${clockTenths(t)} seconds ${beforeSnap(t) ? 'before' : 'after'} the snap`;
+
+/** The same, short, for readouts: `1.2 s` after the snap, `1.0 s before the snap` before it. */
+export const clockShort = (t: number): string => (beforeSnap(t) ? `${clockTenths(t)} s before the snap` : `${clockTenths(t)} s`);
