@@ -44,6 +44,11 @@ if (command === 'validate') {
     console.warn(`${report.warnings.length} warnings:`);
     for (const warning of report.warnings) console.warn(`  - ${warning}`);
   }
+  if (report.movement.length > 0) {
+    const plays = new Set(report.movement.map((finding) => finding.conceptId)).size;
+    const overError = report.movement.filter((finding) => finding.level === 'error').length;
+    console.warn(`${report.movement.length} movement findings in ${plays} concepts (${overError} past the error line); run \`bun run speed:report\` for the list.`);
+  }
   if (problems.length > 0) {
     console.error(`${problems.length} data problems:`);
     for (const problem of problems) console.error(`  - ${problem}`);

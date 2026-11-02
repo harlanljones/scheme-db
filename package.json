@@ -44,6 +44,7 @@
     "specs:check": "bun run scripts/specs.ts check",
     "specs:compile": "bun run scripts/specs.ts compile",
     "specs:diff": "bun run scripts/specs.ts diff",
+    "speed:report": "bun run scripts/speed-report.ts",
     "lint": "oxlint",
     "check": "bun run data:validate && bun run data:format --check && bun run specs:check && bun run data:release --version ci && bun run test && bun run typecheck && bun run build && bun run site:check",
     "preview": "bun --bun astro preview",

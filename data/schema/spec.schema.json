@@ -93,6 +93,53 @@
                   }
                 ]
               },
+              "motion": {
+                "type": "object",
+                "properties": {
+                  "from": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "description": "[x, y] where the player lines up. It must match his place in the formation."
+                  },
+                  "to": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "description": "[x, y] where he is at the snap. His route starts here."
+                  },
+                  "seconds": {
+                    "type": "number",
+                    "exclusiveMinimum": 0,
+                    "maximum": 6,
+                    "description": "How long before the snap the motion starts. The speed is the distance divided by this, and the compiler refuses a speed no one can run."
+                  }
+                },
+                "required": [
+                  "from",
+                  "to",
+                  "seconds"
+                ],
+                "additionalProperties": false
+              },
               "depth": {
                 "type": "number",
                 "exclusiveMinimum": 0,
@@ -374,7 +421,7 @@
               "properties": {
                 "t": {
                   "type": "number",
-                  "minimum": 0
+                  "minimum": -6
                 },
                 "x": {
                   "type": "number"

@@ -24,7 +24,8 @@ function catmullRom(p0: number, p1: number, p2: number, p3: number, u: number): 
 /**
  * Calculates the interpolated (x, y) position of a player at time t.
  * Uses Catmull-Rom spline interpolation through waypoints.
- * Clamps to first waypoint if t <= first.t, and last waypoint if t >= last.t.
+ * Clamps to first waypoint if t <= first.t, and last waypoint if t >= last.t. A negative t is time before the snap:
+ * a track with no waypoints that early holds its first waypoint, so a player who starts at the snap stands still.
  */
 export function positionAt(track: PlayerTrack, t: number): Point {
   const { waypoints } = track;

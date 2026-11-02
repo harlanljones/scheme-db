@@ -5,13 +5,14 @@ export interface AlignmentOverride {
   id: string;
   /** Where the formation puts the player. */
   preset: Alignment;
-  /** Where the concept's track actually starts the player (waypoint at t = 0). */
+  /** Where the concept's track actually starts the player: his first waypoint, before any motion or shift. */
   track: { x: number; y: number };
 }
 
 /**
- * The players a concept moves off its formation preset at the snap (a pistol QB, a shifted front, a man in motion).
- * An empty list means the tracks start exactly on the preset. A compiler applies the preset first, then these.
+ * The players a concept starts off their formation preset (a pistol QB, a shifted front, a man in motion). A track that
+ * begins before the snap is compared at its first waypoint, where the player lines up. An empty list means the tracks
+ * start exactly on the preset. A compiler applies the preset first, then these.
  */
 export function alignmentOverrides(formation: Formation, tracks: Tracks, tolerance = 1e-9): AlignmentOverride[] {
   const out: AlignmentOverride[] = [];

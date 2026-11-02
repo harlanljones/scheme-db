@@ -1,7 +1,7 @@
 export type Side = 'offense' | 'defense';
 
 export interface Waypoint {
-  t: number;          // seconds from snap; t=0 is the snap
+  t: number;          // seconds from snap; t=0 is the snap and a negative t is before it (see presnap.ts)
   x: number;          // yards across field, 0..53.33
   y: number;          // yards relative to LOS
   note?: string;      // author-facing comment, e.g. "reach step"
@@ -12,7 +12,7 @@ export interface PlayerTrack {
   label: string;              // short text rendered inside the marker, e.g. 'Z'
   side: Side;
   role: 'ol' | 'qb' | 'rb' | 'te' | 'wr' | 'dl' | 'lb' | 'db';
-  waypoints: Waypoint[];      // sorted ascending by t; first waypoint MUST have t === 0
+  waypoints: Waypoint[];      // sorted ascending by t, may start before the snap; one waypoint MUST have t === 0
   trail: 'route' | 'block' | 'carry' | 'drop' | 'none';
   assignment?: string;        // "reach the 3-tech", "sell the seam, break flat"
 }
