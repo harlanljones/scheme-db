@@ -11,7 +11,7 @@
       "trail": "block",
       "assignment": "Backside hinge — protect the bootleg lane the QB will use",
       "waypoints": [
-        { "t": 0, "x": 20.3, "y": 0.7, "note": "End alignment on the boot side" },
+        { "t": 0, "x": 20.3, "y": -0.6, "note": "End alignment on the boot side" },
         { "t": 0.6, "x": 20.9, "y": 0.6, "note": "Drive-step sell then hinge" },
         { "t": 1.5, "x": 21.2, "y": -0.4, "note": "Hinging backside to seal pursuit" },
         { "t": 2.8, "x": 21.5, "y": -1, "note": "Boot lane interior sealed" },
@@ -99,7 +99,7 @@
       "trail": "block",
       "assignment": "Playside end drive block creating the outside shoulder seam for the sweep",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "End alignment playside" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "End alignment playside" },
         { "t": 0.6, "x": 33.6, "y": 1, "note": "Attacking the end's inside shoulder" },
         { "t": 1.6, "x": 34.8, "y": 1.6, "note": "Driving him down the rush lane" },
         { "t": 3, "x": 36, "y": 2.4, "note": "Lane widened behind him" },
@@ -164,7 +164,7 @@
       "trail": "block",
       "assignment": "Stalk the field corner as the downfield escort for the sweep",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.9, "x": 46.2, "y": 2, "note": "Pushing the corner vertical" },
         { "t": 2.2, "x": 45, "y": 4.5, "note": "Stalk engaged" },
         { "t": 3.6, "x": 44, "y": 6, "note": "Perimeter escort maintained" },

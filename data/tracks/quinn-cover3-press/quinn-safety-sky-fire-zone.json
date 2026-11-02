@@ -125,7 +125,7 @@
       "assignment": "Trips inside slot 5yd quick hitch (hot vs blitz)",
       "waypoints": [
         { "t": 0, "x": 36, "y": -0.8, "note": "Quick 3-step stem" },
-        { "t": 0.8, "x": 36, "y": 4.5, "note": "Turn and sit in flat void" },
+        { "t": 0.9, "x": 36, "y": 4.5, "note": "Turn and sit in flat void" },
         { "t": 2, "x": 36, "y": 4.5, "note": "Drop-out SDE sits in throwing lane!" },
         { "t": 4, "x": 36, "y": 4.5, "note": "Window closed" }
       ]
@@ -267,9 +267,21 @@
       "assignment": "Sky Fire Blitz: sprint off strong edge unblocked from depth",
       "waypoints": [
         { "t": 0, "x": 37, "y": 7.5, "note": "Creeps down to 7 yards" },
+        { "t": 0.3, "x": 36.5, "y": 4.75 },
         { "t": 0.6, "x": 36, "y": 2, "note": "Launches full speed off strong edge" },
+        { "t": 0.83, "x": 34.63, "y": 0.38 },
+        { "t": 1.05, "x": 33.25, "y": -1.25 },
+        { "t": 1.27, "x": 31.88, "y": -2.87 },
         { "t": 1.5, "x": 30.5, "y": -4.5, "note": "Bends corner untouched past RT" },
+        { "t": 1.73, "x": 29.54, "y": -5 },
+        { "t": 1.95, "x": 28.59, "y": -5.5 },
+        { "t": 2.17, "x": 27.63, "y": -6 },
         { "t": 2.4, "x": 26.67, "y": -6.5, "note": "Crushing hit & strip sack on QB!" },
+        { "t": 2.67, "x": 26.56, "y": -6.67 },
+        { "t": 2.93, "x": 26.45, "y": -6.83 },
+        { "t": 3.2, "x": 26.34, "y": -7 },
+        { "t": 3.47, "x": 26.22, "y": -7.17 },
+        { "t": 3.73, "x": 26.11, "y": -7.33 },
         { "t": 4, "x": 26, "y": -7.5, "note": "Fumble forced" }
       ]
     },

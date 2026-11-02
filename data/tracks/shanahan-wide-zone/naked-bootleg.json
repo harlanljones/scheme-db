@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "naked-bootleg",
-  "duration": 4.5,
+  "duration": 4.7,
   "offense": [
     {
       "id": "C",
@@ -120,10 +120,10 @@
         { "t": 0, "x": 26.67, "y": -1.8, "note": "Under center snap" },
         { "t": 0.6, "x": 25.2, "y": -2.8, "note": "Reverse pivot extending ball" },
         { "t": 1.2, "x": 23.8, "y": -3.2, "note": "Faking mesh with RB" },
-        { "t": 2, "x": 29, "y": -4.5, "note": "Sprinting naked bootleg right" },
-        { "t": 2.8, "x": 35, "y": -4, "note": "Squaring shoulders on perimeter" },
-        { "t": 3.4, "x": 38.5, "y": -3, "note": "Delivering strike to TE in flat" },
-        { "t": 4.5, "x": 40, "y": -2, "note": "Following throw" }
+        { "t": 2.1, "x": 29, "y": -4.5, "note": "Sprinting naked bootleg right" },
+        { "t": 2.9, "x": 35, "y": -4, "note": "Squaring shoulders on perimeter" },
+        { "t": 3.5, "x": 38.5, "y": -3, "note": "Delivering strike to TE in flat" },
+        { "t": 4.6, "x": 40, "y": -2, "note": "Following throw" }
       ]
     },
     {
@@ -151,10 +151,24 @@
       "assignment": "Deep crossing drag from backside at 8-10 yards depth",
       "waypoints": [
         { "t": 0, "x": 7, "y": -0.5, "note": "Playside split wide" },
+        { "t": 0.27, "x": 7.33, "y": 0.33 },
+        { "t": 0.53, "x": 7.67, "y": 1.17 },
         { "t": 0.8, "x": 8, "y": 2, "note": "Stemming inside" },
+        { "t": 1.04, "x": 10, "y": 2.9 },
+        { "t": 1.28, "x": 12, "y": 3.8 },
+        { "t": 1.52, "x": 14, "y": 4.7 },
+        { "t": 1.76, "x": 16, "y": 5.6 },
         { "t": 2, "x": 18, "y": 6.5, "note": "Crossing field beneath safeties" },
-        { "t": 3.2, "x": 30, "y": 9, "note": "Intermediate drag window" },
-        { "t": 4.5, "x": 42, "y": 11, "note": "Crossing into boundary" }
+        { "t": 2.27, "x": 20.4, "y": 7 },
+        { "t": 2.54, "x": 22.8, "y": 7.5 },
+        { "t": 2.81, "x": 25.2, "y": 8 },
+        { "t": 3.08, "x": 27.6, "y": 8.5 },
+        { "t": 3.35, "x": 30, "y": 9, "note": "Intermediate drag window" },
+        { "t": 3.62, "x": 32.4, "y": 9.4 },
+        { "t": 3.89, "x": 34.8, "y": 9.8 },
+        { "t": 4.16, "x": 37.2, "y": 10.2 },
+        { "t": 4.43, "x": 39.6, "y": 10.6 },
+        { "t": 4.7, "x": 42, "y": 11, "note": "Crossing into boundary" }
       ]
     },
     {

@@ -30,7 +30,7 @@
       "focus": ["EDGE_L", "LB_A1", "LB_A2", "LB_B1", "EDGE_R", "LT"]
     },
     {
-      "t": 1.6,
+      "t": 2.1,
       "title": "Star Receiver Bracketed Inside-Out",
       "text": "The QB looks immediately to his #1 star wide receiver (X) expecting 1-on-1 zero coverage, only to find LCB outside and LURKER inside clamping the route in a vice.",
       "focus": ["X", "LCB", "LURKER", "QB"]

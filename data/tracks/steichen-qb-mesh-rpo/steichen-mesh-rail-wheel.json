@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "steichen-mesh-rail-wheel",
-  "duration": 4.5,
+  "duration": 4.7,
   "offense": [
     {
       "id": "C",
@@ -117,11 +117,25 @@
       "assignment": "Free release out of backfield on boundary Rail / Wheel route, blowing past picked Will LB",
       "waypoints": [
         { "t": 0, "x": 23.5, "y": -4.5, "note": "Flash flat release left" },
+        { "t": 0.27, "x": 21.33, "y": -3.67 },
+        { "t": 0.53, "x": 19.17, "y": -2.83 },
         { "t": 0.8, "x": 17, "y": -2, "note": "Speed release towards boundary numbers" },
+        { "t": 1.05, "x": 15.38, "y": -0.75 },
+        { "t": 1.3, "x": 13.75, "y": 0.5 },
+        { "t": 1.55, "x": 12.13, "y": 1.75 },
         { "t": 1.8, "x": 10.5, "y": 3, "note": "Turn vertical on Rail / Wheel route" },
+        { "t": 2.05, "x": 10, "y": 5.25 },
+        { "t": 2.3, "x": 9.5, "y": 7.5 },
+        { "t": 2.55, "x": 9, "y": 9.75 },
         { "t": 2.8, "x": 8.5, "y": 12, "note": "Stack trailing Will LB along sideline" },
-        { "t": 3.6, "x": 7.5, "y": 20, "note": "Secure 25-yard touchdown pass in stride" },
-        { "t": 4.5, "x": 7, "y": 28, "note": "Sprint to end zone" }
+        { "t": 3.03, "x": 8.25, "y": 14 },
+        { "t": 3.25, "x": 8, "y": 16 },
+        { "t": 3.48, "x": 7.75, "y": 18 },
+        { "t": 3.7, "x": 7.5, "y": 20, "note": "Secure 25-yard touchdown pass in stride" },
+        { "t": 3.93, "x": 7.38, "y": 22 },
+        { "t": 4.15, "x": 7.25, "y": 24 },
+        { "t": 4.38, "x": 7.13, "y": 26 },
+        { "t": 4.6, "x": 7, "y": 28, "note": "Sprint to end zone" }
       ]
     },
     {
@@ -240,11 +254,25 @@
       "assignment": "Will linebacker: man coverage on RB; gets caught in the Mesh crossing traffic and trails 5 yards behind RB",
       "waypoints": [
         { "t": 0, "x": 23.5, "y": 4.5, "note": "Man coverage read stance" },
+        { "t": 0.27, "x": 22.67, "y": 4 },
+        { "t": 0.53, "x": 21.83, "y": 3.5 },
         { "t": 0.8, "x": 21, "y": 3, "note": "Triggers on RB flat release" },
+        { "t": 1.05, "x": 20.25, "y": 3.3 },
+        { "t": 1.3, "x": 19.5, "y": 3.6 },
+        { "t": 1.55, "x": 18.75, "y": 3.9 },
         { "t": 1.8, "x": 18, "y": 4.2, "note": "Picks/collides with TE mesh crosser" },
+        { "t": 2.05, "x": 16.5, "y": 5.28 },
+        { "t": 2.3, "x": 15, "y": 6.35 },
+        { "t": 2.55, "x": 13.5, "y": 7.43 },
         { "t": 2.8, "x": 12, "y": 8.5, "note": "Stumbles around rub; chasing RB in trail" },
-        { "t": 3.6, "x": 9.5, "y": 17, "note": "Trailing 4 yards behind RB touchdown catch" },
-        { "t": 4.5, "x": 8, "y": 25, "note": "Cannot contest throw" }
+        { "t": 3.04, "x": 11.38, "y": 10.63 },
+        { "t": 3.28, "x": 10.75, "y": 12.75 },
+        { "t": 3.51, "x": 10.13, "y": 14.88 },
+        { "t": 3.75, "x": 9.5, "y": 17, "note": "Trailing 4 yards behind RB touchdown catch" },
+        { "t": 3.98, "x": 9.13, "y": 19 },
+        { "t": 4.2, "x": 8.75, "y": 21 },
+        { "t": 4.43, "x": 8.38, "y": 23 },
+        { "t": 4.65, "x": 8, "y": 25, "note": "Cannot contest throw" }
       ]
     },
     {
@@ -272,9 +300,9 @@
       "waypoints": [
         { "t": 0, "x": 36.5, "y": 4, "note": "Slot man alignment" },
         { "t": 0.8, "x": 35, "y": 3.5, "note": "Follows H across formation" },
-        { "t": 1.8, "x": 29, "y": 4, "note": "Navigates mesh rub behind MIKE" },
-        { "t": 3, "x": 34, "y": 4.5, "note": "Trailing H into right flat" },
-        { "t": 4.5, "x": 40, "y": 5.5, "note": "Chasing in man coverage" }
+        { "t": 2, "x": 29, "y": 4, "note": "Navigates mesh rub behind MIKE" },
+        { "t": 3.2, "x": 34, "y": 4.5, "note": "Trailing H into right flat" },
+        { "t": 4.7, "x": 40, "y": 5.5, "note": "Chasing in man coverage" }
       ]
     },
     {

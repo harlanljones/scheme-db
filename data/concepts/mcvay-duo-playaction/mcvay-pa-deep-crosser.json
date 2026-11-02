@@ -30,13 +30,13 @@
       "focus": ["Z", "SS", "RCB", "X"]
     },
     {
-      "t": 2.8,
+      "t": 3,
       "title": "3. The High-Low Crosser Dilemma",
       "text": "Tight end Y drags across at 4 yards depth, freezing the Will LB underneath. Behind the linebackers and underneath the retreating safeties, a massive 15-yard green canyon opens for X.",
       "focus": ["TE", "WILL", "X", "FS"]
     },
     {
-      "t": 3.6,
+      "t": 4.05,
       "title": "4. The Deep Over Cannon Strike",
       "text": "The QB steps into a clean pocket and launches a 25-yard strike to X in full stride across the hashes, completely outflanking the defense for a 35-yard explosive touchdown.",
       "focus": ["QB", "X", "FS"]

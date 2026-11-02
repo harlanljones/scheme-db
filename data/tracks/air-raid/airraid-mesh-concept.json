@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "airraid-mesh-concept",
-  "duration": 4,
+  "duration": 4.1,
   "offense": [
     {
       "id": "C",
@@ -98,8 +98,8 @@
       "trail": "block",
       "assignment": "Check blitz then release weak as emergency outlet",
       "waypoints": [
-        { "t": 0, "x": 31, "y": -6.2, "note": "Gun offset alignment" },
-        { "t": 0.7, "x": 30.5, "y": -6.6, "note": "Checking for pressure" },
+        { "t": 0, "x": 31, "y": -5, "note": "Gun offset alignment" },
+        { "t": 0.7, "x": 30.5, "y": -6, "note": "Checking for pressure" },
         { "t": 1.6, "x": 29, "y": -7.2, "note": "Releasing weak" },
         { "t": 2.6, "x": 26, "y": -7.8, "note": "Weak outlet path" },
         { "t": 4, "x": 23.5, "y": -8, "note": "Emergency valve" }
@@ -113,11 +113,22 @@
       "trail": "route",
       "assignment": "Outside leg of mesh: six-yard crosser over the ball from the boundary",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split left" },
+        { "t": 0.3, "x": 5.75, "y": 1 },
         { "t": 0.6, "x": 6.5, "y": 2.5, "note": "One upfield step selling vertical" },
+        { "t": 0.83, "x": 8, "y": 3 },
+        { "t": 1.07, "x": 9.5, "y": 3.5 },
         { "t": 1.3, "x": 11, "y": 4, "note": "Snapping down into the shallow lane" },
-        { "t": 2.1, "x": 19, "y": 4.5, "note": "Crossing over the ball" },
-        { "t": 3, "x": 28, "y": 4.5, "note": "Layer-one crosser through the middle" },
+        { "t": 1.58, "x": 13.67, "y": 4.17 },
+        { "t": 1.87, "x": 16.33, "y": 4.33 },
+        { "t": 2.15, "x": 19, "y": 4.5, "note": "Crossing over the ball" },
+        { "t": 2.39, "x": 21.25, "y": 4.5 },
+        { "t": 2.63, "x": 23.5, "y": 4.5 },
+        { "t": 2.86, "x": 25.75, "y": 4.5 },
+        { "t": 3.1, "x": 28, "y": 4.5, "note": "Layer-one crosser through the middle" },
+        { "t": 3.33, "x": 29.75, "y": 4.5 },
+        { "t": 3.55, "x": 31.5, "y": 4.5 },
+        { "t": 3.78, "x": 33.25, "y": 4.5 },
         { "t": 4, "x": 35, "y": 4.5, "note": "Emerging on the field side" }
       ]
     },
@@ -160,7 +171,7 @@
       "trail": "route",
       "assignment": "Corner route off the flanker — hold the deep-half help wide",
       "waypoints": [
-        { "t": 0, "x": 48.5, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48.5, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 47.8, "y": 4.5, "note": "Instant vertical release" },
         { "t": 1.8, "x": 47.2, "y": 10.5, "note": "Pushing the corner deep" },
         { "t": 2.6, "x": 46.5, "y": 15.5, "note": "Corner break outside" },
@@ -279,11 +290,23 @@
       "assignment": "Man coverage on X — must survive the crosser",
       "waypoints": [
         { "t": 0, "x": 5.6, "y": 7, "note": "Off-man alignment" },
+        { "t": 0.23, "x": 5.8, "y": 6.83 },
+        { "t": 0.47, "x": 6, "y": 6.67 },
         { "t": 0.7, "x": 6.2, "y": 6.5, "note": "Retreating on the vertical fake" },
+        { "t": 0.97, "x": 6.8, "y": 6.67 },
+        { "t": 1.23, "x": 7.4, "y": 6.83 },
         { "t": 1.5, "x": 8, "y": 7, "note": "X snaps down — turning to chase" },
+        { "t": 1.73, "x": 9.5, "y": 6.75 },
+        { "t": 1.95, "x": 11, "y": 6.5 },
+        { "t": 2.17, "x": 12.5, "y": 6.25 },
         { "t": 2.4, "x": 14, "y": 6, "note": "Chasing the crosser from behind" },
-        { "t": 3.2, "x": 22, "y": 5, "note": "Screened by Y crossing underneath" },
-        { "t": 4, "x": 29, "y": 5, "note": "Lost in the mesh traffic" }
+        { "t": 2.63, "x": 16, "y": 5.75 },
+        { "t": 2.85, "x": 18, "y": 5.5 },
+        { "t": 3.08, "x": 20, "y": 5.25 },
+        { "t": 3.3, "x": 22, "y": 5, "note": "Screened by Y crossing underneath" },
+        { "t": 3.57, "x": 24.33, "y": 5 },
+        { "t": 3.83, "x": 26.67, "y": 5 },
+        { "t": 4.1, "x": 29, "y": 5, "note": "Lost in the mesh traffic" }
       ]
     },
     {

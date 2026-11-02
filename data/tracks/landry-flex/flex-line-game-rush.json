@@ -85,12 +85,12 @@
       "trail": "drop",
       "assignment": "Five-step drop to Z comeback, climb when edge collapses",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Snap" },
-        { "t": 0.8, "x": 26.3, "y": -5.4, "note": "Big five-step depth" },
-        { "t": 1.6, "x": 26, "y": -6.2, "note": "Setting feet to work Z comeback" },
-        { "t": 2.4, "x": 26.6, "y": -5.8, "note": "Feeling wrap pressure off edge" },
-        { "t": 3.2, "x": 27.6, "y": -5, "note": "Climbing away from the loop" },
-        { "t": 4, "x": 28.6, "y": -4.2, "note": "Caught by the wrapping tackle" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Snap" },
+        { "t": 0.8, "x": 26.3, "y": -6.8, "note": "Big five-step depth" },
+        { "t": 1.6, "x": 26, "y": -7.2, "note": "Setting feet to work Z comeback" },
+        { "t": 2.4, "x": 26.6, "y": -7, "note": "Feeling wrap pressure off edge" },
+        { "t": 3.2, "x": 27.6, "y": -6.6, "note": "Climbing away from the loop" },
+        { "t": 4, "x": 28.6, "y": -6.2, "note": "Caught by the wrapping tackle" }
       ]
     },
     {
@@ -101,8 +101,8 @@
       "trail": "block",
       "assignment": "Check-protect strong A, take the replaced interior rusher",
       "waypoints": [
-        { "t": 0, "x": 24.5, "y": -2.6, "note": "Scan protection" },
-        { "t": 0.8, "x": 25.6, "y": -2.4, "note": "Sliding to protect strong A" },
+        { "t": 0, "x": 24.5, "y": -5, "note": "Scan protection" },
+        { "t": 0.8, "x": 25.6, "y": -3.5, "note": "Sliding to protect strong A" },
         { "t": 1.8, "x": 26.8, "y": -2, "note": "Meeting RDE inside charge" },
         { "t": 3.2, "x": 27.6, "y": -2.4, "note": "Anchored against replacement rush" },
         { "t": 4, "x": 28.2, "y": -2.8, "note": "No body left for the looper" }

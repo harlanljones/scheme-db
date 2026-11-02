@@ -119,7 +119,7 @@
       "trail": "route",
       "assignment": "Run the clear-out vertical to remove the weak corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 6, "y": 3.5, "note": "Instant vertical stem" },
         { "t": 1.8, "x": 7, "y": 10, "note": "Pushing the corner deep" },
         { "t": 3, "x": 8.5, "y": 16.5, "note": "Holding the deep third" },
@@ -134,7 +134,7 @@
       "trail": "block",
       "assignment": "Stalk the strong-side hook defender at the second level",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y alignment" },
         { "t": 0.7, "x": 33.5, "y": 2.5, "note": "Working to the second level" },
         { "t": 1.6, "x": 35.5, "y": 4.5, "note": "Locating the hook defender" },
         { "t": 2.5, "x": 37, "y": 5.5, "note": "Stalk block engaged" },
@@ -150,9 +150,19 @@
       "assignment": "Inside slot stalk on the nickel, protect Z's inside lane",
       "waypoints": [
         { "t": 0, "x": 11, "y": -1.4, "note": "Slot left alignment — releases across" },
+        { "t": 0.27, "x": 12.33, "y": -0.43 },
+        { "t": 0.53, "x": 13.67, "y": 0.53 },
         { "t": 0.8, "x": 15, "y": 1.5, "note": "Crossing the formation low" },
-        { "t": 1.8, "x": 25, "y": 2.5, "note": "Cross-country stalk track" },
+        { "t": 1.06, "x": 17.5, "y": 1.75 },
+        { "t": 1.33, "x": 20, "y": 2 },
+        { "t": 1.59, "x": 22.5, "y": 2.25 },
+        { "t": 1.85, "x": 25, "y": 2.5, "note": "Cross-country stalk track" },
+        { "t": 2.09, "x": 27, "y": 2.63 },
+        { "t": 2.33, "x": 29, "y": 2.75 },
+        { "t": 2.56, "x": 31, "y": 2.88 },
         { "t": 2.8, "x": 33, "y": 3, "note": "Engaging the inside pursuit" },
+        { "t": 3.07, "x": 34, "y": 3.17 },
+        { "t": 3.33, "x": 35, "y": 3.33 },
         { "t": 3.6, "x": 36, "y": 3.5, "note": "Lane sealed inside" }
       ]
     },
@@ -164,7 +174,7 @@
       "trail": "route",
       "assignment": "Snap-move stem inside, then burst back outside to receive the screen",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.5, "x": 46.5, "y": 1.8, "note": "Hard two-step inside move — snapping the corner's eyes" },
         { "t": 1, "x": 45, "y": 0.5, "note": "Snapping back outside to depth" },
         { "t": 1.7, "x": 43, "y": 1.5, "note": "Turning to the QB for the screen" },

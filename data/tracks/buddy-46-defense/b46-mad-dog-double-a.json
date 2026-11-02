@@ -138,7 +138,7 @@
       "trail": "route",
       "assignment": "Quick slant vs island press — the designed hot throw",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Slant release" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Slant release" },
         { "t": 0.9, "x": 8, "y": 3, "note": "Fight press jam of LCB" },
         { "t": 2.2, "x": 13, "y": 6, "note": "Slant rounded by press trail" },
         { "t": 4, "x": 18, "y": 8, "note": "Open late, QB buried" }
@@ -152,7 +152,7 @@
       "trail": "route",
       "assignment": "Stem vertical then work comeback vs RCB island",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Vertical stem" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Vertical stem" },
         { "t": 1, "x": 47, "y": 4.5, "note": "Push RCB deep" },
         { "t": 2.4, "x": 46, "y": 9.5, "note": "Comeback break at 10 yards" },
         { "t": 4, "x": 45, "y": 11, "note": "Isolated with no help coming" }

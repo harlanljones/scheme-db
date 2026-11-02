@@ -4,7 +4,7 @@
   "schemeId": "t-formation-power-sweep",
   "order": 4,
   "name": "Sweep-Pass Bootleg",
-  "personnel": "21",
+  "personnel": "22",
   "formation": "T Formation, End Right, Flanker Right",
   "situation": "2nd & 7, own 38, after two sweep gains",
   "coverage": "Cover 3 Sky",
@@ -29,7 +29,7 @@
       "focus": ["QB", "WILL", "LCB", "MIKE"]
     },
     {
-      "t": 2.6,
+      "t": 2.85,
       "title": "3. The Flood Forms Behind Him",
       "text": "As the quarterback reverses into his rollout right, three receivers are already stacked at fifteen, ten, and minus-two depths — a full high-to-low flood.",
       "focus": ["LE", "Z", "HB", "RE"]

@@ -24,25 +24,25 @@
       "focus": ["QB", "NICKEL", "RCB"]
     },
     {
-      "t": 0.5,
+      "t": 0.55,
       "title": "2. Press Stems Create the Conflict",
       "text": "Z pushes vertical into the press and H fires flat outside the apex, forcing the NICKEL to choose his leverage instantly. He triggers on the flat because that is the throw that threatens his zone first.",
       "focus": ["Z", "H", "NICKEL", "RCB"]
     },
     {
-      "t": 0.9,
+      "t": 1.05,
       "title": "3. The Rhythm Throw",
       "text": "The QB delivers on the one-hitch beat, before the RCB can re-establish outside leverage on the slant. The NICKEL is three yards into his flat trigger and cannot flip his hips back inside.",
       "focus": ["QB", "Z", "RCB", "NICKEL"]
     },
     {
-      "t": 1.5,
+      "t": 1.7,
       "title": "4. Catch Behind the Apex",
       "text": "Z secures the slant at nine yards in the exact window the vacating NICKEL was supposed to close. With the corner trailing and the safety splitting halves, nothing is left between the catch and the sideline.",
       "focus": ["Z", "NICKEL", "SS", "FS"]
     },
     {
-      "t": 2.2,
+      "t": 2.25,
       "title": "5. Finish Upfield",
       "text": "The slant climbs to eighteen yards as the NICKEL chases laterally from the flat — the classic man-match tax. This is why Payton lives on these throws on second-and-medium.",
       "focus": ["Z", "NICKEL", "SS"]

@@ -81,11 +81,11 @@
       "trail": "route",
       "assignment": "Quick drop, hot read to the out-breaking Z",
       "waypoints": [
-        { "t": 0, "x": 26.2, "y": -1.8, "note": "Gun, quick-game alert" },
-        { "t": 1, "x": 26.3, "y": -2.9, "note": "Catch, sight walked safety" },
-        { "t": 2, "x": 25.8, "y": -4, "note": "Hitch, hot eyes to Z" },
-        { "t": 3.1, "x": 25.4, "y": -4.6, "note": "Throw hot out under duress" },
-        { "t": 4, "x": 25.2, "y": -4.3, "note": "Pass batted at catch point" }
+        { "t": 0, "x": 26.2, "y": -5, "note": "Gun, quick-game alert" },
+        { "t": 1, "x": 26.3, "y": -5.5, "note": "Catch, sight walked safety" },
+        { "t": 2, "x": 25.8, "y": -6.1, "note": "Hitch, hot eyes to Z" },
+        { "t": 3.1, "x": 25.4, "y": -6.4, "note": "Throw hot out under duress" },
+        { "t": 4, "x": 25.2, "y": -6.2, "note": "Pass batted at catch point" }
       ]
     },
     {
@@ -111,7 +111,7 @@
       "trail": "route",
       "assignment": "Vertical clear-out of the weak corner",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Clear-out release" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Clear-out release" },
         { "t": 1, "x": 6.8, "y": 6, "note": "Vertical vs sinking corner" },
         { "t": 2.2, "x": 7.6, "y": 12, "note": "Carry LCB deep" },
         { "t": 4, "x": 8.4, "y": 16, "note": "Weak third emptied" }
@@ -125,7 +125,7 @@
       "trail": "route",
       "assignment": "Shallow drag across at five yards",
       "waypoints": [
-        { "t": 0, "x": 15, "y": 0.7, "note": "Slot alignment, drag duty" },
+        { "t": 0, "x": 15, "y": -0.5, "note": "Slot alignment, drag duty" },
         { "t": 1, "x": 17.5, "y": 2.5, "note": "Inside release" },
         { "t": 2.2, "x": 23.5, "y": 4.5, "note": "Drag under pressure" },
         { "t": 4, "x": 29, "y": 5.5, "note": "Crosses into MIKE wall" }
@@ -139,7 +139,7 @@
       "trail": "route",
       "assignment": "Dig behind the rush to stress strong hook",
       "waypoints": [
-        { "t": 0, "x": 38.5, "y": 0.7, "note": "Slot alignment, dig duty" },
+        { "t": 0, "x": 38.5, "y": -0.5, "note": "Slot alignment, dig duty" },
         { "t": 1, "x": 39, "y": 5, "note": "Stem vertical first" },
         { "t": 2.2, "x": 39.6, "y": 10, "note": "Dig break inside" },
         { "t": 4, "x": 34.5, "y": 13, "note": "Works behind rush lanes" }
@@ -153,7 +153,7 @@
       "trail": "route",
       "assignment": "Quick out at five yards as the hot target",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Hot route alignment" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Hot route alignment" },
         { "t": 1, "x": 45.8, "y": 2.5, "note": "Quick out release" },
         { "t": 2, "x": 44, "y": 4, "note": "Break out at five" },
         { "t": 3.1, "x": 43.2, "y": 4.4, "note": "Hot window flashes open" },

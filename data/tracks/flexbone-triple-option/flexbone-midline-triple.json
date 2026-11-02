@@ -158,7 +158,7 @@
       "trail": "block",
       "assignment": "Stalk-block the boundary corner to kill backside pursuit",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.8, "x": 6.8, "y": 2.2, "note": "Working to the stalk" },
         { "t": 1.7, "x": 8.2, "y": 4.4, "note": "Closing on the corner" },
         { "t": 2.6, "x": 9.5, "y": 6, "note": "Stalk engaged" },
@@ -173,7 +173,7 @@
       "trail": "route",
       "assignment": "Run off the field-side corner vertically",
       "waypoints": [
-        { "t": 0, "x": 48.2, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48.2, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.9, "x": 47.8, "y": 5.5, "note": "Instant vertical release" },
         { "t": 2, "x": 47, "y": 12, "note": "Carrying corner deep" },
         { "t": 3, "x": 46, "y": 18, "note": "Third cleared" },

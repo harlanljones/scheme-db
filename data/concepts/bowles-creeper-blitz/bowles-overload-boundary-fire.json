@@ -4,7 +4,7 @@
   "schemeId": "bowles-creeper-blitz",
   "order": 2,
   "name": "Boundary Overload Fire Blitz",
-  "personnel": "Nickel 2-4-5",
+  "personnel": "Base 3-4",
   "formation": "Boundary Overload Tilt vs 11P Gun Trips Right",
   "ballSpot": "left",
   "situation": "3rd & 10, +35, boundary hash passing down",
@@ -36,7 +36,7 @@
       "focus": ["FS", "X", "QB"]
     },
     {
-      "t": 2.2,
+      "t": 2.75,
       "title": "Violent Blindside Turnover",
       "text": "LCB drills the quarterback from behind at full speed, knocking the ball loose for a drive-ending strip-sack.",
       "focus": ["LCB", "QB"]

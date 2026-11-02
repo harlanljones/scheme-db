@@ -139,7 +139,7 @@
       "trail": "block",
       "assignment": "Stalk the backside corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Split wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split wide left" },
         { "t": 1, "x": 6.5, "y": 1.5, "note": "Work to LCB" },
         { "t": 2.4, "x": 7.5, "y": 2.5, "note": "Corner sinks over stalk" },
         { "t": 4, "x": 8.5, "y": 3.2, "note": "Contained by sinking corner" }
@@ -153,7 +153,7 @@
       "trail": "block",
       "assignment": "Stalk the strong-side corner",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Split wide right" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Split wide right" },
         { "t": 1, "x": 46, "y": 1.5, "note": "Work to RCB" },
         { "t": 2.4, "x": 45.2, "y": 2.5, "note": "Corner fights over stalk" },
         { "t": 4, "x": 44.4, "y": 3.2, "note": "Contained on island" }

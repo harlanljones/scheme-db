@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "t2-slb-edge-blitz",
-  "duration": 4,
+  "duration": 4.1,
   "offense": [
     {
       "id": "LT",
@@ -96,7 +96,7 @@
       "trail": "route",
       "assignment": "Designed hot quick out into Sam’s vacated window",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Quick stem" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Quick stem" },
         { "t": 0.7, "x": 6.2, "y": 1.5, "note": "Fast two-step release" },
         { "t": 1.5, "x": 8, "y": 1, "note": "Break out at two yards" },
         { "t": 2.6, "x": 11, "y": 0.8, "note": "Ball arrives into exchanged WILL" },
@@ -111,7 +111,7 @@
       "trail": "route",
       "assignment": "Climb seam vs deep half strong as secondary read",
       "waypoints": [
-        { "t": 0, "x": 39.5, "y": 1.2, "note": "Slot alignment" },
+        { "t": 0, "x": 39.5, "y": -0.5, "note": "Slot alignment" },
         { "t": 0.9, "x": 40.2, "y": 3, "note": "Push vertical" },
         { "t": 2.2, "x": 41.5, "y": 8, "note": "Working the seam landmark" },
         { "t": 4, "x": 42, "y": 12, "note": "Capped by FS half" }
@@ -125,7 +125,7 @@
       "trail": "route",
       "assignment": "Take the top off the strong half",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 47, "y": 4, "note": "Push RCB vertical" },
         { "t": 2.4, "x": 46.8, "y": 10, "note": "Clearing for H underneath" },
         { "t": 4, "x": 46.5, "y": 14, "note": "No ball coming" }
@@ -139,11 +139,11 @@
       "trail": "drop",
       "assignment": "Hot throw to Z out before the edge arrives",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.9, "x": 26.67, "y": -2.8, "note": "Hitch, feel edge collapsing" },
-        { "t": 1.7, "x": 27.3, "y": -3.4, "note": "Escape step right of UT churn" },
-        { "t": 2.4, "x": 26.9, "y": -3.6, "note": "Fires hot to the void" },
-        { "t": 4, "x": 26.7, "y": -3.7, "note": "Watches WILL return it" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -5.5, "note": "Hitch, feel edge collapsing" },
+        { "t": 1.7, "x": 27.3, "y": -5.8, "note": "Escape step right of UT churn" },
+        { "t": 2.4, "x": 26.9, "y": -5.9, "note": "Fires hot to the void" },
+        { "t": 4, "x": 26.7, "y": -5.9, "note": "Watches WILL return it" }
       ]
     },
     {
@@ -154,8 +154,8 @@
       "trail": "route",
       "assignment": "Check-release strong flat away from pressure",
       "waypoints": [
-        { "t": 0, "x": 30.5, "y": -3, "note": "Offset alignment" },
-        { "t": 1, "x": 31.5, "y": -2.4, "note": "Scan then release" },
+        { "t": 0, "x": 30.5, "y": -5, "note": "Offset alignment" },
+        { "t": 1, "x": 31.5, "y": -3.1, "note": "Scan then release" },
         { "t": 2.2, "x": 34, "y": 1, "note": "Flat working right" },
         { "t": 4, "x": 35.5, "y": 2, "note": "Never a factor in the throw" }
       ]
@@ -260,8 +260,8 @@
         { "t": 0.7, "x": 22.5, "y": 4.5, "note": "Slide to Sam’s vacated hook" },
         { "t": 1.6, "x": 20, "y": 4.8, "note": "Eyes jump to the hot release" },
         { "t": 2.4, "x": 15.5, "y": 3, "note": "Break under the out route" },
-        { "t": 3, "x": 11.5, "y": 1.4, "note": "Interception at the catch point" },
-        { "t": 4, "x": 12.5, "y": 1.2, "note": "Pick returned upfield" }
+        { "t": 3.1, "x": 11.5, "y": 1.4, "note": "Interception at the catch point" },
+        { "t": 4.1, "x": 12.5, "y": 1.2, "note": "Pick returned upfield" }
       ]
     },
     {

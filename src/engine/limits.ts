@@ -3,8 +3,8 @@
  * accelerations yards per second squared, times seconds.
  *
  * Each check has a `warn` line and an `error` line. A play over `warn` looks wrong to a football reader; a play over
- * `error` shows something a person cannot do. While `MOTION_ENFORCED` is false every finding is reported as a warning
- * and nothing fails CI; once the library is clean it is switched on and findings at the `error` line fail the build.
+ * `error` shows something a person cannot do. Findings at the `error` line fail validation (and so CI) while
+ * `MOTION_ENFORCED` is true; findings at the `warn` line are only reported, by `bun run data:validate` and `bun run speed:report`.
  *
  * Where the numbers come from:
  *  - Speed. NFL players top out at about 10 to 10.5 yd/s (23 mph). Over a 0.1 s step the warn line sits at that and
@@ -33,7 +33,7 @@ export const LIMITS = {
 } as const;
 
 /**
- * Whether findings at the `error` line fail validation. False reports every finding as a warning. It is switched on
- * with the same change that fixes the library, and a test then keeps the library under the error line.
+ * Whether findings at the `error` line fail validation. False reports every finding as a warning. It was switched on
+ * with the change that brought the library under the error line, and a test keeps it there.
  */
-export const MOTION_ENFORCED = false;
+export const MOTION_ENFORCED = true;

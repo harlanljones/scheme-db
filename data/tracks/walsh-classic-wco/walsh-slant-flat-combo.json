@@ -127,7 +127,7 @@
       "trail": "route",
       "assignment": "Primary: three-step slant, attack the outside hip of the guard",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.4, "x": 6.2, "y": 2, "note": "One hard step upfield selling vertical" },
         { "t": 0.9, "x": 9, "y": 4, "note": "Snapping down into the slant" },
         { "t": 1.6, "x": 15, "y": 5, "note": "Driving at the guard's outside hip" },
@@ -143,7 +143,7 @@
       "trail": "block",
       "assignment": "Release into a short hook over the ball as secondary read",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y tight right" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y tight right" },
         { "t": 0.7, "x": 32.8, "y": 2.5, "note": "Working inside release" },
         { "t": 1.5, "x": 31, "y": 6, "note": "Hook depth at six" },
         { "t": 2.4, "x": 30, "y": 6.5, "note": "Sitting in the window" },
@@ -158,7 +158,7 @@
       "trail": "route",
       "assignment": "Shoot the right flat to displace the flat defender and open the slant window",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.5, "x": 46, "y": 2, "note": "Shooting flat immediately" },
         { "t": 1.2, "x": 42, "y": 3, "note": "Pressuring the flat corner" },
         { "t": 2, "x": 39, "y": 3.5, "note": "Forcing the corner to widen" },

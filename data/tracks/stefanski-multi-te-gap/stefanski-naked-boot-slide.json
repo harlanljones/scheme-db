@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "stefanski-naked-boot-slide",
-  "duration": 4.4,
+  "duration": 4.5,
   "offense": [
     {
       "id": "C",
@@ -136,9 +136,9 @@
         { "t": 0.7, "x": 27.8, "y": -2.8, "note": "Reverse pivot right, ride mesh" },
         { "t": 1.2, "x": 28, "y": -3.2, "note": "Pull ball out of RB stomach" },
         { "t": 2, "x": 23, "y": -4.5, "note": "Accelerate naked bootleg left" },
-        { "t": 2.6, "x": 18, "y": -4, "note": "Square shoulders on the run" },
-        { "t": 2.8, "x": 16.5, "y": -3.8, "note": "Deliver accurate strike on the run to U" },
-        { "t": 4.4, "x": 14, "y": -3, "note": "Follow through" }
+        { "t": 2.65, "x": 18, "y": -4, "note": "Square shoulders on the run" },
+        { "t": 2.85, "x": 16.5, "y": -3.8, "note": "Deliver accurate strike on the run to U" },
+        { "t": 4.45, "x": 14, "y": -3, "note": "Follow through" }
       ]
     },
     {

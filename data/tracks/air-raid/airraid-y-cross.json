@@ -98,8 +98,8 @@
       "trail": "block",
       "assignment": "Check pressure then check-release to the weak flat",
       "waypoints": [
-        { "t": 0, "x": 31, "y": -6.2, "note": "Gun offset alignment" },
-        { "t": 0.7, "x": 30.5, "y": -6.6, "note": "Checking blitz indicators" },
+        { "t": 0, "x": 31, "y": -5, "note": "Gun offset alignment" },
+        { "t": 0.7, "x": 30.5, "y": -6, "note": "Checking blitz indicators" },
         { "t": 1.6, "x": 29, "y": -7.4, "note": "Releasing weak" },
         { "t": 2.8, "x": 25.5, "y": -7.8, "note": "Weak flat outlet" },
         { "t": 4, "x": 22.5, "y": -8, "note": "Emergency valve" }
@@ -113,7 +113,7 @@
       "trail": "route",
       "assignment": "Backside vertical clearout — hold the corner in his deep third",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 5.8, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 6.8, "y": 11.5, "note": "Pinning the bail corner" },
         { "t": 3.2, "x": 8, "y": 18.5, "note": "Holding the deep third" },
@@ -144,7 +144,7 @@
       "trail": "route",
       "assignment": "Primary: twelve-yard crosser working inside release over the ball",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y attached right" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y attached right" },
         { "t": 0.8, "x": 32.6, "y": 4, "note": "Working an inside release vs Sam" },
         { "t": 1.7, "x": 29, "y": 9, "note": "Climbing to crosser depth" },
         { "t": 2.5, "x": 24, "y": 12.5, "note": "Breaking down through the middle at twelve" },
@@ -160,7 +160,7 @@
       "trail": "route",
       "assignment": "Field-side vertical clearout holding the sky safety's third",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 47.5, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 46.8, "y": 11.5, "note": "Pushing the corner deep" },
         { "t": 3.2, "x": 46.2, "y": 18.5, "note": "Holding the third wide" },

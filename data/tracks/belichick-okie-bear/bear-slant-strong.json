@@ -95,7 +95,7 @@
       "trail": "block",
       "assignment": "Stalk the soft corner on perimeter run support",
       "waypoints": [
-        { "t": 0, "x": 46.5, "y": 0.5, "note": "Split alignment" },
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Split alignment" },
         { "t": 1.2, "x": 44, "y": 1.2, "note": "Work to RCB" },
         { "t": 2.6, "x": 43, "y": 2, "note": "Stall stalk vs soft leverage" },
         { "t": 4, "x": 42.2, "y": 2.4, "note": "Never reaches the safety force" }
@@ -109,7 +109,7 @@
       "trail": "block",
       "assignment": "Stalk press corner weak — alert for backside return",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Split alignment" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Split alignment" },
         { "t": 1.2, "x": 7.4, "y": 1, "note": "Work to LCB jam" },
         { "t": 2.6, "x": 8.6, "y": 1.8, "note": "Stuck on press hands" },
         { "t": 4, "x": 9.6, "y": 2.2, "note": "Backside lane closed anyway" }
