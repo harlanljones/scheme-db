@@ -4,7 +4,25 @@ import { describe, expect, it } from 'vitest';
 import { buildTables } from '../../../src/release/tables';
 import { fieldWindow, pos, type LitePlay } from '../field';
 import { capitalize, spell, tidy } from '../format';
-import { FEATURED, comparisonsFor, disciplesOf, library, litePlay, mentorChain, playHref, relatedPlays, schemePlayRows, schemeRows } from '../data';
+import {
+  FEATURED,
+  coachRows,
+  coachViews,
+  comparisonsFor,
+  disciplesOf,
+  downOf,
+  library,
+  litePlay,
+  mentorChain,
+  namedOnly,
+  personnelShort,
+  playHref,
+  playRows,
+  relatedPlays,
+  schemePlayRows,
+  schemeRows,
+  situationShort,
+} from '../data';
 import { CSV_TABLES } from '../downloads';
 import { llmsFullTxt, llmsTxt, sitePaths, sitemapXml } from '../seo';
 
@@ -116,7 +134,7 @@ describe('downloads and indexes', () => {
   });
 
   it('lists every page in the sitemap and every scheme in llms.txt', () => {
-    expect(sitePaths()).toHaveLength(5 + 45 + 180);
+    expect(sitePaths()).toHaveLength(7 + 45 + 180 + 53);
     const xml = sitemapXml('2026-11-01');
     for (const path of sitePaths()) expect(xml).toContain(`<loc>https://schemedb.harlanljones.com${path}</loc>`);
     const text = llmsTxt();
@@ -209,11 +227,11 @@ describe('who worked under whom', () => {
     expect(bowles[0]!.href).toBeUndefined();
   });
 
-  it('links people who have a record to their first scheme', () => {
+  it('links people who have a record to their coach page', () => {
     const reid = lib.coachById.get('andy-reid')!;
     const harbaugh = disciplesOf(reid).find((p) => p.id === 'john-harbaugh')!;
     expect(harbaugh.known).toBe(true);
-    expect(harbaugh.href).toMatch(/^\/schemes\//);
+    expect(harbaugh.href).toBe('/coaches/john-harbaugh/');
   });
 
   it('keeps the corrected mentors', () => {
@@ -223,5 +241,69 @@ describe('who worked under whom', () => {
     expect(lib.coachById.get('steve-spagnuolo')!.mentorId).toBe('jim-johnson');
     expect(lib.coachById.get('chris-shula')!.mentorId).toBeUndefined();
     expect(lib.coachById.get('chip-kelly')!.mentorId).toBeUndefined();
+  });
+});
+
+describe('the plays list', () => {
+  const rows = playRows();
+  it('lists every play once, in contents order, linking to its page', () => {
+    expect(rows).toHaveLength(180);
+    expect(new Set(rows.map((r) => r.id)).size).toBe(180);
+    expect(rows.map((r) => r.key)).toEqual([...rows.map((r) => r.key)].sort());
+    for (const row of rows) {
+      const concept = lib.conceptById.get(row.id)!;
+      expect(row.href).toBe(playHref(concept.schemeId, concept.id));
+      expect(row.hay).toBe(row.hay.toLowerCase());
+    }
+  });
+
+  it('reads the down from every situation', () => {
+    expect(rows.filter((r) => r.down === 'other')).toEqual([]);
+    expect(downOf('3rd & Goal from the 6, red zone')).toBe('3rd');
+    expect(downOf('Two minute drill')).toBe('other');
+    expect(situationShort('2nd & 2, +45, play action shot down')).toBe('2nd & 2');
+  });
+
+  it('drops the explanation in brackets from a personnel group', () => {
+    expect(personnelShort('Okie/Bear Package (5 DL, 2 LB, 4 DB)')).toBe('Okie/Bear Package');
+    expect(personnelShort('11')).toBe('11');
+  });
+});
+
+describe('the coaches list', () => {
+  const coaches = coachViews();
+  it('gives every coach a page, numbered by surname', () => {
+    expect(coaches).toHaveLength(53);
+    expect(coaches.map((c) => c.no)).toEqual(Array.from({ length: 53 }, (_, i) => i + 1));
+    for (const coach of coaches) expect(coach.href).toBe(`/coaches/${coach.id}/`);
+  });
+
+  it('links each coach to the schemes the data credits them with', () => {
+    for (const scheme of lib.schemes) {
+      expect(coaches.find((c) => c.id === scheme.coachId)?.schemes.map((s) => s.id), scheme.id).toContain(scheme.id);
+    }
+    for (const coach of coaches) {
+      for (const scheme of coach.schemes) expect(scheme.coachId).toBe(coach.id);
+      for (const scheme of coach.linked) expect(scheme.coachId).not.toBe(coach.id);
+    }
+    const withNoScheme = coaches.filter((c) => c.schemes.length === 0 && c.linked.length === 0).map((c) => c.id);
+    expect(withNoScheme.sort()).toEqual(['dom-capers', 'lovie-smith']);
+    // Bill Walsh runs his own scheme and is linked to Kyle Shanahan's; his era comes from his own.
+    const walsh = coaches.find((c) => c.id === 'bill-walsh')!;
+    expect(walsh.schemes.map((s) => s.id)).toEqual(['walsh-classic-wco']);
+    expect(walsh.linked.map((s) => s.id)).toEqual(['shanahan-wide-zone']);
+    expect(walsh.eras).toEqual(['past-nfl']);
+    expect(coachRows().find((r) => r.id === 'lovie-smith')?.eraLabel).toBe('Lineage only');
+  });
+
+  it('names the people mentioned in coach records who have no record', () => {
+    const named = namedOnly();
+    expect(named.length).toBeGreaterThan(0);
+    for (const person of named) {
+      expect(person.known).toBe(false);
+      expect(lib.coachById.has(person.id)).toBe(false);
+      expect(person.namedBy.length).toBeGreaterThan(0);
+    }
+    expect(named.map((p) => p.id)).toContain('george-seifert');
   });
 });

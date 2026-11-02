@@ -44,6 +44,7 @@ const copy = (rel: string): void => write(rel, fs.readFileSync(path.join(DATA_DI
 
 // Raw records, as they are in data/.
 for (const scheme of dataset.schemes) copy(`schemes/${scheme.id}.json`);
+for (const coach of dataset.coaches) copy(`coaches/${coach.id}.json`);
 for (const concept of dataset.concepts) {
   copy(`concepts/${concept.schemeId}/${concept.id}.json`);
   copy(`tracks/${concept.schemeId}/${concept.id}.json`);
@@ -64,4 +65,4 @@ for (const concept of dataset.concepts) {
 }
 
 const count = (dir: string): number => fs.readdirSync(path.join(records, dir), { recursive: true, withFileTypes: true }).filter((e) => e.isFile()).length;
-console.log(`Records written to public/records: ${count('schemes')} schemes, ${count('concepts')} concepts, ${count('tracks')} tracks, ${count('bundles')} bundles, ${count('frames')} frame files.`);
+console.log(`Records written to public/records: ${count('schemes')} schemes, ${count('coaches')} coaches, ${count('concepts')} concepts, ${count('tracks')} tracks, ${count('bundles')} bundles, ${count('frames')} frame files.`);

@@ -55,13 +55,22 @@ Also done from the audit: comparison headings now say which sheets start alike a
 
 Still open from the audit (not done): a motion catalog (ghost overlay, routes inking in, beat focus, view transitions), offside starts (FB-3), quarterback depth in shotgun (FB-4), personnel labels that disagree with the drawn players (FB-12), a copy pass over data text (FB-13), a `comparisons.csv` download (UX-5), name only records for people who are named as mentors but have no coach page.
 
+## Library pages (2026-11-02)
+
+Harlan asked for the scheme, coaches and play libraries for the mid-season release. Built on top of decision 5 (schemes stay the main index):
+
+- **Plays** (`/plays/`): all 180 sheets in one ruled list, numbered by scheme and sheet (39.2), with search over play, formation, coverage, front and coach, filters for side, era and down, and a contents or A to Z order. Filters live in the address like the scheme index. This adds a second way in without changing the contents table as the main index.
+- **Coaches** (`/coaches/` and a page for each of the 53): a staff list by surname with role, side, lineage tree and era, filters for side, era and tree. Each coach page has the coach's own schemes with their four sheets, schemes the record links them to (`schemeIds` that belong to another coach, such as Bill Walsh and Kyle Shanahan's wide zone), concepts, career notes, who they worked under, the lineage chart and the coach record download. The 12 people named as mentors or disciples without a record are listed at the bottom of the coaches page, still without pages.
+- Coach names across the site (Lineages, the network charts, scheme pages) now open the coach page rather than the coach's first scheme. Lovie Smith and Dom Capers, who have no scheme, now have pages too.
+- The header has six tabs: Schemes, Plays, Coaches, Lineages, Data, About.
+
 ## Alternatives that were considered
 
 - Home action: download the data (developer first), or contribute on GitHub. Rejected because a moving play shows both the craft and the data in seconds.
 - Audience: developers and data people, or coaches and students. Rejected for the home page; developers still get the Data page.
 - Visual system: one system everywhere. The ai-design-skills look was chosen on 2026-10-31 and replaced by The Playbook on 2026-11-01 after the three direction review above.
 - Label: a badge on every play (recommended by Claude), or only in the play header. Harlan chose the lightest option, accepting that individual plays look more authoritative than they are. The site wide notice therefore has to be hard to miss.
-- Index: plays first, or coaches first. Plays stay reachable through filters and search.
+- Index: plays first, or coaches first. Schemes stay first; since 2026-11-02 plays and coaches also have their own lists.
 - Comparison: a top level Compare page, or both. Rejected to save design and build work.
 - Theme: dark only was recommended and costs less. Harlan chose both, which roughly doubles color design and contrast testing.
 - Phones: everything phone first, or desktop first.

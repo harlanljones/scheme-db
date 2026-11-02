@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import CoachTable from '../../islands/CoachTable';
+import { ERA_LABELS, ERA_ORDER, coachRows, library, namedOnly } from '../../lib/data';
+import { count, tidy } from '../../lib/format';
+
+const lib = library();
+const rows = coachRows();
+const eras = ERA_ORDER.map((id) => ({ id, label: ERA_LABELS[id] }));
+const lineages = [...lib.dataset.lineages]
+  .map((lineage) => ({ id: lineage.id as string, label: tidy(lineage.name) }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+const others = namedOnly();
+const withoutScheme = rows.filter((row) => row.eras.length === 0).length;
+const schemeCoaches = new Set(lib.schemes.map((scheme) => scheme.coachId)).size;
+const linkedOnly = rows.length - schemeCoaches - withoutScheme;
+---
+
+<Base
+  title="The coaches"
+  description={`All ${lib.counts.coaches} coaches on SchemeDB, by surname, with their role, side of the ball, lineage tree and the schemes they are known for.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Coaches</span></span>
+    </nav>
+  </div>
+  <section class="wrap section" style="padding-top:8px;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:8px">
+      <p class="eyebrow">Staff list · By surname</p>
+      <h1 class="page-title">The {lib.counts.coaches} coaches</h1>
+      <p class="body" style="font-size:18px;line-height:28px">
+        The {schemeCoaches} coaches behind the {lib.counts.schemes} schemes, {count(linkedOnly)} more whose records link to one of those schemes, and {count(withoutScheme)} who {withoutScheme === 1 ? 'appears' : 'appear'} only in the lineages so far. Each page has the coach’s schemes, who they worked under and who worked under them.
+      </p>
+    </div>
+    <CoachTable client:load rows={rows} eras={eras} lineages={lineages} />
+    <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
+      Roles are as of the 2026 season. Spot one that is out of date? <a href="/about/#corrections">Send a correction</a>.
+    </p>
+  </section>
+
+  {others.length > 0 && (
+    <section class="wrap section" id="named">
+      <div class="divider">
+        <p class="eyebrow">Also named</p>
+        <h2>Coaches without a page yet</h2>
+        <p class="aside">{others.length} people</p>
+      </div>
+      <p class="prose" style="max-width:680px">
+        These coaches are named as a mentor or a disciple in a coach record, but have no record of their own, so they have no page and no scheme here yet.
+      </p>
+      <ul class="named-only">
+        {others.map((person) => (
+          <li>
+            {person.name}
+            <span class="by">
+              Named by{' '}
+              {person.namedBy.map((coach, i) => (
+                <>{i > 0 ? (i === person.namedBy.length - 1 ? ' and ' : ', ') : ''}<a href={coach.href}>{coach.name}</a></>
+              ))}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+</Base>

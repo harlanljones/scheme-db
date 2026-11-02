@@ -22,7 +22,8 @@ const files = walk(dist);
 const pages = files.filter((f) => f.endsWith('.html'));
 
 const { dataset } = loadDataset();
-const expectedPages = 5 + dataset.schemes.length + dataset.concepts.length + 1; // home, schemes, lineages, about, data, schemes, plays, 404
+// home, schemes, plays, coaches, lineages, about, data; a page per scheme, play and coach; 404
+const expectedPages = 7 + dataset.schemes.length + dataset.concepts.length + dataset.coaches.length + 1;
 
 const problems: string[] = [];
 const rel = (file: string): string => path.relative(dist, file);

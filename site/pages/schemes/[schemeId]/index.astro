@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import {
   DISGUISE_HOLD_PERCENT,
   SITE,
+  coachHref,
   disciplesOf,
   library,
   mentorChain,
@@ -117,7 +118,7 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
     <aside>
       {coach && (
         <div>
-          <div class="divider sm"><p class="eyebrow">Coach</p><h2>{coach.name}</h2></div>
+          <div class="divider sm"><p class="eyebrow">Coach</p><h2><a href={coachHref(coach)} style="color:inherit;text-underline-offset:4px">{coach.name}</a></h2></div>
           <div class="note"><p>{tidy(coach.role2026)}.{mentors.length > 0 ? ` Mentor: ${mentors[mentors.length - 1].name}.` : ''}</p></div>
           <div class="note" style="border-bottom:1px solid var(--rule)"><p>{tidy(coach.philosophy)}</p></div>
         </div>
@@ -130,7 +131,7 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
             {mentors.map((mentor, i) => (
               <li style={`padding-left:${i * 16}px`}>{mentor.href ? <a href={mentor.href}>{mentor.name}</a> : mentor.name}</li>
             ))}
-            <li class="here" style={`padding-left:${mentors.length * 16}px`}>{coach.name} <span class="t">This scheme</span></li>
+            <li class="here" style={`padding-left:${mentors.length * 16}px`}><a href={coachHref(coach)}>{coach.name}</a> <span class="t">This scheme</span></li>
             {disciples.length > 0 && (
               <li style={`padding-left:${(mentors.length + 1) * 16}px`}>
                 {disciples.map((d, i) => (

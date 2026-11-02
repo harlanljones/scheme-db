@@ -1,0 +1,31 @@
+---
+/** Schemes as ruled rows, each followed by links to its play sheets. Used on coach pages. */
+import type { SchemeView } from '../lib/data';
+import { pad2 } from '../lib/format';
+
+interface Props {
+  schemes: SchemeView[];
+  /** Name the scheme's coach on the second line. */
+  showCoach?: boolean;
+}
+const { schemes, showCoach = false } = Astro.props;
+---
+
+<ol class="coach-schemes" style="border-top:2px solid var(--fg)">
+  {schemes.map((scheme) => (
+    <li>
+      <a class="prow" href={scheme.href}>
+        <span class="type" style="font-size:13px;line-height:20px;font-weight:700;color:var(--fg2);white-space:nowrap">No. {pad2(scheme.no)}</span>
+        <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+          <span class="slab" style="font-size:22px;line-height:1.15;font-weight:600">{scheme.nameDisplay}</span>
+          <span class="type" style="font-size:13px;line-height:20px;color:var(--fg2)">{showCoach ? `${scheme.coachName}, ` : ''}{scheme.teamDisplay} · {scheme.eraLabel}</span>
+        </span>
+      </a>
+      <ul class="sheets" aria-label={`Plays in ${scheme.nameDisplay}`}>
+        {scheme.plays.map((play) => (
+          <li><a href={play.href}><span class="type" style="font-size:12px;color:var(--fg2)">{play.sheet}</span> {play.nameDisplay}</a></li>
+        ))}
+      </ul>
+    </li>
+  ))}
+</ol>

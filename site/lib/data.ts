@@ -12,6 +12,8 @@ import type { Coach, Concept, Dataset, Lineage, Scheme, Term, Tracks } from '../
 import type { PlayerTrack } from '../../src/engine/types';
 import { fieldWindow, gapDistances, pairedCount, type FieldWindow, type LitePlay } from './field';
 import type { SchemeRow } from '../islands/SchemeTable';
+import type { PlayRow } from '../islands/PlayTable';
+import type { CoachRow } from '../islands/CoachTable';
 import { nameFromId, pad2, tidy } from './format';
 
 export const SITE = {
@@ -319,12 +321,8 @@ export interface Person {
   href?: string;
 }
 
-/** The page of the coach's first scheme, if the coach has one. */
-export function coachHref(coach: Coach): string | undefined {
-  const lib = library();
-  const schemeId = coach.schemeIds.find((id) => lib.schemeById.has(id));
-  return schemeId ? lib.schemeById.get(schemeId)!.href : undefined;
-}
+/** Every coach in the data has a page. */
+export const coachHref = (coach: Coach | string): string => `/coaches/${typeof coach === 'string' ? coach : coach.id}/`;
 
 function personOf(id: string): Person {
   const coach = library().coachById.get(id);
@@ -383,3 +381,118 @@ export { pad2 };
 /** Where the share images are published. They are drawn at build time by `og.ts`. */
 export const siteImagePath = '/og/default.png';
 export const playImagePath = (schemeId: string, conceptId: string): string => `/og/${schemeId}/${conceptId}.png`;
+
+const surnameOf = (name: string): string => name.trim().split(/\s+/).pop()!.toLowerCase();
+
+export interface CoachView extends Coach {
+  /** Position in the coaches list, 1 to 53, by surname. */
+  no: number;
+  href: string;
+  roleDisplay: string;
+  teamDisplay: string;
+  lineageName: string;
+  /** Schemes credited to the coach, in contents order. */
+  schemes: SchemeView[];
+  /** Other coaches' schemes the coach record links to (`schemeIds`): one they shaped, ran or passed on. */
+  linked: SchemeView[];
+  /** Eras of the coach's own schemes, or of the linked ones when there are none, in the usual era order. */
+  eras: Scheme['era'][];
+}
+
+let cachedCoaches: CoachView[] | undefined;
+
+/** Every coach, by surname, with the schemes they are credited with. */
+export function coachViews(): CoachView[] {
+  if (cachedCoaches) return cachedCoaches;
+  const lib = library();
+  const ordered = [...lib.dataset.coaches].sort((a, b) => surnameOf(a.name).localeCompare(surnameOf(b.name)) || a.name.localeCompare(b.name));
+  cachedCoaches = ordered.map((coach, index) => {
+    const schemes = lib.schemes.filter((scheme) => scheme.coachId === coach.id);
+    const linked = lib.schemes.filter((scheme) => scheme.coachId !== coach.id && coach.schemeIds.includes(scheme.id));
+    const eraSource = schemes.length > 0 ? schemes : linked;
+    return {
+      ...coach,
+      no: index + 1,
+      href: coachHref(coach),
+      roleDisplay: tidy(coach.role2026),
+      teamDisplay: tidy(coach.team),
+      lineageName: tidy(lib.lineageById.get(coach.lineage)?.name ?? nameFromId(coach.lineage)),
+      schemes,
+      linked,
+      eras: ERA_ORDER.filter((era) => eraSource.some((scheme) => scheme.era === era)),
+    };
+  });
+  return cachedCoaches;
+}
+
+/** One row per coach for the coaches list, with the text a search looks through. */
+export function coachRows(): CoachRow[] {
+  return coachViews().map((coach) => ({
+    id: coach.id,
+    no: pad2(coach.no),
+    name: coach.name,
+    role: coach.roleDisplay,
+    side: coach.side,
+    lineage: coach.lineage,
+    lineageName: coach.lineageName,
+    eras: coach.eras,
+    eraLabel: coach.eras.length > 0 ? coach.eras.map((era) => ERA_LABELS[era]).join(', ') : 'Lineage only',
+    href: coach.href,
+    hay: [coach.name, coach.role2026, coach.team, ...coach.keyConcepts, ...[...coach.schemes, ...coach.linked].map((scheme) => scheme.name)].join(' ').toLowerCase(),
+  }));
+}
+
+/** People named as a mentor or disciple who have no coach record, with the coaches who name them. */
+export function namedOnly(): Array<Person & { namedBy: CoachView[] }> {
+  const lib = library();
+  const named = new Map<string, Set<string>>();
+  for (const coach of lib.dataset.coaches) {
+    for (const id of [coach.mentorId, ...(coach.disciples ?? [])]) {
+      if (!id || lib.coachById.has(id)) continue;
+      if (!named.has(id)) named.set(id, new Set());
+      named.get(id)!.add(coach.id);
+    }
+  }
+  const views = new Map(coachViews().map((coach) => [coach.id, coach]));
+  return [...named.entries()]
+    .map(([id, by]) => ({ ...personOf(id), namedBy: [...by].map((coachId) => views.get(coachId)!).sort((a, b) => a.no - b.no) }))
+    .sort((a, b) => surnameOf(a.name).localeCompare(surnameOf(b.name)) || a.name.localeCompare(b.name));
+}
+
+/** The down a situation starts with ("3rd & 6, +42" is 3rd), or `other`. */
+export function downOf(situation: string): '1st' | '2nd' | '3rd' | '4th' | 'other' {
+  const match = /^(1st|2nd|3rd|4th)\b/i.exec(situation.trim());
+  return match ? (match[1].toLowerCase() as '1st' | '2nd' | '3rd' | '4th') : 'other';
+}
+
+/** The down and distance of a situation, without the field position and notes. */
+export const situationShort = (situation: string): string => tidy(situation.split(',')[0]!.trim());
+
+/** A personnel group without the explanation in brackets: "Okie/Bear Package (5 DL, 2 LB, 4 DB)" is "Okie/Bear Package". */
+export const personnelShort = (personnel: string): string => personnel.replace(/\s*\([^)]*\)/g, '').trim();
+
+/** One row per play for the plays list, in contents order, with the text a search looks through. */
+export function playRows(): PlayRow[] {
+  const lib = library();
+  return lib.schemes.flatMap((scheme) =>
+    scheme.plays.map((play) => ({
+      id: play.id,
+      key: `${pad2(scheme.no)}.${play.order}`,
+      name: play.nameDisplay,
+      href: play.href,
+      schemeName: scheme.nameDisplay,
+      schemeHref: scheme.href,
+      coach: scheme.coachName,
+      sheet: play.sheet,
+      side: scheme.side,
+      era: scheme.era,
+      down: downOf(play.situation),
+      situation: situationShort(play.situation),
+      personnel: personnelShort(play.personnel),
+      formation: tidy(play.formation),
+      hay: [play.name, scheme.name, scheme.coachName, scheme.team, play.formation, play.personnel, play.frontName, play.coverage, play.situation]
+        .join(' ')
+        .toLowerCase(),
+    })),
+  );
+}

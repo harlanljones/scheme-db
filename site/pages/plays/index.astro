@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import PlayTable from '../../islands/PlayTable';
+import { ERA_LABELS, ERA_ORDER, library, playRows } from '../../lib/data';
+
+const lib = library();
+const rows = playRows();
+const eras = ERA_ORDER.map((id) => ({ id, label: ERA_LABELS[id] }));
+---
+
+<Base
+  title="The plays"
+  description={`All ${lib.counts.plays} illustrative plays on SchemeDB in one list: search by play, formation, coverage or coach, and filter by side of the ball, era and down.`}
+>
+  <div class="wrap">
+    <nav aria-label="Breadcrumb" class="crumbs">
+      <a href="/">Cover</a>
+      <span class="sep"><span aria-hidden="true">/</span><span aria-current="page">Plays</span></span>
+    </nav>
+  </div>
+  <section class="wrap section" style="padding-top:8px;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:8px">
+      <p class="eyebrow">Index · Every play sheet</p>
+      <h1 class="page-title">The {lib.counts.plays} plays</h1>
+      <p class="body" style="font-size:18px;line-height:28px">
+        Every sheet from the <a href="/schemes/">{lib.counts.schemes} schemes</a> in one list. The number is the scheme’s place in the contents and the sheet, so 39.2 is the second sheet of scheme 39.
+      </p>
+    </div>
+    <PlayTable client:load rows={rows} eras={eras} />
+  </section>
+</Base>
