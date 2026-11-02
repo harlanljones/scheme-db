@@ -230,10 +230,10 @@ The library contains **180 hand-authored, mathematically validated plays** acros
 | Layer | Technology | Key Details |
 |---|---|---|
 | **Runtime & PM** | **Bun** | High-performance JS/TS runtime & dependency resolution |
-| **Bundler** | **Vite 8** (Rolldown engine) | Sub-100ms HMR and tree-shaken ESM builds |
+| **Site** | **Astro** with React islands | Static pages built from the JSON in `data/`; Vite 8 runs the tests |
 | **UI Framework** | **React 19** | Zero external component bloat; pure state & SVG primitives |
-| **Language** | **TypeScript 5.x** | Full type safety (`strict: true`) across 180 play data modules |
-| **Test Suite** | **Vitest** | 72 unit & integration tests sweeping whole-library validation & SEO |
+| **Language** | **TypeScript** | `strict: true`; every record in `data/` is parsed against a Zod schema |
+| **Test Suite** | **Vitest** | Engine, schema and validators, the site and the release build |
 | **Styling** | **Custom Dark Turf CSS** | High-contrast All-22 coaching terminal aesthetic |
 
 ---
@@ -252,21 +252,25 @@ cd scheme-db
 # Install dependencies with Bun
 bun install
 
-# Start development server
+# Start the site at http://localhost:4321
 bun run dev
 
-# Run Vitest test suite
-bun run test
+# Check every record in data/
+bun run data:validate
 
-# Typecheck & production build
-bun run build && bun run typecheck
+# Everything CI runs: data checks, tests, typecheck, build
+bun run check
 ```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please check out [CONTRIBUTING.md](CONTRIBUTING.md) for our coordinate standards, validation rules, and PR guide.
+The data is open, and so is the way in. Every scheme, play, coach and glossary term is a JSON file in [`data/`](data/), licensed CC BY 4.0.
+
+- **No code:** [suggest a play, report a mistake, or suggest a coach, scheme or term](https://github.com/harlanljones/scheme-db/issues/new/choose) with a form.
+- **Add or fix a record:** `bun run data:new concept --scheme <scheme> --id <play> --name "<Play name>"` writes a valid skeleton, `bun run data:validate` lists what is left to write, and `bun run check` is what CI runs. [CONTRIBUTING.md](CONTRIBUTING.md) walks through it, including how to label a play `reconstructed` and cite its sources.
+- **Change the site or the tools:** see "Working on the code" in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 

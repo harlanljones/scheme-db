@@ -4,20 +4,21 @@ NFL Scheme Visualizer: an interactive workstation that animates NFL offensive an
 on an SVG field with a scrub timeline, and pairs each play with timeline-anchored analysis of
 *why* it works. The platform covers 45 scheme families (25 offensive, 20 defensive — spanning modern NFL, historical NFL, and college football), 180 plays, 17 coaching trees, and 53 coach profiles.
 
-**Read `ROADMAP.md` before implementing anything.** It has the full tech stack, data model,
-engine function signatures, component breakdown, play library spec, and phased build sequence
-with per-phase acceptance criteria. This file is orientation only — don't duplicate ROADMAP
-content here or let the two drift; if they ever disagree, `ROADMAP.md` wins and this file should
-be fixed to match.
+**Read `CONTRIBUTING.md` and `data/README.md` before implementing anything.** `data/` is the
+source of truth: one JSON file per scheme, play, coach, lineage, formation and glossary term,
+validated by the Zod schemas in `src/schema/`. Design decisions for the Astro site are in
+`docs/redesign/DECISIONS.md`. `ROADMAP.md` is the original build plan for the previous single page
+app (the legacy code described below); it is history, not the current plan, and where it disagrees
+with the files above they win.
 
 ## Tooling — read carefully, this project's toolchain is not npm/webpack
 
 - **Runtime & package manager: Bun.** Use `bun install`, `bun add <pkg>`, `bun run <script>`.
   Never use `npm`, `yarn`, or `pnpm` in this repo — no `package-lock.json` or `yarn.lock` should
   ever appear; only `bun.lock` (or `bun.lockb`).
-- **Bundler/dev server: Vite 8 with the Rolldown engine** (Vite 8's default build — no separate
-  package to opt in). Scaffolded via `bun create vite@latest . --template react-ts`.
-  `bun run dev` / `bun run build` invoke it.
+- **Site: Astro with React islands** (`site/`, config in `astro.config.mjs`), run with Bun.
+  `bun run dev` / `bun run build` invoke it; pages read `data/` at build time. Vite still runs
+  Vitest, and `bun run dev:legacy` starts the frozen previous app.
 - **Test runner: Vitest**, run via `bun run test` (or `bunx vitest`) — not `bun test`, which is
   Bun's own unrelated built-in test runner and is not used for this project's tests.
 - **Always install the latest version of every package.** Use `bun add <pkg>` (or
@@ -25,37 +26,48 @@ be fixed to match.
   version numbers from other projects, memory, or older docs — check the registry/`bun outdated`
   if unsure. This applies to React, TypeScript, Vitest, and every other dependency.
 
-See `ROADMAP.md` §2 (Tech Stack) for the full rationale and what's deliberately excluded
-(no Redux/Zustand, no CSS framework in v1, no npm/webpack).
+No Redux/Zustand, no CSS framework in the legacy app, no npm/webpack.
 
 ## Repo layout
 
-- `src/engine/` — pure functions only (interpolation, playback clock, beat lookup, validation).
-  No React, no DOM. This is where the tests live.
-- `src/data/` — hand-authored play data (`.ts` files typed as `Play`), coaching profiles & tree lineages (`COACH_PROFILES`, `COACHING_TREES`), and shared formation constants.
-- `src/components/` — presentation only, driven entirely by engine output. No play-specific
-  logic lives here.
+- `data/` — **the dataset and the source of truth.** Add and edit plays, coaches, schemes,
+  lineages, formations and glossary terms here, as JSON. `bun run data:new` starts a record.
+- `src/schema/` — Zod schemas, loader, cross-record validators (`validate-dataset.ts`) and the
+  scaffold behind `data:new`. Change a schema, then run `bun run data:schema`.
+- `src/engine/` — pure functions only (interpolation, frames, disguise metric, hash marks,
+  playback clock, beat lookup, validation). No React, no DOM.
+- `src/spec/`, `src/release/`, `scripts/` — the optional play spec compiler, the JSON/CSV/SQLite
+  release build, and the command line tools.
+- `site/` — the Astro site: pages, components, React islands and `site/lib/data.ts`, which reads
+  `data/`. Copy that states a count or says "illustrative" is built from the data, never typed.
+- `src/data/`, `src/components/`, `src/App.tsx` — **frozen legacy**: the previous single page app
+  and its TypeScript copy of the library. Nothing reads `data/` through them. Do not add or edit
+  plays there.
 
 ## Hard conventions
 
 - Field coordinates are **yards, LOS-relative** (`x: 0…53.33`, `y` negative = backfield,
   positive = downfield) — never raw pixels. Conversion to screen space happens only inside
   `Field`/`PlayCanvas`.
-- Play data is authored as **`.ts` modules typed as `Play`**, never raw `.json` — the compiler
-  should catch a missing field or typo'd player id.
+- Play data is **JSON in `data/`**, parsed against the Zod schemas in `src/schema/schema.ts` and
+  checked across records by `src/schema/validate-dataset.ts` (every id resolves, 22 players,
+  strictly increasing times, a down at the start of `situation`, a source for anything not
+  `illustrative`, no `TODO:` left). Run `bun run data:validate`.
+- Tests must not break when a record is added. Assert floors and invariants from the data, never
+  an exact count of schemes, plays or coaches.
 - The engine (`src/engine/`) must not import React or touch the DOM.
-- Every play must pass `validatePlay`, and the whole library must pass `validateLibrary`
-  (`src/engine/validate.ts`) — run it in a test over the whole library before considering a new
-  play done.
 
 ## Commands
 
-- `bun run dev` — run the app
-- `bun run test` — Vitest (engine unit tests + whole-library validation sweep + coaching trees)
-- `bun run build && bunx tsc --noEmit` — production build + type-check (play data leans on the
-  type system, so a type error here likely signals an authoring mistake)
+- `bun run dev` — run the site
+- `bun run data:new <concept|scheme|coach|term>` — start a record; `bun run data:validate` — check `data/`
+- `bun run test` — Vitest (engine, schema and validators, site, release build)
+- `bun run check` — everything CI runs; run it before opening a pull request
 
 ## Status
+
+Everything below this line describes the previous single page app, which is frozen (see Repo
+layout). The live site is the Astro site in `site/`.
 
 Fully implemented and verified across all phases:
 - **45 Scheme Systems (180 Plays)**: 25 Offensive systems — the 15 modern-NFL systems (Shanahan Wide Zone, Kubiak Split Zone, Reid Spread-RPO, McVay Duo, McDaniel Speed Motion, Stefanski Multi-TE Gap, Steichen QB Mesh RPO, LaFleur Illusion, Sirianni Power RPO, Johnson Counter Deception, Payton Quick Game & Screens, Roman Power Read & QB Run, O'Connell Boot & Dagger, Coen Wide-Zone RPO, Kelly Tempo Spread) plus 10 historical/college systems (Air Coryell, Walsh Classic WCO, Run and Shoot, Flexbone Triple Option, Air Raid, Delaware Wing-T, T-Formation Power Sweep, Pistol Read-Option, Baylor Choice, Meyer Spread-Option). 20 Defensive systems — the 10 modern-NFL systems (Saleh 4-3 Wide-9, Macdonald Sim-Pressure, Flores Psycho Blitz, Fangio Two-High Shell, Minter Amoeba Creeper, Ryans Wide-9 Attack, Shula Match Quarters, Spagnuolo Exotic Blitz, Quinn Cover 3 Press, Bowles Creeper Blitz) plus 10 historical/college systems (Buddy Ryan 46, LeBeau Fire Zone, Tampa 2, Landry Flex, Phillips Two-Gap 3-4, Jimmy Johnson Speed 4-3, Belichick Okie/Bear Package, Aranda Tite/Peso, Rocky Long 3-3-5 Stack, Cover 2 Man-Under).

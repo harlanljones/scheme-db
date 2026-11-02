@@ -1,0 +1,41 @@
+name: Suggest a coach, scheme or term
+description: A coach, scheme or glossary term that is missing, including the people named as a mentor with no page yet.
+title: "Add: "
+labels: ["data"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is missing
+      options:
+        - A coach
+        - A scheme
+        - A glossary term
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Bill Parcells
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs, and where it fits
+      description: For a coach, who they worked under and who worked under them. For a scheme, whose it is, the team and the era. For a term, what it means and what a coach uses it for.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Where a reader can check it.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before you send
+      options:
+        - label: I am fine with this being published under CC BY 4.0, the data license.
+          required: true

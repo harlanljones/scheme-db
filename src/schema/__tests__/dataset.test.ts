@@ -171,6 +171,25 @@ describe('validateDataset', () => {
     expect(errorsOf(ds).join('\n')).not.toContain('relates to no other play');
   });
 
+  it('rejects text that is still a TODO placeholder from the scaffold', () => {
+    const ds = clone();
+    ds.concepts[0].summary.motive = 'TODO: say what the play is for';
+    ds.coaches[0].keyConcepts = ['TODO: name a concept'];
+    ds.tracks[0].offense[0].assignment = 'TODO: assignment';
+    const errors = errorsOf(ds).join('\n');
+    expect(errors).toContain(`Concept "${ds.concepts[0].id}": summary.motive is still a TODO placeholder`);
+    expect(errors).toContain(`Coach "${ds.coaches[0].id}": keyConcepts[0] is still a TODO placeholder`);
+    expect(errors).toContain(`Tracks "${ds.tracks[0].conceptId}": offense[0].assignment is still a TODO placeholder`);
+  });
+
+  it('requires a situation to start with the down', () => {
+    const ds = clone();
+    ds.concepts[0].situation = 'Two minute drill';
+    expect(errorsOf(ds).join('\n')).toContain('situation must start with the down');
+    ds.concepts[0].situation = '3rd & 6, +42, shot play';
+    expect(errorsOf(ds).join('\n')).not.toContain('situation must start with the down');
+  });
+
   it('flags a lineage that references an unknown coach', () => {
     const ds = clone();
     ds.lineages[0].rootNodes[0].coachId = 'nobody';

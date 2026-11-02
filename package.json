@@ -34,6 +34,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -b",
+    "data:new": "bun run scripts/new.ts",
     "data:validate": "bun run scripts/data.ts validate",
     "data:format": "bun run scripts/data.ts format",
     "data:schema": "bun run scripts/data.ts schema",
@@ -45,6 +46,7 @@
     "specs:compile": "bun run scripts/specs.ts compile",
     "specs:diff": "bun run scripts/specs.ts diff",
     "lint": "oxlint",
+    "check": "bun run data:validate && bun run data:format --check && bun run specs:check && bun run data:release --version ci && bun run test && bun run typecheck && bun run build && bun run site:check",
     "preview": "bun --bun astro preview",
     "preview:legacy": "vite preview",
     "deploy": "bun run build && wrangler deploy"

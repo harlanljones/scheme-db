@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Add it yourself
+    url: https://github.com/harlanljones/scheme-db/blob/main/CONTRIBUTING.md
+    about: Add or fix a play, coach, scheme or glossary term with a pull request. The guide walks through it.

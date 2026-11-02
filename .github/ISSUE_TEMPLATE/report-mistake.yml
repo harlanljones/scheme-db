@@ -1,0 +1,29 @@
+name: Report a mistake
+description: Something on the site or in the data is wrong, such as a play, a mentor link or a definition.
+title: "Mistake: "
+labels: ["correction"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page or record
+      description: The address of the page, or the file in data/.
+      placeholder: https://schemedb.harlanljones.com/coaches/andy-reid/
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: right
+    attributes:
+      label: What it should say
+      description: If you know. A fix to a play's movement is easiest to follow if you say which player and which moment.
+  - type: textarea
+    id: source
+    attributes:
+      label: How you know
+      description: A link, a book, a clinic, or the film and timestamp. A correction with a source is merged much faster.

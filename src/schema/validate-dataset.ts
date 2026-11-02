@@ -39,6 +39,19 @@ export const UNRECORDED_PEOPLE: ReadonlySet<string> = new Set([
   'paul-brown',
 ]);
 
+/** Text the scaffold writes where a contributor has to say something. `data:validate` fails until every one is replaced. */
+export const PLACEHOLDER = /^TODO\b/;
+
+function* placeholders(value: unknown, path = ''): Generator<string> {
+  if (typeof value === 'string') {
+    if (PLACEHOLDER.test(value)) yield path;
+  } else if (Array.isArray(value)) {
+    for (const [i, item] of value.entries()) yield* placeholders(item, `${path}[${i}]`);
+  } else if (value && typeof value === 'object') {
+    for (const [key, item] of Object.entries(value)) yield* placeholders(item, path ? `${path}.${key}` : key);
+  }
+}
+
 export interface ValidationReport {
   /** Violations that fail CI. */
   errors: string[];
@@ -65,6 +78,21 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     ['term', ds.glossary.map((t) => t.id)],
   ] as const) {
     for (const id of duplicates([...ids])) problems.push(`Duplicate ${kind} id "${id}"`);
+  }
+
+  for (const [label, records] of [
+    ['Scheme', ds.schemes],
+    ['Concept', ds.concepts],
+    ['Coach', ds.coaches],
+    ['Lineage', ds.lineages],
+    ['Term', ds.glossary],
+  ] as const) {
+    for (const record of records) {
+      for (const path of placeholders(record)) problems.push(`${label} "${record.id}": ${path} is still a TODO placeholder; replace it`);
+    }
+  }
+  for (const tracks of ds.tracks) {
+    for (const path of placeholders(tracks)) problems.push(`Tracks "${tracks.conceptId}": ${path} is still a TODO placeholder; replace it`);
   }
 
   const schemeIds = new Set(ds.schemes.map((s) => s.id));
@@ -103,6 +131,11 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
 
     if (concept.provenance.confidence !== 'illustrative' && concept.provenance.sources.length === 0) {
       problems.push(`Concept "${concept.id}" is "${concept.provenance.confidence}" but lists no sources`);
+    }
+
+    // The plays list filters by down, which it reads from the start of the situation.
+    if (!PLACEHOLDER.test(concept.situation) && !/^(1st|2nd|3rd|4th)\b/i.test(concept.situation.trim())) {
+      problems.push(`Concept "${concept.id}": situation must start with the down, like "1st & 10, +40, base down" (the plays list filters by it); found "${concept.situation}"`);
     }
 
     const sameScheme = ds.concepts.filter((c) => c.schemeId === concept.schemeId);
