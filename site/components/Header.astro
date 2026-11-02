@@ -1,15 +1,17 @@
 ---
 import Brand from './Brand.astro';
 import { NAV, activeKey } from '../lib/nav';
+import { trustNotice } from '../lib/data';
 
 const active = activeKey(Astro.url.pathname);
+const notice = trustNotice();
 ---
 
 <div class="notice">
   <div class="wrap">
     <p class="tag-n">Notice</p>
     <p>
-      <strong>All 180 plays are illustrative.</strong> They show how a scheme works, not what a team ran on one snap.{' '}
+      <strong>{notice.lead}</strong> {notice.rest}{' '}
       <a href="/about/#illustrative">What that means</a>
     </p>
   </div>

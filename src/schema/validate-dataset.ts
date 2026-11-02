@@ -19,6 +19,26 @@ function duplicates(ids: string[]): string[] {
   return [...dupes];
 }
 
+/**
+ * People named as a mentor or disciple who have no coach record yet. They are reported as warnings so the gap stays
+ * visible. Any other unknown id is an error: it is almost always a typo, or a link to a coach whose record still has
+ * to be added. Adding a record for one of these people makes its entry here harmless; remove it when convenient.
+ */
+export const UNRECORDED_PEOPLE: ReadonlySet<string> = new Set([
+  'bill-parcells',
+  'bobby-slowik',
+  'bruce-arians',
+  'dan-campbell',
+  'frank-reich',
+  'george-seifert',
+  'gus-bradley',
+  'jim-johnson',
+  'jim-mora',
+  'mike-holmgren',
+  'monte-kiffin',
+  'paul-brown',
+]);
+
 export interface ValidationReport {
   /** Violations that fail CI. */
   errors: string[];
@@ -29,8 +49,8 @@ export interface ValidationReport {
 /**
  * Cross-record checks that a per-file schema cannot express: unique ids, every reference
  * resolves, files live where their ids say, and every concept's geometry is valid.
- * Mentor and disciple ids that point at people without a coach profile are warnings, not
- * errors: the legacy library already contains nine of them (see data/README.md).
+ * Mentor and disciple ids that point at people without a coach profile are warnings only for the
+ * people listed in `UNRECORDED_PEOPLE` (see data/README.md); any other unknown id is an error.
  */
 export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationReport {
   const problems: string[] = [];
@@ -85,6 +105,16 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
       problems.push(`Concept "${concept.id}" is "${concept.provenance.confidence}" but lists no sources`);
     }
 
+    const sameScheme = ds.concepts.filter((c) => c.schemeId === concept.schemeId);
+    const linksWithinScheme = [...concept.relations.setsUp, ...concept.relations.playsOff].some(
+      (target) => target !== concept.id && sameScheme.some((c) => c.id === target),
+    );
+    if (sameScheme.length > 1 && !linksWithinScheme) {
+      problems.push(
+        `Concept "${concept.id}" relates to no other play in scheme "${concept.schemeId}"; list at least one of its plays in relations.setsUp or relations.playsOff (the site compares a play with the plays it relates to)`,
+      );
+    }
+
     const tracks = tracksByConcept.get(concept.id);
     if (!tracks) {
       problems.push(`Concept "${concept.id}" has no tracks record`);
@@ -120,11 +150,17 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     }
   }
 
-  for (const coach of ds.coaches) {
-    if (coach.mentorId && !coachIds.has(coach.mentorId)) warnings.push(`Coach "${coach.id}" mentor "${coach.mentorId}" has no coach record`);
-    for (const disciple of coach.disciples ?? []) {
-      if (!coachIds.has(disciple)) warnings.push(`Coach "${coach.id}" disciple "${disciple}" has no coach record`);
+  const unrecorded = (coachId: string, role: 'mentor' | 'disciple', person: string): void => {
+    if (coachIds.has(person)) return;
+    if (UNRECORDED_PEOPLE.has(person)) {
+      warnings.push(`Coach "${coachId}" ${role} "${person}" has no coach record`);
+    } else {
+      problems.push(`Coach "${coachId}" ${role} "${person}" has no coach record; add data/coaches/${person}.json or fix the id`);
     }
+  };
+  for (const coach of ds.coaches) {
+    if (coach.mentorId) unrecorded(coach.id, 'mentor', coach.mentorId);
+    for (const disciple of coach.disciples ?? []) unrecorded(coach.id, 'disciple', disciple);
     for (const schemeId of coach.schemeIds) {
       if (!schemeIds.has(schemeId)) problems.push(`Coach "${coach.id}" references unknown scheme "${schemeId}"`);
     }

@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PlayTable from '../../islands/PlayTable';
-import { ERA_LABELS, ERA_ORDER, library, playRows } from '../../lib/data';
+import { ERA_LABELS, ERA_ORDER, library, playRows, playsNoun } from '../../lib/data';
 
 const lib = library();
 const rows = playRows();
@@ -10,7 +10,7 @@ const eras = ERA_ORDER.map((id) => ({ id, label: ERA_LABELS[id] }));
 
 <Base
   title="The plays"
-  description={`All ${lib.counts.plays} illustrative plays on SchemeDB in one list: search by play, formation, coverage or coach, and filter by side of the ball, era and down.`}
+  description={`All ${lib.counts.plays} ${playsNoun()} on SchemeDB in one list: search by play, formation, coverage or coach, and filter by side of the ball, era and down.`}
 >
   <div class="wrap">
     <nav aria-label="Breadcrumb" class="crumbs">

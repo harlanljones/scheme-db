@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import NetworkGraph from '../../../components/NetworkGraph.astro';
 import SchemeList from '../../../components/SchemeList.astro';
-import { ERA_LABELS, SITE, coachViews, disciplesOf, library, mentorChain, type CoachView } from '../../../lib/data';
+import { ERA_LABELS, SITE, coachViews, disciplesOf, library, mentorChain, playsNoun, type CoachView } from '../../../lib/data';
 import { capitalize, count, plural, tidy } from '../../../lib/format';
 import { describeNetwork, egoNetwork, layoutNetwork, network } from '../../../lib/network';
 
@@ -27,7 +27,7 @@ const achievements = (coach.notableAchievements ?? []).map(tidy);
 const concepts = coach.keyConcepts.map(tidy);
 const description =
   schemeCount > 0
-    ? `${coach.name}, ${coach.roleDisplay}. ${coach.schemes.map((s) => s.nameDisplay).join(' and ')}, with ${count(schemeCount * 4)} illustrative plays, who they worked under and who worked under them.`
+    ? `${coach.name}, ${coach.roleDisplay}. ${coach.schemes.map((s) => s.nameDisplay).join(' and ')}, with ${count(coach.schemes.reduce((sum, s) => sum + s.plays.length, 0))} ${playsNoun()}, who they worked under and who worked under them.`
     : `${coach.name}, ${coach.roleDisplay}. Part of the ${coach.lineageName} on SchemeDB, with who they worked under and who worked under them.`;
 ---
 
