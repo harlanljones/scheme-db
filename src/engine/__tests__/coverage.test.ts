@@ -8,11 +8,10 @@ import {
   DEFAULT_COVERAGE_SCHEME,
 } from '../coverage';
 import { validateCoverageDefense } from '../validate';
-import { SHANAHAN_WIDE_ZONE_PLAYS } from '../../data/schemes/shanahan/index';
-import { KUBIAK_SPLIT_ZONE_PLAYS } from '../../data/schemes/kubiak/index';
-import { REID_SPREAD_RPO_PLAYS } from '../../data/schemes/reid/index';
+import { playsOfScheme } from './fixtures';
 
-const TEST_PLAYS = [...SHANAHAN_WIDE_ZONE_PLAYS, ...KUBIAK_SPLIT_ZONE_PLAYS, ...REID_SPREAD_RPO_PLAYS];
+const SHANAHAN_WIDE_ZONE_PLAYS = playsOfScheme('shanahan-wide-zone');
+const TEST_PLAYS = [...SHANAHAN_WIDE_ZONE_PLAYS, ...playsOfScheme('kubiak-split-zone'), ...playsOfScheme('reid-spread-rpo')];
 
 describe('COVERAGE_SCHEMES catalogue', () => {
   it('exposes a unique, well-formed set of coverage schemes', () => {

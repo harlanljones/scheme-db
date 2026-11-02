@@ -3,6 +3,7 @@ import Base from '../../../../layouts/Base.astro';
 import PlayViewer from '../../../../islands/PlayViewer';
 import PlayCompare from '../../../../islands/PlayCompare';
 import {
+  CONFIDENCE,
   DISGUISE_HOLD_PERCENT,
   DISGUISE_SECONDS,
   SITE,
@@ -12,6 +13,7 @@ import {
   litePlayById,
   playHref,
   playImagePath,
+  playPhrase,
   prevNext,
   recordPath,
   type PlayView,
@@ -86,13 +88,17 @@ const preview = {
 };
 const previewText = JSON.stringify(preview, null, 2).replace('"[ ...' + play.beats.length + ' beats ]"', `[ ...${play.beats.length} beats ]`);
 const fileBase = `${play.schemeId}/${play.id}`;
+const confidence = play.provenance.confidence;
+const sources = play.provenance.sources;
+// Illustrative sheets carry the site wide notice and nothing more; a sheet that claims more says what it rests on.
+const showSources = confidence !== 'illustrative' || sources.length > 0;
 ---
 
 <Base
   title={`${play.nameDisplay}, ${scheme.nameDisplay}`}
-  description={`${play.nameDisplay} from ${scheme.nameDisplay}: an illustrative play you can scrub a tenth of a second at a time, with coaching points${comparisons.length ? ' and a comparison with the plays it mirrors' : ''}.`}
+  description={`${play.nameDisplay} from ${scheme.nameDisplay}: ${playPhrase(confidence)} you can scrub a tenth of a second at a time, with coaching points${comparisons.length ? ' and a comparison with the plays it mirrors' : ''}.`}
   image={playImagePath(scheme.id, play.id)}
-  imageAlt={`${play.nameDisplay}: the players of an illustrative play 1.2 seconds after the snap. Offense is filled amber, defense is ringed blue.`}
+  imageAlt={`${play.nameDisplay}: the players of ${playPhrase(confidence)} 1.2 seconds after the snap. Offense is filled amber, defense is ringed blue.`}
 >
   <div class="wrap">
     <nav aria-label="Breadcrumb" class="crumbs">
@@ -106,7 +112,7 @@ const fileBase = `${play.schemeId}/${play.id}`;
   <section class="wrap" style="padding-top:8px;padding-bottom:28px">
     <div class="sheet">
       <div class="strip">
-        <p>Play sheet {play.order} of {total} · {scheme.nameDisplay}</p>
+        <p>Play sheet {play.order} of {total} · {scheme.nameDisplay}{confidence !== 'illustrative' ? ` · ${CONFIDENCE[confidence].label}` : ''}</p>
         <p>{fileBase}</p>
       </div>
       <div class="callhead">
@@ -144,6 +150,27 @@ const fileBase = `${play.schemeId}/${play.id}`;
       <div class="note"><p class="lab" style="color:var(--conft)">Failure mode</p><p>{play.summary.failureMode}</p></div>
     </div>
   </section>
+
+  {showSources && (
+    <section id="sources" class="wrap section" style="scroll-margin-top:16px">
+      <div class="divider">
+        <p class="eyebrow">Sources</p>
+        <h2>{CONFIDENCE[confidence].label}: what this sheet rests on</h2>
+        <p class="aside">Confidence: {confidence}</p>
+      </div>
+      <p class="body">{CONFIDENCE[confidence].meaning}{play.provenance.notes ? ` ${play.provenance.notes}` : ''}</p>
+      {sources.length > 0 && (
+        <div class="notes-grid">
+          {sources.map((source) => (
+            <div class="note">
+              <p class="lab">{source.type.replace('-', ' ')}{source.accessed ? ` · accessed ${source.accessed}` : ''}</p>
+              <p>{source.url ? <a href={source.url} rel="noopener" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px">{source.citation}</a> : source.citation}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+  )}
 
   {comparisons.length > 0 && (
     <section id="compare" class="wrap section" style="scroll-margin-top:16px">

@@ -1,0 +1,70 @@
+name: Suggest a play
+description: Propose a play for a scheme that is already on the site, or for a new one. No code needed.
+title: "Play: "
+labels: ["play"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. Fill in what you know; leave out what you do not. A maintainer or a contributor can draw the player paths from your description, or you can add the play yourself, see the [contributing guide](https://github.com/harlanljones/scheme-db/blob/main/CONTRIBUTING.md).
+  - type: input
+    id: scheme
+    attributes:
+      label: Scheme
+      description: Which scheme does the play belong to? Name one from the site, or say it is a new one and whose it is.
+      placeholder: Kyle Shanahan's Wide Zone Family
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name of the play
+      placeholder: Counter Trey
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What the play is for
+      description: What does it ask the defense, and which defender does it put in conflict?
+    validations:
+      required: true
+  - type: textarea
+    id: look
+    attributes:
+      label: How it lines up
+      description: Personnel, formation, and the front and coverage it is drawn against.
+      placeholder: "11 personnel, shotgun, trips right, against a 4-3 over front with Cover 3"
+  - type: textarea
+    id: movement
+    attributes:
+      label: Who goes where
+      description: Routes, blocks and drops, player by player or in a few lines. The first 1.2 seconds matter most.
+  - type: textarea
+    id: related
+    attributes:
+      label: Plays it looks like, or sets up
+      description: Name plays already on the site that it mirrors at the snap, or that it sets up.
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: How far should readers trust it?
+      options:
+        - Illustrative, I drew this to teach the idea
+        - Reconstructed, I rebuilt this from film, a book, a clinic or an article
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Required for a reconstructed play. Title, author or channel, date, a link, and a timestamp for film.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before you send
+      options:
+        - label: I am fine with this being published under CC BY 4.0, the data license.
+          required: true
+        - label: I did not copy player tracking data (for example from the NFL Big Data Bowl) or someone else's diagram.
+          required: true

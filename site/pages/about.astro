@@ -6,6 +6,7 @@ import {
   DISGUISE_SECONDS,
   FEATURED,
   SITE,
+  allIllustrative,
   comparisonsFor,
   library,
   playHref,
@@ -74,8 +75,12 @@ const contents = [
     <div class="text">
       <section id="illustrative">
         <div class="divider"><p class="eyebrow">Appendix A</p><h2>What illustrative means</h2></div>
-        <p class="body">All {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and none of them comes from tracking data. The data marks each one <span class="type" style="color:var(--fg)">illustrative</span>, with no sources yet.</p>
-        <p class="body">Read a play as a coach’s chalk drawing of the idea, not as film of a game. When plays gain sources, the record will say so.</p>
+        {allIllustrative(lib) ? (
+          <p class="body">All {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and none of them comes from tracking data. The data marks each one <span class="type" style="color:var(--fg)">illustrative</span>, with no sources yet.</p>
+        ) : (
+          <p class="body">{lib.confidence.illustrative} of the {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and the data marks each one <span class="type" style="color:var(--fg)">illustrative</span>. The other {counts.plays - lib.confidence.illustrative} are marked <span class="type" style="color:var(--fg)">reconstructed</span> or <span class="type" style="color:var(--fg)">verified</span>: they are rebuilt from the sources listed on their sheets, and a verified play was reviewed by a second person. None of them comes from tracking data.</p>
+        )}
+        <p class="body">Read an illustrative play as a coach’s chalk drawing of the idea, not as film of a game. {allIllustrative(lib) ? 'When plays gain sources, the record will say so.' : 'A play that cites sources says so on its sheet, and its record lists them.'}</p>
       </section>
 
       <section id="drawing">
@@ -170,7 +175,7 @@ const contents = [
 
       <section id="corrections">
         <div class="divider"><p class="eyebrow">Appendix G</p><h2>Corrections</h2></div>
-        <p class="body">Found a mistake? Open an issue at <a href={SITE.repo}>github.com/harlanljones/scheme-db</a>. SchemeDB is an independent project by Harlan Jones.</p>
+        <p class="body">Found a mistake? <a href={`${SITE.repo}/issues/new/choose`}>Open an issue</a> on <a href={SITE.repo}>github.com/harlanljones/scheme-db</a>; there is a form for corrections, and the <a href={`${SITE.repo}/blob/main/CONTRIBUTING.md`}>contributing guide</a> shows how to fix a record yourself. SchemeDB is an independent project by Harlan Jones.</p>
       </section>
     </div>
   </section>

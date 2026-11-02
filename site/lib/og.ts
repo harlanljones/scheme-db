@@ -12,7 +12,7 @@ import { Resvg } from '@resvg/resvg-js';
 import satori from 'satori';
 import { HASHES, ballX, spotOffset } from '../../src/engine/field';
 import { FIELD_WIDTH_YARDS, fieldWindow, pos, type LitePlay } from './field';
-import { FEATURED, SITE, library, litePlayById } from './data';
+import { FEATURED, SITE, library, litePlayById, playsNoun } from './data';
 
 export const OG_WIDTH = 1200;
 export const OG_HEIGHT = 630;
@@ -142,8 +142,8 @@ export async function siteImage(): Promise<Uint8Array> {
     card({
       eyebrow: 'SchemeDB · Free and open',
       title: 'The football scheme database',
-      sub: `${lib.counts.schemes} schemes and ${lib.counts.plays} illustrative plays, with the data to download.`,
-      foot: `Data ${SITE.dataLicense}. Every play is an illustration, not tracking data.`,
+      sub: `${lib.counts.schemes} schemes and ${lib.counts.plays} ${playsNoun()}, with the data to download.`,
+      foot: `Data ${SITE.dataLicense}. No play here is tracking data.`,
       play: litePlayById(FEATURED.conceptId),
     }),
   );

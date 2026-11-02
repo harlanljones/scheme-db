@@ -3,9 +3,10 @@ import * as path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { buildTables } from '../../../src/release/tables';
 import { fieldWindow, pos, type LitePlay } from '../field';
-import { capitalize, spell, tidy } from '../format';
+import { capitalize, nameFromId, spell, tidy } from '../format';
 import {
   FEATURED,
+  allIllustrative,
   coachRows,
   coachViews,
   comparisonsFor,
@@ -17,11 +18,16 @@ import {
   namedOnly,
   personnelShort,
   playHref,
+  playPhrase,
   playRows,
+  playsNoun,
+  playsPerSchemeWords,
   relatedPlays,
   schemePlayRows,
   schemeRows,
   situationShort,
+  trustNotice,
+  type Library,
 } from '../data';
 import { CSV_TABLES } from '../downloads';
 import { llmsFullTxt, llmsTxt, sitePaths, sitemapXml } from '../seo';
@@ -30,19 +36,39 @@ const lib = library();
 const play = (id: string): LitePlay => litePlay(lib.conceptById.get(id)!, lib.tracksById.get(id)!);
 
 describe('the library the pages read', () => {
-  it('counts what the home page says', () => {
-    expect(lib.counts).toEqual({ schemes: 45, plays: 180, coaches: 53, lineages: 17, terms: 30 });
+  it('counts what the home page says, and the library only grows from its launch size', () => {
+    const { dataset } = lib;
+    expect(lib.counts).toEqual({
+      schemes: dataset.schemes.length,
+      plays: dataset.concepts.length,
+      coaches: dataset.coaches.length,
+      lineages: dataset.lineages.length,
+      terms: dataset.glossary.length,
+    });
+    // Launch: 45 schemes, 180 plays, 53 coaches, 17 lineages, 30 terms. A drop means records went missing.
+    expect(lib.counts.schemes).toBeGreaterThanOrEqual(45);
+    expect(lib.counts.plays).toBeGreaterThanOrEqual(180);
+    expect(lib.counts.coaches).toBeGreaterThanOrEqual(53);
+    expect(lib.counts.lineages).toBeGreaterThanOrEqual(17);
+    expect(lib.counts.terms).toBeGreaterThanOrEqual(30);
   });
 
-  it('numbers the contents 1 to 45 in coach surname order', () => {
-    expect(lib.schemes.map((s) => s.no)).toEqual(Array.from({ length: 45 }, (_, i) => i + 1));
+  it('counts plays by confidence', () => {
+    const { illustrative, reconstructed, verified } = lib.confidence;
+    expect(illustrative + reconstructed + verified).toBe(lib.counts.plays);
+    expect(lib.playsPerScheme.min).toBeGreaterThanOrEqual(1);
+    expect(lib.playsPerScheme.max).toBeGreaterThanOrEqual(lib.playsPerScheme.min);
+  });
+
+  it('numbers the contents in coach surname order', () => {
+    expect(lib.schemes.map((s) => s.no)).toEqual(Array.from({ length: lib.counts.schemes }, (_, i) => i + 1));
     const surnames = lib.schemes.map((s) => s.coachName.split(' ').pop()!.toLowerCase());
     expect(surnames).toEqual([...surnames].sort((a, b) => a.localeCompare(b)));
   });
 
-  it('gives every scheme four plays with a page each', () => {
+  it('gives every scheme its plays in order from 1, with a page each', () => {
     for (const scheme of lib.schemes) {
-      expect(scheme.plays.map((p) => p.order)).toEqual([1, 2, 3, 4]);
+      expect(scheme.plays.map((p) => p.order)).toEqual(scheme.plays.map((_, i) => i + 1));
       for (const p of scheme.plays) expect(p.href).toBe(playHref(scheme.id, p.id));
     }
   });
@@ -78,7 +104,7 @@ describe('comparisons', () => {
     expect(pa.tell).toMatch(/Backside WR/);
   });
 
-  it('gives every one of the 180 plays at least one comparison inside its own scheme', () => {
+  it('gives every play at least one comparison inside its own scheme', () => {
     for (const concept of lib.dataset.concepts) {
       const related = relatedPlays(concept);
       expect(related.length, concept.id).toBeGreaterThan(0);
@@ -100,7 +126,7 @@ describe('comparisons', () => {
   it('gives each scheme page a reference sheet or a score for every row', () => {
     for (const scheme of lib.schemes) {
       const rows = schemePlayRows(scheme);
-      expect(rows).toHaveLength(4);
+      expect(rows).toHaveLength(scheme.plays.length);
       expect(rows.some((row) => row.referenceFor.length > 0), scheme.id).toBe(true);
     }
   });
@@ -134,7 +160,12 @@ describe('downloads and indexes', () => {
   });
 
   it('lists every page in the sitemap and every scheme in llms.txt', () => {
-    expect(sitePaths()).toHaveLength(8 + 45 + 180 + 53);
+    const paths = sitePaths();
+    const under = (pattern: RegExp): number => paths.filter((path) => pattern.test(path)).length;
+    expect(under(/^\/schemes\/[^/]+\/$/)).toBe(lib.counts.schemes);
+    expect(under(/^\/schemes\/[^/]+\/[^/]+\/$/)).toBe(lib.counts.plays);
+    expect(under(/^\/coaches\/[^/]+\/$/)).toBe(lib.counts.coaches);
+    expect(new Set(paths).size).toBe(paths.length);
     const xml = sitemapXml('2026-11-01');
     for (const path of sitePaths()) expect(xml).toContain(`<loc>https://schemedb.harlanljones.com${path}</loc>`);
     const text = llmsTxt();
@@ -147,6 +178,37 @@ describe('downloads and indexes', () => {
     const text = llmsFullTxt();
     for (const concept of lib.dataset.concepts) expect(text).toContain(`/schemes/${concept.schemeId}/${concept.id}/`);
     expect(text).toContain('Compared with sheet 4, Jet Motion Outside Zone Left: 68% alike on average');
+  });
+});
+
+describe('what the site says about trust', () => {
+  const withConfidence = (confidence: Library['confidence'], perScheme = lib.playsPerScheme): Library => ({ ...lib, confidence, playsPerScheme: perScheme });
+  const launch = withConfidence({ illustrative: lib.counts.plays, reconstructed: 0, verified: 0 });
+  const mixed = withConfidence({ illustrative: lib.counts.plays - 3, reconstructed: 2, verified: 1 });
+
+  it('says all plays are illustrative while they are', () => {
+    expect(allIllustrative(launch)).toBe(true);
+    expect(playsNoun(launch)).toBe('illustrative plays');
+    expect(trustNotice(launch).lead).toBe(`All ${lib.counts.plays} plays are illustrative.`);
+  });
+
+  it('counts the illustrative plays once others cite sources, and stops calling every play illustrative', () => {
+    expect(allIllustrative(mixed)).toBe(false);
+    expect(playsNoun(mixed)).toBe('plays');
+    const notice = trustNotice(mixed);
+    expect(notice.lead).toBe(`${lib.counts.plays - 3} of ${lib.counts.plays} plays are illustrative.`);
+    expect(notice.rest).toMatch(/cite their sources/);
+  });
+
+  it('names how many plays a scheme has only as far as the data supports', () => {
+    expect(playsPerSchemeWords(withConfidence(lib.confidence, { min: 4, max: 4 }))).toBe('four');
+    expect(playsPerSchemeWords(withConfidence(lib.confidence, { min: 4, max: 6 }))).toBe('four to six');
+  });
+
+  it('puts the right article before each confidence level', () => {
+    expect(playPhrase('illustrative')).toBe('an illustrative play');
+    expect(playPhrase('reconstructed')).toBe('a reconstructed play');
+    expect(playPhrase('verified')).toBe('a verified play');
   });
 });
 
@@ -186,8 +248,7 @@ describe('where each play stands on the field', () => {
     expect(play('t2-cloud-boundary').spot).toBe('left');
     expect(play('shula-boundary-creeper-drop7').spot).toBe('right');
     expect(play('outside-zone').spot).toBe('middle');
-    const named = lib.dataset.concepts.filter((c) => c.ballSpot).map((c) => c.id);
-    expect(named).toHaveLength(5);
+    for (const concept of lib.dataset.concepts.filter((c) => c.ballSpot)) expect(play(concept.id).spot, concept.id).toBe(concept.ballSpot);
   });
 
   it('scores the side the scheme belongs to', () => {
@@ -198,9 +259,9 @@ describe('where each play stands on the field', () => {
 describe('scheme search rows', () => {
   const rows = schemeRows();
   it('carries every play of every scheme with text a search can look through', () => {
-    expect(rows).toHaveLength(45);
+    expect(rows).toHaveLength(lib.counts.schemes);
     for (const row of rows) {
-      expect(row.plays, row.id).toHaveLength(4);
+      expect(row.plays, row.id).toHaveLength(lib.schemeById.get(row.id)!.plays.length);
       for (const p of row.plays) expect(p.hay, p.id).toBe(p.hay.toLowerCase());
     }
   });
@@ -213,18 +274,25 @@ describe('scheme search rows', () => {
 });
 
 describe('who worked under whom', () => {
-  it('follows mentor ids up the chain, oldest first, and ends at a person with no record', () => {
-    const chain = mentorChain('sean-mcvay');
-    expect(chain.map((p) => p.id)).toEqual(['george-seifert', 'mike-shanahan']);
-    // George Seifert has no coach record, so the chain ends with his name and no page.
-    expect(chain.map((p) => p.known)).toEqual([false, true]);
+  it('follows mentor ids up the chain, oldest first, and ends at a person with no record or no mentor', () => {
+    for (const coach of lib.dataset.coaches) {
+      const chain = mentorChain(coach.id);
+      expect(chain.length > 0, coach.id).toBe(!!coach.mentorId);
+      if (coach.mentorId) expect(chain.at(-1)!.id, coach.id).toBe(coach.mentorId);
+      expect(new Set(chain.map((p) => p.id)).size, coach.id).toBe(chain.length);
+      // Only the oldest person in a chain can lack a record, because a person with no record has no mentor to follow.
+      for (const person of chain.slice(1)) expect(person.known, `${coach.id} via ${person.id}`).toBe(true);
+    }
   });
 
   it('names people without a record from their id and gives them no page', () => {
-    const bowles = mentorChain('todd-bowles');
-    expect(bowles).toHaveLength(1);
-    expect(bowles[0]).toMatchObject({ id: 'bruce-arians', name: 'Bruce Arians', known: false });
-    expect(bowles[0]!.href).toBeUndefined();
+    // Empty once every mentor has a record, which is the goal.
+    const missing = lib.dataset.coaches.filter((c) => c.mentorId && !lib.coachById.has(c.mentorId));
+    for (const coach of missing) {
+      const oldest = mentorChain(coach.id)[0];
+      expect(oldest).toMatchObject({ id: coach.mentorId, name: nameFromId(coach.mentorId!), known: false });
+      expect(oldest.href).toBeUndefined();
+    }
   });
 
   it('links people who have a record to their coach page', () => {
@@ -233,22 +301,13 @@ describe('who worked under whom', () => {
     expect(harbaugh.known).toBe(true);
     expect(harbaugh.href).toBe('/coaches/john-harbaugh/');
   });
-
-  it('keeps the corrected mentors', () => {
-    expect(lib.coachById.get('andy-reid')!.mentorId).toBe('mike-holmgren');
-    expect(lib.coachById.get('mike-shanahan')!.mentorId).toBe('george-seifert');
-    expect(lib.coachById.get('ben-johnson')!.mentorId).toBe('dan-campbell');
-    expect(lib.coachById.get('steve-spagnuolo')!.mentorId).toBe('jim-johnson');
-    expect(lib.coachById.get('chris-shula')!.mentorId).toBeUndefined();
-    expect(lib.coachById.get('chip-kelly')!.mentorId).toBeUndefined();
-  });
 });
 
 describe('the plays list', () => {
   const rows = playRows();
   it('lists every play once, in contents order, linking to its page', () => {
-    expect(rows).toHaveLength(180);
-    expect(new Set(rows.map((r) => r.id)).size).toBe(180);
+    expect(rows).toHaveLength(lib.counts.plays);
+    expect(new Set(rows.map((r) => r.id)).size).toBe(lib.counts.plays);
     expect(rows.map((r) => r.key)).toEqual([...rows.map((r) => r.key)].sort());
     for (const row of rows) {
       const concept = lib.conceptById.get(row.id)!;
@@ -273,8 +332,8 @@ describe('the plays list', () => {
 describe('the coaches list', () => {
   const coaches = coachViews();
   it('gives every coach a page, numbered by surname', () => {
-    expect(coaches).toHaveLength(53);
-    expect(coaches.map((c) => c.no)).toEqual(Array.from({ length: 53 }, (_, i) => i + 1));
+    expect(coaches).toHaveLength(lib.counts.coaches);
+    expect(coaches.map((c) => c.no)).toEqual(Array.from({ length: lib.counts.coaches }, (_, i) => i + 1));
     for (const coach of coaches) expect(coach.href).toBe(`/coaches/${coach.id}/`);
   });
 
@@ -286,24 +345,23 @@ describe('the coaches list', () => {
       for (const scheme of coach.schemes) expect(scheme.coachId).toBe(coach.id);
       for (const scheme of coach.linked) expect(scheme.coachId).not.toBe(coach.id);
     }
-    const withNoScheme = coaches.filter((c) => c.schemes.length === 0 && c.linked.length === 0).map((c) => c.id);
-    expect(withNoScheme.sort()).toEqual(['dom-capers', 'lovie-smith']);
+    for (const coach of coaches.filter((c) => c.schemes.length === 0 && c.linked.length === 0)) {
+      expect(coachRows().find((r) => r.id === coach.id)?.eraLabel, coach.id).toBe('Lineage only');
+    }
     // Bill Walsh runs his own scheme and is linked to Kyle Shanahan's; his era comes from his own.
     const walsh = coaches.find((c) => c.id === 'bill-walsh')!;
     expect(walsh.schemes.map((s) => s.id)).toEqual(['walsh-classic-wco']);
     expect(walsh.linked.map((s) => s.id)).toEqual(['shanahan-wide-zone']);
     expect(walsh.eras).toEqual(['past-nfl']);
-    expect(coachRows().find((r) => r.id === 'lovie-smith')?.eraLabel).toBe('Lineage only');
   });
 
   it('names the people mentioned in coach records who have no record', () => {
+    // Empty once every named person has a record, which is the goal.
     const named = namedOnly();
-    expect(named.length).toBeGreaterThan(0);
     for (const person of named) {
       expect(person.known).toBe(false);
       expect(lib.coachById.has(person.id)).toBe(false);
       expect(person.namedBy.length).toBeGreaterThan(0);
     }
-    expect(named.map((p) => p.id)).toContain('george-seifert');
   });
 });

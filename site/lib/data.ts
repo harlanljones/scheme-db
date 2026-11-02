@@ -15,7 +15,7 @@ import { fieldWindow, gapDistances, pairedCount, type FieldWindow, type LitePlay
 import type { SchemeRow } from '../islands/SchemeTable';
 import type { PlayRow } from '../islands/PlayTable';
 import type { CoachRow } from '../islands/CoachTable';
-import { nameFromId, pad2, tidy } from './format';
+import { count, nameFromId, pad2, tidy } from './format';
 
 export const SITE = {
   url: 'https://schemedb.harlanljones.com',
@@ -85,6 +85,13 @@ export interface Comparison {
   tell: string;
 }
 
+/** How many plays sit at each confidence level. Everything the site says about trust is built from this. */
+export interface ConfidenceCounts {
+  illustrative: number;
+  reconstructed: number;
+  verified: number;
+}
+
 export interface Library {
   dataset: Dataset;
   schemes: SchemeView[];
@@ -94,6 +101,9 @@ export interface Library {
   coachById: Map<string, Coach>;
   lineageById: Map<string, Lineage>;
   counts: { schemes: number; plays: number; coaches: number; lineages: number; terms: number };
+  confidence: ConfidenceCounts;
+  /** The fewest and most plays any scheme has. Copy that names a number of plays per scheme reads these. */
+  playsPerScheme: { min: number; max: number };
 }
 
 let cached: Library | undefined;
@@ -142,6 +152,10 @@ export function library(): Library {
     };
   });
 
+  const confidence: ConfidenceCounts = { illustrative: 0, reconstructed: 0, verified: 0 };
+  for (const concept of dataset.concepts) confidence[concept.provenance.confidence] += 1;
+  const perScheme = schemes.map((scheme) => scheme.plays.length);
+
   cached = {
     dataset,
     schemes,
@@ -157,8 +171,48 @@ export function library(): Library {
       lineages: dataset.lineages.length,
       terms: dataset.glossary.length,
     },
+    confidence,
+    playsPerScheme: { min: Math.min(...perScheme), max: Math.max(...perScheme) },
   };
   return cached;
+}
+
+export type Confidence = Concept['provenance']['confidence'];
+
+/** What each confidence level is called on the site and what it promises. The definitions match data/README.md. */
+export const CONFIDENCE: Record<Confidence, { label: string; article: string; meaning: string }> = {
+  illustrative: { label: 'Illustrative', article: 'an', meaning: 'Drawn by hand to teach the idea. Not checked against film.' },
+  reconstructed: { label: 'Reconstructed', article: 'a', meaning: 'Rebuilt from the sources listed on the sheet. Not tracking data.' },
+  verified: { label: 'Verified', article: 'a', meaning: 'Reconstructed from the sources listed on the sheet, then reviewed by a second person.' },
+};
+
+/** "an illustrative play", "a reconstructed play". */
+export const playPhrase = (confidence: Confidence): string => `${CONFIDENCE[confidence].article} ${confidence} play`;
+
+/** True while every play is labeled `illustrative`, as at launch. The site says so loudly; once that stops being true it says what is. */
+export function allIllustrative(lib: Library = library()): boolean {
+  return lib.confidence.reconstructed === 0 && lib.confidence.verified === 0;
+}
+
+/** "illustrative plays" while every play is illustrative, plain "plays" once some are not. */
+export function playsNoun(lib: Library = library()): string {
+  return allIllustrative(lib) ? 'illustrative plays' : 'plays';
+}
+
+/** The sentence the notice bar and the footer carry. */
+export function trustNotice(lib: Library = library()): { lead: string; rest: string } {
+  const base = 'They show how a scheme works, not what a team ran on one snap.';
+  if (allIllustrative(lib)) return { lead: `All ${lib.counts.plays} plays are illustrative.`, rest: base };
+  return {
+    lead: `${lib.confidence.illustrative} of ${lib.counts.plays} plays are illustrative.`,
+    rest: `${base} The others cite their sources, and each play sheet says how far to trust it.`,
+  };
+}
+
+/** How many plays each scheme has, for copy: "four", or "four to six" when schemes differ. */
+export function playsPerSchemeWords(lib: Library = library()): string {
+  const { min, max } = lib.playsPerScheme;
+  return min === max ? count(min) : `${count(min)} to ${count(max)}`;
 }
 
 export const schemeHref = (schemeId: string): string => `/schemes/${schemeId}/`;

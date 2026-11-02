@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import HeroField from '../islands/HeroField';
 import SchemeTable from '../islands/SchemeTable';
 import { Field } from '../islands/Field';
-import { ERA_ORDER, ERA_LABELS, FEATURED, SITE, compare, litePlay, library, relatedPlays, playHref, schemeRows } from '../lib/data';
+import { ERA_ORDER, ERA_LABELS, FEATURED, SITE, allIllustrative, compare, litePlay, library, playsNoun, playsPerSchemeWords, relatedPlays, playHref, schemeRows } from '../lib/data';
 import { capitalize, count, list, sideAdjective, spell, tidy } from '../lib/format';
 import { fieldWindow } from '../lib/field';
 
@@ -37,14 +37,14 @@ const cells = [
 
 <Base
   title="SchemeDB, a free open database of football schemes"
-  description={`${counts.schemes} football schemes, drawn up as ${counts.plays} animated illustrative plays you can scrub a tenth of a second at a time. The data is free to download under ${SITE.dataLicense}.`}
+  description={`${counts.schemes} football schemes, drawn up as ${counts.plays} animated ${playsNoun()} you can scrub a tenth of a second at a time. The data is free to download under ${SITE.dataLicense}.`}
 >
   <section class="wrap cover">
     <div class="intro">
       <p class="eyebrow">Install binder · Football scheme strategy</p>
       <h1>{capitalize(spell(counts.schemes))} schemes, drawn&nbsp;up.</h1>
       <p class="lede">
-        SchemeDB is a free, open database of football scheme strategy. Each scheme is installed as four animated plays you can scrub a tenth of a second at a time, and each play is set beside the plays it mirrors to show how long they look the same after the snap. Every number can be downloaded.
+        SchemeDB is a free, open database of football scheme strategy. Each scheme is installed as {playsPerSchemeWords()} animated plays you can scrub a tenth of a second at a time, and each play is set beside the plays it mirrors to show how long they look the same after the snap. Every number can be downloaded.
       </p>
       <div class="actions">
         <a class="btn" href="#schemes">Explore the plays <span aria-hidden="true">→</span></a>
@@ -52,7 +52,7 @@ const cells = [
       </div>
       <dl class="type inventory">
         <div class="lead"><dt><a href="/schemes/">Schemes</a></dt><span class="dots" aria-hidden="true"></span><dd>{counts.schemes}</dd></div>
-        <div class="lead"><dt><a href="/plays/">Plays</a>, all illustrative</dt><span class="dots" aria-hidden="true"></span><dd>{counts.plays}</dd></div>
+        <div class="lead"><dt><a href="/plays/">Plays</a>{allIllustrative() ? ', all illustrative' : ''}</dt><span class="dots" aria-hidden="true"></span><dd>{counts.plays}</dd></div>
         <div class="lead"><dt><a href="/coaches/">Coaches</a></dt><span class="dots" aria-hidden="true"></span><dd>{counts.coaches}</dd></div>
         <div class="lead"><dt><a href="/lineages/">Coaching lineages</a></dt><span class="dots" aria-hidden="true"></span><dd>{counts.lineages}</dd></div>
       </dl>
@@ -82,10 +82,10 @@ const cells = [
     <div class="divider">
       <p class="eyebrow">Contents</p>
       <h2>The {counts.schemes} schemes</h2>
-      <p class="aside">Listed by coach. Four play sheets each.</p>
+      <p class="aside">Listed by coach. {capitalize(playsPerSchemeWords())} play sheets each.</p>
     </div>
     <SchemeTable client:load rows={rows} eras={eras} collapseAt={15} idPrefix="home" />
-    <p class="fine-print">A play is reached through its scheme. Open a row to see its four plays.</p>
+    <p class="fine-print">A play is reached through its scheme. Open a row to see its plays.</p>
   </section>
 
   <section id="disguise" class="wrap section">

@@ -2,7 +2,7 @@
  * Machine readable indexes of the site: sitemap.xml, llms.txt and llms-full.txt. All three are built from `data/`
  * at build time, so they list the same pages and say the same things as the site.
  */
-import { DISGUISE_HOLD_PERCENT, SITE, coachViews, comparisonsFor, library, playHref, type Library } from './data';
+import { DISGUISE_HOLD_PERCENT, SITE, allIllustrative, coachViews, comparisonsFor, library, playHref, type Library } from './data';
 import { tidy } from './format';
 import { glossaryRows } from './glossary';
 
@@ -33,7 +33,9 @@ export function sitemapXml(date: string, lib: Library = library()): string {
 
 const intro = (lib: Library): string =>
   `A free, open database of football scheme strategy: ${lib.counts.schemes} schemes, ${lib.counts.plays} plays, ${lib.counts.coaches} coaches and ${lib.counts.lineages} coaching lineages. ` +
-  `Every play is an illustration drawn by hand to show how a scheme works. None is a record of a snap or comes from tracking data. ` +
+  (allIllustrative(lib)
+    ? `Every play is an illustration drawn by hand to show how a scheme works. None is a record of a snap or comes from tracking data. `
+    : `Plays are drawn by hand to show how a scheme works, or rebuilt from the sources they cite; each play's page and record say which (confidence: illustrative, reconstructed or verified). None is a record of a snap or comes from tracking data. `) +
   `The data is ${SITE.dataLicense} (credit SchemeDB) and the code is ${SITE.codeLicense}.`;
 
 export function llmsTxt(lib: Library = library()): string {

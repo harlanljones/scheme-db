@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { formatFile } from '../format';
 import { DATA_DIR, loadDataset, RECORD_KIND_NAMES } from '../load';
 import { Coach, Concept, Formation, Lineage, Scheme, Term, Tracks, type Dataset } from '../schema';
-import { validateDataset } from '../validate-dataset';
+import { UNRECORDED_PEOPLE, validateDataset } from '../validate-dataset';
 
 const { dataset, files, problems } = loadDataset();
 
@@ -21,36 +21,17 @@ describe('data/ library', () => {
     expect(validateDataset(dataset, files).errors).toEqual([]);
   });
 
-  it('reports only the twelve known people who are referenced as mentors or disciples but have no coach record', () => {
-    const missing = new Set(
-      validateDataset(dataset, files)
-        .warnings.map((w) => /(?:mentor|disciple) "([^"]+)"/.exec(w)?.[1])
-        .filter(Boolean),
-    );
-    expect([...missing].sort()).toEqual([
-      'bill-parcells',
-      'bobby-slowik',
-      'bruce-arians',
-      'dan-campbell',
-      'frank-reich',
-      'george-seifert',
-      'gus-bradley',
-      'jim-johnson',
-      'jim-mora',
-      'mike-holmgren',
-      'monte-kiffin',
-      'paul-brown',
-    ]);
+  it('reports only listed people as mentors or disciples without a coach record, and nothing else as a warning about people', () => {
+    const missing = validateDataset(dataset, files)
+      .warnings.filter((w) => /(?:mentor|disciple) "/.test(w))
+      .map((w) => /(?:mentor|disciple) "([^"]+)"/.exec(w)![1]);
+    for (const id of missing) expect(UNRECORDED_PEOPLE.has(id), id).toBe(true);
   });
 
-  it('warns about the four concepts whose tracks start off their formation preset', () => {
-    const drift = validateDataset(dataset, files).warnings.filter((w) => w.includes('off formation'));
-    expect(drift.map((w) => /Concept "([^"]+)"/.exec(w)![1]).sort()).toEqual([
-      'macdonald-amoeba-cover0-peel',
-      'macdonald-split-field-trap',
-      'mcvay-glance-rpo-orbit',
-      'saleh-nascar-cover1-robber',
-    ]);
+  it('names a stray off-formation start in a warning, not an error', () => {
+    const report = validateDataset(dataset, files);
+    expect(report.errors).toEqual([]);
+    for (const warning of report.warnings.filter((w) => w.includes('off formation'))) expect(warning).toMatch(/^Concept "[^"]+" starts /);
   });
 
   it('keeps every data file in canonical formatting', () => {
@@ -158,6 +139,55 @@ describe('validateDataset', () => {
   it('rejects a formation with an alignment off the field', () => {
     const base = structuredClone(dataset.formations[0]);
     expect(Formation.safeParse({ ...base, offense: { ...base.offense, C: { x: 60, y: 0 } } }).success).toBe(false);
+  });
+
+  it('flags a mentor or disciple with no coach record unless the person is on the known list', () => {
+    const ds = clone();
+    const coach = ds.coaches.find((c) => c.mentorId)!;
+    coach.mentorId = 'kyle-shanhan';
+    expect(errorsOf(ds).join('\n')).toContain('mentor "kyle-shanhan" has no coach record');
+    coach.mentorId = [...UNRECORDED_PEOPLE][0];
+    expect(errorsOf(ds).join('\n')).not.toContain('has no coach record');
+    const typo = clone();
+    typo.coaches[0].disciples = [...(typo.coaches[0].disciples ?? []), 'nobody-here'];
+    expect(errorsOf(typo).join('\n')).toContain('disciple "nobody-here" has no coach record');
+  });
+
+  it('flags a play that relates to no other play in its scheme', () => {
+    const ds = clone();
+    const concept = ds.concepts.find((c) => ds.concepts.filter((o) => o.schemeId === c.schemeId).length > 1)!;
+    concept.relations.setsUp = [];
+    concept.relations.playsOff = [];
+    expect(errorsOf(ds).join('\n')).toContain(`Concept "${concept.id}" relates to no other play in scheme`);
+  });
+
+  it('lets a scheme with a single play stand without relations', () => {
+    const ds = clone();
+    const concept = ds.concepts[0];
+    ds.concepts = [concept, ...ds.concepts.filter((c) => c.schemeId !== concept.schemeId)];
+    concept.order = 1;
+    concept.relations.setsUp = [];
+    concept.relations.playsOff = [];
+    expect(errorsOf(ds).join('\n')).not.toContain('relates to no other play');
+  });
+
+  it('rejects text that is still a TODO placeholder from the scaffold', () => {
+    const ds = clone();
+    ds.concepts[0].summary.motive = 'TODO: say what the play is for';
+    ds.coaches[0].keyConcepts = ['TODO: name a concept'];
+    ds.tracks[0].offense[0].assignment = 'TODO: assignment';
+    const errors = errorsOf(ds).join('\n');
+    expect(errors).toContain(`Concept "${ds.concepts[0].id}": summary.motive is still a TODO placeholder`);
+    expect(errors).toContain(`Coach "${ds.coaches[0].id}": keyConcepts[0] is still a TODO placeholder`);
+    expect(errors).toContain(`Tracks "${ds.tracks[0].conceptId}": offense[0].assignment is still a TODO placeholder`);
+  });
+
+  it('requires a situation to start with the down', () => {
+    const ds = clone();
+    ds.concepts[0].situation = 'Two minute drill';
+    expect(errorsOf(ds).join('\n')).toContain('situation must start with the down');
+    ds.concepts[0].situation = '3rd & 6, +42, shot play';
+    expect(errorsOf(ds).join('\n')).not.toContain('situation must start with the down');
   });
 
   it('flags a lineage that references an unknown coach', () => {
