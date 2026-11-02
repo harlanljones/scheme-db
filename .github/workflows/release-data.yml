@@ -1,7 +1,9 @@
 name: Release data
 
 # Pushing a tag like data-v0.1.0 builds the dataset downloads and attaches them to a GitHub release.
+# A tag with a suffix, like data-v0.1.0-rc.1, makes a pre-release.
 # Run it by hand (Actions tab, "Release data") to build the same files as a downloadable workflow artifact without releasing.
+# The packaging steps also run in CI on every push (bun run data:package), so only the last step is new on a tag.
 on:
   push:
     tags: ['data-v*']
@@ -18,6 +20,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Name the version
+        id: version
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            if ! [[ "${GITHUB_REF_NAME}" =~ ^data-v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.]+)?$ ]]; then
+              echo "::error::Tag ${GITHUB_REF_NAME} must look like data-v1.2.3 or data-v1.2.3-rc.1."
+              exit 1
+            fi
+            version="${GITHUB_REF_NAME#data-}"
+            echo "name=${version}" >> "$GITHUB_OUTPUT"
+            if [[ "${version}" == *-* ]]; then
+              echo "prerelease=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "prerelease=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "name=dev-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -29,46 +51,41 @@ jobs:
       - name: Validate data records
         run: bun run data:validate
 
-      - name: Name the version
-        id: version
-        run: |
-          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
-            echo "name=${GITHUB_REF_NAME#data-}" >> "$GITHUB_OUTPUT"
-          else
-            echo "name=dev-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Build the downloads
-        run: bun run data:release --version "${{ steps.version.outputs.name }}"
+        env:
+          VERSION: ${{ steps.version.outputs.name }}
+        run: bun run data:release --version "$VERSION"
 
-      - name: Package the CSV tables
-        working-directory: dist/release
-        run: zip -r "scheme-db-${{ steps.version.outputs.name }}-csv.zip" csv LICENSE.md
+      - name: Package the release files
+        env:
+          VERSION: ${{ steps.version.outputs.name }}
+        run: |
+          bun run data:package --version "$VERSION"
+          cd dist/release-assets
+          sha256sum -c SHA256SUMS
 
       - name: Upload as a workflow artifact
         if: github.ref_type != 'tag'
         uses: actions/upload-artifact@v4
         with:
           name: scheme-db-${{ steps.version.outputs.name }}
-          path: |
-            dist/release/scheme-db.json
-            dist/release/scheme-db.sqlite
-            dist/release/*.zip
-            dist/release/SHA256SUMS
-            dist/release/LICENSE.md
+          path: dist/release-assets/*
+          if-no-files-found: error
 
       - name: Attach to the GitHub release
         if: github.ref_type == 'tag'
         env:
           GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.name }}
+          PRERELEASE: ${{ steps.version.outputs.prerelease }}
         run: |
-          cd dist/release
-          mv scheme-db.json "scheme-db-${{ steps.version.outputs.name }}.json"
-          mv scheme-db.sqlite "scheme-db-${{ steps.version.outputs.name }}.sqlite"
+          flags=()
+          if [ "$PRERELEASE" = "true" ]; then
+            flags+=(--prerelease)
+          fi
           gh release create "${GITHUB_REF_NAME}" \
-            --title "Scheme DB data ${{ steps.version.outputs.name }}" \
-            --notes "Dataset downloads (CC BY 4.0): one JSON file, a zip of CSV tables, and a SQLite database. All 180 plays are labeled illustrative. Checksums are in SHA256SUMS." \
-            "scheme-db-${{ steps.version.outputs.name }}.json" \
-            "scheme-db-${{ steps.version.outputs.name }}.sqlite" \
-            "scheme-db-${{ steps.version.outputs.name }}-csv.zip" \
-            SHA256SUMS LICENSE.md
+            --verify-tag \
+            --title "Scheme DB data $VERSION" \
+            --notes-file dist/release-notes.md \
+            "${flags[@]}" \
+            dist/release-assets/*
