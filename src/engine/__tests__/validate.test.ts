@@ -290,12 +290,21 @@ describe('validate engine', () => {
     expect(problems.some((p) => p.includes('Duplicate player id "LT"'))).toBe(true);
   });
 
-  it('fails if first waypoint is not t=0', () => {
+  it('fails if a track has no waypoint at the snap (t=0)', () => {
     const play = createValidPlay();
     play.offense[0].waypoints[0].t = 0.5;
 
     const problems = validatePlay(play);
-    expect(problems.some((p) => p.includes('first waypoint must have t === 0'))).toBe(true);
+    expect(problems.some((p) => p.includes('needs a waypoint at the snap'))).toBe(true);
+  });
+
+  it('allows waypoints before the snap, down to the pre-snap limit, as long as one sits at t=0', () => {
+    const play = createValidPlay();
+    play.offense[0].waypoints.unshift({ t: -1.5, x: 40, y: -1 });
+    expect(validatePlay(play)).toEqual([]);
+
+    play.offense[0].waypoints[0].t = -6.5;
+    expect(validatePlay(play).some((p) => p.includes('more than 6 s before the snap'))).toBe(true);
   });
 
   it('fails if waypoints are not in chronological ascending order', () => {

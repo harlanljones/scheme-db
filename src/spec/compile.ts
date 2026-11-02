@@ -1,10 +1,11 @@
+import { LIMITS } from '../engine/limits';
 import type { Formation, Tracks } from '../schema/schema';
 import type { Spec } from './schema';
 import { MAN_COVERAGE, PASS_SET, POCKET_GAP, QB_DROP, RECEIVER, RUSH, ZONE_TIMING } from './calibration';
 import { DEEP_ZONES, ROUTES, ZONE_SHAPES, type Point, type ZoneSide } from './vocabulary';
 
 /** Bump when a template changes in a way that moves compiled waypoints. Recorded in `generatedFrom`. */
-export const COMPILER_VERSION = '0.3.0';
+export const COMPILER_VERSION = '0.4.0';
 
 /** Seconds between compiled waypoints. Short enough that the viewer's spline keeps the corner of a route break. */
 export const STEP_SECONDS = 0.2;
@@ -34,12 +35,17 @@ function along(path: Point[], distance: number): Point {
   return path[path.length - 1];
 }
 
-/** A runner who starts from rest at `delay` seconds; `pace` scales the position's top speed (see calibration.ts). */
-const run = (path: Point[], delay: number, pace: number, role: Role): Motion => {
-  const top = (RECEIVER.topSpeed as Record<string, number>)[role] ?? RECEIVER.topSpeed.wr;
+/**
+ * A runner who starts at `delay` seconds; `pace` scales the position's top speed (see calibration.ts). He starts from rest
+ * unless `speed` is given, the speed he already has at the snap: a man in motion carries it into his route and settles
+ * toward his top speed from there.
+ */
+const run = (path: Point[], delay: number, pace: number, role: Role, speed = 0): Motion => {
+  const top = pace * ((RECEIVER.topSpeed as Record<string, number>)[role] ?? RECEIVER.topSpeed.wr);
   return (t) => {
     const u = Math.max(0, t - delay);
-    return along(path, pace * top * (u - RECEIVER.tau * (1 - Math.exp(-u / RECEIVER.tau))));
+    const settled = RECEIVER.tau * (1 - Math.exp(-u / RECEIVER.tau));
+    return along(path, top * (u - settled) + speed * settled);
   };
 };
 
@@ -179,6 +185,8 @@ export function compileSpec(spec: Spec, formation: Formation, specHash: string):
   const defenseJobs = jobsFor('defense', spec.defense, formation);
   const all = players(formation);
   const motions = new Map<string, Motion>();
+  /** Pre-snap motion by player: a straight run from `from` at `-seconds` to `to` at the snap. */
+  const motionLeadIns = new Map<string, { from: Point; to: Point; seconds: number }>();
   const times: number[] = [];
   for (let t = 0; t < spec.duration - 1e-9; t += STEP_SECONDS) times.push(round2(t));
   times.push(spec.duration);
@@ -190,7 +198,23 @@ export function compileSpec(spec: Spec, formation: Formation, specHash: string):
   for (const player of all.filter((p) => p.side === 'offense')) {
     const job = offenseJobs.get(player.id)!;
     const { start } = player;
-    if ('route' in job) {
+    if ('route' in job && job.motion) {
+      const { from, to, seconds } = job.motion;
+      if (player.role === 'ol' || player.role === 'qb') throw new Error(`offense: ${player.id}: only a receiver, tight end or back can be in motion`);
+      if (Math.hypot(from[0] - start.x, from[1] - start.y) > 0.05) {
+        throw new Error(`offense: ${player.id}: motion starts at [${from}] but the formation lines him up at [${start.x}, ${start.y}]`);
+      }
+      if (job.delay) throw new Error(`offense: ${player.id}: a player in motion cannot also wait after the snap (remove delay)`);
+      const speed = Math.hypot(to[0] - from[0], to[1] - from[1]) / seconds;
+      if (speed > LIMITS.speed.warn) {
+        throw new Error(`offense: ${player.id}: motion of ${round2(Math.hypot(to[0] - from[0], to[1] - from[1]))} yd in ${seconds} s is ${round2(speed)} yd/s, faster than a person runs (${LIMITS.speed.warn} yd/s); start it earlier or shorten it`);
+      }
+      // The route starts where the motion ends and carries the motion's speed, with no first-step delay.
+      const at = { x: to[0], y: to[1] };
+      const { path, pace } = routePath(job.route, at, job.depth, job.side, player.role);
+      motions.set(player.id, run(path, job.delay ?? 0, pace, player.role, speed));
+      motionLeadIns.set(player.id, { from: { x: from[0], y: from[1] }, to: at, seconds });
+    } else if ('route' in job) {
       const { path, pace } = routePath(job.route, start, job.depth, job.side, player.role);
       motions.set(player.id, run(path, RECEIVER.delay + (job.delay ?? 0), pace, player.role));
     } else if ('block' in job && job.block === 'check-release') {
@@ -247,10 +271,11 @@ export function compileSpec(spec: Spec, formation: Formation, specHash: string):
       });
     } else {
       const target = motions.get(job.man);
-      const targetStart = offenseStart(formation, job.man);
-      if (!target || !targetStart) throw new Error(`defense: ${player.id}: man target "${job.man}" is not an offensive player`);
+      if (!target || !offenseStart(formation, job.man)) throw new Error(`defense: ${player.id}: man target "${job.man}" is not an offensive player`);
       const lag = job.lag ?? MAN_COVERAGE.lag;
       const finish = MAN_COVERAGE.finish[job.technique ?? 'off'];
+      // The defender lines up where the formation puts him, so the gap is measured to the receiver where he is at the snap.
+      const targetStart = target(0);
       const gap = { x: start.x - targetStart.x, y: start.y - targetStart.y };
       motions.set(player.id, (t) => {
         const followed = target(Math.max(0, t - lag));
@@ -272,6 +297,8 @@ export function compileSpec(spec: Spec, formation: Formation, specHash: string):
       const p = motion(t);
       return { t, x: round2(clampX(p.x)), y: round2(p.y) };
     });
+    const lead = motionLeadIns.get(player.id);
+    if (lead) waypoints = [...motionWaypoints(lead), ...waypoints];
     const override = overrides[player.id];
     if (override) {
       const replaced = new Set(override.path.map((w) => w.t));
@@ -297,6 +324,24 @@ export function compileSpec(spec: Spec, formation: Formation, specHash: string):
     offense: all.filter((p) => p.side === 'offense').map(track),
     defense: all.filter((p) => p.side === 'defense').map(track),
   };
+}
+
+/**
+ * The waypoints of a pre-snap motion: from the player's alignment at `-seconds` to the snap, one every STEP_SECONDS
+ * counted back from the snap, so the spline sees equal spacing and the speed stays constant. The waypoint at the snap
+ * itself comes from the route.
+ */
+function motionWaypoints({ from, to, seconds }: { from: Point; to: Point; seconds: number }) {
+  const out = [];
+  const steps = Math.floor(seconds / STEP_SECONDS + 1e-9);
+  const start = round2(-seconds);
+  if (steps * STEP_SECONDS < seconds - 1e-9) out.push({ t: start, x: round2(clampX(from.x)), y: round2(from.y) });
+  for (let k = steps; k >= 1; k--) {
+    const t = round2(-k * STEP_SECONDS);
+    const u = -t / seconds;
+    out.push({ t, x: round2(clampX(to.x + (from.x - to.x) * u)), y: round2(to.y + (from.y - to.y) * u) });
+  }
+  return out;
 }
 
 function offenseStart(formation: Formation, id: string): Point | undefined {

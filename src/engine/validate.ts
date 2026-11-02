@@ -1,3 +1,4 @@
+import { PRESNAP_MAX_SECONDS, snapIndex } from './presnap';
 import type { Play, PlayerTrack } from './types';
 
 /**
@@ -46,8 +47,12 @@ export function validatePlay(play: Play): string[] {
       continue;
     }
 
-    if (track.waypoints[0].t !== 0) {
-      problems.push(`Player ${track.id} first waypoint must have t === 0, found t=${track.waypoints[0].t}`);
+    // Time before the snap is negative. Every track passes through the snap, so alignment checks and scores have a position to anchor on.
+    if (track.waypoints[0].t < -PRESNAP_MAX_SECONDS) {
+      problems.push(`Player ${track.id} first waypoint at t=${track.waypoints[0].t} is more than ${PRESNAP_MAX_SECONDS} s before the snap`);
+    }
+    if (snapIndex(track) === -1) {
+      problems.push(`Player ${track.id} needs a waypoint at the snap (t === 0)`);
     }
 
     for (let i = 0; i < track.waypoints.length; i++) {

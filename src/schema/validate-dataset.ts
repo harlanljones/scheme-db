@@ -1,4 +1,6 @@
 import { alignmentOverrides } from './formations';
+import { MOTION_ENFORCED } from '../engine/limits';
+import { motionFindings, type MotionFinding } from '../engine/motion';
 import { validatePlay } from '../engine/validate';
 import type { Play } from '../engine/types';
 import type { Concept, Dataset, Tracks } from './schema';
@@ -19,11 +21,21 @@ function duplicates(ids: string[]): string[] {
   return [...dupes];
 }
 
+export interface ConceptMotionFinding extends MotionFinding {
+  conceptId: string;
+}
+
 export interface ValidationReport {
   /** Violations that fail CI. */
   errors: string[];
   /** Known gaps that are reported but do not fail CI. */
   warnings: string[];
+  /**
+   * Movement a person cannot do or football does not allow (see `src/engine/motion.ts`). They are kept apart from
+   * `warnings` because there can be hundreds; `bun run speed:report` lists them. Findings at the error line also land in
+   * `errors` once `MOTION_ENFORCED` is on.
+   */
+  movement: ConceptMotionFinding[];
 }
 
 /**
@@ -35,6 +47,7 @@ export interface ValidationReport {
 export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationReport {
   const problems: string[] = [];
   const warnings: string[] = [];
+  const movement: ConceptMotionFinding[] = [];
 
   for (const [kind, ids] of [
     ['scheme', ds.schemes.map((s) => s.id)],
@@ -105,6 +118,10 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
       }
     }
     for (const problem of validatePlay(asPlay(concept, tracks))) problems.push(`Concept "${concept.id}": ${problem}`);
+    for (const finding of motionFindings(tracks)) {
+      movement.push({ ...finding, conceptId: concept.id });
+      if (MOTION_ENFORCED && finding.level === 'error') problems.push(`Concept "${concept.id}": ${finding.message}`);
+    }
   }
 
   for (const [schemeId, orders] of ordersByScheme) {
@@ -154,5 +171,5 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     ds.glossary.forEach((r, i) => expected('glossary', i, `glossary/${r.id}.json`));
   }
 
-  return { errors: problems, warnings };
+  return { errors: problems, warnings, movement };
 }
