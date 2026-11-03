@@ -8,6 +8,7 @@ import { loadDataset } from '../../src/schema/load';
 import { DISGUISE_HOLD_PERCENT, DISGUISE_WINDOW_FRAMES, summarizeDisguise } from '../../src/engine/disguise';
 import { levelOfEra } from '../../src/engine/field';
 import { FRAME_RATE_HZ } from '../../src/engine/frames';
+import { leadIn } from '../../src/engine/presnap';
 import type { Coach, Concept, Dataset, Lineage, Scheme, Term, Tracks } from '../../src/schema/schema';
 import type { PlayerTrack } from '../../src/engine/types';
 import { fieldWindow, gapDistances, pairedCount, type FieldWindow, type LitePlay } from './field';
@@ -15,6 +16,7 @@ import type { SchemeRow } from '../islands/SchemeTable';
 import type { PlayRow } from '../islands/PlayTable';
 import type { CoachRow } from '../islands/CoachTable';
 import { count, nameFromId, pad2, tidy } from './format';
+import { searchKey } from './search';
 
 export const SITE = {
   url: 'https://schemedb.harlanljones.com',
@@ -230,6 +232,7 @@ export function litePlay(concept: Concept, tracks: Tracks): LitePlay {
     id: concept.id,
     name: tidy(concept.name),
     duration: tracks.duration,
+    leadIn: leadIn([...tracks.offense, ...tracks.defense]),
     level: levelOfEra(scheme.era),
     spot: concept.ballSpot ?? 'middle',
     scored: scheme.side,
@@ -357,7 +360,7 @@ export function schemeRows(): SchemeRow[] {
       id: play.id,
       name: play.nameDisplay,
       sheet: play.sheet,
-      hay: `${play.name} ${play.formation} ${play.frontName} ${play.coverage} ${play.personnel}`.toLowerCase(),
+      hay: searchKey(`${play.name} ${play.formation} ${play.frontName} ${play.coverage} ${play.personnel}`),
     })),
   }));
 }
@@ -492,7 +495,7 @@ export function coachRows(): CoachRow[] {
     eras: coach.eras,
     eraLabel: coach.eras.length > 0 ? coach.eras.map((era) => ERA_LABELS[era]).join(', ') : 'Lineage only',
     href: coach.href,
-    hay: [coach.name, coach.role2026, coach.team, ...coach.keyConcepts, ...[...coach.schemes, ...coach.linked].map((scheme) => scheme.name)].join(' ').toLowerCase(),
+    hay: searchKey([coach.name, coach.role2026, coach.team, ...coach.keyConcepts, ...[...coach.schemes, ...coach.linked].map((scheme) => scheme.name)].join(' ')),
   }));
 }
 
@@ -544,9 +547,7 @@ export function playRows(): PlayRow[] {
       situation: situationShort(play.situation),
       personnel: personnelShort(play.personnel),
       formation: tidy(play.formation),
-      hay: [play.name, scheme.name, scheme.coachName, scheme.team, play.formation, play.personnel, play.frontName, play.coverage, play.situation]
-        .join(' ')
-        .toLowerCase(),
+      hay: searchKey([play.name, scheme.name, scheme.coachName, scheme.team, play.formation, play.personnel, play.frontName, play.coverage, play.situation].join(' ')),
     })),
   );
 }

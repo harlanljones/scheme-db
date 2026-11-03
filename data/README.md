@@ -33,6 +33,8 @@ Play specs in `specs/` compile to `tracks/` records, see [specs/README.md](../sp
 
 Coordinates are yards relative to the line of scrimmage: `x` runs 0 to 53.33 across the field, `y` is negative in the offensive backfield and positive downfield. Every play is drawn with the ball at `x = 26.67`, the middle of the field. A concept's optional `ballSpot` (`left`, `middle` or `right`) says where the ball really sits; add the offset in `src/engine/field.ts` to place the play on the field. NFL hash marks are 23.58 and 29.75 yards from the left sideline and college hash marks are 20 and 33.33. The release `concepts` table carries `ball_spot` and `ball_x`.
 
+Time in a track is `t`, in seconds from the snap: `t = 0` is the snap and a negative `t` is before it, down to `-6` (`PRESNAP_MAX_SECONDS` in `src/engine/presnap.ts`). A player who is already moving when the ball is snapped, such as a jet man, starts his track at a negative time, so he reaches the snap at the speed he really has. A track may start at the snap, as every track did before, but every track must have a waypoint at exactly `t = 0` and times must ascend. `duration` stays the seconds after the snap, and beats start at the snap (`t >= 0`). The lead in, how many seconds of play come before the snap, is derived from the earliest waypoint and never stored. The 1.2 s window behind the similarity scores is still the first 1.2 s after the snap.
+
 ## Working with the data
 
 ```
@@ -43,9 +45,37 @@ bun run data:format --check  fail if any record is not canonical (CI runs this)
 bun run data:schema          regenerate data/schema/*.schema.json
 bun run data:frames [file]   write the 10 Hz frames export as CSV (default dist/data/frames.csv)
 bun run data:release         build the JSON, CSV and SQLite downloads into dist/release (CI runs this)
+bun run speed:report         list every player drawn faster than a person runs, and every motion the rules do not allow
+bun run data:package         turn dist/release into the files of a GitHub release, in dist/release-assets (CI runs this too)
 ```
 
-The frames export has one row per player per tenth of a second: `conceptId, playerId, frame, t, x, y`. It uses the same spline interpolation as the viewer, so it is a resampling of the waypoints, not tracking data.
+The frames export has one row per player per tenth of a second: `conceptId, playerId, frame, t, x, y`. It uses the same spline interpolation as the viewer, so it is a resampling of the waypoints, not tracking data. Frame 0 is the snap. A play whose tracks start before the snap also has negative frames, `-n` to `-1`, for all 22 players, so `(conceptId, playerId, frame)` stays unique; filter `frame >= 0` for the frames a play without a lead in always had.
+
+### Movement checks
+
+`bun run data:validate` checks every track against numbers in `src/engine/limits.ts`. Past the error line it fails; between the warn and the error line it warns.
+
+| Check | Warn | Error |
+|---|---|---|
+| Speed over any tenth of a second | above 10.5 yd/s | above 12 yd/s |
+| Speed change over half a second | above 12 yd/s² | above 16 yd/s² |
+| More than one offensive player moving at the snap | | yes |
+| An offensive player moving toward the line of scrimmage at the snap | | yes |
+| A shift that ends less than a second before the snap | | yes |
+
+The thresholds are this project's own, set against the rounded constants in `src/spec/calibration.ts`, not measured on tracking data. `bun run speed:report` lists every finding with the segments to edit.
+
+A fast run needs an even pace on the viewer's curve, which gives each waypoint a speed from its neighbours without looking at their times. A short segment next to a long one is run too fast and the long one too slow, so a run at one speed wants waypoints a quarter second apart. `bun run retime <concept-id>` does the work for a player who is over a line: it slows the segments that are too fast, adds the in between waypoints, and prints what it would change (add `--write` to write it). `--player Z --lead-in` starts a player running before the snap: a set position, then a run that reaches the snap at speed. Read the beats after a write, since a later arrival can move them.
+
+### Play checks
+
+`data:validate` also fails a play whose text and tracks disagree (`src/schema/consistency.ts`):
+
+- No offensive player stands past the line of scrimmage at or before the snap, and seven stand on it (a player moving at the snap is in motion, not on the line).
+- A quarterback in the gun is at least 3.5 yd deep, a pistol quarterback is 3 to 5 yd deep, and one under center is no deeper than 2.5 yd. A back in the gun stands no more than 1.5 yd deeper than the quarterback.
+- The personnel (`11`, `21P Pony`) names the backs and tight ends the play draws, and a front that names its secondary (`4-2-5`) draws that many defensive backs.
+
+These checks skip a field that still starts with `TODO`, the placeholder a scaffolded play starts with.
 
 ## Downloads
 
@@ -67,7 +97,22 @@ GROUP BY s.id ORDER BY plays DESC;
 SELECT frame, t, x, y FROM frames WHERE concept_id = 'kelly-mesh-spacing-concept' AND player_id = 'H' AND frame <= 10;
 ```
 
-Pushing a tag such as `data-v0.1.0` runs `.github/workflows/release-data.yml`, which attaches the files to a GitHub release. Run that workflow by hand to get the same files as a workflow artifact without releasing.
+### Cutting a data release
+
+A data release is a Git tag named `data-vMAJOR.MINOR.PATCH`, for example `data-v0.1.0`. Tag a commit on `main`, after CI has passed on it:
+
+```bash
+git tag data-v0.1.0 && git push origin data-v0.1.0
+```
+
+That runs `.github/workflows/release-data.yml`, which validates the data, builds the downloads, packages them with `bun run data:package` and creates a **draft** GitHub release with these files (the CSV tables are zipped):
+
+- `scheme-db-v0.1.0.json`, `scheme-db-v0.1.0.sqlite`, `scheme-db-v0.1.0-csv.zip` and `LICENSE.md`
+- `SHA256SUMS`, which names those four files, so `sha256sum -c SHA256SUMS` works in the folder you download them to (macOS: `shasum -a 256 -c SHA256SUMS`)
+
+Nothing is public until you open the draft on the Releases page, look at the files and notes, and press Publish. The release notes are written from the data (counts, and whether the plays are illustrative), so they cannot go stale. A tag with a suffix, such as `data-v0.1.0-rc.1`, makes a pre-release. A tag that does not look like `data-v1.2.3` or `data-v1.2.3-rc.1` fails the workflow before anything is built. To redo a release, delete the draft (or release) and the tag, then push the tag again.
+
+To try the whole path without releasing, run the workflow by hand (Actions tab, "Release data"; it appears once the workflow is on `main`). It builds the same files and keeps them as a workflow artifact instead of releasing. `bun run data:release --version v0.1.0 && bun run data:package --version v0.1.0` does the same on your machine and needs the `zip` command.
 
 ## Where the launch data came from
 

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "sweep-power-sweep-left",
-  "duration": 4,
+  "duration": 4.2,
   "offense": [
     {
       "id": "LE",
@@ -11,7 +11,7 @@
       "trail": "block",
       "assignment": "Drive block the weakside end inside to create the sweep wall",
       "waypoints": [
-        { "t": 0, "x": 20.3, "y": 0.7, "note": "End alignment" },
+        { "t": 0, "x": 20.3, "y": -0.6, "note": "End alignment" },
         { "t": 0.6, "x": 21, "y": 0.9, "note": "Driving the end playside" },
         { "t": 1.6, "x": 22, "y": 1.4, "note": "Walling him toward the middle" },
         { "t": 2.8, "x": 22.8, "y": 1.8, "note": "Sealed inside" },
@@ -102,7 +102,7 @@
       "trail": "block",
       "assignment": "Reach the strongside end and turn him out to widen the sweep lane",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "End alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "End alignment" },
         { "t": 0.6, "x": 32.2, "y": 1, "note": "Attacking the end's outside shoulder" },
         { "t": 1.5, "x": 30.8, "y": 1.6, "note": "Hooking and turning him out" },
         { "t": 2.8, "x": 29.5, "y": 2.2, "note": "Edge widened for the lane" },
@@ -166,7 +166,7 @@
       "trail": "block",
       "assignment": "Stalk the field corner — the downfield escort that springs long runs",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 46.5, "y": 1.8, "note": "Working across the formation low" },
         { "t": 2, "x": 36, "y": 3, "note": "Cross-country stalk track" },
         { "t": 3, "x": 27, "y": 5, "note": "Engaging the pursuit angle" },
@@ -303,10 +303,23 @@
       "assignment": "Run support away from the play — stalked by the flanker",
       "waypoints": [
         { "t": 0, "x": 48.3, "y": 7, "note": "Field corner alignment" },
+        { "t": 0.24, "x": 47.94, "y": 6.7 },
+        { "t": 0.48, "x": 47.58, "y": 6.4 },
+        { "t": 0.72, "x": 47.22, "y": 6.1 },
+        { "t": 0.96, "x": 46.86, "y": 5.8 },
         { "t": 1.2, "x": 46.5, "y": 5.5, "note": "Wrong-way run read briefly" },
+        { "t": 1.43, "x": 45.42, "y": 5.67 },
+        { "t": 1.67, "x": 44.33, "y": 5.83 },
+        { "t": 1.9, "x": 43.25, "y": 6 },
+        { "t": 2.13, "x": 42.17, "y": 6.17 },
+        { "t": 2.37, "x": 41.08, "y": 6.33 },
         { "t": 2.6, "x": 40, "y": 6.5, "note": "Breaking across to pursue" },
+        { "t": 2.85, "x": 38.25, "y": 6.63 },
+        { "t": 3.1, "x": 36.5, "y": 6.75 },
+        { "t": 3.35, "x": 34.75, "y": 6.88 },
         { "t": 3.6, "x": 33, "y": 7, "note": "Stalked by the flanker" },
-        { "t": 4, "x": 28, "y": 7.5, "note": "Escort-blocked out of pursuit" }
+        { "t": 3.9, "x": 30.5, "y": 7.25 },
+        { "t": 4.2, "x": 28, "y": 7.5, "note": "Escort-blocked out of pursuit" }
       ]
     },
     {

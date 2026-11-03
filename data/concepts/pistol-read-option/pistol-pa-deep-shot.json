@@ -8,7 +8,7 @@
   "formation": "Pistol Right Slot, TE Right",
   "situation": "1st & 10, +40, off run tendency",
   "coverage": "Cover 1 Robber",
-  "frontName": "Nickel 4-2-5",
+  "frontName": "4-3 front with a nickel",
   "summary": {
     "motive": "Weaponize the pistol run identity to vacate the deep middle, then attack it with a post shot off a half-roll.",
     "keyDefender": "Free Safety (middle-third defender)",
@@ -29,7 +29,7 @@
       "focus": ["SS", "MIKE", "F"]
     },
     {
-      "t": 2.4,
+      "t": 2.55,
       "title": "3. Roll-Out Flood Builds",
       "text": "The quarterback half-rolls off the fake as the flood develops: the crosser drags the free safety's eyes while the tight end releases late into the hole.",
       "focus": ["QB", "H", "FS"]

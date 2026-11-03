@@ -17,25 +17,25 @@
   },
   "beats": [
     {
-      "t": 0.8,
+      "t": 0.9,
       "title": "1. The Pre-Snap Slot Isolation & Stem",
       "text": "From 2x2 spread, slot receiver H (DeVonta Smith) stems directly at the inside shoulder of the Star nickelback, forcing the defender to honor an inside route.",
       "focus": ["H", "STAR", "QB"]
     },
     {
-      "t": 1.6,
+      "t": 1.8,
       "title": "2. The Rub & Out-Route Pin",
       "text": "Outside receiver X snaps on a 5-yard quick out to the boundary, occupying the left CB and clearing out the entire deep sideline corridor.",
       "focus": ["X", "LCB", "H"]
     },
     {
-      "t": 2.4,
+      "t": 2.7,
       "title": "3. The High-Arcing Fade Release",
       "text": "H bursts outside off his inside stem, stacking the nickelback along the boundary. QB drops a perfect high-trajectory rainbow toward the front pylon.",
       "focus": ["QB", "H", "STAR"]
     },
     {
-      "t": 3.5,
+      "t": 3.8,
       "title": "4. Toe-Tap Touchdown in the Corner",
       "text": "H extends over his outside shoulder, snatches the ball over the trailing defender, and drags both feet cleanly in the back corner of the end zone for a 24-yard score.",
       "focus": ["H", "STAR"]

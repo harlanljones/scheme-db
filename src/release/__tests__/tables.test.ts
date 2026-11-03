@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { loadDataset } from '../../schema/load';
-import { frameCount } from '../../engine/frames';
+import { frameCount, leadInFrames } from '../../engine/frames';
+import { leadIn } from '../../engine/presnap';
 import { buildTables, createStatement, tableToCsv } from '../tables';
 
 const { dataset } = loadDataset();
@@ -21,7 +22,7 @@ describe('release tables', () => {
     const players = dataset.tracks.flatMap((t) => [...t.offense, ...t.defense]);
     expect(table('players').rows).toHaveLength(players.length);
     expect(table('waypoints').rows).toHaveLength(players.reduce((n, p) => n + p.waypoints.length, 0));
-    expect(table('frames').rows).toHaveLength(dataset.tracks.reduce((n, t) => n + 22 * frameCount(t.duration), 0));
+    expect(table('frames').rows).toHaveLength(dataset.tracks.reduce((n, t) => n + 22 * (leadInFrames(leadIn([...t.offense, ...t.defense])) + frameCount(t.duration)), 0));
   });
 
   it('gives every row exactly as many cells as the table has columns', () => {
@@ -99,5 +100,20 @@ describe('release tables', () => {
     // A college scheme is spotted against the college hash marks.
     const college = dataset.concepts.find((c) => c.ballSpot && dataset.schemes.find((s) => s.id === c.schemeId)?.era.endsWith('college'));
     if (college) expect([20, 33.33]).toContain(row(college.id)[col('ball_x')]);
+  });
+
+  it('records how many seconds a play runs before the snap, and numbers the frames before it from the snap', () => {
+    const concepts = table('concepts');
+    const col = (name: string) => concepts.columns.findIndex((c) => c.name === name);
+    expect(concepts.columns[col('duration') + 1].name).toBe('lead_in');
+    const leadIns = new Map(concepts.rows.map((r) => [r[col('id')] as string, r[col('lead_in')] as number]));
+    expect(leadIns.size).toBe(dataset.concepts.length);
+    const frames = table('frames');
+    const fcol = (name: string) => frames.columns.findIndex((c) => c.name === name);
+    const earliest = new Map<string, number>();
+    for (const r of frames.rows) earliest.set(r[fcol('concept_id')] as string, Math.min(earliest.get(r[fcol('concept_id')] as string) ?? 0, r[fcol('frame')] as number));
+    for (const [id, leadIn] of leadIns) expect(earliest.get(id) ?? 0, id).toBe(-Math.ceil(leadIn * 10 - 1e-9) + 0);
+    const meta = Object.fromEntries(table('meta').rows.map((r) => [r[0], r[1]]));
+    expect(String(meta.time)).toContain('negative value is before it');
   });
 });

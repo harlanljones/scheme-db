@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "mcvay-pa-deep-crosser",
-  "duration": 4.5,
+  "duration": 5.3,
   "offense": [
     {
       "id": "C",
@@ -133,11 +133,27 @@
       "assignment": "Condensed backside split, vertical stem to 12 yards, break across field on 18-20 yard Deep Over / Crosser",
       "waypoints": [
         { "t": 0, "x": 10, "y": -0.5, "note": "Inside stem off line" },
+        { "t": 0.24, "x": 10.5, "y": 0.8 },
+        { "t": 0.48, "x": 11, "y": 2.1 },
+        { "t": 0.72, "x": 11.5, "y": 3.4 },
+        { "t": 0.96, "x": 12, "y": 4.7 },
         { "t": 1.2, "x": 12.5, "y": 6, "note": "Attack boundary CB leverage" },
+        { "t": 1.45, "x": 13.38, "y": 8 },
+        { "t": 1.7, "x": 14.25, "y": 10 },
+        { "t": 1.95, "x": 15.13, "y": 12 },
         { "t": 2.2, "x": 16, "y": 14, "note": "Bend across field at 14 yards depth" },
-        { "t": 3, "x": 25, "y": 18, "note": "Enter huge void behind linebackers" },
-        { "t": 3.6, "x": 32, "y": 19.5, "note": "Catch pass in stride at 20 yards depth" },
-        { "t": 4.5, "x": 42, "y": 24, "note": "Sprint to end zone for explosive TD" }
+        { "t": 2.46, "x": 18.25, "y": 15 },
+        { "t": 2.73, "x": 20.5, "y": 16 },
+        { "t": 2.99, "x": 22.75, "y": 17 },
+        { "t": 3.25, "x": 25, "y": 18, "note": "Enter huge void behind linebackers" },
+        { "t": 3.52, "x": 27.33, "y": 18.5 },
+        { "t": 3.78, "x": 29.67, "y": 19 },
+        { "t": 4.05, "x": 32, "y": 19.5, "note": "Catch pass in stride at 20 yards depth" },
+        { "t": 4.29, "x": 34, "y": 20.4 },
+        { "t": 4.53, "x": 36, "y": 21.3 },
+        { "t": 4.77, "x": 38, "y": 22.2 },
+        { "t": 5.01, "x": 40, "y": 23.1 },
+        { "t": 5.25, "x": 42, "y": 24, "note": "Sprint to end zone for explosive TD" }
       ]
     },
     {

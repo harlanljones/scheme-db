@@ -95,7 +95,7 @@
       "trail": "route",
       "assignment": "Clear out deep half strong on the sideline",
       "waypoints": [
-        { "t": 0, "x": 46.5, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 46.6, "y": 3, "note": "Push vertical" },
         { "t": 2.4, "x": 46.2, "y": 10, "note": "Holding RCB deep" },
         { "t": 4, "x": 45.8, "y": 15, "note": "Clearing route complete" }
@@ -109,7 +109,7 @@
       "trail": "route",
       "assignment": "Take the top off the weak half",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 5.6, "y": 3, "note": "Stem vertical" },
         { "t": 2.4, "x": 5.4, "y": 10, "note": "LCB sinks underneath-first" },
         { "t": 4, "x": 5.2, "y": 14.5, "note": "No ball ever coming" }
@@ -123,7 +123,7 @@
       "trail": "route",
       "assignment": "Designed seam between the corner half and the middle",
       "waypoints": [
-        { "t": 0, "x": 14.5, "y": 1.2, "note": "Slot alignment" },
+        { "t": 0, "x": 14.5, "y": -0.5, "note": "Slot alignment" },
         { "t": 0.8, "x": 14.8, "y": 2.5, "note": "Inside release vs leverage" },
         { "t": 2, "x": 17.5, "y": 8.5, "note": "Climbing the seam landmark" },
         { "t": 3, "x": 19.5, "y": 12, "note": "Ball arrives into the void" },
@@ -138,11 +138,11 @@
       "trail": "drop",
       "assignment": "Five-step drop reading seam vs half, locks onto H",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.9, "x": 26.67, "y": -3.2, "note": "Five-step hitch depth" },
-        { "t": 1.8, "x": 27.2, "y": -3.6, "note": "Eyes locked on H seam window" },
-        { "t": 2.6, "x": 26.8, "y": -3.8, "note": "Throw into the middle void" },
-        { "t": 4, "x": 26.6, "y": -4, "note": "Watches Mike arrive under it" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -5.7, "note": "Five-step hitch depth" },
+        { "t": 1.8, "x": 27.2, "y": -5.9, "note": "Eyes locked on H seam window" },
+        { "t": 2.6, "x": 26.8, "y": -6, "note": "Throw into the middle void" },
+        { "t": 4, "x": 26.6, "y": -6.1, "note": "Watches Mike arrive under it" }
       ]
     },
     {
@@ -153,8 +153,8 @@
       "trail": "block",
       "assignment": "Check-release flat weak on the seam read",
       "waypoints": [
-        { "t": 0, "x": 22.8, "y": -3, "note": "Offset alignment" },
-        { "t": 1, "x": 22, "y": -1, "note": "Scan for pressure first" },
+        { "t": 0, "x": 22.8, "y": -5, "note": "Offset alignment" },
+        { "t": 1, "x": 22, "y": -1.7, "note": "Scan for pressure first" },
         { "t": 2.4, "x": 18.5, "y": 1.5, "note": "Release flat late" },
         { "t": 4, "x": 16, "y": 2.5, "note": "Never looked at by QB" }
       ]

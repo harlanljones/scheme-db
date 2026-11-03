@@ -25,13 +25,13 @@
       "focus": ["H", "Y", "Z", "X", "RB"]
     },
     {
-      "t": 1,
+      "t": 1.2,
       "title": "The Mesh Release & Initial Route Stems",
       "text": "H and Y release on crossing paths at 5 and 6 yards depth, aiming for an arm-to-arm high-five rub. RB releases on a rapid rail route to widen the boundary Will linebacker.",
       "focus": ["H", "Y", "RB", "WILL"]
     },
     {
-      "t": 1.8,
+      "t": 2.25,
       "title": "Underneath Rub Conflict on Mike & Nickel",
       "text": "As H crosses underneath Y, the Nickel defender is impeded by the crossing body. The Mike is frozen in space, unable to pass off or mirror H through the collision traffic.",
       "focus": ["H", "Y", "NICKEL", "MIKE"]

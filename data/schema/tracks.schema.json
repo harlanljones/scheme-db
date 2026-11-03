@@ -93,7 +93,7 @@
               "properties": {
                 "t": {
                   "type": "number",
-                  "minimum": 0
+                  "minimum": -6
                 },
                 "x": {
                   "type": "number"
@@ -188,7 +188,7 @@
               "properties": {
                 "t": {
                   "type": "number",
-                  "minimum": 0
+                  "minimum": -6
                 },
                 "x": {
                   "type": "number"

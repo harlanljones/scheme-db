@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "steichen-verticals-switch",
-  "duration": 4.5,
+  "duration": 4.9,
   "offense": [
     {
       "id": "C",
@@ -102,11 +102,24 @@
       "assignment": "Switch-Wheel vertical: stem inside for 5 yards, then wheel-switch outside Z stem and blow past confused safety for a 35-yard TD",
       "waypoints": [
         { "t": 0, "x": 37, "y": -0.8, "note": "Stem inside at snap" },
+        { "t": 0.27, "x": 37.67, "y": 0.97 },
+        { "t": 0.53, "x": 38.33, "y": 2.73 },
         { "t": 0.8, "x": 39, "y": 4.5, "note": "Sell inside seam cross" },
+        { "t": 1.07, "x": 40.17, "y": 6 },
+        { "t": 1.33, "x": 41.33, "y": 7.5 },
         { "t": 1.6, "x": 42.5, "y": 9, "note": "Explosive wheel cut outside Z stem" },
+        { "t": 1.85, "x": 43, "y": 11 },
+        { "t": 2.1, "x": 43.5, "y": 13 },
+        { "t": 2.35, "x": 44, "y": 15 },
         { "t": 2.6, "x": 44.5, "y": 17, "note": "Stack overtop confused SS and RCB" },
-        { "t": 3.4, "x": 45.5, "y": 27, "note": "Secure 35-yard touchdown bomb in stride" },
-        { "t": 4.5, "x": 46, "y": 36, "note": "Celebrate in end zone" }
+        { "t": 2.88, "x": 44.75, "y": 19.5 },
+        { "t": 3.15, "x": 45, "y": 22 },
+        { "t": 3.43, "x": 45.25, "y": 24.5 },
+        { "t": 3.7, "x": 45.5, "y": 27, "note": "Secure 35-yard touchdown bomb in stride" },
+        { "t": 3.95, "x": 45.63, "y": 29.25 },
+        { "t": 4.2, "x": 45.75, "y": 31.5 },
+        { "t": 4.45, "x": 45.88, "y": 33.75 },
+        { "t": 4.7, "x": 46, "y": 36, "note": "Celebrate in end zone" }
       ]
     },
     {
@@ -287,11 +300,24 @@
       "assignment": "Strong Safety: Quarters deep quarter; bites inside on Z skinny post, abandoning deep sideline to H",
       "waypoints": [
         { "t": 0, "x": 36, "y": 11.5, "note": "Two-high quarters alignment 11.5 yards" },
+        { "t": 0.25, "x": 36.13, "y": 12 },
+        { "t": 0.5, "x": 36.25, "y": 12.5 },
+        { "t": 0.75, "x": 36.38, "y": 13 },
         { "t": 1, "x": 36.5, "y": 13.5, "note": "Backpedal reading #2 vertical" },
-        { "t": 1.8, "x": 38.5, "y": 15, "note": "Bites inside on Z skinny post stem" },
-        { "t": 2.8, "x": 39.5, "y": 18.5, "note": "Realizes H has wheeled behind him outside" },
-        { "t": 3.4, "x": 42.5, "y": 24, "note": "Sprint to sideline in desperation" },
-        { "t": 4.5, "x": 44.5, "y": 32, "note": "Watches H catch touchdown" }
+        { "t": 1.3, "x": 37.17, "y": 14 },
+        { "t": 1.6, "x": 37.83, "y": 14.5 },
+        { "t": 1.9, "x": 38.5, "y": 15, "note": "Bites inside on Z skinny post stem" },
+        { "t": 2.15, "x": 38.75, "y": 15.88 },
+        { "t": 2.4, "x": 39, "y": 16.75 },
+        { "t": 2.65, "x": 39.25, "y": 17.63 },
+        { "t": 2.9, "x": 39.5, "y": 18.5, "note": "Realizes H has wheeled behind him outside" },
+        { "t": 3.15, "x": 40.5, "y": 20.33 },
+        { "t": 3.4, "x": 41.5, "y": 22.17 },
+        { "t": 3.65, "x": 42.5, "y": 24, "note": "Sprint to sideline in desperation" },
+        { "t": 3.95, "x": 43, "y": 26 },
+        { "t": 4.25, "x": 43.5, "y": 28 },
+        { "t": 4.55, "x": 44, "y": 30 },
+        { "t": 4.85, "x": 44.5, "y": 32, "note": "Watches H catch touchdown" }
       ]
     },
     {
@@ -303,10 +329,23 @@
       "assignment": "Right CB: Quarters deep quarter; carries Z post inside, leaving H wheel wide open down sideline",
       "waypoints": [
         { "t": 0, "x": 46, "y": 6.5, "note": "Quarters CB 6.5 yards" },
+        { "t": 0.25, "x": 46, "y": 7.25 },
+        { "t": 0.5, "x": 46, "y": 8 },
+        { "t": 0.75, "x": 46, "y": 8.75 },
         { "t": 1, "x": 46, "y": 9.5, "note": "Bail deep quarter" },
+        { "t": 1.27, "x": 45.5, "y": 10.67 },
+        { "t": 1.53, "x": 45, "y": 11.83 },
         { "t": 1.8, "x": 44.5, "y": 13, "note": "Pinches inside to follow Z post stem" },
+        { "t": 2.05, "x": 43.75, "y": 14.25 },
+        { "t": 2.3, "x": 43, "y": 15.5 },
+        { "t": 2.55, "x": 42.25, "y": 16.75 },
         { "t": 2.8, "x": 41.5, "y": 18, "note": "Trapped inside with SS covering same man" },
-        { "t": 3.4, "x": 43, "y": 25, "note": "Flips hips toward sideline too late" },
+        { "t": 3.05, "x": 42, "y": 20.33 },
+        { "t": 3.3, "x": 42.5, "y": 22.67 },
+        { "t": 3.55, "x": 43, "y": 25, "note": "Flips hips toward sideline too late" },
+        { "t": 3.79, "x": 43.5, "y": 27 },
+        { "t": 4.03, "x": 44, "y": 29 },
+        { "t": 4.26, "x": 44.5, "y": 31 },
         { "t": 4.5, "x": 45, "y": 33, "note": "Beaten deep for TD" }
       ]
     },

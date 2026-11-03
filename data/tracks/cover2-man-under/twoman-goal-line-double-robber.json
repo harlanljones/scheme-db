@@ -110,7 +110,7 @@
       "trail": "route",
       "assignment": "Goal-line slant — the PA shot off the run fake",
       "waypoints": [
-        { "t": 0, "x": 8, "y": 0.8, "note": "Split alignment" },
+        { "t": 0, "x": 8, "y": -0.5, "note": "Split alignment" },
         { "t": 0.8, "x": 9.5, "y": 2, "note": "Inside stem off the snap" },
         { "t": 1.8, "x": 12, "y": 3.5, "note": "Working upfield on the corner" },
         { "t": 2.8, "x": 14.5, "y": 4.5, "note": "Slant break — window appears open" },

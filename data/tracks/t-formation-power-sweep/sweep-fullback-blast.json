@@ -11,7 +11,7 @@
       "trail": "block",
       "assignment": "Down block the weak end inside to seal the blast lane",
       "waypoints": [
-        { "t": 0, "x": 20.3, "y": 0.7, "note": "End alignment" },
+        { "t": 0, "x": 20.3, "y": -0.6, "note": "End alignment" },
         { "t": 0.5, "x": 21.2, "y": 0.9, "note": "Down block on the end" },
         { "t": 1.4, "x": 22.2, "y": 1.4, "note": "Driving him toward the center" },
         { "t": 2.6, "x": 23.2, "y": 1.8, "note": "Sealed inside the lane" },
@@ -100,7 +100,7 @@
       "trail": "block",
       "assignment": "Drive block the strong end inside to complete the wall",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "End alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "End alignment" },
         { "t": 0.5, "x": 33.4, "y": 0.9, "note": "Inside drive on the end" },
         { "t": 1.5, "x": 32.6, "y": 1.6, "note": "Walling him toward the tackle" },
         { "t": 2.8, "x": 31.8, "y": 2.2, "note": "Strong edge collapsed in" },
@@ -164,7 +164,7 @@
       "trail": "block",
       "assignment": "Crack the force corner if he triggers downhill on run action",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 46.2, "y": 2, "note": "Reading the safety trigger" },
         { "t": 1.8, "x": 44.5, "y": 4, "note": "Stalking the perimeter defender" },
         { "t": 3, "x": 43.5, "y": 5, "note": "Perimeter sealed" },

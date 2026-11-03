@@ -6,6 +6,7 @@ import { TermCategory } from '../../src/schema/schema';
 import type { TermRow } from '../islands/GlossaryList';
 import { library, schemeHref, termList } from './data';
 import { tidy } from './format';
+import { searchKey } from './search';
 
 /**
  * A name as a comparison key: lower case, with hyphens, slashes and other marks read as spaces, so "Wide-9", "Wide 9"
@@ -94,7 +95,7 @@ export function glossaryRows(): TermRow[] {
       link: TERM_LINKS[term.id],
       schemes,
       plays,
-      hay: [term.term, ...term.aliases, term.category, term.shortDef, term.tacticalNote].join(' ').toLowerCase(),
+      hay: searchKey([term.term, ...term.aliases, term.category, term.shortDef, term.tacticalNote].join(' ')),
     };
   });
 

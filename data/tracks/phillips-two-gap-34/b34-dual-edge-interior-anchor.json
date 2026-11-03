@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "b34-dual-edge-interior-anchor",
-  "duration": 4,
+  "duration": 4.6,
   "offense": [
     {
       "id": "LT",
@@ -98,7 +98,7 @@
       "trail": "route",
       "assignment": "Stem vertical vs island press",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 6, "y": 4.5, "note": "Fight press jam" },
         { "t": 2.4, "x": 5.8, "y": 9.5, "note": "Working downfield in a trail" },
         { "t": 4, "x": 5.5, "y": 13, "note": "No look coming with QB buried" }
@@ -112,7 +112,7 @@
       "trail": "route",
       "assignment": "Shallow cross underneath as pressure answer",
       "waypoints": [
-        { "t": 0, "x": 15, "y": 1.2, "note": "Slot release" },
+        { "t": 0, "x": 15, "y": -0.5, "note": "Slot release" },
         { "t": 0.8, "x": 15.8, "y": 1.8, "note": "Flatten off the stem" },
         { "t": 2, "x": 20, "y": 2.5, "note": "Driving across formation" },
         { "t": 4, "x": 25, "y": 3, "note": "Trailed by walked WILL" }
@@ -126,7 +126,7 @@
       "trail": "route",
       "assignment": "Vertical clear-out to comeback",
       "waypoints": [
-        { "t": 0, "x": 46.5, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 46.5, "y": 4, "note": "Push RCB vertical" },
         { "t": 2.2, "x": 46.2, "y": 9, "note": "Working upfield" },
         { "t": 3, "x": 43.8, "y": 11, "note": "Comeback break contested" },
@@ -141,11 +141,11 @@
       "trail": "drop",
       "assignment": "Five-step drop with no escape lane either direction",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.9, "x": 26.67, "y": -3, "note": "Five-step hitch depth" },
-        { "t": 1.8, "x": 26.3, "y": -3.4, "note": "Feel both rims closing, step up" },
-        { "t": 2.6, "x": 26, "y": -3.5, "note": "Swallowed between converging edges" },
-        { "t": 4, "x": 25.8, "y": -3.6, "note": "Sacked at the line of scrimmage" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -5.6, "note": "Five-step hitch depth" },
+        { "t": 1.8, "x": 26.3, "y": -5.8, "note": "Feel both rims closing, step up" },
+        { "t": 2.6, "x": 26, "y": -5.8, "note": "Swallowed between converging edges" },
+        { "t": 4, "x": 25.8, "y": -5.9, "note": "Sacked at the line of scrimmage" }
       ]
     },
     {
@@ -156,8 +156,8 @@
       "trail": "block",
       "assignment": "Scan protect — one back cannot block two edges",
       "waypoints": [
-        { "t": 0, "x": 23, "y": -3, "note": "Scan alignment" },
-        { "t": 0.9, "x": 25, "y": -2.6, "note": "Sees both rims charging" },
+        { "t": 0, "x": 23, "y": -5, "note": "Scan alignment" },
+        { "t": 0.9, "x": 25, "y": -3.4, "note": "Sees both rims charging" },
         { "t": 2, "x": 29.5, "y": -1.8, "note": "Helps right side too late" },
         { "t": 4, "x": 30.5, "y": -1.4, "note": "Wrong side entirely" }
       ]
@@ -231,11 +231,22 @@
       "assignment": "Strong edge rush: bend under Y hinge for blind-side hit",
       "waypoints": [
         { "t": 0, "x": 37.8, "y": 2.2, "note": "Wide rush stance" },
-        { "t": 0.7, "x": 38.2, "y": 0.2, "note": "Charge upfield past hinge depth" },
-        { "t": 1.6, "x": 37, "y": -2, "note": "Dip and bend under TE" },
-        { "t": 2.6, "x": 32, "y": -3.4, "note": "Closing on the pocket" },
-        { "t": 3, "x": 26.4, "y": -3.6, "note": "Sack hit on stepping QB" },
-        { "t": 4, "x": 26, "y": -3.7, "note": "First hat on the QB" }
+        { "t": 0.25, "x": 37.93, "y": 1.53 },
+        { "t": 0.5, "x": 38.07, "y": 0.87 },
+        { "t": 0.75, "x": 38.2, "y": 0.2, "note": "Charge upfield past hinge depth" },
+        { "t": 1, "x": 37.9, "y": -0.35 },
+        { "t": 1.25, "x": 37.6, "y": -0.9 },
+        { "t": 1.5, "x": 37.3, "y": -1.45 },
+        { "t": 1.75, "x": 37, "y": -2, "note": "Dip and bend under TE" },
+        { "t": 2, "x": 35.75, "y": -2.35 },
+        { "t": 2.25, "x": 34.5, "y": -2.7 },
+        { "t": 2.5, "x": 33.25, "y": -3.05 },
+        { "t": 2.75, "x": 32, "y": -3.4, "note": "Closing on the pocket" },
+        { "t": 3.2, "x": 29.2, "y": -3.5 },
+        { "t": 3.65, "x": 26.4, "y": -3.6, "note": "Sack hit on stepping QB" },
+        { "t": 3.95, "x": 26.27, "y": -3.63 },
+        { "t": 4.25, "x": 26.13, "y": -3.67 },
+        { "t": 4.55, "x": 26, "y": -3.7, "note": "First hat on the QB" }
       ]
     },
     {

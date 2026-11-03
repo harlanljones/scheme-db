@@ -114,7 +114,7 @@
       "trail": "route",
       "assignment": "Sell outside stem vs press, stroke inside to seam-post at 12",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split, press alignment read" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split, press alignment read" },
         { "t": 0.8, "x": 5.8, "y": 3.5, "note": "Hard outside stem selling fade" },
         { "t": 1.5, "x": 7.5, "y": 9, "note": "Stacking the corner vertically" },
         { "t": 2.2, "x": 11, "y": 15, "note": "Stroking inside off the stem" },
@@ -145,11 +145,22 @@
       "trail": "route",
       "assignment": "Mirror X: sell outside stem, stroke to seam-post at 12",
       "waypoints": [
-        { "t": 0, "x": 48.3, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48.3, "y": -0.5, "note": "Flanker split right" },
+        { "t": 0.27, "x": 48.03, "y": 0.83 },
+        { "t": 0.53, "x": 47.77, "y": 2.17 },
         { "t": 0.8, "x": 47.5, "y": 3.5, "note": "Outside stem selling fade" },
+        { "t": 1.03, "x": 46.93, "y": 5.33 },
+        { "t": 1.27, "x": 46.37, "y": 7.17 },
         { "t": 1.5, "x": 45.8, "y": 9, "note": "Stacking the corner" },
-        { "t": 2.2, "x": 42, "y": 15, "note": "Stroking to the seam-post" },
+        { "t": 1.75, "x": 44.53, "y": 11 },
+        { "t": 2, "x": 43.27, "y": 13 },
+        { "t": 2.25, "x": 42, "y": 15, "note": "Stroking to the seam-post" },
+        { "t": 2.49, "x": 40.75, "y": 16.5 },
+        { "t": 2.73, "x": 39.5, "y": 18 },
+        { "t": 2.96, "x": 38.25, "y": 19.5 },
         { "t": 3.2, "x": 37, "y": 21, "note": "Post lane opening" },
+        { "t": 3.47, "x": 35.67, "y": 22.33 },
+        { "t": 3.73, "x": 34.33, "y": 23.67 },
         { "t": 4, "x": 33, "y": 25, "note": "On the post track" }
       ]
     },
@@ -161,7 +172,7 @@
       "trail": "route",
       "assignment": "Middle-hole stretcher: climb to 14 and settle in the seam window",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y off the right tackle" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y off the right tackle" },
         { "t": 1, "x": 32.5, "y": 6, "note": "Vertical push up the middle" },
         { "t": 1.8, "x": 31, "y": 12, "note": "Threatening the middle hole" },
         { "t": 2.8, "x": 29.5, "y": 14.5, "note": "Settling in the window" },

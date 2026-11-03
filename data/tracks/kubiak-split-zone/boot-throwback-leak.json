@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "boot-throwback-leak",
-  "duration": 4.8,
+  "duration": 4.9,
   "offense": [
     {
       "id": "C",
@@ -103,13 +103,25 @@
       "assignment": "Signature Y-Leak: slice across line, bluff kickout on WDE at t=1.2s, then slip unnoticed up the backside sideline",
       "waypoints": [
         { "t": 0, "x": 29.5, "y": -2.2, "note": "Slice motion across back of line" },
+        { "t": 0.3, "x": 28, "y": -1.9 },
         { "t": 0.6, "x": 26.5, "y": -1.6, "note": "Crossing behind center" },
+        { "t": 0.9, "x": 24.65, "y": -1.2 },
         { "t": 1.2, "x": 22.8, "y": -0.8, "note": "Target WDE as if making kickout block" },
+        { "t": 1.4, "x": 21.9, "y": -0.3 },
         { "t": 1.6, "x": 21, "y": 0.2, "note": "Bluff contact at LOS; slip past crashing WDE" },
+        { "t": 1.87, "x": 20, "y": 1.63 },
+        { "t": 2.13, "x": 19, "y": 3.07 },
         { "t": 2.4, "x": 18, "y": 4.5, "note": "Leak undetected into wide-open backside boundary" },
+        { "t": 2.65, "x": 17.38, "y": 6.38 },
+        { "t": 2.9, "x": 16.75, "y": 8.25 },
+        { "t": 3.15, "x": 16.13, "y": 10.13 },
         { "t": 3.4, "x": 15.5, "y": 12, "note": "Sprint vertical down boundary seam" },
-        { "t": 4.2, "x": 14.5, "y": 20, "note": "Catch throwback pass in wide open space" },
-        { "t": 4.8, "x": 14, "y": 25, "note": "Walk-in touchdown reception" }
+        { "t": 3.63, "x": 15.25, "y": 14 },
+        { "t": 3.85, "x": 15, "y": 16 },
+        { "t": 4.08, "x": 14.75, "y": 18 },
+        { "t": 4.3, "x": 14.5, "y": 20, "note": "Catch throwback pass in wide open space" },
+        { "t": 4.57, "x": 14.25, "y": 22.5 },
+        { "t": 4.85, "x": 14, "y": 25, "note": "Walk-in touchdown reception" }
       ]
     },
     {

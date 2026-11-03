@@ -81,7 +81,7 @@
       "trail": "route",
       "assignment": "Compressed slant — the designed beater vs expected cushion",
       "waypoints": [
-        { "t": 0, "x": 8, "y": 0.8, "note": "Tight split" },
+        { "t": 0, "x": 8, "y": -0.5, "note": "Tight split" },
         { "t": 0.7, "x": 9, "y": 1.5, "note": "Release meets immediate jam" },
         { "t": 1.6, "x": 11.5, "y": 3.5, "note": "Slant rounded by trail leverage" },
         { "t": 2.8, "x": 14.5, "y": 5, "note": "Corner riding over the top" },
@@ -111,7 +111,7 @@
       "trail": "route",
       "assignment": "Compressed pivot out of the bunch",
       "waypoints": [
-        { "t": 0, "x": 40.5, "y": 1, "note": "Compressed split" },
+        { "t": 0, "x": 40.5, "y": -0.5, "note": "Compressed split" },
         { "t": 0.7, "x": 41.2, "y": 1.5, "note": "Jam kills the release angle" },
         { "t": 1.6, "x": 41.8, "y": 3, "note": "Vertical stem shortened" },
         { "t": 2.6, "x": 42.8, "y": 2.5, "note": "Pivot contested in trail" },
@@ -126,12 +126,12 @@
       "trail": "drop",
       "assignment": "One-hitch rhythm slant into the compressed window",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.8, "x": 26.67, "y": -2.5, "note": "Short hitch, red-zone clock" },
-        { "t": 1.7, "x": 26.3, "y": -2.9, "note": "Eyes on X — window shrinking" },
-        { "t": 2.5, "x": 25.9, "y": -3.1, "note": "Forced throw into the trail" },
-        { "t": 3.3, "x": 25.7, "y": -3.2, "note": "Ball broken up at catch point" },
-        { "t": 4, "x": 25.6, "y": -3.3, "note": "Field-goal unit warming up" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.8, "x": 26.67, "y": -5.3, "note": "Short hitch, red-zone clock" },
+        { "t": 1.7, "x": 26.3, "y": -5.5, "note": "Eyes on X — window shrinking" },
+        { "t": 2.5, "x": 25.9, "y": -5.6, "note": "Forced throw into the trail" },
+        { "t": 3.3, "x": 25.7, "y": -5.7, "note": "Ball broken up at catch point" },
+        { "t": 4, "x": 25.6, "y": -5.7, "note": "Field-goal unit warming up" }
       ]
     },
     {
@@ -142,8 +142,8 @@
       "trail": "block",
       "assignment": "Scan and protect against any A-gap surge",
       "waypoints": [
-        { "t": 0, "x": 23, "y": -3, "note": "Offset alignment" },
-        { "t": 1, "x": 24.5, "y": -2.2, "note": "Step up to the Surge" },
+        { "t": 0, "x": 23, "y": -5, "note": "Offset alignment" },
+        { "t": 1, "x": 24.5, "y": -2.9, "note": "Step up to the Surge" },
         { "t": 2.2, "x": 25.5, "y": -1.8, "note": "Pass-pro hold" },
         { "t": 4, "x": 26, "y": -1.6, "note": "Pocket kept alive for nothing" }
       ]
@@ -156,8 +156,8 @@
       "trail": "route",
       "assignment": "Check-release flat strong",
       "waypoints": [
-        { "t": 0, "x": 30, "y": -3.4, "note": "Offset alignment" },
-        { "t": 1, "x": 32, "y": -1.5, "note": "Release after scan" },
+        { "t": 0, "x": 30, "y": -5, "note": "Offset alignment" },
+        { "t": 1, "x": 32, "y": -2, "note": "Release after scan" },
         { "t": 2.2, "x": 35, "y": 1, "note": "Flat working right" },
         { "t": 4, "x": 36.5, "y": 1.8, "note": "Fitted immediately by WILL" }
       ]

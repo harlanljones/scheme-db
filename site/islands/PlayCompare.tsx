@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { fieldWindow, parsePlay, type LitePlay } from '../lib/field';
+import { beforeSnap, clockShort, clockWords } from '../lib/format';
 import { Field, FieldLegend } from './Field';
 import { setPlayState, tenth, usePlayState } from './playState';
 
@@ -37,21 +38,27 @@ interface Props {
 export default function PlayCompare({ base: baseJson, side, baseSheet, baseName, duration, comparisons, holdPercent, windowSeconds }: Props) {
   const base = useMemo(() => parsePlay(baseJson), [baseJson]);
   const state = usePlayState();
-  const t = tenth(state.t);
   const cmp = comparisons.find((c) => c.id === state.compareId) ?? comparisons[0];
   const other: LitePlay = useMemo(() => parsePlay(cmp.play), [cmp.play]);
+  /** Seconds of play before the snap that either play has. The clock runs from there, and a play with less just stands set until it starts. */
+  const lead = Math.max(base.leadIn, other.leadIn);
+  const clock = Math.max(state.t, -lead);
+  const t = tenth(clock);
   // Frame the players from the snap to the current time, but never tighter than the first 1.2 s: the figures zoom out as the play runs away from the line.
-  const reach = Math.max(windowSeconds, Math.ceil(state.t * 2) / 2);
+  const reach = Math.max(windowSeconds, Math.ceil(clock * 2) / 2);
   const win = useMemo(() => fieldWindow([base, other], reach), [base, other, reach]);
 
-  const inWindow = t <= windowSeconds + 0.0001;
-  const frame = Math.min(cmp.profile.length - 1, Math.round(t * 10));
+  const early = beforeSnap(t);
+  const inWindow = !early && t <= windowSeconds + 0.0001;
+  const frame = Math.min(cmp.profile.length - 1, Math.max(0, Math.round(t * 10)));
   const sim = inWindow ? cmp.profile[frame] : null;
   const last = cmp.profile[cmp.profile.length - 1];
 
-  const readout = inWindow
-    ? `At ${t.toFixed(1)} s the two plays score ${sim}% alike.`
-    : `The ${windowSeconds.toFixed(1)} s window has ended. The last score was ${last}%.`;
+  const readout = early
+    ? `${clockShort(t)}. The score starts at the snap.`
+    : inWindow
+      ? `At ${t.toFixed(1)} s the two plays score ${sim}% alike.`
+      : `The ${windowSeconds.toFixed(1)} s window has ended. The last score was ${last}%.`;
   const verdict =
     cmp.breakSeconds === null
       ? `It stays above the ${holdPercent}% line for the whole window.`
@@ -78,7 +85,7 @@ export default function PlayCompare({ base: baseJson, side, baseSheet, baseName,
               <p>t = {t.toFixed(1)} s</p>
             </div>
             <div style={{ padding: '12px 12px 6px' }}>
-              <Field play={base} t={state.t} win={win} dot={12} refWidth={300} />
+              <Field play={base} t={clock} win={win} dot={12} refWidth={300} />
             </div>
             <figcaption className="small" style={{ padding: '4px 14px 12px' }}>
               {baseName}.
@@ -90,7 +97,7 @@ export default function PlayCompare({ base: baseJson, side, baseSheet, baseName,
               <p>t = {t.toFixed(1)} s</p>
             </div>
             <div style={{ padding: '12px 12px 6px' }}>
-              <Field play={other} against={base} againstName={baseName} ringSide={side} spot={base.spot} t={state.t} win={win} dot={12} refWidth={300} />
+              <Field play={other} against={base} againstName={baseName} ringSide={side} spot={base.spot} t={clock} win={win} dot={12} refWidth={300} />
             </div>
             <figcaption className="small" style={{ padding: '4px 14px 12px' }}>
               {cmp.name}. Red rings mark {side} players more than 1 yard from where they stand in {baseName}.
@@ -99,19 +106,24 @@ export default function PlayCompare({ base: baseJson, side, baseSheet, baseName,
           <div className="span">
             <FieldLegend against level={base.level} />
             <label htmlFor="scrub-t2" className="mono-small js-only">
-              Time after the snap: <span style={{ fontWeight: 700, color: 'var(--fg)' }}>{t.toFixed(1)} s</span>
+              {lead > 0 ? 'Time from the snap' : 'Time after the snap'}: <span style={{ fontWeight: 700, color: 'var(--fg)' }}>{early ? clockShort(t) : `${t.toFixed(1)} s`}</span>
             </label>
             <input
               id="scrub-t2"
               className="js-only"
               type="range"
-              min={0}
+              min={-Math.round(lead * 10)}
               max={Math.round(duration * 10)}
               step={1}
-              value={Math.round(state.t * 10)}
-              aria-valuetext={`${t.toFixed(1)} seconds after the snap`}
+              value={Math.round(clock * 10)}
+              aria-valuetext={clockWords(t)}
               onChange={(e) => setPlayState({ t: Number(e.target.value) / 10, playing: false })}
             />
+            {lead > 0 ? (
+              <p className="small" style={{ fontSize: 13, lineHeight: '19px' }}>
+                Time before the snap is drawn so you can see the motion arrive. The score and the chart below count only the first {windowSeconds.toFixed(1)} s after the snap.
+              </p>
+            ) : null}
           </div>
         </div>
 

@@ -4,7 +4,7 @@
   "schemeId": "run-and-shoot",
   "order": 2,
   "name": "Mesh Read-Route",
-  "personnel": "10 Empty",
+  "personnel": "00 Empty",
   "formation": "Gun Empty, Slots Crossed",
   "situation": "3rd & 5, +45, must-have down",
   "coverage": "Cover 2 Man Under",
@@ -29,7 +29,7 @@
       "focus": ["M", "Z", "MIKE", "SAM"]
     },
     {
-      "t": 2.6,
+      "t": 2.65,
       "title": "3. Reading the Leverage",
       "text": "The chase-over forces M to settle into the soft hole between the linebacker levels, while Z feels trail leverage and speeds up, climbing away from SAM.",
       "focus": ["M", "Z", "WILL", "SAM"]

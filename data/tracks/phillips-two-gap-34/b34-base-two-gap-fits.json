@@ -95,7 +95,7 @@
       "trail": "block",
       "assignment": "Stalk the soft corner on perimeter run support",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Split alignment" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Split alignment" },
         { "t": 1.2, "x": 7.4, "y": 1, "note": "Work to LCB" },
         { "t": 2.6, "x": 8.6, "y": 1.8, "note": "Stuck on soft leverage hands" },
         { "t": 4, "x": 9.6, "y": 2.2, "note": "Perimeter play dead" }
@@ -109,7 +109,7 @@
       "trail": "block",
       "assignment": "Stalk the corner on the strength side",
       "waypoints": [
-        { "t": 0, "x": 46.5, "y": 0.5, "note": "Split alignment" },
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Split alignment" },
         { "t": 1.2, "x": 45, "y": 1.2, "note": "Work to RCB" },
         { "t": 2.6, "x": 43.8, "y": 2, "note": "Stall stalk attempt" },
         { "t": 4, "x": 42.8, "y": 2.4, "note": "Never reaches the force player" }

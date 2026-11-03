@@ -138,7 +138,7 @@
       "trail": "route",
       "assignment": "Deep comeback vs island press",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Release vs press" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Release vs press" },
         { "t": 1.2, "x": 6, "y": 5, "note": "Stack LCB upfield" },
         { "t": 2.6, "x": 8, "y": 12, "note": "Comeback break at 14 yards" },
         { "t": 4, "x": 10.5, "y": 13.5, "note": "Separated but ball never comes" }
@@ -152,7 +152,7 @@
       "trail": "route",
       "assignment": "Corner route into the void behind SAM blitz",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Stem inside" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Stem inside" },
         { "t": 1.2, "x": 45.5, "y": 6, "note": "Push vertical past RCB" },
         { "t": 2.6, "x": 44, "y": 12.5, "note": "Break corner at 15 yards" },
         { "t": 4, "x": 41.5, "y": 16, "note": "Open in FS cap window only briefly" }

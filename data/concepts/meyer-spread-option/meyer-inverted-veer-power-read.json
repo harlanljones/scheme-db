@@ -17,13 +17,13 @@
   },
   "beats": [
     {
-      "t": 0.8,
+      "t": 1,
       "title": "1. Jet Sweep Sets the Trap",
       "text": "The slot crosses at dead sprint and the quarterback flips him the sweep look. The playside end cannot resist widening to chase the perimeter threat.",
       "focus": ["H", "QB", "RE"]
     },
     {
-      "t": 1.4,
+      "t": 1.8,
       "title": "2. The End Chases the Motion",
       "text": "With the end committed outside-in on the sweep, the entire B-gap and A-gap collapse inward with nobody home to defend them.",
       "focus": ["RE", "H", "QB"]

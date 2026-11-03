@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "spagnuolo-corndog-corner-blitz",
-  "duration": 4,
+  "duration": 4.5,
   "offense": [
     {
       "id": "C",
@@ -267,10 +267,22 @@
       "assignment": "Show press bail, ignite explosive blindside corner blitz off edge",
       "waypoints": [
         { "t": 0, "x": 7, "y": 1.2, "note": "Shows hard press alignment on X" },
+        { "t": 0.3, "x": 9.5, "y": 0.35 },
         { "t": 0.6, "x": 12, "y": -0.5, "note": "Sprints off edge untouched behind WDE crash" },
-        { "t": 1.4, "x": 20, "y": -3.5, "note": "Bends the corner on QB blindside" },
-        { "t": 2.2, "x": 25.5, "y": -5.8, "note": "Blindside hit & strip sack on QB!" },
-        { "t": 4, "x": 26, "y": -6.5, "note": "Ball recovered / play dead" }
+        { "t": 0.85, "x": 14, "y": -1.25 },
+        { "t": 1.1, "x": 16, "y": -2 },
+        { "t": 1.35, "x": 18, "y": -2.75 },
+        { "t": 1.6, "x": 20, "y": -3.5, "note": "Bends the corner on QB blindside" },
+        { "t": 1.85, "x": 21.83, "y": -4.27 },
+        { "t": 2.2, "x": 23.67, "y": -5.03 },
+        { "t": 2.5, "x": 25.5, "y": -5.8, "note": "Blindside hit & strip sack on QB!" },
+        { "t": 2.8, "x": 25.57, "y": -5.9 },
+        { "t": 3.05, "x": 25.64, "y": -6 },
+        { "t": 3.35, "x": 25.71, "y": -6.1 },
+        { "t": 3.65, "x": 25.79, "y": -6.2 },
+        { "t": 3.95, "x": 25.86, "y": -6.3 },
+        { "t": 4.2, "x": 25.93, "y": -6.4 },
+        { "t": 4.5, "x": 26, "y": -6.5, "note": "Ball recovered / play dead" }
       ]
     },
     {

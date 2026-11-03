@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "macdonald-split-field-trap",
-  "duration": 4,
+  "duration": 4.4,
   "offense": [
     {
       "id": "C",
@@ -268,10 +268,22 @@
       "assignment": "TRAP CORNER: squat on #1 go release, undercut #2 H out route for PICK-SIX!",
       "waypoints": [
         { "t": 0, "x": 8, "y": 6, "note": "Disguise deep bail pre-snap" },
-        { "t": 0.8, "x": 8, "y": 5.5, "note": "Read X go route: let X pass to safety!" },
-        { "t": 1.8, "x": 9, "y": 7.5, "note": "Eyes locked on QB & H out route" },
-        { "t": 2.8, "x": 9.5, "y": 9.8, "note": "DRIVE DOWNHILL & INTERCEPT BALL!" },
-        { "t": 4, "x": 12, "y": 0, "note": "Pick-six return down sideline" }
+        { "t": 0.3, "x": 8, "y": 5.83 },
+        { "t": 0.6, "x": 8, "y": 5.67 },
+        { "t": 0.9, "x": 8, "y": 5.5, "note": "Read X go route: let X pass to safety!" },
+        { "t": 1.15, "x": 8.25, "y": 6 },
+        { "t": 1.4, "x": 8.5, "y": 6.5 },
+        { "t": 1.65, "x": 8.75, "y": 7 },
+        { "t": 1.9, "x": 9, "y": 7.5, "note": "Eyes locked on QB & H out route" },
+        { "t": 2.15, "x": 9.13, "y": 8.07 },
+        { "t": 2.4, "x": 9.25, "y": 8.65 },
+        { "t": 2.65, "x": 9.38, "y": 9.23 },
+        { "t": 2.9, "x": 9.5, "y": 9.8, "note": "DRIVE DOWNHILL & INTERCEPT BALL!" },
+        { "t": 3.2, "x": 10, "y": 7.84 },
+        { "t": 3.55, "x": 10.5, "y": 5.88 },
+        { "t": 3.85, "x": 11, "y": 3.92 },
+        { "t": 4.1, "x": 11.5, "y": 1.96 },
+        { "t": 4.35, "x": 12, "y": 0, "note": "Pick-six return down sideline" }
       ]
     },
     {

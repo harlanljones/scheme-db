@@ -81,11 +81,11 @@
       "trail": "route",
       "assignment": "Catch and release hot slant immediately",
       "waypoints": [
-        { "t": 0, "x": 26.2, "y": -1.8, "note": "Gun alone in backfield" },
-        { "t": 1, "x": 26.3, "y": -2.8, "note": "Catch with no help behind" },
-        { "t": 2, "x": 25.6, "y": -4, "note": "Hitch, hot eyes inside" },
-        { "t": 3.1, "x": 25.2, "y": -4.4, "note": "Throw under duress" },
-        { "t": 4, "x": 24.8, "y": -4.2, "note": "Pass deflected at the LOS" }
+        { "t": 0, "x": 26.2, "y": -5, "note": "Gun alone in backfield" },
+        { "t": 1, "x": 26.3, "y": -5.5, "note": "Catch with no help behind" },
+        { "t": 2, "x": 25.6, "y": -6.1, "note": "Hitch, hot eyes inside" },
+        { "t": 3.1, "x": 25.2, "y": -6.3, "note": "Throw under duress" },
+        { "t": 4, "x": 24.8, "y": -6.2, "note": "Pass deflected at the LOS" }
       ]
     },
     {
@@ -96,7 +96,7 @@
       "trail": "route",
       "assignment": "Go route to clear the weak corner",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Wide left alignment" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Wide left alignment" },
         { "t": 1, "x": 6.8, "y": 5.5, "note": "Release vs press" },
         { "t": 2.2, "x": 7.4, "y": 11.5, "note": "Carry LCB deep" },
         { "t": 4, "x": 8, "y": 16, "note": "Island route, no help coming" }
@@ -110,7 +110,7 @@
       "trail": "route",
       "assignment": "Hot slant at three yards behind the walk-ups",
       "waypoints": [
-        { "t": 0, "x": 15.5, "y": 0.7, "note": "Slot alignment, hot alert" },
+        { "t": 0, "x": 15.5, "y": -0.5, "note": "Slot alignment, hot alert" },
         { "t": 1, "x": 16, "y": 2.5, "note": "Inside stem vs press" },
         { "t": 2, "x": 14, "y": 4, "note": "Slant break at three" },
         { "t": 3.1, "x": 11.5, "y": 4.5, "note": "Flashes open at the stick" },
@@ -125,7 +125,7 @@
       "trail": "route",
       "assignment": "Inside slant working across against the post safety",
       "waypoints": [
-        { "t": 0, "x": 36, "y": 0.7, "note": "Inner slot alignment" },
+        { "t": 0, "x": 36, "y": -0.5, "note": "Inner slot alignment" },
         { "t": 1, "x": 36.5, "y": 2.5, "note": "Stem vs FS match" },
         { "t": 2.2, "x": 34.5, "y": 4.5, "note": "Slant underneath" },
         { "t": 4, "x": 31, "y": 5.5, "note": "Squeezed by FS leverage" }
@@ -139,7 +139,7 @@
       "trail": "route",
       "assignment": "Vertical go against the pressed-over safety",
       "waypoints": [
-        { "t": 0, "x": 42, "y": 0.7, "note": "Outer slot alignment" },
+        { "t": 0, "x": 42, "y": -0.5, "note": "Outer slot alignment" },
         { "t": 1, "x": 42.2, "y": 5.5, "note": "Release vs SS press" },
         { "t": 2.2, "x": 42.8, "y": 12, "note": "Carry SS deep" },
         { "t": 4, "x": 43.4, "y": 17, "note": "Man island all the way" }
@@ -153,7 +153,7 @@
       "trail": "route",
       "assignment": "Clear-out go of the bailing corner",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.5, "note": "Wide right alignment" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wide right alignment" },
         { "t": 1, "x": 47.4, "y": 6, "note": "Clear-out vs bail" },
         { "t": 2.2, "x": 46.8, "y": 12.5, "note": "Carry RCB deep" },
         { "t": 4, "x": 46.2, "y": 18, "note": "Corner rides him out" }
@@ -236,7 +236,7 @@
       "id": "SPUR",
       "label": "SPUR",
       "side": "defense",
-      "role": "db",
+      "role": "lb",
       "trail": "drop",
       "assignment": "Storm the strong C-D edge to close the escape door",
       "waypoints": [

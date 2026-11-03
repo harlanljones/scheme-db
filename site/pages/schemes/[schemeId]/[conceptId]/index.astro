@@ -216,7 +216,7 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
           <a class="dl" href={`/records/frames/${fileBase}.csv`}><span>Tracks, 10 Hz frames</span><span class="fmt">CSV</span></a>
         </div>
       </div>
-      <div class="sheet json"><pre class="code">{previewText}</pre></div>
+      <div class="sheet json"><pre class="code" tabindex="0" role="region" aria-label="Play record, JSON">{previewText}</pre></div>
     </div>
     {(prev || next) && (
       <nav aria-label="Play sheets in this scheme" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;border-top:1px solid var(--fg);padding-top:8px">

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "coryell-cross-country-drag",
-  "duration": 4.2,
+  "duration": 4.6,
   "offense": [
     {
       "id": "C",
@@ -114,12 +114,25 @@
       "trail": "route",
       "assignment": "Layer one: 20-yard cross-country deep crosser from the boundary",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
+        { "t": 0.23, "x": 5.68, "y": 0.63 },
+        { "t": 0.45, "x": 5.85, "y": 1.75 },
+        { "t": 0.68, "x": 6.03, "y": 2.88 },
         { "t": 0.9, "x": 6.2, "y": 4, "note": "Vertical stem off the snap" },
+        { "t": 1.15, "x": 6.78, "y": 5.63 },
+        { "t": 1.4, "x": 7.35, "y": 7.25 },
+        { "t": 1.65, "x": 7.93, "y": 8.88 },
         { "t": 1.9, "x": 8.5, "y": 10.5, "note": "Stacking the bail corner" },
-        { "t": 2.7, "x": 13.5, "y": 18.5, "note": "Breaking inside at twenty" },
-        { "t": 3.5, "x": 21, "y": 19.5, "note": "Running the cross-country lane" },
-        { "t": 4.2, "x": 27.5, "y": 19, "note": "Crossing the middle behind everyone" }
+        { "t": 2.16, "x": 9.75, "y": 12.5 },
+        { "t": 2.42, "x": 11, "y": 14.5 },
+        { "t": 2.69, "x": 12.25, "y": 16.5 },
+        { "t": 2.95, "x": 13.5, "y": 18.5, "note": "Breaking inside at twenty" },
+        { "t": 3.23, "x": 16, "y": 18.83 },
+        { "t": 3.52, "x": 18.5, "y": 19.17 },
+        { "t": 3.8, "x": 21, "y": 19.5, "note": "Running the cross-country lane" },
+        { "t": 4.05, "x": 23.17, "y": 19.33 },
+        { "t": 4.3, "x": 25.33, "y": 19.17 },
+        { "t": 4.55, "x": 27.5, "y": 19, "note": "Crossing the middle behind everyone" }
       ]
     },
     {
@@ -161,7 +174,7 @@
       "trail": "route",
       "assignment": "Vertical clearout on the field side, hold the corner deep",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.9, "x": 47.6, "y": 4, "note": "Vertical release" },
         { "t": 2, "x": 46.8, "y": 11, "note": "Pinning the corner deep" },
         { "t": 3.2, "x": 46, "y": 17.5, "note": "Holding the third" },

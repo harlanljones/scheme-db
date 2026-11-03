@@ -5,6 +5,7 @@
  */
 import { FIELD_WIDTH_YARDS, type BallSpot, type Level } from '../../src/engine/field';
 import { positionAt } from '../../src/engine/interpolate';
+import { LIMITS } from '../../src/engine/limits';
 import type { PlayerTrack } from '../../src/engine/types';
 
 export { FIELD_WIDTH_YARDS };
@@ -20,7 +21,10 @@ export interface LiteTrack {
 export interface LitePlay {
   id: string;
   name: string;
+  /** Seconds of play after the snap. */
   duration: number;
+  /** Seconds of play before the snap: how early the earliest track starts. Zero for a play whose tracks all start at the snap. */
+  leadIn: number;
   /** Which hash marks the field has: NFL or college. */
   level: Level;
   /** Where the ball is spotted. Positions are drawn with the ball at midfield; add the spot offset to place them. */
@@ -66,15 +70,17 @@ export interface FieldWindow {
 const STEP = 0.1;
 
 /**
- * A window that keeps every player of every given play in view from the snap to `tMax`, in multiples of five
- * yards so the yard lines land on the edges. It is at least 25 yards tall.
+ * A window that keeps every player of every given play in view from the start of the lead in (the snap, for a play
+ * without one) to `tMax`, in multiples of five yards so the yard lines land on the edges. It is at least 25 yards tall.
  */
 export function fieldWindow(plays: LitePlay[], tMax: number): FieldWindow {
   let lo = 0;
   let hi = 0;
   for (const play of plays) {
+    const from = -Math.round((play.leadIn ?? 0) / STEP) * STEP;
     for (const track of play.tracks) {
-      for (let t = 0; t <= tMax + 1e-9; t += STEP) {
+      for (let k = Math.round(from / STEP); k * STEP <= tMax + 1e-9; k++) {
+        const t = k * STEP;
         const { y } = pos(track, t);
         if (y < lo) lo = y;
         if (y > hi) hi = y;
@@ -88,6 +94,32 @@ export function fieldWindow(plays: LitePlay[], tMax: number): FieldWindow {
   let yHi = Math.max(10, Math.ceil((hi + 1.5) / 5) * 5);
   if (yHi - yLo < 25) yHi = yLo + 25;
   return { yLo, yHi };
+}
+
+/**
+ * Ids of the players moving at time `t`: faster than a person standing set, over the tenth of a second that ends at `t`.
+ * Offense first, then defense, in track order.
+ */
+export function movingAt(play: LitePlay, t: number): string[] {
+  const moving: string[] = [];
+  for (const track of play.tracks) {
+    const a = pos(track, t - STEP);
+    const b = pos(track, t);
+    if (Math.hypot(b.x - a.x, b.y - a.y) / STEP > LIMITS.still) moving.push(track.id);
+  }
+  return moving;
+}
+
+/**
+ * When the first player starts to move, in seconds from the snap (negative), or null when nothing moves before the snap.
+ * A play's lead in can open with a moment when everyone is set, so this can be later than the start of the lead in.
+ */
+export function firstMotionAt(play: LitePlay): number | null {
+  const steps = Math.round((play.leadIn ?? 0) / STEP);
+  for (let k = -steps + 1; k <= 0; k++) {
+    if (movingAt(play, k * STEP).length > 0) return (k - 1) * STEP;
+  }
+  return null;
 }
 
 /** Players, in both plays, that stand more than `threshold` yards apart at time `t`, with the distance, in track order. */

@@ -152,7 +152,7 @@
       "trail": "route",
       "assignment": "Clear-out go route to remove the boundary corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.9, "x": 5.8, "y": 5, "note": "Instant vertical stem" },
         { "t": 2, "x": 7, "y": 12, "note": "Pushing corner deep" },
         { "t": 3.1, "x": 8.5, "y": 19, "note": "Boundary cleared" },
@@ -167,7 +167,7 @@
       "trail": "route",
       "assignment": "Deep post — the primary shot behind the creeping safety",
       "waypoints": [
-        { "t": 0, "x": 48.2, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48.2, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.9, "x": 47.8, "y": 4.5, "note": "Vertical stem selling go" },
         { "t": 2, "x": 46.8, "y": 11, "note": "Corner trailing deep" },
         { "t": 3, "x": 44, "y": 17.5, "note": "Breaking to the post lane" },
