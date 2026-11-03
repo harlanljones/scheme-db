@@ -1,5 +1,6 @@
 import { capitalize, count, plural } from '../lib/format';
 import { useQueryFilters } from './useQueryFilters';
+import { searchKey } from '../lib/search';
 
 export interface TermRow {
   id: string;
@@ -71,7 +72,7 @@ export default function GlossaryList({ rows, categories, idPrefix = 'glossary' }
   const filters = useQueryFilters<Key>({ q: '', cat: 'all' }, (key, value) => (key === 'cat' ? categories.includes(value) : true));
   const { q, cat } = filters.values;
 
-  const needle = q.trim().toLowerCase();
+  const needle = searchKey(q);
   const match = (r: TermRow) => !needle || r.hay.includes(needle);
   const byCat = (r: TermRow) => cat === 'all' || r.category === cat;
 

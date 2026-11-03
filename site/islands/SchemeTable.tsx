@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useQueryFilters } from './useQueryFilters';
+import { searchKey } from '../lib/search';
 
 export interface SchemeRow {
   id: string;
@@ -11,7 +12,7 @@ export interface SchemeRow {
   era: string;
   eraLabel: string;
   href: string;
-  /** Plays of the scheme, for search. `hay` is the lower case text a search looks through. */
+  /** Plays of the scheme, for search. `hay` is the text a search looks through, already read by `searchKey`. */
   plays: Array<{ id: string; name: string; sheet: string; hay: string }>;
 }
 
@@ -38,8 +39,8 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
   const setEra = (value: string) => filters.set('era', value);
   const [expanded, setExpanded] = useState(false);
 
-  const needle = q.trim().toLowerCase();
-  const schemeText = (r: SchemeRow) => `${r.name} ${r.coach} ${r.team}`.toLowerCase();
+  const needle = searchKey(q);
+  const schemeText = (r: SchemeRow) => searchKey(`${r.name} ${r.coach} ${r.team}`);
   const playHits = (r: SchemeRow) => (needle ? r.plays.filter((p) => p.hay.includes(needle)) : []);
   const match = (r: SchemeRow) => !needle || schemeText(r).includes(needle) || playHits(r).length > 0;
   const bySide = (r: SchemeRow) => side === 'all' || r.side === side;
