@@ -34,6 +34,12 @@ jobs:
       - name: Build data release (JSON, CSV, SQLite)
         run: bun run data:release --version ci
 
+      - name: Package the release files and check their checksums
+        run: |
+          bun run data:package --version ci
+          cd dist/release-assets
+          sha256sum -c SHA256SUMS
+
       - name: Run Vitest Validation Suite
         run: bun run test
 

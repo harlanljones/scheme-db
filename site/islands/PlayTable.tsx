@@ -1,4 +1,5 @@
 import { useQueryFilters } from './useQueryFilters';
+import { searchKey } from '../lib/search';
 
 export interface PlayRow {
   id: string;
@@ -46,7 +47,7 @@ export default function PlayTable({ rows, eras, idPrefix = 'plays' }: Props) {
   });
   const { q, side, era, down, sort } = filters.values;
 
-  const needle = q.trim().toLowerCase();
+  const needle = searchKey(q);
   const match = (r: PlayRow) => !needle || r.hay.includes(needle);
   const bySide = (r: PlayRow) => side === 'all' || r.side === side;
   const byEra = (r: PlayRow) => era === 'all' || r.era === era;
