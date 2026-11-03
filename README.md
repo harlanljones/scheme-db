@@ -78,6 +78,7 @@ data/      the dataset: the source of truth
 src/       schemas and validators, the engine, the spec compiler, the release build
 site/      pages, components and React islands
 scripts/   the command line tools behind `bun run`
+worker/    redirects for links to the first version of the site
 specs/     optional YAML play specs that compile to tracks
 docs/      the redesign decision record
 ```
