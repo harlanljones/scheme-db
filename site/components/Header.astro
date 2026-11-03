@@ -7,7 +7,7 @@ const active = activeKey(Astro.url.pathname);
 const notice = trustNotice();
 ---
 
-<div class="notice">
+<aside class="notice" aria-label="Notice">
   <div class="wrap">
     <p class="tag-n">Notice</p>
     <p>
@@ -15,7 +15,7 @@ const notice = trustNotice();
       <a href="/about/#illustrative">What that means</a>
     </p>
   </div>
-</div>
+</aside>
 
 <header class="masthead">
   <div class="wrap">

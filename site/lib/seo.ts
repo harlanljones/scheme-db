@@ -55,7 +55,7 @@ export function llmsTxt(lib: Library = library()): string {
   lines.push(`- [Full text version of this site](${abs('/llms-full.txt')})`);
   lines.push('', '## Schemes', '');
   for (const scheme of lib.schemes) {
-    lines.push(`- [${scheme.nameDisplay}](${abs(scheme.href)}): ${scheme.coachName}, ${scheme.teamDisplay}. ${scheme.side === 'offense' ? 'Offense' : 'Defense'}, ${scheme.eraLabel.toLowerCase()}.`);
+    lines.push(`- [${scheme.nameDisplay}](${abs(scheme.href)}): ${scheme.coachName}, ${scheme.teamDisplay}. ${scheme.side === 'offense' ? 'Offense' : 'Defense'}, ${scheme.eraLabel}.`);
   }
   lines.push('', '## Coaches', '');
   for (const coach of coachViews()) {

@@ -46,6 +46,7 @@ bun run data:schema          regenerate data/schema/*.schema.json
 bun run data:frames [file]   write the 10 Hz frames export as CSV (default dist/data/frames.csv)
 bun run data:release         build the JSON, CSV and SQLite downloads into dist/release (CI runs this)
 bun run speed:report         list every player drawn faster than a person runs, and every motion the rules do not allow
+bun run data:package         turn dist/release into the files of a GitHub release, in dist/release-assets (CI runs this too)
 ```
 
 The frames export has one row per player per tenth of a second: `conceptId, playerId, frame, t, x, y`. It uses the same spline interpolation as the viewer, so it is a resampling of the waypoints, not tracking data. Frame 0 is the snap. A play whose tracks start before the snap also has negative frames, `-n` to `-1`, for all 22 players, so `(conceptId, playerId, frame)` stays unique; filter `frame >= 0` for the frames a play without a lead in always had.
@@ -96,7 +97,22 @@ GROUP BY s.id ORDER BY plays DESC;
 SELECT frame, t, x, y FROM frames WHERE concept_id = 'kelly-mesh-spacing-concept' AND player_id = 'H' AND frame <= 10;
 ```
 
-Pushing a tag such as `data-v0.1.0` runs `.github/workflows/release-data.yml`, which attaches the files to a GitHub release. Run that workflow by hand to get the same files as a workflow artifact without releasing.
+### Cutting a data release
+
+A data release is a Git tag named `data-vMAJOR.MINOR.PATCH`, for example `data-v0.1.0`. Tag a commit on `main`, after CI has passed on it:
+
+```bash
+git tag data-v0.1.0 && git push origin data-v0.1.0
+```
+
+That runs `.github/workflows/release-data.yml`, which validates the data, builds the downloads, packages them with `bun run data:package` and creates a **draft** GitHub release with these files (the CSV tables are zipped):
+
+- `scheme-db-v0.1.0.json`, `scheme-db-v0.1.0.sqlite`, `scheme-db-v0.1.0-csv.zip` and `LICENSE.md`
+- `SHA256SUMS`, which names those four files, so `sha256sum -c SHA256SUMS` works in the folder you download them to (macOS: `shasum -a 256 -c SHA256SUMS`)
+
+Nothing is public until you open the draft on the Releases page, look at the files and notes, and press Publish. The release notes are written from the data (counts, and whether the plays are illustrative), so they cannot go stale. A tag with a suffix, such as `data-v0.1.0-rc.1`, makes a pre-release. A tag that does not look like `data-v1.2.3` or `data-v1.2.3-rc.1` fails the workflow before anything is built. To redo a release, delete the draft (or release) and the tag, then push the tag again.
+
+To try the whole path without releasing, run the workflow by hand (Actions tab, "Release data"; it appears once the workflow is on `main`). It builds the same files and keeps them as a workflow artifact instead of releasing. `bun run data:release --version v0.1.0 && bun run data:package --version v0.1.0` does the same on your machine and needs the `zip` command.
 
 ## Where the launch data came from
 
