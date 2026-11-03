@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "play-action-over",
-  "duration": 4.5,
+  "duration": 5.3,
   "offense": [
     {
       "id": "C",
@@ -166,11 +166,27 @@
       "assignment": "Deep Over route crossing behind linebackers at 16-18 yards",
       "waypoints": [
         { "t": 0, "x": 46, "y": -1.5, "note": "Flanker alignment right" },
+        { "t": 0.27, "x": 45.67, "y": 0 },
+        { "t": 0.53, "x": 45.33, "y": 1.5 },
         { "t": 0.8, "x": 45, "y": 3, "note": "Vertical stem" },
+        { "t": 1.07, "x": 44, "y": 4.83 },
+        { "t": 1.33, "x": 43, "y": 6.67 },
         { "t": 1.6, "x": 42, "y": 8.5, "note": "Breaking inward behind linebackers" },
-        { "t": 2.6, "x": 30, "y": 14.5, "note": "Crossing into intermediate void" },
-        { "t": 3.5, "x": 18, "y": 18, "note": "Catching strike in stride" },
-        { "t": 4.5, "x": 10, "y": 22, "note": "Turning upfield for touchdown" }
+        { "t": 1.83, "x": 40, "y": 9.5 },
+        { "t": 2.07, "x": 38, "y": 10.5 },
+        { "t": 2.3, "x": 36, "y": 11.5 },
+        { "t": 2.53, "x": 34, "y": 12.5 },
+        { "t": 2.77, "x": 32, "y": 13.5 },
+        { "t": 3, "x": 30, "y": 14.5, "note": "Crossing into intermediate void" },
+        { "t": 3.26, "x": 27.6, "y": 15.2 },
+        { "t": 3.52, "x": 25.2, "y": 15.9 },
+        { "t": 3.78, "x": 22.8, "y": 16.6 },
+        { "t": 4.04, "x": 20.4, "y": 17.3 },
+        { "t": 4.3, "x": 18, "y": 18, "note": "Catching strike in stride" },
+        { "t": 4.54, "x": 16, "y": 19 },
+        { "t": 4.78, "x": 14, "y": 20 },
+        { "t": 5.01, "x": 12, "y": 21 },
+        { "t": 5.25, "x": 10, "y": 22, "note": "Turning upfield for touchdown" }
       ]
     }
   ],
@@ -317,9 +333,23 @@
       "assignment": "Cover 3 Sky, bite downhill on run fit before recovering",
       "waypoints": [
         { "t": 0, "x": 34, "y": 8.5, "note": "Strong safety pre-snap" },
+        { "t": 0.24, "x": 33.6, "y": 8.1 },
+        { "t": 0.48, "x": 33.2, "y": 7.7 },
+        { "t": 0.72, "x": 32.8, "y": 7.3 },
+        { "t": 0.96, "x": 32.4, "y": 6.9 },
         { "t": 1.2, "x": 32, "y": 6.5, "note": "Triggering downhill on run fit" },
+        { "t": 1.45, "x": 31.5, "y": 6 },
+        { "t": 1.7, "x": 31, "y": 5.5 },
+        { "t": 1.95, "x": 30.5, "y": 5 },
         { "t": 2.2, "x": 30, "y": 4.5, "note": "Biting on run mesh" },
+        { "t": 2.46, "x": 29.2, "y": 5.6 },
+        { "t": 2.72, "x": 28.4, "y": 6.7 },
+        { "t": 2.98, "x": 27.6, "y": 7.8 },
+        { "t": 3.24, "x": 26.8, "y": 8.9 },
         { "t": 3.5, "x": 26, "y": 10, "note": "Trailing Z deep Over from behind" },
+        { "t": 3.75, "x": 24, "y": 11 },
+        { "t": 4, "x": 22, "y": 12 },
+        { "t": 4.25, "x": 20, "y": 13 },
         { "t": 4.5, "x": 18, "y": 14, "note": "Chasing in pursuit" }
       ]
     },

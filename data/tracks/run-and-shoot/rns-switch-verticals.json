@@ -81,13 +81,13 @@
       "trail": "none",
       "assignment": "Quick drop, read the switch conversion, deliver vertical to the winner",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
-        { "t": 0.5, "x": 26.67, "y": -3.8, "note": "Three-step drop" },
-        { "t": 1.1, "x": 26.67, "y": -5.4, "note": "Hitch, eyes on the switch" },
-        { "t": 1.9, "x": 26.9, "y": -5.2, "note": "Checking single-high lever" },
-        { "t": 2.7, "x": 27.3, "y": -4.4, "note": "Loading the vertical" },
-        { "t": 3.5, "x": 28.2, "y": -3.4, "note": "Full delivery" },
-        { "t": 4, "x": 29, "y": -2.4, "note": "Ball in flight" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.5, "x": 26.67, "y": -6, "note": "Three-step drop" },
+        { "t": 1.1, "x": 26.67, "y": -6.8, "note": "Hitch, eyes on the switch" },
+        { "t": 1.9, "x": 26.9, "y": -6.7, "note": "Checking single-high lever" },
+        { "t": 2.7, "x": 27.3, "y": -6.3, "note": "Loading the vertical" },
+        { "t": 3.5, "x": 28.2, "y": -5.8, "note": "Full delivery" },
+        { "t": 4, "x": 29, "y": -5.3, "note": "Ball in flight" }
       ]
     },
     {
@@ -98,7 +98,7 @@
       "trail": "route",
       "assignment": "Switch call: slam inside release, convert to vertical seam",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split, switch call" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split, switch call" },
         { "t": 0.8, "x": 8.3, "y": 2.6, "note": "Slamming inside past H" },
         { "t": 1.7, "x": 10.2, "y": 8, "note": "Converting vertical inside the numbers" },
         { "t": 2.7, "x": 11.8, "y": 13.5, "note": "Climbing on the inside hip" },
@@ -143,7 +143,7 @@
       "trail": "route",
       "assignment": "Pure go route to hold the corner deep on the right side",
       "waypoints": [
-        { "t": 0, "x": 48.2, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48.2, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.9, "x": 47.6, "y": 4.2, "note": "Vertical stem at RCB" },
         { "t": 2, "x": 46.4, "y": 11.5, "note": "Stacking the corner" },
         { "t": 3.2, "x": 44.8, "y": 18.5, "note": "Clearing the third" },

@@ -156,10 +156,26 @@
       "trail": "block",
       "assignment": "Sprint cheat motion right-to-inside, crack down on SAM linebacker / SDE with running start",
       "waypoints": [
-        { "t": 0, "x": 42, "y": -1.5, "note": "Full speed cheat motion right at snap" },
-        { "t": 0.6, "x": 35.5, "y": -0.5, "note": "Angle inside at full sprint speed" },
+        { "t": -1.7, "x": 42, "y": -1.5, "note": "Set in the formation" },
+        { "t": -0.7, "x": 42, "y": -1.5, "note": "Full speed cheat motion right at snap" },
+        { "t": -0.47, "x": 41.78, "y": -1.48 },
+        { "t": -0.23, "x": 41.13, "y": -1.43 },
+        { "t": 0, "x": 40.05, "y": -1.34, "note": "In motion at the snap" },
+        { "t": 0.3, "x": 38.01, "y": -1.17 },
+        { "t": 0.6, "x": 35.5, "y": -0.97, "note": "Angle inside at full sprint speed" },
+        { "t": 0.9, "x": 34.5, "y": 0.26 },
         { "t": 1.2, "x": 33.5, "y": 1.5, "note": "Deliver devastating crack block on SAM LB" },
+        { "t": 1.44, "x": 33.4, "y": 1.6 },
+        { "t": 1.68, "x": 33.3, "y": 1.7 },
+        { "t": 1.92, "x": 33.2, "y": 1.8 },
+        { "t": 2.16, "x": 33.1, "y": 1.9 },
         { "t": 2.4, "x": 33, "y": 2, "note": "Pancake SAM LB into turf" },
+        { "t": 2.66, "x": 33, "y": 2.07 },
+        { "t": 2.91, "x": 33, "y": 2.14 },
+        { "t": 3.17, "x": 33, "y": 2.21 },
+        { "t": 3.43, "x": 33, "y": 2.29 },
+        { "t": 3.69, "x": 33, "y": 2.36 },
+        { "t": 3.94, "x": 33, "y": 2.43 },
         { "t": 4.2, "x": 33, "y": 2.5, "note": "Block finished" }
       ]
     }

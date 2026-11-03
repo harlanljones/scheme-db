@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "orbit-motion-toss",
-  "duration": 4.2,
+  "duration": 4.3,
   "offense": [
     {
       "id": "C",
@@ -165,11 +165,25 @@
       "trail": "block",
       "assignment": "Fast orbit motion across backfield at t=0.0, stretch defensive overhang, crack block on RCB",
       "waypoints": [
-        { "t": 0, "x": 39.5, "y": -0.8, "note": "Orbit motion sprint behind formation" },
+        { "t": -1.55, "x": 39.5, "y": -0.8, "note": "Set in the formation" },
+        { "t": -0.55, "x": 39.5, "y": -0.8, "note": "Orbit motion sprint behind formation" },
+        { "t": -0.28, "x": 39.22, "y": -0.92 },
+        { "t": 0, "x": 38.4, "y": -1.29, "note": "In motion at the snap" },
+        { "t": 0.3, "x": 37.25, "y": -1.8 },
         { "t": 0.6, "x": 35, "y": -2.8, "note": "Crossing back of formation" },
+        { "t": 0.9, "x": 36.5, "y": -1.15 },
         { "t": 1.2, "x": 38, "y": 0.5, "note": "Insert into perimeter lead" },
+        { "t": 1.47, "x": 39, "y": 1.5 },
+        { "t": 1.73, "x": 40, "y": 2.5 },
         { "t": 2, "x": 41, "y": 3.5, "note": "Crack block on RCB" },
+        { "t": 2.24, "x": 41.2, "y": 4 },
+        { "t": 2.48, "x": 41.4, "y": 4.5 },
+        { "t": 2.72, "x": 41.6, "y": 5 },
+        { "t": 2.96, "x": 41.8, "y": 5.5 },
         { "t": 3.2, "x": 42, "y": 6, "note": "Seal sideline alley" },
+        { "t": 3.45, "x": 42.13, "y": 6.5 },
+        { "t": 3.7, "x": 42.25, "y": 7 },
+        { "t": 3.95, "x": 42.38, "y": 7.5 },
         { "t": 4.2, "x": 42.5, "y": 8, "note": "Perimeter sealed" }
       ]
     }
@@ -289,10 +303,23 @@
       "assignment": "Boundary corner: locked on X stalk block",
       "waypoints": [
         { "t": 0, "x": 13.5, "y": 6.5, "note": "Cover 3 deep third" },
+        { "t": 0.24, "x": 13.5, "y": 6.7 },
+        { "t": 0.48, "x": 13.5, "y": 6.9 },
+        { "t": 0.72, "x": 13.5, "y": 7.1 },
+        { "t": 0.96, "x": 13.5, "y": 7.3 },
         { "t": 1.2, "x": 13.5, "y": 7.5, "note": "Reading toss flow right" },
+        { "t": 1.46, "x": 14.1, "y": 7.6 },
+        { "t": 1.72, "x": 14.7, "y": 7.7 },
+        { "t": 1.98, "x": 15.3, "y": 7.8 },
+        { "t": 2.24, "x": 15.9, "y": 7.9 },
         { "t": 2.5, "x": 16.5, "y": 8, "note": "Engaged by X" },
+        { "t": 2.75, "x": 17.88, "y": 8.25 },
+        { "t": 3, "x": 19.25, "y": 8.5 },
+        { "t": 3.25, "x": 20.63, "y": 8.75 },
         { "t": 3.5, "x": 22, "y": 9, "note": "Late backside pursuit" },
-        { "t": 4.2, "x": 28, "y": 11, "note": "Trailing far behind" }
+        { "t": 3.75, "x": 24, "y": 9.67 },
+        { "t": 4, "x": 26, "y": 10.33 },
+        { "t": 4.25, "x": 28, "y": 11, "note": "Trailing far behind" }
       ]
     },
     {

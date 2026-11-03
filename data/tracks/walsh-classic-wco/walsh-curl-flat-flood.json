@@ -128,7 +128,7 @@
       "trail": "route",
       "assignment": "Backside clear-out vertical to hold the weak corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 6, "y": 4, "note": "Instant vertical stem" },
         { "t": 2, "x": 7.5, "y": 11, "note": "Pushing the corner deep" },
         { "t": 3.2, "x": 9, "y": 17, "note": "Holding the weak third" },
@@ -143,7 +143,7 @@
       "trail": "route",
       "assignment": "Deep level: fifteen-yard curl that attacks the seam before settling",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y tight right" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y tight right" },
         { "t": 0.8, "x": 32.6, "y": 4, "note": "Vertical push off the snap" },
         { "t": 1.7, "x": 31.8, "y": 10.5, "note": "Threatening the seam" },
         { "t": 2.5, "x": 31, "y": 15, "note": "Curl break at fifteen" },
@@ -159,7 +159,7 @@
       "trail": "route",
       "assignment": "Intermediate level: eight-yard out/curl at the numbers stretching the flat defender",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.7, "x": 46.8, "y": 3.5, "note": "Vertical release selling fade" },
         { "t": 1.5, "x": 45.5, "y": 7.5, "note": "Working back inside at eight" },
         { "t": 2.2, "x": 43, "y": 8.5, "note": "Out-break at the numbers" },

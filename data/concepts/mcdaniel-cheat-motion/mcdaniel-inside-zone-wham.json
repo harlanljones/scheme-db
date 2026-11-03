@@ -18,7 +18,7 @@
   },
   "beats": [
     {
-      "t": 0.5,
+      "t": 0.65,
       "title": "1. The Pre-Snap Cheat Motion Decoy",
       "text": "Z fires across the formation in full-speed cheat motion. The Will linebacker, Mike linebacker, and Free Safety all rotate aggressively left to stop the anticipated perimeter speed sweep.",
       "focus": ["Z", "WILL", "MIKE", "FS"]
@@ -36,7 +36,7 @@
       "focus": ["FB", "3T", "RG", "MIKE"]
     },
     {
-      "t": 2.8,
+      "t": 3.2,
       "title": "4. North-South A-Gap Explosion",
       "text": "With linebackers washed out by the motion decoy and the RG erasing the Mike, the running back hits the B-gap crease at full speed for an explosive 18-yard carry.",
       "focus": ["RB", "RG", "SS", "FS"]

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "bear-to-46-stem-disguise",
-  "duration": 4.5,
+  "duration": 5.1,
   "offense": [
     {
       "id": "LT",
@@ -110,7 +110,7 @@
       "trail": "block",
       "assignment": "Work inside for a crack if force widens",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Split alignment" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split alignment" },
         { "t": 1.2, "x": 8, "y": 0.8, "note": "Work inside on FS walk" },
         { "t": 2.6, "x": 12, "y": 1.4, "note": "FS already mugged — crack wasted" },
         { "t": 4.5, "x": 15, "y": 1.8, "note": "Jogging as pile settles" }
@@ -124,7 +124,7 @@
       "trail": "block",
       "assignment": "Stalk press corner off the slot",
       "waypoints": [
-        { "t": 0, "x": 41.5, "y": 1.2, "note": "Slot alignment" },
+        { "t": 0, "x": 41.5, "y": -0.5, "note": "Slot alignment" },
         { "t": 1.2, "x": 40.2, "y": 1.6, "note": "Work to RCB jam" },
         { "t": 2.6, "x": 39, "y": 2.2, "note": "Stuck on press hands" },
         { "t": 4.5, "x": 38, "y": 2.6, "note": "Perimeter play dead" }
@@ -138,10 +138,10 @@
       "trail": "none",
       "assignment": "Gun handoff on the inside dive check",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.8, "x": 27.3, "y": -2.3, "note": "Open-handoff" },
-        { "t": 2, "x": 27.9, "y": -2, "note": "Boot fake away" },
-        { "t": 4.5, "x": 28.3, "y": -1.7, "note": "Watches eight hats swarm" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.8, "x": 27.3, "y": -5.2, "note": "Open-handoff" },
+        { "t": 2, "x": 27.9, "y": -5.1, "note": "Boot fake away" },
+        { "t": 4.5, "x": 28.3, "y": -4.9, "note": "Watches eight hats swarm" }
       ]
     },
     {
@@ -152,8 +152,8 @@
       "trail": "carry",
       "assignment": "Take dive through strong A/B behind F pull",
       "waypoints": [
-        { "t": 0, "x": 23, "y": -3, "note": "Alignment depth" },
-        { "t": 0.8, "x": 26.3, "y": -3.9, "note": "Receive handoff" },
+        { "t": 0, "x": 23, "y": -5, "note": "Alignment depth" },
+        { "t": 0.8, "x": 26.3, "y": -4.8, "note": "Receive handoff" },
         { "t": 2, "x": 28.4, "y": -1.3, "note": "Hit line — box has grown" },
         { "t": 3.2, "x": 29, "y": 0.1, "note": "Met by walked SS at LOS" },
         { "t": 4.5, "x": 29.2, "y": 0.6, "note": "Stacked under the pile" }
@@ -286,10 +286,24 @@
       "assignment": "Stem from split safety into weak-A mug, close cutback",
       "waypoints": [
         { "t": 0, "x": 15.5, "y": 9.5, "note": "Split-safety disguise" },
-        { "t": 0.6, "x": 20, "y": 6, "note": "Sprinting downhill mid-cadence" },
-        { "t": 1.3, "x": 25.4, "y": 1.8, "note": "Mug over weak A" },
-        { "t": 2.4, "x": 25.8, "y": 0.8, "note": "Close cutback behind MIKE" },
-        { "t": 4.5, "x": 26.6, "y": 1, "note": "Backside secured" }
+        { "t": 0.25, "x": 17, "y": 8.33 },
+        { "t": 0.5, "x": 18.5, "y": 7.17 },
+        { "t": 0.75, "x": 20, "y": 6, "note": "Sprinting downhill mid-cadence" },
+        { "t": 1, "x": 21.8, "y": 4.6 },
+        { "t": 1.35, "x": 23.6, "y": 3.2 },
+        { "t": 1.7, "x": 25.4, "y": 1.8, "note": "Mug over weak A" },
+        { "t": 1.95, "x": 25.5, "y": 1.55 },
+        { "t": 2.2, "x": 25.6, "y": 1.3 },
+        { "t": 2.45, "x": 25.7, "y": 1.05 },
+        { "t": 2.7, "x": 25.8, "y": 0.8, "note": "Close cutback behind MIKE" },
+        { "t": 3, "x": 25.9, "y": 0.83 },
+        { "t": 3.3, "x": 26, "y": 0.85 },
+        { "t": 3.6, "x": 26.1, "y": 0.88 },
+        { "t": 3.9, "x": 26.2, "y": 0.9 },
+        { "t": 4.2, "x": 26.3, "y": 0.93 },
+        { "t": 4.5, "x": 26.4, "y": 0.95 },
+        { "t": 4.8, "x": 26.5, "y": 0.98 },
+        { "t": 5.1, "x": 26.6, "y": 1, "note": "Backside secured" }
       ]
     },
     {

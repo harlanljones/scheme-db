@@ -95,11 +95,11 @@
       "trail": "drop",
       "assignment": "One-hitch hot throw to H slant before the knives arrive",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.8, "x": 26.67, "y": -2.7, "note": "Hitch depth, eyes locked on A-gaps" },
-        { "t": 1.7, "x": 26.1, "y": -3.2, "note": "Panic step-up as both mugs fire" },
-        { "t": 2.7, "x": 25.7, "y": -3.4, "note": "Swallowed mid-throw" },
-        { "t": 4, "x": 25.5, "y": -3.6, "note": "Buried behind the marker" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.8, "x": 26.67, "y": -5.4, "note": "Hitch depth, eyes locked on A-gaps" },
+        { "t": 1.7, "x": 26.1, "y": -5.7, "note": "Panic step-up as both mugs fire" },
+        { "t": 2.7, "x": 25.7, "y": -5.8, "note": "Swallowed mid-throw" },
+        { "t": 4, "x": 25.5, "y": -5.9, "note": "Buried behind the marker" }
       ]
     },
     {
@@ -110,8 +110,8 @@
       "trail": "block",
       "assignment": "Scan and block first A-gap blitzer — one hat cannot take both",
       "waypoints": [
-        { "t": 0, "x": 22.8, "y": -3, "note": "Scan alignment" },
-        { "t": 0.9, "x": 24.4, "y": -3.6, "note": "Step toward the MIKE threat" },
+        { "t": 0, "x": 22.8, "y": -5, "note": "Scan alignment" },
+        { "t": 0.9, "x": 24.4, "y": -4.4, "note": "Step toward the MIKE threat" },
         { "t": 2, "x": 25.3, "y": -2.9, "note": "Takes MIKE as he crosses" },
         { "t": 4, "x": 25.8, "y": -2.6, "note": "Wrong hat — WILL ran free behind him" }
       ]
@@ -124,7 +124,7 @@
       "trail": "route",
       "assignment": "Quick out vs island press — secondary hot answer",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Release vs jam" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Release vs jam" },
         { "t": 0.9, "x": 6.4, "y": 1.8, "note": "Fight the two-hand punch" },
         { "t": 2.2, "x": 8.6, "y": 2.4, "note": "Out break delayed by trail technique" },
         { "t": 4, "x": 10.4, "y": 2.2, "note": "Separation came a half-second late" }
@@ -138,7 +138,7 @@
       "trail": "route",
       "assignment": "Designed hot slant — the intended pressure beater",
       "waypoints": [
-        { "t": 0, "x": 14.5, "y": 1.2, "note": "Slot alignment" },
+        { "t": 0, "x": 14.5, "y": -0.5, "note": "Slot alignment" },
         { "t": 0.8, "x": 16.2, "y": 2.2, "note": "Immediate slant release" },
         { "t": 2, "x": 20.4, "y": 4.8, "note": "Working across the hashes" },
         { "t": 4, "x": 24.2, "y": 6.8, "note": "Open and completely forgotten" }
@@ -152,7 +152,7 @@
       "trail": "route",
       "assignment": "Stem vertical to clear the island for the hot side",
       "waypoints": [
-        { "t": 0, "x": 46.5, "y": 0.5, "note": "Vertical stem" },
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Vertical stem" },
         { "t": 1.2, "x": 46.5, "y": 4.6, "note": "Push RCB deep" },
         { "t": 2.6, "x": 46, "y": 10.2, "note": "Clearing the intermediate window" },
         { "t": 4, "x": 45.6, "y": 14, "note": "Deep threat erased by single-high math" }

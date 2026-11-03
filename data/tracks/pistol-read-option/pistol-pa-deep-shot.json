@@ -120,7 +120,7 @@
       "trail": "route",
       "assignment": "Clear-out go route to remove the boundary corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.9, "x": 5.8, "y": 5, "note": "Instant vertical stem" },
         { "t": 2, "x": 7, "y": 12, "note": "Pushing corner deep" },
         { "t": 3.1, "x": 8.5, "y": 19, "note": "Boundary cleared" },
@@ -136,10 +136,22 @@
       "assignment": "Deep crosser at twelve to hold the free safety in the middle",
       "waypoints": [
         { "t": 0, "x": 12, "y": -1.2, "note": "Slot alignment" },
-        { "t": 0.7, "x": 18, "y": 1.5, "note": "Release upfield across formation" },
-        { "t": 1.6, "x": 26, "y": 4.5, "note": "Building the crosser" },
-        { "t": 2.4, "x": 33, "y": 7.5, "note": "Crossing at twelve" },
+        { "t": 0.25, "x": 14, "y": -0.3 },
+        { "t": 0.5, "x": 16, "y": 0.6 },
+        { "t": 0.75, "x": 18, "y": 1.5, "note": "Release upfield across formation" },
+        { "t": 0.99, "x": 20, "y": 2.25 },
+        { "t": 1.23, "x": 22, "y": 3 },
+        { "t": 1.46, "x": 24, "y": 3.75 },
+        { "t": 1.7, "x": 26, "y": 4.5, "note": "Building the crosser" },
+        { "t": 1.98, "x": 28.33, "y": 5.5 },
+        { "t": 2.27, "x": 30.67, "y": 6.5 },
+        { "t": 2.55, "x": 33, "y": 7.5, "note": "Crossing at twelve" },
+        { "t": 2.77, "x": 34.67, "y": 8.17 },
+        { "t": 2.98, "x": 36.33, "y": 8.83 },
         { "t": 3.2, "x": 38, "y": 9.5, "note": "Safety eyes locked on H" },
+        { "t": 3.45, "x": 38.88, "y": 9.88 },
+        { "t": 3.7, "x": 39.75, "y": 10.25 },
+        { "t": 3.95, "x": 40.63, "y": 10.63 },
         { "t": 4.2, "x": 41.5, "y": 11, "note": "Middle third held behind him" }
       ]
     },
@@ -151,7 +163,7 @@
       "trail": "route",
       "assignment": "Sell the run block, then release into the middle hole",
       "waypoints": [
-        { "t": 0, "x": 33.8, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.8, "y": -0.6, "note": "TE alignment" },
         { "t": 0.6, "x": 33.5, "y": 1.2, "note": "Selling run block" },
         { "t": 1.5, "x": 33.2, "y": 2.5, "note": "Block fake complete" },
         { "t": 2.4, "x": 33.5, "y": 7, "note": "Releasing upfield late" },
@@ -167,7 +179,7 @@
       "trail": "route",
       "assignment": "Deep post — the primary shot behind the creeping safety",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.9, "x": 47.6, "y": 4.5, "note": "Vertical stem selling go" },
         { "t": 2, "x": 46.6, "y": 11, "note": "Corner trailing deep" },
         { "t": 2.9, "x": 44, "y": 17.5, "note": "Breaking to the post lane" },

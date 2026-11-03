@@ -156,7 +156,7 @@
       "trail": "block",
       "assignment": "Down-block inside and climb to the second level",
       "waypoints": [
-        { "t": 0, "x": 33.5, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.5, "y": -0.6, "note": "TE alignment" },
         { "t": 0.5, "x": 32.6, "y": 0.3, "note": "Down block inside" },
         { "t": 1.4, "x": 33, "y": 1.2, "note": "Climbing to second level" },
         { "t": 2.4, "x": 33.4, "y": 2, "note": "Engaging linebacker" },
@@ -171,7 +171,7 @@
       "trail": "block",
       "assignment": "Stalk-block the boundary corner to kill backside pursuit",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.8, "x": 7, "y": 2.4, "note": "Working to the stalk" },
         { "t": 1.7, "x": 8.4, "y": 4.6, "note": "Closing on the corner" },
         { "t": 2.6, "x": 9.6, "y": 6.2, "note": "Stalk engaged" },

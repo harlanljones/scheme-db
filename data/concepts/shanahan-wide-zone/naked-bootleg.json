@@ -30,13 +30,13 @@
       "focus": ["SDE", "QB", "TE"]
     },
     {
-      "t": 2.2,
+      "t": 2.3,
       "title": "3. QB Naked Rollout & Triangle Flood",
       "text": "The QB pulls the ball and sprints into open space. TE slips into the flat (short), X crosses on a drag (intermediate), and Z clears the corner (deep).",
       "focus": ["QB", "TE", "X", "Z"]
     },
     {
-      "t": 3.4,
+      "t": 3.5,
       "title": "4. Pitch-and-Catch in the Flat",
       "text": "With the defense completely out of position on the opposite hash, QB delivers an easy completion to the TE for a 15+ yard walk-in gain.",
       "focus": ["QB", "TE", "SS"]

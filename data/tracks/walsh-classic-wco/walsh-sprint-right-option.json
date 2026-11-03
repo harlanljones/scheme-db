@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "walsh-sprint-right-option",
-  "duration": 4.2,
+  "duration": 4.4,
   "offense": [
     {
       "id": "C",
@@ -130,12 +130,24 @@
       "trail": "route",
       "assignment": "Come across from the backside on a deep drag behind the sprint",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
+        { "t": 0.27, "x": 5.67, "y": 0.83 },
+        { "t": 0.53, "x": 5.83, "y": 2.17 },
         { "t": 0.8, "x": 6, "y": 3.5, "note": "Vertical stem off the snap" },
+        { "t": 1.05, "x": 6.75, "y": 5.13 },
+        { "t": 1.3, "x": 7.5, "y": 6.75 },
+        { "t": 1.55, "x": 8.25, "y": 8.38 },
         { "t": 1.8, "x": 9, "y": 10, "note": "Stacking the bail corner" },
+        { "t": 2.05, "x": 10.75, "y": 11.25 },
+        { "t": 2.3, "x": 12.5, "y": 12.5 },
+        { "t": 2.55, "x": 14.25, "y": 13.75 },
         { "t": 2.8, "x": 16, "y": 15, "note": "Breaking inside into the cross-country lane" },
+        { "t": 3.05, "x": 18.25, "y": 15.25 },
+        { "t": 3.3, "x": 20.5, "y": 15.5 },
+        { "t": 3.55, "x": 22.75, "y": 15.75 },
         { "t": 3.8, "x": 25, "y": 16, "note": "Coming across toward the sprint side" },
-        { "t": 4.2, "x": 29, "y": 16.5, "note": "Deep crosser arriving late" }
+        { "t": 4.03, "x": 27, "y": 16.25 },
+        { "t": 4.25, "x": 29, "y": 16.5, "note": "Deep crosser arriving late" }
       ]
     },
     {
@@ -146,7 +158,7 @@
       "trail": "block",
       "assignment": "Seal the strong-side edge then release upfield as an outlet",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y tight right" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y tight right" },
         { "t": 0.7, "x": 33.2, "y": 1.5, "note": "Sealing the Sam edge first" },
         { "t": 1.8, "x": 34, "y": 3, "note": "Releasing upfield off the seal" },
         { "t": 3, "x": 34.5, "y": 7, "note": "Outlet climbing over the sprint lane" },
@@ -161,7 +173,7 @@
       "trail": "route",
       "assignment": "Primary: beat press and climb the corner route at twelve over the sprint lane",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right vs press" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right vs press" },
         { "t": 0.7, "x": 46.8, "y": 3, "note": "Winning outside release vs jam" },
         { "t": 1.5, "x": 45.5, "y": 8, "note": "Selling the fade vertically" },
         { "t": 2.2, "x": 44, "y": 13, "note": "Snapping to the corner route at twelve" },
@@ -283,10 +295,24 @@
       "assignment": "Weak third bail, carried by X's crosser",
       "waypoints": [
         { "t": 0, "x": 6.3, "y": 6.5, "note": "Off alignment" },
+        { "t": 0.25, "x": 6.43, "y": 7.5 },
+        { "t": 0.5, "x": 6.55, "y": 8.5 },
+        { "t": 0.75, "x": 6.68, "y": 9.5 },
         { "t": 1, "x": 6.8, "y": 10.5, "note": "Bailing with X" },
+        { "t": 1.23, "x": 7.33, "y": 11.42 },
+        { "t": 1.47, "x": 7.87, "y": 12.33 },
+        { "t": 1.7, "x": 8.4, "y": 13.25 },
+        { "t": 1.93, "x": 8.93, "y": 14.17 },
+        { "t": 2.17, "x": 9.47, "y": 15.08 },
         { "t": 2.4, "x": 10, "y": 16, "note": "X breaks inside — following" },
+        { "t": 2.64, "x": 11.4, "y": 16.4 },
+        { "t": 2.88, "x": 12.8, "y": 16.8 },
+        { "t": 3.12, "x": 14.2, "y": 17.2 },
+        { "t": 3.36, "x": 15.6, "y": 17.6 },
         { "t": 3.6, "x": 17, "y": 18, "note": "Trailing the deep drag" },
-        { "t": 4.2, "x": 24, "y": 18, "note": "Dragged across the field" }
+        { "t": 3.87, "x": 19.33, "y": 18 },
+        { "t": 4.13, "x": 21.67, "y": 18 },
+        { "t": 4.4, "x": 24, "y": 18, "note": "Dragged across the field" }
       ]
     },
     {

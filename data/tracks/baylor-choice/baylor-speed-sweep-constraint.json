@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "baylor-speed-sweep-constraint",
-  "duration": 4,
+  "duration": 4.4,
   "offense": [
     {
       "id": "C",
@@ -103,9 +103,9 @@
       "trail": "carry",
       "assignment": "Split-flow fake pressing the weak-side zone lane",
       "waypoints": [
-        { "t": 0, "x": 25, "y": -6.2, "note": "Gun alignment" },
-        { "t": 0.6, "x": 23.5, "y": -5.4, "note": "Faking flow away from the sweep" },
-        { "t": 1.4, "x": 22, "y": -4.2, "note": "Pressing the weak A-gap" },
+        { "t": 0, "x": 25, "y": -5, "note": "Gun alignment" },
+        { "t": 0.6, "x": 23.5, "y": -4.7, "note": "Faking flow away from the sweep" },
+        { "t": 1.4, "x": 22, "y": -4.1, "note": "Pressing the weak A-gap" },
         { "t": 2.2, "x": 20.8, "y": -3, "note": "Selling the inside give fully" },
         { "t": 3, "x": 20.2, "y": -2.2, "note": "Fake carried through" },
         { "t": 4, "x": 20, "y": -2, "note": "Play complete" }
@@ -119,7 +119,7 @@
       "trail": "route",
       "assignment": "Run off vertical clearing the backside corner",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 5.6, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 6.4, "y": 11, "note": "Pushing the corner deep" },
         { "t": 3.2, "x": 7.2, "y": 16.5, "note": "Holding his quarter" },
@@ -134,14 +134,26 @@
       "trail": "carry",
       "assignment": "Jet across the formation and take the sweep at full speed off the kickout",
       "waypoints": [
-        { "t": 0, "x": 11.5, "y": -1.4, "note": "Slot alignment pre-jet" },
-        { "t": 0.5, "x": 16, "y": -2, "note": "Jetting across the formation" },
-        { "t": 1, "x": 22, "y": -3, "note": "Full sprint through the backfield" },
-        { "t": 1.5, "x": 27, "y": -2.6, "note": "Taking the exchange at top speed" },
-        { "t": 2.2, "x": 33.5, "y": -0.5, "note": "Pressing the edge horizontally" },
-        { "t": 2.9, "x": 38.5, "y": 2, "note": "Bending up off the kickout" },
-        { "t": 3.6, "x": 41.5, "y": 5.5, "note": "Perimeter acceleration" },
-        { "t": 4, "x": 42.5, "y": 7.5, "note": "Play complete on the edge" }
+        { "t": -1.6, "x": 11.5, "y": -1.4, "note": "Set in the formation" },
+        { "t": -0.6, "x": 11.5, "y": -1.4, "note": "Slot alignment pre-jet" },
+        { "t": -0.3, "x": 11.86, "y": -1.45 },
+        { "t": 0, "x": 12.85, "y": -1.58, "note": "In motion at the snap" },
+        { "t": 0.25, "x": 13.75, "y": -1.7 },
+        { "t": 0.55, "x": 16, "y": -2, "note": "Jetting across the formation" },
+        { "t": 0.8, "x": 18, "y": -2.33 },
+        { "t": 1.05, "x": 20, "y": -2.67 },
+        { "t": 1.3, "x": 22, "y": -3, "note": "Full sprint through the backfield" },
+        { "t": 1.6, "x": 24.5, "y": -2.8 },
+        { "t": 1.9, "x": 27, "y": -2.6, "note": "Taking the exchange at top speed" },
+        { "t": 2.2, "x": 29.17, "y": -1.9 },
+        { "t": 2.5, "x": 31.33, "y": -1.2 },
+        { "t": 2.8, "x": 33.5, "y": -0.5, "note": "Pressing the edge horizontally" },
+        { "t": 3.15, "x": 36, "y": 0.75 },
+        { "t": 3.5, "x": 38.5, "y": 2, "note": "Bending up off the kickout" },
+        { "t": 3.8, "x": 40, "y": 3.75 },
+        { "t": 4.1, "x": 41.5, "y": 5.5, "note": "Perimeter acceleration" },
+        { "t": 4.25, "x": 42, "y": 6.5 },
+        { "t": 4.4, "x": 42.5, "y": 7.5, "note": "Play complete on the edge" }
       ]
     },
     {
@@ -152,7 +164,7 @@
       "trail": "block",
       "assignment": "Stalk block the sweep-side corner",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.6, "x": 47.6, "y": 1.5, "note": "Working down to the corner" },
         { "t": 1.4, "x": 47.2, "y": 3.5, "note": "Engaging the stalk" },
         { "t": 2.2, "x": 47, "y": 5.5, "note": "Stalking through the whistle" },
@@ -168,7 +180,7 @@
       "trail": "block",
       "assignment": "Kick out the nickel force player head-on",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y alignment" },
         { "t": 0.5, "x": 33.6, "y": 0.2, "note": "Leading out of the slot" },
         { "t": 1.3, "x": 35.5, "y": 1.2, "note": "Kicking out the force defender" },
         { "t": 2.2, "x": 36.5, "y": 2, "note": "Kickout landing full-force" },

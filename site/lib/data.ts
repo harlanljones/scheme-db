@@ -9,6 +9,7 @@ import { DISGUISE_HOLD_PERCENT, DISGUISE_WINDOW_FRAMES, summarizeDisguise } from
 import { levelOfEra } from '../../src/engine/field';
 import { siteDataVersion } from '../../src/release/version';
 import { FRAME_RATE_HZ } from '../../src/engine/frames';
+import { leadIn } from '../../src/engine/presnap';
 import type { Coach, Concept, Dataset, Lineage, Scheme, Term, Tracks } from '../../src/schema/schema';
 import type { PlayerTrack } from '../../src/engine/types';
 import { fieldWindow, gapDistances, pairedCount, type FieldWindow, type LitePlay } from './field';
@@ -235,6 +236,7 @@ export function litePlay(concept: Concept, tracks: Tracks): LitePlay {
     id: concept.id,
     name: tidy(concept.name),
     duration: tracks.duration,
+    leadIn: leadIn([...tracks.offense, ...tracks.defense]),
     level: levelOfEra(scheme.era),
     spot: concept.ballSpot ?? 'middle',
     scored: scheme.side,

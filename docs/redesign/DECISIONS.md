@@ -46,14 +46,33 @@ An independent audit of the first Astro build (UI and UX, football accuracy, usa
 |---|---|---|---|
 | 1 | What does "mentor" mean? | **Worked directly under, in any role.** Influence that passed on without a job link is a separate, dashed line. A network chart shows both. | Coach records corrected (11 coaches). A mentor or disciple link with no source was removed rather than kept (Chris Shula, Chip Kelly). New Lineages page and a chart on every scheme page. |
 | 2 | Score both sides of the ball? | **Score only the side that sells the look.** Offense on offense schemes, defense on defense schemes. The other side is the one reading it. | Engine takes a `side`. Scores changed (average / at 1.2 s): Play Action Deep Over 95/89 (was 96/92), Naked Bootleg 95/89 (was 97/93), Jet Motion 71/48 (was 79/61). Jet Motion now drops below the 80% line at 0.4 s, not 0.6 s. About and the Compare panel say which side is counted. |
-| 3 | Pre snap time (negative `t`)? | **Spec it, do not build it yet.** | Spec in the Claude Docs list: "Pre-snap time: spec for negative t". Four phases, 30 to 40 hours. |
+| 3 | Pre snap time (negative `t`)? | **Spec it, do not build it yet.** Later reversed: Harlan said "fix it" (2026-11-02), so phases 1 to 3 were built before launch. See "Pre snap time" below. | Spec in the Claude Docs list: "Pre-snap time: spec for negative t". Four phases, 30 to 40 hours. |
 | 4 | Hash marks? | **Draw NFL and college hash marks and the ball spot.** | `data/` has an optional `ballSpot` (left, middle, right) on a concept. Fields draw the hash marks of the scheme's level and a ball marker. The release `concepts` table has `ball_spot` and `ball_x`. Five plays name a spot. |
 | 5 | "Disguise" or "Same look" on offense? | **My call: "Same look" on offense pages, "Disguise" on defense pages.** Coaches say disguise for defense and "same look" for matching offensive plays. | Labels and section titles follow the side. |
 | 6 | Per play share images? | **Yes, if sensible.** | `satori` and `@resvg/resvg-js` as build only dependencies. 180 play images and one site image, 1200 by 630, about 5 MB in all, drawn at build time. Each says the play is an illustration. |
 
 Also done from the audit: comparison headings now say which sheets start alike and which do not, plays are searchable, the first Play press starts at the snap, the compare fields are larger, hash and ball legend, print styles, wrong role titles fixed (Greg Roman, Chip Kelly, Robert Saleh), "red zone" removed from five plays that sit in midfield, and the "identical" claim removed next to a score under 100%.
 
-Still open from the audit (not done): a motion catalog (ghost overlay, routes inking in, beat focus, view transitions), offside starts (FB-3), quarterback depth in shotgun (FB-4), personnel labels that disagree with the drawn players (FB-12), a copy pass over data text (FB-13), a `comparisons.csv` download (UX-5), name only records for people who are named as mentors but have no coach page.
+Still open from the audit (not done): a motion catalog (ghost overlay, routes inking in, beat focus, view transitions), a copy pass over data text (FB-13), a `comparisons.csv` download (UX-5), name only records for people who are named as mentors but have no coach page.
+
+## Pre snap time (2026-11-02)
+
+Harlan said "fix it" to the question of whether the pre snap motion problem could wait until after launch, so phases 1 to 3 of the spec were built on the mid-season branch. Four questions the spec left open were answered with its recommended defaults:
+
+| Question | Default used |
+|---|---|
+| Where do negative frames go in the frames export? | Same `frames` table, with negative `frame` numbers. |
+| What does the hero loop show? | It keeps looping from the snap. |
+| When do the movement checks fail a build? | They warned first (phase 1) and now fail it (phase 3). |
+| Phase 4 (a pre snap look score and a rotation shell for the defense)? | Left for later. |
+
+What changed:
+
+- **Time.** `t = 0` is the snap and a negative `t` is before it, to `-6` s. Every track has a waypoint at `t = 0`; `duration` stays the seconds after the snap; the lead in is derived and never stored. The viewer's scrubber starts at the lead in, with set, motion and snap bands and a Snap button. Releases carry `lead_in` on `concepts` and negative `frame` rows.
+- **Speed.** No player in `data/` runs faster than 10.5 yd/s or speeds up faster than 12 yd/s² (over half a second) on the viewer's curve. The error lines are 12 yd/s and 16 yd/s²; they fail `data:validate`, and the warn lines (10.5 and 12) are reported. Why the curve matters: a short segment next to a long one is run too fast and the long one too slow, so fast runs are cut into quarter second pieces (`bun run retime`).
+- **Motion at the snap.** One player may be in motion, not toward the line, and a shift must end a second before the snap. Thirteen plays (jet, orbit and cheat motion) now start the man set, then run so he reaches the snap at speed. The spec guessed about 25; the rest of the plays that name motion are a defensive shift, a slow slot motion or a post snap sweep, which have nothing to move.
+- **Play checks (audit FB-3, FB-4, FB-12).** No offensive player past the line, seven on it, quarterback depth that matches Gun, Pistol or Under Center, and personnel and secondary labels that match the drawing. The library was fixed to pass and the checks fail the build.
+- **Scores.** Re-scored with the same engine and window: 49 of 135 sheet rows changed, by 0.1 points on average. Jet Motion is the one that changes meaning (71% to 68% average, 48% to 59% at 1.2 s, break at 0.1 s, not 0.4 s). Three sheet rows cross the 80% line. The full table is in the pull request.
 
 ## Library pages (2026-11-02)
 

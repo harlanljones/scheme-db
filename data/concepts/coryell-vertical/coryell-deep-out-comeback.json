@@ -17,19 +17,19 @@
   },
   "beats": [
     {
-      "t": 0.7,
+      "t": 0.8,
       "title": "1. Press Release Battles",
       "text": "Both corners are pressed to the receivers' chests because there is no help over the top. The flanker fights for an outside stack while the split end grinds out an inside release.",
       "focus": ["Z", "X", "RCB", "LCB"]
     },
     {
-      "t": 1.8,
+      "t": 2.1,
       "title": "2. The Deep-Out Window Opens",
       "text": "The quarterback hits his fifth step and looks at the 18-yard deep out. The corner is still in phase, but the receiver has leverage — this is the primary read if it stays open.",
       "focus": ["QB", "Z", "RCB"]
     },
     {
-      "t": 2.6,
+      "t": 2.8,
       "title": "3. The Progression Flip",
       "text": "The corner sits on the out-break and closes the window. The quarterback hitches and flips his eyes to the backside comeback, where X has stacked his press corner.",
       "focus": ["QB", "X", "LCB"]

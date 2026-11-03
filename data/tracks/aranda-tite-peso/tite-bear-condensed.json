@@ -97,10 +97,10 @@
       "trail": "none",
       "assignment": "Under-center style handoff to RB on strong power",
       "waypoints": [
-        { "t": 0, "x": 26.2, "y": -1.8, "note": "Open-handoff" },
-        { "t": 0.8, "x": 27.9, "y": -2, "note": "Give to RB" },
-        { "t": 2, "x": 29.4, "y": -1.6, "note": "Boot fake away" },
-        { "t": 4, "x": 30, "y": -1.2, "note": "Watches pile form at LOS" }
+        { "t": 0, "x": 26.2, "y": -5, "note": "Open-handoff" },
+        { "t": 0.8, "x": 27.9, "y": -5.1, "note": "Give to RB" },
+        { "t": 2, "x": 29.4, "y": -4.8, "note": "Boot fake away" },
+        { "t": 4, "x": 30, "y": -4.4, "note": "Watches pile form at LOS" }
       ]
     },
     {
@@ -126,7 +126,7 @@
       "trail": "block",
       "assignment": "Stalk the backside press corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Backside island alignment" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Backside island alignment" },
         { "t": 1, "x": 6.5, "y": 1.5, "note": "Work to press corner" },
         { "t": 2.4, "x": 7.5, "y": 2.5, "note": "Corner fights over the stalk" },
         { "t": 4, "x": 8.5, "y": 3.2, "note": "Contained on island" }
@@ -140,7 +140,7 @@
       "trail": "route",
       "assignment": "Decoy slant off the condensed split",
       "waypoints": [
-        { "t": 0, "x": 40, "y": 0.5, "note": "Condensed #1 alignment" },
+        { "t": 0, "x": 40, "y": -0.5, "note": "Condensed #1 alignment" },
         { "t": 1, "x": 39.2, "y": 1.5, "note": "Slant release vs press" },
         { "t": 2.4, "x": 38.4, "y": 3, "note": "Jam kills route timing" },
         { "t": 4, "x": 37.6, "y": 4.2, "note": "Slant dead at stem" }
@@ -154,7 +154,7 @@
       "trail": "block",
       "assignment": "Crack the alley safety to spring the puller",
       "waypoints": [
-        { "t": 0, "x": 43, "y": 0.7, "note": "Condensed #2 alignment" },
+        { "t": 0, "x": 43, "y": -0.5, "note": "Condensed #2 alignment" },
         { "t": 1, "x": 42.4, "y": 2, "note": "Release to crack SS" },
         { "t": 2.4, "x": 41.4, "y": 3.6, "note": "Dime disrupts crack path" },
         { "t": 4, "x": 40.6, "y": 4.8, "note": "Crack never lands on safety" }

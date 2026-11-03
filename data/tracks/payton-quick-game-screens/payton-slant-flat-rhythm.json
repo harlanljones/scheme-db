@@ -155,10 +155,15 @@
       "assignment": "Outside push vs press, break the slant inside behind the NICKEL",
       "waypoints": [
         { "t": 0, "x": 46, "y": -0.5, "note": "Two-step push vs press" },
+        { "t": 0.2, "x": 46.25, "y": 0.75 },
         { "t": 0.4, "x": 46.5, "y": 2, "note": "Sell vertical to freeze RCB" },
-        { "t": 0.85, "x": 43.5, "y": 6.5, "note": "Break slant inside" },
-        { "t": 1, "x": 42.5, "y": 8, "note": "Catch point behind NICKEL" },
-        { "t": 1.7, "x": 39, "y": 13.5, "note": "Climb the slant upfield" },
+        { "t": 0.7, "x": 45, "y": 4.25 },
+        { "t": 1, "x": 43.5, "y": 6.5, "note": "Break slant inside" },
+        { "t": 1.2, "x": 42.5, "y": 8, "note": "Catch point behind NICKEL" },
+        { "t": 1.43, "x": 41.33, "y": 9.83 },
+        { "t": 1.67, "x": 40.17, "y": 11.67 },
+        { "t": 1.9, "x": 39, "y": 13.5, "note": "Climb the slant upfield" },
+        { "t": 2.2, "x": 38, "y": 15.5 },
         { "t": 2.5, "x": 37, "y": 17.5, "note": "Finish for extra yards" }
       ]
     }

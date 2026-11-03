@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { PRESNAP_MAX_SECONDS } from '../engine/presnap';
 
 /**
  * SchemeDB data model. Every record under `data/` is parsed against one of these schemas.
@@ -54,12 +55,28 @@ export const Provenance = z.strictObject({
   notes: text.optional(),
 });
 
+/** `t` is seconds from the snap: `0` is the snap and a negative value is before it, down to `-PRESNAP_MAX_SECONDS`. */
 export const Waypoint = z.strictObject({
-  t: z.number().min(0),
+  t: z.number().min(-PRESNAP_MAX_SECONDS),
   x: z.number(),
   y: z.number(),
   note: text.optional(),
 });
+
+/** A player's path: strictly ascending in time, with a waypoint at exactly the snap (`t = 0`). */
+const Waypoints = z
+  .array(Waypoint)
+  .min(1)
+  .superRefine((waypoints, ctx) => {
+    waypoints.forEach((waypoint, i) => {
+      if (i > 0 && waypoint.t <= waypoints[i - 1].t) {
+        ctx.addIssue({ code: 'custom', path: [i, 't'], message: `waypoint times must ascend, found ${waypoint.t} after ${waypoints[i - 1].t}` });
+      }
+    });
+    if (!waypoints.some((waypoint) => waypoint.t === 0)) {
+      ctx.addIssue({ code: 'custom', message: 'a track needs a waypoint at the snap (t = 0)' });
+    }
+  });
 
 /** How a player's waypoints came to be. Absent means `authored`. */
 export const Origin = z.enum(['compiled', 'authored']);
@@ -72,7 +89,7 @@ export const PlayerTrack = z.strictObject({
   trail: Trail,
   assignment: text.optional(),
   origin: Origin.optional(),
-  waypoints: z.array(Waypoint).min(1),
+  waypoints: Waypoints,
 });
 
 export const Beat = z.strictObject({

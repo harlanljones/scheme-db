@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "sprintout-smash-wheel",
-  "duration": 4.4,
+  "duration": 4.6,
   "offense": [
     {
       "id": "C",
@@ -120,10 +120,10 @@
       "waypoints": [
         { "t": 0, "x": 7, "y": -0.5, "note": "Boundary split" },
         { "t": 0.8, "x": 7, "y": 4, "note": "Vertical stem pushing LCB" },
-        { "t": 1.8, "x": 7, "y": 11.5, "note": "Push to 14 yards depth" },
-        { "t": 2.8, "x": 6, "y": 10, "note": "Snap back toward boundary sideline" },
-        { "t": 3.6, "x": 5.5, "y": 9.5, "note": "Work back to QB vision" },
-        { "t": 4.4, "x": 5, "y": 9, "note": "Backside outlet" }
+        { "t": 1.9, "x": 7, "y": 11.5, "note": "Push to 14 yards depth" },
+        { "t": 2.9, "x": 6, "y": 10, "note": "Snap back toward boundary sideline" },
+        { "t": 3.7, "x": 5.5, "y": 9.5, "note": "Work back to QB vision" },
+        { "t": 4.5, "x": 5, "y": 9, "note": "Backside outlet" }
       ]
     },
     {
@@ -308,8 +308,8 @@
         { "t": 0.8, "x": 47, "y": 6.8, "note": "Read QB rollout; see Z stem inside" },
         { "t": 1.6, "x": 44.5, "y": 5.5, "note": "Squat hard downhill on H hitch route (Smash trap)" },
         { "t": 2.5, "x": 44, "y": 5.2, "note": "Realize Z has converted to vertical wheel behind him" },
-        { "t": 3.4, "x": 47, "y": 12, "note": "Turn and sprint in desperate recovery" },
-        { "t": 4.4, "x": 49, "y": 19, "note": "Beaten for deep touchdown" }
+        { "t": 3.6, "x": 47, "y": 12, "note": "Turn and sprint in desperate recovery" },
+        { "t": 4.6, "x": 49, "y": 19, "note": "Beaten for deep touchdown" }
       ]
     },
     {

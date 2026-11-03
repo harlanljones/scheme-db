@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { PRESNAP_MAX_SECONDS } from '../engine/presnap';
 import { Waypoint } from '../schema/schema';
 import { BLOCKS, DROPS, MAN, ROUTES, RUSHES, TECHNIQUES, ZONES, keysOf } from './vocabulary';
 
@@ -13,8 +14,21 @@ const Direction = z.enum(['left', 'right']);
 const ZoneSide = z.enum(['left', 'middle', 'right']);
 const assignment = text.describe('Text for the viewer. Defaults to a description of the term.').optional();
 
+const Point = z.tuple([z.number(), z.number()]);
+
+/**
+ * Pre-snap motion: a straight run at a constant speed that ends at the snap. Used on a player who is moving when the
+ * ball is snapped (a jet or orbit man). The route that follows starts where the motion ends.
+ */
+export const MotionAction = z.strictObject({
+  from: Point.describe('[x, y] where the player lines up. It must match his place in the formation.'),
+  to: Point.describe('[x, y] where he is at the snap. His route starts here.'),
+  seconds: z.number().positive().max(PRESNAP_MAX_SECONDS).describe('How long before the snap the motion starts. The speed is the distance divided by this, and the compiler refuses a speed no one can run.'),
+});
+
 export const RouteAction = z.strictObject({
   route: terms(ROUTES),
+  motion: MotionAction.optional(),
   depth: z.number().positive().describe('Yards upfield at the break (or total depth for flat and shallow).').optional(),
   delay: z.number().min(0).describe('Seconds to wait after the snap before releasing.').optional(),
   side: Direction.describe('Direction to run for flat, shallow and swing. Defaults to outward (inward for shallow).').optional(),
@@ -77,5 +91,6 @@ export const Spec = z.strictObject({
 });
 
 export type Spec = z.infer<typeof Spec>;
+export type MotionAction = z.infer<typeof MotionAction>;
 export type OffenseAction = z.infer<typeof OffenseAction>;
 export type DefenseAction = z.infer<typeof DefenseAction>;

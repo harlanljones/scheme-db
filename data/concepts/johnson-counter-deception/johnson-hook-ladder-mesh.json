@@ -18,25 +18,25 @@
   },
   "beats": [
     {
-      "t": 0.8,
+      "t": 0.9,
       "title": "1. Two-Man Mesh Concept",
       "text": "TE runs a 5-yard hook while the RB releases from the backfield on the \"ladder\" — the classic 2-man mesh where the second receiver (RB) slips past the first receiver's (TE) hook to create a natural pick.",
       "focus": ["TE", "RB", "WILL", "QB"]
     },
     {
-      "t": 1.4,
+      "t": 1.6,
       "title": "2. The Rub and Slip",
       "text": "The WILL linebacker is in man coverage on the RB but cannot follow him through the natural rub that the TE's hook creates. The RB slips free with a full stride of separation as the WILL crashes into the TE body.",
       "focus": ["RB", "TE", "WILL"]
     },
     {
-      "t": 2.2,
+      "t": 2.4,
       "title": "3. Lateral in Space",
       "text": "The QB flips a quick lateral pass to the RB running free in space. Nickel is dragged across the field by H's drag, MIKE is too deep inside, leaving a wide-open throwing lane and clear space for the RB to work in.",
       "focus": ["QB", "RB", "NICKEL", "MIKE"]
     },
     {
-      "t": 3,
+      "t": 3.3,
       "title": "4. First Down in Space",
       "text": "The RB catches in space 8 yards beyond the LOS with only the free safety to beat. The hook-ladder deception has converted a critical third-and-5 by exploiting man-coverage rubs.",
       "focus": ["RB", "FS", "WILL"]

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "airraid-shallow-distribution-drive",
-  "duration": 4,
+  "duration": 4.3,
   "offense": [
     {
       "id": "C",
@@ -98,8 +98,8 @@
       "trail": "block",
       "assignment": "Check pressure then release weak as outlet valve",
       "waypoints": [
-        { "t": 0, "x": 31, "y": -6.2, "note": "Gun offset alignment" },
-        { "t": 0.7, "x": 30.5, "y": -6.6, "note": "Checking blitz look" },
+        { "t": 0, "x": 31, "y": -5, "note": "Gun offset alignment" },
+        { "t": 0.7, "x": 30.5, "y": -6, "note": "Checking blitz look" },
         { "t": 1.6, "x": 29, "y": -7.3, "note": "Releasing weak" },
         { "t": 2.8, "x": 25.5, "y": -7.8, "note": "Weak outlet path" },
         { "t": 4, "x": 22.5, "y": -8, "note": "Emergency valve" }
@@ -113,12 +113,24 @@
       "trail": "route",
       "assignment": "Near layer: six-yard shallow crosser driving across the entire formation",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split left" },
+        { "t": 0.3, "x": 5.75, "y": 1 },
         { "t": 0.6, "x": 6.5, "y": 2.5, "note": "One vertical step then snap down" },
+        { "t": 0.87, "x": 8.33, "y": 3 },
+        { "t": 1.13, "x": 10.17, "y": 3.5 },
         { "t": 1.4, "x": 12, "y": 4, "note": "Into the six-yard lane" },
-        { "t": 2.2, "x": 21, "y": 4.5, "note": "Driving over the ball" },
-        { "t": 3, "x": 30, "y": 4.5, "note": "Crossing under the field-side stems" },
-        { "t": 4, "x": 38, "y": 4.5, "note": "Near layer exiting strong" }
+        { "t": 1.65, "x": 14.25, "y": 4.13 },
+        { "t": 1.9, "x": 16.5, "y": 4.25 },
+        { "t": 2.15, "x": 18.75, "y": 4.38 },
+        { "t": 2.4, "x": 21, "y": 4.5, "note": "Driving over the ball" },
+        { "t": 2.65, "x": 23.25, "y": 4.5 },
+        { "t": 2.9, "x": 25.5, "y": 4.5 },
+        { "t": 3.15, "x": 27.75, "y": 4.5 },
+        { "t": 3.4, "x": 30, "y": 4.5, "note": "Crossing under the field-side stems" },
+        { "t": 3.63, "x": 32, "y": 4.5 },
+        { "t": 3.85, "x": 34, "y": 4.5 },
+        { "t": 4.08, "x": 36, "y": 4.5 },
+        { "t": 4.3, "x": 38, "y": 4.5, "note": "Near layer exiting strong" }
       ]
     },
     {
@@ -160,7 +172,7 @@
       "trail": "route",
       "assignment": "Field-side vertical clearout holding the corner deep",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 47.5, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 46.8, "y": 11.5, "note": "Pinning the bail corner" },
         { "t": 3.2, "x": 46.2, "y": 18, "note": "Holding the deep third" },
@@ -279,8 +291,21 @@
       "assignment": "Bail third carried by H's clearout",
       "waypoints": [
         { "t": 0, "x": 5.6, "y": 7.5, "note": "Off alignment" },
+        { "t": 0.25, "x": 5.75, "y": 8.25 },
+        { "t": 0.5, "x": 5.9, "y": 9 },
+        { "t": 0.75, "x": 6.05, "y": 9.75 },
         { "t": 1, "x": 6.2, "y": 10.5, "note": "Bailing with H" },
+        { "t": 1.23, "x": 6.5, "y": 11.33 },
+        { "t": 1.47, "x": 6.8, "y": 12.17 },
+        { "t": 1.7, "x": 7.1, "y": 13 },
+        { "t": 1.93, "x": 7.4, "y": 13.83 },
+        { "t": 2.17, "x": 7.7, "y": 14.67 },
         { "t": 2.4, "x": 8, "y": 15.5, "note": "X leaves underneath — staying with H" },
+        { "t": 2.63, "x": 8.5, "y": 16.33 },
+        { "t": 2.87, "x": 9, "y": 17.17 },
+        { "t": 3.1, "x": 9.5, "y": 18 },
+        { "t": 3.33, "x": 10, "y": 18.83 },
+        { "t": 3.57, "x": 10.5, "y": 19.67 },
         { "t": 3.8, "x": 11, "y": 20.5, "note": "Dragged out of the shallow lane" },
         { "t": 4, "x": 12, "y": 21.5, "note": "Out of position" }
       ]

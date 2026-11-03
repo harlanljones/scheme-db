@@ -86,14 +86,14 @@
       "trail": "carry",
       "assignment": "Arc toward the perimeter reading force — pitch when the corner triggers",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap with reverse motion showing" },
-        { "t": 0.4, "x": 27.8, "y": -3.7, "note": "Opening right off the fake exchange" },
-        { "t": 1, "x": 30, "y": -3.2, "note": "Arcing flat toward the edge" },
-        { "t": 1.6, "x": 32.5, "y": -2.6, "note": "Reading the force defender" },
-        { "t": 2.2, "x": 34.5, "y": -2, "note": "Corner triggering upfield" },
-        { "t": 2.5, "x": 35.2, "y": -1.8, "note": "Pitch delivered on the trigger" },
-        { "t": 3.3, "x": 36.5, "y": -2.2, "note": "Selling keep behind the pitch" },
-        { "t": 4.2, "x": 37.5, "y": -2.6, "note": "Trailing the play wide" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap with reverse motion showing" },
+        { "t": 0.4, "x": 27.8, "y": -5.9, "note": "Opening right off the fake exchange" },
+        { "t": 1, "x": 30, "y": -5.7, "note": "Arcing flat toward the edge" },
+        { "t": 1.6, "x": 32.5, "y": -5.4, "note": "Reading the force defender" },
+        { "t": 2.2, "x": 34.5, "y": -5.1, "note": "Corner triggering upfield" },
+        { "t": 2.5, "x": 35.2, "y": -5, "note": "Pitch delivered on the trigger" },
+        { "t": 3.3, "x": 36.5, "y": -5.2, "note": "Selling keep behind the pitch" },
+        { "t": 4.2, "x": 37.5, "y": -5.4, "note": "Trailing the play wide" }
       ]
     },
     {
@@ -123,7 +123,7 @@
       "trail": "route",
       "assignment": "Backside go route made lethal by the reverse constraint freezing the corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.9, "x": 5.8, "y": 5, "note": "Instant vertical stem" },
         { "t": 2, "x": 7, "y": 12, "note": "Corner respecting reverse — carrying deep" },
         { "t": 3.1, "x": 8.5, "y": 19, "note": "Third cleared" },
@@ -138,12 +138,27 @@
       "trail": "block",
       "assignment": "Reverse-constraint motion — sprint left selling the reverse, then block backside pursuit",
       "waypoints": [
-        { "t": 0, "x": 41, "y": -1.3, "note": "Slot right — motion begins leftward" },
+        { "t": -1.95, "x": 41, "y": -1.3, "note": "Set in the formation" },
+        { "t": -0.95, "x": 41, "y": -1.3, "note": "Slot right — motion begins leftward" },
+        { "t": -0.71, "x": 40.78, "y": -1.33 },
+        { "t": -0.47, "x": 40.11, "y": -1.42 },
+        { "t": -0.24, "x": 38.99, "y": -1.58 },
+        { "t": 0, "x": 37.42, "y": -1.79, "note": "In motion at the snap" },
+        { "t": 0.28, "x": 35.22, "y": -2.09 },
         { "t": 0.55, "x": 33, "y": -2.4, "note": "Sprinting left with reverse body language" },
-        { "t": 1.05, "x": 26.5, "y": -3, "note": "Fake reverse receipt point" },
-        { "t": 1.6, "x": 21, "y": -3.4, "note": "Continuing left as pure decoy" },
-        { "t": 2.3, "x": 16.5, "y": -3.6, "note": "Constraint sold — pursuit frozen left" },
+        { "t": 0.8, "x": 30.83, "y": -2.6 },
+        { "t": 1.05, "x": 28.67, "y": -2.8 },
+        { "t": 1.3, "x": 26.5, "y": -3, "note": "Fake reverse receipt point" },
+        { "t": 1.52, "x": 24.67, "y": -3.13 },
+        { "t": 1.73, "x": 22.83, "y": -3.27 },
+        { "t": 1.95, "x": 21, "y": -3.4, "note": "Continuing left as pure decoy" },
+        { "t": 2.23, "x": 18.75, "y": -3.5 },
+        { "t": 2.5, "x": 16.5, "y": -3.6, "note": "Constraint sold — pursuit frozen left" },
+        { "t": 2.8, "x": 14.75, "y": -3.2 },
         { "t": 3.1, "x": 13, "y": -2.8, "note": "Redirecting to block Will" },
+        { "t": 3.38, "x": 12.63, "y": -2.65 },
+        { "t": 3.65, "x": 12.25, "y": -2.5 },
+        { "t": 3.93, "x": 11.88, "y": -2.35 },
         { "t": 4.2, "x": 11.5, "y": -2.2, "note": "Backside pursuit erased" }
       ]
     },
@@ -155,7 +170,7 @@
       "trail": "block",
       "assignment": "Reach and climb to seal the strong edge for the pitch phase",
       "waypoints": [
-        { "t": 0, "x": 33.8, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.8, "y": -0.6, "note": "TE alignment" },
         { "t": 0.5, "x": 34.2, "y": 1.4, "note": "Working off the reach" },
         { "t": 1.4, "x": 35.2, "y": 1.8, "note": "Climbing to Sam" },
         { "t": 2.3, "x": 36, "y": 2.2, "note": "Sam engaged" },
@@ -170,7 +185,7 @@
       "trail": "block",
       "assignment": "Stalk-block the force corner so he cannot recover from his trigger",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.8, "x": 47.8, "y": 3, "note": "Working down to corner" },
         { "t": 1.8, "x": 46.5, "y": 4, "note": "Closing on RCB" },
         { "t": 2.6, "x": 45.2, "y": 4.5, "note": "Stalk engaged on trigger" },

@@ -23,7 +23,7 @@
       "focus": ["RG", "LG", "B", "QB"]
     },
     {
-      "t": 1.7,
+      "t": 1.8,
       "title": "2. The Waggle Boot Away",
       "text": "Instead of following the sweep, the quarterback reverses out to the left behind the fullback's edge block while the defense keeps chasing the fake.",
       "focus": ["QB", "F", "LE"]
@@ -35,7 +35,7 @@
       "focus": ["X", "Y", "H", "FS"]
     },
     {
-      "t": 3.4,
+      "t": 3.5,
       "title": "4. Deep In Behind Flowed Coverage",
       "text": "The waggle arrives with the deep in breaking behind a flat-dropping corner whose eyes never left the quarterback and a safety still leaning toward the sweep.",
       "focus": ["QB", "X", "LCB", "FS"]

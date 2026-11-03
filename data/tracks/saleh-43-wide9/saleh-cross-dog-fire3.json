@@ -253,8 +253,21 @@
       "assignment": "Fire Zone 3-Under: drop to boundary seam/slant window",
       "waypoints": [
         { "t": 0, "x": 33, "y": 3.8, "note": "Read QB drop" },
-        { "t": 1, "x": 20, "y": 5, "note": "Drop into boundary slant lane" },
+        { "t": 0.24, "x": 30.83, "y": 4 },
+        { "t": 0.48, "x": 28.67, "y": 4.2 },
+        { "t": 0.73, "x": 26.5, "y": 4.4 },
+        { "t": 0.97, "x": 24.33, "y": 4.6 },
+        { "t": 1.21, "x": 22.17, "y": 4.8 },
+        { "t": 1.45, "x": 20, "y": 5, "note": "Drop into boundary slant lane" },
+        { "t": 1.7, "x": 19.17, "y": 5.5 },
+        { "t": 1.95, "x": 18.33, "y": 6 },
         { "t": 2.2, "x": 17.5, "y": 6.5, "note": "Wall off X hot slant" },
+        { "t": 2.46, "x": 17.36, "y": 6.64 },
+        { "t": 2.71, "x": 17.21, "y": 6.79 },
+        { "t": 2.97, "x": 17.07, "y": 6.93 },
+        { "t": 3.23, "x": 16.93, "y": 7.07 },
+        { "t": 3.49, "x": 16.79, "y": 7.21 },
+        { "t": 3.74, "x": 16.64, "y": 7.36 },
         { "t": 4, "x": 16.5, "y": 7.5, "note": "Slant throwing lane erased" }
       ]
     },

@@ -1,6 +1,6 @@
 # Play specs
 
-A spec describes a play the way a coach would: a formation, then one job per player. `bun run specs:compile` turns it into the timed waypoints that `data/tracks/` stores. This is compiler v0.2 and covers pass plays only: routes, pass sets, quarterback drops, pass rushes, zone drops and man coverage. Run plays (zone, gap and pull blocks, mesh and option reads) come next.
+A spec describes a play the way a coach would: a formation, then one job per player. `bun run specs:compile` turns it into the timed waypoints that `data/tracks/` stores. This is compiler v0.4 and covers pass plays only: routes, pass sets, quarterback drops, pass rushes, zone drops and man coverage. Run plays (zone, gap and pull blocks, mesh and option reads) come next.
 
 The three specs here are `illustrative` like the rest of the library. They are proofs that the format works, and they do not replace the hand-made tracks yet.
 
@@ -26,6 +26,16 @@ overrides:                                # optional hand-made points for one pl
 ```
 
 Every player in the formation needs exactly one job. A spec lives at `specs/<scheme>/<concept>.yaml`, names the formation its concept starts from, and may only use the vocabulary in `src/spec/vocabulary.ts`. Each term's definition is published in `data/schema/spec.schema.json`, so an editor that reads the `$schema` line completes and explains the terms as you type.
+
+## Pre-snap motion
+
+A receiver, tight end or back can be in motion at the snap. Give his route a `motion`:
+
+```yaml
+Z: { route: flat, motion: { from: [46.5, -0.5], to: [38, -0.5], seconds: 1.4 } }
+```
+
+The player runs in a straight line from `from` at `-1.4` s to `to` at the snap, at the constant speed that distance and time give, and his route starts at `to` with that speed (he does not stop and restart). `from` must be where the formation lines him up, and the compiler fails if the speed is more than a person runs (10.5 yd/s), if the time is more than 6 s, or if the route has a `delay`. Waypoints before the snap are 0.2 s apart, so the speed stays constant on the viewer's spline. Defenders in man coverage line up on their preset and cover the receiver from where he is at the snap; the defense does not react to the motion before the snap. An `overrides` path may also use negative times, but the compiler still writes the waypoint at the snap.
 
 ## Commands
 
