@@ -33,6 +33,8 @@ Play specs in `specs/` compile to `tracks/` records, see [specs/README.md](../sp
 
 Coordinates are yards relative to the line of scrimmage: `x` runs 0 to 53.33 across the field, `y` is negative in the offensive backfield and positive downfield. Every play is drawn with the ball at `x = 26.67`, the middle of the field. A concept's optional `ballSpot` (`left`, `middle` or `right`) says where the ball really sits; add the offset in `src/engine/field.ts` to place the play on the field. NFL hash marks are 23.58 and 29.75 yards from the left sideline and college hash marks are 20 and 33.33. The release `concepts` table carries `ball_spot` and `ball_x`.
 
+Time in a track is `t`, in seconds from the snap: `t = 0` is the snap and a negative `t` is before it, down to `-6` (`PRESNAP_MAX_SECONDS` in `src/engine/presnap.ts`). A player who is already moving when the ball is snapped, such as a jet man, starts his track at a negative time, so he reaches the snap at the speed he really has. A track may start at the snap, as every track did before, but every track must have a waypoint at exactly `t = 0` and times must ascend. `duration` stays the seconds after the snap, and beats start at the snap (`t >= 0`). The lead in, how many seconds of play come before the snap, is derived from the earliest waypoint and never stored. The 1.2 s window behind the similarity scores is still the first 1.2 s after the snap.
+
 ## Working with the data
 
 ```
@@ -43,10 +45,15 @@ bun run data:format --check  fail if any record is not canonical (CI runs this)
 bun run data:schema          regenerate data/schema/*.schema.json
 bun run data:frames [file]   write the 10 Hz frames export as CSV (default dist/data/frames.csv)
 bun run data:release         build the JSON, CSV and SQLite downloads into dist/release (CI runs this)
+bun run speed:report         list every player drawn faster than a person runs, and every motion the rules do not allow
 bun run data:package         turn dist/release into the files of a GitHub release, in dist/release-assets (CI runs this too)
 ```
 
-The frames export has one row per player per tenth of a second: `conceptId, playerId, frame, t, x, y`. It uses the same spline interpolation as the viewer, so it is a resampling of the waypoints, not tracking data.
+The frames export has one row per player per tenth of a second: `conceptId, playerId, frame, t, x, y`. It uses the same spline interpolation as the viewer, so it is a resampling of the waypoints, not tracking data. Frame 0 is the snap. A play whose tracks start before the snap also has negative frames, `-n` to `-1`, for all 22 players, so `(conceptId, playerId, frame)` stays unique; filter `frame >= 0` for the frames a play without a lead in always had.
+
+### Movement checks
+
+`bun run data:validate` and the `speed:report` script check every track against numbers in `src/engine/limits.ts`: speed over any tenth of a second (warn above 10.5 yd/s, error above 12), acceleration over half a second (12 and 16 yd/s²), more than one player moving at the snap, a player moving toward the line of scrimmage at the snap, and a shift that ends less than a second before the snap. The thresholds are this project's own, set against the rounded constants in `src/spec/calibration.ts`, not measured on tracking data. Findings are reported, not enforced, until the launch library has been fixed.
 
 ## Downloads
 
