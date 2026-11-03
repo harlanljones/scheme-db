@@ -15,6 +15,7 @@ import type { SchemeRow } from '../islands/SchemeTable';
 import type { PlayRow } from '../islands/PlayTable';
 import type { CoachRow } from '../islands/CoachTable';
 import { count, nameFromId, pad2, tidy } from './format';
+import { searchKey } from './search';
 
 export const SITE = {
   url: 'https://schemedb.harlanljones.com',
@@ -357,7 +358,7 @@ export function schemeRows(): SchemeRow[] {
       id: play.id,
       name: play.nameDisplay,
       sheet: play.sheet,
-      hay: `${play.name} ${play.formation} ${play.frontName} ${play.coverage} ${play.personnel}`.toLowerCase(),
+      hay: searchKey(`${play.name} ${play.formation} ${play.frontName} ${play.coverage} ${play.personnel}`),
     })),
   }));
 }
@@ -492,7 +493,7 @@ export function coachRows(): CoachRow[] {
     eras: coach.eras,
     eraLabel: coach.eras.length > 0 ? coach.eras.map((era) => ERA_LABELS[era]).join(', ') : 'Lineage only',
     href: coach.href,
-    hay: [coach.name, coach.role2026, coach.team, ...coach.keyConcepts, ...[...coach.schemes, ...coach.linked].map((scheme) => scheme.name)].join(' ').toLowerCase(),
+    hay: searchKey([coach.name, coach.role2026, coach.team, ...coach.keyConcepts, ...[...coach.schemes, ...coach.linked].map((scheme) => scheme.name)].join(' ')),
   }));
 }
 
@@ -544,9 +545,7 @@ export function playRows(): PlayRow[] {
       situation: situationShort(play.situation),
       personnel: personnelShort(play.personnel),
       formation: tidy(play.formation),
-      hay: [play.name, scheme.name, scheme.coachName, scheme.team, play.formation, play.personnel, play.frontName, play.coverage, play.situation]
-        .join(' ')
-        .toLowerCase(),
+      hay: searchKey([play.name, scheme.name, scheme.coachName, scheme.team, play.formation, play.personnel, play.frontName, play.coverage, play.situation].join(' ')),
     })),
   );
 }

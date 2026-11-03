@@ -1,4 +1,5 @@
 import { useQueryFilters } from './useQueryFilters';
+import { searchKey } from '../lib/search';
 
 export interface CoachRow {
   id: string;
@@ -34,7 +35,7 @@ export default function CoachTable({ rows, eras, lineages, idPrefix = 'coaches' 
   });
   const { q, side, era, tree } = filters.values;
 
-  const needle = q.trim().toLowerCase();
+  const needle = searchKey(q);
   const match = (r: CoachRow) => !needle || r.hay.includes(needle);
   const bySide = (r: CoachRow) => side === 'all' || r.side === side;
   const byEra = (r: CoachRow) => era === 'all' || r.eras.includes(era);
