@@ -7,6 +7,7 @@ import * as path from 'node:path';
 import { loadDataset } from '../../src/schema/load';
 import { DISGUISE_HOLD_PERCENT, DISGUISE_WINDOW_FRAMES, summarizeDisguise } from '../../src/engine/disguise';
 import { levelOfEra } from '../../src/engine/field';
+import { siteDataVersion } from '../../src/release/version';
 import { FRAME_RATE_HZ } from '../../src/engine/frames';
 import type { Coach, Concept, Dataset, Lineage, Scheme, Term, Tracks } from '../../src/schema/schema';
 import type { PlayerTrack } from '../../src/engine/types';
@@ -111,6 +112,9 @@ let cached: Library | undefined;
 export function dataDir(): string {
   return path.join(process.cwd(), 'data');
 }
+
+/** The data version the site's downloads carry (`data/VERSION`, or `DATA_VERSION` when a build sets it). */
+export const dataVersion = (): string => siteDataVersion(process.env, dataDir());
 
 export function library(): Library {
   if (cached) return cached;

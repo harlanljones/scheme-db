@@ -70,11 +70,13 @@ SELECT frame, t, x, y FROM frames WHERE concept_id = 'kelly-mesh-spacing-concept
 
 ### Cutting a data release
 
-A data release is a Git tag named `data-vMAJOR.MINOR.PATCH`, for example `data-v0.1.0`. Tag a commit on `main`, after CI has passed on it:
+A data release is a Git tag named `data-vMAJOR.MINOR.PATCH`, for example `data-v1.0.0`. The version also lives in one file, `data/VERSION`, which is what the site's downloads (`/downloads/scheme-db.json`, the SQLite `meta` table, `meta.csv`) and the Data page say. To cut a release, set `data/VERSION` to the new version in a commit on `main`, wait for CI to pass on it, then tag that commit:
 
 ```bash
-git tag data-v0.1.0 && git push origin data-v0.1.0
+git tag data-v1.0.0 && git push origin data-v1.0.0
 ```
+
+The workflow refuses a tag that does not match `data/VERSION` (a suffix such as `-rc.1` is ignored for the match), so the files on the site and on the GitHub release always name the same version. A build can override the file with the `DATA_VERSION` environment variable, which is for trying things out, not for releases.
 
 That runs `.github/workflows/release-data.yml`, which validates the data, builds the downloads, packages them with `bun run data:package` and creates a **draft** GitHub release with these files (the CSV tables are zipped):
 

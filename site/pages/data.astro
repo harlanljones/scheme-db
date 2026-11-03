@@ -1,10 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
-import { SITE, allIllustrative, formatBytes, library, publishedBytes, playHref, FEATURED } from '../lib/data';
+import { SITE, allIllustrative, dataVersion, formatBytes, library, publishedBytes, playHref, FEATURED } from '../lib/data';
 import { CSV_TABLES, SCHEMA_FILES } from '../lib/downloads';
 
 const lib = library();
 const { counts } = lib;
+const version = dataVersion();
 const json = '/downloads/scheme-db.json';
 const sqlite = '/downloads/scheme-db.sqlite';
 const sums = '/downloads/SHA256SUMS';
@@ -30,7 +31,7 @@ const sample = `${playHref(FEATURED.schemeId, FEATURED.conceptId)}`;
   </section>
 
   <section class="wrap section">
-    <div class="divider"><p class="eyebrow">Downloads</p><h2>Pick a format</h2><p class="aside">Built with this version of the site</p></div>
+    <div class="divider"><p class="eyebrow">Downloads</p><h2>Pick a format</h2><p class="aside">Data {version}, built with this version of the site</p></div>
     <div class="two-col">
       <div class="text" id="json">
         <h3>One bundle or one table</h3>

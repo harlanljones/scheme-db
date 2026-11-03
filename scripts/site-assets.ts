@@ -4,7 +4,9 @@
  *   public/downloads/    the JSON, CSV and SQLite releases (scripts/release.ts)
  *   public/records/      the raw records, the derived per-scheme bundles and per-play 10 Hz frames
  *
- *   bun run site:assets [--version dev]
+ *   bun run site:assets [--version v1.0.0]
+ *
+ * The version stamped on the downloads is `--version`, else `DATA_VERSION` when set, else the one in `data/VERSION`.
  *
  * `bun run build` runs this before `astro build`, so the Data page and every "Download" link has a file behind it.
  */
@@ -12,11 +14,12 @@ import { spawnSync } from 'node:child_process';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { framesFor, framesToCsv } from '../src/engine/frames';
+import { siteDataVersion } from '../src/release/version';
 import { DATA_DIR, loadDataset } from '../src/schema/load';
 
 const args = process.argv.slice(2);
 const versionIndex = args.indexOf('--version');
-const version = versionIndex >= 0 && args[versionIndex + 1] ? args[versionIndex + 1] : (process.env.DATA_VERSION ?? 'dev');
+const version = versionIndex >= 0 && args[versionIndex + 1] ? args[versionIndex + 1] : siteDataVersion();
 const root = path.resolve(import.meta.dirname, '..');
 const publicDir = path.join(root, 'public');
 

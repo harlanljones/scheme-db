@@ -3,6 +3,8 @@ name: Release data
 # Pushing a tag like data-v0.1.0 builds the dataset downloads and attaches them to a DRAFT GitHub release; nothing is
 # public until you open the draft on the Releases page, check the files and notes, and press Publish.
 # A tag with a suffix, like data-v0.1.0-rc.1, makes a pre-release.
+# The tag must match data/VERSION (a suffix like -rc.1 is ignored for the match), so the downloads on the site and the files on
+# the release name the same version.
 # Run it by hand (Actions tab, "Release data") to build the same files as a downloadable workflow artifact without releasing.
 # The packaging steps also run in CI on every push (bun run data:package), so only the last step is new on a tag.
 on:
@@ -30,6 +32,11 @@ jobs:
               exit 1
             fi
             version="${GITHUB_REF_NAME#data-}"
+            declared="$(tr -d '[:space:]' < data/VERSION)"
+            if [ "${version%%-*}" != "${declared}" ]; then
+              echo "::error::Tag ${GITHUB_REF_NAME} does not match data/VERSION (${declared}). Set data/VERSION to ${version%%-*} in the commit you tag."
+              exit 1
+            fi
             echo "name=${version}" >> "$GITHUB_OUTPUT"
             if [[ "${version}" == *-* ]]; then
               echo "prerelease=true" >> "$GITHUB_OUTPUT"
