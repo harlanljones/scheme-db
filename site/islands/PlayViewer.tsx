@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react';
-import { parsePlay, type FieldWindow } from '../lib/field';
-import { capitalize, count, playerWord } from '../lib/format';
+import { describePresnap } from '../lib/describe';
+import { firstMotionAt, parsePlay, type FieldWindow } from '../lib/field';
+import { beforeSnap, capitalize, clockShort, clockWords, count, playerWord } from '../lib/format';
 import { Field, FieldLegend } from './Field';
-import { setPlayState, tenth, usePlayState } from './playState';
+import { setPlayState, usePlayState } from './playState';
 
 export interface BeatProp {
   t: number;
@@ -24,7 +25,14 @@ const pad2 = (n: number): string => (n < 10 ? `0${n}` : String(n));
 /** The field, transport, scrubber and coaching points of one play, all driven by one clock. */
 export default function PlayViewer({ play: json, win, beats, duration }: Props) {
   const play = useMemo(() => parsePlay(json), [json]);
-  const { t, playing, speed, fresh } = usePlayState();
+  const { playing, speed, fresh, t: clockT } = usePlayState();
+  /** Seconds of play before the snap. Zero for most plays, which then look exactly as they always did. */
+  const lead = play.leadIn;
+  const t = Math.max(clockT, -lead);
+  const span = duration + lead;
+  const motionStart = useMemo(() => (lead > 0 ? firstMotionAt(play) : null), [play, lead]);
+  /** Where a time sits along the scrubber, as a percentage of its width. */
+  const along = (at: number): string => `${(((at + lead) / span) * 100).toFixed(2)}%`;
 
   const clock = useRef({ t, speed });
   useEffect(() => {
@@ -59,20 +67,23 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
   const roleOf = (id: string): string => playerWord(id, play.tracks.find((track) => track.id === id)?.role ?? '');
   const goTo = (to: number) => setPlayState({ t: to, playing: false });
 
+  // Previous and next step through the beats; with a lead in the start and the snap are stops too.
+  const stops = [...(lead > 0 ? [-lead, 0] : []), ...beats.map((b) => b.t)].sort((a, b) => a - b);
   const prevBeat = () => {
-    let to = 0;
-    beats.forEach((b) => {
-      if (b.t < t - 0.05) to = b.t;
+    let to = lead > 0 ? -lead : 0;
+    stops.forEach((stop) => {
+      if (stop < t - 0.05) to = stop;
     });
     goTo(to);
   };
   const nextBeat = () => {
-    const next = beats.find((b) => b.t > t + 0.05);
-    goTo(next ? next.t : duration);
+    const next = stops.find((stop) => stop > t + 0.05);
+    goTo(next === undefined ? duration : next);
   };
 
-  const live =
-    active < 0
+  const live = beforeSnap(t)
+    ? describePresnap(play, t)
+    : active < 0
       ? 'Before the first beat.'
       : `Beat ${active + 1} of ${beats.length}: ${stripNumber(beats[active].title)}, ${beats[active].t.toFixed(1)} seconds after the snap.`;
 
@@ -92,7 +103,7 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
           className="ibtn solid"
           type="button"
           aria-label={playing ? 'Pause' : 'Play'}
-          onClick={() => setPlayState(playing ? { playing: false } : { playing: true, t: fresh || t >= duration ? 0 : t })}
+          onClick={() => setPlayState(playing ? { playing: false } : { playing: true, t: fresh || t >= duration ? -lead : t })}
         >
           {playing ? (
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -110,8 +121,19 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
           </svg>
         </button>
         <p className="type" style={{ fontSize: 15, lineHeight: '20px', fontWeight: 700 }}>
-          {t.toFixed(1)} s <span style={{ fontWeight: 400, color: 'var(--fg2)' }}>of {duration.toFixed(1)} s</span>
+          {beforeSnap(t) ? (
+            clockShort(t)
+          ) : (
+            <>
+              {t.toFixed(1)} s <span style={{ fontWeight: 400, color: 'var(--fg2)' }}>of {duration.toFixed(1)} s</span>
+            </>
+          )}
         </p>
+        {lead > 0 ? (
+          <button className="pill" type="button" aria-label="Jump to the snap" onClick={() => goTo(0)}>
+            Snap
+          </button>
+        ) : null}
         <div role="group" aria-label="Playback speed" className="speed">
           <button className="pill" type="button" aria-pressed={speed === 0.5} onClick={() => setPlayState({ speed: 0.5 })}>
             0.5x
@@ -122,25 +144,40 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
         </div>
       </div>
 
-      <div className="scrub js-only">
+      <div className={`scrub js-only${lead > 0 ? ' has-phases' : ''}`}>
         <label htmlFor="scrub-t" className="sr">
-          Time after the snap in tenths of a second
+          {lead > 0 ? 'Time from the snap in tenths of a second, negative before the snap' : 'Time after the snap in tenths of a second'}
         </label>
         <input
           id="scrub-t"
           type="range"
-          min={0}
+          min={-Math.round(lead * 10)}
           max={Math.round(duration * 10)}
           step={1}
           value={Math.round(t * 10)}
-          aria-valuetext={`${tenth(t).toFixed(1)} seconds after the snap`}
+          aria-valuetext={clockWords(t)}
           onChange={(e) => goTo(Number(e.target.value) / 10)}
         />
         {beats.map((b, i) => (
-          <span key={b.t} className="tick" aria-hidden="true" style={{ left: `${(b.t / duration) * 100}%` }}>
+          <span key={b.t} className="tick" aria-hidden="true" style={{ left: along(b.t) }}>
             {i + 1}
           </span>
         ))}
+        {lead > 0 ? (
+          <div className="phases" aria-hidden="true">
+            {motionStart !== null && motionStart > -lead + 0.15 ? (
+              <span className="phase set" style={{ left: 0, width: along(motionStart) }}>
+                SET
+              </span>
+            ) : null}
+            <span className="phase motion" style={{ left: along(motionStart ?? -lead), width: `calc(${along(0)} - ${along(motionStart ?? -lead)})` }}>
+              MOTION
+            </span>
+            <span className="phase snap" style={{ left: along(0) }}>
+              SNAP
+            </span>
+          </div>
+        ) : null}
       </div>
 
       <p aria-live="polite" style={{ fontSize: 15, lineHeight: '22px', color: 'var(--fg)' }}>

@@ -13,6 +13,7 @@ import {
 } from '../lib/data';
 import { NO_RESEMBLANCE_YARDS } from '../../src/engine/disguise';
 import { FRAME_RATE_HZ } from '../../src/engine/frames';
+import { leadIn } from '../../src/engine/presnap';
 import { HASHES } from '../../src/engine/field';
 import { capitalize, count, list, tidy } from '../lib/format';
 
@@ -31,6 +32,10 @@ const worked = comparisonsFor(featured).map((c) => {
   return { ...c, detail };
 });
 const frames = Math.round(DISGUISE_SECONDS * FRAME_RATE_HZ) + 1;
+// Say this only when a play in the library really starts before the snap.
+const leadIns = lib.dataset.tracks.map((tracks) => leadIn([...tracks.offense, ...tracks.defense])).filter((seconds) => seconds > 0);
+const withLeadIn = leadIns.length;
+const longestLeadIn = Math.max(0, ...leadIns);
 const contents = [
   ['A', 'illustrative', 'What illustrative means'],
   ['B', 'drawing', 'How a play is drawn'],
@@ -81,6 +86,9 @@ const contents = [
       <section id="drawing">
         <div class="divider"><p class="eyebrow">Appendix B</p><h2>How a play is drawn</h2></div>
         <p class="body">Each play is a set of timed waypoints for 22 players. A waypoint is a position in yards, measured from the line of scrimmage and from the left sideline, at a moment after the snap. The viewer moves each player along a smooth curve through the waypoints and redraws on every screen refresh. The scrubber, the scores and the downloadable frames step in tenths of a second, which is {FRAME_RATE_HZ} frames a second.</p>
+        {withLeadIn > 0 && (
+          <p class="body">Time in a waypoint is measured from the snap, and a negative time is before it. {capitalize(count(withLeadIn))} {withLeadIn === 1 ? 'play starts' : 'plays start'} early, the longest {longestLeadIn.toFixed(1)} seconds before the snap, so a player in motion arrives at the snap already moving at a speed a person can run. On those plays the scrubber begins before the snap and says so. This makes the drawing more believable, not more factual: the timing is still a coach’s sketch and not a measurement. The similarity score still counts only the first {DISGUISE_SECONDS.toFixed(1)} s after the snap, and the downloadable frames number the frames before the snap -1, -2 and so on.</p>
+        )}
         <p class="body">On every field, offense attacks up the page, filled amber marks are offense, blue rings are defense, and the heavy line is the line of scrimmage.</p>
         <p class="body">The field is 53.33 yards wide. Hash marks follow the level of the scheme: NFL schemes show hash marks {HASHES.nfl.left} and {HASHES.nfl.right} yards from the left sideline, and college schemes show them at {HASHES.college.left} and {HASHES.college.right}. Older eras are drawn with today’s hash marks. The small oval on the line of scrimmage is the ball. Plays are drawn with the ball at midfield unless the record says it sits on a hash; the downloads carry the ball spot with each play.</p>
       </section>
