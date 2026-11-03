@@ -81,7 +81,7 @@
       "trail": "route",
       "assignment": "Designed fade — the classic press-beater attempt",
       "waypoints": [
-        { "t": 0, "x": 8.5, "y": 0.8, "note": "Island alignment" },
+        { "t": 0, "x": 8.5, "y": -0.5, "note": "Island alignment" },
         { "t": 0.6, "x": 8.9, "y": 0.8, "note": "Release meets immediate jam" },
         { "t": 1.4, "x": 9.2, "y": 4, "note": "Pushed into a narrow upfield lane" },
         { "t": 2.4, "x": 10, "y": 8.5, "note": "Riding the sideline in a trail" },
@@ -127,7 +127,7 @@
       "trail": "route",
       "assignment": "Vertical stem to comeback vs press trail",
       "waypoints": [
-        { "t": 0, "x": 46, "y": 0.8, "note": "Outside release" },
+        { "t": 0, "x": 46, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 46, "y": 4, "note": "Push RCB vertical" },
         { "t": 2.2, "x": 45.5, "y": 9, "note": "Working upfield in trail" },
         { "t": 3, "x": 43.2, "y": 11, "note": "Comeback break contested" },
@@ -142,11 +142,11 @@
       "trail": "drop",
       "assignment": "Back-shoulder fade launch to the isolated island",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.9, "x": 26.67, "y": -2.6, "note": "Hitch, eyes on the island" },
-        { "t": 1.8, "x": 26.2, "y": -3, "note": "Second hitch, pump to hold RCB" },
-        { "t": 2.6, "x": 25.9, "y": -3.2, "note": "Launches the fade off balance" },
-        { "t": 4, "x": 25.7, "y": -3.3, "note": "Watches it sail out of bounds" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -5.4, "note": "Hitch, eyes on the island" },
+        { "t": 1.8, "x": 26.2, "y": -5.6, "note": "Second hitch, pump to hold RCB" },
+        { "t": 2.6, "x": 25.9, "y": -5.7, "note": "Launches the fade off balance" },
+        { "t": 4, "x": 25.7, "y": -5.7, "note": "Watches it sail out of bounds" }
       ]
     },
     {
@@ -157,8 +157,8 @@
       "trail": "route",
       "assignment": "Check-release strong flat away from the shot",
       "waypoints": [
-        { "t": 0, "x": 30.5, "y": -3, "note": "Offset alignment" },
-        { "t": 1, "x": 31.5, "y": -2.2, "note": "Scan then release" },
+        { "t": 0, "x": 30.5, "y": -5, "note": "Offset alignment" },
+        { "t": 1, "x": 31.5, "y": -2.9, "note": "Scan then release" },
         { "t": 2.2, "x": 34, "y": 1.2, "note": "Flat working right" },
         { "t": 4, "x": 35.5, "y": 2, "note": "Fitted by MIKE instantly" }
       ]

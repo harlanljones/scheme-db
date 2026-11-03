@@ -121,7 +121,7 @@
       "trail": "route",
       "assignment": "Run off the boundary corner vertically",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.9, "x": 5.8, "y": 5, "note": "Instant vertical stem" },
         { "t": 2, "x": 7, "y": 12, "note": "Carrying corner deep" },
         { "t": 3.1, "x": 8.5, "y": 19, "note": "Third cleared" },
@@ -151,7 +151,7 @@
       "trail": "block",
       "assignment": "Down-block inside, climb to the strong linebacker",
       "waypoints": [
-        { "t": 0, "x": 33.8, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.8, "y": -0.6, "note": "TE alignment" },
         { "t": 0.5, "x": 33.5, "y": 1.5, "note": "Working off the reach" },
         { "t": 1.5, "x": 34.5, "y": 3, "note": "Climbing to Sam" },
         { "t": 2.5, "x": 35, "y": 4.2, "note": "Sam engaged" },
@@ -166,7 +166,7 @@
       "trail": "block",
       "assignment": "Stalk-block the field corner",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.8, "x": 47.8, "y": 3, "note": "Working down to corner" },
         { "t": 1.8, "x": 46.5, "y": 4, "note": "Closing on RCB" },
         { "t": 2.8, "x": 45.2, "y": 4.5, "note": "Stalk engaged" },

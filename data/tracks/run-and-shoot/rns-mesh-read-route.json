@@ -81,13 +81,13 @@
       "trail": "none",
       "assignment": "Quick three-step set, deliver to first crosser winning leverage",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
-        { "t": 0.4, "x": 26.67, "y": -3.4, "note": "Quick three-step drop" },
-        { "t": 0.9, "x": 26.67, "y": -4.6, "note": "Hitch on the mesh side" },
-        { "t": 1.7, "x": 26.8, "y": -4.6, "note": "Reading crosser leverage" },
-        { "t": 2.5, "x": 27.2, "y": -4, "note": "Loading the window throw" },
-        { "t": 3, "x": 27.8, "y": -3.2, "note": "Delivery to the climber" },
-        { "t": 4, "x": 28.6, "y": -2.2, "note": "Follow-through" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.4, "x": 26.67, "y": -5.8, "note": "Quick three-step drop" },
+        { "t": 0.9, "x": 26.67, "y": -6.4, "note": "Hitch on the mesh side" },
+        { "t": 1.7, "x": 26.8, "y": -6.4, "note": "Reading crosser leverage" },
+        { "t": 2.5, "x": 27.2, "y": -6.1, "note": "Loading the window throw" },
+        { "t": 3, "x": 27.8, "y": -5.7, "note": "Delivery to the climber" },
+        { "t": 4, "x": 28.6, "y": -5.2, "note": "Follow-through" }
       ]
     },
     {
@@ -98,7 +98,7 @@
       "trail": "route",
       "assignment": "Corner at twelve — hold the left deep half and clear for M",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
         { "t": 1, "x": 6.2, "y": 5.5, "note": "Vertical stem selling go" },
         { "t": 2.1, "x": 8, "y": 12, "note": "Pushing the corner deep" },
         { "t": 2.9, "x": 12.5, "y": 15.5, "note": "Breaking out at twelve" },
@@ -115,10 +115,21 @@
       "assignment": "Cross right at six — read-route: settle if chased over top, climb if trailed",
       "waypoints": [
         { "t": 0, "x": 12, "y": -1.2, "note": "Slot left alignment" },
+        { "t": 0.27, "x": 13.67, "y": -0.4 },
+        { "t": 0.53, "x": 15.33, "y": 0.4 },
         { "t": 0.8, "x": 17, "y": 1.2, "note": "Shallow drive across formation" },
+        { "t": 1.07, "x": 19.5, "y": 1.8 },
+        { "t": 1.33, "x": 22, "y": 2.4 },
         { "t": 1.6, "x": 24.5, "y": 3, "note": "Building to mesh speed" },
-        { "t": 2.2, "x": 30.5, "y": 4.2, "note": "Mesh point under Z" },
+        { "t": 1.82, "x": 26.5, "y": 3.4 },
+        { "t": 2.03, "x": 28.5, "y": 3.8 },
+        { "t": 2.25, "x": 30.5, "y": 4.2, "note": "Mesh point under Z" },
+        { "t": 2.5, "x": 32, "y": 4.53 },
+        { "t": 2.75, "x": 33.5, "y": 4.87 },
         { "t": 3, "x": 35, "y": 5.2, "note": "Chase-over over top — settling" },
+        { "t": 3.25, "x": 35.63, "y": 5.53 },
+        { "t": 3.5, "x": 36.25, "y": 5.85 },
+        { "t": 3.75, "x": 36.88, "y": 6.18 },
         { "t": 4, "x": 37.5, "y": 6.5, "note": "Sitting in the soft hole" }
       ]
     },
@@ -131,10 +142,20 @@
       "assignment": "Cross left at five — read-route: speed up and climb if trailed underneath",
       "waypoints": [
         { "t": 0, "x": 44.8, "y": -1.6, "note": "Stack slot alignment right" },
+        { "t": 0.27, "x": 42.53, "y": -0.73 },
+        { "t": 0.53, "x": 40.27, "y": 0.13 },
         { "t": 0.8, "x": 38, "y": 1, "note": "Shallow drive across formation" },
+        { "t": 1.07, "x": 35.5, "y": 1.6 },
+        { "t": 1.33, "x": 33, "y": 2.2 },
         { "t": 1.6, "x": 30.5, "y": 2.8, "note": "Crossing under M" },
+        { "t": 1.9, "x": 28, "y": 3.3 },
         { "t": 2.2, "x": 25.5, "y": 3.8, "note": "Mesh point cleared" },
+        { "t": 2.47, "x": 23.33, "y": 4.2 },
+        { "t": 2.73, "x": 21.17, "y": 4.6 },
         { "t": 3, "x": 19, "y": 5, "note": "Trail leverage underneath — climbing" },
+        { "t": 3.25, "x": 17.88, "y": 5.3 },
+        { "t": 3.5, "x": 16.75, "y": 5.6 },
+        { "t": 3.75, "x": 15.63, "y": 5.9 },
         { "t": 4, "x": 14.5, "y": 6.2, "note": "Speeding up the far seam" }
       ]
     },
@@ -162,7 +183,7 @@
       "trail": "route",
       "assignment": "Pure go to hold the right deep half",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.9, "x": 47.5, "y": 4.5, "note": "Instant vertical stem" },
         { "t": 2, "x": 46.5, "y": 12, "note": "Pressuring SS depth" },
         { "t": 3.1, "x": 45, "y": 19, "note": "Carrying the half deep" },

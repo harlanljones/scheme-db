@@ -86,13 +86,13 @@
       "trail": "none",
       "assignment": "Catch and flash the bubble throw posture, hold as the trigger flies, deliver the glance",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap, eyes right" },
-        { "t": 0.4, "x": 27.3, "y": -2.1, "note": "Flashing the screen arm" },
-        { "t": 1.2, "x": 27.6, "y": -2.2, "note": "Loading the bubble posture" },
-        { "t": 2, "x": 27.4, "y": -2.4, "note": "Trigger committed — holding" },
-        { "t": 2.8, "x": 27.2, "y": -2, "note": "Transferring to the glance window" },
-        { "t": 3.3, "x": 27.5, "y": -1.7, "note": "Glance delivery up the seam" },
-        { "t": 3.8, "x": 27.7, "y": -1.5, "note": "Follow-through" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap, eyes right" },
+        { "t": 0.4, "x": 27.3, "y": -5.1, "note": "Flashing the screen arm" },
+        { "t": 1.2, "x": 27.6, "y": -5.2, "note": "Loading the bubble posture" },
+        { "t": 2, "x": 27.4, "y": -5.3, "note": "Trigger committed — holding" },
+        { "t": 2.8, "x": 27.2, "y": -5.1, "note": "Transferring to the glance window" },
+        { "t": 3.3, "x": 27.5, "y": -4.9, "note": "Glance delivery up the seam" },
+        { "t": 3.8, "x": 27.7, "y": -4.7, "note": "Follow-through" }
       ]
     },
     {
@@ -103,9 +103,9 @@
       "trail": "route",
       "assignment": "Flare right selling the perimeter screen picture before checking up",
       "waypoints": [
-        { "t": 0, "x": 28.8, "y": -2.6, "note": "Offset alignment" },
-        { "t": 0.5, "x": 30, "y": -2.2, "note": "Flaring into the screen picture" },
-        { "t": 1.2, "x": 32, "y": -1.6, "note": "Selling the outlet to the flat" },
+        { "t": 0, "x": 28.8, "y": -5, "note": "Offset alignment" },
+        { "t": 0.5, "x": 30, "y": -3.8, "note": "Flaring into the screen picture" },
+        { "t": 1.2, "x": 32, "y": -2.1, "note": "Selling the outlet to the flat" },
         { "t": 2, "x": 33.5, "y": -1, "note": "Checking up at the line" },
         { "t": 3, "x": 35, "y": 0.5, "note": "Leaking as a late outlet" },
         { "t": 3.8, "x": 36, "y": 1.5, "note": "Outlet depth reached" }
@@ -119,7 +119,7 @@
       "trail": "route",
       "assignment": "Backside shallow drag clearing weak-side coverage under the glance",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 6.5, "y": 1.5, "note": "Driving inside on the drag" },
         { "t": 1.8, "x": 10.5, "y": 2.2, "note": "Shallow cross building" },
         { "t": 2.8, "x": 15.5, "y": 2.8, "note": "Clearing the weak hook" },
@@ -151,7 +151,7 @@
       "trail": "route",
       "assignment": "Go route clearing the corner out of the glance window",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wide split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wide split right" },
         { "t": 0.8, "x": 47.6, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 47.2, "y": 11, "note": "Pushing the corner deep" },
         { "t": 3.2, "x": 47, "y": 16.5, "note": "Corner carried out of the window" },
@@ -166,7 +166,7 @@
       "trail": "route",
       "assignment": "Middle seam occupying the hole defender between the hash and the glance seam",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y alignment" },
         { "t": 0.8, "x": 32.6, "y": 4, "note": "Instant vertical push" },
         { "t": 1.8, "x": 31.8, "y": 9, "note": "Threatening the middle hole" },
         { "t": 2.8, "x": 31, "y": 12, "note": "Holding the hole defender" },

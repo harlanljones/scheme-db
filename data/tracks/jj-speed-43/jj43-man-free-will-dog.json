@@ -84,12 +84,12 @@
       "trail": "drop",
       "assignment": "Three-drop, hot answer to H slant, buried before release",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Snap" },
-        { "t": 0.7, "x": 26.3, "y": -4.4, "note": "Quick hitch depth" },
-        { "t": 1.4, "x": 26, "y": -5, "note": "Eyes to slot hot route" },
-        { "t": 2.2, "x": 25.6, "y": -4.8, "note": "Feeling dog through A-gap" },
-        { "t": 3.2, "x": 26.2, "y": -4.4, "note": "Trying to escape right" },
-        { "t": 4, "x": 26.8, "y": -4, "note": "Caught by closing WILL" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Snap" },
+        { "t": 0.7, "x": 26.3, "y": -6.3, "note": "Quick hitch depth" },
+        { "t": 1.4, "x": 26, "y": -6.6, "note": "Eyes to slot hot route" },
+        { "t": 2.2, "x": 25.6, "y": -6.5, "note": "Feeling dog through A-gap" },
+        { "t": 3.2, "x": 26.2, "y": -6.3, "note": "Trying to escape right" },
+        { "t": 4, "x": 26.8, "y": -6.1, "note": "Caught by closing WILL" }
       ]
     },
     {
@@ -100,8 +100,8 @@
       "trail": "block",
       "assignment": "Check-protect weak, arrive as dog already through",
       "waypoints": [
-        { "t": 0, "x": 23.8, "y": -2.4, "note": "Scan protection" },
-        { "t": 0.7, "x": 24.6, "y": -2, "note": "Triggering to weak A" },
+        { "t": 0, "x": 23.8, "y": -5, "note": "Scan protection" },
+        { "t": 0.7, "x": 24.6, "y": -3.4, "note": "Triggering to weak A" },
         { "t": 1.6, "x": 25.4, "y": -2.6, "note": "WILL already past guard" },
         { "t": 3, "x": 26.2, "y": -3, "note": "Whiffing at crossing blitzer" },
         { "t": 4, "x": 26.6, "y": -3.4, "note": "Protection broken" }

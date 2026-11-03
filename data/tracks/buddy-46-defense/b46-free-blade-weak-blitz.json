@@ -138,7 +138,7 @@
       "trail": "route",
       "assignment": "Hot slant — but the rolled-down safety carries you man-to-man",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Slant release" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Slant release" },
         { "t": 0.9, "x": 8.5, "y": 2.5, "note": "SS jumps inside leverage" },
         { "t": 2.2, "x": 12.5, "y": 5.5, "note": "Walled off by SS trail" },
         { "t": 4, "x": 17, "y": 7.5, "note": "No separation, no throw" }
@@ -152,7 +152,7 @@
       "trail": "route",
       "assignment": "Quick out vs island press",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Out release" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Out release" },
         { "t": 1, "x": 46.5, "y": 2, "note": "Fight RCB jam" },
         { "t": 2.2, "x": 44, "y": 3, "note": "Break out at 5 yards" },
         { "t": 4, "x": 41, "y": 3.5, "note": "Covered tight, ball never comes" }
@@ -227,8 +227,21 @@
       "assignment": "From weak box, jump to man coverage on X when corner rolls",
       "waypoints": [
         { "t": 0, "x": 24, "y": 4.5, "note": "Weak box alignment" },
-        { "t": 0.8, "x": 16, "y": 3.5, "note": "Slide to X leverage inside" },
+        { "t": 0.23, "x": 22, "y": 4.25 },
+        { "t": 0.45, "x": 20, "y": 4 },
+        { "t": 0.68, "x": 18, "y": 3.75 },
+        { "t": 0.9, "x": 16, "y": 3.5, "note": "Slide to X leverage inside" },
+        { "t": 1.16, "x": 15.1, "y": 3.7 },
+        { "t": 1.42, "x": 14.2, "y": 3.9 },
+        { "t": 1.68, "x": 13.3, "y": 4.1 },
+        { "t": 1.94, "x": 12.4, "y": 4.3 },
         { "t": 2.2, "x": 11.5, "y": 4.5, "note": "Wall X slant release" },
+        { "t": 2.46, "x": 12.21, "y": 4.86 },
+        { "t": 2.71, "x": 12.93, "y": 5.21 },
+        { "t": 2.97, "x": 13.64, "y": 5.57 },
+        { "t": 3.23, "x": 14.36, "y": 5.93 },
+        { "t": 3.49, "x": 15.07, "y": 6.29 },
+        { "t": 3.74, "x": 15.79, "y": 6.64 },
         { "t": 4, "x": 16.5, "y": 7, "note": "Hot route eliminated" }
       ]
     },

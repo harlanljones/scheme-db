@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "b34-wildcat-walk-up-edge",
-  "duration": 4,
+  "duration": 4.3,
   "offense": [
     {
       "id": "LT",
@@ -96,7 +96,7 @@
       "trail": "route",
       "assignment": "Stem vertical vs island press",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 6, "y": 4, "note": "Fight press jam" },
         { "t": 2.4, "x": 5.8, "y": 9, "note": "Working downfield in trail" },
         { "t": 4, "x": 5.5, "y": 13, "note": "No look coming" }
@@ -110,7 +110,7 @@
       "trail": "route",
       "assignment": "Shallow cross as the pressure answer",
       "waypoints": [
-        { "t": 0, "x": 15, "y": 1.2, "note": "Slot release" },
+        { "t": 0, "x": 15, "y": -0.5, "note": "Slot release" },
         { "t": 0.8, "x": 15.8, "y": 1.8, "note": "Flatten off the stem" },
         { "t": 2, "x": 20, "y": 2.5, "note": "Driving across formation" },
         { "t": 4, "x": 25, "y": 3, "note": "Trailed by walked WILL" }
@@ -124,7 +124,7 @@
       "trail": "route",
       "assignment": "Take the top off vs island press",
       "waypoints": [
-        { "t": 0, "x": 46.5, "y": 0.5, "note": "Outside release" },
+        { "t": 0, "x": 46.5, "y": -0.5, "note": "Outside release" },
         { "t": 1, "x": 46.5, "y": 4, "note": "Push RCB vertical" },
         { "t": 2.4, "x": 46.2, "y": 9.5, "note": "Clearing deep" },
         { "t": 4, "x": 45.8, "y": 13.5, "note": "Capped by post drift" }
@@ -138,12 +138,12 @@
       "trail": "drop",
       "assignment": "Five-step drop reading crosser while edges close",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun catch" },
-        { "t": 0.9, "x": 26.67, "y": -3, "note": "Five-step hitch depth" },
-        { "t": 1.8, "x": 27.2, "y": -3.5, "note": "Eyes on H crosser window" },
-        { "t": 2.8, "x": 25.5, "y": -3.6, "note": "Inside pressure forces panic step left" },
-        { "t": 3.4, "x": 24.8, "y": -3.5, "note": "Swallowed by looping contain" },
-        { "t": 4, "x": 24.5, "y": -3.4, "note": "Sacked at the line" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun catch" },
+        { "t": 0.9, "x": 26.67, "y": -5.6, "note": "Five-step hitch depth" },
+        { "t": 1.8, "x": 27.2, "y": -5.8, "note": "Eyes on H crosser window" },
+        { "t": 2.8, "x": 25.5, "y": -5.9, "note": "Inside pressure forces panic step left" },
+        { "t": 3.4, "x": 24.8, "y": -5.8, "note": "Swallowed by looping contain" },
+        { "t": 4, "x": 24.5, "y": -5.8, "note": "Sacked at the line" }
       ]
     },
     {
@@ -154,8 +154,8 @@
       "trail": "block",
       "assignment": "Scan protect against the wandering edge",
       "waypoints": [
-        { "t": 0, "x": 23, "y": -3, "note": "Scan alignment" },
-        { "t": 0.9, "x": 24.5, "y": -2.4, "note": "Tracking the wildcat walk" },
+        { "t": 0, "x": 23, "y": -5, "note": "Scan alignment" },
+        { "t": 0.9, "x": 24.5, "y": -3.2, "note": "Tracking the wildcat walk" },
         { "t": 2, "x": 26.5, "y": -2, "note": "Guesses outside as he darts in" },
         { "t": 4, "x": 27, "y": -1.8, "note": "Wrong gap entirely" }
       ]
@@ -216,8 +216,8 @@
         { "t": 1, "x": 17.2, "y": -0.2, "note": "Pin LT upfield arc" },
         { "t": 2.2, "x": 18, "y": -2, "note": "Ride the arc wide first" },
         { "t": 3, "x": 22, "y": -3.4, "note": "Loop inside on the flush" },
-        { "t": 3.4, "x": 25, "y": -3.6, "note": "Shared sack hit on QB" },
-        { "t": 4, "x": 24.5, "y": -3.5, "note": "Finishing the pile" }
+        { "t": 3.55, "x": 25, "y": -3.6, "note": "Shared sack hit on QB" },
+        { "t": 4.15, "x": 24.5, "y": -3.5, "note": "Finishing the pile" }
       ]
     },
     {
@@ -229,12 +229,21 @@
       "assignment": "WILDCAT WALK: stem between alignments across the tackle, dart inside",
       "waypoints": [
         { "t": 0, "x": 38.5, "y": 2.5, "note": "Wide stand-up alignment" },
+        { "t": 0.3, "x": 36.25, "y": 1.85 },
         { "t": 0.6, "x": 34, "y": 1.2, "note": "Stem sprint to tight over tackle" },
+        { "t": 0.9, "x": 35.75, "y": 1.1 },
         { "t": 1.2, "x": 37.5, "y": 1, "note": "Bounce back wide — key reset demanded" },
-        { "t": 1.8, "x": 32, "y": -0.6, "note": "Dart inside under distracted RT" },
-        { "t": 2.6, "x": 29.5, "y": -2.2, "note": "Free burst through B-gap" },
-        { "t": 3.2, "x": 27.5, "y": -3.2, "note": "Flush QB off his platform" },
-        { "t": 4, "x": 26.2, "y": -3.5, "note": "Half of the sack pile" }
+        { "t": 1.5, "x": 35.67, "y": 0.47 },
+        { "t": 1.8, "x": 33.83, "y": -0.07 },
+        { "t": 2.05, "x": 32, "y": -0.6, "note": "Dart inside under distracted RT" },
+        { "t": 2.3, "x": 31.17, "y": -1.13 },
+        { "t": 2.55, "x": 30.33, "y": -1.67 },
+        { "t": 2.8, "x": 29.5, "y": -2.2, "note": "Free burst through B-gap" },
+        { "t": 3.1, "x": 28.5, "y": -2.7 },
+        { "t": 3.4, "x": 27.5, "y": -3.2, "note": "Flush QB off his platform" },
+        { "t": 3.7, "x": 27.07, "y": -3.3 },
+        { "t": 4, "x": 26.63, "y": -3.4 },
+        { "t": 4.3, "x": 26.2, "y": -3.5, "note": "Half of the sack pile" }
       ]
     },
     {

@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "rns-post-wheel-leverage-read",
-  "duration": 4,
+  "duration": 4.2,
   "offense": [
     {
       "id": "C",
@@ -81,13 +81,13 @@
       "trail": "none",
       "assignment": "Five-step drop, deliver to X's wheel off the leverage read",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
-        { "t": 0.5, "x": 26.67, "y": -3.8, "note": "Big first steps of five-step drop" },
-        { "t": 1.1, "x": 26.67, "y": -5.8, "note": "Completing the drop" },
-        { "t": 1.8, "x": 26.67, "y": -6, "note": "Hitch, reading X stem" },
-        { "t": 2.6, "x": 27.2, "y": -5.4, "note": "Loading for the sideline shot" },
-        { "t": 3.2, "x": 27.8, "y": -4.6, "note": "Full delivery downfield" },
-        { "t": 4, "x": 28.6, "y": -3.6, "note": "Ball in flight" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.5, "x": 26.67, "y": -6, "note": "Big first steps of five-step drop" },
+        { "t": 1.1, "x": 26.67, "y": -7, "note": "Completing the drop" },
+        { "t": 1.8, "x": 26.67, "y": -7.1, "note": "Hitch, reading X stem" },
+        { "t": 2.6, "x": 27.2, "y": -6.8, "note": "Loading for the sideline shot" },
+        { "t": 3.2, "x": 27.8, "y": -6.4, "note": "Full delivery downfield" },
+        { "t": 4, "x": 28.6, "y": -5.9, "note": "Ball in flight" }
       ]
     },
     {
@@ -98,13 +98,24 @@
       "trail": "route",
       "assignment": "Sell post stem vs soft corner, convert to wheel outside his cushion",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split, reading corner depth" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split, reading corner depth" },
+        { "t": 0.27, "x": 6.33, "y": 0.8 },
+        { "t": 0.53, "x": 7.17, "y": 2.1 },
         { "t": 0.8, "x": 8, "y": 3.4, "note": "Pushing the post stem inside" },
+        { "t": 1.03, "x": 8.33, "y": 4.6 },
+        { "t": 1.27, "x": 8.67, "y": 5.8 },
         { "t": 1.5, "x": 9, "y": 7, "note": "Corner flat-footed — wheel trigger fires" },
+        { "t": 1.73, "x": 8.27, "y": 8.17 },
+        { "t": 1.97, "x": 7.53, "y": 9.33 },
         { "t": 2.2, "x": 6.8, "y": 10.5, "note": "Planting and converting outside" },
+        { "t": 2.43, "x": 6.2, "y": 11.67 },
+        { "t": 2.67, "x": 5.6, "y": 12.83 },
         { "t": 2.9, "x": 5, "y": 14, "note": "Wheeling up the sideline" },
+        { "t": 3.13, "x": 4.93, "y": 16 },
+        { "t": 3.37, "x": 4.87, "y": 18 },
         { "t": 3.6, "x": 4.8, "y": 20, "note": "Behind the bail" },
-        { "t": 4, "x": 5.5, "y": 25, "note": "Deep shot window open" }
+        { "t": 3.9, "x": 5.15, "y": 22.5 },
+        { "t": 4.2, "x": 5.5, "y": 25, "note": "Deep shot window open" }
       ]
     },
     {
@@ -145,7 +156,7 @@
       "trail": "route",
       "assignment": "Comeback at fourteen — punish the trailing corner if he sits on the wheel",
       "waypoints": [
-        { "t": 0, "x": 48.2, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48.2, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.9, "x": 47.6, "y": 4.5, "note": "Vertical stem at RCB" },
         { "t": 2, "x": 46.5, "y": 12, "note": "Stacking the corner" },
         { "t": 2.9, "x": 48, "y": 14.5, "note": "Breaking back to the comeback" },

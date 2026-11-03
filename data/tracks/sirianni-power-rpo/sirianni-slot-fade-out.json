@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "sirianni-slot-fade-out",
-  "duration": 4,
+  "duration": 4.3,
   "offense": [
     {
       "id": "LT",
@@ -148,11 +148,21 @@
       "assignment": "Slot receiver left, stem inside at Star DB, burst outside on high-speed Slot Fade to pylon",
       "waypoints": [
         { "t": 0, "x": 15, "y": -0.8, "note": "Slot left alignment" },
-        { "t": 0.8, "x": 15.5, "y": 4, "note": "Stem directly at Star DB inside hip" },
-        { "t": 1.6, "x": 12, "y": 11, "note": "Explode outside on Slot Fade angle" },
-        { "t": 2.5, "x": 7.5, "y": 19, "note": "Stack Star DB toward front pylon" },
-        { "t": 3.4, "x": 5, "y": 24.5, "note": "Catch over-the-shoulder fade in back corner of end zone" },
-        { "t": 4, "x": 4.5, "y": 25, "note": "Tap two feet in bounds for touchdown" }
+        { "t": 0.3, "x": 15.17, "y": 0.8 },
+        { "t": 0.6, "x": 15.33, "y": 2.4 },
+        { "t": 0.9, "x": 15.5, "y": 4, "note": "Stem directly at Star DB inside hip" },
+        { "t": 1.2, "x": 14.33, "y": 6.33 },
+        { "t": 1.5, "x": 13.17, "y": 8.67 },
+        { "t": 1.8, "x": 12, "y": 11, "note": "Explode outside on Slot Fade angle" },
+        { "t": 2.05, "x": 10.88, "y": 13 },
+        { "t": 2.3, "x": 9.75, "y": 15 },
+        { "t": 2.55, "x": 8.63, "y": 17 },
+        { "t": 2.8, "x": 7.5, "y": 19, "note": "Stack Star DB toward front pylon" },
+        { "t": 3.1, "x": 6.67, "y": 20.83 },
+        { "t": 3.4, "x": 5.83, "y": 22.67 },
+        { "t": 3.7, "x": 5, "y": 24.5, "note": "Catch over-the-shoulder fade in back corner of end zone" },
+        { "t": 4, "x": 4.75, "y": 24.75 },
+        { "t": 4.3, "x": 4.5, "y": 25, "note": "Tap two feet in bounds for touchdown" }
       ]
     },
     {
@@ -164,10 +174,22 @@
       "assignment": "Wide receiver right, run deep post to pull RCB and Free Safety",
       "waypoints": [
         { "t": 0, "x": 46.5, "y": -0.5, "note": "Wide right" },
+        { "t": 0.27, "x": 46.33, "y": 1.17 },
+        { "t": 0.53, "x": 46.17, "y": 2.83 },
         { "t": 0.8, "x": 46, "y": 4.5, "note": "Vertical stem" },
+        { "t": 1.05, "x": 45.25, "y": 6.13 },
+        { "t": 1.3, "x": 44.5, "y": 7.75 },
+        { "t": 1.55, "x": 43.75, "y": 9.38 },
         { "t": 1.8, "x": 43, "y": 11, "note": "Deep post stem" },
+        { "t": 2.04, "x": 41.4, "y": 12.4 },
+        { "t": 2.28, "x": 39.8, "y": 13.8 },
+        { "t": 2.52, "x": 38.2, "y": 15.2 },
+        { "t": 2.76, "x": 36.6, "y": 16.6 },
         { "t": 3, "x": 35, "y": 18, "note": "Cross face of safety" },
-        { "t": 4, "x": 28, "y": 24, "note": "Remove deep safety" }
+        { "t": 3.26, "x": 33.25, "y": 19.5 },
+        { "t": 3.53, "x": 31.5, "y": 21 },
+        { "t": 3.79, "x": 29.75, "y": 22.5 },
+        { "t": 4.05, "x": 28, "y": 24, "note": "Remove deep safety" }
       ]
     }
   ],
@@ -302,10 +324,22 @@
       "assignment": "Man coverage on Z, trail deep post",
       "waypoints": [
         { "t": 0, "x": 46.5, "y": 6, "note": "Right CB" },
+        { "t": 0.27, "x": 46.33, "y": 6.5 },
+        { "t": 0.53, "x": 46.17, "y": 7 },
         { "t": 0.8, "x": 46, "y": 7.5, "note": "Bail" },
+        { "t": 1.05, "x": 45.25, "y": 8.63 },
+        { "t": 1.3, "x": 44.5, "y": 9.75 },
+        { "t": 1.55, "x": 43.75, "y": 10.88 },
         { "t": 1.8, "x": 43, "y": 12, "note": "Trail Z deep" },
+        { "t": 2.04, "x": 41.6, "y": 13.4 },
+        { "t": 2.28, "x": 40.2, "y": 14.8 },
+        { "t": 2.52, "x": 38.8, "y": 16.2 },
+        { "t": 2.76, "x": 37.4, "y": 17.6 },
         { "t": 3, "x": 36, "y": 19, "note": "Cover post" },
-        { "t": 4, "x": 29, "y": 25, "note": "Run deep" }
+        { "t": 3.26, "x": 34.25, "y": 20.5 },
+        { "t": 3.53, "x": 32.5, "y": 22 },
+        { "t": 3.79, "x": 30.75, "y": 23.5 },
+        { "t": 4.05, "x": 29, "y": 25, "note": "Run deep" }
       ]
     },
     {

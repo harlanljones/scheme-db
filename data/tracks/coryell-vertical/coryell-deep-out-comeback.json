@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "coryell-deep-out-comeback",
-  "duration": 4.2,
+  "duration": 4.5,
   "offense": [
     {
       "id": "C",
@@ -115,7 +115,7 @@
       "trail": "route",
       "assignment": "Beat press with a release, run the comeback at 16 — second read",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 5.2, "y": 3, "note": "Fighting an inside release off press" },
         { "t": 1.6, "x": 5.8, "y": 8, "note": "Winning the stack" },
         { "t": 2.4, "x": 7, "y": 13.5, "note": "Selling vertical at the top" },
@@ -132,7 +132,7 @@
       "trail": "block",
       "assignment": "Release into a 10-yard hook over the strong-side hook defender",
       "waypoints": [
-        { "t": 0, "x": 20.3, "y": 0.7, "note": "Y tight left" },
+        { "t": 0, "x": 20.3, "y": -0.6, "note": "Y tight left" },
         { "t": 0.8, "x": 20.8, "y": 3, "note": "Working release vs Sam" },
         { "t": 1.8, "x": 21.5, "y": 7.5, "note": "Climbing to the hook depth" },
         { "t": 2.8, "x": 23, "y": 10, "note": "Settling in the window" },
@@ -162,7 +162,7 @@
       "trail": "route",
       "assignment": "Primary: beat press and drive the 18-yard deep out away from the sideline",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right vs press" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right vs press" },
         { "t": 0.8, "x": 47.2, "y": 3, "note": "Two-hand fight for outside release" },
         { "t": 1.6, "x": 46.5, "y": 8.5, "note": "Stacking the corner" },
         { "t": 2.4, "x": 45.5, "y": 14, "note": "Vertical sell at 14" },
@@ -283,10 +283,10 @@
       "assignment": "Press man on X — no help over the top",
       "waypoints": [
         { "t": 0, "x": 5.9, "y": 7.5, "note": "Press alignment moved up" },
-        { "t": 0.8, "x": 6, "y": 3, "note": "Hand-fighting X at the line" },
-        { "t": 1.8, "x": 6.6, "y": 9, "note": "Losing the stack battle" },
-        { "t": 3, "x": 8, "y": 15, "note": "Trail position on the comeback" },
-        { "t": 4.2, "x": 10, "y": 15.8, "note": "A half-step behind" }
+        { "t": 0.9, "x": 6, "y": 3, "note": "Hand-fighting X at the line" },
+        { "t": 2, "x": 6.6, "y": 9, "note": "Losing the stack battle" },
+        { "t": 3.2, "x": 8, "y": 15, "note": "Trail position on the comeback" },
+        { "t": 4.4, "x": 10, "y": 15.8, "note": "A half-step behind" }
       ]
     },
     {
@@ -298,11 +298,11 @@
       "assignment": "Press man on Z — take away the deep out",
       "waypoints": [
         { "t": 0, "x": 48.6, "y": 7.5, "note": "Press alignment" },
-        { "t": 0.8, "x": 48, "y": 3, "note": "Jamming the release" },
-        { "t": 1.8, "x": 47.2, "y": 9.5, "note": "Still in phase vertically" },
-        { "t": 3, "x": 46.2, "y": 16, "note": "Sitting on the deep-out break" },
-        { "t": 3.8, "x": 44, "y": 18.2, "note": "Closing the out window" },
-        { "t": 4.2, "x": 42.5, "y": 18.4, "note": "Erasing the primary" }
+        { "t": 0.9, "x": 48, "y": 3, "note": "Jamming the release" },
+        { "t": 2.1, "x": 47.2, "y": 9.5, "note": "Still in phase vertically" },
+        { "t": 3.3, "x": 46.2, "y": 16, "note": "Sitting on the deep-out break" },
+        { "t": 4.1, "x": 44, "y": 18.2, "note": "Closing the out window" },
+        { "t": 4.5, "x": 42.5, "y": 18.4, "note": "Erasing the primary" }
       ]
     },
     {

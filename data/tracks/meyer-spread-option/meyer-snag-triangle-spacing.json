@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "meyer-snag-triangle-spacing",
-  "duration": 4,
+  "duration": 4.2,
   "offense": [
     {
       "id": "C",
@@ -86,14 +86,14 @@
       "trail": "none",
       "assignment": "Fake the zone-read give, reset, and deliver to the winning triangle layer",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
-        { "t": 0.4, "x": 26.4, "y": -2.8, "note": "Opening for fake give" },
-        { "t": 0.75, "x": 26.9, "y": -3, "note": "Fake ride with eyes downfield" },
-        { "t": 1.3, "x": 26.7, "y": -3.4, "note": "Resetting to throw" },
-        { "t": 1.9, "x": 26.9, "y": -3.6, "note": "Reading the triangle" },
-        { "t": 2.5, "x": 27.4, "y": -3, "note": "Delivery to the snag window" },
-        { "t": 3.2, "x": 28.2, "y": -2.4, "note": "Follow-through" },
-        { "t": 4, "x": 29, "y": -2, "note": "Ball in flight" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.4, "x": 26.4, "y": -5.5, "note": "Opening for fake give" },
+        { "t": 0.75, "x": 26.9, "y": -5.6, "note": "Fake ride with eyes downfield" },
+        { "t": 1.3, "x": 26.7, "y": -5.8, "note": "Resetting to throw" },
+        { "t": 1.9, "x": 26.9, "y": -5.9, "note": "Reading the triangle" },
+        { "t": 2.5, "x": 27.4, "y": -5.6, "note": "Delivery to the snag window" },
+        { "t": 3.2, "x": 28.2, "y": -5.3, "note": "Follow-through" },
+        { "t": 4, "x": 29, "y": -5.1, "note": "Ball in flight" }
       ]
     },
     {
@@ -121,12 +121,24 @@
       "trail": "route",
       "assignment": "Dig at fourteen backside — clear the weak hook and stretch the middle",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
+        { "t": 0.23, "x": 5.63, "y": 0.88 },
+        { "t": 0.45, "x": 5.75, "y": 2.25 },
+        { "t": 0.68, "x": 5.88, "y": 3.63 },
         { "t": 0.9, "x": 6, "y": 5, "note": "Vertical stem at bail corner" },
+        { "t": 1.18, "x": 6.38, "y": 6.5 },
+        { "t": 1.45, "x": 6.75, "y": 8 },
+        { "t": 1.73, "x": 7.13, "y": 9.5 },
         { "t": 2, "x": 7.5, "y": 11, "note": "Pushing the quarter deep" },
+        { "t": 2.23, "x": 9, "y": 11.75 },
+        { "t": 2.45, "x": 10.5, "y": 12.5 },
+        { "t": 2.68, "x": 12, "y": 13.25 },
         { "t": 2.9, "x": 13.5, "y": 14, "note": "Breaking inside at fourteen" },
+        { "t": 3.13, "x": 15.33, "y": 14.33 },
+        { "t": 3.37, "x": 17.17, "y": 14.67 },
         { "t": 3.6, "x": 19, "y": 15, "note": "Dig climbing across middle" },
-        { "t": 4, "x": 24, "y": 15.5, "note": "Weak side cleared" }
+        { "t": 3.9, "x": 21.5, "y": 15.25 },
+        { "t": 4.2, "x": 24, "y": 15.5, "note": "Weak side cleared" }
       ]
     },
     {
@@ -152,7 +164,7 @@
       "trail": "route",
       "assignment": "Snag at five — settle and work away from underneath leverage",
       "waypoints": [
-        { "t": 0, "x": 33.8, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.8, "y": -0.6, "note": "TE alignment" },
         { "t": 0.8, "x": 34, "y": 2.5, "note": "Release past the end" },
         { "t": 1.5, "x": 34.5, "y": 5, "note": "Working to snag depth" },
         { "t": 2.2, "x": 34, "y": 6.2, "note": "Settling in the window" },
@@ -168,7 +180,7 @@
       "trail": "route",
       "assignment": "Corner at twelve — hold the deep third and punish a soft corner",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.9, "x": 47.6, "y": 4.5, "note": "Vertical push selling go" },
         { "t": 1.9, "x": 47, "y": 11, "note": "Stacking the bail corner" },
         { "t": 2.6, "x": 43.5, "y": 13.8, "note": "Breaking out at twelve" },

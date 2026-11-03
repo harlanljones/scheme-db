@@ -103,9 +103,9 @@
       "trail": "carry",
       "assignment": "Take the inside-zone handoff through the combo lane",
       "waypoints": [
-        { "t": 0, "x": 25, "y": -6.2, "note": "Gun alignment" },
-        { "t": 0.6, "x": 26.2, "y": -5.2, "note": "Pressing the mesh point" },
-        { "t": 1.2, "x": 26.4, "y": -3, "note": "Taking the handoff downhill" },
+        { "t": 0, "x": 25, "y": -5, "note": "Gun alignment" },
+        { "t": 0.6, "x": 26.2, "y": -4.5, "note": "Pressing the mesh point" },
+        { "t": 1.2, "x": 26.4, "y": -2.8, "note": "Taking the handoff downhill" },
         { "t": 2, "x": 26.6, "y": -0.5, "note": "Hitting the zone lane behind the combo" },
         { "t": 2.8, "x": 27, "y": 2.5, "note": "Through the second level" },
         { "t": 3.6, "x": 27.2, "y": 5.5, "note": "Falling forward after gain" },
@@ -120,7 +120,7 @@
       "trail": "route",
       "assignment": "Boundary vertical clearout holding the corner in his quarter",
       "waypoints": [
-        { "t": 0, "x": 5, "y": 0.7, "note": "Wide split left" },
+        { "t": 0, "x": 5, "y": -0.5, "note": "Wide split left" },
         { "t": 0.8, "x": 5.8, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 6.8, "y": 11.5, "note": "Pushing the corner deep" },
         { "t": 3.2, "x": 8, "y": 18, "note": "Holding his quarter" },
@@ -151,7 +151,7 @@
       "trail": "route",
       "assignment": "Field-side vertical clearout pinning the corner",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 47.5, "y": 4, "note": "Instant vertical release" },
         { "t": 2, "x": 46.8, "y": 11.5, "note": "Pinning the corner deep" },
         { "t": 3.2, "x": 46.2, "y": 18, "note": "Holding his quarter wide" },
@@ -166,7 +166,7 @@
       "trail": "route",
       "assignment": "Middle-hole stretcher at twelve — occupy the hook defender under the shot",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "Y alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "Y alignment" },
         { "t": 0.8, "x": 32.5, "y": 4, "note": "Vertical push up the middle" },
         { "t": 1.8, "x": 31.5, "y": 9.5, "note": "Threatening the middle hole" },
         { "t": 2.8, "x": 30.5, "y": 12, "note": "Settling in the hole" },

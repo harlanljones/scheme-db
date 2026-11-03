@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "bowles-overload-boundary-fire",
-  "duration": 3.8,
+  "duration": 4.3,
   "offense": [
     {
       "id": "C",
@@ -267,10 +267,21 @@
       "assignment": "Overload fire blitzer: launch off boundary edge unblocked to QB blindside!",
       "waypoints": [
         { "t": 0, "x": 7, "y": 1.2, "note": "Shows tight press on X" },
+        { "t": 0.3, "x": 9, "y": 0.35 },
         { "t": 0.6, "x": 11, "y": -0.5, "note": "Sprints off edge behind LOLB stunt" },
-        { "t": 1.4, "x": 19.5, "y": -4, "note": "Bends the corner unblocked" },
-        { "t": 2, "x": 25.5, "y": -6.5, "note": "Crushing blindside hit & strip sack!" },
-        { "t": 3.8, "x": 26, "y": -7.5, "note": "Fumble forced" }
+        { "t": 0.85, "x": 13.13, "y": -1.37 },
+        { "t": 1.1, "x": 15.25, "y": -2.25 },
+        { "t": 1.35, "x": 17.38, "y": -3.12 },
+        { "t": 1.6, "x": 19.5, "y": -4, "note": "Bends the corner unblocked" },
+        { "t": 1.85, "x": 21.5, "y": -4.83 },
+        { "t": 2.2, "x": 23.5, "y": -5.67 },
+        { "t": 2.55, "x": 25.5, "y": -6.5, "note": "Crushing blindside hit & strip sack!" },
+        { "t": 2.85, "x": 25.58, "y": -6.67 },
+        { "t": 3.15, "x": 25.67, "y": -6.83 },
+        { "t": 3.45, "x": 25.75, "y": -7 },
+        { "t": 3.7, "x": 25.83, "y": -7.17 },
+        { "t": 4, "x": 25.92, "y": -7.33 },
+        { "t": 4.3, "x": 26, "y": -7.5, "note": "Fumble forced" }
       ]
     },
     {

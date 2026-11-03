@@ -81,11 +81,11 @@
       "trail": "route",
       "assignment": "Quick drop, work the mesh crossers",
       "waypoints": [
-        { "t": 0, "x": 26.2, "y": -1.8, "note": "Gun, quick-game alert" },
-        { "t": 1, "x": 26.3, "y": -2.9, "note": "Catch and hitch step" },
-        { "t": 2, "x": 25.9, "y": -4.2, "note": "Eyes on crossing action" },
-        { "t": 3.1, "x": 25.6, "y": -4.7, "note": "Throws late to H drag" },
-        { "t": 4, "x": 25.4, "y": -4.3, "note": "Pass tipped in rob window" }
+        { "t": 0, "x": 26.2, "y": -5, "note": "Gun, quick-game alert" },
+        { "t": 1, "x": 26.3, "y": -5.5, "note": "Catch and hitch step" },
+        { "t": 2, "x": 25.9, "y": -6.2, "note": "Eyes on crossing action" },
+        { "t": 3.1, "x": 25.6, "y": -6.4, "note": "Throws late to H drag" },
+        { "t": 4, "x": 25.4, "y": -6.2, "note": "Pass tipped in rob window" }
       ]
     },
     {
@@ -110,7 +110,7 @@
       "trail": "route",
       "assignment": "Go route to clear the weak third",
       "waypoints": [
-        { "t": 0, "x": 6, "y": 0.5, "note": "Clear-out release" },
+        { "t": 0, "x": 6, "y": -0.5, "note": "Clear-out release" },
         { "t": 1, "x": 6.6, "y": 5.5, "note": "Vertical vs press bail" },
         { "t": 2.2, "x": 7.2, "y": 11.5, "note": "Carries LCB deep" },
         { "t": 4, "x": 7.8, "y": 16, "note": "Weak third emptied on purpose" }
@@ -124,7 +124,7 @@
       "trail": "route",
       "assignment": "Drag across at 5 yards through the mesh point",
       "waypoints": [
-        { "t": 0, "x": 15.5, "y": 0.7, "note": "Slot #2, mesh duty" },
+        { "t": 0, "x": 15.5, "y": -0.5, "note": "Slot #2, mesh duty" },
         { "t": 1, "x": 17.5, "y": 2, "note": "Inside stem" },
         { "t": 2.2, "x": 22.5, "y": 4.2, "note": "Drag at 5 yards" },
         { "t": 3.1, "x": 28, "y": 5, "note": "Climb into middle window" },
@@ -139,7 +139,7 @@
       "trail": "route",
       "assignment": "Seam vertical to stress the strong quarter",
       "waypoints": [
-        { "t": 0, "x": 37, "y": 0.7, "note": "Slot #2, seam alert" },
+        { "t": 0, "x": 37, "y": -0.5, "note": "Slot #2, seam alert" },
         { "t": 1, "x": 37.6, "y": 5.5, "note": "Seam release inside Z" },
         { "t": 2.2, "x": 38.4, "y": 12, "note": "Carried by SS quarter" },
         { "t": 3.1, "x": 39, "y": 16, "note": "Ran out of bracket room" },
@@ -154,7 +154,7 @@
       "trail": "route",
       "assignment": "Corner route off the seam clear-out",
       "waypoints": [
-        { "t": 0, "x": 47.5, "y": 0.5, "note": "Corner off vertical stem" },
+        { "t": 0, "x": 47.5, "y": -0.5, "note": "Corner off vertical stem" },
         { "t": 1, "x": 46, "y": 3.5, "note": "Stem vertical first" },
         { "t": 2.2, "x": 44, "y": 9, "note": "Break outside downfield" },
         { "t": 4, "x": 40.5, "y": 13.5, "note": "Corner depth covered by sinking RCB" }

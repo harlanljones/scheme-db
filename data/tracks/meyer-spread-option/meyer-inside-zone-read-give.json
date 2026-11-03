@@ -86,14 +86,14 @@
       "trail": "none",
       "assignment": "Open, ride the mesh with eyes on the backside end, execute the give",
       "waypoints": [
-        { "t": 0, "x": 26.67, "y": -1.8, "note": "Gun snap" },
-        { "t": 0.35, "x": 26.4, "y": -2.8, "note": "Opening step away from mesh" },
-        { "t": 0.7, "x": 26.9, "y": -3, "note": "Riding F, eyes locked on LE" },
-        { "t": 1.05, "x": 27.1, "y": -2.8, "note": "LE crashed — ball comes out" },
-        { "t": 1.7, "x": 28.5, "y": -3.2, "note": "Carrying out the keep fake" },
-        { "t": 2.5, "x": 30, "y": -3.4, "note": "Selling the boot away" },
-        { "t": 3.2, "x": 31, "y": -3.6, "note": "Fake carried wide" },
-        { "t": 4, "x": 32, "y": -3.8, "note": "Pursuit fully manipulated" }
+        { "t": 0, "x": 26.67, "y": -5, "note": "Gun snap" },
+        { "t": 0.35, "x": 26.4, "y": -5.5, "note": "Opening step away from mesh" },
+        { "t": 0.7, "x": 26.9, "y": -5.6, "note": "Riding F, eyes locked on LE" },
+        { "t": 1.05, "x": 27.1, "y": -5.5, "note": "LE crashed — ball comes out" },
+        { "t": 1.7, "x": 28.5, "y": -5.7, "note": "Carrying out the keep fake" },
+        { "t": 2.5, "x": 30, "y": -5.8, "note": "Selling the boot away" },
+        { "t": 3.2, "x": 31, "y": -5.9, "note": "Fake carried wide" },
+        { "t": 4, "x": 32, "y": -6, "note": "Pursuit fully manipulated" }
       ]
     },
     {
@@ -121,7 +121,7 @@
       "trail": "route",
       "assignment": "Run off the boundary corner vertically",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.9, "x": 5.8, "y": 5, "note": "Instant vertical stem" },
         { "t": 2, "x": 7, "y": 12, "note": "Carrying corner deep" },
         { "t": 3.1, "x": 8.5, "y": 19, "note": "Third cleared" },
@@ -151,7 +151,7 @@
       "trail": "block",
       "assignment": "Down-block inside, climb to the strong linebacker",
       "waypoints": [
-        { "t": 0, "x": 33.8, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.8, "y": -0.6, "note": "TE alignment" },
         { "t": 0.5, "x": 33.5, "y": 1.5, "note": "Working off the reach" },
         { "t": 1.5, "x": 34.5, "y": 3, "note": "Climbing to Sam" },
         { "t": 2.5, "x": 35, "y": 4.2, "note": "Sam engaged" },
@@ -166,7 +166,7 @@
       "trail": "block",
       "assignment": "Stalk-block the field corner",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.8, "x": 47.8, "y": 3, "note": "Working down to corner" },
         { "t": 1.8, "x": 46.5, "y": 4, "note": "Closing on RCB" },
         { "t": 2.8, "x": 45.2, "y": 4.5, "note": "Stalk engaged" },

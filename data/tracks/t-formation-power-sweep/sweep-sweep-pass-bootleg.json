@@ -1,7 +1,7 @@
 {
   "$schema": "../../schema/tracks.schema.json",
   "conceptId": "sweep-sweep-pass-bootleg",
-  "duration": 4.2,
+  "duration": 4.6,
   "offense": [
     {
       "id": "LE",
@@ -11,12 +11,24 @@
       "trail": "block",
       "assignment": "Sell the reach block on the sweep then release into the deep flood route",
       "waypoints": [
-        { "t": 0, "x": 20.3, "y": 0.7, "note": "End alignment — the deep leg of the flood" },
+        { "t": 0, "x": 20.3, "y": -0.6, "note": "End alignment — the deep leg of the flood" },
+        { "t": 0.3, "x": 20.65, "y": 0.2 },
         { "t": 0.6, "x": 21, "y": 1, "note": "Violent reach sell on the end" },
-        { "t": 1.3, "x": 22.5, "y": 2.5, "note": "Releasing upfield off the block" },
-        { "t": 2.4, "x": 28, "y": 12, "note": "Climbing to fifteen on the backside" },
-        { "t": 3.4, "x": 32.5, "y": 15, "note": "Deep out break at fifteen" },
-        { "t": 4.2, "x": 36, "y": 15.2, "note": "Deep level anchored" }
+        { "t": 0.85, "x": 21.5, "y": 1.5 },
+        { "t": 1.1, "x": 22, "y": 2 },
+        { "t": 1.35, "x": 22.5, "y": 2.5, "note": "Releasing upfield off the block" },
+        { "t": 1.65, "x": 23.6, "y": 4.4 },
+        { "t": 1.9, "x": 24.7, "y": 6.3 },
+        { "t": 2.15, "x": 25.8, "y": 8.2 },
+        { "t": 2.4, "x": 26.9, "y": 10.1 },
+        { "t": 2.65, "x": 28, "y": 12, "note": "Climbing to fifteen on the backside" },
+        { "t": 2.9, "x": 29.13, "y": 12.75 },
+        { "t": 3.15, "x": 30.25, "y": 13.5 },
+        { "t": 3.4, "x": 31.38, "y": 14.25 },
+        { "t": 3.65, "x": 32.5, "y": 15, "note": "Deep out break at fifteen" },
+        { "t": 3.95, "x": 33.67, "y": 15.07 },
+        { "t": 4.25, "x": 34.83, "y": 15.13 },
+        { "t": 4.55, "x": 36, "y": 15.2, "note": "Deep level anchored" }
       ]
     },
     {
@@ -101,7 +113,7 @@
       "trail": "block",
       "assignment": "Drive block the strong end inside-out to open the boot shoulder",
       "waypoints": [
-        { "t": 0, "x": 33, "y": 0.7, "note": "End alignment" },
+        { "t": 0, "x": 33, "y": -0.6, "note": "End alignment" },
         { "t": 0.6, "x": 33.5, "y": 1, "note": "Inside drive on the strong end" },
         { "t": 1.6, "x": 34.6, "y": 1.6, "note": "Walling him down the rush lane" },
         { "t": 3, "x": 35.8, "y": 2.4, "note": "Boot shoulder widened" },
@@ -165,7 +177,7 @@
       "trail": "route",
       "assignment": "Intermediate leg: ten-yard out route at the numbers over the boot side",
       "waypoints": [
-        { "t": 0, "x": 47.8, "y": 0.7, "note": "Flanker split right" },
+        { "t": 0, "x": 47.8, "y": -0.5, "note": "Flanker split right" },
         { "t": 0.8, "x": 47.2, "y": 3.5, "note": "Vertical stem selling fade" },
         { "t": 1.8, "x": 46.2, "y": 8, "note": "Working back inside at ten" },
         { "t": 2.8, "x": 44, "y": 10.5, "note": "Out-break at the numbers" },

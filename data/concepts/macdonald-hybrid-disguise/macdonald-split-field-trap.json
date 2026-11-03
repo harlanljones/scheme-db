@@ -24,19 +24,19 @@
       "focus": ["FS", "SS", "LCB", "QB"]
     },
     {
-      "t": 0.8,
+      "t": 0.9,
       "title": "Post-Snap Safety Inversion (The Spin)",
       "text": "At the snap, the safeties spin! SS explodes backward to cover the boundary deep half, while FS rotates to the field quarter. LCB recognizes the trap trigger.",
       "focus": ["SS", "FS", "LCB"]
     },
     {
-      "t": 2.2,
+      "t": 2.3,
       "title": "The Trap Snaps Shut: Corner Interception",
       "text": "As X clears out downfield, LCB lets him go to SS and squats aggressively on H’s out route. The QB throws directly into the trap for a catastrophic pick-six.",
       "focus": ["LCB", "H", "QB"]
     },
     {
-      "t": 3.5,
+      "t": 3.75,
       "title": "Defensive Touchdown Return",
       "text": "LCB undercuts the football with full forward momentum, sprinting down the sideline for a game-changing defensive score.",
       "focus": ["LCB"]

@@ -123,7 +123,7 @@
       "trail": "block",
       "assignment": "Stalk-block the boundary corner",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.7, "note": "Split end wide left" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split end wide left" },
         { "t": 0.8, "x": 6.8, "y": 2.2, "note": "Working to the stalk" },
         { "t": 1.8, "x": 8.2, "y": 4.4, "note": "Closing on corner" },
         { "t": 2.8, "x": 9.5, "y": 6, "note": "Stalk engaged" },
@@ -139,11 +139,23 @@
       "assignment": "Sprint across formation and lead-block ahead of the pitch",
       "waypoints": [
         { "t": 0, "x": 12, "y": -1.2, "note": "Slot alignment" },
+        { "t": 0.23, "x": 14, "y": -1.3 },
+        { "t": 0.47, "x": 16, "y": -1.4 },
         { "t": 0.7, "x": 18, "y": -1.5, "note": "Sprinting across formation" },
-        { "t": 1.4, "x": 25, "y": -1.8, "note": "Crossing behind QB's arc" },
-        { "t": 2, "x": 31, "y": -1.5, "note": "Racing ahead of the ball" },
+        { "t": 0.95, "x": 20.33, "y": -1.6 },
+        { "t": 1.2, "x": 22.67, "y": -1.7 },
+        { "t": 1.45, "x": 25, "y": -1.8, "note": "Crossing behind QB's arc" },
+        { "t": 1.67, "x": 27, "y": -1.7 },
+        { "t": 1.88, "x": 29, "y": -1.6 },
+        { "t": 2.1, "x": 31, "y": -1.5, "note": "Racing ahead of the ball" },
+        { "t": 2.33, "x": 32.67, "y": -1.27 },
+        { "t": 2.57, "x": 34.33, "y": -1.03 },
         { "t": 2.8, "x": 36, "y": -0.8, "note": "Targeting second force player" },
+        { "t": 3.03, "x": 36.83, "y": -0.6 },
+        { "t": 3.27, "x": 37.67, "y": -0.4 },
         { "t": 3.5, "x": 38.5, "y": -0.2, "note": "Lead block engaged" },
+        { "t": 3.73, "x": 39, "y": 0 },
+        { "t": 3.97, "x": 39.5, "y": 0.2 },
         { "t": 4.2, "x": 40, "y": 0.4, "note": "Perimeter escorted" }
       ]
     },
@@ -155,7 +167,7 @@
       "trail": "block",
       "assignment": "Reach and climb to seal the strong edge for the pitch phase",
       "waypoints": [
-        { "t": 0, "x": 33.8, "y": 0.7, "note": "TE alignment" },
+        { "t": 0, "x": 33.8, "y": -0.6, "note": "TE alignment" },
         { "t": 0.5, "x": 34.2, "y": 1.4, "note": "Working off the reach" },
         { "t": 1.4, "x": 35.2, "y": 1.8, "note": "Climbing to Sam" },
         { "t": 2.3, "x": 36, "y": 2.2, "note": "Sam engaged" },
@@ -170,7 +182,7 @@
       "trail": "route",
       "assignment": "Run off the field corner vertically",
       "waypoints": [
-        { "t": 0, "x": 48, "y": 0.7, "note": "Wideout split right" },
+        { "t": 0, "x": 48, "y": -0.5, "note": "Wideout split right" },
         { "t": 0.9, "x": 47.6, "y": 5, "note": "Instant vertical stem" },
         { "t": 2, "x": 46.5, "y": 12, "note": "Carrying corner deep" },
         { "t": 3.1, "x": 45, "y": 19, "note": "Third cleared" },

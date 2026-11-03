@@ -138,7 +138,7 @@
       "trail": "block",
       "assignment": "Stalk LCB on perimeter",
       "waypoints": [
-        { "t": 0, "x": 5.5, "y": 0.5, "note": "Split wide" },
+        { "t": 0, "x": 5.5, "y": -0.5, "note": "Split wide" },
         { "t": 1, "x": 6.5, "y": 1.5, "note": "Work to LCB" },
         { "t": 2.4, "x": 7.5, "y": 2.5, "note": "Press corner fights off stalk" },
         { "t": 4, "x": 8, "y": 3, "note": "Contained on island" }
@@ -152,7 +152,7 @@
       "trail": "block",
       "assignment": "Stalk RCB on perimeter",
       "waypoints": [
-        { "t": 0, "x": 47, "y": 0.5, "note": "Split wide" },
+        { "t": 0, "x": 47, "y": -0.5, "note": "Split wide" },
         { "t": 1, "x": 46, "y": 1.5, "note": "Work to RCB" },
         { "t": 2.4, "x": 45.5, "y": 2.5, "note": "Press corner sheds stalk" },
         { "t": 4, "x": 45, "y": 3, "note": "Contained on island" }
