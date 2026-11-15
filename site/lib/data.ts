@@ -104,6 +104,8 @@ export interface Library {
   lineageById: Map<string, Lineage>;
   counts: { schemes: number; plays: number; coaches: number; lineages: number; terms: number };
   confidence: ConfidenceCounts;
+  /** How many plays list at least one source. An illustrative play may list sources for the idea it draws without being checked against them. */
+  sourced: number;
   /** The fewest and most plays any scheme has. Copy that names a number of plays per scheme reads these. */
   playsPerScheme: { min: number; max: number };
 }
@@ -177,6 +179,7 @@ export function library(): Library {
       terms: dataset.glossary.length,
     },
     confidence,
+    sourced: dataset.concepts.filter((concept) => concept.provenance.sources.length > 0).length,
     playsPerScheme: { min: Math.min(...perScheme), max: Math.max(...perScheme) },
   };
   return cached;

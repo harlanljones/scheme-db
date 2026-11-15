@@ -49,6 +49,26 @@
   },
   "provenance": {
     "confidence": "illustrative",
-    "sources": []
+    "sources": [
+      {
+        "type": "article",
+        "citation": "Kevin Fielder, \"Breaking down new Vikings defensive coordinator Brian Flores' defense\", Yahoo Sports, Feb 7, 2023",
+        "url": "https://sports.yahoo.com/breaking-down-vikings-defensive-coordinator-171344360.html",
+        "accessed": "2026-11-15"
+      },
+      {
+        "type": "article",
+        "citation": "Chris Trapasso, \"Inside Vikings' 3-0 start: The 'crazy' defensive scheme of Brian Flores\", CBS Sports, Sep 26, 2024",
+        "url": "https://www.cbssports.com/nfl/news/inside-vikings-3-0-start-the-crazy-defensive-scheme-of-brian-flores/",
+        "accessed": "2026-11-15"
+      },
+      {
+        "type": "article",
+        "citation": "Mark Bullock, \"Defensive Coordinator Profile: Brian Flores\", Mark Bullock on Substack, Jan 16, 2026",
+        "url": "https://markbullock.substack.com/p/defensive-coordinator-profile-brian",
+        "accessed": "2026-11-15"
+      }
+    ],
+    "notes": "The sources describe the idea: Flores puts seven defenders on the line of scrimmage with the defensive backs off it, behind man coverage that is often Cover 1 or Cover 0 (Yahoo Sports, 2023), and sends pressure that blockers cannot all account for (Bullock, 2026). The drawing is a teaching illustration. The player paths, the timings and the 3rd and 7 situation are the illustrator's and have not been checked against film."
   }
 }

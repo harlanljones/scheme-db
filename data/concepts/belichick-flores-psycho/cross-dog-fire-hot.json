@@ -49,6 +49,20 @@
   },
   "provenance": {
     "confidence": "illustrative",
-    "sources": []
+    "sources": [
+      {
+        "type": "article",
+        "citation": "Cody Alexander, \"How Brian Flores Beat the Lions: A Deep Dive on Interior Pressure and 'Plus-Two' Coverage\", MatchQuarters, Nov 10, 2025 (free preview)",
+        "url": "https://www.matchquarters.com/p/brian-flores-vikings-defense-lions-film-review-2025-week-9",
+        "accessed": "2026-11-15"
+      },
+      {
+        "type": "article",
+        "citation": "Cody Alexander, \"Brian Flores: Disguising 5-Man Fire Zone Coverages\", MatchQuarters, Oct 28, 2026 (free preview)",
+        "url": "https://www.matchquarters.com/p/brian-flores-5-man-fire-zone-coverages",
+        "accessed": "2026-11-15"
+      }
+    ],
+    "notes": "The sources describe the idea: MatchQuarters reports that Minnesota ran cross-dog and 3-Thru pressures through the A-gaps against the Lions in 2025 and pairs five-man fire zone pressures with disguised shells behind them (Cover 2 Roll, Quarters, Cover 3). The six-man rush, the three-under, two-deep coverage and all player paths are the illustrator's and have not been checked against film."
   }
 }

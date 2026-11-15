@@ -49,6 +49,26 @@
   },
   "provenance": {
     "confidence": "illustrative",
-    "sources": []
+    "sources": [
+      {
+        "type": "article",
+        "citation": "Cody Alexander, \"Brian Flores and the Evolution of Vision Pressures\", MatchQuarters, Aug 31, 2026 (free preview)",
+        "url": "https://www.matchquarters.com/p/brian-flores-vikings-all-up-hawk-coverage",
+        "accessed": "2026-11-15"
+      },
+      {
+        "type": "article",
+        "citation": "Mark Bullock, \"Defensive Coordinator Profile: Brian Flores\", Mark Bullock on Substack, Jan 16, 2026",
+        "url": "https://markbullock.substack.com/p/defensive-coordinator-profile-brian",
+        "accessed": "2026-11-15"
+      },
+      {
+        "type": "article",
+        "citation": "Brad Beatson, \"Brian Flores The Bogeyman\", Sports Info Solutions, Oct 31, 2024",
+        "url": "https://www.sportsinfosolutions.com/2024/10/31/brian-flores-the-bogeyman/",
+        "accessed": "2026-11-15"
+      }
+    ],
+    "notes": "The sources describe the idea: Flores shows a mugged, Cover 0 look and then peels a defender off the line into the throwing lane (Bullock, 2026), carried the most drop-8 coverages in the league in 2023 (MatchQuarters), and uses simulated pressure, which shows blitz and rushes four (Sports Info Solutions, 2024). Bailing four mugged defenders while three rush is the illustrator's version. The player paths and timings have not been checked against film."
   }
 }
