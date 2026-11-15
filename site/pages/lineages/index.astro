@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import NetworkGraph from '../../components/NetworkGraph.astro';
+import SourceList from '../../components/SourceList.astro';
 import { coachHref, library } from '../../lib/data';
 import { tidy } from '../../lib/format';
 import { describeNetwork, layoutNetwork, network } from '../../lib/network';
@@ -90,6 +91,12 @@ const trees = lib.dataset.lineages.map((lineage) => ({ lineage, rows: rowsOf(lin
               </li>
             ))}
           </ul>
+          {lineage.sources && (
+            <div id={`sources-${lineage.id}`}>
+              <p class="lab">Sources for this tree</p>
+              <SourceList sources={lineage.sources} />
+            </div>
+          )}
         </article>
       ))}
     </div>

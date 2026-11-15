@@ -2,8 +2,8 @@
  * Start a new record.
  *
  *   bun run data:new concept --scheme <scheme id> --id <play id> --name "<Play name>" [--formation <id> | --like <play id>]
- *   bun run data:new scheme  --id <id> --name "<Name>" --coach <coach id> --team "<Team>" --era <era> [--side] [--lineage]
- *   bun run data:new coach   --id <id> --name "<Name>" --team "<Team>" --side <side> --lineage <branch> [--role] [--mentor]
+ *   bun run data:new scheme  --id <id> --name "<Name>" --coach <coach id> --team "<Team>" --era <era> [--side] [--lineage] [--source ...]
+ *   bun run data:new coach   --id <id> --name "<Name>" --team "<Team>" --side <side> --lineage <branch> [--role] [--mentor] [--source ...]
  *   bun run data:new term    --id <id> --term "<Term>" --category "<Category>"
  *
  * Writes records that already parse against their schema, with `TODO:` where you have to write something.
@@ -14,7 +14,7 @@ import * as path from 'node:path';
 import { parseArgs } from 'node:util';
 import { formatFile } from '../src/schema/format';
 import { DATA_DIR, loadDataset } from '../src/schema/load';
-import { Era, LineageBranch, Side, TermCategory } from '../src/schema/schema';
+import { Era, LineageBranch, Side, SourceType, TermCategory } from '../src/schema/schema';
 import { ScaffoldError, newCoach, newConcept, newScheme, newTerm, type Scaffold } from '../src/schema/scaffold';
 import { validateDataset } from '../src/schema/validate-dataset';
 
@@ -23,7 +23,9 @@ const USAGE = `Usage: bun run data:new <concept | scheme | coach | term> [option
   concept  --scheme <id> --id <id> --name "<name>"  [--formation <id> | --like <play id>] [--duration <s>]
            [--confidence illustrative|reconstructed|verified] [--sets-up <id,id>] [--plays-off <id,id>]
   scheme   --id <id> --name "<name>" --coach <id> --team "<team>" --era <${Era.options.join('|')}> [--side] [--lineage]
+           [--source "<citation>" [--source-url <url>] [--source-type <${SourceType.options.join('|')}>] [--supports idea,claim]]
   coach    --id <id> --name "<name>" --team "<team>" --side <${Side.options.join('|')}> --lineage <branch> [--role "<role>"] [--mentor <id>]
+           [--source "<citation>" [--source-url <url>] [--source-type <type>] [--supports idea,claim]]
   term     --id <id> --term "<term>" --category "<${TermCategory.options.join('|')}>"
 
 Lineage branches: ${LineageBranch.options.join(', ')}`;
@@ -47,10 +49,22 @@ const { positionals, values } = parseArgs({
     lineage: { type: 'string' },
     role: { type: 'string' },
     mentor: { type: 'string' },
+    source: { type: 'string' },
+    'source-url': { type: 'string' },
+    'source-type': { type: 'string' },
+    supports: { type: 'string' },
     term: { type: 'string' },
     category: { type: 'string' },
     help: { type: 'boolean', short: 'h' },
   },
+});
+
+const source = () => ({
+  citation: values.source,
+  url: values['source-url'],
+  type: values['source-type'],
+  supports: ids(values.supports),
+  today: new Date().toISOString().slice(0, 10),
 });
 
 const ids = (value: string | undefined): string[] | undefined => (value ? value.split(',').map((s) => s.trim()).filter(Boolean) : undefined);
@@ -77,9 +91,9 @@ function build(kind: string | undefined, ds: ReturnType<typeof loadDataset>['dat
       });
     }
     case 'scheme':
-      return newScheme(ds, { id: values.id, name: values.name, coach: values.coach, team: values.team, side: values.side, era: values.era, lineage: values.lineage });
+      return newScheme(ds, { id: values.id, name: values.name, coach: values.coach, team: values.team, side: values.side, era: values.era, lineage: values.lineage, source: source() });
     case 'coach':
-      return newCoach(ds, { id: values.id, name: values.name, team: values.team, role: values.role, side: values.side, lineage: values.lineage, mentor: values.mentor });
+      return newCoach(ds, { id: values.id, name: values.name, team: values.team, role: values.role, side: values.side, lineage: values.lineage, mentor: values.mentor, source: source() });
     case 'term':
       return newTerm(ds, { id: values.id, term: values.term, category: values.category });
     default:

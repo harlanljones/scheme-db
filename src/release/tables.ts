@@ -1,7 +1,7 @@
 import { ballX, levelOfEra } from '../engine/field';
 import { framesFor } from '../engine/frames';
 import { leadIn } from '../engine/presnap';
-import type { Coach, Dataset, LineageNode } from '../schema/schema';
+import { Supports, type Coach, type Dataset, type LineageNode, type Source } from '../schema/schema';
 
 export type Cell = string | number | boolean | null;
 export type ColumnType = 'text' | 'integer' | 'real';
@@ -26,6 +26,14 @@ const real = (name: string): Column => ({ name, type: 'real' });
 
 const json = (value: unknown): string => JSON.stringify(value);
 
+/** The `supports` of a source as a JSON array in the canonical order (idea, drawing, claim), or null when the source does not say. */
+const supportsCell = (source: Source): Cell => (source.supports ? json(Supports.options.filter((kind) => source.supports!.includes(kind))) : null);
+
+/** The columns of every `*_sources` table after its owner's id: one row per source, in the order the record lists them. */
+const SOURCE_COLUMNS = [int('seq'), text('type'), text('citation'), text('url'), text('accessed'), text('supports')];
+const sourceRows = (ownerId: string, sources: Source[] | undefined): Cell[][] =>
+  (sources ?? []).map((s, seq) => [ownerId, seq, s.type, s.citation, s.url ?? null, s.accessed ?? null, supportsCell(s)]);
+
 /**
  * Flattens the dataset into relational tables. Lists of ids become junction tables; lists of free text are stored
  * as JSON arrays in one column. Booleans are 0 or 1.
@@ -46,9 +54,9 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
   const hasMentor = (coach: Coach): Cell => coach.mentorId ?? null;
   add(
     'coaches',
-    [text('id'), text('name'), text('role_2026'), text('team'), text('lineage'), text('mentor_id'), text('side'), text('philosophy'), text('key_concepts'), int('is_head_coach_2026'), text('notable_achievements')],
+    [text('id'), text('name'), text('role_2026'), text('team'), text('lineage'), text('mentor_id'), text('side'), text('philosophy'), text('key_concepts'), int('is_head_coach_2026'), text('notable_achievements'), text('as_of')],
     ['id'],
-    dataset.coaches.map((c) => [c.id, c.name, c.role2026, c.team, c.lineage, hasMentor(c), c.side, c.philosophy, json(c.keyConcepts), c.isHeadCoach2026 ? 1 : 0, c.notableAchievements ? json(c.notableAchievements) : null]),
+    dataset.coaches.map((c) => [c.id, c.name, c.role2026, c.team, c.lineage, hasMentor(c), c.side, c.philosophy, json(c.keyConcepts), c.isHeadCoach2026 ? 1 : 0, c.notableAchievements ? json(c.notableAchievements) : null, c.asOf ?? null]),
   );
   add(
     'coach_schemes',
@@ -97,12 +105,7 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
       ...c.relations.playsOff.map((id) => [c.id, 'plays-off', id]),
     ]),
   );
-  add(
-    'concept_sources',
-    [text('concept_id'), int('seq'), text('type'), text('citation'), text('url'), text('accessed')],
-    ['concept_id', 'seq'],
-    dataset.concepts.flatMap((c) => c.provenance.sources.map((s, seq) => [c.id, seq, s.type, s.citation, s.url ?? null, s.accessed ?? null])),
-  );
+  add('concept_sources', [text('concept_id'), ...SOURCE_COLUMNS], ['concept_id', 'seq'], dataset.concepts.flatMap((c) => sourceRows(c.id, c.provenance.sources)));
 
   add(
     'players',
@@ -154,6 +157,9 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
     ['lineage_id', 'coach_id'],
     dataset.lineages.flatMap((l) => nodes(l.id, l.rootNodes, null)),
   );
+  add('scheme_sources', [text('scheme_id'), ...SOURCE_COLUMNS], ['scheme_id', 'seq'], dataset.schemes.flatMap((s) => sourceRows(s.id, s.sources)));
+  add('coach_sources', [text('coach_id'), ...SOURCE_COLUMNS], ['coach_id', 'seq'], dataset.coaches.flatMap((c) => sourceRows(c.id, c.sources)));
+  add('lineage_sources', [text('lineage_id'), ...SOURCE_COLUMNS], ['lineage_id', 'seq'], dataset.lineages.flatMap((l) => sourceRows(l.id, l.sources)));
 
   add(
     'glossary',

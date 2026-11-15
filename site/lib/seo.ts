@@ -5,6 +5,7 @@
 import { DISGUISE_HOLD_PERCENT, SITE, allIllustrative, coachViews, comparisonsFor, library, playHref, type Library } from './data';
 import { tidy } from './format';
 import { glossaryRows } from './glossary';
+import { backsPhrase, dateLabel, sourceKind } from './sources';
 
 const abs = (path: string): string => new URL(path, SITE.url).toString();
 
@@ -77,9 +78,12 @@ export function llmsFullTxt(lib: Library = library()): string {
     const coach = lib.coachById.get(scheme.coachId);
     out.push(`## ${scheme.nameDisplay}`, '');
     out.push(`- Page: ${abs(scheme.href)}`);
-    out.push(`- Coach: ${scheme.coachName}${coach ? ` (${tidy(coach.role2026)})` : ''}`);
+    out.push(`- Coach: ${scheme.coachName}${coach ? ` (${tidy(coach.role2026)}${coach.asOf ? `, as of ${dateLabel(coach.asOf)}` : ''})` : ''}`);
     out.push(`- Team: ${scheme.teamDisplay}`);
     out.push(`- Side and era: ${scheme.side === 'offense' ? 'Offense' : 'Defense'}, ${scheme.eraLabel}`);
+    for (const source of scheme.sources ?? []) {
+      out.push(`- Source (${sourceKind(source.type)}): ${source.citation}${source.url ? ` ${source.url}` : ''}${backsPhrase(source.supports) ? ` ${backsPhrase(source.supports)}` : ''}`);
+    }
     out.push('', tidy(scheme.description), '');
     for (const play of scheme.plays) {
       out.push(`### Sheet ${play.order}: ${play.nameDisplay}`, '');

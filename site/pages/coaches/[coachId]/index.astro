@@ -2,8 +2,10 @@
 import Base from '../../../layouts/Base.astro';
 import NetworkGraph from '../../../components/NetworkGraph.astro';
 import SchemeList from '../../../components/SchemeList.astro';
+import SourceList from '../../../components/SourceList.astro';
 import { ERA_LABELS, SITE, coachViews, disciplesOf, library, mentorChain, playsNoun, type CoachView } from '../../../lib/data';
 import { capitalize, count, plural, tidy } from '../../../lib/format';
+import { dateLabel } from '../../../lib/sources';
 import { describeNetwork, egoNetwork, layoutNetwork, network } from '../../../lib/network';
 
 export function getStaticPaths() {
@@ -53,7 +55,7 @@ const description =
           {lineage && <a class="chip" href={`/lineages/#tree-${lineage.id}`}>{coach.lineageName}</a>}
         </div>
         <h1>{coach.name}</h1>
-        <p class="type small" style="font-size:14px">{coach.roleDisplay}</p>
+        <p class="type small" style="font-size:14px">{coach.roleDisplay}{coach.asOf ? `, as of ${dateLabel(coach.asOf)}` : ''}</p>
         <p class="body" style="font-size:17px;line-height:27px">{tidy(coach.philosophy)}</p>
       </div>
     </div>
@@ -139,6 +141,17 @@ const description =
       </div>
     </aside>
   </section>
+
+  {coach.sources && (
+    <section id="sources" class="wrap section" style="scroll-margin-top:16px">
+      <div class="divider">
+        <h2>What this record rests on</h2>
+        <p class="aside">{count(coach.sources.length)} {plural(coach.sources.length, 'source')}</p>
+      </div>
+      <p class="body">These back what the record says about {coach.name}: the role, the career notes and who they worked under.{coach.asOf ? ` The role is as of ${dateLabel(coach.asOf)}.` : ''}</p>
+      <SourceList sources={coach.sources} />
+    </section>
+  )}
 
   {egoLayout && ego && (
     <section class="wrap section" id="network">
