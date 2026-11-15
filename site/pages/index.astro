@@ -41,14 +41,13 @@ const cells = [
 >
   <section class="wrap cover">
     <div class="intro">
-      <p class="eyebrow">Install binder · Football scheme strategy</p>
       <h1>{capitalize(spell(counts.schemes))} schemes, drawn&nbsp;up.</h1>
       <p class="lede">
         SchemeDB is a free, open database of football scheme strategy. Each scheme is installed as {playsPerSchemeWords()} animated plays you can scrub a tenth of a second at a time, and each play is set beside the plays it mirrors to show how long they look the same after the snap. Every number can be downloaded.
       </p>
       <div class="actions">
         <a class="btn" href="#schemes">Explore the plays <span aria-hidden="true">→</span></a>
-        <a class="lnk" href="/data/">Download the data <span class="type" style="font-size:13px;color:var(--fg2)">{SITE.dataLicense}</span></a>
+        <a class="lnk" href="/data/">Download the data <span class="type" style="font-size:var(--text-ui);color:var(--fg2)">{SITE.dataLicense}</span></a>
       </div>
       <dl class="type inventory">
         <div class="lead"><dt><a href="/schemes/">Schemes</a></dt><span class="dots" aria-hidden="true"></span><dd>{counts.schemes}</dd></div>
@@ -80,7 +79,6 @@ const cells = [
 
   <section id="schemes" class="wrap section" style="padding-top:16px;gap:20px">
     <div class="divider">
-      <p class="eyebrow">Contents</p>
       <h2>The {counts.schemes} schemes</h2>
       <p class="aside">Listed by coach. {capitalize(playsPerSchemeWords())} play sheets each.</p>
     </div>
@@ -90,7 +88,6 @@ const cells = [
 
   <section id="disguise" class="wrap section">
     <div class="divider">
-      <p class="eyebrow">Section 2</p>
       <h2>The same look</h2>
       <p class="aside">One comparison on every play sheet</p>
     </div>
@@ -138,9 +135,8 @@ const cells = [
 
   <section id="data" class="wrap section" style="padding-bottom:64px">
     <div class="divider">
-      <p class="eyebrow">Section 3</p>
       <h2>Data and licence</h2>
-      <p class="aside">Data {SITE.dataLicense} · Code {SITE.codeLicense}</p>
+      <p class="aside">Data {SITE.dataLicense}, code {SITE.codeLicense}</p>
     </div>
     <div class="two-col">
       <div class="text">

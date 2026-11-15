@@ -23,9 +23,11 @@
   text-decoration: none;
 }
 
-.gloss-letters a:hover {
-  background: var(--s2);
-  border-color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .gloss-letters a:hover {
+    background: var(--s2);
+    border-color: var(--fg);
+  }
 }
 
 .gloss {
@@ -80,16 +82,16 @@
   text-decoration: none;
 }
 
-.gloss-head h3 a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+@media (hover: hover) and (pointer: fine) {
+  .gloss-head h3 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
 }
 
 .gloss-cat {
-  font: 400 12px/18px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font: 400 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 

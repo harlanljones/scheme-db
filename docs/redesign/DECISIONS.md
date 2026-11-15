@@ -109,6 +109,19 @@ Removed afterwards (same pull request, on Harlan's go ahead): the previous singl
 
 Not done, and why: a `contributors` field on a record (git history credits people for now) and a hosted form that opens a pull request.
 
+## Design brief audit (2026-11-15)
+
+Harlan gave a design lead brief (surface mode, direction in five lines, banned tells, a quality floor, a screenshot review at 390 and 1280 px in light and dark) and asked for an audit before any restyle. The audit found the Playbook direction distinctive and intentional; nothing in it blocks the launch. Report: `audits/design-brief-audit.md` in the project files. Measured: no text contrast failures across 44 page runs, a focus ring on every tab stop, no horizontal overflow at 390, empty states and the 404 composed, reduced motion respected, LCP about 0.75 s and layout shift under 0.013 at 4x CPU throttle.
+
+Floor fixes, no decision needed: hover styles gated to `(hover: hover) and (pointer: fine)`, a pressed state on every control, the red "Failure mode" label made ink (red means conflict only).
+
+Two things the brief and this record disagreed on, both put to Harlan with their launch cost, both answered the same day:
+
+- **Labels.** The record specified 11 to 13px uppercase tracked labels and a kicker with `·` metadata on nine of twelve page types; the brief bans tracked caps and sets a 14px floor. Harlan chose quieter labels over keeping the system with a waiver or a hybrid. Kickers are removed, labels are sentence case, 14px and untracked, and the floor is a token (`--text-ui`, with `--text-chart` at 12px for marks inside a field or chart only). Strips on sheets keep their `·` joins because they are a data line, and the lettered appendices on About keep their letters because they are a real sequence. The binder look (paper, rules, Courier, the margin holes) is unchanged.
+- **Phone first screens.** At 390 by 844 the play field started at 826px and Play at 1206px, and the first rows of the lists started between 837 and 1115px. Harlan chose to build the fix before launch. The filter chips fold behind one Filters button below 600px, the play page's facts move under the field, the breadcrumb is one back link, and the legend follows the controls. The field now starts near 510px and Play is on the first screen; list rows start between 607 and 893px.
+
+Not done: the desktop play page still has Play below the fold at 1280 by 800 (the field is the page, and a shorter field would change how a play reads); the glossary's A to Z row still pushes its first entry to 893px on a phone; the type scale is ad hoc (17 sizes, 115 inline styles), which is a refactor for after launch.
+
 ## Alternatives that were considered
 
 - Home action: download the data (developer first), or contribute on GitHub. Rejected because a moving play shows both the craft and the data in seconds.

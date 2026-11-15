@@ -1,5 +1,6 @@
 import { useQueryFilters } from './useQueryFilters';
 import { searchKey } from '../lib/search';
+import { FilterGroups, activeLabels } from './FilterGroups';
 
 export interface CoachRow {
   id: string;
@@ -56,6 +57,7 @@ export default function CoachTable({ rows, eras, lineages, idPrefix = 'coaches' 
   ];
   const treeCount = (id: string) => pool.filter((r) => bySide(r) && byEra(r) && r.lineage === id).length;
 
+  const active = [...activeLabels([[side, sides], [era, eraPills]]), ...(tree === 'all' ? [] : [lineages.find((l) => l.id === tree)?.label ?? tree])];
   const status = list.length === 0 ? 'No coaches match' : filtered ? `${list.length} of ${rows.length} coaches match` : `All ${rows.length} coaches`;
 
   return (
@@ -67,33 +69,35 @@ export default function CoachTable({ rows, eras, lineages, idPrefix = 'coaches' 
           </label>
           <input id={`${idPrefix}-q`} className="input" type="search" value={q} onChange={(e) => filters.set('q', e.target.value)} autoComplete="off" />
         </div>
-        <div role="group" aria-label="Side of the ball" className="group">
-          {sides.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={side === id} onClick={() => filters.set('side', id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
-        <div role="group" aria-label="Era of their scheme" className="group">
-          {eraPills.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={era === id} onClick={() => filters.set('era', id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
-        <div className="select-field">
-          <label htmlFor={`${idPrefix}-tree`} className="lab">
-            Lineage tree
-          </label>
-          <select id={`${idPrefix}-tree`} className="input select" value={tree} onChange={(e) => filters.set('tree', e.target.value)}>
-            <option value="all">Every tree</option>
-            {lineages.map((l) => (
-              <option key={l.id} value={l.id}>
-                {l.label} ({treeCount(l.id)})
-              </option>
+        <FilterGroups summary={active}>
+          <div role="group" aria-label="Side of the ball" className="group">
+            {sides.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={side === id} onClick={() => filters.set('side', id)}>
+                {label} <span className="type">{n}</span>
+              </button>
             ))}
-          </select>
-        </div>
+          </div>
+          <div role="group" aria-label="Era of their scheme" className="group">
+            {eraPills.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={era === id} onClick={() => filters.set('era', id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+          <div className="select-field">
+            <label htmlFor={`${idPrefix}-tree`} className="lab">
+              Lineage tree
+            </label>
+            <select id={`${idPrefix}-tree`} className="input select" value={tree} onChange={(e) => filters.set('tree', e.target.value)}>
+              <option value="all">Every tree</option>
+              {lineages.map((l) => (
+                <option key={l.id} value={l.id}>
+                  {l.label} ({treeCount(l.id)})
+                </option>
+              ))}
+            </select>
+          </div>
+        </FilterGroups>
       </div>
 
       <div className="status-row">

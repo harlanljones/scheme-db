@@ -6,6 +6,13 @@
  * line of scrimmage are 3:1 or better on the paper and on the lamp-lit binder, text is 4.5:1 or better.
  */
 
+:root {
+  /* Type floor: every label, row detail and control is at least --text-ui. Marks drawn inside a field or
+     chart (yard numbers, player tags, chart notes) may go down to --text-chart, and nothing else may. */
+  --text-ui: 14px;
+  --text-chart: 12px;
+}
+
 :root,
 :root[data-theme='light'] {
   color-scheme: light;
@@ -209,18 +216,18 @@ a {
 
 .eyebrow {
   font-family: 'Courier Prime', 'Courier New', Courier, monospace;
-  font-size: 12px;
+  font-size: var(--text-ui);
   line-height: 20px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--fg2);
 }
 
 .lab {
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
+}
+
+.cell .lab {
+  font-weight: 400;
 }
 
 .val {
@@ -260,7 +267,7 @@ a {
 
 .mono-small {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
   color: var(--fg2);
 }
@@ -283,9 +290,11 @@ a {
   cursor: pointer;
 }
 
-.btn:hover {
-  background: var(--fg2);
-  border-color: var(--fg2);
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--fg2);
+    border-color: var(--fg2);
+  }
 }
 
 .lnk {
@@ -302,8 +311,10 @@ a {
   text-decoration-thickness: 1px;
 }
 
-.lnk:hover {
-  text-decoration-thickness: 2px;
+@media (hover: hover) and (pointer: fine) {
+  .lnk:hover {
+    text-decoration-thickness: 2px;
+  }
 }
 
 .pill {
@@ -323,9 +334,11 @@ a {
   cursor: pointer;
 }
 
-.pill:hover {
-  background: var(--s1);
-  color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover {
+    background: var(--s1);
+    color: var(--fg);
+  }
 }
 
 .pill[aria-pressed='true'] {
@@ -346,8 +359,10 @@ a {
   cursor: pointer;
 }
 
-.ibtn:hover {
-  background: var(--s2);
+@media (hover: hover) and (pointer: fine) {
+  .ibtn:hover {
+    background: var(--s2);
+  }
 }
 
 .ibtn.solid {
@@ -355,8 +370,21 @@ a {
   color: var(--bg);
 }
 
-.ibtn.solid:hover {
-  background: var(--fg2);
+@media (hover: hover) and (pointer: fine) {
+  .ibtn.solid:hover {
+    background: var(--fg2);
+  }
+}
+
+/* Pressed: a control goes down by one pixel, with no transition so it lands with the click. */
+.btn:active,
+.pill:active,
+.ibtn:active,
+.pbtn:active,
+.tog:active,
+.beat:active,
+.tabs a:active {
+  transform: translateY(1px);
 }
 
 .input {
@@ -395,7 +423,7 @@ input[type='range'] {
   border-bottom: 1px solid var(--fg);
   background: var(--s1);
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
 }
 
@@ -431,14 +459,14 @@ input[type='range'] {
 }
 
 .divider .eyebrow {
-  font-size: 13px;
+  font-size: var(--text-ui);
   color: var(--fg);
 }
 
 .divider .aside {
   margin-left: auto;
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
   color: var(--fg2);
 }
@@ -496,9 +524,7 @@ input[type='range'] {
   min-height: 32px;
   padding: 0 10px;
   border: 1px solid var(--rule2);
-  font: 700 12px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -558,13 +584,15 @@ input[type='range'] {
   font-size: 15px;
 }
 
-.dl:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .dl:hover {
+    background: var(--s1);
+  }
 }
 
 .dl .fmt {
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   color: var(--fg2);
   text-align: right;
 }
@@ -586,9 +614,7 @@ input[type='range'] {
 }
 
 .thead p {
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -612,14 +638,16 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.toc .row > a:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .toc .row > a:hover {
+    background: var(--s1);
+  }
 }
 
 .toc .no {
   grid-area: no;
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
   color: var(--fg2);
 }
@@ -633,8 +661,8 @@ input[type='range'] {
 
 .toc .ct {
   grid-area: ct;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-ui);
+  line-height: 20px;
   color: var(--fg2);
 }
 
@@ -643,8 +671,8 @@ input[type='range'] {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: var(--text-ui);
+  line-height: 20px;
   color: var(--fg2);
 }
 
@@ -738,7 +766,7 @@ input[type='range'] {
 
   .toc .era {
     grid-area: era;
-    font-size: 13px;
+    font-size: var(--text-ui);
     line-height: 24px;
     color: var(--fg2);
   }
@@ -769,8 +797,10 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.prow:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .prow:hover {
+    background: var(--s1);
+  }
 }
 
 .prow .chart {
@@ -850,8 +880,10 @@ input[type='range'] {
   cursor: pointer;
 }
 
-.beat:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .beat:hover {
+    background: var(--s1);
+  }
 }
 
 .beat[aria-current='step'] {
@@ -885,9 +917,7 @@ input[type='range'] {
 }
 
 .tree li .t {
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -909,12 +939,14 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.apx li a:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .apx li a:hover {
+    background: var(--s1);
+  }
 }
 
 .apx li .n {
-  font: 700 12px/22px 'Courier Prime', 'Courier New', monospace;
+  font: 700 var(--text-ui)/22px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
   flex: none;
   width: 20px;
@@ -931,9 +963,7 @@ th {
   text-align: left;
   padding: 8px 10px 8px 4px;
   border-bottom: 1px solid var(--fg);
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
   vertical-align: bottom;
 }
@@ -999,7 +1029,7 @@ pre.code {
   padding: 20px;
   overflow-x: auto;
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
   color: var(--fg2);
 }
@@ -1055,7 +1085,7 @@ pre.code {
   position: absolute;
   left: 0;
   transform: translateY(-50%);
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
+  font: 700 var(--text-chart)/16px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg3);
   white-space: nowrap;
 }
@@ -1087,7 +1117,7 @@ pre.code {
   z-index: 4;
   transform: translateX(-50%);
   padding: 0 3px;
-  font: 700 10px/12px 'Courier Prime', 'Courier New', monospace;
+  font: 700 var(--text-chart)/14px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg);
   background: var(--s1);
   white-space: nowrap;
@@ -1103,8 +1133,8 @@ pre.code {
   align-items: center;
   gap: 8px 16px;
   padding-top: 12px;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-ui);
+  line-height: 20px;
   color: var(--fg2);
 }
 
@@ -1134,8 +1164,10 @@ pre.code {
   cursor: pointer;
 }
 
-.pbtn:hover {
-  background: var(--s2);
+@media (hover: hover) and (pointer: fine) {
+  .pbtn:hover {
+    background: var(--s2);
+  }
 }
 
 /* ---------- Header and footer ---------- */
@@ -1153,25 +1185,12 @@ pre.code {
   gap: 4px 16px;
 }
 
-.notice .tag-n {
-  font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 12px;
-  line-height: 20px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--fg);
-}
-
 .notice p {
   flex: 1 1 300px;
   min-width: 0;
   font-size: 14px;
   line-height: 20px;
   color: var(--fg2);
-}
-
-.notice p.tag-n {
-  flex: none;
 }
 
 .notice strong {
@@ -1257,9 +1276,11 @@ pre.code {
   letter-spacing: 0.01em;
 }
 
-.tabs a:hover {
-  background: var(--s2);
-  color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .tabs a:hover {
+    background: var(--s2);
+    color: var(--fg);
+  }
 }
 
 .tabs a[aria-current='page'] {
@@ -1288,8 +1309,10 @@ pre.code {
   cursor: pointer;
 }
 
-.tog:hover {
-  background: var(--s2);
+@media (hover: hover) and (pointer: fine) {
+  .tog:hover {
+    background: var(--s2);
+  }
 }
 
 .tog[aria-pressed='true'] {
@@ -1356,15 +1379,15 @@ pre.code {
   text-decoration: none;
 }
 
-.menu a:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .menu a:hover {
+    background: var(--s1);
+  }
 }
 
 .menu .cur {
   display: none;
-  font: 700 12px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -1434,9 +1457,7 @@ pre.code {
 .footer .col h2 {
   padding: 0 0 6px;
   border-bottom: 1px solid var(--fg);
-  font: 700 12px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg);
 }
 
@@ -1451,9 +1472,11 @@ pre.code {
   text-decoration: none;
 }
 
-.footer .col a:hover {
-  color: var(--fg);
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .footer .col a:hover {
+    color: var(--fg);
+    background: var(--s1);
+  }
 }
 
 .footer .fine {
@@ -1469,7 +1492,7 @@ pre.code {
 }
 
 .footer .fine p {
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
   color: var(--fg2);
 }
@@ -1485,7 +1508,7 @@ pre.code {
   gap: 4px 10px;
   padding-top: 16px;
   font-family: 'Courier Prime', 'Courier New', monospace;
-  font-size: 13px;
+  font-size: var(--text-ui);
   line-height: 20px;
   color: var(--fg2);
 }
@@ -1619,6 +1642,67 @@ pre.code {
   gap: 8px;
 }
 
+/* Filter chips: always shown from 600px. On a phone they sit behind one button so the first screen
+   shows results. The wrapper has no box of its own at 600px and wider. */
+.fgroups,
+.fgroups-body {
+  display: contents;
+}
+
+.fgroups-toggle {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .filters .search {
+    max-width: none;
+  }
+
+  .fgroups {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .fgroups-toggle {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .fgroups-sum {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--fg);
+  }
+
+  .fgroups-toggle .icon {
+    width: 20px;
+    height: 20px;
+    flex: none;
+  }
+
+  .fgroups-toggle[aria-expanded='true'] .icon {
+    transform: rotate(180deg);
+  }
+
+  .fgroups-body {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fgroups.is-open .fgroups-body {
+    display: flex;
+  }
+}
+
 .status-row {
   display: flex;
   flex-wrap: wrap;
@@ -1683,8 +1767,8 @@ pre.code {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 16px;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-ui);
+  line-height: 20px;
   color: var(--fg2);
 }
 
@@ -1794,7 +1878,7 @@ pre.code {
   position: absolute;
   top: 40px;
   transform: translateX(-50%);
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
+  font: 700 var(--text-chart)/16px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -1818,8 +1902,7 @@ pre.code {
   padding-top: 3px;
   overflow: hidden;
   white-space: nowrap;
-  font: 700 10px/14px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.08em;
+  font: 700 var(--text-chart)/14px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
   border-top: 2px solid var(--rule2);
 }
@@ -1923,7 +2006,7 @@ pre.code {
   position: absolute;
   right: 0;
   width: 32px;
-  font: 700 10px/12px 'Courier Prime', 'Courier New', monospace;
+  font: 700 var(--text-chart)/14px 'Courier Prime', 'Courier New', monospace;
   color: var(--conft);
   text-align: right;
 }
@@ -2094,7 +2177,7 @@ html:not(.js) .js-only {
 
 .hits .type {
   color: var(--fg2);
-  font-size: 12px;
+  font-size: var(--text-ui);
 }
 
 @media (max-width: 380px) {
@@ -2180,7 +2263,7 @@ html:not(.js) .js-only {
 }
 
 .netsvg .nlab {
-  font: 500 13px 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font: 500 var(--text-ui)/20px 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   fill: var(--fg);
 }
 
@@ -2215,8 +2298,10 @@ html:not(.js) .js-only {
   cursor: pointer;
 }
 
-.netsvg a.node:hover .nlab {
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .netsvg a.node:hover .nlab {
+    text-decoration: underline;
+  }
 }
 
 .netsvg a.node:focus-visible .hit,
@@ -2235,7 +2320,7 @@ html:not(.js) .js-only {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 22px;
-  font: 12px/18px 'Courier Prime', 'Courier New', monospace;
+  font: var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -2278,8 +2363,10 @@ html:not(.js) .js-only {
   text-underline-offset: 3px;
 }
 
-.tree li a:hover {
-  color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .tree li a:hover {
+    color: var(--fg);
+  }
 }
 
 @media (min-width: 900px) {
@@ -2340,9 +2427,7 @@ html:not(.js) .js-only {
 }
 
 .lib-head p {
-  font: 700 11px/16px 'Courier Prime', 'Courier New', monospace;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font: 700 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -2362,13 +2447,15 @@ html:not(.js) .js-only {
   text-decoration: none;
 }
 
-.lib-row:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .lib-row:hover {
+    background: var(--s1);
+  }
 }
 
 .lib-row .c-no {
   grid-area: no;
-  font: 400 13px/20px 'Courier Prime', 'Courier New', monospace;
+  font: 400 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -2394,18 +2481,18 @@ html:not(.js) .js-only {
 }
 
 .lib-row .c-ref-name {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-ui);
+  line-height: 20px;
   color: var(--fg);
 }
 
 .lib-row .c-sub {
-  font: 400 12px/18px 'Courier Prime', 'Courier New', monospace;
+  font: 400 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
 .lib-row .c-role {
-  font: 400 13px/18px 'Libre Franklin', system-ui, sans-serif;
+  font: 400 var(--text-ui)/20px 'Libre Franklin', system-ui, sans-serif;
 }
 
 .lib-row .c-meta {
@@ -2415,7 +2502,7 @@ html:not(.js) .js-only {
   align-items: center;
   gap: 0 8px;
   padding-top: 2px;
-  font: 400 12px/18px 'Courier Prime', 'Courier New', monospace;
+  font: 400 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -2494,7 +2581,7 @@ html:not(.js) .js-only {
   .lib-row .c-side,
   .lib-row .c-down,
   .lib-row .c-pers {
-    font: 400 13px/24px 'Courier Prime', 'Courier New', monospace;
+    font: 400 var(--text-ui)/24px 'Courier Prime', 'Courier New', monospace;
     color: var(--fg2);
     min-width: 0;
   }
@@ -2563,7 +2650,7 @@ html:not(.js) .js-only {
 
 .named-only li .by {
   display: block;
-  font: 400 12px/18px 'Courier Prime', 'Courier New', monospace;
+  font: 400 var(--text-ui)/20px 'Courier Prime', 'Courier New', monospace;
   color: var(--fg2);
 }
 
@@ -2582,5 +2669,56 @@ html:not(.js) .js-only {
 
   .tools {
     margin-left: 8px;
+  }
+}
+
+/* ---------- Phone first screens ---------- */
+
+/* The five facts of a play sheet: they head the sheet from 600px wide. On a phone they sit under the field
+   and its controls (PlayViewer renders that copy), so the field and Play are on the first screen. */
+.facts-phone {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .facts-sheet {
+    display: none;
+  }
+
+  .facts-phone {
+    display: flex;
+    flex: 1 1 100%;
+    border: 1px solid var(--fg);
+    background: var(--bg);
+  }
+
+  /* The sheet's file path is for people reading the repository; a phone does not need it above the field. */
+  .strip .strip-id {
+    display: none;
+  }
+
+  /* The legend explains the marks; the controls come first. */
+  .viewer .stage .legend {
+    order: 5;
+  }
+
+  /* One way back instead of a three line trail: the parent page, with an arrow. */
+  .crumbs.trail > * {
+    display: none;
+  }
+
+  .crumbs.trail > :nth-last-child(2) {
+    display: inline-flex;
+  }
+
+  .crumbs.trail > :nth-last-child(2) > [aria-hidden='true'] {
+    display: none;
+  }
+
+  .crumbs.trail > :nth-last-child(2) a::before {
+    content: '\2190';
+    display: inline-block;
+    margin-right: 8px;
+    text-decoration: none;
   }
 }

@@ -44,7 +44,6 @@ const trees = lib.dataset.lineages.map((lineage) => ({ lineage, rows: rowsOf(lin
   </div>
 
   <section class="wrap" style="padding-top:8px;padding-bottom:32px;display:flex;flex-direction:column;gap:14px">
-    <p class="eyebrow">Lineages · Who taught whom</p>
     <h1 class="page-title">Where the schemes came from</h1>
     <p class="body" style="font-size:18px;line-height:28px">
       A scheme rarely starts from nothing. This chart joins {net.nodes.length - unknown} coaches in the binder, and {unknown} others they name, by who worked under whom and by how their ideas passed on.
@@ -52,7 +51,7 @@ const trees = lib.dataset.lineages.map((lineage) => ({ lineage, rows: rowsOf(lin
   </section>
 
   <section class="wrap section" id="network">
-    <div class="divider"><p class="eyebrow">The chart</p><h2>Two kinds of line</h2><p class="aside">{worked} solid · {influence} dashed</p></div>
+    <div class="divider"><h2>Two kinds of line</h2><p class="aside">{worked} solid, {influence} dashed</p></div>
     <div class="two-col">
       <div class="text">
         <h3>Solid: worked directly under</h3>
@@ -64,16 +63,16 @@ const trees = lib.dataset.lineages.map((lineage) => ({ lineage, rows: rowsOf(lin
       </div>
     </div>
     <NetworkGraph layout={layout} label={label} />
-    <p class="type narrow-hint" style="font-size:12px;line-height:18px;color:var(--fg2)">
+    <p class="type narrow-hint" style="font-size:var(--text-ui);line-height:20px;color:var(--fg2)">
       On a narrow screen, slide the chart sideways. The lists below hold the same links in order. A name with a filled or ringed mark opens that coach’s page.
     </p>
-    <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
+    <p class="type" style="font-size:var(--text-ui);line-height:20px;color:var(--fg2)">
       Spot a wrong or missing link? <a href="/about/#corrections">Send a correction</a>.
     </p>
   </section>
 
   <section class="wrap section" id="trees">
-    <div class="divider"><p class="eyebrow">Lineage trees</p><h2>The {lib.counts.lineages} trees in full</h2></div>
+    <div class="divider"><h2>The {lib.counts.lineages} trees in full</h2></div>
     <div class="trees">
       {trees.map(({ lineage, rows }) => (
         <article id={`tree-${lineage.id}`} class="treecard">
@@ -81,7 +80,7 @@ const trees = lib.dataset.lineages.map((lineage) => ({ lineage, rows: rowsOf(lin
             <span class="chip"><span class={`mk ${lineage.side === 'offense' ? 'mko' : 'mkd'}`} aria-hidden="true"></span>{lineage.side === 'offense' ? 'Offense' : 'Defense'}</span>
           </div>
           <h3 class="slab" style="font-size:20px;line-height:26px;font-weight:600">{tidy(lineage.name)}</h3>
-          <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">Begins with {tidy(lineage.patriarch)}</p>
+          <p class="type" style="font-size:var(--text-ui);line-height:20px;color:var(--fg2)">Begins with {tidy(lineage.patriarch)}</p>
           <p class="prose" style="font-size:15px;line-height:24px">{tidy(lineage.description)}</p>
           <ul class="tree" aria-label={`${tidy(lineage.name)}, in order`}>
             {rows.map((row) => (

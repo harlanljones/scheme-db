@@ -28,7 +28,7 @@ const noLead = play(0, [[0, 46, -1.5], [2, 28, -1.5]]);
 const win = { yLo: -5, yHi: 20 };
 const beats = [{ t: 0.4, title: '1. First', text: 'A beat.', focus: ['Z'] }];
 
-const viewer = (p: LitePlay) => <PlayViewer play={JSON.stringify(p)} win={win} beats={beats} duration={p.duration} />;
+const viewer = (p: LitePlay) => <PlayViewer play={JSON.stringify(p)} win={win} beats={beats} duration={p.duration} facts={[]} />;
 const input = (container: HTMLElement, id: string) => container.querySelector<HTMLInputElement>(`#${id}`)!;
 const live = (container: HTMLElement) => container.querySelector('[aria-live="polite"]')!.textContent;
 
@@ -52,10 +52,10 @@ describe('PlayViewer with a lead in', () => {
     expect(container.querySelector('.fld')!.getAttribute('aria-label')).toContain('1.0 seconds before the snap');
   });
 
-  it('labels SET, MOTION and SNAP under the scrubber, and offers a button to jump to the snap', () => {
+  it('labels Set, Motion and Snap under the scrubber, and offers a button to jump to the snap', () => {
     const { container } = render(viewer({ ...withLead, tracks: withLead.tracks.map((t) => (t.id === 'Z' ? track('Z', 'offense', [[-2, 46, -1.5], ...withLead.tracks[0].w]) : t)), leadIn: 2 }));
     const labels = [...container.querySelectorAll('.phase')].map((node) => node.textContent);
-    expect(labels).toEqual(['SET', 'MOTION', 'SNAP']);
+    expect(labels).toEqual(['Set', 'Motion', 'Snap']);
     const snap = [...container.querySelectorAll('button')].find((b) => b.getAttribute('aria-label') === 'Jump to the snap')!;
     act(() => setPlayState({ t: -1, playing: false }));
     act(() => snap.click());

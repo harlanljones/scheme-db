@@ -120,7 +120,7 @@ export default function PlayCompare({ base: baseJson, side, baseSheet, baseName,
               onChange={(e) => setPlayState({ t: Number(e.target.value) / 10, playing: false })}
             />
             {lead > 0 ? (
-              <p className="small" style={{ fontSize: 13, lineHeight: '19px' }}>
+              <p className="small" style={{ fontSize: 14, lineHeight: '20px' }}>
                 Time before the snap is drawn so you can see the motion arrive. The score and the chart below count only the first {windowSeconds.toFixed(1)} s after the snap.
               </p>
             ) : null}
@@ -150,10 +150,10 @@ export default function PlayCompare({ base: baseJson, side, baseSheet, baseName,
                 ))}
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
-                <p className="type" style={{ fontSize: 11, lineHeight: '16px', color: 'var(--fg2)' }}>
+                <p className="type" style={{ fontSize: 14, lineHeight: '20px', color: 'var(--fg2)' }}>
                   0.0 s, {cmp.profile[0]}%
                 </p>
-                <p className="type" style={{ fontSize: 11, lineHeight: '16px', color: 'var(--fg2)' }}>
+                <p className="type" style={{ fontSize: 14, lineHeight: '20px', color: 'var(--fg2)' }}>
                   {windowSeconds.toFixed(1)} s, {last}%
                 </p>
               </div>
@@ -162,7 +162,7 @@ export default function PlayCompare({ base: baseJson, side, baseSheet, baseName,
               <p style={{ fontSize: 15, lineHeight: '22px', color: 'var(--fg)' }}>
                 {cmp.score}% on average. {verdict}
               </p>
-              <p className="small" style={{ fontSize: 13, lineHeight: '19px' }}>
+              <p className="small" style={{ fontSize: 14, lineHeight: '20px' }}>
                 {cmp.paired < cmp.total
                   ? `Scored on the ${cmp.paired} of ${cmp.total} ${side} players who appear in both plays.`
                   : `Scored on the ${side}, the side that sells the look. The ${side === 'offense' ? 'defense' : 'offense'} is shown for context.`}
