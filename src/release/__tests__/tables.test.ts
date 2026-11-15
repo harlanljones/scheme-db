@@ -18,6 +18,19 @@ describe('release tables', () => {
     expect(table('lineages').rows).toHaveLength(dataset.lineages.length);
   });
 
+  it('adds the structured play fields after every earlier column of concepts, and one row per play type tag', () => {
+    const names = table('concepts').columns.map((c) => c.name);
+    const added = ['offense_personnel', 'defense_personnel', 'defense_package', 'down', 'distance', 'field_zone', 'coverage_family'];
+    expect(names.slice(-added.length)).toEqual(added);
+    expect(names.indexOf('compiler_version')).toBe(names.length - added.length - 1);
+    expect(table('concept_play_types').rows).toHaveLength(dataset.concepts.reduce((n, c) => n + (c.playType?.length ?? 0), 0));
+    const row = table('concepts').rows.find((r) => r[0] === dataset.concepts[0].id)!;
+    expect(row.slice(-added.length)).toEqual([
+      dataset.concepts[0].offensePersonnel ?? null, dataset.concepts[0].defensePersonnel ?? null, dataset.concepts[0].defensePackage ?? null,
+      dataset.concepts[0].down ?? null, dataset.concepts[0].distance ?? null, dataset.concepts[0].fieldZone ?? null, dataset.concepts[0].coverageFamily ?? null,
+    ]);
+  });
+
   it('flattens every player, waypoint and frame', () => {
     const players = dataset.tracks.flatMap((t) => [...t.offense, ...t.defense]);
     expect(table('players').rows).toHaveLength(players.length);
@@ -47,6 +60,7 @@ describe('release tables', () => {
       ['concepts', 'formation_id', ids('formations')],
       ['concept_beats', 'concept_id', ids('concepts')],
       ['concept_relations', 'related_concept_id', ids('concepts')],
+      ['concept_play_types', 'concept_id', ids('concepts')],
       ['players', 'concept_id', ids('concepts')],
       ['waypoints', 'concept_id', ids('concepts')],
       ['frames', 'concept_id', ids('concepts')],

@@ -107,6 +107,7 @@ If you would rather describe a pass play than place every waypoint, the optional
 Open `data/concepts/<scheme>/<play>.json` and replace every `TODO:`.
 
 - `situation` must start with the down: `"1st & 10, +40, base down"`. The plays list filters by it.
+- Run `bun run data:tag --write` once the text is written. It fills `down`, `distance`, `fieldZone`, `coverageFamily` and the personnel codes from the text and the tracks; you choose `playType` yourself (the choices are in [data/README.md](data/README.md#structured-fields)). `data:validate` fails a play whose fields disagree with its text.
 - `summary` says what the play is for, the defender it puts in conflict, why it works and how a defense beats it.
 - `beats` are the coaching points. Each has a time `t`, a `title`, `text`, and `focus`, the ids of the players to light up. Keep them in time order.
 - `relations` links the play to others. List at least one play **in the same scheme** in `setsUp` or `playsOff`, because the site compares a play with the plays it relates to. `tell` says what looks the same and when it stops.

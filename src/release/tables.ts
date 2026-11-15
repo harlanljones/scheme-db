@@ -79,6 +79,7 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
       text('id'), text('scheme_id'), int('ord'), text('name'), text('personnel'), text('formation'), text('formation_id'), text('ball_spot'), real('ball_x'), text('situation'), text('coverage'), text('front_name'),
       text('motive'), text('key_defender'), text('why_it_works'), text('failure_mode'), text('tell'), text('confidence'), text('provenance_notes'),
       real('duration'), real('lead_in'), text('spec_sha256'), text('compiler_version'),
+      text('offense_personnel'), text('defense_personnel'), text('defense_package'), int('down'), int('distance'), text('field_zone'), text('coverage_family'),
     ],
     ['id'],
     dataset.concepts.map((c) => {
@@ -87,6 +88,7 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
         c.id, c.schemeId, c.order, c.name, c.personnel, c.formation, c.formationId ?? null, c.ballSpot ?? 'middle', ballX(levelOfEra(eraOf.get(c.schemeId) ?? 'modern-nfl'), c.ballSpot), c.situation, c.coverage, c.frontName,
         c.summary.motive, c.summary.keyDefender, c.summary.whyItWorks, c.summary.failureMode, c.relations.tell, c.provenance.confidence, c.provenance.notes ?? null,
         tracks?.duration ?? null, tracks ? leadIn([...tracks.offense, ...tracks.defense]) : null, tracks?.generatedFrom?.spec ?? null, tracks?.generatedFrom?.compiler ?? null,
+        c.offensePersonnel ?? null, c.defensePersonnel ?? null, c.defensePackage ?? null, c.down ?? null, c.distance ?? null, c.fieldZone ?? null, c.coverageFamily ?? null,
       ];
     }),
   );
@@ -95,6 +97,12 @@ export function buildTables(dataset: Dataset, version: string): Table[] {
     [text('concept_id'), int('seq'), real('t'), text('title'), text('text'), text('focus')],
     ['concept_id', 'seq'],
     dataset.concepts.flatMap((c) => c.beats.map((b, seq) => [c.id, seq, b.t, b.title, b.text, b.focus ? json(b.focus) : null])),
+  );
+  add(
+    'concept_play_types',
+    [text('concept_id'), text('play_type')],
+    ['concept_id', 'play_type'],
+    dataset.concepts.flatMap((c) => (c.playType ?? []).map((tag) => [c.id, tag])),
   );
   add(
     'concept_relations',

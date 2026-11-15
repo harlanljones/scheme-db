@@ -131,6 +131,27 @@ export const Relations = z.strictObject({
   tell: text,
 });
 
+/**
+ * Controlled fields that sit beside a play's free text. The text keeps its wording; these let plays be filtered, grouped
+ * and counted, and `src/schema/tags.ts` checks each one against the text it describes. The lists are explained in
+ * `data/README.md`.
+ */
+
+/** What an offensive play is. A play has one of the first five and may add `option` when a defender is read to decide who keeps the ball. */
+export const OffensePlayType = z.enum(['run', 'pass', 'play-action', 'rpo', 'screen', 'option']);
+/** What a defensive play is built to do; a play may carry two (a blitz that is also a run defense). */
+export const DefensePlayType = z.enum(['blitz', 'simulated-pressure', 'pass-rush', 'coverage', 'run-defense']);
+export const PlayType = z.enum([...OffensePlayType.options, ...DefensePlayType.options]);
+
+/** The shell a play is drawn against (offense) or calls (defense): ten families covering every spelling in `coverage`. */
+export const CoverageFamily = z.enum(['cover-0', 'cover-1', 'cover-2', 'two-man', 'cover-3', 'cover-4', 'cover-6', 'fire-zone', 'drop-8', 'bracket']);
+
+/** The defensive package, from how many defensive backs are drawn: 3 or fewer, 4, 5, 6, 7 or more. */
+export const DefensePackage = z.enum(['goal-line', 'base', 'nickel', 'dime', 'quarter']);
+
+/** Where the ball is, by yards to the goal the offense is attacking: 60 or more, 40 to 60, 20 to 40, 5 to 20, 5 or fewer. */
+export const FieldZone = z.enum(['own-territory', 'midfield', 'opponent-territory', 'red-zone', 'goal-line']);
+
 /** Descriptive record of one play concept. Geometry lives in the matching `Tracks` record. */
 export const Concept = z.strictObject({
   $schema: schemaRef,
@@ -138,7 +159,15 @@ export const Concept = z.strictObject({
   schemeId: slug,
   order: z.number().int().min(1),
   name: text,
+  /** What the play is: one tag from the offensive or defensive list, matching the side of its scheme. Chosen by a person; the validator checks it against the tracks and the name. */
+  playType: z.array(PlayType).min(1).optional(),
   personnel: text,
+  /** The offense's backs and tight ends as drawn, two digits ("11" is one back, one tight end). Read from the tracks by `bun run data:tag`. */
+  offensePersonnel: z.string().regex(/^\d{2}$/, 'must be two digits, backs then tight ends, like "11"').optional(),
+  /** The defense's linemen, linebackers and defensive backs as drawn, like "4-2-5". Read from the tracks. */
+  defensePersonnel: z.string().regex(/^\d{1,2}-\d{1,2}-\d{1,2}$/, 'must be linemen-linebackers-backs, like "4-2-5"').optional(),
+  /** `base`, `nickel` or `dime` and the like, from the number of defensive backs in `defensePersonnel`. */
+  defensePackage: DefensePackage.optional(),
   formation: text,
   /** The pre-snap alignment preset this concept starts from. Its tracks may move individual players off it. */
   formationId: slug.optional(),
@@ -148,7 +177,13 @@ export const Concept = z.strictObject({
    */
   ballSpot: BallSpot.optional(),
   situation: text,
+  /** The down at the start of `situation`. */
+  down: z.number().int().min(1).max(4).optional(),
+  /** Yards to go, from `situation`; on a goal-to-go it is the yards to the goal. */
+  distance: z.number().int().min(1).max(99).optional(),
+  fieldZone: FieldZone.optional(),
   coverage: text,
+  coverageFamily: CoverageFamily.optional(),
   frontName: text,
   summary: ConceptSummary,
   beats: z.array(Beat),
@@ -262,6 +297,10 @@ export const Term = z.strictObject({
 
 export type Source = z.infer<typeof Source>;
 export type Supports = z.infer<typeof Supports>;
+export type PlayType = z.infer<typeof PlayType>;
+export type CoverageFamily = z.infer<typeof CoverageFamily>;
+export type DefensePackage = z.infer<typeof DefensePackage>;
+export type FieldZone = z.infer<typeof FieldZone>;
 export type Concept = z.infer<typeof Concept>;
 export type Tracks = z.infer<typeof Tracks>;
 export type Formation = z.infer<typeof Formation>;

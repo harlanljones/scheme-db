@@ -208,6 +208,7 @@ export function newConcept(ds: Dataset, options: ConceptOptions): Scaffold {
     next: [
       `Edit data/tracks/${schemeId}/${id}.json: ${like ? `the players are copied from "${like.id}"; move them to draw this play` : 'every player stands still; add waypoints (t, x, y in yards from the line of scrimmage) to move them'}.`,
       `Replace every TODO in data/concepts/${schemeId}/${id}.json, and list the plays it sets up or plays off in "relations" (at least one play in ${schemeId}).`,
+      `Then run \`bun run data:tag --write\` to fill the structured fields from the text and the tracks, and set "playType" yourself (see data/README.md).`,
       ...(like ? [] : ['Give each moving player a "trail" (route, block, carry or drop) and an "assignment".']),
     ],
   };

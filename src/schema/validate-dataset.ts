@@ -1,4 +1,5 @@
 import { consistencyProblems } from './consistency';
+import { tagFindings } from './tags';
 import { alignmentOverrides } from './formations';
 import { MOTION_ENFORCED } from '../engine/limits';
 import { motionFindings, type MotionFinding } from '../engine/motion';
@@ -211,6 +212,12 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     }
     for (const problem of validatePlay(asPlay(concept, tracks))) problems.push(`Concept "${concept.id}": ${problem}`);
     for (const problem of consistencyProblems(concept, tracks)) problems.push(`Concept "${concept.id}": ${problem}`);
+    const side = ds.schemes.find((scheme) => scheme.id === concept.schemeId)?.side;
+    if (side) {
+      const tags = tagFindings(concept, tracks, side, { draft: !placeholders(concept).next().done });
+      for (const problem of tags.errors) problems.push(`Concept "${concept.id}": ${problem}`);
+      for (const warning of tags.warnings) warnings.push(`Concept "${concept.id}": ${warning}`);
+    }
     for (const finding of motionFindings(tracks)) {
       movement.push({ ...finding, conceptId: concept.id });
       if (MOTION_ENFORCED && finding.level === 'error') problems.push(`Concept "${concept.id}": ${finding.message}`);

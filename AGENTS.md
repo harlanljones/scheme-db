@@ -57,6 +57,7 @@ the visual system is in `DESIGN.md` and the product brief in `PRODUCT.md`.
 
 - `bun run dev`: run the site
 - `bun run data:new <concept|scheme|coach|term>`: start a record; `bun run data:validate`: check `data/`
+- `bun run data:tag [--write]`: fill the structured play fields (`down`, `distance`, `fieldZone`, `coverageFamily`, the personnel codes) from a play's text and tracks; `playType` is chosen by a person
 - `bun run data:format`: canonical formatting; `bun run data:schema`: regenerate the JSON Schemas
 - `bun run test`: Vitest (engine, schema and validators, site, release build)
 - `bun run check`: everything CI runs; run it before opening a pull request
