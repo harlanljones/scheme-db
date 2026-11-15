@@ -5,9 +5,18 @@ import { buildTables, createStatement, tableToCsv } from '../tables';
 
 const { dataset } = loadDataset();
 
-/** The dataset with sources on a scheme, a coach, a lineage and a play, and a date on the coach. */
-function withSources(): Dataset {
+/** The dataset with every source and every coach date taken off, so a count here never depends on what the library cites. */
+function bare(): Dataset {
   const ds = structuredClone(dataset);
+  for (const record of [...ds.schemes, ...ds.coaches, ...ds.lineages]) delete record.sources;
+  for (const coach of ds.coaches) delete coach.asOf;
+  for (const concept of ds.concepts) concept.provenance.sources = [];
+  return ds;
+}
+
+/** `bare()` with sources on a scheme, a coach, a lineage and a play, and a date on the coach. */
+function withSources(): Dataset {
+  const ds = bare();
   ds.schemes[0].sources = [
     { type: 'article', citation: 'Piece, with a comma', url: 'https://example.com/a', accessed: '2026-11-15', supports: ['claim', 'idea'] },
     { type: 'book', citation: 'A book' },
@@ -23,7 +32,7 @@ const byName = (tables: ReturnType<typeof buildTables>, name: string) => tables.
 
 describe('the source tables of the release', () => {
   const tables = buildTables(withSources(), 'test');
-  const empty = buildTables(dataset, 'test');
+  const empty = buildTables(bare(), 'test');
 
   it('give a scheme, a coach and a lineage a table of sources, one row per source in the order listed', () => {
     const column = (table: string, name: string) => byName(tables, table).columns.findIndex((c) => c.name === name);
@@ -44,7 +53,7 @@ describe('the source tables of the release', () => {
     expect(concept.rows).toEqual([[dataset.concepts[0].id, 0, 'article', 'About the play', null, null, '["idea"]']]);
   });
 
-  it('are empty, not missing, while no record cites a source', () => {
+  it('are empty, not missing, for records that cite no source', () => {
     for (const name of ['scheme_sources', 'coach_sources', 'lineage_sources']) expect(byName(empty, name).rows, name).toEqual([]);
   });
 

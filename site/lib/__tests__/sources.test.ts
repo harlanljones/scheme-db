@@ -39,16 +39,22 @@ describe('sources in llms-full.txt', () => {
   const lib = library();
 
   it('lists a scheme source with its link and what it backs, and dates the coach role, only when the data has them', () => {
-    const plain = llmsFullTxt(lib);
+    // The library as it will be with nothing cited and no dates, whatever the data holds by then.
+    const bare: Library = {
+      ...lib,
+      schemes: lib.schemes.map((s) => ({ ...s, sources: undefined })),
+      coachById: new Map([...lib.coachById].map(([id, coach]) => [id, { ...coach, asOf: undefined }])),
+    };
+    const plain = llmsFullTxt(bare);
     expect(plain).not.toContain('- Source (');
     expect(plain).not.toContain(', as of ');
 
-    const scheme = lib.schemes[0];
-    const coach = lib.coachById.get(scheme.coachId)!;
+    const scheme = bare.schemes[0];
+    const coach = bare.coachById.get(scheme.coachId)!;
     const withData: Library = {
-      ...lib,
-      schemes: lib.schemes.map((s) => (s.id === scheme.id ? { ...s, sources: [{ type: 'article', citation: 'A piece', url: 'https://example.com/a', supports: ['idea', 'claim'] }] } : s)),
-      coachById: new Map(lib.coachById).set(coach.id, { ...coach, asOf: '2027-01-15' }),
+      ...bare,
+      schemes: bare.schemes.map((s) => (s.id === scheme.id ? { ...s, sources: [{ type: 'article', citation: 'A piece', url: 'https://example.com/a', supports: ['idea', 'claim'] }] } : s)),
+      coachById: new Map(bare.coachById).set(coach.id, { ...coach, asOf: '2027-01-15' }),
     };
     const text = llmsFullTxt(withData);
     expect(text).toContain('- Source (article): A piece https://example.com/a Backs the idea and the claim.');
