@@ -49,6 +49,20 @@
   },
   "provenance": {
     "confidence": "illustrative",
-    "sources": []
+    "sources": [
+      {
+        "type": "article",
+        "citation": "Matt Fries, \"Brian Flores' Defense, Part 3: Physicality in Man Coverage\", Zone Coverage, Feb 21, 2023",
+        "url": "https://zonecoverage.com/2023/minnesota-vikings-news/brian-flores-defense-part-3-physicality-in-man-coverage/",
+        "accessed": "2026-11-15"
+      },
+      {
+        "type": "article",
+        "citation": "Mark Bullock, \"Defensive Coordinator Profile: Brian Flores\", Mark Bullock on Substack, Jan 16, 2026",
+        "url": "https://markbullock.substack.com/p/defensive-coordinator-profile-brian",
+        "accessed": "2026-11-15"
+      }
+    ],
+    "notes": "The sources describe the idea: \"1 Double\" is a man coverage Belichick made famous that takes away the opponent's best receiver, typically with the second best corner on him and a safety bracketing (Zone Coverage, 2023, from Dolphins film), and Bullock (2026) shows a Vikings safety bracketing a receiver out of a Cover 0 look. Pairing the bracket with a five-man overload from the mug front is the illustrator's. The player paths and timings have not been checked against film."
   }
 }

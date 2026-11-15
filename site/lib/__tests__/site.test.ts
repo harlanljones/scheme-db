@@ -205,6 +205,12 @@ describe('what the site says about trust', () => {
     expect(playsPerSchemeWords(withConfidence(lib.confidence, { min: 4, max: 6 }))).toBe('four to six');
   });
 
+  it('counts the plays that list sources, whatever their confidence', () => {
+    const listed = lib.dataset.concepts.filter((concept) => concept.provenance.sources.length > 0).length;
+    expect(lib.sourced).toBe(listed);
+    expect(lib.sourced).toBeLessThanOrEqual(lib.counts.plays);
+  });
+
   it('puts the right article before each confidence level', () => {
     expect(playPhrase('illustrative')).toBe('an illustrative play');
     expect(playPhrase('reconstructed')).toBe('a reconstructed play');

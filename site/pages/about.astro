@@ -76,11 +76,11 @@ const contents = [
       <section id="illustrative">
         <div class="divider"><p class="eyebrow">Appendix A</p><h2>What illustrative means</h2></div>
         {allIllustrative(lib) ? (
-          <p class="body">All {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and none of them comes from tracking data. The data marks each one <span class="type" style="color:var(--fg)">illustrative</span>, with no sources yet.</p>
+          <p class="body">All {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and none of them comes from tracking data. The data marks each one <span class="type" style="color:var(--fg)">illustrative</span>{lib.sourced === 0 ? ', with no sources yet.' : `. ${capitalize(count(lib.sourced))} of them also list the articles that describe the idea they draw.`}</p>
         ) : (
           <p class="body">{lib.confidence.illustrative} of the {counts.plays} plays are drawn by hand to show how a scheme works. They do not record a snap, a team or a game, and the data marks each one <span class="type" style="color:var(--fg)">illustrative</span>. The other {counts.plays - lib.confidence.illustrative} are marked <span class="type" style="color:var(--fg)">reconstructed</span> or <span class="type" style="color:var(--fg)">verified</span>: they are rebuilt from the sources listed on their sheets, and a verified play was reviewed by a second person. None of them comes from tracking data.</p>
         )}
-        <p class="body">Read an illustrative play as a coach’s chalk drawing of the idea, not as film of a game. {allIllustrative(lib) ? 'When plays gain sources, the record will say so.' : 'A play that cites sources says so on its sheet, and its record lists them.'}</p>
+        <p class="body">Read an illustrative play as a coach’s chalk drawing of the idea, not as film of a game. {allIllustrative(lib) ? (lib.sourced === 0 ? 'When plays gain sources, the record will say so.' : 'A source listed on an illustrative play shows where the idea comes from. It does not mean the drawing was checked against film.') : 'A play that cites sources says so on its sheet, and its record lists them.'}</p>
       </section>
 
       <section id="drawing">
