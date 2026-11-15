@@ -23,9 +23,11 @@
   text-decoration: none;
 }
 
-.gloss-letters a:hover {
-  background: var(--s2);
-  border-color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .gloss-letters a:hover {
+    background: var(--s2);
+    border-color: var(--fg);
+  }
 }
 
 .gloss {
@@ -80,10 +82,12 @@
   text-decoration: none;
 }
 
-.gloss-head h3 a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+@media (hover: hover) and (pointer: fine) {
+  .gloss-head h3 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
 }
 
 .gloss-cat {

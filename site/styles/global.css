@@ -283,9 +283,11 @@ a {
   cursor: pointer;
 }
 
-.btn:hover {
-  background: var(--fg2);
-  border-color: var(--fg2);
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--fg2);
+    border-color: var(--fg2);
+  }
 }
 
 .lnk {
@@ -302,8 +304,10 @@ a {
   text-decoration-thickness: 1px;
 }
 
-.lnk:hover {
-  text-decoration-thickness: 2px;
+@media (hover: hover) and (pointer: fine) {
+  .lnk:hover {
+    text-decoration-thickness: 2px;
+  }
 }
 
 .pill {
@@ -323,9 +327,11 @@ a {
   cursor: pointer;
 }
 
-.pill:hover {
-  background: var(--s1);
-  color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover {
+    background: var(--s1);
+    color: var(--fg);
+  }
 }
 
 .pill[aria-pressed='true'] {
@@ -346,8 +352,10 @@ a {
   cursor: pointer;
 }
 
-.ibtn:hover {
-  background: var(--s2);
+@media (hover: hover) and (pointer: fine) {
+  .ibtn:hover {
+    background: var(--s2);
+  }
 }
 
 .ibtn.solid {
@@ -355,8 +363,21 @@ a {
   color: var(--bg);
 }
 
-.ibtn.solid:hover {
-  background: var(--fg2);
+@media (hover: hover) and (pointer: fine) {
+  .ibtn.solid:hover {
+    background: var(--fg2);
+  }
+}
+
+/* Pressed: a control goes down by one pixel, with no transition so it lands with the click. */
+.btn:active,
+.pill:active,
+.ibtn:active,
+.pbtn:active,
+.tog:active,
+.beat:active,
+.tabs a:active {
+  transform: translateY(1px);
 }
 
 .input {
@@ -558,8 +579,10 @@ input[type='range'] {
   font-size: 15px;
 }
 
-.dl:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .dl:hover {
+    background: var(--s1);
+  }
 }
 
 .dl .fmt {
@@ -612,8 +635,10 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.toc .row > a:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .toc .row > a:hover {
+    background: var(--s1);
+  }
 }
 
 .toc .no {
@@ -769,8 +794,10 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.prow:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .prow:hover {
+    background: var(--s1);
+  }
 }
 
 .prow .chart {
@@ -850,8 +877,10 @@ input[type='range'] {
   cursor: pointer;
 }
 
-.beat:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .beat:hover {
+    background: var(--s1);
+  }
 }
 
 .beat[aria-current='step'] {
@@ -909,8 +938,10 @@ input[type='range'] {
   text-decoration: none;
 }
 
-.apx li a:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .apx li a:hover {
+    background: var(--s1);
+  }
 }
 
 .apx li .n {
@@ -1134,8 +1165,10 @@ pre.code {
   cursor: pointer;
 }
 
-.pbtn:hover {
-  background: var(--s2);
+@media (hover: hover) and (pointer: fine) {
+  .pbtn:hover {
+    background: var(--s2);
+  }
 }
 
 /* ---------- Header and footer ---------- */
@@ -1257,9 +1290,11 @@ pre.code {
   letter-spacing: 0.01em;
 }
 
-.tabs a:hover {
-  background: var(--s2);
-  color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .tabs a:hover {
+    background: var(--s2);
+    color: var(--fg);
+  }
 }
 
 .tabs a[aria-current='page'] {
@@ -1288,8 +1323,10 @@ pre.code {
   cursor: pointer;
 }
 
-.tog:hover {
-  background: var(--s2);
+@media (hover: hover) and (pointer: fine) {
+  .tog:hover {
+    background: var(--s2);
+  }
 }
 
 .tog[aria-pressed='true'] {
@@ -1356,8 +1393,10 @@ pre.code {
   text-decoration: none;
 }
 
-.menu a:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .menu a:hover {
+    background: var(--s1);
+  }
 }
 
 .menu .cur {
@@ -1451,9 +1490,11 @@ pre.code {
   text-decoration: none;
 }
 
-.footer .col a:hover {
-  color: var(--fg);
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .footer .col a:hover {
+    color: var(--fg);
+    background: var(--s1);
+  }
 }
 
 .footer .fine {
@@ -2215,8 +2256,10 @@ html:not(.js) .js-only {
   cursor: pointer;
 }
 
-.netsvg a.node:hover .nlab {
-  text-decoration: underline;
+@media (hover: hover) and (pointer: fine) {
+  .netsvg a.node:hover .nlab {
+    text-decoration: underline;
+  }
 }
 
 .netsvg a.node:focus-visible .hit,
@@ -2278,8 +2321,10 @@ html:not(.js) .js-only {
   text-underline-offset: 3px;
 }
 
-.tree li a:hover {
-  color: var(--fg);
+@media (hover: hover) and (pointer: fine) {
+  .tree li a:hover {
+    color: var(--fg);
+  }
 }
 
 @media (min-width: 900px) {
@@ -2362,8 +2407,10 @@ html:not(.js) .js-only {
   text-decoration: none;
 }
 
-.lib-row:hover {
-  background: var(--s1);
+@media (hover: hover) and (pointer: fine) {
+  .lib-row:hover {
+    background: var(--s1);
+  }
 }
 
 .lib-row .c-no {
