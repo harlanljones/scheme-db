@@ -92,6 +92,15 @@ const confidence = play.provenance.confidence;
 const sources = play.provenance.sources;
 // Illustrative sheets carry the site wide notice and nothing more; a sheet that claims more says what it rests on.
 const showSources = confidence !== 'illustrative' || sources.length > 0;
+// The five facts of the sheet. They head the sheet from 600 px wide; on a phone the same five sit under the
+// field and its controls (see PlayViewer), so the field and Play are on the first screen.
+const facts: Array<[string, string]> = [
+  ['Formation', tidy(play.formation)],
+  ['Personnel', play.personnel],
+  ['Front', play.frontName],
+  ['Coverage', play.coverage],
+  ['Down and distance', play.situation],
+];
 ---
 
 <Base
@@ -101,7 +110,7 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
   imageAlt={`${play.nameDisplay}: the players of ${playPhrase(confidence)} 1.2 seconds after the snap. Offense is filled amber, defense is ringed blue.`}
 >
   <div class="wrap">
-    <nav aria-label="Breadcrumb" class="crumbs">
+    <nav aria-label="Breadcrumb" class="crumbs trail">
       <a href="/">Cover</a>
       <span class="sep"><span aria-hidden="true">/</span><a href="/schemes/">Contents</a></span>
       <span class="sep"><span aria-hidden="true">/</span><a href={scheme.href}>{scheme.nameDisplay}</a></span>
@@ -113,7 +122,7 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
     <div class="sheet">
       <div class="strip">
         <p>Play sheet {play.order} of {total} · {scheme.nameDisplay}{confidence !== 'illustrative' ? ` · ${CONFIDENCE[confidence].label}` : ''}</p>
-        <p>{fileBase}</p>
+        <p class="strip-id">{fileBase}</p>
       </div>
       <div class="callhead">
         <div class="call">
@@ -124,23 +133,18 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
           <a class="lnk" href="#compare" style="font-size:15px">Jump to the comparison with {namesText} <span aria-hidden="true">↓</span></a>
         )}
       </div>
-      <div class="sheethead">
-        <div class="cell"><p class="lab">Formation</p><p class="val">{tidy(play.formation)}</p></div>
-        <div class="cell"><p class="lab">Personnel</p><p class="val">{play.personnel}</p></div>
-        <div class="cell"><p class="lab">Front</p><p class="val">{play.frontName}</p></div>
-        <div class="cell"><p class="lab">Coverage</p><p class="val">{play.coverage}</p></div>
-        <div class="cell"><p class="lab">Down and distance</p><p class="val">{play.situation}</p></div>
+      <div class="sheethead facts-sheet">
+        {facts.map(([label, value]) => <div class="cell"><p class="lab">{label}</p><p class="val">{value}</p></div>)}
       </div>
     </div>
   </section>
 
   <section class="wrap" style="padding-bottom:56px">
-    <PlayViewer client:load play={JSON.stringify(lite)} win={viewerWin} beats={beats} duration={tracks.duration} />
+    <PlayViewer client:load play={JSON.stringify(lite)} win={viewerWin} beats={beats} duration={tracks.duration} facts={facts} />
   </section>
 
   <section class="wrap section">
     <div class="divider">
-      <p class="eyebrow">Notes</p>
       <h2>Why it works, and how it fails</h2>
     </div>
     <div class="notes-grid">
@@ -154,7 +158,6 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
   {showSources && (
     <section id="sources" class="wrap section" style="scroll-margin-top:16px">
       <div class="divider">
-        <p class="eyebrow">Sources</p>
         <h2>{CONFIDENCE[confidence].label}: what this sheet rests on</h2>
         <p class="aside">Confidence: {confidence}</p>
       </div>
@@ -203,7 +206,6 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
 
   <section class="wrap section" style="padding-bottom:64px">
     <div class="divider">
-      <p class="eyebrow">Record</p>
       <h2>The data behind this sheet</h2>
       <p class="aside">{SITE.dataLicense}, credit SchemeDB</p>
     </div>

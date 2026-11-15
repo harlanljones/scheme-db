@@ -16,6 +16,8 @@ interface Props {
   play: string;
   win: FieldWindow;
   beats: BeatProp[];
+  /** The sheet's facts (formation, personnel, front, coverage, down and distance), shown here on a phone. */
+  facts: Array<[string, string]>;
   duration: number;
 }
 
@@ -23,7 +25,7 @@ const stripNumber = (title: string): string => title.replace(/^\d+\.\s*/, '');
 const pad2 = (n: number): string => (n < 10 ? `0${n}` : String(n));
 
 /** The field, transport, scrubber and coaching points of one play, all driven by one clock. */
-export default function PlayViewer({ play: json, win, beats, duration }: Props) {
+export default function PlayViewer({ play: json, win, beats, duration, facts }: Props) {
   const play = useMemo(() => parsePlay(json), [json]);
   const { playing, speed, fresh, t: clockT } = usePlayState();
   /** Seconds of play before the snap. Zero for most plays, which then look exactly as they always did. */
@@ -167,14 +169,14 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
           <div className="phases" aria-hidden="true">
             {motionStart !== null && motionStart > -lead + 0.15 ? (
               <span className="phase set" style={{ left: 0, width: along(motionStart) }}>
-                SET
+                Set
               </span>
             ) : null}
             <span className="phase motion" style={{ left: along(motionStart ?? -lead), width: `calc(${along(0)} - ${along(motionStart ?? -lead)})` }}>
-              MOTION
+              Motion
             </span>
             <span className="phase snap" style={{ left: along(0) }}>
-              SNAP
+              Snap
             </span>
           </div>
         ) : null}
@@ -190,6 +192,14 @@ export default function PlayViewer({ play: json, win, beats, duration }: Props) 
       </p>
 
     </div>
+      <div className="sheethead facts-phone">
+        {facts.map(([label, value]) => (
+          <div key={label} className="cell">
+            <p className="lab">{label}</p>
+            <p className="val">{value}</p>
+          </div>
+        ))}
+      </div>
       <PointsList beats={beats} active={active} onPick={goTo} />
     </div>
   );
@@ -216,7 +226,7 @@ function PointsList({ beats, active, onPick }: { beats: BeatProp[]; active: numb
                 <span className="slab" style={{ fontSize: 18, lineHeight: '24px', fontWeight: 600 }}>
                   {stripNumber(b.title)}
                 </span>
-                <span className="type" style={{ fontSize: 13, lineHeight: '24px', color: 'var(--fg2)', whiteSpace: 'nowrap' }}>
+                <span className="type" style={{ fontSize: 14, lineHeight: '24px', color: 'var(--fg2)', whiteSpace: 'nowrap' }}>
                   {b.t.toFixed(1)} s
                 </span>
               </span>

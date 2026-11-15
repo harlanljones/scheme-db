@@ -1,5 +1,6 @@
 import { useQueryFilters } from './useQueryFilters';
 import { searchKey } from '../lib/search';
+import { FilterGroups, activeLabels } from './FilterGroups';
 
 export interface PlayRow {
   id: string;
@@ -72,6 +73,7 @@ export default function PlayTable({ rows, eras, idPrefix = 'plays' }: Props) {
     ...DOWNS.map(([id, label]): [string, string, number] => [id, label, pool.filter((r) => bySide(r) && byEra(r) && r.down === id).length]),
   ];
 
+  const active = activeLabels([[side, sides], [era, eraPills], [down, downPills]]);
   const status = list.length === 0 ? 'No plays match' : filtered ? `${list.length} of ${rows.length} plays match` : `All ${rows.length} plays`;
 
   return (
@@ -83,27 +85,29 @@ export default function PlayTable({ rows, eras, idPrefix = 'plays' }: Props) {
           </label>
           <input id={`${idPrefix}-q`} className="input" type="search" value={q} onChange={(e) => filters.set('q', e.target.value)} autoComplete="off" />
         </div>
-        <div role="group" aria-label="Side of the ball" className="group">
-          {sides.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={side === id} onClick={() => filters.set('side', id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
-        <div role="group" aria-label="Era" className="group">
-          {eraPills.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={era === id} onClick={() => filters.set('era', id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
-        <div role="group" aria-label="Down" className="group">
-          {downPills.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={down === id} onClick={() => filters.set('down', id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
+        <FilterGroups summary={active}>
+          <div role="group" aria-label="Side of the ball" className="group">
+            {sides.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={side === id} onClick={() => filters.set('side', id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+          <div role="group" aria-label="Era" className="group">
+            {eraPills.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={era === id} onClick={() => filters.set('era', id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+          <div role="group" aria-label="Down" className="group">
+            {downPills.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={down === id} onClick={() => filters.set('down', id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+        </FilterGroups>
       </div>
 
       <div className="status-row">

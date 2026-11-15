@@ -28,14 +28,13 @@ const linkedOnly = rows.length - schemeCoaches - withoutScheme;
   </div>
   <section class="wrap section" style="padding-top:8px;gap:20px">
     <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:8px">
-      <p class="eyebrow">Staff list · By surname</p>
       <h1 class="page-title">The {lib.counts.coaches} coaches</h1>
       <p class="body" style="font-size:18px;line-height:28px">
         The {schemeCoaches} coaches behind the {lib.counts.schemes} schemes, {count(linkedOnly)} more whose records link to one of those schemes, and {count(withoutScheme)} who {withoutScheme === 1 ? 'appears' : 'appear'} only in the lineages so far. Each page has the coach’s schemes, who they worked under and who worked under them.
       </p>
     </div>
     <CoachTable client:load rows={rows} eras={eras} lineages={lineages} />
-    <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2)">
+    <p class="type" style="font-size:var(--text-ui);line-height:20px;color:var(--fg2)">
       Roles are as of the 2026 season. Spot one that is out of date? <a href="/about/#corrections">Send a correction</a>.
     </p>
   </section>
@@ -43,7 +42,6 @@ const linkedOnly = rows.length - schemeCoaches - withoutScheme;
   {others.length > 0 && (
     <section class="wrap section" id="named">
       <div class="divider">
-        <p class="eyebrow">Also named</p>
         <h2>Coaches without a page yet</h2>
         <p class="aside">{others.length} people</p>
       </div>

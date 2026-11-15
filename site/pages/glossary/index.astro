@@ -25,20 +25,19 @@ const named = rows.filter((row) => row.schemes.length > 0).length;
   </div>
   <section class="wrap section" style="padding-top:8px;gap:20px">
     <div style="display:flex;flex-direction:column;gap:14px;padding-bottom:8px">
-      <p class="eyebrow">Glossary · A to Z</p>
       <h1 class="page-title">The {rows.length} terms</h1>
       <p class="body" style="font-size:18px;line-height:28px">
         The words the play sheets use: blocking schemes, runs, passes, fronts, coverages and reads. Each entry gives the meaning, a tactical note, the other names the term goes by and the <a href="/schemes/">schemes</a> whose plays name it.
       </p>
     </div>
     <GlossaryList client:load rows={rows} categories={categories} />
-    <p class="type" style="font-size:12px;line-height:18px;color:var(--fg2);max-width:760px">
+    <p class="type" style="font-size:var(--text-ui);line-height:20px;color:var(--fg2);max-width:760px">
       A scheme is listed under a term when one of its plays names the term, or another name for it, in its title, formation, front or coverage. {named} of the {rows.length} terms are named that way today. Spot a mistake? <a href="/about/#corrections">Send a correction</a>.
     </p>
   </section>
 
   <section class="wrap section" style="padding-bottom:64px">
-    <div class="divider"><p class="eyebrow">Data</p><h2>Take the terms with you</h2><p class="aside">{SITE.dataLicense}</p></div>
+    <div class="divider"><h2>Take the terms with you</h2><p class="aside">{SITE.dataLicense}</p></div>
     <div class="dl-list" style="max-width:820px">
       {files.map(([name, note]) => {
         const href = `/downloads/csv/${name}.csv`;

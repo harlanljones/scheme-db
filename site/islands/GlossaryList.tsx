@@ -1,6 +1,7 @@
 import { capitalize, count, plural } from '../lib/format';
 import { useQueryFilters } from './useQueryFilters';
 import { searchKey } from '../lib/search';
+import { FilterGroups, activeLabels } from './FilterGroups';
 
 export interface TermRow {
   id: string;
@@ -84,6 +85,7 @@ export default function GlossaryList({ rows, categories, idPrefix = 'glossary' }
 
   // Entries arrive A to Z, so each letter's entries are already side by side.
   const letters = [...new Set(list.map((r) => r.letter))];
+  const active = activeLabels([[cat, catPills]]);
   const status = list.length === 0 ? 'No terms match' : filtered ? `${list.length} of ${rows.length} terms match` : `All ${rows.length} terms`;
 
   return (
@@ -95,13 +97,15 @@ export default function GlossaryList({ rows, categories, idPrefix = 'glossary' }
           </label>
           <input id={`${idPrefix}-q`} className="input" type="search" value={q} onChange={(e) => filters.set('q', e.target.value)} autoComplete="off" />
         </div>
-        <div role="group" aria-label="Kind of term" className="group">
-          {catPills.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={cat === id} onClick={() => filters.set('cat', id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
+        <FilterGroups summary={active}>
+          <div role="group" aria-label="Kind of term" className="group">
+            {catPills.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={cat === id} onClick={() => filters.set('cat', id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+        </FilterGroups>
       </div>
 
       <div className="status-row">

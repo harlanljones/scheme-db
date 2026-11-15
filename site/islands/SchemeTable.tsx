@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useQueryFilters } from './useQueryFilters';
 import { searchKey } from '../lib/search';
+import { FilterGroups, activeLabels } from './FilterGroups';
 
 export interface SchemeRow {
   id: string;
@@ -67,6 +68,7 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
   ];
 
   const hitCount = needle ? list.reduce((n, r) => n + (schemeText(r).includes(needle) ? 0 : playHits(r).length), 0) : 0;
+  const active = activeLabels([[side, sides], [era, eraPills]]);
   const status =
     list.length === 0
       ? 'No schemes match'
@@ -83,20 +85,22 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
           </label>
           <input id={`${idPrefix}-q`} className="input" type="search" value={q} onChange={(e) => setQ(e.target.value)} autoComplete="off" />
         </div>
-        <div role="group" aria-label="Side of the ball" className="group">
-          {sides.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={side === id} onClick={() => setSide(id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
-        <div role="group" aria-label="Era" className="group">
-          {eraPills.map(([id, label, n]) => (
-            <button key={id} className="pill" type="button" aria-pressed={era === id} onClick={() => setEra(id)}>
-              {label} <span className="type">{n}</span>
-            </button>
-          ))}
-        </div>
+        <FilterGroups summary={active}>
+          <div role="group" aria-label="Side of the ball" className="group">
+            {sides.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={side === id} onClick={() => setSide(id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+          <div role="group" aria-label="Era" className="group">
+            {eraPills.map(([id, label, n]) => (
+              <button key={id} className="pill" type="button" aria-pressed={era === id} onClick={() => setEra(id)}>
+                {label} <span className="type">{n}</span>
+              </button>
+            ))}
+          </div>
+        </FilterGroups>
       </div>
 
       <div className="status-row">
@@ -182,7 +186,7 @@ export default function SchemeTable({ rows, eras, collapseAt, allHref = '/scheme
             >
               Show all {rows.length} schemes
             </a>
-            <p className="mono-small" style={{ fontSize: 12, lineHeight: '18px' }}>
+            <p className="mono-small" style={{ fontSize: 14, lineHeight: '20px' }}>
               The first {collapseAt} are listed above.
             </p>
           </div>
