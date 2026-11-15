@@ -188,9 +188,9 @@
       "assignment": "1-tech, rush upfield but caught in PA fake",
       "waypoints": [
         { "t": 0, "x": 26, "y": 0.9, "note": "Upfield rush" },
-        { "t": 0.8, "x": 26, "y": 0.6, "note": "Bite on fake" },
-        { "t": 2, "x": 27, "y": 1.5, "note": "React to PA" },
-        { "t": 4, "x": 27.5, "y": 2.5, "note": "Held by Center" }
+        { "t": 0.8, "x": 26, "y": -0.03, "note": "Bite on fake" },
+        { "t": 2, "x": 27, "y": -1.9, "note": "React to PA" },
+        { "t": 4, "x": 27.5, "y": -1.9, "note": "Held by Center" }
       ]
     },
     {

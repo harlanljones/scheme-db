@@ -12,10 +12,12 @@
       "assignment": "Vertical set, wall NT out of the launch point",
       "waypoints": [
         { "t": 0, "x": 26.67, "y": -0.4, "note": "Snap" },
-        { "t": 0.6, "x": 26.4, "y": 0.5, "note": "Vertical set" },
-        { "t": 1.6, "x": 26.1, "y": 1.2, "note": "Anchor vs NT push" },
-        { "t": 2.6, "x": 26, "y": 1.8, "note": "Hold through delivery" },
-        { "t": 3.8, "x": 25.9, "y": 2.2, "note": "Pocket secured" }
+        { "t": 0.35, "x": 26.51, "y": -0.4 },
+        { "t": 0.6, "x": 26.4, "y": -0.85, "note": "Vertical set" },
+        { "t": 1.6, "x": 26.1, "y": -2.65, "note": "Anchor vs NT push" },
+        { "t": 2.6, "x": 26, "y": -4.45, "note": "Hold through delivery" },
+        { "t": 3.24, "x": 25.95, "y": -5.6 },
+        { "t": 3.8, "x": 25.9, "y": -5.6, "note": "Pocket secured" }
       ]
     },
     {
@@ -27,10 +29,12 @@
       "assignment": "Pass set left B-gap, hand off interior twists",
       "waypoints": [
         { "t": 0, "x": 25, "y": -0.4, "note": "Set step" },
-        { "t": 0.6, "x": 24.8, "y": 0.4, "note": "Kick slide left" },
-        { "t": 1.6, "x": 24.5, "y": 1.1, "note": "Brace vs 3T inside charge" },
-        { "t": 2.6, "x": 24.4, "y": 1.7, "note": "Hand off with C" },
-        { "t": 3.8, "x": 24.3, "y": 2.1, "note": "Finish block" }
+        { "t": 0.6, "x": 24.8, "y": -0.4, "note": "Kick slide left" },
+        { "t": 0.7, "x": 24.77, "y": -0.4 },
+        { "t": 1.6, "x": 24.5, "y": -2.2, "note": "Brace vs 3T inside charge" },
+        { "t": 2.6, "x": 24.4, "y": -4.2, "note": "Hand off with C" },
+        { "t": 3.3, "x": 24.34, "y": -5.6 },
+        { "t": 3.8, "x": 24.3, "y": -5.6, "note": "Finish block" }
       ]
     },
     {
@@ -42,10 +46,12 @@
       "assignment": "Protect left edge vs WDE speed rush",
       "waypoints": [
         { "t": 0, "x": 23.3, "y": -0.4, "note": "Set step" },
-        { "t": 0.6, "x": 23.1, "y": 0.5, "note": "Kick slide to edge" },
-        { "t": 1.6, "x": 22.9, "y": 1.2, "note": "Mirror WDE arc" },
-        { "t": 2.6, "x": 23, "y": 1.9, "note": "Ride rush wide" },
-        { "t": 3.8, "x": 23.1, "y": 2.4, "note": "Hold edge" }
+        { "t": 0.4, "x": 23.17, "y": -0.4 },
+        { "t": 0.6, "x": 23.1, "y": -0.92, "note": "Kick slide to edge" },
+        { "t": 1.6, "x": 22.9, "y": -3.52, "note": "Mirror WDE arc" },
+        { "t": 2.4, "x": 22.98, "y": -5.6 },
+        { "t": 2.6, "x": 23, "y": -5.6, "note": "Ride rush wide" },
+        { "t": 3.8, "x": 23.1, "y": -5.6, "note": "Hold edge" }
       ]
     },
     {
@@ -57,10 +63,12 @@
       "assignment": "Pass set right B-gap vs 3T",
       "waypoints": [
         { "t": 0, "x": 28.3, "y": -0.4, "note": "Set step" },
-        { "t": 0.6, "x": 28.6, "y": 0.4, "note": "Kick slide right" },
-        { "t": 1.6, "x": 28.9, "y": 1.1, "note": "Catch 3T counter" },
-        { "t": 2.6, "x": 29, "y": 1.7, "note": "Hand off with C" },
-        { "t": 3.8, "x": 29.1, "y": 2.1, "note": "Finish block" }
+        { "t": 0.6, "x": 28.6, "y": -0.4, "note": "Kick slide right" },
+        { "t": 0.7, "x": 28.63, "y": -0.4 },
+        { "t": 1.6, "x": 28.9, "y": -2.2, "note": "Catch 3T counter" },
+        { "t": 2.6, "x": 29, "y": -4.2, "note": "Hand off with C" },
+        { "t": 3.3, "x": 29.06, "y": -5.6 },
+        { "t": 3.8, "x": 29.1, "y": -5.6, "note": "Finish block" }
       ]
     },
     {
@@ -72,10 +80,12 @@
       "assignment": "Protect right edge vs SDE contain rush",
       "waypoints": [
         { "t": 0, "x": 30, "y": -0.4, "note": "Set step" },
-        { "t": 0.6, "x": 30.3, "y": 0.5, "note": "Kick slide to edge" },
-        { "t": 1.6, "x": 30.6, "y": 1.2, "note": "Anchor vs SDE bull" },
-        { "t": 2.6, "x": 30.7, "y": 1.9, "note": "Ride rush past pocket" },
-        { "t": 3.8, "x": 30.8, "y": 2.4, "note": "Hold edge" }
+        { "t": 0.4, "x": 30.2, "y": -0.4 },
+        { "t": 0.6, "x": 30.3, "y": -0.92, "note": "Kick slide to edge" },
+        { "t": 1.6, "x": 30.6, "y": -3.52, "note": "Anchor vs SDE bull" },
+        { "t": 2.4, "x": 30.68, "y": -5.6 },
+        { "t": 2.6, "x": 30.7, "y": -5.6, "note": "Ride rush past pocket" },
+        { "t": 3.8, "x": 30.8, "y": -5.6, "note": "Hold edge" }
       ]
     },
     {
@@ -226,9 +236,9 @@
       "assignment": "Contain rush left edge vs LT",
       "waypoints": [
         { "t": 0, "x": 21, "y": 0.9, "note": "Get-off" },
-        { "t": 0.8, "x": 21.7, "y": 1.8, "note": "Speed rush around LT" },
-        { "t": 2, "x": 20.8, "y": 3.4, "note": "Arc widened by LT" },
-        { "t": 3.8, "x": 20, "y": 5, "note": "Rushed past pocket" }
+        { "t": 0.8, "x": 21.7, "y": -0.03, "note": "Speed rush around LT" },
+        { "t": 2, "x": 20.8, "y": -1.9, "note": "Arc widened by LT" },
+        { "t": 3.8, "x": 20, "y": -1.9, "note": "Rushed past pocket" }
       ]
     },
     {
@@ -240,9 +250,9 @@
       "assignment": "Interior push on C",
       "waypoints": [
         { "t": 0, "x": 25.5, "y": 0.9, "note": "Charge snap" },
-        { "t": 0.8, "x": 26, "y": 1.5, "note": "Bull rush on C" },
-        { "t": 2, "x": 25.8, "y": 2.2, "note": "Anchored" },
-        { "t": 3.8, "x": 25.7, "y": 2.6, "note": "Held at line" }
+        { "t": 0.8, "x": 26, "y": -0.03, "note": "Bull rush on C" },
+        { "t": 2, "x": 25.8, "y": -1.9, "note": "Anchored" },
+        { "t": 3.8, "x": 25.7, "y": -1.9, "note": "Held at line" }
       ]
     },
     {
@@ -254,9 +264,9 @@
       "assignment": "Right B-gap pressure vs RG",
       "waypoints": [
         { "t": 0, "x": 29, "y": 0.9, "note": "Get-off" },
-        { "t": 0.8, "x": 28.8, "y": 1.5, "note": "Inside club on RG" },
-        { "t": 2, "x": 28.4, "y": 2.2, "note": "RG counters" },
-        { "t": 3.8, "x": 28.5, "y": 2.6, "note": "Neutralized" }
+        { "t": 0.8, "x": 28.8, "y": -0.03, "note": "Inside club on RG" },
+        { "t": 2, "x": 28.4, "y": -1.9, "note": "RG counters" },
+        { "t": 3.8, "x": 28.5, "y": -1.9, "note": "Neutralized" }
       ]
     },
     {
@@ -268,9 +278,9 @@
       "assignment": "Contain rush right edge vs RT",
       "waypoints": [
         { "t": 0, "x": 32.8, "y": 0.9, "note": "Get-off" },
-        { "t": 0.8, "x": 31.7, "y": 1.8, "note": "Upfield charge" },
-        { "t": 2, "x": 32.3, "y": 3.4, "note": "Arc widened by RT" },
-        { "t": 3.8, "x": 33, "y": 4.8, "note": "Past the throw" }
+        { "t": 0.8, "x": 31.7, "y": -0.03, "note": "Upfield charge" },
+        { "t": 2, "x": 32.3, "y": -1.9, "note": "Arc widened by RT" },
+        { "t": 3.8, "x": 33, "y": -1.9, "note": "Past the throw" }
       ]
     },
     {

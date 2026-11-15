@@ -176,9 +176,9 @@
       "assignment": "Weakside rush on the quick throw",
       "waypoints": [
         { "t": 0, "x": 21.2, "y": 1, "note": "Wide alignment" },
-        { "t": 0.6, "x": 20.8, "y": 2.2, "note": "Charging the arc" },
-        { "t": 1.5, "x": 20.5, "y": 3.4, "note": "Turned by LT" },
-        { "t": 3.6, "x": 20.2, "y": 4, "note": "Ball already gone" }
+        { "t": 0.6, "x": 20.8, "y": 0.53, "note": "Charging the arc" },
+        { "t": 1.5, "x": 20.5, "y": -1.57, "note": "Turned by LT" },
+        { "t": 3.6, "x": 20.2, "y": -1.8, "note": "Ball already gone" }
       ]
     },
     {
@@ -190,9 +190,9 @@
       "assignment": "A-gap push vs center",
       "waypoints": [
         { "t": 0, "x": 25.6, "y": 0.9, "note": "Shade alignment" },
-        { "t": 0.6, "x": 25.4, "y": 2.2, "note": "A-gap charge" },
-        { "t": 1.5, "x": 25.1, "y": 3.4, "note": "Walled" },
-        { "t": 3.6, "x": 24.9, "y": 4, "note": "Stalled" }
+        { "t": 0.6, "x": 25.4, "y": 0.43, "note": "A-gap charge" },
+        { "t": 1.5, "x": 25.1, "y": -1.67, "note": "Walled" },
+        { "t": 3.6, "x": 24.9, "y": -1.9, "note": "Stalled" }
       ]
     },
     {
@@ -204,9 +204,9 @@
       "assignment": "B-gap interior rush",
       "waypoints": [
         { "t": 0, "x": 28.2, "y": 1, "note": "3-tech alignment" },
-        { "t": 0.6, "x": 28.5, "y": 2.2, "note": "Slanting inside" },
-        { "t": 1.5, "x": 28.9, "y": 3.2, "note": "Met by FB block" },
-        { "t": 3.6, "x": 29.3, "y": 3.8, "note": "Blocked" }
+        { "t": 0.6, "x": 28.5, "y": 0.53, "note": "Slanting inside" },
+        { "t": 1.5, "x": 28.9, "y": -1.57, "note": "Met by FB block" },
+        { "t": 3.6, "x": 29.3, "y": -1.8, "note": "Blocked" }
       ]
     },
     {
@@ -218,9 +218,9 @@
       "assignment": "Strong-side rush contained",
       "waypoints": [
         { "t": 0, "x": 32.4, "y": 0.9, "note": "Strong alignment" },
-        { "t": 0.6, "x": 32.8, "y": 2.2, "note": "Contain rush" },
-        { "t": 1.5, "x": 33.1, "y": 3.4, "note": "Handled by RT" },
-        { "t": 3.6, "x": 33.4, "y": 4, "note": "Contained" }
+        { "t": 0.6, "x": 32.8, "y": 0.43, "note": "Contain rush" },
+        { "t": 1.5, "x": 33.1, "y": -1.67, "note": "Handled by RT" },
+        { "t": 3.6, "x": 33.4, "y": -1.9, "note": "Contained" }
       ]
     },
     {
