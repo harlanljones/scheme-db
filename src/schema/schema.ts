@@ -42,12 +42,31 @@ export const Confidence = z.enum(['illustrative', 'reconstructed', 'verified']);
 
 export const SourceType = z.enum(['film', 'book', 'clinic', 'article', 'video', 'self-authored']);
 
+/**
+ * What a source backs. `idea` is where the concept or scheme comes from. `drawing` is the paths and timings of a play,
+ * rebuilt from it; only a play has a drawing. `claim` is a fact stated in the text, such as a date, a number or a mentor
+ * link. A source never raises a play's confidence by itself: see `Confidence`.
+ */
+export const Supports = z.enum(['idea', 'drawing', 'claim']);
+
 export const Source = z.strictObject({
   type: SourceType,
   citation: text,
-  url: z.url().optional(),
+  /** Pages are linked from the site, so only web links are allowed. */
+  url: z.url({ protocol: /^https?$/ }).optional(),
   accessed: z.iso.date().optional(),
+  /** Which of the idea, the drawing and the claim the source backs. Absent when the source does not say. */
+  supports: z
+    .array(Supports)
+    .min(1)
+    .superRefine((list, ctx) => {
+      if (new Set(list).size !== list.length) ctx.addIssue({ code: 'custom', message: 'list each of idea, drawing and claim at most once' });
+    })
+    .optional(),
 });
+
+/** Optional on a scheme, a coach and a lineage. Absent means no sources yet; an empty list says nothing more, so it is not allowed. */
+const RecordSources = z.array(Source).min(1).optional();
 
 export const Provenance = z.strictObject({
   confidence: Confidence,
@@ -112,6 +131,27 @@ export const Relations = z.strictObject({
   tell: text,
 });
 
+/**
+ * Controlled fields that sit beside a play's free text. The text keeps its wording; these let plays be filtered, grouped
+ * and counted, and `src/schema/tags.ts` checks each one against the text it describes. The lists are explained in
+ * `data/README.md`.
+ */
+
+/** What an offensive play is. A play has one of the first five and may add `option` when a defender is read to decide who keeps the ball. */
+export const OffensePlayType = z.enum(['run', 'pass', 'play-action', 'rpo', 'screen', 'option']);
+/** What a defensive play is built to do; a play may carry two (a blitz that is also a run defense). */
+export const DefensePlayType = z.enum(['blitz', 'simulated-pressure', 'pass-rush', 'coverage', 'run-defense']);
+export const PlayType = z.enum([...OffensePlayType.options, ...DefensePlayType.options]);
+
+/** The shell a play is drawn against (offense) or calls (defense): ten families covering every spelling in `coverage`. */
+export const CoverageFamily = z.enum(['cover-0', 'cover-1', 'cover-2', 'two-man', 'cover-3', 'cover-4', 'cover-6', 'fire-zone', 'drop-8', 'bracket']);
+
+/** The defensive package, from how many defensive backs are drawn: 3 or fewer, 4, 5, 6, 7 or more. */
+export const DefensePackage = z.enum(['goal-line', 'base', 'nickel', 'dime', 'quarter']);
+
+/** Where the ball is, by yards to the goal the offense is attacking: 60 or more, 40 to 60, 20 to 40, 5 to 20, 5 or fewer. */
+export const FieldZone = z.enum(['own-territory', 'midfield', 'opponent-territory', 'red-zone', 'goal-line']);
+
 /** Descriptive record of one play concept. Geometry lives in the matching `Tracks` record. */
 export const Concept = z.strictObject({
   $schema: schemaRef,
@@ -119,7 +159,15 @@ export const Concept = z.strictObject({
   schemeId: slug,
   order: z.number().int().min(1),
   name: text,
+  /** What the play is: one tag from the offensive or defensive list, matching the side of its scheme. Chosen by a person; the validator checks it against the tracks and the name. */
+  playType: z.array(PlayType).min(1).optional(),
   personnel: text,
+  /** The offense's backs and tight ends as drawn, two digits ("11" is one back, one tight end). Read from the tracks by `bun run data:tag`. */
+  offensePersonnel: z.string().regex(/^\d{2}$/, 'must be two digits, backs then tight ends, like "11"').optional(),
+  /** The defense's linemen, linebackers and defensive backs as drawn, like "4-2-5". Read from the tracks. */
+  defensePersonnel: z.string().regex(/^\d{1,2}-\d{1,2}-\d{1,2}$/, 'must be linemen-linebackers-backs, like "4-2-5"').optional(),
+  /** `base`, `nickel` or `dime` and the like, from the number of defensive backs in `defensePersonnel`. */
+  defensePackage: DefensePackage.optional(),
   formation: text,
   /** The pre-snap alignment preset this concept starts from. Its tracks may move individual players off it. */
   formationId: slug.optional(),
@@ -129,7 +177,13 @@ export const Concept = z.strictObject({
    */
   ballSpot: BallSpot.optional(),
   situation: text,
+  /** The down at the start of `situation`. */
+  down: z.number().int().min(1).max(4).optional(),
+  /** Yards to go, from `situation`; on a goal-to-go it is the yards to the goal. */
+  distance: z.number().int().min(1).max(99).optional(),
+  fieldZone: FieldZone.optional(),
   coverage: text,
+  coverageFamily: CoverageFamily.optional(),
   frontName: text,
   summary: ConceptSummary,
   beats: z.array(Beat),
@@ -180,6 +234,7 @@ export const Scheme = z.strictObject({
   era: Era,
   lineage: LineageBranch,
   description: text,
+  sources: RecordSources,
 });
 
 export const Coach = z.strictObject({
@@ -197,6 +252,9 @@ export const Coach = z.strictObject({
   schemeIds: z.array(slug),
   isHeadCoach2026: z.boolean().optional(),
   notableAchievements: z.array(text).optional(),
+  /** The day `role2026`, `team` and `isHeadCoach2026` were last checked. Absent means they have no date. */
+  asOf: z.iso.date().optional(),
+  sources: RecordSources,
 });
 
 export const LineageNode = z.strictObject({
@@ -214,6 +272,7 @@ export const Lineage = z.strictObject({
   side: Side,
   description: text,
   rootNodes: z.array(LineageNode),
+  sources: RecordSources,
 });
 
 export const TermCategory = z.enum([
@@ -236,6 +295,12 @@ export const Term = z.strictObject({
   tacticalNote: text,
 });
 
+export type Source = z.infer<typeof Source>;
+export type Supports = z.infer<typeof Supports>;
+export type PlayType = z.infer<typeof PlayType>;
+export type CoverageFamily = z.infer<typeof CoverageFamily>;
+export type DefensePackage = z.infer<typeof DefensePackage>;
+export type FieldZone = z.infer<typeof FieldZone>;
 export type Concept = z.infer<typeof Concept>;
 export type Tracks = z.infer<typeof Tracks>;
 export type Formation = z.infer<typeof Formation>;

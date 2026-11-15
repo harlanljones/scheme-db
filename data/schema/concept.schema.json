@@ -22,9 +22,47 @@
       "type": "string",
       "minLength": 1
     },
+    "playType": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "run",
+          "pass",
+          "play-action",
+          "rpo",
+          "screen",
+          "option",
+          "blitz",
+          "simulated-pressure",
+          "pass-rush",
+          "coverage",
+          "run-defense"
+        ]
+      }
+    },
     "personnel": {
       "type": "string",
       "minLength": 1
+    },
+    "offensePersonnel": {
+      "type": "string",
+      "pattern": "^\\d{2}$"
+    },
+    "defensePersonnel": {
+      "type": "string",
+      "pattern": "^\\d{1,2}-\\d{1,2}-\\d{1,2}$"
+    },
+    "defensePackage": {
+      "type": "string",
+      "enum": [
+        "goal-line",
+        "base",
+        "nickel",
+        "dime",
+        "quarter"
+      ]
     },
     "formation": {
       "type": "string",
@@ -46,9 +84,44 @@
       "type": "string",
       "minLength": 1
     },
+    "down": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "distance": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99
+    },
+    "fieldZone": {
+      "type": "string",
+      "enum": [
+        "own-territory",
+        "midfield",
+        "opponent-territory",
+        "red-zone",
+        "goal-line"
+      ]
+    },
     "coverage": {
       "type": "string",
       "minLength": 1
+    },
+    "coverageFamily": {
+      "type": "string",
+      "enum": [
+        "cover-0",
+        "cover-1",
+        "cover-2",
+        "two-man",
+        "cover-3",
+        "cover-4",
+        "cover-6",
+        "fire-zone",
+        "drop-8",
+        "bracket"
+      ]
     },
     "frontName": {
       "type": "string",
@@ -183,6 +256,18 @@
                 "type": "string",
                 "format": "date",
                 "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+              },
+              "supports": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "idea",
+                    "drawing",
+                    "claim"
+                  ]
+                }
               }
             },
             "required": [

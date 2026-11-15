@@ -19,10 +19,12 @@ Every play carries a `confidence` in its `provenance`. Pick the one that is true
 | `confidence` | Use it when | Needs |
 | --- | --- | --- |
 | `illustrative` | You drew the play to teach the idea. | Nothing. This is the default, and what all 180 launch plays are. |
-| `reconstructed` | You rebuilt the play from film, a book, a clinic or an article. | At least one entry in `sources`. |
+| `reconstructed` | You rebuilt the play from film, a book, a clinic or an article. | At least one entry in `sources` that lists `"drawing"` in its `supports`. |
 | `verified` | A second person has checked a reconstructed play against its sources. | Set by the maintainer at review, not by the author. |
 
-A source is `{ "type": "film" | "book" | "clinic" | "article" | "video" | "self-authored", "citation": "...", "url": "...", "accessed": "2026-11-02" }`. Cite enough that a stranger can find it: title, author or channel, date, and a timestamp for film. `url` and `accessed` are optional but welcome for anything online.
+A source is `{ "type": "film" | "book" | "clinic" | "article" | "video" | "self-authored", "citation": "...", "url": "...", "accessed": "2026-11-02", "supports": ["idea", "drawing"] }`. Cite enough that a stranger can find it: title, author or channel, date, and a timestamp for film. `url` and `accessed` are optional but welcome for anything online, and a `url` must be an `http` or `https` link.
+
+`supports` says what the source backs: `idea` (where the concept comes from), `drawing` (the paths and timings, which you rebuilt from it) or `claim` (a fact in the text, such as a date, a number or a mentor link). A play can cite the articles its idea comes from and stay `illustrative`; it becomes `reconstructed` only when you rebuilt the drawing from a source, and that source says `"drawing"`.
 
 A play marked `illustrative` is never "wrong" for being a clean drawing; a play marked `reconstructed` is wrong if it does not match what it cites.
 
@@ -105,6 +107,7 @@ If you would rather describe a pass play than place every waypoint, the optional
 Open `data/concepts/<scheme>/<play>.json` and replace every `TODO:`.
 
 - `situation` must start with the down: `"1st & 10, +40, base down"`. The plays list filters by it.
+- Run `bun run data:tag --write` once the text is written. It fills `down`, `distance`, `fieldZone`, `coverageFamily` and the personnel codes from the text and the tracks; you choose `playType` yourself (the choices are in [data/README.md](data/README.md#structured-fields)). `data:validate` fails a play whose fields disagree with its text.
 - `summary` says what the play is for, the defender it puts in conflict, why it works and how a defense beats it.
 - `beats` are the coaching points. Each has a time `t`, a `title`, `text`, and `focus`, the ids of the players to light up. Keep them in time order.
 - `relations` links the play to others. List at least one play **in the same scheme** in `setsUp` or `playsOff`, because the site compares a play with the plays it relates to. `tell` says what looks the same and when it stops.
@@ -134,6 +137,8 @@ bun run data:new term   --id mesh --term "Mesh" --category "Pass Concept"
 - **A glossary term** is a short definition and a tactical note. Add the words readers will see in text to `aliases`.
 - **A new formation** is a file in `data/formations/` with all 11 offensive and 11 defensive spots, keyed by the same player ids the tracks use. Copy one that is close.
 
+A scheme, a coach and a lineage can cite where they come from with a `sources` list, in the same shape as a play's. `bun run data:new scheme` and `data:new coach` take one source with `--source "<citation>" --source-url <url> --supports idea,claim`; add more by editing the JSON. These sources back the description of a scheme, the role and career notes of a coach and the links of a tree (`idea` or `claim`, never `drawing`), and they do not change any play's confidence. Leave `sources` out when you have none. A coach's `role2026`, `team` and `isHeadCoach2026` name a season, so when you check them, set `asOf` to that day (`"asOf": "2027-01-15"`).
+
 Run `bun run data:new` with no arguments to see every option.
 
 ## Fix a record
@@ -148,7 +153,7 @@ Open it against `main`. The pull request template has a short checklist. In summ
 
 - `bun run check` passes. CI runs the same steps on every pull request.
 - No `TODO:` is left, ids are lowercase words joined by hyphens, and files are canonically formatted.
-- Anything not `illustrative` lists its sources.
+- Anything not `illustrative` lists its sources, and a play's drawing source says `"drawing"` in `supports`.
 - You wrote it or have the right to share it, and you are fine with CC BY 4.0.
 
 What the reviewer looks at: whether the play teaches the idea it claims to, whether its first 1.2 seconds match the plays it relates to, and whether the sources say what you say they do. Expect questions rather than rewrites.

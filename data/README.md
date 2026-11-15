@@ -14,16 +14,32 @@ All 180 launch concepts are labeled `illustrative`; contributions may be `recons
 | `reconstructed` | Rebuilt from cited film, books, clinics or articles. At least one source required. |
 | `verified` | Reconstructed, then reviewed by a second person. At least one source required. |
 
+### Sources
+
+A source is `{ "type", "citation", "url", "accessed", "supports" }`; only `type` (`film`, `book`, `clinic`, `article`, `video` or `self-authored`) and `citation` are required. A `url` must be an `http` or `https` link, because the site links it. `supports` says what the source backs, and lists one or more of these, each once:
+
+| `supports` | The source backs | Allowed on |
+| --- | --- | --- |
+| `idea` | Where the concept or scheme comes from | a play, a scheme, a coach, a lineage |
+| `drawing` | The play's paths and timings, which were rebuilt from it | a play only |
+| `claim` | A fact stated in the text, such as a date, a number or a mentor link | a play, a scheme, a coach, a lineage |
+
+A source never raises a play's confidence by itself. A play can be `illustrative` and still cite the articles its idea comes from. `reconstructed` and `verified` need at least one source that lists `drawing` in `supports`, because the drawing is what was rebuilt from it. `supports` is optional, so a source that does not say is still valid; it just cannot make a play reconstructed.
+
+A scheme, a coach and a lineage may list `sources` too. They back what the record says: the description of the scheme, the role and career notes of a coach, who worked under whom in a tree. They never change a play's confidence, and each play sheet lists its own. Leave `sources` out when there are none; an empty list is not allowed, so there is one way to say it. A coach's `notableAchievements` stay plain strings; a cited line puts the citation in brackets, and the record's `sources` list the pages.
+
+A coach may also carry `asOf`, a date such as `2027-01-15`: the day `role2026`, `team` and `isHeadCoach2026` were last checked. Those fields name a season, so they go stale; the date says how stale. Without it the role has no date, as for every coach today.
+
 ## Layout
 
 | Directory | One file per | Contents |
 | --- | --- | --- |
-| `schemes/<scheme>.json` | scheme | Name, coach, team, side, era, lineage branch, description |
-| `concepts/<scheme>/<concept>.json` | concept | Personnel, formation, situation, coverage, front, summary, beats, relations, provenance |
+| `schemes/<scheme>.json` | scheme | Name, coach, team, side, era, lineage branch, description, optional sources |
+| `concepts/<scheme>/<concept>.json` | concept | Personnel, formation, situation, coverage, front, the structured fields beside them, summary, beats, relations, provenance |
 | `tracks/<scheme>/<concept>.json` | concept | Duration and the 22 player tracks with timed waypoints |
 | `formations/<formation>.json` | formation | A named pre-snap look: where the 11 offensive and 11 defensive players line up and what position each plays, keyed by track id |
-| `coaches/<coach>.json` | coach | Profile, mentor and disciples, associated schemes |
-| `lineages/<branch>.json` | lineage | A coaching tree as nested coach ids |
+| `coaches/<coach>.json` | coach | Profile, mentor and disciples, associated schemes, optional sources and an `asOf` date |
+| `lineages/<branch>.json` | lineage | A coaching tree as nested coach ids, optional sources |
 | `glossary/<term>.json` | term | Definition, aliases, category |
 | `schema/*.schema.json` | record kind | JSON Schema; each record points at its schema through `$schema` |
 
@@ -77,21 +93,46 @@ A fast run needs an even pace on the viewer's curve, which gives each waypoint a
 
 These checks skip a field that still starts with `TODO`, the placeholder a scaffolded play starts with.
 
+### Structured fields
+
+A play's free text stays as written, because it is what readers see. Next to it sit controlled fields, so plays can be filtered, grouped and counted. All are optional in the schema, and `data:validate` fails a play that lacks one it can read, or whose field disagrees with what it is read from (`src/schema/tags.ts`).
+
+| Field | Beside | Read from | Values |
+| --- | --- | --- | --- |
+| `down` | `situation` | the start of `situation` | 1 to 4 |
+| `distance` | `situation` | the number after `&` | yards to go; on a goal-to-go, the yards to the goal |
+| `fieldZone` | `situation` | `+45` or `opponent +38` (45 and 38 yards from the goal the offense attacks), `-45` or `own 40`, `Goal from the 6`, then the words `midfield` and `red zone`; a number wins over a word | `own-territory` (more than 60 yards from the goal), `midfield` (40 to 60), `opponent-territory` (20 to 40), `red-zone` (5 to 20), `goal-line` (5 or fewer) |
+| `coverageFamily` | `coverage` | the coverage the text names first (`Cover 1 / Cover 3 Robber` is Cover 1); `fire zone`, `drop 7/8` and `roll to Cover 3` outrank it | `cover-0`, `cover-1`, `cover-2`, `two-man`, `cover-3`, `cover-4`, `cover-6` (Cover 6 and 8), `fire-zone`, `drop-8`, `bracket` |
+| `offensePersonnel` | `personnel`, `formation` | the backs and tight ends the tracks draw | two digits: `11` is one back and one tight end, `00` is empty |
+| `defensePersonnel` | `personnel`, `frontName` | the linemen, linebackers and defensive backs the tracks draw | like `4-2-5` |
+| `defensePackage` | `personnel` | the defensive backs in `defensePersonnel` | `goal-line` (3 or fewer), `base` (4), `nickel` (5), `dime` (6), `quarter` (7 or more) |
+| `playType` | the play's `name` | chosen by a person | offense: one of `run`, `pass`, `play-action`, `rpo`, `screen`, plus `option` on a run that reads a defender. Defense: one or two of `blitz` (five rushers or more), `simulated-pressure` (shows pressure, rushes four or fewer), `pass-rush` (a four-man rush that wins with the front), `coverage`, `run-defense` |
+
+`bun run data:tag` lists the fields that are missing and `bun run data:tag --write` fills every one but `playType`, which only a person can choose. The roles on the tracks decide the personnel codes, so a hybrid drawn as a lineman counts as one. `data:validate` also checks `playType`: the tags must belong to the scheme's side, an offensive play has exactly one of the five kinds, `run` and `rpo` need a player with a `carry` trail, and a name that says RPO or play-action needs that tag. A formation that names a personnel group the tracks do not draw (`vs 11P Gun 2x2` over a drawing with four receivers and no tight end) is a warning, not an error.
+
 ## Downloads
 
 `bun run data:release [--version v0.1.0] [--out dist/release]` writes three views of the same data, plus checksums and the license:
 
 - `scheme-db.json`: every record nested as in `data/`, plus a `meta` block.
-- `csv/*.csv`: 18 flat tables, one file each (schemes, coaches, concepts, concept beats, players, waypoints, frames and so on).
+- `csv/*.csv`: 22 flat tables, one file each (schemes, coaches, concepts, concept beats, players, waypoints, frames, the sources of schemes, coaches, lineages and plays, and so on).
 - `scheme-db.sqlite`: the same tables with primary keys, ready to query.
 
-Lists of ids become join tables (`coach_schemes`, `concept_relations`, `glossary_aliases`); lists of free text, such as a coach's key concepts, are JSON arrays in one column. Booleans are 0 or 1 and a missing value is empty in CSV and NULL in SQLite. The build is deterministic, so the same data and version give the same checksums.
+Each source is a row in `scheme_sources`, `coach_sources`, `lineage_sources` or `concept_sources`, in the order the record lists them, with the same columns (`seq`, `type`, `citation`, `url`, `accessed`, `supports`); `supports` is a JSON array such as `["idea","claim"]`, empty when the source does not say. A coach's `asOf` is the `as_of` column of `coaches`. A release only ever adds tables and columns, and a new column goes last, so a query written against an earlier version keeps working. Lists of ids become join tables (`coach_schemes`, `concept_relations`, `glossary_aliases`); lists of free text, such as a coach's key concepts, are JSON arrays in one column. Booleans are 0 or 1 and a missing value is empty in CSV and NULL in SQLite. The build is deterministic, so the same data and version give the same checksums.
 
 ```sql
 -- plays per scheme, with the coach
 SELECT c.name AS coach, s.name AS scheme, COUNT(*) AS plays
 FROM concepts k JOIN schemes s ON s.id = k.scheme_id JOIN coaches c ON c.id = s.coach_id
 GROUP BY s.id ORDER BY plays DESC;
+
+-- third-down plays in the red zone by coverage family
+SELECT coverage_family, COUNT(*) AS plays FROM concepts WHERE down = 3 AND field_zone = 'red-zone' GROUP BY coverage_family ORDER BY plays DESC;
+
+-- how many plays of each type, by side
+SELECT s.side, p.play_type, COUNT(*) AS plays
+FROM concept_play_types p JOIN concepts k ON k.id = p.concept_id JOIN schemes s ON s.id = k.scheme_id
+GROUP BY s.side, p.play_type ORDER BY s.side, plays DESC;
 
 -- where receiver H is during the first second of a play
 SELECT frame, t, x, y FROM frames WHERE concept_id = 'kelly-mesh-spacing-concept' AND player_id = 'H' AND frame <= 10;

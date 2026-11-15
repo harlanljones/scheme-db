@@ -2,6 +2,7 @@
 import Base from '../../../../layouts/Base.astro';
 import PlayViewer from '../../../../islands/PlayViewer';
 import PlayCompare from '../../../../islands/PlayCompare';
+import SourceList from '../../../../components/SourceList.astro';
 import {
   CONFIDENCE,
   DISGUISE_HOLD_PERCENT,
@@ -159,16 +160,7 @@ const showSources = confidence !== 'illustrative' || sources.length > 0;
         <p class="aside">Confidence: {confidence}</p>
       </div>
       <p class="body">{CONFIDENCE[confidence].meaning}{play.provenance.notes ? ` ${play.provenance.notes}` : ''}</p>
-      {sources.length > 0 && (
-        <div class="notes-grid">
-          {sources.map((source) => (
-            <div class="note">
-              <p class="lab">{source.type.replace('-', ' ')}{source.accessed ? ` · accessed ${source.accessed}` : ''}</p>
-              <p>{source.url ? <a href={source.url} rel="noopener" style="color:var(--fg);text-decoration:underline;text-underline-offset:3px">{source.citation}</a> : source.citation}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      {sources.length > 0 && <SourceList sources={sources} />}
     </section>
   )}
 

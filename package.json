@@ -38,6 +38,7 @@
     "data:format": "bun run scripts/data.ts format",
     "data:schema": "bun run scripts/data.ts schema",
     "data:frames": "bun run scripts/data.ts frames",
+    "data:tag": "bun run scripts/data.ts tag",
     "data:release": "bun run scripts/release.ts",
     "data:package": "bun run scripts/package-release.ts",
     "site:assets": "bun run scripts/site-assets.ts",

@@ -1,8 +1,9 @@
 /** The flat tables in the CSV download, with a line on each. A test keeps this list in step with `src/release/tables.ts`. */
 export const CSV_TABLES: Array<[name: string, note: string]> = [
   ['schemes', 'One row per scheme'],
-  ['concepts', 'One row per play: personnel, formation, situation, coverage and summary'],
+  ['concepts', 'One row per play: personnel, formation, situation, coverage and summary, with the down, distance, field zone, coverage family and personnel codes read from them'],
   ['concept_beats', 'The coaching points of every play'],
+  ['concept_play_types', 'What each play is: run, pass, play-action, RPO, screen, option, or on defense blitz, simulated pressure, pass rush, coverage, run defense'],
   ['concept_relations', 'Which plays set up or play off which'],
   ['concept_sources', 'The sources a play cites (illustrative plays cite none)'],
   ['players', 'One row per player per play, with role and assignment'],
@@ -15,6 +16,9 @@ export const CSV_TABLES: Array<[name: string, note: string]> = [
   ['coach_disciples', 'Who learned from whom'],
   ['lineages', 'The coaching trees'],
   ['lineage_nodes', 'The coaches in each tree'],
+  ['scheme_sources', 'The sources a scheme cites, and whether each backs the idea or a claim'],
+  ['coach_sources', 'The sources a coach record cites'],
+  ['lineage_sources', 'The sources a coaching tree cites'],
   ['glossary', 'Football terms'],
   ['glossary_aliases', 'Other names for a term'],
   ['meta', 'Dataset name, version and licence'],

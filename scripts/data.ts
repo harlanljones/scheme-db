@@ -6,6 +6,9 @@
  *   bun run data:format --check  fail if any record is not canonically formatted
  *   bun run data:schema          regenerate data/schema/*.schema.json from the Zod schemas
  *   bun run data:frames [file]   write the 10 Hz frames export as CSV (default dist/data/frames.csv)
+ *   bun run data:tag             list the structured play fields (down, distance, coverageFamily, personnel...) that are
+ *                                missing or disagree with the text and the tracks
+ *   bun run data:tag --write     fill the missing ones from the text and the tracks (--refresh also overwrites)
  */
 import * as fs from 'node:fs';
 import * as path from 'node:path';
@@ -15,6 +18,7 @@ import { formatFile } from '../src/schema/format';
 import { DATA_DIR, loadDataset, RECORD_KIND_NAMES } from '../src/schema/load';
 import { Coach, Concept, Formation, Lineage, Scheme, Term, Tracks } from '../src/schema/schema';
 import { Spec } from '../src/spec/schema';
+import { deriveTags, orderConcept, stale } from '../src/schema/tags';
 import { validateDataset } from '../src/schema/validate-dataset';
 
 const SCHEMAS = { scheme: Scheme, concept: Concept, tracks: Tracks, formation: Formation, coach: Coach, lineage: Lineage, term: Term, spec: Spec };
@@ -89,7 +93,34 @@ if (command === 'validate') {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, framesToCsv(rows));
   console.log(`Wrote ${rows.length} frames for ${dataset.tracks.length} concepts to ${path.relative(process.cwd(), out)}.`);
+} else if (command === 'tag') {
+  const write = flags.includes('--write');
+  const refresh = flags.includes('--refresh');
+  const { dataset, files, problems } = loadDataset();
+  if (problems.length > 0) {
+    console.error(`${problems.length} data problems; run \`bun run data:validate\` first.`);
+    process.exit(1);
+  }
+  const tracksById = new Map(dataset.tracks.map((t) => [t.conceptId, t]));
+  let changed = 0;
+  const noPlayType: string[] = [];
+  for (const [i, concept] of dataset.concepts.entries()) {
+    const derived = deriveTags(concept, tracksById.get(concept.id));
+    const fields = stale(concept, derived).filter((field) => refresh || concept[field] === undefined);
+    if (!concept.playType) noPlayType.push(concept.id);
+    if (fields.length === 0) continue;
+    changed++;
+    console.log(`${concept.id}: ${fields.map((field) => `${field}=${JSON.stringify(derived[field])}`).join(', ')}`);
+    if (write) {
+      const file = path.join(DATA_DIR, files.concepts[i]!);
+      const raw = JSON.parse(fs.readFileSync(file, 'utf-8')) as Record<string, unknown>;
+      for (const field of fields) raw[field] = derived[field];
+      fs.writeFileSync(file, formatFile(orderConcept(raw)));
+    }
+  }
+  if (noPlayType.length > 0) console.log(`${noPlayType.length} plays have no playType (a person chooses it): ${noPlayType.join(', ')}`);
+  console.log(write ? `Wrote ${changed} concepts.` : `${changed} concepts would change; run with --write to fill them.`);
 } else {
-  console.error('Usage: bun run scripts/data.ts <validate | format [--check] | schema | frames [file]>');
+  console.error('Usage: bun run scripts/data.ts <validate | format [--check] | schema | frames [file] | tag [--write] [--refresh]>');
   process.exit(1);
 }

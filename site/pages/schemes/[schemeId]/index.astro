@@ -13,6 +13,7 @@ import {
 } from '../../../lib/data';
 import { count, capitalize, list, pad2, plural, sideAdjective, tidy } from '../../../lib/format';
 import NetworkGraph from '../../../components/NetworkGraph.astro';
+import SourceList from '../../../components/SourceList.astro';
 import { describeNetwork, egoNetwork, layoutNetwork, network } from '../../../lib/network';
 
 export function getStaticPaths() {
@@ -156,6 +157,16 @@ const ref = rows.find((row) => row.referenceFor.length > 0 || row.comparison)?.p
       </div>
     </aside>
   </section>
+  {scheme.sources && (
+    <section id="sources" class="wrap section" style="scroll-margin-top:16px">
+      <div class="divider">
+        <h2>Where this scheme comes from</h2>
+        <p class="aside">{count(scheme.sources.length)} {plural(scheme.sources.length, 'source')}</p>
+      </div>
+      <p class="body">These back the description of the scheme, not the drawings. Each play sheet lists what it rests on.</p>
+      <SourceList sources={scheme.sources} />
+    </section>
+  )}
   {egoLayout && ego && coach && (
     <section class="wrap section" id="network">
       <div class="divider">
