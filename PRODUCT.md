@@ -31,7 +31,7 @@ The Playbook: a coach's install binder. Warm paper and ink, ruled tables, number
 ## Evidence on Hand
 - The launch library: 45 schemes (25 offense, 20 defense) with 180 plays, 53 coaches, 17 lineage trees and 30 glossary terms, in `data/`. Every play is `illustrative`. Counts on the site are computed from the data, so they change as records are added.
 - A schema and cross record validator that fails on unresolved ids, broken geometry, missing sources and unfinished `TODO:` text, plus a scaffold (`bun run data:new`), issue forms and a contributing guide, so an outside person can add a play with a pull request.
-- A deterministic release build (JSON, 18 CSV tables, SQLite) and a similarity score that is documented on the About page, with its limits stated.
+- A deterministic release build (JSON, 21 CSV tables, SQLite) and a similarity score that is documented on the About page, with its limits stated.
 - A decision record (`docs/redesign/DECISIONS.md`) with Harlan's answers to the design, audit and contributor path questions, and a test suite that asserts floors and invariants rather than counts.
 
 ## Product Principles

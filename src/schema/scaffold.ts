@@ -1,5 +1,5 @@
 import type { ZodType } from 'zod';
-import { Coach, Concept, Era, LineageBranch, Scheme, Side, Term, TermCategory, Tracks, type Dataset, type Formation } from './schema';
+import { Coach, Concept, Era, LineageBranch, Scheme, Side, Source, SourceType, Term, TermCategory, Tracks, type Dataset, type Formation } from './schema';
 
 type PlayerTrackRecord = Tracks['offense'][number];
 
@@ -53,6 +53,40 @@ function check<T>(schema: ZodType<T>, record: unknown, label: string): T {
 }
 
 const TODO = (what: string): string => `TODO: ${what}`;
+
+/** One source for a new scheme or coach, from `--source` and its companions. */
+export interface SourceOptions {
+  citation?: string;
+  url?: string;
+  /** One of `SourceType`; an article when it is not given. */
+  type?: string;
+  /** Any of `idea` and `claim` (a scheme or a coach has no drawing). Left out of the record when empty. */
+  supports?: string[];
+  /** The day the link was read, for the `accessed` field. */
+  today?: string;
+}
+
+/** The `sources` entry a scaffold writes for a scheme or a coach, or nothing when no `--source` was given. */
+function recordSources(options: SourceOptions): { sources: Source[] } | Record<string, never> {
+  if (!options.citation?.trim()) {
+    if (options.url || options.type || options.supports?.length) throw new ScaffoldError('--source-url, --source-type and --supports go with --source "<citation>".');
+    return {};
+  }
+  const supports = (options.supports ?? []).map((kind) => choice('supports', kind, ['idea', 'claim'] as const));
+  const source = check(
+    Source,
+    {
+      type: options.type ? choice('source-type', options.type, SourceType.options) : 'article',
+      citation: options.citation.trim(),
+      ...(options.url ? { url: options.url.trim(), ...(options.today ? { accessed: options.today } : {}) } : {}),
+      ...(supports.length > 0 ? { supports } : {}),
+    },
+    'source',
+  );
+  return { sources: [source] };
+}
+
+const SOURCES_NEXT = 'Optional: cite where it comes from. Add a "sources" list (type, citation, url, accessed, supports), or run again with --source "<citation>"; see CONTRIBUTING.md.';
 
 export interface ConceptOptions {
   scheme?: string;
@@ -159,7 +193,7 @@ export function newConcept(ds: Dataset, options: ConceptOptions): Scaffold {
         sources:
           confidence === 'illustrative'
             ? []
-            : [{ type: 'film', citation: TODO('the film, book, clinic or article this play is rebuilt from') }],
+            : [{ type: 'film', citation: TODO('the film, book, clinic or article this play is rebuilt from'), supports: ['idea', 'drawing'] }],
       },
     },
     'play',
@@ -187,6 +221,7 @@ export interface SchemeOptions {
   side?: string;
   era?: string;
   lineage?: string;
+  source?: SourceOptions;
 }
 
 export function newScheme(ds: Dataset, options: SchemeOptions): Scaffold {
@@ -208,6 +243,7 @@ export function newScheme(ds: Dataset, options: SchemeOptions): Scaffold {
       era: choice('era', options.era, Era.options),
       lineage: choice('lineage', options.lineage ?? coach.lineage, LineageBranch.options),
       description: TODO('what the scheme is, in two or three sentences'),
+      ...recordSources(options.source ?? {}),
     },
     'scheme',
   );
@@ -221,6 +257,7 @@ export function newScheme(ds: Dataset, options: SchemeOptions): Scaffold {
     next: [
       `Replace the TODO in data/schemes/${id}.json.`,
       `A scheme needs at least one play: run \`bun run data:new concept --scheme ${id} --id ${id}-<play> --name "<Play name>" --formation <formation id>\`.`,
+      ...(options.source?.citation ? [] : [SOURCES_NEXT]),
     ],
   };
 }
@@ -233,6 +270,7 @@ export interface CoachOptions {
   side?: string;
   lineage?: string;
   mentor?: string;
+  source?: SourceOptions;
 }
 
 export function newCoach(ds: Dataset, options: CoachOptions): Scaffold {
@@ -252,6 +290,7 @@ export function newCoach(ds: Dataset, options: CoachOptions): Scaffold {
       philosophy: TODO('how the coach builds an offense or defense, in two or three sentences'),
       keyConcepts: [TODO('a concept the coach is known for')],
       schemeIds: [],
+      ...recordSources(options.source ?? {}),
     },
     'coach',
   );
@@ -261,6 +300,7 @@ export function newCoach(ds: Dataset, options: CoachOptions): Scaffold {
       `Replace every TODO in data/coaches/${id}.json.`,
       `To put the coach on the lineage chart, add a node with "coachId": "${id}" to data/lineages/${coach.lineage}.json.`,
       `If the coach has a scheme to add, run \`bun run data:new scheme --coach ${id} ...\`.`,
+      ...(options.source?.citation ? [] : [SOURCES_NEXT]),
     ],
   };
 }

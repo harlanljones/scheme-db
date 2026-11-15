@@ -42,12 +42,31 @@ export const Confidence = z.enum(['illustrative', 'reconstructed', 'verified']);
 
 export const SourceType = z.enum(['film', 'book', 'clinic', 'article', 'video', 'self-authored']);
 
+/**
+ * What a source backs. `idea` is where the concept or scheme comes from. `drawing` is the paths and timings of a play,
+ * rebuilt from it; only a play has a drawing. `claim` is a fact stated in the text, such as a date, a number or a mentor
+ * link. A source never raises a play's confidence by itself: see `Confidence`.
+ */
+export const Supports = z.enum(['idea', 'drawing', 'claim']);
+
 export const Source = z.strictObject({
   type: SourceType,
   citation: text,
-  url: z.url().optional(),
+  /** Pages are linked from the site, so only web links are allowed. */
+  url: z.url({ protocol: /^https?$/ }).optional(),
   accessed: z.iso.date().optional(),
+  /** Which of the idea, the drawing and the claim the source backs. Absent when the source does not say. */
+  supports: z
+    .array(Supports)
+    .min(1)
+    .superRefine((list, ctx) => {
+      if (new Set(list).size !== list.length) ctx.addIssue({ code: 'custom', message: 'list each of idea, drawing and claim at most once' });
+    })
+    .optional(),
 });
+
+/** Optional on a scheme, a coach and a lineage. Absent means no sources yet; an empty list says nothing more, so it is not allowed. */
+const RecordSources = z.array(Source).min(1).optional();
 
 export const Provenance = z.strictObject({
   confidence: Confidence,
@@ -180,6 +199,7 @@ export const Scheme = z.strictObject({
   era: Era,
   lineage: LineageBranch,
   description: text,
+  sources: RecordSources,
 });
 
 export const Coach = z.strictObject({
@@ -197,6 +217,9 @@ export const Coach = z.strictObject({
   schemeIds: z.array(slug),
   isHeadCoach2026: z.boolean().optional(),
   notableAchievements: z.array(text).optional(),
+  /** The day `role2026`, `team` and `isHeadCoach2026` were last checked. Absent means they have no date. */
+  asOf: z.iso.date().optional(),
+  sources: RecordSources,
 });
 
 export const LineageNode = z.strictObject({
@@ -214,6 +237,7 @@ export const Lineage = z.strictObject({
   side: Side,
   description: text,
   rootNodes: z.array(LineageNode),
+  sources: RecordSources,
 });
 
 export const TermCategory = z.enum([
@@ -236,6 +260,8 @@ export const Term = z.strictObject({
   tacticalNote: text,
 });
 
+export type Source = z.infer<typeof Source>;
+export type Supports = z.infer<typeof Supports>;
 export type Concept = z.infer<typeof Concept>;
 export type Tracks = z.infer<typeof Tracks>;
 export type Formation = z.infer<typeof Formation>;

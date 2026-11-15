@@ -4,7 +4,7 @@ import { MOTION_ENFORCED } from '../engine/limits';
 import { motionFindings, type MotionFinding } from '../engine/motion';
 import { validatePlay } from '../engine/validate';
 import type { Play } from '../engine/types';
-import type { Concept, Dataset, Tracks } from './schema';
+import type { Concept, Dataset, Source, Tracks } from './schema';
 import type { RecordFiles } from './load';
 
 /**
@@ -53,6 +53,28 @@ function* placeholders(value: unknown, path = ''): Generator<string> {
   } else if (value && typeof value === 'object') {
     for (const [key, item] of Object.entries(value)) yield* placeholders(item, path ? `${path}.${key}` : key);
   }
+}
+
+/** A source is the same as an earlier one when it has the same link, or when it has none and the same words. */
+const sourceKey = (source: Source): string => (source.url ?? source.citation).trim().toLowerCase();
+
+/**
+ * Checks a list of sources the schema cannot: no source twice, and no `drawing` support on a record that has no drawing.
+ * A scheme, a coach and a lineage have none, so a source there backs the idea or a claim in the text.
+ */
+function sourceProblems(label: string, id: string, sources: Source[] | undefined, hasDrawing: boolean): string[] {
+  const out: string[] = [];
+  const where = `${label} "${id}"`;
+  const seen = new Set<string>();
+  for (const source of sources ?? []) {
+    const key = sourceKey(source);
+    if (seen.has(key)) out.push(`${where} lists the source "${source.citation}" more than once`);
+    seen.add(key);
+    if (!hasDrawing && source.supports?.includes('drawing')) {
+      out.push(`${where}: the source "${source.citation}" says it supports the drawing, but only a play has a drawing; use "idea" or "claim"`);
+    }
+  }
+  return out;
 }
 
 export interface ConceptMotionFinding extends MotionFinding {
@@ -117,6 +139,7 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
   for (const id of duplicates(ds.tracks.map((t) => t.conceptId))) problems.push(`More than one tracks record for concept "${id}"`);
 
   for (const scheme of ds.schemes) {
+    problems.push(...sourceProblems('Scheme', scheme.id, scheme.sources, false));
     if (!coachIds.has(scheme.coachId)) problems.push(`Scheme "${scheme.id}" references unknown coach "${scheme.coachId}"`);
     if (!ds.concepts.some((c) => c.schemeId === scheme.id)) problems.push(`Scheme "${scheme.id}" has no concepts`);
   }
@@ -143,9 +166,14 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
       }
     }
 
-    if (concept.provenance.confidence !== 'illustrative' && concept.provenance.sources.length === 0) {
-      problems.push(`Concept "${concept.id}" is "${concept.provenance.confidence}" but lists no sources`);
+    const { confidence, sources } = concept.provenance;
+    if (confidence !== 'illustrative' && sources.length === 0) {
+      problems.push(`Concept "${concept.id}" is "${confidence}" but lists no sources`);
+    } else if (confidence !== 'illustrative' && !sources.some((source) => source.supports?.includes('drawing'))) {
+      // A source on its own never raises confidence: the drawing has to be rebuilt from one, and the record says which.
+      problems.push(`Concept "${concept.id}" is "${confidence}" but no source says it supports the drawing; add "supports": ["drawing"] to the source its paths and timings were rebuilt from`);
     }
+    problems.push(...sourceProblems('Concept', concept.id, sources, true));
 
     // The plays list filters by down, which it reads from the start of the situation.
     if (!PLACEHOLDER.test(concept.situation) && !/^(1st|2nd|3rd|4th)\b/i.test(concept.situation.trim())) {
@@ -211,6 +239,7 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
     }
   };
   for (const coach of ds.coaches) {
+    problems.push(...sourceProblems('Coach', coach.id, coach.sources, false));
     if (coach.mentorId) unrecorded(coach.id, 'mentor', coach.mentorId);
     for (const disciple of coach.disciples ?? []) unrecorded(coach.id, 'disciple', disciple);
     for (const schemeId of coach.schemeIds) {
@@ -224,7 +253,10 @@ export function validateDataset(ds: Dataset, files?: RecordFiles): ValidationRep
       checkNodes(lineageId, node.children as typeof nodes);
     }
   };
-  for (const lineage of ds.lineages) checkNodes(lineage.id, lineage.rootNodes);
+  for (const lineage of ds.lineages) {
+    checkNodes(lineage.id, lineage.rootNodes);
+    problems.push(...sourceProblems('Lineage', lineage.id, lineage.sources, false));
+  }
 
   if (files) {
     const expected = (kind: keyof RecordFiles, i: number, rel: string): void => {

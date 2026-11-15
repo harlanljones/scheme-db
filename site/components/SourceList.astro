@@ -1,0 +1,45 @@
+---
+/**
+ * The sources of one record, as cards. Used by the play sheet, the scheme page, the coach page and the lineage trees.
+ * Words about what each source backs come from `lib/sources.ts`, so a test can read them.
+ */
+import type { Source } from '../../src/schema/schema';
+import { backsLegend, backsPhrase, dateLabel, sourceKind } from '../lib/sources';
+
+interface Props {
+  sources: Source[];
+}
+const { sources } = Astro.props;
+const legend = backsLegend(sources);
+---
+
+<div class="notes-grid">
+  {
+    sources.map((source) => (
+      <div class="note">
+        <p class="lab">{sourceKind(source.type)}{source.accessed ? ` · accessed ${dateLabel(source.accessed)}` : ''}</p>
+        <p>{source.url ? <a href={source.url} rel="noopener" class="cite">{source.citation}</a> : source.citation}</p>
+        {backsPhrase(source.supports) && <p class="backs">{backsPhrase(source.supports)}</p>}
+      </div>
+    ))
+  }
+</div>
+{legend && <p class="legend">{legend}</p>}
+
+<style>
+  .cite {
+    color: var(--fg);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .backs {
+    color: var(--fg2);
+  }
+  .legend {
+    max-width: 680px;
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--fg2);
+  }
+</style>
