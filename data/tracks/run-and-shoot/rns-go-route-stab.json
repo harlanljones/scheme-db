@@ -191,9 +191,9 @@
       "assignment": "Weakside rush lane, close the blindside arc",
       "waypoints": [
         { "t": 0, "x": 20.4, "y": 0.9, "note": "Wide alignment" },
-        { "t": 0.8, "x": 19.9, "y": 2.3, "note": "Rushing up the arc" },
-        { "t": 2, "x": 19.6, "y": 3.7, "note": "Turned by LT" },
-        { "t": 4, "x": 19.3, "y": 4.3, "note": "Rush contained" }
+        { "t": 0.8, "x": 19.9, "y": -0.03, "note": "Rushing up the arc" },
+        { "t": 2, "x": 19.6, "y": -1.9, "note": "Turned by LT" },
+        { "t": 4, "x": 19.3, "y": -1.9, "note": "Rush contained" }
       ]
     },
     {
@@ -205,9 +205,9 @@
       "assignment": "Shade A-gap, collapse the pocket interior",
       "waypoints": [
         { "t": 0, "x": 24.6, "y": 0.9, "note": "Shade alignment" },
-        { "t": 0.8, "x": 24.2, "y": 2.5, "note": "Penetrating A-gap" },
-        { "t": 2, "x": 24, "y": 4, "note": "Walled by Center" },
-        { "t": 4, "x": 23.8, "y": 4.6, "note": "Rush stalled" }
+        { "t": 0.8, "x": 24.2, "y": -0.03, "note": "Penetrating A-gap" },
+        { "t": 2, "x": 24, "y": -1.9, "note": "Walled by Center" },
+        { "t": 4, "x": 23.8, "y": -1.9, "note": "Rush stalled" }
       ]
     },
     {
@@ -219,9 +219,9 @@
       "assignment": "3-tech rush, work the B-gap to QB face",
       "waypoints": [
         { "t": 0, "x": 28.7, "y": 0.9, "note": "3-tech alignment" },
-        { "t": 0.8, "x": 29, "y": 2.6, "note": "Charging B-gap" },
-        { "t": 2, "x": 29.4, "y": 4.2, "note": "Spun wide by Guard" },
-        { "t": 4, "x": 29.6, "y": 4.8, "note": "Rush widened out" }
+        { "t": 0.8, "x": 29, "y": -0.03, "note": "Charging B-gap" },
+        { "t": 2, "x": 29.4, "y": -1.9, "note": "Spun wide by Guard" },
+        { "t": 4, "x": 29.6, "y": -1.9, "note": "Rush widened out" }
       ]
     },
     {
@@ -233,9 +233,9 @@
       "assignment": "Contain rush vs the right tackle",
       "waypoints": [
         { "t": 0, "x": 33.3, "y": 0.9, "note": "Strong alignment" },
-        { "t": 0.8, "x": 33.7, "y": 2.4, "note": "Rushing contain" },
-        { "t": 2, "x": 34, "y": 4, "note": "Handled by RT" },
-        { "t": 4, "x": 34.3, "y": 4.6, "note": "Contained" }
+        { "t": 0.8, "x": 33.7, "y": -0.03, "note": "Rushing contain" },
+        { "t": 2, "x": 34, "y": -1.9, "note": "Handled by RT" },
+        { "t": 4, "x": 34.3, "y": -1.9, "note": "Contained" }
       ]
     },
     {

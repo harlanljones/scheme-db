@@ -177,10 +177,10 @@
       "assignment": "Upfield rush past LT, late to recognize the fast screen",
       "waypoints": [
         { "t": 0, "x": 21, "y": 0.9, "note": "Edge rush launch" },
-        { "t": 0.7, "x": 20.4, "y": 1.7000000000000002, "note": "Charging upfield" },
-        { "t": 1.6, "x": 19.8, "y": 3.5, "note": "Ball already out" },
-        { "t": 2.6, "x": 19.6, "y": 4.3, "note": "Turns to chase late" },
-        { "t": 3.5, "x": 20, "y": 3.5, "note": "Trailing the screen" }
+        { "t": 0.7, "x": 20.4, "y": 0.2, "note": "Charging upfield" },
+        { "t": 1.6, "x": 19.8, "y": -1.9, "note": "Ball already out" },
+        { "t": 2.6, "x": 19.6, "y": -1.9, "note": "Turns to chase late" },
+        { "t": 3.5, "x": 20, "y": -1.9, "note": "Trailing the screen" }
       ]
     },
     {
@@ -192,10 +192,10 @@
       "assignment": "Charge the A-gap, get walled by the released center in the tunnel",
       "waypoints": [
         { "t": 0, "x": 25.5, "y": 0.9, "note": "Interior charge" },
-        { "t": 0.7, "x": 25.2, "y": 1.9, "note": "Pushing the pocket" },
-        { "t": 1.5, "x": 25.7, "y": 2.9, "note": "Met by C in tunnel" },
-        { "t": 2.6, "x": 26.1, "y": 3.5, "note": "Walled inside-out" },
-        { "t": 3.5, "x": 26.3, "y": 3.9, "note": "Blocked out of pursuit" }
+        { "t": 0.7, "x": 25.2, "y": 0.2, "note": "Pushing the pocket" },
+        { "t": 1.5, "x": 25.7, "y": -1.67, "note": "Met by C in tunnel" },
+        { "t": 2.6, "x": 26.1, "y": -1.9, "note": "Walled inside-out" },
+        { "t": 3.5, "x": 26.3, "y": -1.9, "note": "Blocked out of pursuit" }
       ]
     },
     {
@@ -207,10 +207,10 @@
       "assignment": "Penetrate B-gap, then chase laterally once the screen shows",
       "waypoints": [
         { "t": 0, "x": 29, "y": 0.9, "note": "B-gap penetration" },
-        { "t": 0.7, "x": 29.3, "y": 1.7000000000000002, "note": "Fighting RG punch" },
-        { "t": 1.5, "x": 30.2, "y": 2.3, "note": "RG releases, reads screen" },
-        { "t": 2.6, "x": 32.4, "y": 2.7, "note": "Lateral chase begins" },
-        { "t": 3.5, "x": 35, "y": 3.1, "note": "Too far behind the convoy" }
+        { "t": 0.7, "x": 29.3, "y": 0.2, "note": "Fighting RG punch" },
+        { "t": 1.5, "x": 30.2, "y": -1.67, "note": "RG releases, reads screen" },
+        { "t": 2.6, "x": 32.4, "y": -1.9, "note": "Lateral chase begins" },
+        { "t": 3.5, "x": 35, "y": -1.9, "note": "Too far behind the convoy" }
       ]
     },
     {
@@ -222,10 +222,10 @@
       "assignment": "Contain rush the right edge, then trigger on the perimeter catch",
       "waypoints": [
         { "t": 0, "x": 33, "y": 0.9, "note": "Contain rush" },
-        { "t": 0.7, "x": 32.8, "y": 1.7000000000000002, "note": "RT sells him the set" },
-        { "t": 1.5, "x": 33.6, "y": 2.7, "note": "RT releases past him" },
-        { "t": 2.6, "x": 35.2, "y": 3.3, "note": "Trigger downhill late" },
-        { "t": 3.5, "x": 37.2, "y": 4.1000000000000005, "note": "Blocked by RT escort" }
+        { "t": 0.7, "x": 32.8, "y": 0.2, "note": "RT sells him the set" },
+        { "t": 1.5, "x": 33.6, "y": -1.67, "note": "RT releases past him" },
+        { "t": 2.6, "x": 35.2, "y": -1.9, "note": "Trigger downhill late" },
+        { "t": 3.5, "x": 37.2, "y": -1.9, "note": "Blocked by RT escort" }
       ]
     },
     {

@@ -189,10 +189,10 @@
       "assignment": "Upfield charge, frozen by LT’s punch, released past the play",
       "waypoints": [
         { "t": 0, "x": 21, "y": 0.9, "note": "Edge charge" },
-        { "t": 0.5, "x": 21.4, "y": 1.3, "note": "Met by LT punch" },
-        { "t": 1.4, "x": 22, "y": 2.5, "note": "LT releases, he chases arc" },
-        { "t": 2.5, "x": 22.4, "y": 3.6999999999999997, "note": "Ball is already shoveled" },
-        { "t": 3.5, "x": 22.6, "y": 4.3, "note": "Trailing across formation" }
+        { "t": 0.5, "x": 21.4, "y": 0.67, "note": "Met by LT punch" },
+        { "t": 1.4, "x": 22, "y": -1.43, "note": "LT releases, he chases arc" },
+        { "t": 2.5, "x": 22.4, "y": -1.9, "note": "Ball is already shoveled" },
+        { "t": 3.5, "x": 22.6, "y": -1.9, "note": "Trailing across formation" }
       ]
     },
     {
@@ -204,10 +204,10 @@
       "assignment": "Charge A-gap, get snapped down by the center at the tunnel mouth",
       "waypoints": [
         { "t": 0, "x": 25.5, "y": 0.9, "note": "A-gap charge" },
-        { "t": 0.5, "x": 25.1, "y": 1.4, "note": "Center snaps down on him" },
-        { "t": 1.4, "x": 24.9, "y": 2.2, "note": "Walled off the window" },
-        { "t": 2.6, "x": 24.7, "y": 2.8, "note": "Sealed inside the pile" },
-        { "t": 3.5, "x": 24.6, "y": 3.1999999999999997, "note": "Blocked out entirely" }
+        { "t": 0.5, "x": 25.1, "y": 0.67, "note": "Center snaps down on him" },
+        { "t": 1.4, "x": 24.9, "y": -1.43, "note": "Walled off the window" },
+        { "t": 2.6, "x": 24.7, "y": -1.9, "note": "Sealed inside the pile" },
+        { "t": 3.5, "x": 24.6, "y": -1.9, "note": "Blocked out entirely" }
       ]
     },
     {
@@ -219,10 +219,10 @@
       "assignment": "The conflict: choose the rush lane or close the shovel window — RG forces the wrong answer",
       "waypoints": [
         { "t": 0, "x": 29, "y": 0.9, "note": "B-gap charge" },
-        { "t": 0.5, "x": 29.4, "y": 1.3, "note": "RG hinges him outside" },
-        { "t": 1.2, "x": 29.8, "y": 1.9, "note": "Peeks inside at shovel window" },
-        { "t": 1.9, "x": 30, "y": 2.5, "note": "Caught between both jobs" },
-        { "t": 3.5, "x": 30.2, "y": 3.5, "note": "Half-lane rush, no window closure" }
+        { "t": 0.5, "x": 29.4, "y": 0.67, "note": "RG hinges him outside" },
+        { "t": 1.2, "x": 29.8, "y": -0.97, "note": "Peeks inside at shovel window" },
+        { "t": 1.9, "x": 30, "y": -1.9, "note": "Caught between both jobs" },
+        { "t": 3.5, "x": 30.2, "y": -1.9, "note": "Half-lane rush, no window closure" }
       ]
     },
     {
@@ -234,10 +234,10 @@
       "assignment": "Contain rush vs RT, held through the entire shovel timing",
       "waypoints": [
         { "t": 0, "x": 33, "y": 0.9, "note": "Contain rush" },
-        { "t": 0.6, "x": 32.8, "y": 1.6, "note": "TE chip slows launch" },
-        { "t": 1.6, "x": 33.4, "y": 2.9, "note": "Fighting RT anchor" },
-        { "t": 2.6, "x": 33.8, "y": 4.1000000000000005, "note": "Shovel already delivered" },
-        { "t": 3.5, "x": 34, "y": 4.9, "note": "Late to the chase" }
+        { "t": 0.6, "x": 32.8, "y": 0.43, "note": "TE chip slows launch" },
+        { "t": 1.6, "x": 33.4, "y": -1.9, "note": "Fighting RT anchor" },
+        { "t": 2.6, "x": 33.8, "y": -1.9, "note": "Shovel already delivered" },
+        { "t": 3.5, "x": 34, "y": -1.9, "note": "Late to the chase" }
       ]
     },
     {

@@ -178,9 +178,9 @@
       "assignment": "Speed rush off the edge, ride the arc past LT",
       "waypoints": [
         { "t": 0, "x": 21, "y": 0.9, "note": "Edge rush launch" },
-        { "t": 0.8, "x": 20.5, "y": 1.5, "note": "Arc upfield vs LT" },
-        { "t": 1.6, "x": 20, "y": 3.5, "note": "Chasing the rush arc" },
-        { "t": 2.5, "x": 19.8, "y": 7, "note": "Past the pocket, too late" }
+        { "t": 0.8, "x": 20.5, "y": -0.03, "note": "Arc upfield vs LT" },
+        { "t": 1.6, "x": 20, "y": -1.9, "note": "Chasing the rush arc" },
+        { "t": 2.5, "x": 19.8, "y": -1.9, "note": "Past the pocket, too late" }
       ]
     },
     {
@@ -192,9 +192,9 @@
       "assignment": "Bull-rush the center, collapse the interior pocket",
       "waypoints": [
         { "t": 0, "x": 25.5, "y": 0.9, "note": "Interior charge" },
-        { "t": 0.8, "x": 25.2, "y": 2, "note": "Push C backward" },
-        { "t": 1.6, "x": 24.8, "y": 4, "note": "Grinding into pocket" },
-        { "t": 2.5, "x": 24.6, "y": 6, "note": "Late pressure arriving" }
+        { "t": 0.8, "x": 25.2, "y": -0.03, "note": "Push C backward" },
+        { "t": 1.6, "x": 24.8, "y": -1.9, "note": "Grinding into pocket" },
+        { "t": 2.5, "x": 24.6, "y": -1.9, "note": "Late pressure arriving" }
       ]
     },
     {
@@ -206,9 +206,9 @@
       "assignment": "Penetrate the B-gap vs RG, disturb the throwing lane",
       "waypoints": [
         { "t": 0, "x": 29, "y": 0.9, "note": "Get-off up the B-gap" },
-        { "t": 0.8, "x": 28.8, "y": 2, "note": "Fight RG anchor" },
-        { "t": 1.6, "x": 28.6, "y": 4, "note": "Spinning off the block" },
-        { "t": 2.5, "x": 28.4, "y": 6, "note": "Contain scramble lane" }
+        { "t": 0.8, "x": 28.8, "y": -0.03, "note": "Fight RG anchor" },
+        { "t": 1.6, "x": 28.6, "y": -1.9, "note": "Spinning off the block" },
+        { "t": 2.5, "x": 28.4, "y": -1.9, "note": "Contain scramble lane" }
       ]
     },
     {
@@ -220,9 +220,9 @@
       "assignment": "Power rush the right edge, fight through the TE chip",
       "waypoints": [
         { "t": 0, "x": 33, "y": 0.9, "note": "Edge rush launch" },
-        { "t": 0.4, "x": 33.3, "y": 1.2, "note": "Absorb TE chip" },
-        { "t": 1.2, "x": 34.5, "y": 4, "note": "Round the edge vs RT" },
-        { "t": 2.5, "x": 35, "y": 7, "note": "Rushed past the throw" }
+        { "t": 0.4, "x": 33.3, "y": 0.9, "note": "Absorb TE chip" },
+        { "t": 1.2, "x": 34.5, "y": -0.97, "note": "Round the edge vs RT" },
+        { "t": 2.5, "x": 35, "y": -1.9, "note": "Rushed past the throw" }
       ]
     },
     {

@@ -205,9 +205,9 @@
       "assignment": "Push upfield on screen rush",
       "waypoints": [
         { "t": 0, "x": 26, "y": 0.9, "note": "Rush" },
-        { "t": 0.8, "x": 26, "y": 0.8, "note": "Push upfield" },
-        { "t": 2, "x": 27, "y": 2, "note": "Over-pursuit upfield" },
-        { "t": 4.5, "x": 27.5, "y": 3.5, "note": "Too far upfield, screen is set" }
+        { "t": 0.8, "x": 26, "y": -0.03, "note": "Push upfield" },
+        { "t": 2, "x": 27, "y": -1.9, "note": "Over-pursuit upfield" },
+        { "t": 4.5, "x": 27.5, "y": -1.9, "note": "Too far upfield, screen is set" }
       ]
     },
     {
@@ -219,8 +219,8 @@
       "assignment": "Rush upfield, over-commits on pass rush",
       "waypoints": [
         { "t": 0, "x": 29.5, "y": 0.9, "note": "Rush" },
-        { "t": 0.8, "x": 29.5, "y": 0.8, "note": "Push upfield" },
-        { "t": 4.5, "x": 30, "y": 3, "note": "Too deep" }
+        { "t": 0.8, "x": 29.5, "y": -0.03, "note": "Push upfield" },
+        { "t": 4.5, "x": 30, "y": -1.9, "note": "Too deep" }
       ]
     },
     {
@@ -232,9 +232,9 @@
       "assignment": "Frontside rush, chip by RB, vacates screen lane",
       "waypoints": [
         { "t": 0, "x": 32.5, "y": 0.9, "note": "Rush" },
-        { "t": 0.6, "x": 32, "y": 0.8, "note": "Chipped by RB" },
-        { "t": 1.2, "x": 32.5, "y": 1.5, "note": "Lose contain" },
-        { "t": 4.5, "x": 33, "y": 2.5, "note": "Screen behind him" }
+        { "t": 0.6, "x": 32, "y": 0.43, "note": "Chipped by RB" },
+        { "t": 1.2, "x": 32.5, "y": -0.97, "note": "Lose contain" },
+        { "t": 4.5, "x": 33, "y": -1.9, "note": "Screen behind him" }
       ]
     },
     {

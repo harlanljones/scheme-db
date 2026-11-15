@@ -212,10 +212,10 @@
       "assignment": "Slip the reach attempt, pressure through the A-gap during the deep drop",
       "waypoints": [
         { "t": 0, "x": 25.5, "y": 0.9, "note": "Reads reach attempt" },
-        { "t": 0.6, "x": 25, "y": 1.4, "note": "Fights the C’s reach sell" },
-        { "t": 1.6, "x": 25.2, "y": 2.5, "note": "Slips inside the reset block" },
-        { "t": 2.8, "x": 25.4, "y": 4.1000000000000005, "note": "Interior pressure building" },
-        { "t": 4, "x": 25.5, "y": 5.300000000000001, "note": "A half-second late on the launch" }
+        { "t": 0.6, "x": 25, "y": 0.43, "note": "Fights the C’s reach sell" },
+        { "t": 1.6, "x": 25.2, "y": -1.9, "note": "Slips inside the reset block" },
+        { "t": 2.8, "x": 25.4, "y": -1.9, "note": "Interior pressure building" },
+        { "t": 4, "x": 25.5, "y": -1.9, "note": "A half-second late on the launch" }
       ]
     },
     {
@@ -227,10 +227,10 @@
       "assignment": "Penetrate B-gap against RG’s anchored set, hurry without disrupting the launch",
       "waypoints": [
         { "t": 0, "x": 29, "y": 0.9, "note": "B-gap penetration" },
-        { "t": 0.7, "x": 28.7, "y": 1.7000000000000002, "note": "RG anchored on him" },
-        { "t": 1.8, "x": 28.6, "y": 3.1, "note": "Grinding but contained" },
-        { "t": 2.9, "x": 28.5, "y": 4.5, "note": "Pressure arrives just late" },
-        { "t": 4, "x": 28.5, "y": 5.5, "note": "Watched the launch" }
+        { "t": 0.7, "x": 28.7, "y": 0.2, "note": "RG anchored on him" },
+        { "t": 1.8, "x": 28.6, "y": -1.9, "note": "Grinding but contained" },
+        { "t": 2.9, "x": 28.5, "y": -1.9, "note": "Pressure arrives just late" },
+        { "t": 4, "x": 28.5, "y": -1.9, "note": "Watched the launch" }
       ]
     },
     {
@@ -242,10 +242,10 @@
       "assignment": "Force the sweep flow right, kicked by TE’s sell before resetting to rush",
       "waypoints": [
         { "t": 0, "x": 33, "y": 0.9, "note": "Reads TE kick-out sell" },
-        { "t": 0.55, "x": 32.6, "y": 1.3, "note": "Attacks the kick-out fake" },
-        { "t": 1.4, "x": 32.2, "y": 2.1, "note": "Realizes run fake, resets rush" },
-        { "t": 2.6, "x": 32.6, "y": 3.5, "note": "Late rush vs RT anchor" },
-        { "t": 4, "x": 33, "y": 4.5, "note": "Neutralized by wasted steps" }
+        { "t": 0.55, "x": 32.6, "y": 0.55, "note": "Attacks the kick-out fake" },
+        { "t": 1.4, "x": 32.2, "y": -1.43, "note": "Realizes run fake, resets rush" },
+        { "t": 2.6, "x": 32.6, "y": -1.9, "note": "Late rush vs RT anchor" },
+        { "t": 4, "x": 33, "y": -1.9, "note": "Neutralized by wasted steps" }
       ]
     },
     {
